@@ -32,6 +32,13 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" type="image/png" sizes="150x150" href="img/favicon.png" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Fragment+Mono:ital,wght@0,400;1,400&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+  >
+
   <link rel="stylesheet" href="css/style.css">  
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/grid.css">
@@ -42,525 +49,50 @@
   
 </head>
 
-<body>  
-
-  <input type="checkbox" id="menu"/> 
-  
-  <nav id="nav">
-    <div class="connect grid-4">
-      <div><p>Email: <a href="mailto:kosuke@newfiction.org">business@newfiction.org</a></p></div>
-      <div><p>Connect on <a href="https://www.linkedin.com/company/newfiction-org/" target="_blank">LinkedIn</a></p></div>
-      <div class="credit"><p>Work by <a href="https://thekosuke.com/" target="_blank">Kosuke Futsukaichi</a></p></div>
-    </div>
-
-    <div class="intro">
-      <p>
-        We are a design studio based in Tokyo, working globally—playing in the intersection of digital product and brand design.        
+<body class="page-home">
+  <canvas class="home-glyph-layer" aria-hidden="true"></canvas>
+  <div class="home-top-accent" aria-hidden="true"></div>
+  <main class="home-shell">
+    <section class="home-info-bar" aria-label="Studio information">
+      <div class="home-logo" aria-label="New Fiction">
+        <img class="home-logo-image" src="img/logo-serif.svg" alt="New Fiction">
+      </div>
+      <div class="home-info-row">
+        <p class="home-description">
+          Product &amp; Brand Design
+        </p>
+        <div class="home-right-cluster">
+          <a
+            class="home-contact"
+            href="https://temporal-sight-127.notion.site/966aab52301b4588a1c875bf81ac421a?pvs=105"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Contact</span>
+            <img class="home-contact-icon" src="img/arrow.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="home-center-bar" aria-label="Studio description">
+      <p class="home-center-text" id="home-center-text">
+        A solo design practice by <a href="https://thekosuke.com/" target="_blank" rel="noopener noreferrer">Kosuke Futsukaichi</a>, working directly with founders and small teams
       </p>
-    </div>
+    </section>
+    <span class="home-mini-square" aria-hidden="true">
+      <span class="home-mini-square-shape" aria-hidden="true">
+        <span class="home-mini-square-core" aria-hidden="true"></span>
+      </span>
+    </span>
 
-    <div class="service grid-5">
-      <div class="serviceType">
-        <h1>-1 → 0</h1>
-        <p class="title">Strategizing <br>What to Make</p>
-        <p class="description">Conducting and synthesizing research to build a strategic foundation.</p>
-        <p class="description textJP">インサイトを整理し、<br>戦略の基盤を築きます。</p>
+    <footer class="home-bottom-strip" aria-label="Footer">
+      <div class="home-bottom-row">
+        <span class="home-bottom-copy">©2026
+New Fiction Inc.</span>
+        <span class="home-bottom-tagline">Full site coming soon</span>
       </div>
-      <div class="serviceType">
-        <h1>0 → 1</h1>
-        <p class="title">Designing <br>Something New</p>
-        <p class="description">0-to-1 product design, from research and discovery to launch.</p>
-        <p class="description textJP">0から1のプロダクトデザイン。<br>ディスカバリーからローンチまで。</p>
-      </div>
-      <div class="serviceType">
-        <h1>1 → 2,3,4,5...</h1>
-        <p class="title">Improving <br>What Exists</p>
-        <p class="description">From refinement to evolution. "Different" is better than "better".</p>
-        <p class="description textJP">磨きから進化。"異なる" は "より良い" よりも価値がある。</p>
-      </div>
-    </div>      
-  </nav> <!-- END OF NAV -->
-
-  <div id="container">            
-    <!-- LINKS -->
-    <div id="header">
-      <div class="grid-1">
-
-        <div class="label">
-          <h1>Product & Brand Design Studio</h1>
-        </div>   
-
-        <div class="logoSM">
-          <svg viewBox="0 0 160 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_337_18280)">
-            <path d="M17.3521 23.6067H14.2709L3.08119 7.1614V23.6051H0V1.5498H3.08119L14.2709 17.9935V1.5498H17.3521V23.6051V23.6067Z" fill="#D82B24"/>
-            <path d="M28.1591 21.1739C30.4612 21.1739 31.5979 20.2 32.278 18.9037L32.3754 18.7409H35.5923C35.6833 18.7409 35.5859 18.7728 35.554 18.9037C34.711 22.0823 31.8246 23.931 28.1591 23.931C23.2947 23.931 20.2773 20.4603 20.2773 15.401C20.2773 10.3418 23.1318 6.87109 28.1591 6.87109C33.1864 6.87109 36.0728 10.3418 36.0728 15.401V16.5042H23.5533C23.5533 19.7482 25.9544 21.1755 28.1591 21.1755V21.1739ZM28.1591 9.6266C25.0125 9.6266 23.5533 12.3837 23.5533 14.0696H32.6995C32.6995 12.058 31.3696 9.6266 28.1591 9.6266Z" fill="#D82B24"/>
-            <path d="M48.1177 10.5022L44.9711 23.6061H40.8841L36.96 7.19434H40.0731L42.9276 20.3956L46.1716 7.19434H50.0957L53.3398 20.3956L56.1943 7.19434H59.3074L55.3832 23.6061H51.2963L48.1177 10.5022Z" fill="#D82B24"/>
-            <path d="M82.3369 1.5498V4.30691H70.6603V10.9482H81.007V13.7053H70.6603V23.6051H67.5791V1.5498H82.3369Z" fill="#D82B24"/>
-            <path d="M103.381 12.5762C102.668 10.662 101.111 9.62429 98.9046 9.62429C95.8235 9.62429 93.9747 12.0238 93.9747 15.3971C93.9747 18.7705 95.8235 21.17 98.9046 21.17C101.111 21.17 102.668 20.1323 103.381 18.2181L103.435 18.0553H106.656L106.624 18.2181C105.715 21.8181 103.024 23.9271 98.9046 23.9271C93.8119 23.9271 90.8936 20.4564 90.8936 15.3971C90.8936 10.3379 93.8135 6.86719 98.9046 6.86719C103.024 6.86719 105.749 9.00806 106.624 12.5762L106.656 12.739H103.435L103.381 12.5778V12.5762Z" fill="#D82B24"/>
-            <path d="M107.741 7.19282H110.952V2.49121H114.033V7.19442H117.86V9.62744H114.033V18.515C114.033 20.2009 114.747 20.98 116.206 20.98C116.659 20.98 117.275 20.8826 117.601 20.7852L117.861 23.2821C117.31 23.4768 116.044 23.6061 115.202 23.6061C112.898 23.6061 110.953 22.3417 110.953 19.0323V9.62584H107.743V7.19282H107.741Z" fill="#D82B24"/>
-            <path d="M120.098 2.8794C120.098 1.80976 121.038 0.901367 122.173 0.901367C123.243 0.901367 124.151 1.80976 124.151 2.8794C124.151 4.01449 123.243 4.95481 122.173 4.95481C121.038 4.95481 120.098 4.01449 120.098 2.8794ZM120.617 23.6064V7.19306H123.698V23.6048H120.617V23.6064Z" fill="#D82B24"/>
-            <path d="M134.783 23.931C129.691 23.931 126.74 20.4603 126.74 15.401C126.74 10.3418 129.692 6.87109 134.783 6.87109C139.874 6.87109 142.826 10.3418 142.826 15.401C142.826 20.4603 139.842 23.931 134.783 23.931ZM134.783 9.6266C131.702 9.6266 129.821 12.0261 129.821 15.3994C129.821 18.7728 131.702 21.1723 134.783 21.1723C137.864 21.1723 139.745 18.7728 139.745 15.3994C139.745 12.0261 137.896 9.6266 134.783 9.6266Z" fill="#D82B24"/>
-            <path d="M85.094 7.19342H88.1752V23.6052H85.094V7.19342ZM86.6506 4.95676C87.7202 4.95676 88.6286 4.01644 88.6286 2.88135C88.6286 1.81171 87.7202 0.90332 86.6506 0.90332C85.5155 0.90332 84.5752 1.81171 84.5752 2.88135C84.5752 4.01644 85.5155 4.95676 86.6506 4.95676Z" fill="#D82B24"/>
-            <path d="M148.323 8.84912C148.971 7.87527 150.756 6.87109 152.929 6.87109C157.632 6.87109 160 10.3083 160 14.5262V23.6085H156.919V14.5262C156.919 12.0612 155.819 9.6282 152.608 9.6282C149.883 9.6282 148.326 11.9958 148.326 14.5262V23.6085H145.245V7.19358H147.97L148.328 8.84753H148.325L148.323 8.84912Z" fill="#D82B24"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_337_18280">
-            <rect width="160" height="23.0291" fill="white" transform="translate(0 0.901367)"/>
-            </clipPath>
-            </defs>
-          </svg>
-        </div> <!-- END OF LOGO SM -->
-
-        <div class="menuWrapper">
-          <label for="menu" class="menu">
-            <h1>Info</h1>
-          </label>
-        </div> <!-- END OF MENUWRAPPER -->
-
-      </div> <!-- END OF GRID-1 -->
-
-      <div class="logo">   
-        <svg viewBox="0 0 160 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_337_18280)">
-          <path d="M17.3521 23.6067H14.2709L3.08119 7.1614V23.6051H0V1.5498H3.08119L14.2709 17.9935V1.5498H17.3521V23.6051V23.6067Z" fill="#D82B24"/>
-          <path d="M28.1591 21.1739C30.4612 21.1739 31.5979 20.2 32.278 18.9037L32.3754 18.7409H35.5923C35.6833 18.7409 35.5859 18.7728 35.554 18.9037C34.711 22.0823 31.8246 23.931 28.1591 23.931C23.2947 23.931 20.2773 20.4603 20.2773 15.401C20.2773 10.3418 23.1318 6.87109 28.1591 6.87109C33.1864 6.87109 36.0728 10.3418 36.0728 15.401V16.5042H23.5533C23.5533 19.7482 25.9544 21.1755 28.1591 21.1755V21.1739ZM28.1591 9.6266C25.0125 9.6266 23.5533 12.3837 23.5533 14.0696H32.6995C32.6995 12.058 31.3696 9.6266 28.1591 9.6266Z" fill="#D82B24"/>
-          <path d="M48.1177 10.5022L44.9711 23.6061H40.8841L36.96 7.19434H40.0731L42.9276 20.3956L46.1716 7.19434H50.0957L53.3398 20.3956L56.1943 7.19434H59.3074L55.3832 23.6061H51.2963L48.1177 10.5022Z" fill="#D82B24"/>
-          <path d="M82.3369 1.5498V4.30691H70.6603V10.9482H81.007V13.7053H70.6603V23.6051H67.5791V1.5498H82.3369Z" fill="#D82B24"/>
-          <path d="M103.381 12.5762C102.668 10.662 101.111 9.62429 98.9046 9.62429C95.8235 9.62429 93.9747 12.0238 93.9747 15.3971C93.9747 18.7705 95.8235 21.17 98.9046 21.17C101.111 21.17 102.668 20.1323 103.381 18.2181L103.435 18.0553H106.656L106.624 18.2181C105.715 21.8181 103.024 23.9271 98.9046 23.9271C93.8119 23.9271 90.8936 20.4564 90.8936 15.3971C90.8936 10.3379 93.8135 6.86719 98.9046 6.86719C103.024 6.86719 105.749 9.00806 106.624 12.5762L106.656 12.739H103.435L103.381 12.5778V12.5762Z" fill="#D82B24"/>
-          <path d="M107.741 7.19282H110.952V2.49121H114.033V7.19442H117.86V9.62744H114.033V18.515C114.033 20.2009 114.747 20.98 116.206 20.98C116.659 20.98 117.275 20.8826 117.601 20.7852L117.861 23.2821C117.31 23.4768 116.044 23.6061 115.202 23.6061C112.898 23.6061 110.953 22.3417 110.953 19.0323V9.62584H107.743V7.19282H107.741Z" fill="#D82B24"/>
-          <path d="M120.098 2.8794C120.098 1.80976 121.038 0.901367 122.173 0.901367C123.243 0.901367 124.151 1.80976 124.151 2.8794C124.151 4.01449 123.243 4.95481 122.173 4.95481C121.038 4.95481 120.098 4.01449 120.098 2.8794ZM120.617 23.6064V7.19306H123.698V23.6048H120.617V23.6064Z" fill="#D82B24"/>
-          <path d="M134.783 23.931C129.691 23.931 126.74 20.4603 126.74 15.401C126.74 10.3418 129.692 6.87109 134.783 6.87109C139.874 6.87109 142.826 10.3418 142.826 15.401C142.826 20.4603 139.842 23.931 134.783 23.931ZM134.783 9.6266C131.702 9.6266 129.821 12.0261 129.821 15.3994C129.821 18.7728 131.702 21.1723 134.783 21.1723C137.864 21.1723 139.745 18.7728 139.745 15.3994C139.745 12.0261 137.896 9.6266 134.783 9.6266Z" fill="#D82B24"/>
-          <path d="M85.094 7.19342H88.1752V23.6052H85.094V7.19342ZM86.6506 4.95676C87.7202 4.95676 88.6286 4.01644 88.6286 2.88135C88.6286 1.81171 87.7202 0.90332 86.6506 0.90332C85.5155 0.90332 84.5752 1.81171 84.5752 2.88135C84.5752 4.01644 85.5155 4.95676 86.6506 4.95676Z" fill="#D82B24"/>
-          <path d="M148.323 8.84912C148.971 7.87527 150.756 6.87109 152.929 6.87109C157.632 6.87109 160 10.3083 160 14.5262V23.6085H156.919V14.5262C156.919 12.0612 155.819 9.6282 152.608 9.6282C149.883 9.6282 148.326 11.9958 148.326 14.5262V23.6085H145.245V7.19358H147.97L148.328 8.84753H148.325L148.323 8.84912Z" fill="#D82B24"/>
-          </g>
-          <defs>
-          <clipPath id="clip0_337_18280">
-          <rect width="160" height="23.0291" fill="white" transform="translate(0 0.901367)"/>
-          </clipPath>
-          </defs>
-        </svg>          
-      </div> <!-- END OF LOGO -->
-
-  </div> <!-- END OF HEADER -->
-
-    <!-- WORK -->
-    <div id="content" class="grid-2">    
-      <!-- OUR WORK -->
-      <div id="work">
-        <!-- onclick="plusDivs(1) -->
-        <div class="projectWrapper">
-          <div class="projectThumbnail macro" onclick='galleryMacro.next("imgMacro")'>
-            <img id='imgMacro' src="img/projects/macro/macro-01.png">
-          </div>
-          <div class="projectInfo">
-            <div class="grid-3">
-              <h2 class="clientName">Macro</h2>
-              <h3 class="projectTag">B2B · Product/Brand</h3>
-            </div>
-            <div class="learnMore">
-              <div class="accordion">
-                <p>Learn more</p>                
-              </div>
-              <div class="projectDescription grid-3">
-                <p>
-                  Macro is a process creation and management tool primarily for Operations teams. 
-                  We led design to evolve Macro from conception to launch, collaborating closely 
-                  with the co-founders and engineers. 
-                  <br>
-                  Outputs include: product strategy, UX/UI design, visual design, web design 
-                  and development, design system, icon design, logo design, and marketing materials.
-                </p>
-                <div><span></span></div>
-              </div>
-            </div>
-          </div>          
-        </div>
-
-        <div class="projectWrapper">
-          <div class="projectThumbnail remotion" onclick='galleryRemotion.next("imgRemotion")'>
-            <img id='imgRemotion' src="img/projects/remotion/remotion-01.png">
-          </div>
-          <div class="projectInfo">
-            <div class="grid-3">
-              <h2 class="clientName">Remotion</h2>
-              <h3 class="projectTag">B2B · Product</h3>
-            </div>
-            <div class="learnMore">
-              <div class="accordion">
-                <p>Learn more</p>                
-              </div>
-              <div class="projectDescription grid-3">
-                <p>
-                  Remotion is a virtual office that facilitates casual conversations through 
-                  coworking rooms and shared music. It was a macOS application that allowed 
-                  users to pin their teammates to the dock, providing background awareness 
-                  of each other's activities.                  
-                  <br>
-                  We led product design in the Core Experience team, tasked with implementing 
-                  focused enhancements to the product's core experience. Working alongside 
-                  five engineers, our collective aim was to boost user retention and encourage 
-                  word-of-mouth promotion of Remotion.
-                </p>
-                <div><span></span></div>
-              </div>
-            </div>
-          </div>          
-        </div>
-        
-        <div class="projectWrapper">
-          <div class="projectThumbnail trustworthy" onclick='galleryTrustworthy.next("imgTrustworthy")'>
-            <img id='imgTrustworthy' src="img/projects/trustworthy/trustworthy-01.png">
-          </div>
-          <div class="projectInfo">
-            <div class="grid-3">
-              <h2 class="clientName">Trustworthy</h2>
-              <h3 class="projectTag">D2C · Product</h3>
-            </div>
-            <div class="learnMore">
-              <div class="accordion">
-                <p>Learn more</p>                
-              </div>
-              <div class="projectDescription grid-3">
-                <p>
-                  Trustworthy serves as the Family Operating System® designed 
-                  to keep families organized and prepared, all in one place.                
-                  <br>
-                  Our responsibilities included enhancing all aspects of the 
-                  product, including the web app, iOS app, and the design system. 
-                  Trustworthy posed challenges in system-level problem-solving, 
-                  given that many features and components were distributed 
-                  across various platforms.
-                </p>
-                <div><span></span></div>
-              </div>
-            </div>
-          </div>          
-        </div>
-       
-        <div class="projectWrapper">
-          <div class="projectThumbnail touchpoint" onclick='galleryTouchpoint.next("imgTouchpoint")'>
-            <img id='imgTouchpoint' src="img/projects/touchpoint/touchpoint-01.png">
-          </div>
-          <div class="projectInfo">
-            <div class="grid-3">
-              <h2 class="clientName">Touchpoint</h2>
-              <h3 class="projectTag">Nonprofit · Brand/Web</h3>
-            </div>
-            <div class="learnMore">
-              <div class="accordion">
-                <p>Learn more</p>                
-              </div>
-              <div class="projectDescription grid-3">
-                <p>
-                  Touchpoint Interaction Design Conference is a part of Simon Fraser 
-                  University and the School of Interactive Art and Technology. Touchpoint 
-                  is ran annually with each year having its own visual identity for 
-                  their website.
-                  <br>
-                  We were commisioned to conceptualize the year's theme and build the 
-                  website for Touchpoint 2019. Outputs include brand concept, visual identity, 
-                  motion design, and web design/development.
-                </p>
-                <div><span></span></div>
-              </div>
-            </div>
-          </div>                   
-        </div>
-        
-        <div class="projectWrapper">
-          <div class="projectThumbnail series" onclick='gallerySeries.next("imgSeries")'>
-            <img id='imgSeries' src="img/projects/series/series-01.png">
-          </div>
-          <div class="projectInfo">
-            <div class="grid-3">
-              <h2 class="clientName">Series</h2>
-              <h3 class="projectTag">D2C · Logo</h3>
-            </div>
-            <div class="learnMore">
-              <div class="accordion">
-                <p>Learn more</p>
-              </div>
-              <div class="projectDescription grid-3">
-                <p>
-                  Series' ambition was to push forward the notion of "Personal 
-                  Computers" to mean "Personalized Computers." The logo represents 
-                  the winding path our ideas take as we follow a train of thought, 
-                  through a form that blends fluidity and oneness.
-                  <br>
-                  The logomark features a series of serif 'S's arranged diagonally 
-                  within a sphere. This creates a dynamic movement and a distinctive 
-                  pattern, reminiscent of unique identifiers like DNA helices or 
-                  fingerprints.
-                </p>
-                <div><span></span></div>
-              </div>
-            </div>
-          </div>                    
-        </div>
-
-        <div class="projectWrapper">
-          <div class="projectThumbnail seven" onclick='gallerySeven.next("imgSeven")'>
-            <img id='imgSeven' src="img/projects/seven/seven-01.png">
-          </div>
-          <div class="projectInfo">
-            <div class="grid-3">
-              <h2 class="clientName">Seven.me</h2>
-              <h3 class="projectTag">D2C · Product/Brand</h3>
-            </div>
-            <div class="learnMore">
-              <div class="accordion">
-                <p>Learn more</p>
-              </div>
-              <div class="projectDescription grid-3">
-                <p>
-                  Seven is a health-focused startup building a system of products 
-                  and services that make health mastery accessible to all through 
-                  behavioral health coaching.
-                  <br>
-                  We led design for Seven’s digital offerings by owning the end-to-end 
-                  experience of multiple projects while collaborating with cross-functional 
-                  stakeholders. 
-                  <br>
-                  Main responsibilities include revamping the client-facing mobile app, 
-                  improvements of their internal tool, and exploring visual concepts for 
-                  their physical onboarding toolkit.
-                </p>
-                <div><span></span></div>
-              </div>
-            </div> 
-          </div>                   
-        </div>
-
-        <div class="projectWrapper">
-          <div class="projectThumbnail instaread" onclick='galleryInstaread.next("imgInstaread")'>
-            <img id='imgInstaread' src="img/projects/instaread/instaread-01.png">
-          </div>
-          <div class="projectInfo">
-            <div class="grid-3">
-              <h2 class="clientName">Instaread</h2>
-              <h3 class="projectTag">D2C/B2B2C · Product/Brand</h3>
-            </div>
-            <div class="learnMore">
-              <div class="accordion">
-                <p>Learn more</p>
-              </div>
-              <div class="projectDescription grid-3">
-                <p>
-                  We supported Instaread to help solve user experience and interface problems, 
-                  as well as making visual design improvements throughout the platform. During 
-                  our contract, we worked on various parts of their iOS app, web app and website 
-                  as well as numerous marketing materials.
-                </p>
-                <div><span></span></div>
-              </div>
-            </div>
-          </div>                    
-        </div>
-
-        <div class="projectWrapper">
-          <div class="projectThumbnail bch" onclick='galleryBCH.next("imgBCH")'>
-            <img id='imgBCH' src="img/projects/bch/bch-01.png">
-          </div>
-          <div class="projectInfo">
-            <div class="grid-3">
-              <h2 class="clientName">Breast Cancer Hawaii</h2>
-              <h3 class="projectTag">Nonprofit · Logo/Brand Guidelines</h3>
-            </div>
-            <div class="learnMore">
-              <div class="accordion">
-                <p>Learn more</p>
-              </div>
-              <div class="projectDescription grid-3">
-                <p>
-                  For a duration of 4 months, we provided design advisory for Breast Cancer Hawaii. 
-                  During this time, we designed logos for multiple programs and created brand guidelines 
-                  that reflect their concepts. 
-                  <br>
-                  This is one of the logos we designed for their program—Hearts for Ohana.
-                </p>
-                <div><span></span></div>
-              </div>
-            </div>
-          </div>                   
-        </div>              
-      
-        <div class="projectWrapper">
-          <div class="projectThumbnail nikkei" onclick='galleryNikkei.next("imgNikkei")'>
-            <img id='imgNikkei' src="img/projects/nikkei/nikkei-01.png">
-          </div>
-          <div class="projectInfo">
-            <div class="grid-3">
-              <h2 class="clientName">Nikkei Centre</h2>
-              <h3 class="projectTag">Nonprofit · Logo</h3>
-            </div>
-            <div class="learnMore">
-              <div class="accordion">
-                <p>Learn more</p>
-              </div>
-              <div class="projectDescription grid-3">
-                <p>
-                  The inaugural edition of the Nikkei Farmers’ Market “産地直送” was held in 
-                  the Japanese Garden at the Nikkei National Museum and Cultural Centre in 
-                  Burnaby, British Columbia.
-                  <br>
-                  The organization held a logo design contest as they kick off the second 
-                  year of their farmers' market. This was our proposal for their new logo, 
-                  to symbolize the local community's togetherness and cultural celebration.
-                  <br>
-                  Unfortunately, the organization decided not to update their logo due to 
-                  internal reasons.
-                </p>
-                <div><span></span></div>
-              </div>
-            </div>
-          </div>                    
-        </div>     
-
-      </div> <!-- END OF WORK -->
-
-      <div id="about">
-        <div class="aboutSection">
-          <h4>About</h4>
-          <p>
-            New Fiction is a multicultural design studio by Kosuke Futsukaichi, 
-            specializing in digital product and brand design. 
-            We're based in Tokyo, and work globally.
-            <br>
-            With our multicultural background and experience working with companies 
-            in various fields at large and small scale, we design apps, websites, 
-            design systems, visual identities, and print materials.
-          </p>
-        </div>
-
-        <div class="aboutSection">                    
-          <h4>Get in touch</h4>
-          <p>
-            A new project, an idea, or just a conversation. Please reach out via 
-            email: <a href="mailto:kosuke@newfiction.org">business@newfiction.org</a> 
-            or connect with us on <a href="https://www.linkedin.com/company/newfiction-org/" target="_blank">LinkedIn</a>.
-          </p>  
-        </div>
-
-        <div class="aboutSection grid-3">
-          <div class="serviceColumn">
-            <p>Product</p>
-            <li>Product Strategy</li>
-            <li>Information Architecture</li>
-            <li>UX/UI Design</li>  
-            <li>Visual Design</li>
-            <li>Icon Design</li>
-            <li>Prototyping</li>                    
-          </div>
-          <div class="serviceColumn">
-            <p>Brand</p>
-            <li>Brand Strategy</li>
-            <li>Art Direction</li>
-            <li>Graphic Design</li>
-            <li>Logo Design</li>
-            <li>Package Design</li>                          
-            <li>Web Design</li>                   
-          </div>
-        </div>
-        
-        <div class="aboutSection JP">
-          <h4>会社紹介</h4>
-          <p>
-            ニュー・フィクションは、デジタルプロダクトとブランドデザインを専門とする、
-            二日一宏祐によるデザインスタジオです。
-            <br>
-            多文化的な背景を持ち、大企業からスタートアップまでさまざまな分野の企業と
-            協働してきた経験を活かし、アプリ、ウェブサイト、デザインシステム、
-            ビジュアルアイデンティティ、印刷物などを手がけています。
-            <br>
-            新しいプロジェクト、アイデア、あるいは気軽に会話でも。いつでもご連絡ください。
-          </p>          
-        </div>
-      </div> <!-- END OF ABOUT -->    
-
-    </div> <!-- END OF CONTENT -->    
-
-    <!-- FOOTER -->
-    <div id="footer" class="grid-2">      
-      <div class="col credit">
-        <p>Based in Tokyo, working globally.</p>
-      </div> 
-      <div class="col copyright">
-        <p>©New Fiction <span class="JP">株式会社ニューフィクション</span></p>      
-      </div> 
-    </div>  <!-- END OF FOOTER -->
-
-  </div>  <!-- END OF CONTAINER -->
-   
+      <span class="home-bottom-clock" id="home-footer-clock">08:44:32 JST</span>
+    </footer>
+  </main>
 </body>
 
-
-<script> 
-/**************************************************
-    ACCORDION
-**************************************************/
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-
-
-
-
-// HOVER INVERT EFFECT
-  // $(function() {
-  //   $('.linkWrapper a.email').hover(function() {
-  //     $('body').css('background', 'var(--red)');
-  //     $('svg path').css('fill', 'var(--white)');
-  //     $('p').css('color', 'var(--redLight)');
-  //     $('a').css('color', 'var(--white)');
-  //     $('.intro .textEN').css('color', 'var(--white)');
-  //     $('#footer').css('background-color', 'var(--white)');
-  //     $('#footer .service h1').css('color', 'var(--red)');
-  //     $('#footer li, #footer p').css('color', 'var(--redMid)');
-  //   }, function() {
-  //     // on mouseout, reset the background colour
-  //     $('body').css('background', '');
-  //     $('svg path').css('fill', '');
-  //     $('p').css('color', '');
-  //     $('a').css('color', '');
-  //     $('.intro .textEN').css('color', '');
-  //     $('#footer').css('background-color', '');
-  //     $('#footer .service h1').css('color', '');
-  //     $('#footer li, #footer p').css('color', '');
-  //   });
-
-  //   $('.linkWrapper a.linkedin').hover(function() {
-  //     $('body').css('background', 'var(--red)');
-  //     $('svg path').css('fill', 'var(--white)');
-  //     $('p').css('color', 'var(--redLight)');
-  //     $('a').css('color', 'var(--white)');
-  //     $('.intro .textEN').css('color', 'var(--white)');
-  //     $('#footer').css('background-color', 'var(--white)');
-  //     $('#footer .service h1').css('color', 'var(--red)');
-  //     $('#footer li, #footer p').css('color', 'var(--redMid)');
-  //   }, function() {
-  //     // on mouseout, reset the background colour
-  //     $('body').css('background', '');
-  //     $('svg path').css('fill', '');
-  //     $('p').css('color', '');
-  //     $('a').css('color', '');
-  //     $('.intro .textEN').css('color', '');
-  //     $('#footer').css('background-color', '');
-  //     $('#footer .service h1').css('color', '');
-  //     $('#footer li, #footer p').css('color', '');
-  //   });
-  // });
-</script>
-
-</html>

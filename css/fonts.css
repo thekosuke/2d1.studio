@@ -1,76 +1,16 @@
 @font-face {
-	font-family: 'Selecta Light';
-	src: url('../fonts/Selecta-Light.ttf');
-
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
+  font-family: "Feature Display Medium";
+  src: url("../fonts/FeatureDisplay-Medium-Web.woff2")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Selecta Regular';
-	src: url('../fonts/Selecta-Regular.ttf');
-
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-}
-
-@font-face {
-	font-family: 'Selecta Medium';
-	src: url('../fonts/Selecta-Medium.ttf');
-
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-}
-
-@font-face {
-	font-family: 'Manrope Light';
-	src: url('../fonts/Manrope-Light.ttf');
-
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-}
-
-@font-face {
-	font-family: 'IBMPlexSansJP Light';
-	src: url('../fonts/IBMPlexSansJP-Light.ttf');
-
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-}
-
-@font-face {
-	font-family: 'IBMPlexSansJP Regular';
-	src: url('../fonts/IBMPlexSansJP-Regular.ttf');
-
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-}
-
-@font-face {
-	font-family: 'IBMPlexSansJP Medium';
-	src: url('../fonts/IBMPlexSansJP-Medium.ttf');
-
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
+  font-family: "Rand Mono";
+  src: url("../fonts/Rand-Mono-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
