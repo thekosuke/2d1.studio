@@ -1,16 +1,5 @@
-@font-face {
-  font-family: "Feature Display Medium";
-  src: url("../fonts/FeatureDisplay-Medium-Web.woff2")
-    format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/* Brand webfonts supplied with the project. Keep replacements local. */
+@font-face{font-family:Rand;src:url('../fonts/Rand/Rand-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Rand Mono';src:url('../fonts/Rand Mono/RandMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 
-@font-face {
-  font-family: "Rand Mono";
-  src: url("../fonts/Rand-Mono-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@font-face{font-family:Rand;src:url('../fonts/Rand/Rand-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}

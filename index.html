@@ -1,98 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YBDBXJWCG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-7YBDBXJWCG');
-  </script>
-
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords"
-    content="new fiction, new, fiction, design, studio, tokyo, product design, product strategy, ux/ui design, web design, branding, brand strategy, graphic design, logo design, package design, art direction, kosuke futsukaichi, designer">
-  <meta name="description" content="A multicultural design studio partnering to envision and craft bold, new worlds.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="robots" content="noodp">
-
-  <meta property="og:url" content="https://newfiction.org/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="New Fiction" />
-  <meta name="description" content="A multicultural design studio specializing in digital product and brand design.">
-  <meta property="og:image" content="img/opengraph.png" />
-
-  <title>New Fiction</title>
-
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="apple-touch-icon" type="image/png" sizes="150x150" href="img/favicon.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Fragment+Mono:ital,wght@0,400;1,400&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-  >
-
-  <link rel="stylesheet" href="css/style.css">  
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/grid.css">
+  <title>2D1 — A design studio. A shop of our own.</title>
+  <meta name="description" content="2D1 is a boutique design studio for design consulting, digital product design, and branding, with a shop for the everyday objects we make ourselves.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FF2B00">
+  <link rel="canonical" href="https://2d1.studio/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="2D1">
+  <meta property="og:title" content="2D1 — A design studio. A shop of our own.">
+  <meta property="og:description" content="A boutique design studio, and a shop for the everyday objects we make ourselves. Familiar Characters.">
+  <meta property="og:url" content="https://2d1.studio/">
+  <meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The 2D1 logo in white on red.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="2D1 — A design studio. A shop of our own.">
+  <meta name="twitter:description" content="A boutique design studio, and a shop for the everyday objects we make ourselves. Familiar Characters.">
+  <meta name="twitter:image" content="https://2d1.studio/img/brand/2d1-social.png">
+  <link rel="icon" href="img/brand/2d1-icon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/brand/2d1-icon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/brand/2d1-apple-touch.png" sizes="180x180">
+  <link rel="preload" href="fonts/Rand/Rand-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Rand/Rand-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Rand Mono/RandMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/fonts.css">
-
-  <script src="js/jquery-3.5.0.min.js"></script>
-  <script src="js/script.js"></script>
-  
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <script src="js/config.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/logo_red.svg","slogan":"Familiar Characters","description":"A boutique design studio for design consulting, digital product design, and branding, with a shop for its own everyday objects."}</script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<body class="page-home">
-  <canvas class="home-glyph-layer" aria-hidden="true"></canvas>
-  <div class="home-top-accent" aria-hidden="true"></div>
-  <main class="home-shell">
-    <section class="home-info-bar" aria-label="Studio information">
-      <div class="home-logo" aria-label="New Fiction">
-        <img class="home-logo-image" src="img/logo-serif.svg" alt="New Fiction">
+  <!-- The only logo. It starts as the hero and docks into the bar as the home link. -->
+  <a class="logo" href="#top" aria-label="2D1, back to top"><svg class="logo-mark" viewBox="0 0 775 280" aria-hidden="true" focusable="false"><g fill="#fff"><path d="M1.72214 0L208.038 0C249.301 0 280.74 29.4737 280.74 69.7544C280.74 106.105 254.213 132.632 215.898 139.509H280.982V280H0V211.228C0 181.754 18.6667 153.263 55.0175 139.509L1.72214 139.509V0Z"/><path d="M774.705 0V280H632.911V139.51H562V0H774.705Z"/><path d="M411.749 0C498.083 0 554.082 55.9998 554.082 140C554.082 223.999 498.083 280 411.749 280H288.625V0H411.749Z"/></g><g class="logo-eyes" fill="#ff2b00"><rect x="373" y="100" width="36" height="36"/><rect x="445" y="100" width="36" height="36"/></g></svg></a>
+
+  <header class="bar">
+    <nav class="bar-nav" aria-label="Sections"><a href="#studio">Studio</a><a href="#shop">Shop</a></nav>
+    <a class="btn btn-bar" href="#updates">Get updates</a>
+  </header>
+
+  <!-- A quick red wipe that carries you straight to Updates. -->
+  <div class="wipe" aria-hidden="true"><span class="wipe-label"><span class="sec-idx">03</span>Updates</span></div>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <h1 class="hero-caption" id="hero-title">An independent design studio and shop <br>making familiar things with character.</h1>
+    </section>
+
+    <!-- The red square steps out of the hero, the way the tag steps out of the tote. -->
+    <section class="about" aria-label="About 2D1">
+      <div class="row about-notch" aria-hidden="true"><span class="cell tab"></span></div>
+      <div class="about-text big-text" data-ink>
+        <p>2D1 is an independent design studio with a shop of its own. We work by editing until the idea is clear, then keeping <em>the one detail</em> that makes you smile.</p>
       </div>
-      <div class="home-info-row">
-        <p class="home-description">
-          Product &amp; Brand Design
-        </p>
-        <div class="home-right-cluster">
-          <a
-            class="home-contact"
-            href="https://temporal-sight-127.notion.site/966aab52301b4588a1c875bf81ac421a?pvs=105"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>Contact</span>
-            <img class="home-contact-icon" src="img/arrow.svg" alt="" aria-hidden="true">
-          </a>
+    </section>
+
+    <!-- Studio: a pinned reel that travels sideways as you scroll. Each project is
+         a square "character" with the red tag, like the tote. Scrolling across a
+         project steps through its images. -->
+    <section class="studio" id="studio" aria-labelledby="studio-title">
+      <div class="studio-scroll">
+        <div class="studio-stage">
+          <div class="studio-mark"><span class="sec-idx">01</span><span id="studio-title">Studio</span><span class="story-progress reel-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
+          <div class="reel">
+            <div class="panel panel-intro">
+              <h3 class="story-title reel-title">Clear ideas, <br>with <em>character</em>.</h3>
+              <p class="story-sub reel-sub">We help companies find a clear idea and give it character, from the first strategy to the products and brands people use every day.</p>
+            </div>
+        <figure class="project panel panel-case" data-project="Aviator">
+          <button class="viewer" type="button" aria-label="Aviator, image 1 of 4. Show next image.">
+            <img class="frame is-current" src="img/projects/02-p600.webp" srcset="img/projects/02-p600.webp 600w, img/projects/02-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="Aviator wordmark against a purple sky" loading="lazy" decoding="async">
+            <img class="frame" data-src="img/projects/03-p600.webp" data-srcset="img/projects/03-p600.webp 600w, img/projects/03-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="Aviator identity on a water bottle" decoding="async">
+            <img class="frame" data-src="img/projects/04-p600.webp" data-srcset="img/projects/04-p600.webp 600w, img/projects/04-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="Aviator healthcare logistics website" decoding="async">
+            <img class="frame" data-src="img/projects/05-p600.webp" data-srcset="img/projects/05-p600.webp 600w, img/projects/05-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="Aviator app icon on a phone home screen" decoding="async">
+          </button>
+          <span class="case-tag" aria-hidden="true">01</span>
+          <figcaption><span>Aviator</span><span class="count" aria-hidden="true"><span class="count-now">01</span>/04</span></figcaption>
+        </figure>
+        <figure class="project panel panel-case" data-project="DeepDrip">
+          <button class="viewer" type="button" aria-label="DeepDrip, image 1 of 3. Show next image.">
+            <img class="frame is-current" src="img/projects/06-p600.webp" srcset="img/projects/06-p600.webp 600w, img/projects/06-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="DeepDrip wordmark on orange" loading="lazy" decoding="async">
+            <img class="frame" data-src="img/projects/07-p600.webp" data-srcset="img/projects/07-p600.webp 600w, img/projects/07-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="DeepDrip stickers on a laptop" decoding="async">
+            <img class="frame" data-src="img/projects/08-p600.webp" data-srcset="img/projects/08-p600.webp 600w, img/projects/08-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="DeepDrip website design" decoding="async">
+          </button>
+          <span class="case-tag" aria-hidden="true">02</span>
+          <figcaption><span>DeepDrip</span><span class="count" aria-hidden="true"><span class="count-now">01</span>/03</span></figcaption>
+        </figure>
+        <figure class="project panel panel-case" data-project="Supateam">
+          <button class="viewer" type="button" aria-label="Supateam, image 1 of 4. Show next image.">
+            <img class="frame is-current" src="img/projects/09-p600.webp" srcset="img/projects/09-p600.webp 600w, img/projects/09-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="Supateam identity on an event stage" loading="lazy" decoding="async">
+            <img class="frame" data-src="img/projects/10-p600.webp" data-srcset="img/projects/10-p600.webp 600w, img/projects/10-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="Supateam event badge" decoding="async">
+            <img class="frame" data-src="img/projects/11-p600.webp" data-srcset="img/projects/11-p600.webp 600w, img/projects/11-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="Supateam web product on a desktop display" decoding="async">
+            <img class="frame" data-src="img/projects/12-p600.webp" data-srcset="img/projects/12-p600.webp 600w, img/projects/12-p1200.webp 1200w" sizes="(max-width: 699px) 80vw, 62vh" width="600" height="800" alt="Supateam app icon in a dock" decoding="async">
+          </button>
+          <span class="case-tag" aria-hidden="true">03</span>
+          <figcaption><span>Supateam</span><span class="count" aria-hidden="true"><span class="count-now">01</span>/04</span></figcaption>
+        </figure>
+            <div class="panel panel-caps">
+              <p class="caps-label" id="caps-label">What we do</p>
+              <ul class="caps" aria-labelledby="caps-label">
+                <li class="cap"><svg class="glyph g-consult" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="6" y="14" width="16" height="16" fill="#16161a"/><rect x="26" y="14" width="16" height="16" fill="#ff2b00"/></svg><p class="cap-name">Design consulting</p><p class="cap-line">A fresh pair of eyes.</p></li>
+                <li class="cap"><svg class="glyph g-product" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="3" y="14" width="42" height="20" fill="#16161a"/><rect x="27" y="18" width="14" height="12" fill="#ff2b00"/></svg><p class="cap-name">Digital product design</p><p class="cap-line">Buttons that do what they say.</p></li>
+                <li class="cap"><svg class="glyph g-brand" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M4 44V20a24 24 0 0 1 24 24Z" fill="#16161a"/><rect x="28" y="4" width="16" height="16" fill="#ff2b00"/></svg><p class="cap-name">Branding &amp; visual identity</p><p class="cap-line">Faces for names.</p></li>
+              </ul>
+              <a class="work-cta" href="https://temporal-sight-127.notion.site/966aab52301b4588a1c875bf81ac421a?pvs=105" data-contact><span>Contact form</span><span class="work-cta-arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <p class="sr-only" id="viewer-status" aria-live="polite"></p>
         </div>
       </div>
     </section>
-    <section class="home-center-bar" aria-label="Studio description">
-      <p class="home-center-text" id="home-center-text">
-        A solo design practice by <a href="https://thekosuke.com/" target="_blank" rel="noopener noreferrer">Kosuke Futsukaichi</a>, working directly with founders and small teams
-      </p>
-    </section>
-    <span class="home-mini-square" aria-hidden="true">
-      <span class="home-mini-square-shape" aria-hidden="true">
-        <span class="home-mini-square-core" aria-hidden="true"></span>
-      </span>
-    </span>
 
-    <footer class="home-bottom-strip" aria-label="Footer">
-      <div class="home-bottom-row">
-        <span class="home-bottom-copy">©2026
-New Fiction Inc.</span>
-        <span class="home-bottom-tagline">Full site coming soon</span>
+    <!-- Shop: a scroll story. The stage stays pinned; scrolling moves it through
+         chapters (intro, logo, tag, canvas, inside, finale). Each chapter turns the
+         bag and draws its blueprint callout. In the finale the dots are yours. -->
+    <section class="shop" id="shop" aria-labelledby="shop-title">
+      <div class="tote-scroll">
+        <div class="tote-stage" data-chapter="intro">
+          <img class="tote-poster" src="img/shop/tote-poster.webp" width="1200" height="1818" alt="The 2D1 tote bag: black canvas with the 2D1 logo embroidered in the middle, a long black strap lined in red, and a small red square tag at the lower left." decoding="async">
+          <div class="shop-mark"><span class="sec-idx">02</span><span id="shop-title">Shop</span><span class="story-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+          <div class="story">
+            <div class="chapter chapter-intro" data-chapter="intro">
+              <h2 class="story-title">Meet <em>Character 01</em>.</h2>
+              <p class="story-sub">Original objects for everyday life, made under our own name. The first one is a tote bag.</p>
+            </div>
+            <p class="chapter chapter-side" data-chapter="logo">Stitched, not printed. <span>And it blinks.</span></p>
+            <p class="chapter chapter-side" data-chapter="tag">One red tag, <span>so you know it’s yours.</span></p>
+            <p class="chapter chapter-side" data-chapter="canvas">Built square. <span>Built to be carried every day.</span></p>
+            <p class="chapter chapter-side" data-chapter="strap">One long strap, <span>over the shoulder or across the body.</span></p>
+            <p class="chapter chapter-side" data-chapter="inside">Nothing outside. <span>Everything inside.</span></p>
+            <div class="chapter chapter-outro" data-chapter="outro">
+              <p class="tote-kicker">Character 01</p>
+              <h3 class="tote-name">Tote Bag</h3>
+              <p class="tote-note">Each one starts with a little character and hopes to become someone’s <em>favorite something</em>.</p>
+            </div>
+          </div>
+          <div class="spots">
+            <div class="spot" data-anchor="logo"><button class="spot-btn" type="button" aria-expanded="false" aria-controls="spot-logo"><span class="sr-only">Logo</span></button><p class="spot-card" id="spot-logo"><b><span>01</span>Logo</b>Embroidered in dark grey thread, stitched into the canvas. Keep watching: it blinks.</p></div>
+            <div class="spot" data-anchor="tag"><button class="spot-btn" type="button" aria-expanded="false" aria-controls="spot-tag"><span class="sr-only">Tag</span></button><p class="spot-card" id="spot-tag"><b><span>02</span>Tag</b>Woven label, folded into the side seam. Dense, fine and a little glossy, so the red stays bright.</p></div>
+            <div class="spot" data-anchor="canvas"><button class="spot-btn" type="button" aria-expanded="false" aria-controls="spot-canvas"><span class="sr-only">Canvas</span></button><p class="spot-card" id="spot-canvas"><b><span>03</span>Canvas</b>Tightly woven black canvas, built for daily wear. A square body: as wide as it is tall.</p></div>
+            <div class="spot" data-anchor="strap"><button class="spot-btn" type="button" aria-expanded="false" aria-controls="spot-strap"><span class="sr-only">Strap</span></button><p class="spot-card" id="spot-strap"><b><span>04</span>Strap</b>One long strap, lined in red. Over the shoulder or across the body.</p></div>
+            <div class="spot" data-anchor="inside"><button class="spot-btn" type="button" aria-expanded="false" aria-controls="spot-inside"><span class="sr-only">Inside</span></button><p class="spot-card" id="spot-inside"><b><span>05</span>Inside</b>Pockets inside: a band that holds a bottle, a square pocket for small things. Nothing outside.</p></div>
+          </div>
+          <div class="tote-buy">
+            <p class="tote-status"><span class="status-dot" aria-hidden="true"></span>In development</p>
+            <a class="cell-btn cell-btn-red" href="#updates"><span class="cell-btn-arrow" aria-hidden="true">↓</span><span>Get notified</span></a>
+          </div>
+        </div>
       </div>
-      <span class="home-bottom-clock" id="home-footer-clock">08:44:32 JST</span>
-    </footer>
-  </main>
-</body>
+    </section>
 
+    <section class="updates" id="updates" aria-labelledby="updates-title">
+      <h2 class="updates-mark"><span class="sec-idx">03</span><span id="updates-title">Updates</span></h2>
+      <form class="signup" id="subscribe-form" novalidate aria-describedby="updates-description">
+        <p class="madlib" id="updates-description">Stay in the know.<br>New work and objects, every now and then.</p>
+        <div class="signup-line">
+          <label class="sr-only" for="email">Email address</label><span class="signup-row"><input class="signup-input" id="email" name="email" type="email" placeholder="your email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required maxlength="254" aria-describedby="form-status"><span class="signup-tag" aria-hidden="true"></span></span>
+          <button class="signup-btn" type="submit"><span class="button-label">stay updated</span><span class="signup-arrow" aria-hidden="true">→</span></button>
+        </div>
+        <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p class="form-status">Signup needs JavaScript. Your email hasn’t been collected.</p></noscript>
+      </form>
+      <p class="closing big-text" data-ink>In the work we do <em>for others</em>, and the things we make <em>for you</em>.</p>
+      <footer class="footer">
+        <p class="footer-copy">© <span id="year">2026</span> 2D1</p>
+        <p class="footer-sign">Familiar Characters<span class="sign-stop">.</span></p>
+        <ul class="apps" aria-label="2D1 elsewhere">
+          <li><a class="app" href="https://www.instagram.com/2d1.studio/" target="_blank" rel="noopener noreferrer" aria-label="2D1 on Instagram (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="0" width="7" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="8" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="3" y="3" width="3" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="3" y="6" width="3" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="8" y="7" width="1" height="1"/><rect x="1" y="8" width="7" height="1"/></g></svg></a></li>
+          <li><a class="app" href="https://www.threads.com/@2d1.studio" target="_blank" rel="noopener noreferrer" aria-label="2D1 on Threads (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="2" y="0" width="5" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="3" y="2" width="3" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="5" y="4" width="2" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="3" y="5" width="2" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="2" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="2" y="8" width="6" height="1"/></g></svg></a></li>
+          <li><a class="app" href="https://x.com/2d1_studio" target="_blank" rel="noopener noreferrer" aria-label="2D1 on X (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="0.5" y="0.5" width="2" height="1"/><rect x="7.5" y="0.5" width="1" height="1"/><rect x="1.5" y="1.5" width="2" height="1"/><rect x="6.5" y="1.5" width="1" height="1"/><rect x="2.5" y="2.5" width="2" height="1"/><rect x="5.5" y="2.5" width="1" height="1"/><rect x="3.5" y="3.5" width="2" height="1"/><rect x="3.5" y="4.5" width="3" height="1"/><rect x="2.5" y="5.5" width="1" height="1"/><rect x="4.5" y="5.5" width="2" height="1"/><rect x="1.5" y="6.5" width="1" height="1"/><rect x="5.5" y="6.5" width="2" height="1"/><rect x="0.5" y="7.5" width="1" height="1"/><rect x="6.5" y="7.5" width="2" height="1"/></g></svg></a></li>
+          <li><a class="app" href="https://www.linkedin.com/company/newfiction-org/" target="_blank" rel="noopener noreferrer" aria-label="New Fiction on LinkedIn (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="1" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="5" y="3" width="2" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="2" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="3" y="7" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/></g></svg></a></li>
+        </ul>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Contact: a native dialog. Submissions go to the Notion "Form Submissions"
+       database through the endpoint in js/config.js (see docs/CONTACT.md). -->
+  <dialog class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="contact-sheet">
+      <div class="contact-head">
+        <span class="contact-eyes" aria-hidden="true"><i></i><i></i></span>
+        <button class="contact-close" type="button" data-close><span>Close</span><span class="contact-x" aria-hidden="true"></span></button>
+      </div>
+      <form class="contact-form" id="contact-form" novalidate>
+        <h2 class="contact-title" id="contact-title">Say hello.</h2>
+        <p class="contact-intro">Tell us a little about you and what you have in mind. We’ll get back to you within five business days.</p>
+        <div class="field">
+          <label class="field-label" for="c-name">Full name <span class="req" aria-hidden="true"></span></label>
+          <input class="field-input" id="c-name" name="name" type="text" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label class="field-label" for="c-email">Email <span class="req" aria-hidden="true"></span></label>
+          <input class="field-input" id="c-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required maxlength="254">
+        </div>
+        <div class="field">
+          <label class="field-label" for="c-company">Company <span class="opt">Optional</span></label>
+          <input class="field-input" id="c-company" name="company" type="text" autocomplete="organization" maxlength="120">
+        </div>
+        <fieldset class="field field-choice">
+          <legend class="field-label">Category <span class="req" aria-hidden="true"></span></legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="category" value="New Business" required><span>New Business</span></label>
+            <label class="chip"><input type="radio" name="category" value="Media Inquiry"><span>Media Inquiry</span></label>
+            <label class="chip"><input type="radio" name="category" value="Other"><span>Other</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label class="field-label" for="c-message">Message <span class="req" aria-hidden="true"></span><span class="count-chars" aria-hidden="true"><span id="c-count">0</span>/2000</span></label>
+          <textarea class="field-input field-area" id="c-message" name="message" rows="3" required maxlength="2000"></textarea>
+        </div>
+        <div class="field-trap" aria-hidden="true"><label for="c-website">Website</label><input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="contact-foot">
+          <button class="contact-send" type="submit"><span class="send-label">Send</span><span class="send-arrow" aria-hidden="true">→</span></button>
+          <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+      <div class="contact-done" hidden>
+        <p class="contact-title contact-done-title" tabindex="-1">Thank you<span class="done-name"></span>.</p>
+        <p class="contact-intro">Your message is in. We’ll get back to you within five business days.</p>
+        <button class="contact-send" type="button" data-close><span class="send-label">Close</span></button>
+      </div>
+      <p class="contact-fallback" hidden>Our form isn’t connected yet, so nothing was sent. You can reach us through <a href="https://temporal-sight-127.notion.site/966aab52301b4588a1c875bf81ac421a?pvs=105" target="_blank" rel="noopener noreferrer">our Notion form<span class="sr-only"> (opens in a new tab)</span></a> instead.</p>
+    </div>
+  </dialog>
+</body>
+</html>
