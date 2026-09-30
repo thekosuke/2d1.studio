@@ -26,6 +26,7 @@
   --fs-lead: clamp(18px, 1.5vw, 24px);
   --space: clamp(120px, 17vw, 280px);   /* between sections */
   --space-in: clamp(56px, 7vw, 120px);  /* within a section */
+  --gap: clamp(24px, 2.8vw, 40px);      /* a label or tag to what it introduces */
 
   color-scheme: light;
   scroll-behavior: smooth;
@@ -81,19 +82,48 @@ a, button, input { -webkit-tap-highlight-color: transparent; }
 .btn { display: inline-flex; align-items: center; justify-content: center; font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; transition: background-color .15s, color .15s; }
 .btn-bar { min-height: 38px; padding: 0 16px; background: var(--white); color: var(--red); }
 .btn-bar:hover { background: var(--ink); color: var(--white); }
+/* Two actions on the right: Contact us, solid; Get updates, drawn in outline. */
+.bar-actions { display: flex; align-items: center; gap: 8px; }
+.btn-bar-line { background: transparent; color: var(--white); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .75); }
+.btn-bar-line:hover { background: var(--white); color: var(--red); box-shadow: none; }
+.bar-nav-extra { display: none; }
 .bar { position: fixed; inset: 0 0 auto; z-index: 20; height: var(--bar); display: flex; align-items: center; justify-content: space-between; padding-inline: var(--pad); background: var(--red); color: var(--white); }
 .bar-nav { display: flex; gap: clamp(18px, 2.6vw, 40px); font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
 .bar-nav a { padding-block: 14px; }
 .bar-nav a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
 .bar :focus-visible, .logo:focus-visible { outline-color: var(--white); }
+/* The page you're on gets a small white square, like the tag on the tote. */
+.bar-nav a[aria-current] { display: inline-flex; align-items: center; gap: 8px; }
+.bar-nav a[aria-current]::before { content: ""; width: 6px; height: 6px; background: var(--white); }
+/* On inner pages the logo simply sits in the bar, as the way home. */
+.bar-logo { position: absolute; left: 50%; top: 50%; width: 80px; transform: translate(-50%, -50%); }
+.bar-menu { display: none; }
+/* Phones: three sections, the logo, and Get updates don't fit across one bar,
+ * so the sections fold into a menu that wipes down in the bar's red. */
+@media (max-width: 699px) {
+  .bar-logo { width: 58px; }
+  .js .bar-menu { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px 0 0; border: 0; background: none; font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+  .js .bar-nav { position: fixed; inset: var(--bar) 0 0; z-index: 1; flex-direction: column; gap: 0; padding: 4px var(--pad) 32px; background: var(--red); font: 400 clamp(30px, 9vw, 40px)/1.05 var(--font); text-transform: none; letter-spacing: -.035em; overscroll-behavior: contain; visibility: hidden; clip-path: inset(0 0 100% 0); transition: clip-path .42s cubic-bezier(.7, 0, .2, 1), visibility 0s .42s; }
+  .js .bar.is-open .bar-nav { visibility: visible; clip-path: inset(0); transition: clip-path .42s cubic-bezier(.7, 0, .2, 1); }
+  .js .bar-nav a { padding: 18px 0 16px; border-bottom: 1px solid rgba(255, 255, 255, .35); }
+  .js .bar-nav a:hover { text-decoration: none; }
+  .js .bar-nav a[aria-current] { gap: 12px; }
+  .js .bar-nav a[aria-current]::before { width: 10px; height: 10px; }
+  /* On phones Get updates lives in the menu; Contact us stays in the bar. */
+  .btn-bar-line { display: none; }
+  .js .bar-nav .bar-nav-extra, html:not(.js) .bar-nav .bar-nav-extra { display: block; }
+  html.has-menu { overflow: hidden; }
+  html:not(.js) .bar-nav { flex: 1; min-width: 0; margin-right: 12px; gap: 14px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+  html:not(.js) .bar-logo { display: none; }
+}
 
 /* Without JS the logo sits in the hero; with JS the script docks it. */
 .logo { position: absolute; z-index: 30; left: 50%; top: 45svh; width: 50vw; transform: translate(-50%, -50%); }
 .logo-mark { display: block; width: 100%; height: auto; overflow: visible; }
 /* Eyes: closed (invisible) until the logo wakes; then they open, glance, and close. */
 .logo-eyes rect { transform-box: fill-box; transform-origin: center; transform: scaleY(0); transition: transform .12s cubic-bezier(.3, 1.4, .5, 1); }
-.logo.is-awake .logo-eyes rect { transform: scaleY(1); }
-.logo.is-glancing .logo-eyes rect { transform: translateX(calc(var(--glance, 1) * 7px)) scaleY(1); transition-duration: .18s; }
+.logo.is-awake .logo-eyes rect, .bar-logo.is-awake .logo-eyes rect { transform: scaleY(1); }
+.logo.is-glancing .logo-eyes rect, .bar-logo.is-glancing .logo-eyes rect { transform: translateX(calc(var(--glance, 1) * 5px)) scaleY(1); transition-duration: .18s; }
 .js .logo { position: fixed; transform-origin: 50% 0; }
 
 /* Hero: the grid is already here, faintly, in quarters. The logo spans the
@@ -111,63 +141,91 @@ a, button, input { -webkit-tap-highlight-color: transparent; }
 .is-inking .ink.is-inked { color: var(--ink); }
 .is-inking em .ink.is-inked { color: var(--red); }
 
-/* Studio: a pinned reel that travels sideways as you scroll. -------------------
- * Panels: intro, three square project "characters" (each with the tote's red
- * tag), and what we do. The panel in the middle is full size; the others step
- * back a little. Scrolling across a project steps through its images. */
-.studio-scroll { position: relative; }
-.studio-stage { position: relative; overflow: hidden; }
-.js .studio-stage { position: sticky; top: var(--bar); height: calc(100svh - var(--bar)); }
-.studio-mark { position: absolute; z-index: 2; top: var(--pad); left: var(--pad); display: flex; align-items: center; gap: 10px; font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+/* Studio --------------------------------------------------------------------
+ * One view, held together by space alone: the tag, the line and the sub on
+ * the left; what we do from the 8th column; the work, full bleed, below. The work is one card per project at the images' own 16:9 (the
+ * 3:4 crops on phones), looping without end: each card steps through its
+ * images, then the next slides in. Pointing at it or tabbing into it holds it;
+ * swipe or scroll sideways, or pick a square. Cards size themselves so the
+ * whole section fits one screen.
+ */
+.studio { margin: calc(var(--space) - var(--gap)) 0 var(--space-in); padding-top: var(--gap); }
+.studio-grid { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: var(--gap); }
+.studio-lede { position: relative; padding: 0 var(--pad); }
+.studio-caps { display: flex; flex-direction: column; padding: 0 var(--pad); }
+@media (min-width: 900px) {
+  .studio-grid { grid-template-columns: calc(100% * 7 / 12) 1fr; }
+}
+.studio-mark { display: flex; align-items: center; gap: 10px; margin-bottom: var(--gap); font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
 .studio-mark .sec-idx, .shop-mark .sec-idx, .updates-mark .sec-idx { width: 32px; height: 32px; margin: 0; font-size: 12px; }
-.reel-progress i:nth-child(-n+1) { background: var(--red); }
-.studio-stage[data-panel="1"] .reel-progress i:nth-child(-n+2), .studio-stage[data-panel="2"] .reel-progress i:nth-child(-n+3),
-.studio-stage[data-panel="3"] .reel-progress i:nth-child(-n+4), .studio-stage[data-panel="4"] .reel-progress i { background: var(--red); }
+/* One voice leads: the line, large; everything else steps back. */
+.studio .reel-title { font-size: clamp(34px, 3.6vw, 64px); text-align: left; }
+.studio .reel-sub { max-width: 34em; margin: 18px 0 0; font-size: clamp(17px, 1.3vw, 21px); line-height: 1.45; text-align: left; text-wrap: pretty; }
+@media (min-width: 900px) { .studio .reel-title br { display: none; } }
+/* Get in touch: a casual first step, level with the tag on wide screens. */
+.studio-hello { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; margin-top: var(--gap); padding: 0 16px; background: var(--ink); color: var(--white); font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; transition: background-color .15s; }
+.studio-hello-arrow { font: 400 18px/1 var(--font); transition: transform .3s cubic-bezier(.3, 1.4, .5, 1); }
+.studio-hello:hover { background: var(--red); }
+.studio-hello:hover .studio-hello-arrow { transform: translateX(3px); }
+.studio-hello:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+@media (min-width: 900px) {
+  .studio-hello { position: absolute; top: 0; right: var(--pad); min-height: 32px; margin: 0; padding: 0 14px; }
+}
+/* What we do: a quiet list. The label sits with the tag, the list settles to
+ * the bottom of the cell, level with the sub; air in between. */
+.caps-label { font: 400 12px/32px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); }
+.caps { margin-top: auto; padding-top: var(--gap); }
+.cap { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; column-gap: 24px; padding: 14px 0 15px; border-top: 1px solid var(--line); }
+.cap:last-child { padding-bottom: 0; }
+.cap-text { display: contents; }
+.cap-name { font-size: clamp(17px, 1.3vw, 21px); line-height: 1.3; letter-spacing: -.015em; }
+.cap-line { font-size: 15px; line-height: 1.3; color: var(--ink-soft); text-align: right; }
+@media (max-width: 699px) {
+  .cap { grid-template-columns: minmax(0, 1fr); row-gap: 2px; }
+  .cap-line { text-align: left; }
+}
+.work { --card-h: clamp(240px, calc(100svh - var(--bar) - clamp(352px, 24.4vw, 486px)), 680px); --card-w: min(86vw, calc(var(--card-h) * 16 / 9)); margin-top: var(--gap); }
+@media (min-width: 900px) { .work { grid-column: 1 / -1; } }
+.work-track { display: flex; gap: var(--pad); padding: 0 var(--pad); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: var(--pad); scrollbar-width: none; }
+.work-track::-webkit-scrollbar { display: none; }
+.work-track.is-jumping { scroll-snap-type: none; }
+.work-card { position: relative; flex: 0 0 var(--card-w); width: var(--card-w); aspect-ratio: 16 / 9; overflow: hidden; background: var(--ink); color: var(--white); scroll-snap-align: start; cursor: pointer; }
+.work-card.is-front { cursor: ew-resize; }   /* move across it to flip through its images */
+.work-frames { position: absolute; inset: 0; }
+.work-frames picture { display: contents; }
+.work-frame { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .7s; }
+.work-frame.is-current { opacity: 1; }
+.work-info { position: absolute; z-index: 1; left: var(--pad); right: var(--pad); bottom: var(--pad); pointer-events: none; text-shadow: 0 1px 12px rgba(22, 22, 26, .4); }
+.work-cat { font: 400 11px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: rgba(255, 255, 255, .82); }
+@media (max-width: 699px) {
+  .work { --card-w: 82vw; }
+  .work-card { aspect-ratio: 3 / 4; }
+}
 
-.reel { --case: min(62svh, 78vw); display: flex; align-items: center; gap: clamp(28px, 5vw, 96px); height: 100%; padding: 0 max(var(--pad), calc(50vw - var(--case) / 2)); will-change: transform; transform: translateX(var(--reel-x, 0px)); }
-.panel { flex: none; transform: scale(var(--s, 1)); transform-origin: 50% 55%; opacity: var(--o, 1); }
-.panel-intro { width: min(46vw, 760px); }
-.reel-title { font-size: clamp(44px, 6.4vw, 124px); text-align: left; }
-.reel-sub { margin: 24px 0 0; text-align: left; }
-
-/* Projects: square frames, tagged. */
-.panel-case { position: relative; width: var(--case); }
-.viewer { position: relative; display: block; width: 100%; aspect-ratio: 1; padding: 0; border: 0; overflow: hidden; background: var(--gray); cursor: pointer; touch-action: manipulation; }
+/* Parked: the full-screen layered slides (see the <template> in index.html). */
+.slide { position: relative; height: calc(100svh - var(--bar)); min-height: 480px; clip-path: inset(0); background: var(--ink); color: var(--white); }
+.slide-media { position: fixed; left: 0; right: 0; top: var(--bar); height: max(calc(100svh - var(--bar)), 480px); }
+.viewer { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: 0; overflow: hidden; background: var(--ink); cursor: pointer; touch-action: manipulation; }
+.viewer picture { display: contents; }
 .frame { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: hidden; }
 .frame.is-current { visibility: visible; }
-.viewer:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
-.case-tag { position: absolute; left: calc(var(--case) * -.06); top: 68%; display: grid; place-items: center; width: calc(var(--case) * .12); aspect-ratio: 1; background: var(--red); color: var(--white); font: 400 clamp(11px, 1vw, 14px)/1 var(--mono); letter-spacing: .04em; transform: translateX(calc((1 - var(--tag, 1)) * 40%)); transition: transform .5s cubic-bezier(.3, 1.4, .5, 1); pointer-events: none; }
-.panel-case figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-top: 14px; font: 400 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
-.count { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
-.count-now { color: var(--ink); }
-
-/* What we do, then the way in. */
-.panel-caps { width: min(40vw, 620px); }
-.caps-label { font: 400 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); margin-bottom: 8px; }
-.cap { display: grid; grid-template-columns: 44px 1fr; column-gap: 18px; align-items: start; padding: 18px 0 20px; border-top: 1px solid var(--line); }
-.cap:last-child { border-bottom: 1px solid var(--line); }
-.cap .glyph { grid-row: span 2; width: 44px; height: 44px; }
-.cap-name { font-size: clamp(22px, 2.1vw, 36px); line-height: 1.08; letter-spacing: -.03em; }
-.cap-line { margin-top: 4px; font-size: var(--fs-s); line-height: 1.35; color: var(--ink-soft); }
-.glyph * { transition: transform .45s cubic-bezier(.7, 0, .2, 1); transform-box: fill-box; transform-origin: center; }
-@media (hover: hover) and (pointer: fine) {
-  .cap:hover .g-consult rect:last-child { transform: translateY(-6px); }
-  .cap:hover .g-product rect:last-child { transform: translateX(-20px); }
-  .cap:hover .g-brand path { transform: rotate(90deg); }
+.viewer:focus-visible { outline: 3px solid var(--red); outline-offset: -3px; }
+@media (hover: hover) and (pointer: fine) { .slide .viewer { cursor: ew-resize; } }
+.slide-info { position: absolute; z-index: 1; left: var(--pad); bottom: calc(var(--pad) * 2); display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 14px; pointer-events: none; text-shadow: 0 1px 18px rgba(22, 22, 26, .28); }
+.case-tag { grid-row: span 2; display: grid; place-items: center; width: clamp(40px, 4vw, 60px); aspect-ratio: 1; background: var(--red); color: var(--white); font: 400 clamp(11px, 1vw, 14px)/1 var(--mono); letter-spacing: .04em; }
+.slide-name { font-size: clamp(40px, 7vw, 132px); line-height: .9; letter-spacing: -.05em; }
+.slide-cat { font: 400 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; margin-top: 10px; color: rgba(255, 255, 255, .82); }
+.slide-count { position: absolute; z-index: 1; right: var(--pad); bottom: calc(var(--pad) * 2); font: 400 12px/1 var(--mono); letter-spacing: .05em; color: rgba(255, 255, 255, .7); font-variant-numeric: tabular-nums; pointer-events: none; }
+.slide-count .count-now { color: var(--white); }
+/* Which image you're on: small squares; the current one stretches, like the Shop's. */
+.slide-ticks { position: absolute; z-index: 1; right: var(--pad); bottom: calc(var(--pad) * 2 + 24px); display: flex; gap: 5px; pointer-events: none; }
+.slide-ticks i { width: 6px; height: 6px; background: rgba(255, 255, 255, .5); transition: width .35s cubic-bezier(.3, 1.4, .5, 1), background-color .2s; }
+.slide-ticks i.is-on { width: 24px; background: var(--white); }
+@media (max-width: 699px) {
+  .slide-info { grid-template-columns: auto 1fr; right: var(--pad); }
+  .slide-count { bottom: auto; top: var(--pad); }
+  .slide-ticks { bottom: auto; top: calc(var(--pad) + 22px); }
 }
-.work-cta { display: flex; align-items: center; justify-content: center; gap: 14px; min-height: 84px; margin-top: 28px; padding: 0 var(--pad); background: var(--ink); color: var(--white); font: 400 14px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; transition: background-color .15s; }
-.work-cta-arrow { font: 400 26px/1 var(--font); transition: transform .3s cubic-bezier(.3, 1.4, .5, 1); }
-.work-cta:hover { background: var(--red); }
-.work-cta:hover .work-cta-arrow { transform: translate(3px, -3px); }
-.work-cta:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
-
-@media (max-width: 899px) {
-  .panel-intro, .panel-caps { width: min(86vw, 560px); }
-  .reel { --case: min(78vw, 52svh); gap: 28px; }
-  .reel-title { font-size: clamp(40px, 11vw, 64px); }
-}
-/* Without JS (and with reduced motion) the reel simply stacks. */
-html:not(.js) .reel { flex-direction: column; align-items: stretch; height: auto; padding: 72px var(--pad) var(--space); }
 
 /* Shop: a studio set for one object ----------------------------------------- */
 .shop { background: var(--beige); }
@@ -207,12 +265,32 @@ html:not(.js) .reel { flex-direction: column; align-items: stretch; height: auto
 .tote-name { margin-top: 10px; font-weight: 400; font-size: clamp(40px, 5vw, 84px); line-height: .9; letter-spacing: -.05em; }
 .tote-note { margin-top: 14px; font-size: var(--fs-s); line-height: 1.4; color: var(--ink-soft); }
 .tote-note em { color: var(--red); }
-/* Six chapters, six ticks. */
-.story-progress { display: flex; gap: 4px; margin-left: 10px; }
-.story-progress i { width: 18px; height: 3px; background: rgba(22, 22, 26, .18); transition: background-color .3s; }
-.is-xray .story-progress i { background: rgba(255, 255, 255, .2); }
-.tote-stage[data-chapter="intro"] .story-progress i:nth-child(-n+1), .tote-stage[data-chapter="logo"] .story-progress i:nth-child(-n+2), .tote-stage[data-chapter="tag"] .story-progress i:nth-child(-n+3),
-.tote-stage[data-chapter="canvas"] .story-progress i:nth-child(-n+4), .tote-stage[data-chapter="strap"] .story-progress i:nth-child(-n+5), .tote-stage[data-chapter="inside"] .story-progress i:nth-child(-n+6), .tote-stage[data-chapter="outro"] .story-progress i { background: var(--red); }
+/* Where you are: a vertical indicator. Chapters are small squares; the current
+ * one stretches into a tall bar that fills as you scroll through it. */
+.story-progress { position: absolute; z-index: 2; right: var(--pad); top: 50%; display: flex; flex-direction: column; align-items: center; gap: 6px; transform: translateY(-50%); }
+.story-progress i { position: relative; width: 4px; height: 4px; background: rgba(22, 22, 26, .2); overflow: hidden; transition: height .5s cubic-bezier(.3, 1.2, .4, 1), background-color .3s; }
+.story-progress i::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 100%; background: var(--red); transform: scaleY(0); transform-origin: top; }
+.tote-stage[data-chapter="intro"] .story-progress i:nth-child(1),
+.tote-stage[data-chapter="logo"] .story-progress i:nth-child(2),
+.tote-stage[data-chapter="tag"] .story-progress i:nth-child(3),
+.tote-stage[data-chapter="canvas"] .story-progress i:nth-child(4),
+.tote-stage[data-chapter="strap"] .story-progress i:nth-child(5),
+.tote-stage[data-chapter="inside"] .story-progress i:nth-child(6),
+.tote-stage[data-chapter="outro"] .story-progress i:nth-child(7) { height: 56px; }
+.tote-stage[data-chapter="intro"] .story-progress i:nth-child(1)::after,
+.tote-stage[data-chapter="logo"] .story-progress i:nth-child(2)::after,
+.tote-stage[data-chapter="tag"] .story-progress i:nth-child(3)::after,
+.tote-stage[data-chapter="canvas"] .story-progress i:nth-child(4)::after,
+.tote-stage[data-chapter="strap"] .story-progress i:nth-child(5)::after,
+.tote-stage[data-chapter="inside"] .story-progress i:nth-child(6)::after,
+.tote-stage[data-chapter="outro"] .story-progress i:nth-child(7)::after { transform: scaleY(var(--chapter-t, 0)); }
+.tote-stage[data-chapter="logo"] .story-progress i:nth-child(-n+1),
+.tote-stage[data-chapter="tag"] .story-progress i:nth-child(-n+2),
+.tote-stage[data-chapter="canvas"] .story-progress i:nth-child(-n+3),
+.tote-stage[data-chapter="strap"] .story-progress i:nth-child(-n+4),
+.tote-stage[data-chapter="inside"] .story-progress i:nth-child(-n+5),
+.tote-stage[data-chapter="outro"] .story-progress i:nth-child(-n+6) { background: rgba(22, 22, 26, .45); }
+.is-xray .story-progress i { background: rgba(255, 255, 255, .25); }
 /* The buy box arrives with the finale. */
 .tote-buy { position: absolute; left: var(--pad); right: var(--pad); bottom: var(--pad); display: flex; flex-direction: column; gap: 12px; opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .5s, transform .6s cubic-bezier(.2, .8, .2, 1); }
 .tote-stage[data-chapter="outro"] .tote-buy, .is-static .tote-buy { opacity: 1; transform: none; pointer-events: auto; }
@@ -264,12 +342,12 @@ html:not(.js) .reel { flex-direction: column; align-items: stretch; height: auto
 .spot.is-open .spot-btn { background: var(--red); border-color: var(--red); }
 /* Updates + footer: room to think --------------------------------------------- */
 .updates { background: var(--white); }
-.updates-mark { display: flex; align-items: center; gap: 10px; padding: var(--space) var(--pad) clamp(28px, 3vw, 48px); font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+.updates-mark { display: flex; align-items: center; gap: 10px; padding: var(--space) var(--pad) var(--gap); font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
 /* A sentence you finish yourself: the field is the blank. */
 .signup { padding: 0 var(--pad); }
 .madlib { max-width: 22em; font-size: clamp(26px, 3vw, 48px); line-height: 1.3; letter-spacing: -.03em; }
 /* The field gets its own line, with room above it. */
-.signup-line { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 20px; margin-top: clamp(48px, 6vw, 96px); font-size: clamp(26px, 3vw, 48px); letter-spacing: -.03em; }
+.signup-line { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 20px; margin-top: var(--space-in); font-size: clamp(26px, 3vw, 48px); letter-spacing: -.03em; }
 .signup-line .signup-row { width: min(11em, 100%); }
 .signup-line .signup-btn { margin-top: 0; }
 @media (min-width: 900px) { .signup { padding-left: calc(100% / 12 + var(--pad)); } }
@@ -319,11 +397,15 @@ html:not(.js) .reel { flex-direction: column; align-items: stretch; height: auto
 .form-status[data-state="error"] { color: var(--red); }
 .form-status[data-state="loading"] { color: var(--ink-soft); }
 
-.footer { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "copy apps" "sign sign"; align-items: center; gap: 10px 16px; margin-top: clamp(80px, 10vw, 160px); padding: 18px var(--pad) 22px; border-top: 1px solid var(--line); font: 400 11px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+.footer { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "copy apps" "sign sign"; align-items: center; gap: 10px 16px; margin-top: var(--space-in); padding: 16px var(--pad); border-top: 1px solid var(--line); font: 400 11px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
 .footer-copy { grid-area: copy; }
 .footer-sign { grid-area: sign; text-align: center; }
 .sign-stop { color: var(--red); }
-.apps { grid-area: apps; display: flex; gap: 2px; justify-self: end; }
+.footer-end { grid-area: apps; display: flex; align-items: center; gap: 10px; justify-self: end; }
+.footer-contact { min-height: 32px; padding: 0 12px; background: var(--ink); color: var(--white); font-size: 11px; }
+.footer-contact:hover { background: var(--red); }
+.footer-contact:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.apps { display: flex; gap: 2px; }
 @media (min-width: 700px) {
   .footer { grid-template-columns: 1fr auto 1fr; grid-template-areas: "copy sign apps"; }
 }
@@ -441,11 +523,6 @@ html.has-dialog { overflow: hidden; }
   *, *::before, *::after { transition-duration: 0s !important; animation-duration: 0s !important; }
   .tote-scroll { height: auto; }
   .logo-eyes { display: none; }
-  .studio-scroll { height: auto !important; }
-  .js .studio-stage { position: relative; top: 0; height: auto; }
-  .reel { flex-direction: column; align-items: stretch; height: auto; padding: 72px var(--pad) var(--space); transform: none !important; }
-  .panel { transform: none !important; opacity: 1 !important; }
-  .panel-intro, .panel-caps, .panel-case { width: auto; max-width: 620px; }
   .contact::backdrop, .contact-sheet, .contact-form > *, .contact-done > *, .contact-eyes, .contact-eyes i { animation: none !important; }
   .tote-stage .chapter-intro { opacity: 1; transform: none; }
   .signup-row.is-sending .signup-tag, .signup-row.is-shaking, .signup-row.is-hopping .signup-tag, .signup-row.is-shrugging .signup-tag { animation: none; }

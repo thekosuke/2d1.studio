@@ -103,8 +103,8 @@ email.addEventListener('input', () => {
 });
 
 /* Project viewers -----------------------------------------------------------
- * One square frame, several images, never a link. Scrolling across a project
- * in the Studio reel steps through its images; a click, tap, Enter, or Space
+ * One frame, several images, never a link. Moving the cursor across a Studio
+ * slide picks the image under it; a click, tap, Enter, or Space
  * steps once. The next image is decoded before it moves, so the frame never
  * shows a blank. Moving forward pushes in from the right; back, from the left.
  */
@@ -113,6 +113,8 @@ const viewers = new Map();
 
 function loadFrame(image) {
   if (!image.dataset.src) return;
+  const source = image.parentElement?.querySelector('source[data-srcset]');
+  if (source) { source.srcset = source.dataset.srcset; delete source.dataset.srcset; }
   image.srcset = image.dataset.srcset;
   image.src = image.dataset.src;
   delete image.dataset.src;
@@ -123,6 +125,8 @@ function createViewer(project) {
   const button = project.querySelector('.viewer');
   const frames = [...button.querySelectorAll('.frame')];
   const counter = project.querySelector('.count-now');
+  const ticks = [...project.querySelectorAll('.slide-ticks i')];
+  ticks[0]?.classList.add('is-on');
   const name = project.dataset.project;
   let index = 0;
   let busy = false;
@@ -132,9 +136,9 @@ function createViewer(project) {
   frames.forEach((frame, i) => { if (i !== index) frame.setAttribute('aria-hidden', 'true'); });
   const warm = (all) => (all ? frames : [frames[(index + 1) % frames.length]]).forEach(loadFrame);
 
-  async function show(target, dir, announce) {
+  async function show(target, dir, announce, instant = false) {
     if (target === index) return;
-    if (busy) { pendingTarget = { target, dir, announce }; motion.forEach((a) => a.finish()); return; }
+    if (busy) { pendingTarget = { target, dir, announce, instant }; motion.forEach((a) => a.finish()); return; }
     busy = true;
     const incoming = frames[target], outgoing = frames[index];
     loadFrame(incoming);
@@ -145,10 +149,11 @@ function createViewer(project) {
     incoming.classList.add('is-current');
     incoming.removeAttribute('aria-hidden');
     counter.textContent = pad(index + 1);
+    ticks.forEach((t, i) => t.classList.toggle('is-on', i === index));
     button.setAttribute('aria-label', `${name}, image ${index + 1} of ${frames.length}. Show next image.`);
     if (announce) viewerStatus.textContent = `${name}, ${index + 1} of ${frames.length}: ${incoming.alt}`;
     warm(false);
-    if (!reducedMotion.matches) {
+    if (!reducedMotion.matches && !instant) {
       const timing = { duration: 560, easing: 'cubic-bezier(.7, 0, .2, 1)' };
       outgoing.style.visibility = 'visible';
       motion = [
@@ -160,7 +165,7 @@ function createViewer(project) {
       outgoing.style.removeProperty('visibility');
     }
     busy = false;
-    if (pendingTarget) { const p = pendingTarget; pendingTarget = null; show(p.target, p.dir, p.announce); }
+    if (pendingTarget) { const p = pendingTarget; pendingTarget = null; show(p.target, p.dir, p.announce, p.instant); }
   }
 
   button.addEventListener('pointerenter', () => warm(true));
@@ -170,7 +175,7 @@ function createViewer(project) {
   return {
     warm,
     get count() { return frames.length; },
-    goTo(target) { if (target !== index) show(target, target > index ? 1 : -1, false); },
+    goTo(target, instant = false) { if (target !== index) show(target, target > index ? 1 : -1, false, instant); },
     stop() { motion.forEach((a) => a.finish()); }
   };
 }
@@ -189,65 +194,135 @@ if ('IntersectionObserver' in window) {
   viewers.forEach((viewer, project) => warmer.observe(project));
 }
 
-/* Studio reel: vertical scroll drives the reel sideways, 1px for 1px. The
- * panel nearest the middle is full size; the others step back. As a project
- * crosses the middle its images advance, one per slice of the crossing. */
-const reel = document.querySelector('.reel');
-const studioStage = document.querySelector('.studio-stage');
-const studioScroll = document.querySelector('.studio-scroll');
-const panels = reel ? [...reel.querySelectorAll('.panel')] : [];
-let reelTravel = 0;
-const reelOn = () => document.documentElement.classList.contains('js') && !reducedMotion.matches;
-function sizeReel() {
-  if (!reel) return;
-  reel.style.setProperty('--reel-x', '0px');
-  panels.forEach((p) => p.style.removeProperty('--s'));
-  if (!reelOn()) { studioScroll.style.removeProperty('height'); reelTravel = 0; return; }
-  const first = panels[0].getBoundingClientRect(), last = panels[panels.length - 1].getBoundingClientRect();
-  const firstCenter = first.left + first.width / 2, lastCenter = last.left + last.width / 2;
-  reelTravel = Math.max(0, lastCenter - firstCenter);
-  // Start with the intro in the middle, end with what-we-do in the middle.
-  reel.dataset.offset = String(window.innerWidth / 2 - firstCenter);
-  studioScroll.style.height = `${studioStage.offsetHeight + reelTravel * 1.1}px`;
-}
-function driveReel() {
-  if (!reel || !reelOn()) return;
-  const box = studioScroll.getBoundingClientRect();
-  const stick = parseFloat(getComputedStyle(studioStage).top) || 0;
-  const t = clamp01((stick - box.top) / Math.max(1, box.height - studioStage.offsetHeight));
-  const x = Number(reel.dataset.offset || 0) - t * reelTravel;
-  reel.style.setProperty('--reel-x', `${x.toFixed(1)}px`);
-  const mid = window.innerWidth / 2;
-  let nearest = 0, best = Infinity;
-  panels.forEach((panel, i) => {
-    const w = panel.offsetWidth, left = panel.offsetLeft + x;
-    const u = (mid - (left + w / 2)) / (w + 60);       // 0 when centred, ±1 a panel away
-    const d = Math.min(1, Math.abs(u));
-    panel.style.setProperty('--s', (1 - 0.16 * d).toFixed(4));
-    panel.style.setProperty('--o', (1 - 0.45 * d).toFixed(4));
-    panel.style.setProperty('--tag', Math.abs(u) < 0.5 ? '1' : '0');
-    if (Math.abs(u) < best) { best = Math.abs(u); nearest = i; }
-    const viewer = viewers.get(panel);
-    if (viewer) {
-      const k = viewer.count;
-      const target = Math.max(0, Math.min(k - 1, Math.floor((u + 0.5) * k)));
-      if (panel.dataset.target !== String(target)) { panel.dataset.target = String(target); viewer.goTo(target); }
-    }
+/* Studio slides: the layered reveal is pure CSS (fixed images clipped to their
+ * slides). A fine pointer moving across a slide picks the image under it, left
+ * to right, like a flipbook. */
+const slides = [...document.querySelectorAll('.slide')];
+slides.forEach((slide) => {
+  const viewer = viewers.get(slide);
+  if (!viewer) return;
+  slide.addEventListener('pointermove', (event) => {
+    if (event.pointerType !== 'mouse' || !fineHover.matches) return;
+    const box = slide.getBoundingClientRect();
+    const target = Math.min(viewer.count - 1, Math.floor(((event.clientX - box.left) / box.width) * viewer.count));
+    viewer.goTo(target, true);
   });
-  studioStage.dataset.panel = String(nearest);
-}
-// Keyboard: whatever gets focus in the reel scrolls into the middle.
-reel?.addEventListener('focusin', (event) => {
-  if (!reelOn()) return;
-  const panel = event.target.closest('.panel');
-  if (!panel) return;
-  const i = panels.indexOf(panel);
-  const t = panels.length > 1 ? i / (panels.length - 1) : 0;
-  const box = studioScroll.getBoundingClientRect();
-  const stick = parseFloat(getComputedStyle(studioStage).top) || 0;
-  const top = box.top + window.scrollY - stick + t * (box.height - studioStage.offsetHeight);
-  window.scrollTo({ top, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
 });
+
+/* Studio work: one card per project, looping without end. Copies of the three
+ * cards sit on either side of the real ones; whenever the scroll comes to rest
+ * on a copy, it jumps (invisibly) to the same card in the middle set. It plays
+ * by itself: each card steps through its images, then the next slides in.
+ * Pointing at the work or tabbing into it holds it; it never runs off screen,
+ * in a hidden tab, or with reduced motion. Moving the pointer across the card
+ * in front flips through its images (left to right, like a flipbook); a click
+ * on any card slides the carousel on; swipe or scroll sideways too. */
+const work = document.querySelector('.work');
+if (work) {
+  const track = work.querySelector('.work-track');
+  const real = [...track.querySelectorAll('.work-card')];
+  const n = real.length;
+  const STEP = 2200;   // ms per image
+  const copy = () => real.map((card) => {
+    const c = card.cloneNode(true);
+    c.setAttribute('aria-hidden', 'true');   // clickable (it slides to itself), but not announced twice
+    return c;
+  });
+  track.prepend(...copy());
+  track.append(...copy());
+  const cards = [...track.querySelectorAll('.work-card')];   // copies, real, copies
+  let at = n, shown = 0, elapsed = 0, last = 0, loop = 0, held = false, onScreen = false, steering = false;
+  const project = (i) => ((i % n) + n) % n;
+  const pitch = () => cards[1].offsetLeft - cards[0].offsetLeft;
+  const copiesOf = (p) => cards.filter((_, i) => project(i) === p);
+  const frameCount = (p) => real[p].querySelectorAll('.work-frame').length;
+
+  function show(p, f) {
+    copiesOf(p).forEach((card) => {
+      card.querySelectorAll('.work-frame').forEach((img, i) => { if (i === f) loadFrame(img); img.classList.toggle('is-current', i === f); });
+    });
+  }
+  function jump(i) {   // to the same place, instantly
+    track.classList.add('is-jumping');
+    track.scrollLeft = i * pitch();
+    track.classList.remove('is-jumping');
+  }
+  function become(i) {
+    const before = project(at), now = project(i);
+    at = i;
+    cards.forEach((card, j) => card.classList.toggle('is-front', j === i));
+    if (now === before) return;
+    show(before, 0);
+    shown = 0; elapsed = 0;
+    copiesOf(now).forEach((c) => c.querySelectorAll('.work-frame').forEach(loadFrame));
+  }
+  function goTo(i) {
+    steering = true;
+    become(i);
+    track.scrollTo({ left: i * pitch(), behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+  }
+  // When the scroll rests: settle on the card in front, back in the middle set.
+  function settle() {
+    steering = false;
+    const i = Math.round(track.scrollLeft / pitch());
+    become(i);
+    if (i < n || i >= 2 * n) { at = project(i) + n; jump(at); }
+  }
+  let rest = 0;
+  track.addEventListener('scroll', () => {
+    window.clearTimeout(rest);
+    rest = window.setTimeout(settle, 140);
+    if (!steering) {
+      const i = Math.round(track.scrollLeft / pitch());
+      if (project(i) !== project(at)) become(i);
+    }
+  }, { passive: true });
+
+  const running = () => !held && onScreen && !document.hidden && !reducedMotion.matches;
+  function tick(now) {
+    loop = 0;
+    if (!running()) return;
+    elapsed += Math.min(100, now - last);
+    last = now;
+    const p = project(at), count = frameCount(p);
+    const f = Math.min(count - 1, Math.floor(elapsed / STEP));
+    if (f !== shown) { shown = f; show(p, f); }
+    if (elapsed >= count * STEP) goTo(at + 1);
+    loop = window.requestAnimationFrame(tick);
+  }
+  function resume() {
+    if (!running() || loop) return;
+    last = performance.now();
+    loop = window.requestAnimationFrame(tick);
+  }
+  const hold = (on) => { held = on; if (on) { window.cancelAnimationFrame(loop); loop = 0; } else resume(); };
+
+  cards.forEach((card, i) => {
+    card.addEventListener('click', () => goTo(i === at ? at + 1 : i));   // slide on: the next one, or the one clicked
+    card.addEventListener('pointermove', (event) => {
+      if (i !== at || event.pointerType !== 'mouse' || !fineHover.matches) return;
+      const box = card.getBoundingClientRect();
+      const p = project(i), count = frameCount(p);
+      const f = Math.min(count - 1, Math.max(0, Math.floor(((event.clientX - box.left) / box.width) * count)));
+      if (f !== shown) { shown = f; elapsed = f * STEP; show(p, f); }
+    });
+  });
+  work.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') hold(true); });
+  work.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') hold(false); });
+  work.addEventListener('focusin', (e) => { if (e.target.matches(':focus-visible')) hold(true); });
+  work.addEventListener('focusout', () => { if (!work.matches(':hover')) hold(false); });
+  document.addEventListener('visibilitychange', resume);
+  new IntersectionObserver(([entry]) => { onScreen = entry.isIntersecting; resume(); }, { threshold: 0.5 }).observe(track);
+  new IntersectionObserver(([entry], observer) => {
+    if (!entry.isIntersecting) return;
+    real[project(at)].querySelectorAll('.work-frame').forEach(loadFrame);
+    observer.disconnect();
+  }, { rootMargin: '400px 0px' }).observe(track);
+  const start = () => { jump(at); cards[at].classList.add('is-front'); };
+  start();
+  window.addEventListener('resize', () => jump(at), { passive: true });
+  document.fonts?.ready.then(start);
+}
 
 /* Scroll: logo dock, reading ink -------------------------------------------
  * The logo starts centred in the hero at half the viewport width, then scales
@@ -332,7 +407,6 @@ function inkIn() {
 function render() {
   framePending = false;
   placeLogo();
-  driveReel();
   inkIn();
 }
 
@@ -348,12 +422,9 @@ function applyMotionPreference() {
 }
 
 window.addEventListener('scroll', queue, { passive: true });
-window.addEventListener('resize', () => { sizeReel(); queue(); }, { passive: true });
-window.addEventListener('load', () => { sizeReel(); queue(); });
-document.fonts?.ready.then(() => { sizeReel(); queue(); });
-reducedMotion.addEventListener('change', () => { sizeReel(); applyMotionPreference(); });
+window.addEventListener('resize', queue, { passive: true });
+reducedMotion.addEventListener('change', applyMotionPreference);
 placeLogo();
-sizeReel();
 applyMotionPreference();
 
 /* Signup micro-interactions --------------------------------------------------
@@ -483,156 +554,50 @@ function peek() {
 }
 window.setTimeout(peek, 2400);
 
-/* Contact ----------------------------------------------------------------------
- * A native dialog. Its pixel eyes open when it arrives, look at whichever field
- * you're in (and follow the text as you type), squint at a mistake, look up
- * while sending, and hop when it's done. Submissions go to the endpoint in
- * js/config.js, which writes to the Notion "Form Submissions" database (see
- * docs/CONTACT.md). Without an endpoint nothing is sent, and the form says so.
- */
-const contact = document.querySelector('#contact');
-const contactForm = document.querySelector('#contact-form');
-if (contact && contactForm && typeof contact.showModal === 'function') {
-  const eyes = contact.querySelector('.contact-eyes');
-  const cStatus = contact.querySelector('#contact-status');
-  const send = contactForm.querySelector('.contact-send');
-  const sendLabel = send.querySelector('.send-label');
-  const done = contact.querySelector('.contact-done');
-  const fallback = contact.querySelector('.contact-fallback');
-  const message = contactForm.querySelector('#c-message');
-  const counter = contact.querySelector('#c-count');
-  const fields = [...contactForm.querySelectorAll('.field-input, input[type="radio"]')];
-  let sending = false, opener = null;
-
-  const look = (x, y) => { eyes.style.setProperty('--lx', x.toFixed(2)); eyes.style.setProperty('--ly', y.toFixed(2)); };
-  const mood = (name) => { eyes.dataset.mood = name || ''; };
-  function glance(el) {
-    const e = eyes.getBoundingClientRect(), r = el.getBoundingClientRect();
-    let tx = r.left + Math.min(r.width, 24 + (el.value || '').length * 11);
-    look(Math.max(-1, Math.min(1, (tx - (e.left + e.width / 2)) / 400)), Math.max(-1, Math.min(1, (r.top - e.bottom) / 500)));
-  }
-
-  function open(event) {
-    if (event) { if (event.metaKey || event.ctrlKey || event.shiftKey || event.button > 0) return; event.preventDefault(); }
-    opener = document.activeElement;
-    contact.classList.remove('is-closing');
-    contact.showModal();
-    document.documentElement.classList.add('has-dialog');
-    mood('closed');
-    window.setTimeout(() => mood(''), reducedMotion.matches ? 0 : 650);   // they open once it lands
-    look(0, 0.4);
-    if (!done.hidden) return;
-    window.setTimeout(() => contactForm.querySelector('#c-name').focus({ preventScroll: true }), reducedMotion.matches ? 0 : 520);
-  }
-  function close() {
-    if (!contact.open) return;
-    if (reducedMotion.matches) { contact.close(); return; }
-    contact.classList.add('is-closing');
-    window.setTimeout(() => { contact.classList.remove('is-closing'); contact.close(); }, 380);
-  }
-  contact.addEventListener('close', () => { document.documentElement.classList.remove('has-dialog'); opener?.focus?.({ preventScroll: true }); });
-  contact.addEventListener('cancel', (event) => { event.preventDefault(); close(); });
-  contact.addEventListener('click', (event) => { if (event.target === contact || event.target.closest('[data-close]')) close(); });
-  document.querySelectorAll('[data-contact]').forEach((link) => link.addEventListener('click', open));
-
-  fields.forEach((field) => {
-    field.addEventListener('focus', () => glance(field));
-    field.addEventListener('input', () => {
-      glance(field);
-      field.removeAttribute('aria-invalid');
-      field.closest('.field')?.classList.remove('is-wrong');
-      if (cStatus.dataset.state === 'error') { cStatus.textContent = ''; cStatus.dataset.state = ''; mood(''); }
-      contactForm.classList.toggle('is-ready', contactForm.checkValidity());
-    });
-  });
-  contactForm.querySelectorAll('input[type="radio"]').forEach((r) => r.addEventListener('change', () => {
-    contactForm.classList.toggle('is-ready', contactForm.checkValidity());
-    mood('happy'); window.setTimeout(() => mood(''), 500);
-  }));
-  // The message box grows with what you write.
-  message.addEventListener('input', () => {
-    counter.textContent = message.value.length;
-    message.style.height = 'auto';
-    message.style.height = `${Math.min(message.scrollHeight, 320)}px`;
-  });
-
-  const say = (text, state) => { cStatus.textContent = text; cStatus.dataset.state = state; };
-
-  async function deliver(data) {
-    const endpoint = window.TWO_D_ONE_CONFIG?.contactEndpoint;
-    if (!endpoint) { const e = new Error('not-configured'); e.code = 'not-configured'; throw e; }
-    const url = new URL(endpoint, window.location.origin);
-    if (url.protocol !== 'https:' && url.hostname !== 'localhost' && url.hostname !== '127.0.0.1') throw new Error('The form is temporarily unavailable. Please try again later.');
-    const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 15000);
-    try {
-      const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data), signal: controller.signal, credentials: 'omit' });
-      if (response.status === 429) throw new Error('A few too many messages. Please wait a moment and try again.');
-      if (response.status === 422) throw new Error('Something in the form needs another look. Please check your details.');
-      if (!response.ok) throw new Error('We couldn’t send your message. Please try again in a moment.');
-      const result = await response.json().catch(() => ({}));
-      if (result?.status !== 'received') throw new Error('We couldn’t confirm your message was received. Please try again.');
-    } finally {
-      window.clearTimeout(timeout);
-    }
-  }
-
-  contactForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    if (sending) return;
-    fallback.hidden = true;
-    contactForm.querySelectorAll('.field-input').forEach((f) => { f.value = f.value.trim(); });
-    const invalid = fields.find((f) => !f.checkValidity());
-    if (invalid) {
-      const field = invalid.closest('.field');
-      field.classList.remove('is-wrong'); void field.offsetWidth; field.classList.add('is-wrong');
-      invalid.setAttribute('aria-invalid', 'true');
-      const label = field.querySelector('.field-label').childNodes[0].textContent.trim();
-      say(invalid.type === 'email' && invalid.value ? 'Please check your email address.' : invalid.type === 'radio' ? 'Please choose a category.' : `Please add your ${label.toLowerCase()}.`, 'error');
-      mood('squint');
-      invalid.focus();
-      return;
-    }
-    const data = Object.fromEntries(new FormData(contactForm));
-    if (data.website) { say('Thank you.', 'success'); return; } // a bot filled the hidden field
-    delete data.website;
-    sending = true;
-    send.disabled = true;
-    contactForm.setAttribute('aria-busy', 'true');
-    sendLabel.textContent = 'Sending';
-    contactForm.classList.add('is-sending');
-    mood('up');
-    say('One moment…', 'loading');
-    try {
-      await deliver(data);
-      say('', '');
-      done.querySelector('.done-name').textContent = data.name ? `, ${data.name.split(/\s+/)[0]}` : '';
-      contactForm.hidden = true;
-      done.hidden = false;
-      contactForm.reset();
-      counter.textContent = '0';
-      mood('hop');
-      done.querySelector('.contact-done-title').focus();
-    } catch (error) {
-      if (error.code === 'not-configured') {
-        say('', '');
-        fallback.hidden = false;
-        mood('shrug');
-      } else {
-        say(error.name === 'AbortError' ? 'That took a little too long. Please try again.' : error instanceof TypeError ? 'We couldn’t connect. Please try again in a moment.' : error.message, 'error');
-        mood('squint');
-      }
-    } finally {
-      sending = false;
-      send.disabled = false;
-      contactForm.removeAttribute('aria-busy');
-      contactForm.classList.remove('is-sending');
-      sendLabel.textContent = 'Send';
-    }
-  });
-  // Reopening after a sent message starts a fresh form.
-  contact.addEventListener('close', () => { if (!done.hidden) { done.hidden = true; contactForm.hidden = false; contactForm.classList.remove('is-ready'); } });
+/* In-page links scroll without writing a #hash into the address bar; focus
+ * follows, for keyboard and screen-reader users. */
+function focusTarget(target) {
+  if (!target.hasAttribute('tabindex') && !/^(A|BUTTON|INPUT|TEXTAREA|SELECT)$/.test(target.tagName)) target.setAttribute('tabindex', '-1');
+  target.focus({ preventScroll: true });
 }
+
+/* Links to Updates skip the long scroll (and the whole Shop story): a red wipe
+ * covers the page, it jumps, the wipe lifts, and the email field is ready. */
+const wipe = document.querySelector('.wipe');
+let wiping = false;
+function goToUpdates() {
+  const target = document.querySelector('#updates');
+  const top = target.getBoundingClientRect().top + window.scrollY - bar.offsetHeight;
+  const land = () => {
+    window.scrollTo({ top, behavior: 'instant' });
+    email.focus({ preventScroll: true });
+  };
+  if (reducedMotion.matches || !wipe) { land(); return; }
+  if (wiping) return;
+  wiping = true;
+  wipe.classList.remove('is-out');
+  void wipe.offsetWidth;
+  wipe.classList.add('is-in');
+  window.setTimeout(() => {
+    land();
+    window.setTimeout(() => {
+      wipe.classList.replace('is-in', 'is-out');
+      window.setTimeout(() => { wipe.classList.remove('is-out'); wiping = false; }, 520);
+    }, 260);
+  }, 460);
+}
+
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+  const id = link.getAttribute('href').slice(1);
+  const target = id && document.getElementById(id);
+  if (!target) return;
+  event.preventDefault();
+  if (id === 'updates') { goToUpdates(); return; }
+  target.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
+  focusTarget(target);
+});
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 

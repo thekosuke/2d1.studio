@@ -1,6 +1,6 @@
 # 2D1 contact form connection
 
-The site's contact form (the “Contact form” button in Studio) opens a native overlay with the same questions as the Notion form **Contact 2D1**: Full name, Email, Company (optional), Category (New Business / Media Inquiry / Other), and Message. Submissions are written to the same Notion database, **Form Submissions** (`2f111de80e9380749f67c8f9d437a79f`), with Status set to *New* and Submitted On set to the time sent — so they appear in your existing views (All Submissions, By Status, Pending Review).
+The site's contact form (“Contact us” in the bar and the footer, on every page; `js/contact.js`) opens a native overlay with the same questions as the Notion form **Contact 2D1**: Full name, Email, Company (optional), Category (New Business / Media Inquiry / Other), and Message. Submissions are written to the same Notion database, **Form Submissions** (`2f111de80e9380749f67c8f9d437a79f`), with Status set to *New* and Submitted On set to the time sent — so they appear in your existing views (All Submissions, By Status, Pending Review).
 
 A static site can't hold a Notion token, so a small endpoint does the writing. It isn't deployed yet. Until `contactEndpoint` is set, the form sends nothing and tells the visitor so, with a link to the Notion form.
 

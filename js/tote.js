@@ -32,7 +32,7 @@ const LOGO = [
   'M609.438 0V200H460V100H410V0L609.438 0Z'
 ];
 // Two square eyes (pixels) inside the D (logo units: centres and half-side). They blink.
-const LOGO_EYES = [[284, 86], [334, 86]], LOGO_EYE_R = 13;
+const LOGO_EYES = [[253.2, 90.7], [280.3, 90.7]], LOGO_EYE_R = 9.3; // from the logo artwork (26-unit squares at 343/381, y 114 on the 775-unit logo)
 
 /* Deterministic noise ---------------------------------------------------------- */
 function rng(seed) {
@@ -998,6 +998,7 @@ export function mountTote({ stage, scroller, reducedMotion, spots, onChapter = (
     if (!dragging) { drag += dragVel * dt; dragVel *= Math.exp(-dt * 3.2); }
     const { c: ch, t: ct } = chapterAt(still() ? 1 : progress);
     if (ch.key !== chapterKey) { chapterKey = ch.key; onChapter(chapterKey); }
+    stage.style.setProperty('--chapter-t', ct.toFixed(3)); // fills the current chapter's bar
     // The view: the chapter decides.
     const story = ch.at ? { at: ch.at, yaw: ch.yaw + (ct - 0.5) * ch.drift, dist: ch.dist } : null;
     const f = story;

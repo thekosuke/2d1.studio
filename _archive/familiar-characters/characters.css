@@ -1,0 +1,244 @@
+/* Familiar Characters ----------------------------------------------------------
+ * An index of objects we like living with, on the same sheet as the home page:
+ * white, Rand and Rand Mono, the 4/12 grid, hairlines only where they describe
+ * a real module (the index, the details). The photographs carry the colour. Red
+ * marks the Character you're on, the page you're on, and the full stop.
+ *
+ * Two ways to look: the Index, a calm grid where every card is the same box
+ * (4:5) and pictures are never cropped: each stands on the bottom-left corner
+ * of its box, like things on a shelf; and the House, where the same Characters
+ * float as red-tinted squares, one universe. Either opens a Character in the
+ * same sheet, which is also its own page.
+ */
+
+.fc { padding-top: var(--bar); }
+.fc [hidden] { display: none !important; }
+.fc:focus { outline: none; }  /* where Skip to content lands */
+.fc-label { font: 400 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); }
+.fc-arrow-link { font: 400 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; transition: color .15s; }
+.fc-arrow-link span { display: inline-block; transition: transform .3s cubic-bezier(.3, 1.4, .5, 1); }
+.fc-arrow-link:hover { color: var(--red); }
+.fc-arrow-link:hover span { transform: translateX(3px); }
+
+/* Intro: the name, then a few lines, then straight into the index. */
+.fc-intro { display: grid; gap: 28px var(--pad); padding: clamp(36px, 5vw, 96px) var(--pad) clamp(44px, 5vw, 88px); }
+.fc-title { font-weight: 400; font-size: clamp(40px, 5vw, 88px); line-height: .95; letter-spacing: -.05em; }
+.fc-lede { max-width: 30em; font-size: var(--fs-lead); line-height: 1.35; letter-spacing: -.015em; text-wrap: pretty; }
+.fc-lede p + p { margin-top: .7em; }
+.fc-lede .fc-lede-more { color: var(--ink-soft); }
+.fc-lede .fc-essay-link { margin-top: 22px; }
+@media (min-width: 900px) {
+  .fc-intro { grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: end; }
+  .fc-title { grid-column: 1 / 8; }
+  .fc-lede { grid-column: 8 / -1; }
+}
+
+/* The index ----------------------------------------------------------------- */
+.fc-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; margin: 0 var(--pad) clamp(20px, 2.4vw, 32px); padding-top: 12px; border-top: 1px solid var(--line); }
+.fc-head > :last-child { margin-left: auto; }
+/* Index or House: the one you're in gets the red square, like the bar's page. */
+.has-views .fc-index-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.fc-views { display: flex; gap: 20px; }
+.fc-view-btn { display: inline-flex; align-items: center; min-height: 32px; padding: 0; border: 0; background: none; color: var(--ink-soft); font: 400 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; transition: color .15s; }
+.fc-view-btn::before { content: ""; width: 0; height: 6px; margin-right: 0; background: var(--red); transition: width .3s cubic-bezier(.3, 1.4, .5, 1), margin .3s cubic-bezier(.3, 1.4, .5, 1); }
+.fc-view-btn:hover, .fc-view-btn[aria-pressed="true"] { color: var(--ink); }
+.fc-view-btn[aria-pressed="true"]::before { width: 6px; margin-right: 8px; }
+.fc-view-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+.fc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px var(--pad); padding: 0 var(--pad); }
+@media (min-width: 700px) { .fc-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(56px, 6vw, 88px) calc(var(--pad) * 2); } }
+@media (min-width: 1100px) { .fc-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1800px) { .fc-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+/* A Character, as a card. The whole card is the link; its name is the link text. */
+.fc-card { position: relative; display: flex; flex-direction: column; min-width: 0; }
+.fc-card-media { --cell: .8; position: relative; aspect-ratio: var(--cell); margin-bottom: 14px; }
+.fc-img { position: absolute; left: 0; bottom: 0; width: min(100%, calc(var(--r) / var(--cell) * 100%)); height: auto; aspect-ratio: var(--r); transform-origin: 0 100%; transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
+.fc-card-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font: 400 11px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); }
+.fc-no { display: inline-flex; align-items: center; white-space: nowrap; font-variant-numeric: tabular-nums; transition: color .2s; }
+.fc-no::before { content: ""; width: 0; height: 7px; background: var(--red); transition: width .3s cubic-bezier(.3, 1.4, .5, 1), margin .3s cubic-bezier(.3, 1.4, .5, 1); }
+.fc-cat { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fc-card-title { margin-top: 8px; font-weight: 400; font-size: clamp(16px, 1.3vw, 21px); line-height: 1.2; letter-spacing: -.02em; text-wrap: pretty; }
+.fc-card-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.fc-card-link:focus-visible { outline: none; }
+.fc-card-link:focus-visible::after { outline: 2px solid var(--ink); outline-offset: 6px; }
+.fc-card-by { margin-top: 4px; font-size: 14px; line-height: 1.35; color: var(--ink-soft); }
+.fc-card-note { display: none; }
+@media (min-width: 700px) {
+  .fc-card-by { font-size: 15px; }
+  .fc-card-note { display: -webkit-box; max-width: 28em; margin-top: 10px; overflow: hidden; font-size: 15px; line-height: 1.4; -webkit-box-orient: vertical; -webkit-line-clamp: 3; text-wrap: pretty; }
+}
+/* Pointing at a card: its number steps forward in red, its name underlines, and
+ * the picture leans in a little. */
+.fc-card:has(.fc-card-link:focus-visible) .fc-no { color: var(--red); }
+.fc-card:has(.fc-card-link:focus-visible) .fc-no::before { width: 7px; margin-right: 6px; }
+.fc-card:active .fc-card-link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  .fc-card:hover .fc-no { color: var(--red); }
+  .fc-card:hover .fc-no::before { width: 7px; margin-right: 6px; }
+  .fc-card:hover .fc-card-link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  .fc-card:hover .fc-img { transform: scale(1.025); }
+}
+
+/* A quiet category filter, off unless collection.md asks for it. */
+.fc-filter ul { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.fc-filter-btn { display: inline-flex; align-items: baseline; gap: 5px; min-height: 32px; padding: 0; border: 0; background: none; color: var(--ink-soft); font: 400 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; transition: color .15s; }
+.fc-filter-btn:hover { color: var(--ink); }
+.fc-filter-btn[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.fc-filter-n { font-size: 10px; color: var(--ink-soft); }
+
+/* The end of the archive, for now. */
+.fc-end { display: grid; gap: 48px var(--pad); margin: var(--space-in) var(--pad) 0; padding-top: 16px; border-top: 1px solid var(--line); }
+.fc-end-note p:first-child { max-width: 14em; font-size: clamp(26px, 3vw, 48px); line-height: 1.1; letter-spacing: -.03em; text-wrap: balance; }
+.fc-end-note p + p { margin-top: 22px; }
+.fc-essay { position: relative; align-self: start; }
+.fc-essay-title { margin-top: 10px; font-weight: 400; font-size: clamp(24px, 2.2vw, 36px); line-height: 1.1; letter-spacing: -.03em; }
+.fc-essay-title a::after { content: ""; position: absolute; inset: 0; }
+.fc-essay-read { margin-top: 18px; font: 400 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; transition: color .15s; }
+.fc-essay:hover .fc-essay-title a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .12em; }
+.fc-essay:hover .fc-essay-read { color: var(--red); }
+@media (min-width: 900px) {
+  .fc-end { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .fc-end-note { grid-column: 1 / 8; }
+  .fc-essay { grid-column: 8 / -1; padding-left: clamp(0px, 2.2vw, 48px); }
+}
+
+/* A Character ----------------------------------------------------------------
+ * One sheet in two places: over the collection (the dialog the index opens) and
+ * on its own at the Character's address. White on the bar's red, like the
+ * contact form. Wide screens: the photograph on the left at its own shape, the
+ * words on the right, previous and next along the bottom. Phones: one column,
+ * the photograph edge to edge; swipe it for the next one. */
+.fc-sheet-page { background: var(--red); }
+.fc-sheet { position: fixed; inset: var(--pad); display: grid; grid-template-rows: auto minmax(0, 1fr) auto; background: var(--white); color: var(--ink); overflow: hidden; }
+.fc-sheet:empty { display: none; }
+.fc-sheet-top { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; height: var(--bar); padding: 0 var(--pad) 0 20px; background: var(--white); }
+.fc-sheet-index { display: inline-flex; align-items: center; gap: 8px; padding-block: 14px; font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+.fc-sheet-index::before { content: ""; width: 6px; height: 6px; background: var(--red); }
+.fc-sheet-index:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.fc-sheet-logo { position: absolute; left: 50%; top: 50%; width: 80px; transform: translate(-50%, -50%); }
+.fc-sheet-logo .logo-mark > g:first-child { fill: var(--red); }
+.fc-sheet-close { display: inline-flex; align-items: center; gap: 10px; min-height: 40px; font: 400 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+.fc-sheet-close:hover .contact-x { background: var(--red); transform: rotate(90deg); }
+.fc-sheet-top :focus-visible, .fc-sheet-nav :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+.fc-sheet-main { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--pad); min-height: 0; padding: 0 var(--pad) 0 20px; touch-action: pan-y; }
+.fc-sheet-figure { grid-column: 1 / 8; display: grid; place-items: center; min-height: 0; padding: 8px 0 24px; container-type: size; }
+.fc-sheet-img { display: block; width: min(100cqw, calc(100cqh * var(--r))); height: auto; aspect-ratio: var(--r); }
+.fc-sheet-text { grid-column: 8 / -1; min-height: 0; padding: 12px 8px 40px clamp(0px, 2vw, 40px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.fc-sheet-text .fc-entry-title:focus { outline: none; }
+.fc-sheet-text .fc-note { margin-top: clamp(24px, 2.6vw, 40px); }
+.fc-sheet-text .fc-specs { margin-top: clamp(32px, 3.4vw, 52px); }
+
+.fc-sheet-nav { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--pad); margin: 0 var(--pad) 0 20px; border-top: 1px solid var(--line); }
+.fc-sheet-step { display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 12px 0 14px; }
+.fc-sheet-next { align-items: flex-end; text-align: right; }
+.fc-sheet-step .fc-label { transition: color .15s; }
+.fc-sheet-step-title { max-width: 100%; overflow: hidden; font-size: clamp(16px, 1.3vw, 20px); line-height: 1.2; letter-spacing: -.02em; white-space: nowrap; text-overflow: ellipsis; }
+a.fc-sheet-step:hover .fc-label { color: var(--red); }
+a.fc-sheet-step:hover .fc-sheet-step-title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
+@media (max-width: 899px) {
+  .fc-sheet { display: block; overflow-y: auto; overscroll-behavior: contain; }
+  .fc-sheet-top { position: sticky; top: 0; }
+  .fc-sheet-main { display: block; padding: 0; }
+  .fc-sheet-figure { display: block; padding: 0; container-type: normal; }
+  .fc-sheet-img { width: min(100%, calc((100svh - var(--bar) - 150px) * var(--r))); margin: 0 auto; }
+  .fc-sheet-text { padding: 24px var(--pad) 40px; overflow: visible; }
+  .fc-sheet-nav { position: sticky; bottom: 0; z-index: 2; margin: 0; padding: 0 var(--pad); background: var(--white); }
+}
+@media (max-width: 699px) {
+  .fc-sheet { inset: 0; }
+  .fc-sheet-top { padding: 0 var(--pad); }
+  .fc-sheet-index { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .fc-sheet-logo { position: static; width: 58px; transform: none; }
+  .fc-sheet-close-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .fc-sheet-step .fc-label { font-size: 11px; }
+  .fc-sheet-step-title { font-size: 15px; }
+}
+
+/* Over the collection: the red wipes down from the bar, the sheet arrives, the
+ * photograph flies from where you picked it and (from the House) its red
+ * develops into colour; the words follow. */
+.fc-dialog { width: 100%; max-width: none; height: 100%; max-height: none; margin: 0; padding: 0; border: 0; background: transparent; color: var(--ink); overflow: hidden; }
+.fc-dialog::backdrop { background: var(--red); }
+.fc-dialog[open]::backdrop { animation: wipe-down .42s cubic-bezier(.7, 0, .2, 1) both; }
+.fc-dialog.is-closing::backdrop { animation: wipe-up .38s cubic-bezier(.7, 0, .2, 1) both; }
+.fc-dialog.is-entering .fc-sheet { animation: fc-sheet-in .3s .1s both; }
+.fc-dialog.is-entering .fc-sheet-text > *, .fc-dialog.is-entering .fc-sheet-nav { animation: field-in .55s cubic-bezier(.2, 1, .3, 1) both; }
+.fc-dialog.is-entering .fc-sheet-text > :nth-child(1) { animation-delay: .28s; }
+.fc-dialog.is-entering .fc-sheet-text > :nth-child(2) { animation-delay: .33s; }
+.fc-dialog.is-entering .fc-sheet-text > :nth-child(3) { animation-delay: .38s; }
+.fc-dialog.is-entering .fc-sheet-text > :nth-child(4) { animation-delay: .43s; }
+.fc-dialog.is-entering .fc-sheet-text > :nth-child(5), .fc-dialog.is-entering .fc-sheet-nav { animation-delay: .48s; }
+.fc-dialog.is-closing .fc-sheet { animation: fc-sheet-out .26s both; }
+@keyframes fc-sheet-in { from { opacity: 0; } }
+@keyframes fc-sheet-out { to { opacity: 0; } }
+/* A slow connection: a white square steps along while the sheet loads. */
+.fc-dialog.is-waiting::after { content: ""; position: fixed; left: calc(50% - 30px); top: 50%; width: 10px; height: 10px; background: var(--white); animation: tag-step 1s steps(5) infinite; }
+/* The photograph in flight, over everything in the dialog. */
+.fc-fly { position: fixed; z-index: 10; overflow: hidden; pointer-events: none; }
+.fc-fly img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.fc-fly.is-contained img { object-fit: contain; }
+.fc-fly .fc-fly-colour { opacity: 0; transition: opacity .5s; }
+.fc-fly.is-developed .fc-fly-colour { opacity: 1; }
+.fc-fly.is-tinted .fc-fly-colour { opacity: 0; }
+
+.fc-entry-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; font: 400 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); }
+.fc-entry-no { min-width: 32px; height: 32px; padding: 0 5px; font-size: 12px; }
+.fc-entry-class + .fc-entry-class::before { content: "/"; content: "/" / ""; margin-right: 12px; color: var(--ink-faint); }
+.fc-entry-title { margin-top: 22px; font-weight: 400; font-size: clamp(32px, 3.1vw, 52px); line-height: 1.02; letter-spacing: -.04em; text-wrap: balance; }
+.fc-entry-by { margin-top: 14px; font-size: var(--fs-lead); line-height: 1.3; letter-spacing: -.015em; }
+.fc-entry-by span { display: block; }
+.fc-entry-designer { color: var(--ink-soft); }
+
+.fc-note { max-width: 32em; font-size: var(--fs-lead); line-height: 1.42; letter-spacing: -.012em; text-wrap: pretty; }
+.fc-note p + p { margin-top: .75em; }
+.fc-note a, .fc-specs a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; transition: color .15s; }
+.fc-note a:hover, .fc-specs a:hover { color: var(--red); }
+
+.fc-specs .fc-label { margin-bottom: 10px; }
+.fc-specs dl { margin: 0; }
+.fc-specs dl div { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 16px; padding: 10px 0 11px; border-top: 1px solid var(--line); }
+.fc-specs dl div:last-child { border-bottom: 1px solid var(--line); }
+.fc-specs dt { padding-top: 3px; font: 400 11px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); }
+.fc-specs dd { margin: 0; font-size: 15px; line-height: 1.4; overflow-wrap: anywhere; }
+
+/* The House ------------------------------------------------------------------
+ * The same Characters, living together: squares of three sizes packed like
+ * Apple Music's bubbles, tinted into one red (baked into the images by the
+ * build), drifting a little. Point at one and it grows and the others make
+ * room; pick one up and toss it; now and then one of them opens its eyes. All
+ * still with reduced motion. js/house.js draws it from the Index's cards. */
+.fc-house { position: relative; overflow: hidden; overflow: clip; margin-top: -8px; }
+.fc-house-list { position: relative; min-height: 60svh; }
+.fc-sq { position: absolute; left: 0; top: 0; transform-origin: 50% 50%; }
+.fc-sq.is-lifted { z-index: 2; }
+.fc-sq-link { display: block; width: 100%; height: 100%; cursor: pointer; -webkit-user-drag: none; }
+.fc-sq-float { position: relative; display: block; width: 100%; height: 100%; overflow: hidden; background: var(--red); }
+.fc-sq.is-near .fc-sq-float { animation: fc-float var(--fd, 9s) ease-in-out var(--fdelay, 0s) infinite alternate; }
+@keyframes fc-float { from { transform: translate(var(--fx0, 0), var(--fy0, 0)); } to { transform: translate(var(--fx1, 0), var(--fy1, 0)); } }
+.fc-sq-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.fc-sq-img.is-cutout { inset: 10%; width: 80%; height: 80%; object-fit: contain; }
+.fc-sq-label { position: absolute; left: 0; right: 0; bottom: 0; padding: 9px 11px 10px; color: var(--white); text-shadow: 0 1px 12px rgba(22, 22, 26, .35); pointer-events: none; }
+.fc-sq-no { display: block; font: 400 10px/1.2 var(--mono); letter-spacing: .06em; opacity: .9; }
+.fc-sq-name { display: -webkit-box; margin-top: 3px; overflow: hidden; font-size: var(--label, 15px); line-height: 1.1; letter-spacing: -.02em; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.fc-sq.is-small .fc-sq-name { opacity: 0; transition: opacity .2s; }
+.fc-sq.is-small.is-lifted .fc-sq-name, .fc-sq.is-small:focus-within .fc-sq-name { opacity: 1; }
+/* Eyes: two white pixels, closed until the square notices you. */
+.fc-sq-eyes { position: absolute; left: 50%; top: 30%; display: flex; gap: calc(var(--es) * .7); transform: translateX(-50%); pointer-events: none; }
+.fc-sq-eyes i { width: var(--es); height: var(--es); background: var(--white); transform: translate(calc(var(--lx, 0) * var(--es) * .6), calc(var(--ly, 0) * var(--es) * .4)) scaleY(0); transition: transform .12s cubic-bezier(.3, 1.4, .5, 1); }
+.fc-sq.is-awake .fc-sq-eyes i { transform: translate(calc(var(--lx, 0) * var(--es) * .6), calc(var(--ly, 0) * var(--es) * .4)) scaleY(1); }
+.fc-sq-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.fc-house.is-dragging, .fc-house.is-dragging .fc-sq-link { cursor: grabbing; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fc-sq.is-near .fc-sq-float { animation: none; }
+  .fc-sq-eyes { display: none; }
+  .fc-card:hover .fc-img { transform: none !important; }
+}
+
+/* Between pages (a Character page and the index, without the dialog): a short cross-fade. */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .22s; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
