@@ -1,5 +1,7 @@
 # 2D1 contact form connection
 
+**Current frontend (October 2026):** the home page now renders the form inline using `js/contact-inline.js`; there is no dialog. An upfront notice and a link to the existing Notion form remain visible while the endpoint is empty. Controls are disabled without JavaScript. The contract and server setup below remain applicable; the older overlay behaviour described below is archived.
+
 The site's contact form (“Contact us” in the bar and the footer, on every page; `js/contact.js`) opens a native overlay with the same questions as the Notion form **Contact 2D1**: Full name, Email, Company (optional), Category (New Business / Media Inquiry / Other), and Message. Submissions are written to the same Notion database, **Form Submissions** (`2f111de80e9380749f67c8f9d437a79f`), with Status set to *New* and Submitted On set to the time sent — so they appear in your existing views (All Submissions, By Status, Pending Review).
 
 A static site can't hold a Notion token, so a small endpoint does the writing. It isn't deployed yet. Until `contactEndpoint` is set, the form sends nothing and tells the visitor so, with a link to the Notion form.

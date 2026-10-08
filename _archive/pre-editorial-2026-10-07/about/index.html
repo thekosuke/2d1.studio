@@ -6,7 +6,7 @@
   <title>About — 2D1</title>
   <meta name="description" content="2D1 is an independent design studio with a shop of its own. About the studio, and why familiar things matter.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="theme-color" content="#FF2B00">
   <link rel="canonical" href="https://2d1.studio/about/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="2D1">
@@ -28,17 +28,25 @@
   <link rel="preload" href="../fonts/Rand Mono/RandMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="../css/fonts.css">
-  <link rel="stylesheet" href="../css/editorial.css?v=3">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/about.css">
-  <script src="../js/site.js?v=1" defer></script>
+  <script src="../js/config.js" defer></script>
+  <script src="../js/bar.js" defer></script>
+  <script src="../js/contact.js" defer></script>
   <script src="../js/about.js" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About 2D1","url":"https://2d1.studio/about/","mainEntity":{"@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/logo_red.svg","slogan":"Familiar Characters"}}</script>
 </head>
 <body class="about-page">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="site-logo" href="../" aria-label="2D1, home"><img src="../img/brand/logo_red.svg" width="775" height="280" alt="2D1"></a>
-    <a class="button" href="../#contact">Contact us <span aria-hidden="true">↗</span></a>
+
+  <header class="bar">
+    <button class="bar-menu" type="button" aria-expanded="false" aria-controls="bar-nav">Menu</button>
+    <nav class="bar-nav" id="bar-nav" aria-label="Sections"><a href="../#studio">Studio</a><a href="../#shop">Shop</a><a href="./" aria-current="page">About</a><a class="bar-nav-extra" href="../#updates">Get updates</a></nav>
+    <a class="bar-logo" href="../" aria-label="2D1, home"><svg class="logo-mark" viewBox="0 0 775 280" aria-hidden="true" focusable="false"><g fill="#fff"><path d="M1.72214 0L208.038 0C249.301 0 280.74 29.4737 280.74 69.7544C280.74 106.105 254.213 132.632 215.898 139.509H280.982V280H0V211.228C0 181.754 18.6667 153.263 55.0175 139.509L1.72214 139.509V0Z"/><path d="M774.705 0V280H632.911V139.51H562V0H774.705Z"/><path d="M411.749 0C498.083 0 554.082 55.9998 554.082 140C554.082 223.999 498.083 280 411.749 280H288.625V0H411.749Z"/></g><g class="logo-eyes" fill="#ff2b00"><rect x="343" y="114" width="26" height="26"/><rect x="381" y="114" width="26" height="26"/></g></svg></a>
+    <div class="bar-actions">
+      <a class="btn btn-bar btn-bar-line" href="../#updates">Get updates</a>
+      <a class="btn btn-bar" href="https://temporal-sight-127.notion.site/966aab52301b4588a1c875bf81ac421a?pvs=105" data-contact>Contact us</a>
+    </div>
   </header>
 
   <main id="main" class="essay-page">
@@ -72,6 +80,18 @@
     </article>
   </main>
 
-  <footer class="site-footer"><p>© <span data-year>2026</span> 2D1</p><p class="footer-sign">Familiar Characters<span>.</span></p><a href="https://www.instagram.com/2d1.studio/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></footer>
+  <footer class="footer">
+    <p class="footer-copy">© <span id="year">2026</span> 2D1</p>
+    <p class="footer-sign">Familiar Characters<span class="sign-stop">.</span></p>
+    <div class="footer-end">
+    <a class="btn footer-contact" href="https://temporal-sight-127.notion.site/966aab52301b4588a1c875bf81ac421a?pvs=105" data-contact>Contact us</a>
+    <ul class="apps" aria-label="2D1 elsewhere">
+      <li><a class="app" href="https://www.instagram.com/2d1.studio/" target="_blank" rel="noopener noreferrer" aria-label="2D1 on Instagram (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="0" width="7" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="8" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="3" y="3" width="3" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="3" y="6" width="3" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="8" y="7" width="1" height="1"/><rect x="1" y="8" width="7" height="1"/></g></svg></a></li>
+      <li><a class="app" href="https://www.threads.com/@2d1.studio" target="_blank" rel="noopener noreferrer" aria-label="2D1 on Threads (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="2" y="0" width="5" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="3" y="2" width="3" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="5" y="4" width="2" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="3" y="5" width="2" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="2" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="2" y="8" width="6" height="1"/></g></svg></a></li>
+      <li><a class="app" href="https://x.com/2d1_studio" target="_blank" rel="noopener noreferrer" aria-label="2D1 on X (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="0.5" y="0.5" width="2" height="1"/><rect x="7.5" y="0.5" width="1" height="1"/><rect x="1.5" y="1.5" width="2" height="1"/><rect x="6.5" y="1.5" width="1" height="1"/><rect x="2.5" y="2.5" width="2" height="1"/><rect x="5.5" y="2.5" width="1" height="1"/><rect x="3.5" y="3.5" width="2" height="1"/><rect x="3.5" y="4.5" width="3" height="1"/><rect x="2.5" y="5.5" width="1" height="1"/><rect x="4.5" y="5.5" width="2" height="1"/><rect x="1.5" y="6.5" width="1" height="1"/><rect x="5.5" y="6.5" width="2" height="1"/><rect x="0.5" y="7.5" width="1" height="1"/><rect x="6.5" y="7.5" width="2" height="1"/></g></svg></a></li>
+      <li><a class="app" href="https://www.linkedin.com/company/newfiction-org/" target="_blank" rel="noopener noreferrer" aria-label="New Fiction on LinkedIn (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="1" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="5" y="3" width="2" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="2" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="3" y="7" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/></g></svg></a></li>
+    </ul>
+    </div>
+  </footer>
 </body>
 </html>

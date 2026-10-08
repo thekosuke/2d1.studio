@@ -4,3 +4,6 @@
 !.env.example
 node_modules/
 tmp/
+
+# Local-only Figma capture pages
+_figma-export/

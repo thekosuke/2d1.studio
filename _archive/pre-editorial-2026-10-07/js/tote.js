@@ -710,8 +710,7 @@ function buildXray(geometries) {
 }
 
 /* Mount ------------------------------------------------------------------------- */
-export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], onChapter = () => {}, presentation = 'story' }) {
-  const contained = presentation === 'contained';
+export function mountTote({ stage, scroller, reducedMotion, spots, onChapter = () => {} }) {
   const canvas = document.createElement('canvas');
   canvas.className = 'tote-canvas';
   canvas.setAttribute('aria-hidden', 'true');
@@ -923,7 +922,6 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
   const still = () => reducedMotion.matches;
 
   function readScroll() {
-    if (contained) { progress = 1; return; }
     const box = scroller.getBoundingClientRect();
     const travel = Math.max(1, box.height - stage.offsetHeight);
     progress = Math.min(1, Math.max(0, (stickTop - box.top) / travel));
@@ -1006,24 +1004,21 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     const f = story;
     let yawGoal;
     if (f) yawGoal = f.yaw;
-    else if (contained) yawGoal = BASE_ANGLE;
     else if (ch.key === 'intro') yawGoal = BASE_ANGLE - (1 - ct) * 2.6;          // turning in
     else yawGoal = BASE_ANGLE + (still() ? 0 : smoothstep(0, 0.7, ct) * Math.PI * 2); // one full lap, ending where it started
     let target = yawGoal + Math.PI * 2 * Math.round((angle - yawGoal) / (Math.PI * 2)) + drag;
     const ease = (rate) => (still() ? 1 : 1 - Math.exp(-dt * rate));
-    if (still()) { tiltGoal = 0; turnGoal = 0; dragVel = 0; }
     tilt += (tiltGoal - tilt) * ease(5);
     turn += (turnGoal - turn) * ease(5);
     target += turn;
     const prev = angle;
-    angle = still() ? target : angle + (target - angle) * (1 - Math.exp(-dt * 7));
+    angle += (target - angle) * (1 - Math.exp(-dt * 7));
     const omega = (angle - prev) / Math.max(dt, 1e-3);
     // The strap lags behind the spin and settles like fabric does.
     const force = still() ? 0 : -omega * 1.6;
     swingVel += ((force - swingPos) * 38 - swingVel * 7.5) * dt;
     swingPos += swingVel * dt;
     swingPos = Math.max(-9, Math.min(9, swingPos));
-    if (still()) { swingVel = 0; swingPos = 0; }
     shapeStrap(strapGeo, swingPos);
     spin.rotation.y = angle;
     blobSpin.rotation.y = angle;
@@ -1041,10 +1036,10 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     lean.position.y += (rise - lean.position.y) * ease(6);
     lean.rotation.x = 0.05 + tilt;
     // Blink.
-    if (!contained && !still() && now >= blinkAt && blinkT < 0) blinkT = 0;
+    if (!still() && now >= blinkAt && blinkT < 0) blinkT = 0;
     // Closed by default: every few seconds they open for a moment, like the logo in the bar.
     if (blinkT >= 0) { blinkT += dt; if (blinkT > PEEK) { blinkT = -1; blinkAt = now + 3400 + Math.random() * 2800; } }
-    const lid = !still() && blinkT >= 0 ? Math.min(1, blinkT / 0.12, (PEEK - blinkT) / 0.12) : 0;
+    const lid = blinkT >= 0 ? Math.min(1, blinkT / 0.12, (PEEK - blinkT) / 0.12) : 0;
     eyes.forEach((e) => { e.visible = lid > 0.01; e.scale.y = Math.max(0.01, lid); });
     // Camera toward the focus (or back to the whole bag), label room to the side.
     lean.updateWorldMatrix(true, true);
@@ -1057,7 +1052,7 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     dist += (fDist - dist) * ease(4.5);
     // Room for words: a story chapter pushes the bag right (caption on the
     // left); phones shift it down instead.
-    const offGoal = contained ? 0 : story ? -0.8 : (width < 700 && ch.key === 'outro' ? -0.45 : 0);
+    const offGoal = story ? -0.8 : (width < 700 && ch.key === 'outro' ? -0.45 : 0);
     offset += (offGoal - offset) * ease(4.5);
     camera.position.copy(look).addScaledVector(DIR, dist);
     camera.lookAt(look);
@@ -1070,7 +1065,7 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     placeSpots();
     const moving = blinkT >= 0 || look.distanceTo(lookGoal) > 0.01 || Math.abs(dist - fDist) > 0.01 || Math.abs(offset - offGoal) > 0.001 || Math.abs(lean.position.y - rise) > 0.01 || Math.abs(tilt - tiltGoal) > 1e-4 || Math.abs(turn - turnGoal) > 1e-4 || xr !== xrGoal || Math.abs(target - angle) > 1e-4 || Math.abs(swingVel) > 1e-3 || Math.abs(swingPos) > 1e-3 || Math.abs(dragVel) > 1e-3 || dirty;
     dirty = false;
-    if (visible && !document.hidden && moving) request();
+    if (visible && moving) request();
   }
   const request = () => { if (!raf) raf = requestAnimationFrame(frame); };
   const wake = () => { dirty = true; request(); };
@@ -1079,13 +1074,12 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
   io.observe(stage);
   const ro = new ResizeObserver(() => { resize(); wake(); });
   ro.observe(stage);
-  if (!contained) window.addEventListener('scroll', wake, { passive: true });
+  window.addEventListener('scroll', wake, { passive: true });
   reducedMotion.addEventListener('change', wake);
-  if (!contained) window.setInterval(() => { if (visible && !still() && performance.now() >= blinkAt) request(); }, 500);
-  document.addEventListener('visibilitychange', () => { if (!document.hidden && visible) wake(); });
+  window.setInterval(() => { if (visible && !still() && performance.now() >= blinkAt) request(); }, 500);
   // The bag follows a fine pointer anywhere over the stage.
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)');
-  (contained ? stage : window).addEventListener('pointermove', (e) => {
+  window.addEventListener('pointermove', (e) => {
     if (!visible || still() || !fine.matches || dragging || e.pointerType !== 'mouse') return;
     const box = stage.getBoundingClientRect();
     const nx = Math.max(-1, Math.min(1, (e.clientX - (box.left + box.width / 2)) / (box.width / 2)));
@@ -1097,12 +1091,11 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
 
   // Drag to turn it yourself (horizontal only; vertical swipes still scroll).
   canvas.addEventListener('pointerdown', (e) => {
-    if (still()) return;
     dragging = true; lastX = e.clientX; lastT = e.timeStamp; dragVel = 0;
     canvas.setPointerCapture(e.pointerId); stage.classList.add('is-grabbing');
   });
   canvas.addEventListener('pointermove', (e) => {
-    if (!dragging || still()) return;
+    if (!dragging) return;
     const dx = e.clientX - lastX, dtm = Math.max(1, e.timeStamp - lastT);
     drag += dx * 0.012; dragVel = (dx * 0.012) / (dtm / 1000);
     lastX = e.clientX; lastT = e.timeStamp; wake();
