@@ -11,13 +11,13 @@ is the way it is.
 
 ## Current direction — 9 October, Figma 298:650 (supersedes history below)
 
-Implement the owner’s updated single-column Figma frame 298:650. Home now contains Hero, intro, Studio, Shop, Connect and footer. Community, Relationship Advice and the profile dialog are removed at the owner’s explicit request. Preserve their previous source in `_archive/pre-cover-2026-10-09/`; do not load `js/profile.js` on the active pages. The remaining transparent page anchors keep their active states and 480ms entrance/exit animation. At desktop widths of 1100px and up, page anchors are a vertical list at the left again. Phone/tablet anchors remain inline around the centered docked logo. On Home, the EN/JA toggle is hidden and inert throughout the landing and hero, then appears at exactly the same threshold as the anchors, fading and sliding in from the right (opposite the anchors), reversing on return. Reduced motion is instant; About keeps its toggle visible; no-JS Home keeps the links at the page end.
+Implement the owner’s updated single-column Figma frame 298:650. Home now contains Hero, intro, Studio, Shop, Connect and footer. Community, Relationship Advice and the profile dialog are removed at the owner’s explicit request. Preserve their previous source in `_archive/pre-cover-2026-10-09/`; do not load `js/profile.js` on the active pages. The remaining transparent page anchors keep their active states and 480ms entrance/exit animation. At desktop widths of 1100px and up, page anchors are a vertical list at the left again. Phone/tablet anchors remain inline around the centered docked logo. About and Found in the Wild follow the anchors below a divider, followed by another divider and Contact opening the existing form: vertical on desktop, a second inline row on phone/tablet. About has the same nav with home-section destinations and current-page semantics. These links replace the footer page links. Shop’s gallery CTA is Found in the Wild; the page name remains Objects. On Home, the EN/JA toggle is hidden and inert throughout the landing and hero, then appears at exactly the same threshold as the anchors, fading and sliding in from the right (opposite the anchors), reversing on return. Reduced motion is instant; About keeps its toggle visible; no-JS Home keeps the links at the page end.
 
-Use the local Walla fonts. Desktop typography is 64px Bold section headings and 40px/48px Medium descriptions, subtitles, services and CTAs. Gray subtitles/details are #807E7D. Phones use 44px headings and 28px/1.2 reading type. The shared column caps at 960px with a 128px desktop right gutter; phones/tablets use 24px side insets. Section padding is 128px desktop / 80px phone, main content gaps 96px / 64px. Studio’s opening gap is 64px desktop / 48px phone. Studio’s artwork strip supports direct horizontal touch/pen dragging with native vertical scrolling, wraparound and autoplay resuming on release; reduced motion keeps bounded manual browsing. Studio uses “Clear ideas, with character.” and the owner’s three-paragraph description, starting “At our core, we’re a design studio.” Keep its first paragraph above the full-width moving strip of 280px square artwork and the remaining two below. Services are stacked name/detail pairs, bounded above and below by 1px dark-brown rules with 32px padding. Brand Design details are “Art Direction, Graphic Design, Visual Identity”. Get in touch remains at the end. Intro has only More about us. The Shop’s opening paragraph precedes the live tote (4:3 transparent stage); the remaining two paragraphs follow it, then the specification list and notification CTA. Specifications follow the new Figma text (provisional 40 × 36 × 10 cm and magnetic opening); the procedural tote is unchanged. Connect has its new subtitle and a 40px email field at every width in both languages. No new decorative elements.
+Use the local Walla fonts. Desktop typography is 64px Bold section headings and 40px/48px Medium descriptions, subtitles, services and CTAs. Subtitles/details and supporting text share Sub Gray #807573 (`--sub-gray`); the former Subtitle Gray and Supporting Gray are merged. Phones use 44px headings and 28px/1.2 reading type. The shared column caps at 960px with a 128px desktop right gutter; phones/tablets use 24px side insets. Section padding is 128px desktop / 80px phone, main content gaps 96px / 64px. Studio’s opening gap is 64px desktop / 48px phone. Studio’s artwork strip supports direct horizontal touch/pen dragging with native vertical scrolling, wraparound and autoplay resuming on release; reduced motion keeps bounded manual browsing. Studio uses “Clear ideas, with character.” and the owner’s three-paragraph description, starting “At our core, we’re a design studio.” Keep its first paragraph above the full-width moving strip of 280px square artwork and the remaining two below. Services are stacked name/detail pairs, bounded above and below by 1px dark-brown rules with 32px padding. Brand Design details are “Art Direction, Graphic Design, Visual Identity”. Get in touch remains at the end. Intro has only More about us. The Shop’s opening paragraph precedes the live tote (4:3 transparent stage); the remaining two paragraphs follow it, then the specification list and notification CTA. Specifications follow the new Figma text (provisional 40 × 36 × 10 cm and magnetic opening); the procedural tote is unchanged. Connect has its new subtitle and a 40px email field at every width in both languages. No new decorative elements.
 
-Hero fills the viewport including a 20px Icon Red border. The landing sequence shows the beige logo with blinking supplied pixel eyes on red, then wipes the red layer upward. Scrolling or keyboard navigation skips it; reduced motion and no-JS show the settled hero immediately. Hero then slides upward at native scroll speed while main content emerges underneath at 70% speed, returning to normal flow after the hero clears. On phones below 768px, adjust the main-content starting offset so the first intro line emerges after 25% less scroll distance; preserve desktop motion. Keep the intro low enough for the word-by-word ink reveal. The logo still docks without a background, and its uppercase caption scales and fades. Studio smoothly shifts the page ground from beige #FAF0E6 to Sand Gray #E0DCD7 on entry and back to beige on exit; reduced motion uses discrete changes, no-JS gives Studio a static gray ground. About keeps the existing essay fold and no hero. Read README for the current implementation.
+Hero fills the viewport including a 20px Icon Red border. The landing sequence shows the beige logo with blinking supplied pixel eyes on red, then wipes the red layer upward. Scrolling or keyboard navigation skips it; reduced motion and no-JS show the settled hero immediately. Hero then slides upward at native scroll speed while main content emerges underneath at 70% speed, returning to normal flow after the hero clears. On phones below 768px, adjust the main-content starting offset so the first intro line emerges after 25% less scroll distance; preserve desktop motion. Keep the intro low enough for the word-by-word ink reveal. The logo still docks without a background, and its uppercase caption scales and fades. Studio smoothly shifts the page ground from beige #FAF0E6 to Sand Gray #D6CEC5 on entry and back to beige on exit; reduced motion uses discrete changes, no-JS gives Studio a static gray ground. About keeps the existing essay fold and no hero. Read README for the current implementation.
 
-Primary ink is now dark brown #140B00 across active Home, About and dialogs, including text, rules, social icons, control fills, input carets and the 40% scrim. Keep muted supporting grays and original artwork/product colors. Connect has no initial or focus-triggered unconnected footnote; on attempted submission, explain truthfully that nothing was sent or saved. No-JS submission remains disabled.
+Primary ink is now dark brown #320505 across active Home, About and dialogs, including text, rules, social icons, control fills, input carets and the 40% scrim. Keep muted supporting grays and original artwork/product colors. Connect has no initial or focus-triggered unconnected footnote; on attempted submission, explain truthfully that nothing was sent or saved. No-JS submission remains disabled.
 
 Language support: English is the default. The fixed EN / JA links switch between `/` and `/ja/`, or `/about/` and `/ja/about/`, without JavaScript or stored preferences. Japanese uses self-hosted, OFL-licensed Noto Sans JP; English retains Walla. Edit English sources and `locales/ja.json`, then run `python3 scripts/build-japanese.py` to regenerate Japanese HTML and the dynamic translation dictionary. Preserve both languages when editing copy or UI.
 
@@ -97,8 +97,8 @@ questions if the answer changes the structure, then build and edit down.
    `<template id="studio-slides">` in `index.html` (their CSS/JS remain,
    dormant); the removed Familiar Characters page lives unpublished in
    `_archive/familiar-characters/`.
-7. **Accessibility and motion**: semantic HTML, keyboard access, visible
-   `:focus-visible` (no outline on mouse focus), alt text, and
+7. **Accessibility and motion**: semantic HTML, keyboard access, discernible
+   `:focus-visible` through color/background, never outlines or focus-ring box shadows on links/buttons (owner direction, 9 October), alt text, and
    `prefers-reduced-motion` respected everywhere (autoplay off, eyes hidden,
    instant transitions). Everything must work without JavaScript.
 
@@ -297,3 +297,37 @@ screenshots when visual. Say "nothing is committed" unless asked to commit.
   category; newsletter provider and contact endpoint (deploy
   `server/contact-worker.js` per `docs/CONTACT.md`) — only when asked.
 - Pre-existing nit: the home page preloads Rand Bold but no longer uses it.
+
+## Site-wide language and focus direction — 9 October
+
+Use US English for interface and authored descriptive copy, including color and
+colorful. Preserve exact official product identities (e.g. HAY Colour Crate) and
+external source URLs. Never show focus outlines or ring-like shadows on any
+control, including native selects, inputs, sliders, canvases, links and buttons.
+Retain useful keyboard focus with color/background changes and existing input
+underlines; authored normal borders remain. Apply both language routes.
+
+About's archived hero template is inert. Keep the active docked logo and full
+nav OUTSIDE it. Tests must check active DOM, not raw text presence. Preserve the
+red square at the essay's end (explicitly liked by owner). Nav hover square
+reveals by width 0→6px while label nudges 12px, with no sibling layout shift.
+
+Finds: default Canvas; external Grid/Canvas toggle immediately left of bottom-
+left Views menu. Grid is a regular responsive overview. Views retains categories
+only: no tag selector or stale tag-filter state. Preserve modal ownership/zoom.
+
+## Latest Finds override — canvas only
+
+No Grid/Canvas toggle or visible regular Grid mode. Lower-left menu: Category.
+At max zoom retain the 2D map, center nearest/selected image with smooth motion,
+neighbors at40% opacity. Every image frame square, object-fit cover (owner’s 10 October override: fill frames without white margins). Neighbor
+click recenters in any direction; centered image opens details. No horizontal
+slide controls. Keep 2D drag, keyboard, reduced motion, category and zoom context.
+Info auto-opens on first arrival, remembers dismissal per browser across EN/JA,
+and remains manually reopenable. Local preference storage is not ownership data.
+
+## Hero corner exception — 9 October
+
+The owner explicitly requested 128px bottom-left and bottom-right corners on
+Home’s hero. Top corners remain square. This is a scoped exception to the
+square UI rule; keep the 20px red border and match the landing fill inside it.

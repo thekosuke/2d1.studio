@@ -1,0 +1,51 @@
+{
+  "item": {
+    "id": "contac-phone-display-figure",
+    "name": "Mr. CONTAC Display Figurine",
+    "brand": "CONTAC",
+    "category": "living",
+    "tags": [],
+    "description": "The capsule-shaped mascot holds a phone above a green base, with pink and white beads inside its clear head. A vintage display figure.",
+    "productUrl": "https://toyunderground.com/store/product/mr-contac-japan-advertising-shop-display-figure/",
+    "sourceUrl": "https://toyunderground.com/store/product/mr-contac-japan-advertising-shop-display-figure/",
+    "sourceImageUrl": "https://toyunderground.com/store/wp-content/uploads/2022/04/Vintage-Japan-MR.CONTAC-Advertising-Shop-Display-Figure-1.jpg",
+    "image": "img/objects/contac-phone-display-figure.jpg",
+    "width": 1000,
+    "height": 1250,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "forSale": false,
+    "gallery": [
+      {
+        "image": "img/objects/contac-phone-display-figure.jpg",
+        "width": 1000,
+        "height": 1250,
+        "sourceUrl": "https://toyunderground.com/store/product/mr-contac-japan-advertising-shop-display-figure/",
+        "sourceImageUrl": "https://toyunderground.com/store/wp-content/uploads/2022/04/Vintage-Japan-MR.CONTAC-Advertising-Shop-Display-Figure-1.jpg"
+      },
+      {
+        "image": "img/objects/gallery/contac-phone-display-figure-2.webp",
+        "width": 1000,
+        "height": 1250,
+        "sourceUrl": "https://toyunderground.com/store/product/mr-contac-japan-advertising-shop-display-figure/",
+        "sourceImageUrl": "https://toyunderground.com/store/wp-content/uploads/2022/04/Vintage-Japan-MR.CONTAC-Advertising-Shop-Display-Figure-2.jpg"
+      },
+      {
+        "image": "img/objects/gallery/contac-phone-display-figure-3.webp",
+        "width": 1000,
+        "height": 1250,
+        "sourceUrl": "https://toyunderground.com/store/product/mr-contac-japan-advertising-shop-display-figure/",
+        "sourceImageUrl": "https://toyunderground.com/store/wp-content/uploads/2022/04/Vintage-Japan-MR.CONTAC-Advertising-Shop-Display-Figure-3.jpg"
+      },
+      {
+        "image": "img/objects/gallery/contac-phone-display-figure-4.webp",
+        "width": 1000,
+        "height": 1250,
+        "sourceUrl": "https://toyunderground.com/store/product/mr-contac-japan-advertising-shop-display-figure/",
+        "sourceImageUrl": "https://toyunderground.com/store/wp-content/uploads/2022/04/Vintage-Japan-MR.CONTAC-Advertising-Shop-Display-Figure-4.jpg"
+      }
+    ]
+  },
+  "translations": {
+    "The capsule-shaped mascot holds a phone above a green base, with pink and white beads inside its clear head. A vintage display figure.": "透明な頭にピンクと白の粒が入った、カプセル形のマスコット。緑の台座に立って電話を持つ、ヴィンテージのディスプレイフィギュア。"
+  }
+}

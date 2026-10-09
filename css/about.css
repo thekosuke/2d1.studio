@@ -1,18 +1,31 @@
-/* The existing essay fold, set on the same responsive column as Home. */
-.essay-page{padding-block:var(--space)}
-.essay-head{display:flex;flex-direction:column;gap:var(--gap)}
-.essay-kicker{position:relative;padding-top:8px;font:500 13px/22px var(--mono);letter-spacing:.04em;text-transform:uppercase}
-.essay-title{font-size:clamp(32px,4vw,40px);line-height:1.2;font-weight:500;text-wrap:pretty}
-.essay-dek{font-size:20px;line-height:1.3;color:var(--ink-soft)}
-.essay-body{--fold:180px;position:relative;margin-top:var(--gap)}
-.essay-lede{font-size:clamp(24px,3vw,32px);line-height:1.2;font-weight:500;text-wrap:pretty}
-.essay-rest{margin-top:var(--gap)}
-.essay-rest p{font-size:17px;line-height:1.5}
-.essay-rest p+p{margin-top:1em}
-.essay-rest h2{font-size:24px;line-height:1.2;font-weight:500;margin:var(--gap) 0 24px}
-.essay-pull{margin-block:var(--gap)}
-.essay-rest .essay-pull p{font-size:32px;line-height:1.2;font-weight:500}
+/* About uses Home’s column, display scale and spacing; the essay has a
+   quieter long-form reading scale beneath the always-visible introduction. */
+.essay-page{--essay-gap:64px;--essay-copy:20px;padding-block:var(--space)}
+.essay-head{display:flex;flex-direction:column;gap:8px}
+.essay-kicker{margin-bottom:24px;font:500 13px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--sub-gray)}
+.essay-kicker::before{display:none}
+.essay-title{font:700 var(--section-title)/1.1 var(--font);letter-spacing:0;text-wrap:pretty}
+.essay-dek{font:500 var(--reading)/1.2 var(--font);color:var(--sub-gray);text-wrap:pretty}
+.essay-body{--fold:180px;position:relative;margin-top:var(--essay-gap)}
+.essay-lede{font:500 var(--reading)/1.2 var(--font);text-wrap:pretty}
+.essay-lede em,.essay-pull em{color:var(--red)}
+.essay-rest{margin-top:var(--essay-gap)}
+.essay-rest p{font:400 var(--essay-copy)/1.5 var(--font);text-wrap:pretty}
+.essay-rest p+p{margin-top:1.25em}
+.essay-rest h2{font:700 var(--reading)/1.2 var(--font);text-wrap:pretty;margin:var(--essay-gap) 0 24px}
+.essay-pull{margin-block:var(--essay-gap)}
+.essay-rest .essay-pull p{font:500 var(--reading)/1.2 var(--font);text-wrap:pretty}
 .essay-end{display:inline-block;width:.5em;height:.5em;margin-left:.4em;background:var(--red)}
+.about-page .site-footer{padding-block:24px}
+@media(min-width:768px){.essay-page{--essay-gap:96px;--essay-copy:28px}.essay-kicker{margin-bottom:40px}}
+/* Match Home’s native Japanese reading sizes without inheriting its old
+   About-specific display overrides from the shared stylesheet. */
+html[lang="ja"] .about-page{--reading:24px}
+html[lang="ja"] .essay-title{font-size:var(--section-title);line-height:1.3;font-weight:700}
+html[lang="ja"] .essay-lede,html[lang="ja"] .essay-dek,html[lang="ja"] .essay-rest .essay-pull p{font-size:var(--reading);line-height:1.65}
+html[lang="ja"] .essay-rest h2{line-height:1.5}
+html[lang="ja"] .essay-rest p{line-height:1.85}
+@media(min-width:768px){html[lang="ja"] .about-page{--reading:28px}html[lang="ja"] .essay-page{--essay-copy:24px}}
 /* The fold. The fade is a mask twice the height of the text: folded, its fading
  * half covers what's shown; unfolding slides the opaque half over it. */
 .js .essay-rest { -webkit-mask-image: linear-gradient(#000 0 50%, transparent 100%); mask-image: linear-gradient(#000 0 50%, transparent 100%); -webkit-mask-size: 100% 200%; mask-size: 100% 200%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 0; mask-position: 0 0; transition: -webkit-mask-position .9s cubic-bezier(.2, .8, .2, 1), mask-position .9s cubic-bezier(.2, .8, .2, 1); }
@@ -28,7 +41,10 @@
 .essay-more-arrow { display: inline-block; font: inherit; transition: transform .3s cubic-bezier(.3, 1.4, .5, 1); }
 .essay-more:hover .essay-more-label { color: var(--red); }
 .essay-more:hover .essay-more-arrow { transform: translateY(3px); }
-.essay-more:focus-visible { outline: 2px solid var(--ink); outline-offset: 8px; }
+/* Focus highlights the label, not the transparent overlay across the essay. */
+.essay-more:focus-visible{background:transparent!important}
+.essay-more:focus-visible .essay-more-label{background:var(--red);color:var(--ink)}
+.essay-rest:focus-visible{background:transparent!important}
 
 
-.essay-more-label::before{display:none}.essay-more-label.intro-cta{display:inline-flex}.essay-more-arrow{font-family:inherit}
+.essay-more-label::before{display:none}.essay-more-label.intro-cta{display:inline-flex;font:500 var(--reading)/1.2 var(--font)}.essay-more-arrow{font-family:inherit}

@@ -40,6 +40,11 @@ class JapanesePage(HTMLParser):
             val = a.get(key, '')
             if val.startswith(('css/','js/','fonts/','img/','../css/','../js/','../fonts/','../img/')):
                 a[key] = '../' + val
+        if a.get('srcset'):
+            a['srcset'] = ', '.join(
+                '../' + candidate.strip() if candidate.strip().startswith(('img/', '../img/')) else candidate.strip()
+                for candidate in a['srcset'].split(',')
+            )
         if tag == 'link' and a.get('rel') == 'canonical': a['href'] = self.japanese
         if tag == 'meta' and a.get('property') == 'og:url': a['content'] = self.japanese
         if tag == 'meta' and a.get('property') == 'og:locale': a['content'] = 'ja_JP'

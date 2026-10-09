@@ -1,26 +1,139 @@
 [
   {
-    "id": "hay-miz",
-    "name": "Miz Water Bottle, Red",
+    "id": "hay-miz-dark-green",
+    "name": "Miz Water Bottle, Dark Green",
     "brand": "HAY",
     "category": "kitchen",
     "tags": [
       "drinkware",
       "Naoto Fukasawa",
-      "colour"
+      "color"
     ],
     "description": "A slim water bottle designed by Naoto Fukasawa.",
     "productUrl": "https://www.hay.com/hay/accessories/travel/miz-water-bottle",
-    "sourceUrl": "https://www.framaspace.com/products/miz-water-bottle",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0510/5192/1569/files/AE366-D807-AB27_variant_Miz-Water-Bottle-0_54-litre-red_gb_1220x1220_53781c69-363f-4c10-a77e-d4356f3e9ab4.jpg?v=1774824166",
-    "image": "img/objects/hay-miz.jpg",
-    "width": 1220,
-    "height": 1220,
-    "usageCaveat": "HAY product photography from retailer FRAMA; official HAY and designer pages verified the product but image hosts returned 403. No unrestricted-use license verified; private preview pending rights review."
+    "sourceUrl": "https://hay.presscloud.com/digitalshowroom/#/gallery/miz-water-bottle",
+    "sourceImageUrl": "https://hay.presscloud.com/digitalshowroom/#/gallery/miz-water-bottle",
+    "image": "img/objects/cutouts/hay-miz-dark-green.webp",
+    "width": 2827,
+    "height": 2827,
+    "usageCaveat": "HAY product photography from its official press library. Dark Green is the 0.72 L variant. No unrestricted-use license verified; private preview pending rights review.",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/hay-miz-dark-green-hq-1.webp",
+        "width": 3200,
+        "height": 2133,
+        "sourceUrl": "https://hay.presscloud.com/digitalshowroom/#/gallery/miz-water-bottle",
+        "sourceImageUrl": "https://hay.presscloud.com/digitalshowroom/#/gallery/miz-water-bottle",
+        "sourceFile": "AE366-D808-AE77_Miz Water Bottle 0,72 litre dark green.jpg"
+      },
+      {
+        "image": "img/objects/gallery/hay-miz-dark-green-2.webp",
+        "width": 1277,
+        "height": 1600,
+        "sourceUrl": "https://www.hay-japan.com/category/KICN06/KICN060029.html",
+        "sourceImageUrl": "https://www.hay-japan.com/client_info/HAYJAPAN/itemimage/KICN060029/KICN060029_01.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/hay-miz-dark-green-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/hay-miz-dark-green-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/hay-miz-dark-green-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/hay-miz-dark-green-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/hay-miz-dark-green.webp",
+        "width": 2827
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        740,
+        2544
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    },
+    "sourceFile": "AE366-D808-AE77_Miz Water Bottle 0,72 litre dark green.jpg"
   },
   {
-    "id": "alessi-anna-g",
-    "name": "Anna G. Corkscrew",
+    "id": "stokke-tripp-trapp-warm-red",
+    "name": "Tripp Trapp Chair, Warm Red",
+    "brand": "Stokke",
+    "category": "living",
+    "tags": [],
+    "description": "Peter Opsvik’s adjustable wooden chair, made to grow with its user.",
+    "productUrl": "https://www.megababiesusa.com/products/stokke-tripp-trapp-chair",
+    "sourceUrl": "https://www.megababiesusa.com/products/stokke-tripp-trapp-chair",
+    "sourceImageUrl": "https://www.megababiesusa.com/cdn/shop/files/528918TrippTrapp_WarmRed_2-8press_3f7316c9-7682-433f-8d16-81a34e586803.jpg?v=1754407918",
+    "image": "img/objects/cutouts/stokke-tripp-trapp-warm-red.webp",
+    "width": 2208,
+    "height": 2208,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/stokke-tripp-trapp-warm-red.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://www.megababiesusa.com/products/stokke-tripp-trapp-chair",
+        "sourceImageUrl": "https://www.megababiesusa.com/cdn/shop/files/528918TrippTrapp_WarmRed_2-8press_3f7316c9-7682-433f-8d16-81a34e586803.jpg?v=1754407918"
+      },
+      {
+        "image": "img/objects/gallery/stokke-tripp-trapp-warm-red-2.webp",
+        "width": 625,
+        "height": 800,
+        "sourceUrl": "https://www.backinaction.co.uk/tripptrappbuy",
+        "sourceImageUrl": "https://www.backinaction.co.uk/images/webproducts/TT/Tripp-Trapp-Warm-Red-_h800.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/stokke-tripp-trapp-warm-red-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/stokke-tripp-trapp-warm-red-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/stokke-tripp-trapp-warm-red-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/stokke-tripp-trapp-warm-red-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/stokke-tripp-trapp-warm-red.webp",
+        "width": 2208
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1302,
+        1987
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "alessi-anna-g-black",
+    "name": "Anna G. Corkscrew, Black",
     "brand": "Alessi",
     "category": "kitchen",
     "tags": [
@@ -28,157 +141,3563 @@
       "tableware"
     ],
     "description": "Alessandro Mendini’s smiling, figure-shaped corkscrew.",
-    "productUrl": "https://us.alessi.com/products/anna-g-corkscrew",
-    "sourceUrl": "https://us.alessi.com/products/anna-g-corkscrew",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0342/9262/9644/products/Z-01-new_AM01.jpg?v=1643879847",
-    "image": "img/objects/alessi-anna-g.jpg",
+    "productUrl": "https://alessi.com/products/anna-g-corkscrew-1",
+    "sourceUrl": "https://alessi.com/products/anna-g-corkscrew-1",
+    "sourceImageUrl": "https://alessi.com/cdn/shop/products/01-03-new_AAM01.jpg?v=1764323960&width=1600",
+    "image": "img/objects/cutouts/alessi-anna-g-black.webp",
     "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
-    "width": 1648,
-    "height": 2062
+    "width": 1348,
+    "height": 1348,
+    "gallery": [
+      {
+        "image": "img/objects/alessi-anna-g-black.jpg",
+        "width": 1600,
+        "height": 2002,
+        "sourceUrl": "https://alessi.com/products/anna-g-corkscrew-1",
+        "sourceImageUrl": "https://alessi.com/cdn/shop/products/01-03-new_AAM01.jpg?v=1764323960&width=1600"
+      },
+      {
+        "image": "img/objects/gallery/alessi-anna-g-black-hq-2.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/anna-g-corkscrew-1",
+        "sourceImageUrl": "https://alessi.com/cdn/shop/products/AM01B.jpg?v=1680619550"
+      },
+      {
+        "image": "img/objects/gallery/alessi-anna-g-black-hq-3.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/anna-g-corkscrew-1",
+        "sourceImageUrl": "https://alessi.com/cdn/shop/products/01-04-new_AAM01.jpg?v=1764323960"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/alessi-anna-g-black-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/alessi-anna-g-black-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/alessi-anna-g-black.webp",
+        "width": 1348
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        891,
+        1086
+      ],
+      "opticalFill": 0.806,
+      "upscaled": false
+    }
   },
   {
-    "id": "alessi-juicy-salif",
-    "name": "Juicy Salif",
+    "id": "alessi-ossidiana-black",
+    "name": "Ossidiana Espresso Coffee Maker, Black",
     "brand": "Alessi",
     "category": "kitchen",
-    "tags": [
-      "design classic",
-      "tableware"
+    "tags": [],
+    "description": "Mario Trimarchi’s faceted espresso maker, shaped by the idea of carving volcanic stone.",
+    "productUrl": "https://alessi.com/products/ossidiana-espresso-coffee-maker",
+    "sourceUrl": "https://alessi.com/products/ossidiana-espresso-coffee-maker",
+    "sourceImageUrl": "https://alessi.com/cdn/shop/products/MT18-05.jpg?v=1715856171&width=2000",
+    "image": "img/objects/cutouts/alessi-ossidiana-black.webp",
+    "width": 1046,
+    "height": 1046,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/alessi-ossidiana-black.jpg",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/ossidiana-espresso-coffee-maker",
+        "sourceImageUrl": "https://alessi.com/cdn/shop/products/MT18-05.jpg?v=1715856171&width=2000"
+      },
+      {
+        "image": "img/objects/gallery/alessi-ossidiana-black-2.webp",
+        "width": 1278,
+        "height": 1600,
+        "sourceUrl": "https://alessi-jp.shop/view/item/000000000099",
+        "sourceImageUrl": "https://makeshop-multi-images.akamaized.net/alessijapan/shopimages/99/00/1_000000000099.png?1779933123"
+      },
+      {
+        "image": "img/objects/gallery/alessi-ossidiana-black-3.webp",
+        "width": 1068,
+        "height": 1600,
+        "sourceUrl": "https://alessi-jp.shop/view/item/000000000099",
+        "sourceImageUrl": "https://makeshop-multi-images.akamaized.net/alessijapan/shopimages/99/00/3_000000000099.jpg?1779933123"
+      },
+      {
+        "image": "img/objects/gallery/alessi-ossidiana-black-4.webp",
+        "width": 1278,
+        "height": 1600,
+        "sourceUrl": "https://alessi-jp.shop/view/item/000000000099",
+        "sourceImageUrl": "https://makeshop-multi-images.akamaized.net/alessijapan/shopimages/99/00/2_000000000099.jpg?1779933123"
+      }
     ],
-    "description": "Philippe Starck’s sculptural citrus squeezer.",
-    "productUrl": "https://us.alessi.com/products/juicy-salif-citrus-squeezer",
-    "sourceUrl": "https://us.alessi.com/products/juicy-salif-citrus-squeezer",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0342/9262/9644/products/01_PSJS_aaf8c62d-b352-4aa9-b63a-2a52c9ae15aa.jpg?v=1652871135",
-    "image": "img/objects/alessi-juicy-salif.jpg",
-    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
-    "width": 1648,
-    "height": 2062
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/alessi-ossidiana-black-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/alessi-ossidiana-black-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/alessi-ossidiana-black.webp",
+        "width": 1046
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        638,
+        913
+      ],
+      "opticalFill": 0.873,
+      "upscaled": false
+    }
   },
   {
-    "id": "alessi-pulcina",
-    "name": "Pulcina",
-    "brand": "Alessi",
-    "category": "kitchen",
-    "tags": [
-      "design classic",
-      "tableware"
-    ],
-    "description": "Michele De Lucchi’s stepped espresso coffee maker.",
-    "productUrl": "https://us.alessi.com/products/pulcina-espresso-coffee-maker",
-    "sourceUrl": "https://us.alessi.com/products/pulcina-espresso-coffee-maker",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0342/9262/9644/products/01-1_MDL02_42b3b7c0-89b8-46ac-b877-1cf365b73b5b.jpg?v=1650387797",
-    "image": "img/objects/alessi-pulcina.jpg",
-    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
-    "width": 1648,
-    "height": 2062
-  },
-  {
-    "id": "alessi-9093",
-    "name": "9093 Kettle",
-    "brand": "Alessi",
-    "category": "kitchen",
-    "tags": [
-      "design classic",
-      "tableware"
-    ],
-    "description": "Michael Graves’s kettle with a bird-shaped whistle.",
-    "productUrl": "https://us.alessi.com/products/9093-kettle",
-    "sourceUrl": "https://us.alessi.com/products/9093-kettle",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0342/9262/9644/products/01-1_9093_f42fa548-afd3-4120-95af-5473acdf8058.jpg?v=1650387853",
-    "image": "img/objects/alessi-9093.jpg",
-    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
-    "width": 1648,
-    "height": 2062
-  },
-  {
-    "id": "dusen-slippers",
-    "name": "Terry Stripe Slippers, Ladybug",
+    "id": "dusen-everybody-wall-clock",
+    "name": "Everybody Wall Clock, Blue / Red",
     "brand": "Dusen Dusen",
+    "category": "living",
+    "tags": [],
+    "description": "A sun-shaped clock with a face that changes as the hands move.",
+    "productUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+    "sourceUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+    "sourceImageUrl": "https://www.momastore.jp/img/goods/L/0708389001945_2.jpg",
+    "image": "img/objects/cutouts/dusen-everybody-wall-clock.webp",
+    "width": 1122,
+    "height": 1122,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/dusen-everybody-wall-clock.jpg",
+        "width": 1061,
+        "height": 1061,
+        "sourceUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+        "sourceImageUrl": "https://www.momastore.jp/img/goods/L/0708389001945_2.jpg"
+      },
+      {
+        "image": "img/objects/gallery/dusen-everybody-wall-clock-2.webp",
+        "width": 1061,
+        "height": 1061,
+        "sourceUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+        "sourceImageUrl": "https://www.momastore.jp/img/goods/1/0708389001945_1_detail.jpg"
+      },
+      {
+        "image": "img/objects/gallery/dusen-everybody-wall-clock-3.webp",
+        "width": 1061,
+        "height": 1061,
+        "sourceUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+        "sourceImageUrl": "https://www.momastore.jp/img/goods/3/0708389001945_3_detail.jpg"
+      },
+      {
+        "image": "img/objects/gallery/dusen-everybody-wall-clock-4.webp",
+        "width": 1061,
+        "height": 1061,
+        "sourceUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+        "sourceImageUrl": "https://www.momastore.jp/img/goods/4/0708389001945_4_detail.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/dusen-everybody-wall-clock-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/dusen-everybody-wall-clock-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/dusen-everybody-wall-clock.webp",
+        "width": 1122
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        819,
+        819
+      ],
+      "opticalFill": 0.73,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "subu-dusen-checker",
+    "name": "Dusen Dusen for MoMA Sandals, Checker",
+    "brand": "SUBU × Dusen Dusen",
     "category": "wear",
-    "tags": [
-      "textile",
-      "stripes",
-      "colour"
+    "tags": [],
+    "description": "Padded slip-on sandals with Ellen Van Dusen’s checker pattern, made for MoMA.",
+    "productUrl": "https://www.dusendusen.com/pages/projects",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
+    "sourceImageUrl": "https://www.momastore.jp/img/goods/L/4977468704060_2.jpg",
+    "image": "img/objects/cutouts/subu-dusen-checker.webp",
+    "width": 1099,
+    "height": 1099,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/subu-dusen-checker.jpg",
+        "width": 1061,
+        "height": 1061,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
+        "sourceImageUrl": "https://www.momastore.jp/img/goods/L/4977468704060_2.jpg"
+      },
+      {
+        "image": "img/objects/gallery/subu-dusen-checker-2.webp",
+        "width": 1600,
+        "height": 838,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
+        "sourceImageUrl": "https://prcdn.freetls.fastly.net/release_image/18324/1129/18324-1129-ce3d9af8f0fa80110c6833012c24407d-1920x1005.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1600&height=1600&fit=bounds"
+      },
+      {
+        "image": "img/objects/gallery/subu-dusen-checker-3.webp",
+        "width": 1600,
+        "height": 533,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
+        "sourceImageUrl": "https://prcdn.freetls.fastly.net/release_image/18324/1129/18324-1129-f5ea147418951cc87dcb8625fbe115c5-3000x1000.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1600&height=1600&fit=bounds"
+      }
     ],
-    "description": "Striped terry slippers from Dusen Dusen.",
-    "productUrl": "https://www.dusendusen.com/products/terry-stripe-slippers",
-    "sourceUrl": "https://www.dusendusen.com/products/terry-stripe-slippers",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0999/7114/files/LadybugSlippers1.jpg?v=1786470804",
-    "image": "img/objects/dusen-slippers.jpg",
-    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
-    "width": 1200,
-    "height": 1500
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/subu-dusen-checker-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/subu-dusen-checker-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/subu-dusen-checker.webp",
+        "width": 1099
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        738,
+        872
+      ],
+      "opticalFill": 0.794,
+      "upscaled": false
+    }
   },
   {
-    "id": "dusen-tissue",
-    "name": "Everybody Tissue Box Holder",
-    "brand": "Dusen Dusen",
+    "id": "braun-bc22-white",
+    "name": "BC22 Alarm Clock, White",
+    "brand": "Braun",
     "category": "living",
-    "tags": [
-      "storage",
-      "colour"
+    "tags": [],
+    "description": "A clear analog face, a yellow second hand, and a compact shape for the bedside.",
+    "productUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+    "sourceUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+    "sourceImageUrl": "https://de.braun-clocks.com/cdn/shop/products/42253a33-ad67-4403-a109-1f2750d314ed.jpg?v=1696328498",
+    "image": "img/objects/cutouts/braun-bc22-white.webp",
+    "width": 1970,
+    "height": 1970,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/braun-bc22-white.jpg",
+        "width": 1200,
+        "height": 1200,
+        "sourceUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+        "sourceImageUrl": "https://de.braun-clocks.com/cdn/shop/products/85974cea-3804-4b54-a3fd-7e9fe15a60ee_1200x1200.jpg?v=1696328499"
+      },
+      {
+        "image": "img/objects/gallery/braun-bc22-white-2.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+        "sourceImageUrl": "https://de.braun-clocks.com/cdn/shop/products/be27ef24-200a-4dc5-9ebb-7a65f04ee1c2.jpg?v=1696328499"
+      },
+      {
+        "image": "img/objects/gallery/braun-bc22-white-3.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+        "sourceImageUrl": "https://de.braun-clocks.com/cdn/shop/products/90fc68eb-f4b1-4b28-be66-3b9082e20428.jpg?v=1696328500"
+      }
     ],
-    "description": "A colourful tissue-box cover from Dusen Dusen and Areaware.",
-    "productUrl": "https://www.dusendusen.com/products/everybody-tissue-box-holder",
-    "sourceUrl": "https://www.dusendusen.com/products/everybody-tissue-box-holder",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0999/7114/files/DD25-BFerry-20250729-0211-WEB.jpg?v=1759868042",
-    "image": "img/objects/dusen-tissue.jpg",
-    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
-    "width": 1800,
-    "height": 2250
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/braun-bc22-white-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/braun-bc22-white-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/braun-bc22-white-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/braun-bc22-white-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/braun-bc22-white.webp",
+        "width": 1970
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with manually traced silhouette",
+      "subjectPixels": [
+        1357,
+        1523
+      ],
+      "opticalFill": 0.773,
+      "upscaled": false
+    }
   },
   {
-    "id": "hay-clock",
-    "name": "Table Clock, Green",
-    "brand": "HAY",
+    "id": "bruna-bonbon-mini-orange",
+    "name": "Bruna Bonbon Fluffy Mini Rabbit, Orange",
+    "brand": "ides × MEDICOM TOY × BEAMS",
+    "category": "living",
+    "tags": [],
+    "description": "Dick Bruna’s rabbit in a soft, removable orange cover, made exclusively for BEAMS.",
+    "productUrl": "https://www.beams.co.jp/item/bprbeams/hobby/33740250348/",
+    "sourceUrl": "https://www.beams.co.jp/item/bprbeams/hobby/33740250348/",
+    "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33740250348/O/33740250348_D_5.jpg",
+    "image": "img/objects/cutouts/bruna-bonbon-mini-orange.webp",
+    "width": 1040,
+    "height": 1040,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/bruna-bonbon-mini-orange.jpg",
+        "width": 1200,
+        "height": 1440,
+        "sourceUrl": "https://www.beams.co.jp/item/bprbeams/hobby/33740250348/",
+        "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33740250348/O/33740250348_D_5.jpg"
+      },
+      {
+        "image": "img/objects/gallery/bruna-bonbon-mini-orange-2.webp",
+        "width": 1200,
+        "height": 1440,
+        "sourceUrl": "https://www.beams.co.jp/en/item/bprbeams/hobby/33740250348/",
+        "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33740250348/O/33740250348_D_1.jpg"
+      },
+      {
+        "image": "img/objects/gallery/bruna-bonbon-mini-orange-3.webp",
+        "width": 1200,
+        "height": 1440,
+        "sourceUrl": "https://www.beams.co.jp/en/item/bprbeams/hobby/33740250348/",
+        "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33740250348/O/33740250348_D_2.jpg"
+      },
+      {
+        "image": "img/objects/gallery/bruna-bonbon-mini-orange-4.webp",
+        "width": 1200,
+        "height": 1440,
+        "sourceUrl": "https://www.beams.co.jp/en/item/bprbeams/hobby/33740250348/",
+        "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33740250348/O/33740250348_D_3.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/bruna-bonbon-mini-orange-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/bruna-bonbon-mini-orange-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/bruna-bonbon-mini-orange.webp",
+        "width": 1040
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        802,
+        718
+      ],
+      "opticalFill": 0.772,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "playforever-viglietta-jasper",
+    "name": "Viglietta Jasper",
+    "brand": "Playforever",
+    "category": "living",
+    "tags": [],
+    "description": "A small racing car with a metallic blue body, orange cockpit, and rubber tires.",
+    "productUrl": "https://playforever.us/products/vv101-viglietta-jasper",
+    "sourceUrl": "https://playforever.us/products/vv101-viglietta-jasper",
+    "sourceImageUrl": "https://playforever.us/cdn/shop/files/Playforever_PL-VV101_Verve_Viglietta_Jasper_2_GreyBackground.jpg?v=1717129439",
+    "image": "img/objects/cutouts/playforever-viglietta-jasper.webp",
+    "width": 1767,
+    "height": 1767,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/playforever-viglietta-jasper.jpg",
+        "width": 2048,
+        "height": 1820,
+        "sourceUrl": "https://playforever.us/products/vv101-viglietta-jasper",
+        "sourceImageUrl": "https://playforever.us/cdn/shop/files/Playforever_PL-VV101_Verve_Viglietta_Jasper_2_GreyBackground.jpg?v=1717129439"
+      },
+      {
+        "image": "img/objects/gallery/playforever-viglietta-jasper-2.webp",
+        "width": 1600,
+        "height": 1422,
+        "sourceUrl": "https://playforever.us/products/vv101-viglietta-jasper",
+        "sourceImageUrl": "https://playforever.us/cdn/shop/files/Playforever_PL-VV101_Verve_Viglietta_Jasper_3.jpg?v=1717129440&width=2000"
+      },
+      {
+        "image": "img/objects/gallery/playforever-viglietta-jasper-3.webp",
+        "width": 1600,
+        "height": 1422,
+        "sourceUrl": "https://playforever.us/products/vv101-viglietta-jasper",
+        "sourceImageUrl": "https://playforever.us/cdn/shop/files/Playforever_PL-VV101_Verve_Viglietta_Jasper_4.jpg?v=1717129440&width=2000"
+      },
+      {
+        "image": "img/objects/gallery/playforever-viglietta-jasper-4.webp",
+        "width": 1600,
+        "height": 1422,
+        "sourceUrl": "https://playforever.us/products/vv101-viglietta-jasper",
+        "sourceImageUrl": "https://playforever.us/cdn/shop/files/Playforever_PL-VV101_Verve_Viglietta_Jasper_9.jpg?v=1717129440&width=2000"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/playforever-viglietta-jasper-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/playforever-viglietta-jasper-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/playforever-viglietta-jasper-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/playforever-viglietta-jasper.webp",
+        "width": 1767
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1590,
+        943
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "brutto-sally-pepe",
+    "name": "Sally and Pepe Grinders",
+    "brand": "Brutto",
+    "category": "kitchen",
+    "tags": [],
+    "description": "Marco Oggian’s graphic salt and pepper grinders bring two characters to the table.",
+    "productUrl": "https://www.icantaffordthisbutmaybeshecan.com/products/sally-and-pepe-grinders?variant=52170465739095",
+    "sourceUrl": "https://www.icantaffordthisbutmaybeshecan.com/products/sally-and-pepe-grinders",
+    "sourceImageUrl": "https://www.icantaffordthisbutmaybeshecan.com/cdn/shop/files/Sally-and-Pepe_White-Background.jpg?v=1763304866",
+    "image": "img/objects/cutouts/brutto-sally-pepe.webp",
+    "width": 1843,
+    "height": 1843,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/brutto-sally-pepe.jpg",
+        "width": 1565,
+        "height": 1957,
+        "sourceUrl": "https://www.icantaffordthisbutmaybeshecan.com/products/sally-and-pepe-grinders?variant=52170465739095",
+        "sourceImageUrl": "https://www.icantaffordthisbutmaybeshecan.com/cdn/shop/files/brutto6.jpg?v=1763304841&width=2000"
+      },
+      {
+        "image": "img/objects/gallery/brutto-sally-pepe-hq-2.webp",
+        "width": 1600,
+        "height": 2000,
+        "sourceUrl": "https://www.icantaffordthisbutmaybeshecan.com/products/sally-and-pepe-grinders?variant=52170465739095",
+        "sourceImageUrl": "https://www.icantaffordthisbutmaybeshecan.com/cdn/shop/files/brutto5.jpg?v=1763304854"
+      },
+      {
+        "image": "img/objects/gallery/brutto-sally-pepe-hq-3.webp",
+        "width": 2560,
+        "height": 3200,
+        "sourceUrl": "https://www.icantaffordthisbutmaybeshecan.com/products/sally-and-pepe-grinders?variant=52170465739095",
+        "sourceImageUrl": "https://www.icantaffordthisbutmaybeshecan.com/cdn/shop/files/brutto3.jpg?v=1763304854"
+      },
+      {
+        "image": "img/objects/gallery/brutto-sally-pepe-hq-4.webp",
+        "width": 1524,
+        "height": 1906,
+        "sourceUrl": "https://www.icantaffordthisbutmaybeshecan.com/products/sally-and-pepe-grinders?variant=52170465739095",
+        "sourceImageUrl": "https://www.icantaffordthisbutmaybeshecan.com/cdn/shop/files/Sally-and-Pepe_White-Background.jpg?v=1763304866"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/brutto-sally-pepe-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/brutto-sally-pepe-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/brutto-sally-pepe-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/brutto-sally-pepe.webp",
+        "width": 1843
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        933,
+        1658
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "ricoh-gr-iv",
+    "name": "GR IV",
+    "brand": "RICOH",
     "category": "work",
-    "tags": [
-      "time",
-      "Jasper Morrison"
+    "tags": [],
+    "description": "A pocket-sized camera with a fixed 28mm-equivalent lens, made for everyday photography.",
+    "productUrl": "https://www.ricoh-imaging.co.jp/japan/products/gr-4/",
+    "sourceUrl": "https://store.bandccamera.com/products/ricoh-gr-iv-digital-camera",
+    "sourceImageUrl": "https://store.bandccamera.com/cdn/shop/files/003_front_visible_top.jpg?v=1755727562",
+    "image": "img/objects/cutouts/ricoh-gr-iv.webp",
+    "width": 3253,
+    "height": 3253,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/ricoh-gr-iv.jpg",
+        "width": 1600,
+        "height": 1125,
+        "sourceUrl": "https://store.bandccamera.com/products/ricoh-gr-iv-digital-camera",
+        "sourceImageUrl": "https://store.bandccamera.com/cdn/shop/files/003_front_visible_top.jpg?v=1755727562&width=1600"
+      },
+      {
+        "image": "img/objects/gallery/ricoh-gr-iv-2.webp",
+        "width": 1600,
+        "height": 1125,
+        "sourceUrl": "https://store.bandccamera.com/products/ricoh-gr-iv-digital-camera",
+        "sourceImageUrl": "https://store.bandccamera.com/cdn/shop/files/005_back_visible_top.jpg?v=1755727562&width=1600"
+      },
+      {
+        "image": "img/objects/gallery/ricoh-gr-iv-3.webp",
+        "width": 1600,
+        "height": 1125,
+        "sourceUrl": "https://store.bandccamera.com/products/ricoh-gr-iv-digital-camera",
+        "sourceImageUrl": "https://store.bandccamera.com/cdn/shop/files/007_top_off.jpg?v=1755727562&width=1600"
+      },
+      {
+        "image": "img/objects/gallery/ricoh-gr-iv-4.webp",
+        "width": 1600,
+        "height": 1125,
+        "sourceUrl": "https://store.bandccamera.com/products/ricoh-gr-iv-digital-camera",
+        "sourceImageUrl": "https://store.bandccamera.com/cdn/shop/files/012_right_side.jpg?v=1755727562&width=1600"
+      }
     ],
-    "description": "A compact tabletop clock designed by Jasper Morrison.",
-    "productUrl": "https://hayshop.com.au/products/table-clock-green",
-    "sourceUrl": "https://hayshop.com.au/products/table-clock-green",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0059/4581/9225/files/655da968f0fc236d4e08884d.jpg?v=1791203936",
-    "image": "img/objects/hay-clock.jpg",
-    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
-    "width": 1100,
-    "height": 1100
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/ricoh-gr-iv-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/ricoh-gr-iv-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/ricoh-gr-iv-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/ricoh-gr-iv-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/ricoh-gr-iv.webp",
+        "width": 3253
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        2927,
+        1774
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
   },
   {
-    "id": "hay-portable",
-    "name": "PC Portable",
+    "id": "nintendo-pikmin-vases",
+    "name": "Pikmin Single-Flower Vase Set",
+    "brand": "Nintendo",
+    "category": "living",
+    "tags": [],
+    "description": "Red, yellow, and blue Pikmin become ceramic vases, each holding a single stem.",
+    "productUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
+    "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
+    "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:best/wvpqwxtelmxtmp8j2rwt",
+    "image": "img/objects/cutouts/nintendo-pikmin-vases.webp",
+    "width": 1790,
+    "height": 1790,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/nintendo-pikmin-vases-refined.jpg",
+        "width": 1920,
+        "height": 1920,
+        "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
+        "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:best/wvpqwxtelmxtmp8j2rwt"
+      },
+      {
+        "image": "img/objects/gallery/nintendo-pikmin-vases-2.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
+        "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:low/erlgya1ic6c6zwgomgoa"
+      },
+      {
+        "image": "img/objects/gallery/nintendo-pikmin-vases-3.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
+        "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:low/vpmcglfj0bj5s174vmeg"
+      },
+      {
+        "image": "img/objects/gallery/nintendo-pikmin-vases-4.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
+        "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:low/kjgjwqsfqnwgbvvmnb3v"
+      },
+      {
+        "image": "img/objects/gallery/nintendo-pikmin-vases-5.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
+        "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:low/uhqkmff7savit4j1dfs0"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/nintendo-pikmin-vases-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/nintendo-pikmin-vases-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/nintendo-pikmin-vases-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/nintendo-pikmin-vases.webp",
+        "width": 1790
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1557,
+        1362
+      ],
+      "opticalFill": 0.87,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "arms-flying-robi-persi",
+    "name": "Robi Persi",
+    "brand": "Arms Flying Everywhere",
+    "category": "living",
+    "tags": [],
+    "description": "A persimmon-orange Robi figure with a cream beanie, yellow-soled boots, and a heart on its chest.",
+    "productUrl": "https://armsflyingeverywhere.com/products/robi-persi",
+    "sourceUrl": "https://armsflyingeverywhere.com/products/robi-persi",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0672/5697/5494/files/Robi-Persi_e04e2a91-0a1a-43c1-b571-07b42ff2142b.jpg?v=1786355493",
+    "image": "img/objects/cutouts/arms-flying-robi-persi.webp",
+    "width": 1678,
+    "height": 1678,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/arms-flying-robi-persi.jpg",
+        "width": 1800,
+        "height": 1800,
+        "sourceUrl": "https://armsflyingeverywhere.com/products/robi-persi",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0672/5697/5494/files/Robi-Persi_e04e2a91-0a1a-43c1-b571-07b42ff2142b.jpg?v=1786355493"
+      }
+    ],
+    "galleryNote": "Only one verified usable view is currently available; additional photography is pending.",
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/arms-flying-robi-persi-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/arms-flying-robi-persi-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/arms-flying-robi-persi-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/arms-flying-robi-persi.webp",
+        "width": 1678
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        581,
+        1510
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "alessi-9090",
+    "name": "9090 Espresso Coffee Maker",
+    "brand": "Alessi",
+    "category": "kitchen",
+    "tags": [],
+    "description": "Richard Sapper’s stainless steel espresso maker, with a handle that locks the body closed.",
+    "productUrl": "https://us.alessi.com/products/9090-espresso-coffee-maker",
+    "sourceUrl": "https://us.alessi.com/products/9090-espresso-coffee-maker",
+    "sourceImageUrl": "https://us.alessi.com/cdn/shop/products/9090-1_01.jpg?v=1764323890&width=2000",
+    "image": "img/objects/cutouts/alessi-9090.webp",
+    "width": 994,
+    "height": 994,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/alessi-9090.jpg",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://us.alessi.com/products/9090-espresso-coffee-maker",
+        "sourceImageUrl": "https://us.alessi.com/cdn/shop/products/9090-1_01.jpg?v=1764323890&width=2000"
+      },
+      {
+        "image": "img/objects/gallery/alessi-9090-hq-2.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://us.alessi.com/products/9090-espresso-coffee-maker",
+        "sourceImageUrl": "https://us.alessi.com/cdn/shop/products/9090.jpg?v=1752135045"
+      },
+      {
+        "image": "img/objects/gallery/alessi-9090-hq-3.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://us.alessi.com/products/9090-espresso-coffee-maker",
+        "sourceImageUrl": "https://us.alessi.com/cdn/shop/products/03_9090_2777b594-f5eb-4d51-a768-1d2078f08523.jpg?v=1764323890"
+      },
+      {
+        "image": "img/objects/gallery/alessi-9090-4.webp",
+        "width": 624,
+        "height": 788,
+        "sourceUrl": "https://us.alessi.com/products/9090-espresso-coffee-maker",
+        "sourceImageUrl": "https://us.alessi.com/cdn/shop/products/04_9090_fc92405b-3551-472e-9ae3-296862a18cb8.jpg?v=1764323890&width=1600"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/alessi-9090-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/alessi-9090-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/alessi-9090.webp",
+        "width": 994
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        622,
+        845
+      ],
+      "opticalFill": 0.851,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "arwenn-cloud-clock",
+    "name": "CLOUD Clock",
+    "brand": "ARWENN",
+    "category": "living",
+    "tags": [],
+    "description": "A softly rounded wall clock that lets the hands do the talking.",
+    "productUrl": "https://arwenn.com/products/cloud-clock-2?Title=Default+Title",
+    "sourceUrl": "https://arwenn.com/products/cloud-clock-2?Title=Default+Title",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0915/0523/0148/files/ARWENN-CLOUD-clocks-yellow-01-BG-07.jpg?v=1787245901",
+    "image": "img/objects/cutouts/arwenn-cloud-clock.webp",
+    "width": 1648,
+    "height": 1648,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/arwenn-cloud-clock.jpg",
+        "width": 2160,
+        "height": 3086,
+        "sourceUrl": "https://arwenn.com/products/cloud-clock-2?Title=Default+Title",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0915/0523/0148/files/ARWENN-CLOUD-clocks-yellow-01-BG-07.jpg?v=1787245901"
+      },
+      {
+        "image": "img/objects/gallery/arwenn-cloud-clock-hq-2.webp",
+        "width": 2160,
+        "height": 3086,
+        "sourceUrl": "https://arwenn.com/products/cloud-clock-2",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0915/0523/0148/files/ARWENN-CLOUD-clocks-yellow-02-BG-07.jpg?v=1787245902"
+      },
+      {
+        "image": "img/objects/gallery/arwenn-cloud-clock-hq-3.webp",
+        "width": 2160,
+        "height": 3086,
+        "sourceUrl": "https://arwenn.com/products/cloud-clock-2",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0915/0523/0148/files/ARWENN-CLOUD-clocks-yellow-03-BG-07.jpg?v=1787245901"
+      },
+      {
+        "image": "img/objects/gallery/arwenn-cloud-clock-hq-4.webp",
+        "width": 2160,
+        "height": 3086,
+        "sourceUrl": "https://arwenn.com/products/cloud-clock-2",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0915/0523/0148/files/ARWENN-CLOUD-clocks-yellow-04-BG-07.jpg?v=1787245901"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/arwenn-cloud-clock-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/arwenn-cloud-clock-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/arwenn-cloud-clock-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/arwenn-cloud-clock.webp",
+        "width": 1648
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1199,
+        1206
+      ],
+      "opticalFill": 0.732,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "craighill-chroma-scissors-primary",
+    "name": "Chroma Scissors, Primary",
+    "brand": "Craighill",
+    "category": "work",
+    "tags": [],
+    "description": "Red blades and blue and yellow handle loops give this everyday cutting tool a primary-color palette.",
+    "productUrl": "https://craighill.co/products/chroma-scissors?variant=42477554368749",
+    "sourceUrl": "https://craighill.co/products/chroma-scissors?variant=42477554368749",
+    "sourceImageUrl": "https://craighill.co/cdn/shop/files/Chroma_Scissors_4871_260707_v2.jpg?v=1786654333",
+    "image": "img/objects/cutouts/craighill-chroma-scissors-primary.webp",
+    "width": 2136,
+    "height": 2136,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/craighill-chroma-scissors-primary.jpg",
+        "width": 2000,
+        "height": 2500,
+        "sourceUrl": "https://craighill.co/products/chroma-scissors?variant=42477554368749",
+        "sourceImageUrl": "https://craighill.co/cdn/shop/files/Chroma_Scissors_4871_260707_v2.jpg?v=1786654333"
+      },
+      {
+        "image": "img/objects/gallery/craighill-chroma-scissors-primary-2.webp",
+        "width": 1200,
+        "height": 1500,
+        "sourceUrl": "https://craighill.co/products/chroma-scissors?variant=42477554335981",
+        "sourceImageUrl": "https://craighill.co/cdn/shop/files/preview_images/Scissors4895_1200x.jpg?v=1790176644"
+      },
+      {
+        "image": "img/objects/gallery/craighill-chroma-scissors-primary-hq-3.webp",
+        "width": 2500,
+        "height": 3125,
+        "sourceUrl": "https://craighill.co/products/chroma-scissors?variant=42477554335981",
+        "sourceImageUrl": "https://craighill.co/cdn/shop/files/Scissors4934.jpg?v=1773758388"
+      },
+      {
+        "image": "img/objects/gallery/craighill-chroma-scissors-primary-hq-4.webp",
+        "width": 2386,
+        "height": 2983,
+        "sourceUrl": "https://craighill.co/products/chroma-scissors?variant=42477554335981",
+        "sourceImageUrl": "https://craighill.co/cdn/shop/files/Scissors4936.jpg?v=1773758388"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/craighill-chroma-scissors-primary-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/craighill-chroma-scissors-primary-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/craighill-chroma-scissors-primary-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/craighill-chroma-scissors-primary-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/craighill-chroma-scissors-primary.webp",
+        "width": 2136
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1090,
+        1922
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "craighill-swingtop-lighter",
+    "name": "Swingtop Lighter",
+    "brand": "Craighill",
+    "category": "living",
+    "tags": [],
+    "description": "A refillable steel lighter with a hinged lid and a tactile opening mechanism.",
+    "productUrl": "https://craighill.co/collections/best-sellers/products/swingtop-lighter",
+    "sourceUrl": "https://craighill.co/collections/best-sellers/products/swingtop-lighter",
+    "sourceImageUrl": "https://craighill.co/cdn/shop/files/Swingtop_Lighter_0801_260707_v2.jpg?v=1786722079",
+    "image": "img/objects/cutouts/craighill-swingtop-lighter.webp",
+    "width": 1347,
+    "height": 1347,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/craighill-swingtop-lighter-hq-1.webp",
+        "width": 2000,
+        "height": 2500,
+        "sourceUrl": "https://craighill.co/collections/best-sellers/products/swingtop-lighter",
+        "sourceImageUrl": "https://craighill.co/cdn/shop/files/Swingtop_Lighter_0801_260707_v2.jpg?v=1786722079"
+      },
+      {
+        "image": "img/objects/gallery/craighill-swingtop-lighter-hq-2.webp",
+        "width": 2500,
+        "height": 3124,
+        "sourceUrl": "https://craighill.co/collections/best-sellers/products/swingtop-lighter",
+        "sourceImageUrl": "https://craighill.co/cdn/shop/files/Swingtop0515.jpg?v=1779126057"
+      },
+      {
+        "image": "img/objects/gallery/craighill-swingtop-lighter-hq-3.webp",
+        "width": 2500,
+        "height": 3125,
+        "sourceUrl": "https://craighill.co/collections/best-sellers/products/swingtop-lighter",
+        "sourceImageUrl": "https://craighill.co/cdn/shop/files/Swingtop0560.jpg?v=1779126058"
+      },
+      {
+        "image": "img/objects/gallery/craighill-swingtop-lighter-hq-4.webp",
+        "width": 2000,
+        "height": 2500,
+        "sourceUrl": "https://craighill.co/collections/best-sellers/products/swingtop-lighter",
+        "sourceImageUrl": "https://craighill.co/cdn/shop/files/Swingtop_Lighter_0609_260707_v2.jpg?v=1786722080"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/craighill-swingtop-lighter-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/craighill-swingtop-lighter-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/craighill-swingtop-lighter.webp",
+        "width": 1347
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        598,
+        1212
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "alessi-twergi-es19-yellow",
+    "name": "Twergi ES19 Spice Mill, Yellow",
+    "brand": "Alessi",
+    "category": "kitchen",
+    "tags": [],
+    "description": "Ettore Sottsass’s turned-wood mill, one of the small sculptural objects in the Twergi collection.",
+    "productUrl": "https://alessi.com/de/products/es19-pepper-salt-and-spice-mill",
+    "sourceUrl": "https://alessi.com/de/products/es19-pepper-salt-and-spice-mill",
+    "sourceImageUrl": "https://alessi.com/cdn/shop/products/ES19-04.jpg?v=1680531360",
+    "image": "img/objects/cutouts/alessi-twergi-es19-yellow.webp",
+    "width": 744,
+    "height": 744,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/alessi-twergi-es19-yellow.jpg",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/de/products/es19-pepper-salt-and-spice-mill",
+        "sourceImageUrl": "https://alessi.com/cdn/shop/products/03_ES19.jpg?v=1680531360"
+      },
+      {
+        "image": "img/objects/gallery/alessi-twergi-es19-yellow-hq-2.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/de/products/es19-pepper-salt-and-spice-mill",
+        "sourceImageUrl": "https://alessi.com/cdn/shop/products/ES18-ES19-MP0210-02_054ce3f4-9a6e-4798-98b5-c7136422560f.jpg?v=1680531360"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/alessi-twergi-es19-yellow-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/alessi-twergi-es19-yellow.webp",
+        "width": 744
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        320,
+        669
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "nuutajarvi-tumbler-1709",
+    "name": "Tumbler 1709",
+    "brand": "Nuutajärvi",
+    "category": "kitchen",
+    "tags": [],
+    "description": "Kaj Franck’s 1959 glass tumbler, with a curved profile designed for stacking. A vintage find.",
+    "productUrl": "https://www.instagram.com/p/Dcije-fksXb/",
+    "sourceUrl": "https://www.instagram.com/p/Dcije-fksXb/",
+    "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/788550045_18557055925073002_2817358386360260374_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzk3Mjg5MzcxODUyMDM2Njg2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=zCiq9DtD_OcQ7kNvwGIEk3-&_nc_oc=Adpp3h1qXgWyQA2OW5OkugFclQoawHCOFeVQo8C98oPdUAUDUFcF6GEwHxQIzf8wrHTHpbtmR9UHNH003ZRUyl2U&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=jFoXN-l8yzp-0w0nfR0lig&_nc_ss=7b689&oh=00_AQOIHJe833C9C647zX51JX53TQixW2gEeWltfsmcDt0vig&oe=6ACEA6DD",
+    "image": "img/objects/cutouts/nuutajarvi-tumbler-1709.webp",
+    "width": 1200,
+    "height": 1200,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/nuutajarvi-tumbler-1709.jpg",
+        "width": 1080,
+        "height": 1351,
+        "sourceUrl": "https://www.instagram.com/p/Dcije-fksXb/",
+        "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/788550045_18557055925073002_2817358386360260374_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzk3Mjg5MzcxODUyMDM2Njg2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=zCiq9DtD_OcQ7kNvwGIEk3-&_nc_oc=Adpp3h1qXgWyQA2OW5OkugFclQoawHCOFeVQo8C98oPdUAUDUFcF6GEwHxQIzf8wrHTHpbtmR9UHNH003ZRUyl2U&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=jFoXN-l8yzp-0w0nfR0lig&_nc_ss=7b689&oh=00_AQOIHJe833C9C647zX51JX53TQixW2gEeWltfsmcDt0vig&oe=6ACEA6DD"
+      },
+      {
+        "image": "img/objects/gallery/nuutajarvi-tumbler-1709-2.webp",
+        "width": 1080,
+        "height": 1351,
+        "sourceUrl": "https://www.instagram.com/p/Dcije-fksXb/?img_index=1",
+        "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/787178171_18557055934073002_4708606169349439400_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=Mzk3Mjg5MzcxOTc2MTg5MzU5NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_b7tOTKLbKIQ7kNvwGSlsbR&_nc_oc=AdoV-MKu6vgALUIgLYDVj4Bf4Zp8mQ9xc_bP6dSYjCMdlqPOeR3AjkXiGFvfLpAtWAWcyYukvTdCQruz5WLx4xum&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=jFoXN-l8yzp-0w0nfR0lig&_nc_ss=7b689&oh=00_AQP-cmaa6pH6Kk-uug3rVxeISu0ALBCV9aN67LVo3fuwfA&oe=6ACEB54B"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/nuutajarvi-tumbler-1709-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/nuutajarvi-tumbler-1709-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/nuutajarvi-tumbler-1709.webp",
+        "width": 1200
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        330,
+        1080
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "block-design-play-tin",
+    "name": "Tinned Goods — Play",
+    "brand": "Block Design",
+    "category": "living",
+    "tags": [],
+    "description": "A colorful pocket tin containing playing cards, ready to take a game with you.",
+    "productUrl": "https://blockdesign.co.uk/collections/tinned-goods/products/play",
+    "sourceUrl": "https://blockdesign.co.uk/collections/tinned-goods/products/play",
+    "sourceImageUrl": "https://blockdesign.co.uk/cdn/shop/files/play-flatlay.jpg?v=1753096888&width=2000",
+    "image": "img/objects/cutouts/block-design-play-tin.webp",
+    "width": 1712,
+    "height": 1712,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/block-design-play-tin.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://blockdesign.co.uk/collections/tinned-goods/products/play",
+        "sourceImageUrl": "https://blockdesign.co.uk/cdn/shop/files/play-flatlay.jpg?v=1753096888&width=2000"
+      },
+      {
+        "image": "img/objects/gallery/block-design-play-tin-2.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://blockdesign.co.uk/collections/tinned-goods/products/play",
+        "sourceImageUrl": "https://blockdesign.co.uk/cdn/shop/files/play_811538cf-8c8a-4ee5-9995-ec7099a85524.jpg?v=1753096913&width=1800"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/block-design-play-tin-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/block-design-play-tin-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/block-design-play-tin-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/block-design-play-tin.webp",
+        "width": 1712
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1489,
+        1438
+      ],
+      "opticalFill": 0.87,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "seiko-w286",
+    "name": "W286 Transistor Wall Clock",
+    "brand": "Seiko",
+    "category": "living",
+    "tags": [],
+    "description": "A vintage Seiko wall clock with an oval blue case and a generous, easy-to-read dial.",
+    "productUrl": "https://www.instagram.com/p/DcSoshAkbCc/",
+    "sourceUrl": "https://www.instagram.com/p/DcSoshAkbCc/",
+    "sourceImageUrl": "https://scontent-nrt1-1.cdninstagram.com/v/t51.82787-15/775494440_17940736641321996_7629726202727601213_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzk2ODQxMjg5NjY1NjM0MTU5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMzI3NC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=hjL3YttIxjgQ7kNvwFC-X3J&_nc_oc=AdrKfO44r4L5dRjvzOLRawhdB6h4n5SJ9dWzhfL7bZ7YCM3rPnd7UuodEYqvmBjnpWMDOWx8IUYYA4ZoTVqVqvMh&_nc_zt=23&_nc_ht=scontent-nrt1-1.cdninstagram.com&_nc_gid=mGuU547KSiM_HfZQhmuW3A&_nc_ss=7b689&oh=00_AQPqy_z5xIlCUX1MTwvq9kJtBt92W-j7ftx_KWiYRh5g6g&oe=6ACEA653",
+    "image": "img/objects/cutouts/seiko-w286.webp",
+    "width": 2407,
+    "height": 2407,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/seiko-w286.jpg",
+        "width": 3274,
+        "height": 4096,
+        "sourceUrl": "https://www.instagram.com/p/DcSoshAkbCc/",
+        "sourceImageUrl": "https://scontent-nrt1-1.cdninstagram.com/v/t51.82787-15/775494440_17940736641321996_7629726202727601213_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzk2ODQxMjg5NjY1NjM0MTU5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMzI3NC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=hjL3YttIxjgQ7kNvwFC-X3J&_nc_oc=AdrKfO44r4L5dRjvzOLRawhdB6h4n5SJ9dWzhfL7bZ7YCM3rPnd7UuodEYqvmBjnpWMDOWx8IUYYA4ZoTVqVqvMh&_nc_zt=23&_nc_ht=scontent-nrt1-1.cdninstagram.com&_nc_gid=mGuU547KSiM_HfZQhmuW3A&_nc_ss=7b689&oh=00_AQPqy_z5xIlCUX1MTwvq9kJtBt92W-j7ftx_KWiYRh5g6g&oe=6ACEA653"
+      },
+      {
+        "image": "img/objects/gallery/seiko-w286-2.webp",
+        "width": 512,
+        "height": 640,
+        "sourceUrl": "https://www.instagram.com/p/DcSoshAkbCc/?img_index=1",
+        "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/775319904_17940736716321996_7075233057107542099_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=yxwN_R5tawIQ7kNvwFNc1ET&_nc_oc=AdrP83C60lkWSF9Suh9zdZyOXal__9DNZyueoT2fKbKNrk7Z6LMgahquWejuh2rw_zETRyOtKCLsOsTA7bO6ugrC&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=mGuU547KSiM_HfZQhmuW3A&_nc_ss=7b689&oh=00_AQMZBmjHRifF14u1ilLJgLn0yHEOAU2qfMHYOpCTTDzTHw&oe=6ACEAB8C"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/seiko-w286-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/seiko-w286-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/seiko-w286-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/seiko-w286-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/seiko-w286.webp",
+        "width": 2407
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1926,
+        1602
+      ],
+      "opticalFill": 0.8,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "herman-miller-girard-throw",
+    "name": "Girard Throw, Orange / Fuchsia",
+    "brand": "Herman Miller × Pendleton",
+    "category": "living",
+    "tags": [],
+    "description": "Alexander Girard’s bold color blocks, woven in virgin wool by Pendleton.",
+    "productUrl": "https://store.hermanmiller.com/decor-pillow-throws/girard-throw/100069474.html?lang=en_US",
+    "sourceUrl": "https://store.hermanmiller.com/decor-pillow-throws/girard-throw/100069474.html?lang=en_US",
+    "sourceImageUrl": "https://images.hermanmiller.group/asset/4644f214-ddff-41f5-92ac-ee415ac2bcb3/W/LI_GIR_P_20120801_085.png",
+    "image": "img/objects/cutouts/herman-miller-girard-throw.webp",
+    "width": 2042,
+    "height": 2042,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/herman-miller-girard-throw-refined.jpg",
+        "width": 1600,
+        "height": 1280,
+        "sourceUrl": "https://store.hermanmiller.com/decor-pillow-throws/girard-throw/100069474.html?lang=en_US",
+        "sourceImageUrl": "https://images.hermanmiller.group/asset/4644f214-ddff-41f5-92ac-ee415ac2bcb3/W/LI_GIR_P_20120801_085.png?auto=format&w=1600"
+      },
+      {
+        "image": "img/objects/gallery/herman-miller-girard-throw-2.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://store.hermanmiller.com/decor-pillow-throws/girard-throw/2195462.html?lang=en_US",
+        "sourceImageUrl": "https://images.hermanmiller.group/asset/fb5767d7-5576-4ecc-a70e-90007456cbe2/W/HM_2195462_100069474_orange_Fuschia_v2.png?trim=auto&trim-sd=1&blend-mode=darken&blend=ebebeb&bg=ebebeb&auto=format&w=1600&h=1600&fit=fill&dpr=2"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/herman-miller-girard-throw-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/herman-miller-girard-throw-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/herman-miller-girard-throw-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/herman-miller-girard-throw-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/herman-miller-girard-throw.webp",
+        "width": 2042
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1666,
+        1333
+      ],
+      "opticalFill": 0.816,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "hay-regn-umbrella-gray-blue",
+    "name": "Regn Umbrella, Gray / Blue",
+    "brand": "HAY",
+    "category": "wear",
+    "tags": [],
+    "description": "A folding umbrella with a striped canopy and a matching case.",
+    "productUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+    "sourceUrl": "https://hay.presscloud.com/digitalshowroom/",
+    "sourceImageUrl": "https://hay.presscloud.com/digitalshowroom/",
+    "image": "img/objects/cutouts/hay-regn-umbrella-gray-blue.webp",
+    "width": 4140,
+    "height": 4140,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/hay-regn-umbrella-gray-blue-hq-1.webp",
+        "width": 3200,
+        "height": 2133,
+        "sourceUrl": "https://hay.presscloud.com/digitalshowroom/",
+        "sourceImageUrl": "https://hay.presscloud.com/digitalshowroom/",
+        "sourceFile": "AF794-A659_Regn Umbrella grey.jpg"
+      },
+      {
+        "image": "img/objects/gallery/hay-regn-umbrella-gray-blue-2.webp",
+        "width": 751,
+        "height": 1000,
+        "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+        "sourceImageUrl": "https://cdn.hay.nl/thumbnail/07/20/ca/1785023624/hay-regn-umbrella-grey-103549_1000x1000.webp"
+      },
+      {
+        "image": "img/objects/gallery/hay-regn-umbrella-gray-blue-3.webp",
+        "width": 750,
+        "height": 1000,
+        "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+        "sourceImageUrl": "https://cdn.hay.nl/thumbnail/b2/24/5b/1785023626/hay-regn-umbrella-grey-103550_1000x1000.webp"
+      },
+      {
+        "image": "img/objects/gallery/hay-regn-umbrella-gray-blue-4.webp",
+        "width": 749,
+        "height": 1000,
+        "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+        "sourceImageUrl": "https://cdn.hay.nl/thumbnail/f7/ce/34/1785494530/Regn%20Umbrella%20family_01_1000x1000.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/hay-regn-umbrella-gray-blue-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/hay-regn-umbrella-gray-blue-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/hay-regn-umbrella-gray-blue-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/hay-regn-umbrella-gray-blue-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/hay-regn-umbrella-gray-blue.webp",
+        "width": 4140
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        3283,
+        2781
+      ],
+      "opticalFill": 0.793,
+      "upscaled": false
+    },
+    "sourceFile": "AF794-A659_Regn Umbrella grey.jpg"
+  },
+  {
+    "id": "moodulo-pop-culture-act-ii",
+    "name": "Pop Culture: Act II",
+    "brand": "MOODULO Design",
+    "category": "living",
+    "tags": [],
+    "description": "A collection of sculptural lamps with pleated forms and bold colors, inspired by pop culture.",
+    "productUrl": "https://www.mdlo.cl/productos/",
+    "sourceUrl": "https://www.instagram.com/p/DdhZ8Z7utlj/",
+    "sourceImageUrl": "https://scontent-nrt6-1.cdninstagram.com/v/t51.82787-15/815038043_17965017009191019_3743544643885871492_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzk5MDU4NDg0NzAwMzk5ODU2Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=X-ithpNTuz8Q7kNvwG7vtca&_nc_oc=Adp54Coo6M7OWye1ZBEIkYroZGvlZcIWdcUOtmOgFD8vfFdqFOiyK_XyxoIk_cnHNBvsJqoiNcyTz_z9pqUSgvEY&_nc_zt=23&_nc_ht=scontent-nrt6-1.cdninstagram.com&_nc_gid=DW5jZvewqUjsocY7R36w-A&_nc_ss=7b689&oh=00_AQOMIF7sGqcqpWwEb1PgkAYUUE3QBIq90xfSlo94Lt2BKQ&oe=6ACEA4DA",
+    "image": "img/objects/cutouts/moodulo-pop-culture-act-ii.webp",
+    "width": 1566,
+    "height": 1566,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/moodulo-pop-culture-act-ii.jpg",
+        "width": 1440,
+        "height": 1920,
+        "sourceUrl": "https://www.instagram.com/p/DdhZ8Z7utlj/",
+        "sourceImageUrl": "https://scontent-nrt6-1.cdninstagram.com/v/t51.82787-15/815038043_17965017009191019_3743544643885871492_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzk5MDU4NDg0NzAwMzk5ODU2Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=X-ithpNTuz8Q7kNvwG7vtca&_nc_oc=Adp54Coo6M7OWye1ZBEIkYroZGvlZcIWdcUOtmOgFD8vfFdqFOiyK_XyxoIk_cnHNBvsJqoiNcyTz_z9pqUSgvEY&_nc_zt=23&_nc_ht=scontent-nrt6-1.cdninstagram.com&_nc_gid=DW5jZvewqUjsocY7R36w-A&_nc_ss=7b689&oh=00_AQOMIF7sGqcqpWwEb1PgkAYUUE3QBIq90xfSlo94Lt2BKQ&oe=6ACEA4DA"
+      },
+      {
+        "image": "img/objects/gallery/moodulo-pop-culture-act-ii-2.webp",
+        "width": 480,
+        "height": 640,
+        "sourceUrl": "https://www.instagram.com/p/DdhZ8Z7utlj/",
+        "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/816858715_17965329654191019_4703711977499022055_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=H7LQoUwAM4EQ7kNvwHOz6IK&_nc_oc=AdpOwwIpVnfZ19u266R3stKigiFs5kfLPyFWBYyKHcQzJAp-pyniUxUv5aw4dR4TvT0ShlYxjPzVgym4aeJGGGlQ&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=DW5jZvewqUjsocY7R36w-A&_nc_ss=7b689&oh=00_AQP-eCVLdcm5WZwM_i4ZYykROTJ0yKJDabEhahp7N9Bf2w&oe=6ACE9CF9"
+      },
+      {
+        "image": "img/objects/gallery/moodulo-pop-culture-act-ii-3.webp",
+        "width": 484,
+        "height": 640,
+        "sourceUrl": "https://www.instagram.com/p/DdhZ8Z7utlj/",
+        "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/814998914_17965172202191019_3308285843454985330_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=lqmsD1AvuMMQ7kNvwHnZFUL&_nc_oc=AdoCiotzk8UjuLGbF9cIuXBlk-5eW_FhK9hpMmoaSRmWrNw1mQ70DzO8CWE6oj23taZvl1CsKe1OfwlmAGsxwOsT&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=DW5jZvewqUjsocY7R36w-A&_nc_ss=7b689&oh=00_AQPzJOhpXNmdBZ_FC8bfgn5Umyga9GczYUbskrUdQ4kYuQ&oe=6ACEBDEA"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/moodulo-pop-culture-act-ii-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/moodulo-pop-culture-act-ii-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/moodulo-pop-culture-act-ii-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/moodulo-pop-culture-act-ii.webp",
+        "width": 1566
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with manually traced silhouette",
+      "subjectPixels": [
+        1069,
+        1362
+      ],
+      "opticalFill": 0.87,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "homeinfun-storage-stool",
+    "name": "Playful Storage Stool Side Table",
+    "brand": "HomeinFun",
+    "category": "living",
+    "tags": [],
+    "description": "A small stool with a lift-off seat that reveals hidden storage. It doubles as a side table.",
+    "productUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
+    "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
+    "sourceImageUrl": "https://homeinfun.ca/cdn/shop/files/37b8d5d6-33bc-4faa-8aa2-dbed810c3a3c.jpg?v=1766462145",
+    "image": "img/objects/cutouts/homeinfun-storage-stool.webp",
+    "width": 827,
+    "height": 827,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/homeinfun-storage-stool.jpg",
+        "width": 669,
+        "height": 836,
+        "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
+        "sourceImageUrl": "https://homeinfun.ca/cdn/shop/files/12_1.28.41_cfaf6cef-e0a1-4f9b-be55-633f7ea2a752.jpg?v=1766462145"
+      },
+      {
+        "image": "img/objects/gallery/homeinfun-storage-stool-2.webp",
+        "width": 1095,
+        "height": 1369,
+        "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
+        "sourceImageUrl": "https://homeinfun.ca/cdn/shop/files/ad742fc7-7ba3-4bba-a8da-34d4626cf82b.jpg?v=1766462104&width=1946"
+      },
+      {
+        "image": "img/objects/gallery/homeinfun-storage-stool-3.webp",
+        "width": 1280,
+        "height": 1600,
+        "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
+        "sourceImageUrl": "https://homeinfun.ca/cdn/shop/files/22310af1-9ac3-4ab5-8d14-e8ef00b8a9ab.jpg?v=1766462104&width=1946"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/homeinfun-storage-stool-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/homeinfun-storage-stool.webp",
+        "width": 827
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        585,
+        622
+      ],
+      "opticalFill": 0.753,
+      "upscaled": false,
+      "note": "Unobstructed orange version of the same stool from the source gallery."
+    }
+  },
+  {
+    "id": "odd-universe-peepers",
+    "name": "The Peepers",
+    "brand": "Odd Universe",
+    "category": "living",
+    "tags": [],
+    "description": "Jutta Gössl’s aluminum stacking stools, with cutout eyes that peer from beneath the seat.",
+    "productUrl": "https://www.odduniverse.xyz/products/the-peepers-locked",
+    "sourceUrl": "https://www.odduniverse.xyz/products/the-peepers-locked",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1008/8418/5419/files/150_2_orange.jpg?v=1771665171",
+    "image": "img/objects/cutouts/odd-universe-peepers.webp",
+    "width": 853,
+    "height": 853,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "forSale": false,
+    "gallery": [
+      {
+        "image": "img/objects/odd-universe-peepers.jpg",
+        "width": 2400,
+        "height": 1800,
+        "sourceUrl": "https://www.odduniverse.xyz/products/the-peepers-locked",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1008/8418/5419/files/150_2_orange.jpg?v=1771665171"
+      }
+    ],
+    "galleryNote": "Only one verified usable view is currently available; additional photography is pending.",
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/odd-universe-peepers-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/odd-universe-peepers.webp",
+        "width": 853
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        526,
+        736
+      ],
+      "opticalFill": 0.864,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "atonemo-nts-radio-player",
+    "name": "NTS Radio Player",
+    "brand": "Atonemo × NTS",
+    "category": "work",
+    "tags": [],
+    "description": "A compact Wi-Fi player that brings NTS radio to your speakers, with a physical dial for listening.",
+    "productUrl": "https://atonemo.com/products/nts",
+    "sourceUrl": "https://shop.nts.live/products/atonemo-nts-radio-player",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0821/9525/1492/files/Photoroom_20260624_105724_6dc905cd-71f7-400d-9052-9efd87290442.png?v=1791367206",
+    "image": "img/objects/cutouts/atonemo-nts-radio-player.webp",
+    "width": 1310,
+    "height": 1310,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/atonemo-nts-radio-player.png",
+        "width": 1080,
+        "height": 1080,
+        "sourceUrl": "https://atonemo.com/products/nts",
+        "sourceImageUrl": "https://atonemo.com/cdn/shop/files/Untitled-3-01.png?v=1781816983"
+      },
+      {
+        "image": "img/objects/gallery/atonemo-nts-radio-player-2.webp",
+        "width": 1080,
+        "height": 1081,
+        "sourceUrl": "https://atonemo.com/products/nts",
+        "sourceImageUrl": "https://atonemo.com/cdn/shop/files/Untitled-3-11.png?v=1781816985&width=1500"
+      },
+      {
+        "image": "img/objects/gallery/atonemo-nts-radio-player-3.webp",
+        "width": 1080,
+        "height": 1081,
+        "sourceUrl": "https://atonemo.com/products/nts",
+        "sourceImageUrl": "https://atonemo.com/cdn/shop/files/Untitled-3-07.png?v=1781816984&width=1500"
+      },
+      {
+        "image": "img/objects/gallery/atonemo-nts-radio-player-4.webp",
+        "width": 1080,
+        "height": 1080,
+        "sourceUrl": "https://atonemo.com/products/nts",
+        "sourceImageUrl": "https://atonemo.com/cdn/shop/files/Untitled-3-04.png?v=1781816983&width=1500"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/atonemo-nts-radio-player-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/atonemo-nts-radio-player-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/atonemo-nts-radio-player.webp",
+        "width": 1310
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original source alpha",
+      "subjectPixels": [
+        925,
+        988
+      ],
+      "opticalFill": 0.754,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "not-boring-camera-app",
+    "name": "Camera",
+    "brand": "(Not Boring)",
+    "category": "work",
+    "tags": [],
+    "description": "An iPhone camera app with tactile controls and a playful interface for taking everyday photographs.",
+    "productUrl": "https://notbor.ing/product/camera",
+    "sourceUrl": "https://apps.apple.com/us/app/not-boring-camera/id6737783441",
+    "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/c0/d7/28c0d7b6-b56f-2ffa-02bf-d8ec6472c77a/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/1024x1024bb.png",
+    "image": "img/objects/cutouts/not-boring-camera-app.webp",
+    "width": 1423,
+    "height": 1423,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/not-boring-camera-app.png",
+        "width": 960,
+        "height": 960,
+        "sourceUrl": "https://notbor.ing/product/camera",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/5f52cb73016fed9a30bb4d95/683e7a72dae5efecdef1f769_app-camera.png"
+      },
+      {
+        "image": "img/objects/gallery/not-boring-camera-app-2.webp",
+        "width": 1600,
+        "height": 1417,
+        "sourceUrl": "https://notbor.ing/product/camera",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/5f52cb73016fed9a30bb4d95/6841066a2bdf10300d9ff436_holdme-big.jpg"
+      },
+      {
+        "image": "img/objects/gallery/not-boring-camera-app-3.webp",
+        "width": 1200,
+        "height": 927,
+        "sourceUrl": "https://notbor.ing/product/camera",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/5f52cb73016fed9a30bb4d95/6840fd45b833b7baf88b7924_web-hero-effects.jpg"
+      },
+      {
+        "image": "img/objects/gallery/not-boring-camera-app-4.webp",
+        "width": 1200,
+        "height": 1068,
+        "sourceUrl": "https://notbor.ing/product/camera",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/5f52cb73016fed9a30bb4d95/6840d6fc3ffffd6d009131f7_web-focusring.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/not-boring-camera-app-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/not-boring-camera-app-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/not-boring-camera-app.webp",
+        "width": 1423
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Official 1024px App Store artwork with icon-corner backing removed",
+      "subjectPixels": [
+        1024,
+        1024
+      ],
+      "opticalFill": 0.72,
+      "upscaled": false,
+      "note": "Official app icon replaces the smaller website vignette. Original gallery retained."
+    }
+  },
+  {
+    "id": "not-boring-weather-app",
+    "name": "Weather",
+    "brand": "(Not Boring)",
+    "category": "work",
+    "tags": [],
+    "description": "A weather app that turns the forecast into an interactive world of 3D shapes, color, and motion.",
+    "productUrl": "https://notbor.ing/product/weather",
+    "sourceUrl": "https://apps.apple.com/us/app/not-boring-weather/id1531063436",
+    "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f6/f1/76/f6f176c7-d356-6770-9b3b-cbee5976fb79/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/1024x1024bb.png",
+    "image": "img/objects/cutouts/not-boring-weather-app.webp",
+    "width": 1423,
+    "height": 1423,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/not-boring-weather-app.jpg",
+        "width": 960,
+        "height": 960,
+        "sourceUrl": "https://notbor.ing/product/weather",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/5f52cb73016fed9a30bb4d95/647f9abf8131d054a7493a64_app-weather.jpg"
+      },
+      {
+        "image": "img/objects/gallery/not-boring-weather-app-2.webp",
+        "width": 1600,
+        "height": 900,
+        "sourceUrl": "https://notbor.ing/product/weather",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/5f52cb73016fed9a30bb4d95/602cf9d3ce0c80797de3228a_weather-hero.jpg"
+      },
+      {
+        "image": "img/objects/gallery/not-boring-weather-app-3.webp",
+        "width": 1600,
+        "height": 914,
+        "sourceUrl": "https://notbor.ing/product/weather",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/5f52cb73016fed9a30bb4d95/66db5035f84b150415046b26_602ce8d6f6c4e808d802fb64_weather-hourly-1.jpeg"
+      },
+      {
+        "image": "img/objects/gallery/not-boring-weather-app-4.webp",
+        "width": 1600,
+        "height": 914,
+        "sourceUrl": "https://notbor.ing/product/weather",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/5f52cb73016fed9a30bb4d95/66db5035f84b150415046b2b_602ce8e71784b6c04717cbb4_weather-data-1.jpeg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/not-boring-weather-app-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/not-boring-weather-app-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/not-boring-weather-app.webp",
+        "width": 1423
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Official 1024px App Store artwork with icon-corner backing removed",
+      "subjectPixels": [
+        1024,
+        1024
+      ],
+      "opticalFill": 0.72,
+      "upscaled": false,
+      "note": "Official app icon replaces the smaller website vignette. Original gallery retained."
+    }
+  },
+  {
+    "id": "not-boring-camera-art-model",
+    "name": "!Camera Art Model",
+    "brand": "(Not Boring)",
+    "category": "living",
+    "tags": [],
+    "description": "A collectible camera-shaped art model with movable dials, buttons, and a lens. Made to play with; it doesn’t take photos.",
+    "productUrl": "https://notboring.shop/products/camera-collectible-art-model",
+    "sourceUrl": "https://notboring.shop/products/camera-collectible-art-model",
+    "sourceImageUrl": "https://notboring.shop/cdn/shop/files/product-shot-classic.jpg?v=1762371839&width=1946",
+    "image": "img/objects/cutouts/not-boring-camera-art-model.webp",
+    "width": 762,
+    "height": 762,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/not-boring-camera-art-model.jpg",
+        "width": 1080,
+        "height": 1080,
+        "sourceUrl": "https://notboring.shop/products/camera-collectible-art-model",
+        "sourceImageUrl": "https://notboring.shop/cdn/shop/files/product-shot-classic.jpg?v=1762371839&width=1946"
+      },
+      {
+        "image": "img/objects/gallery/not-boring-camera-art-model-2.webp",
+        "width": 1080,
+        "height": 1080,
+        "sourceUrl": "https://notboring.shop/products/camera-collectible-art-model",
+        "sourceImageUrl": "https://notboring.shop/cdn/shop/files/back-classic.jpg?v=1762371839&width=1946"
+      },
+      {
+        "image": "img/objects/gallery/not-boring-camera-art-model-3.webp",
+        "width": 1080,
+        "height": 1440,
+        "sourceUrl": "https://notboring.shop/products/camera-collectible-art-model",
+        "sourceImageUrl": "https://notboring.shop/cdn/shop/files/hand-classic_1af297fd-da7a-45b9-b018-512d4ebdca05.jpg?v=1762371888&width=1946"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/not-boring-camera-art-model-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/not-boring-camera-art-model.webp",
+        "width": 762
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        616,
+        502
+      ],
+      "opticalFill": 0.809,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "mkbhd-color-picker-stickers",
+    "name": "Color Picker Sticker Pack",
+    "brand": "MKBHD",
+    "category": "work",
+    "tags": [],
+    "description": "Eight color-picker stickers that turn the colors of everyday surfaces into sampled swatches.",
+    "productUrl": "https://mkbhd.com/products/color-picker-sticker-pack",
+    "sourceUrl": "https://mkbhd.com/products/color-picker-sticker-pack",
+    "sourceImageUrl": "https://imgproxy.fourthwall.dev/az2qGu1EpUi84KvxCahZmDJoF7Zzsu5HFUKF1AnkHoQ/w:1920/sm:1/enc/WhhCvdeE-SkPWGJH/qXfekdeOpKKbICGY/jDWYT6WtSokDUIuR/Ac8TN_0UaznFRaCV/F6hA3tTropF1WFNM/BrXAd-FTK81Tj-nl/tVKQrRsjf0eFW3Z6/vrEtpaIA9DRAPmPC/ymokcummzSrBxVKA/1whLwoNCNmP12BlJ/uZ3J02m2-pd6Qcvy/YqO9ZN6SP41FG41e/hqNmtVCSh8m6vH7p/uKYSYA.jpg",
+    "image": "img/objects/cutouts/mkbhd-color-picker-stickers.webp",
+    "width": 586,
+    "height": 586,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/mkbhd-color-picker-stickers.jpg",
+        "width": 1920,
+        "height": 2560,
+        "sourceUrl": "https://mkbhd.com/products/color-picker-sticker-pack",
+        "sourceImageUrl": "https://imgproxy.fourthwall.dev/KDWP5feqXUDavRtXz0OcdlGUwpvJNkjMcJnKZ7GcIRY/w:1920/sm:1/enc/90idYgFYavus5Y3k/lkiJndkEymqgP9JL/uOqrDJRB3lJEFLd3/3fAvnKqaVsSb4qYD/7vXN04YhIb7Gwu26/bzjBI-TJrO8QwFI3/AhXBaLe2i6XbOJPg/02O3KJZNzP8SQ4I3/ScbAa8MVrRbRAj7U/74LpWp6rhXapN4MF/vvPgOfYgjJ7WjAF5/JjP8fH2yw3x0IomF/II9N9_aoNB47B4rd/rPi9eA.jpg"
+      },
+      {
+        "image": "img/objects/gallery/mkbhd-color-picker-stickers-2.webp",
+        "width": 1200,
+        "height": 1600,
+        "sourceUrl": "https://mkbhd.com/products/color-picker-sticker-pack",
+        "sourceImageUrl": "https://imgproxy.fourthwall.dev/7xrT1MFNBXzn7pzVqF_Pxgg-s1uQEQkHhhtemHS_8Yk/w:1920/sm:1/enc/8ebcHP3xzVW2LhvQ/A7qmn_bLNCOozNIb/n8b8efcxxzs2QxdK/leRQSrFrO2xJMsvA/_s2HwdzUy2rLPVno/ebeab30tHiFvUZZF/JsdE5Z-5Pp4c3Yyb/hT7zeoRk7B_q4iew/c5Nv7Pux4ythoJgS/CA_zpTQCJ4UY-NWy/1oC3BAy3rrX3U6kg/jankn8B48-7K5n78/xenV0GbEH3ig7E0N/ojhFmQ.jpg"
+      },
+      {
+        "image": "img/objects/gallery/mkbhd-color-picker-stickers-3.webp",
+        "width": 1200,
+        "height": 1600,
+        "sourceUrl": "https://mkbhd.com/products/color-picker-sticker-pack",
+        "sourceImageUrl": "https://imgproxy.fourthwall.dev/az2qGu1EpUi84KvxCahZmDJoF7Zzsu5HFUKF1AnkHoQ/w:1920/sm:1/enc/WhhCvdeE-SkPWGJH/qXfekdeOpKKbICGY/jDWYT6WtSokDUIuR/Ac8TN_0UaznFRaCV/F6hA3tTropF1WFNM/BrXAd-FTK81Tj-nl/tVKQrRsjf0eFW3Z6/vrEtpaIA9DRAPmPC/ymokcummzSrBxVKA/1whLwoNCNmP12BlJ/uZ3J02m2-pd6Qcvy/YqO9ZN6SP41FG41e/hqNmtVCSh8m6vH7p/uKYSYA.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/mkbhd-color-picker-stickers-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/mkbhd-color-picker-stickers.webp",
+        "width": 586
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        461,
+        396
+      ],
+      "opticalFill": 0.788,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "mkbhd-overlay-deskpad",
+    "name": "Overlay Deskpad",
+    "brand": "MKBHD × Omnitype",
+    "category": "work",
+    "tags": [],
+    "description": "A desk mat with overlapping graphic shapes and a broad surface for a keyboard and mouse.",
+    "productUrl": "https://mkbhd.com/en-usd/products/overlay-deskpad",
+    "sourceUrl": "https://mkbhd.com/en-usd/products/overlay-deskpad",
+    "sourceImageUrl": "https://imgproxy.fourthwall.dev/wygjoeScgQYiFd9VA1i6ww-I_fS_Gas9uuR6h1f42gc/w:1920/sm:1/enc/s3IIhusxamFoPskm/yywvW1Az-wLomCPr/aHaIVZRD40MkS0vn/4VaaJKXQOXzja_Tu/7-Uums2V4gtWdZ6Q/EpMKDkhtuzr7yZsZ/n0LNppYV_N5YQnpF/noBfA0HBZ7au2uNy/fX9uZaj8X3ph6OTr/sR9VCelOru67Ur6x/18GRpCUY89HuLRPD/_QebCsQDUoA98F3K/PppyNR1hNdhb6vIy/XmbgcA.jpg",
+    "image": "img/objects/cutouts/mkbhd-overlay-deskpad.webp",
+    "width": 1906,
+    "height": 1906,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/mkbhd-overlay-deskpad.jpg",
+        "width": 1200,
+        "height": 1600,
+        "sourceUrl": "https://mkbhd.com/en-usd/products/overlay-deskpad",
+        "sourceImageUrl": "https://imgproxy.fourthwall.dev/Svl1sao-jI0BDKSNE5lH3xWwtdgqMZY4rYfiaUdPf3A/w:1200/sm:1/enc/s3IIhusxamFoPskm/yywvW1Az-wLomCPr/aHaIVZRD40MkS0vn/4VaaJKXQOXzja_Tu/7-Uums2V4gtWdZ6Q/EpMKDkhtuzr7yZsZ/n0LNppYV_N5YQnpF/noBfA0HBZ7au2uNy/fX9uZaj8X3ph6OTr/sR9VCelOru67Ur6x/18GRpCUY89HuLRPD/_QebCsQDUoA98F3K/PppyNR1hNdhb6vIy/XmbgcA.jpg"
+      },
+      {
+        "image": "img/objects/gallery/mkbhd-overlay-deskpad-2.webp",
+        "width": 1200,
+        "height": 1600,
+        "sourceUrl": "https://mkbhd.com/en-usd/products/overlay-deskpad",
+        "sourceImageUrl": "https://imgproxy.fourthwall.dev/sqgLJeIWxyC-9ajdt2Ch4SRqgTfORY7ngTDkUwdcjtY/w:1920/sm:1/enc/rKwb_P_n2ws-8gLP/CSWOAAdoAyT4zOSn/w3Zn09YPH6AB4R33/FKyi9vBszJ85ycv5/GV8nPbcRZeJTzj2A/F8cCXaHYbuvoV01W/SFljV8sG3PlUAvoR/UGYQvcvUU-J-VUwH/09J1pDe0At4B0XGO/uFYebArhrFyll7gK/TKWDXVd7m0o094vn/O52H6Oqa4jctlEQf/qWIRiEdLRXHSUzxU/y39Ymg.jpg"
+      },
+      {
+        "image": "img/objects/gallery/mkbhd-overlay-deskpad-3.webp",
+        "width": 1200,
+        "height": 1600,
+        "sourceUrl": "https://mkbhd.com/en-usd/products/overlay-deskpad",
+        "sourceImageUrl": "https://imgproxy.fourthwall.dev/_PVMBMznPxpnCwJvrjuDG6ZHCpxLqrc6a-mwGfHYo7Q/w:1920/sm:1/enc/KZn0mK80nl2CaPv8/9sDg89ZSJgneo5dS/dp9glHHRq6-69uGS/3s9BonvuHx_pBu3B/_r6EUDeq6mG4uNkA/QeWiuVmGmWcAY-Qd/g5W_jVZf4Iioxqi7/w-6ygSi_Sr_F1qcS/t3SG0V9Slmcq4ZNE/03ZU5iCxIvsf3mYT/_3i5zWyJVgK_4vWx/w1tn_ur5NAy5M4Xc/URXSMvUsRvTVMTjd/TijJCw.jpg"
+      },
+      {
+        "image": "img/objects/gallery/mkbhd-overlay-deskpad-4.webp",
+        "width": 1200,
+        "height": 1600,
+        "sourceUrl": "https://mkbhd.com/en-usd/products/overlay-deskpad",
+        "sourceImageUrl": "https://imgproxy.fourthwall.dev/2X4xojXMQbTPMMmAPuQnN8Mherhas2C81r6bZ2NlG-U/w:1920/sm:1/enc/OS5pcFeT8k9HZK8r/OuCXDs7xkCseyWH-/rbYKxDiKcaNbLPHF/HyiTBjc3UXZEKkYH/902unajA5vjvmnNF/Duq7HIa2v_nUg4FT/Uj9V1UG3XGZHy59m/7fmj0B-qCtDyrLNq/R_37FZjVhFk2j4vq/VTXI-Ftf_-xshTW_/OTWkZzVTpOtXXLsq/idhp2vBw1YgCKP-g/7ortgHHB42g1aCzm/YiQcqw.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/mkbhd-overlay-deskpad-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/mkbhd-overlay-deskpad-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/mkbhd-overlay-deskpad-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/mkbhd-overlay-deskpad.webp",
+        "width": 1906
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with manually traced silhouette",
+      "subjectPixels": [
+        1546,
+        1251
+      ],
+      "opticalFill": 0.812,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "bobo-choses-bolder-belt-pouch",
+    "name": "Bobo Choses Bolder Belt Pouch",
+    "brand": "Bobo Choses",
+    "category": "wear",
+    "tags": [],
+    "description": "A colorful zippered belt pouch that keeps small daily essentials close at hand.",
+    "productUrl": "https://bobochoses.com/products/b226ai081-bobo-choses-bolder-belt-pouch",
+    "sourceUrl": "https://bobochoses.com/products/b226ai081-bobo-choses-bolder-belt-pouch",
+    "sourceImageUrl": "https://bobochoses.com/cdn/shop/files/B226AI081_1_1.webp?v=1783416707",
+    "image": "img/objects/cutouts/bobo-choses-bolder-belt-pouch.webp",
+    "width": 1322,
+    "height": 1322,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/bobo-choses-bolder-belt-pouch-hq-1.webp",
+        "width": 1500,
+        "height": 2000,
+        "sourceUrl": "https://bobochoses.com/products/b226ai081-bobo-choses-bolder-belt-pouch",
+        "sourceImageUrl": "https://bobochoses.com/cdn/shop/files/B226AI081_1_1.webp?v=1783416707"
+      },
+      {
+        "image": "img/objects/gallery/bobo-choses-bolder-belt-pouch-hq-2.webp",
+        "width": 1500,
+        "height": 2000,
+        "sourceUrl": "https://bobochoses.com/products/b226ai081-bobo-choses-bolder-belt-pouch",
+        "sourceImageUrl": "https://bobochoses.com/cdn/shop/files/B226AI081_6_1_6d114565-8e75-41c4-bf34-76ed3395bb2b.webp?v=1783416683"
+      },
+      {
+        "image": "img/objects/gallery/bobo-choses-bolder-belt-pouch-hq-3.webp",
+        "width": 1500,
+        "height": 2000,
+        "sourceUrl": "https://bobochoses.com/products/b226ai081-bobo-choses-bolder-belt-pouch",
+        "sourceImageUrl": "https://bobochoses.com/cdn/shop/files/B226AI081_4_1.webp?v=1783414758"
+      },
+      {
+        "image": "img/objects/gallery/bobo-choses-bolder-belt-pouch-hq-4.webp",
+        "width": 1500,
+        "height": 2000,
+        "sourceUrl": "https://bobochoses.com/products/b226ai081-bobo-choses-bolder-belt-pouch",
+        "sourceImageUrl": "https://bobochoses.com/cdn/shop/files/B226AI081_3_1.webp?v=1783414772"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/bobo-choses-bolder-belt-pouch-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/bobo-choses-bolder-belt-pouch-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/bobo-choses-bolder-belt-pouch.webp",
+        "width": 1322
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1189,
+        473
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "hungry-market-initial-c-cap",
+    "name": "Initial C Embroidered Cap, Beige",
+    "brand": "HUNGRY MARKET",
+    "category": "wear",
+    "tags": [],
+    "description": "A cotton cap with an embroidered C for Caterpillar and Eric Carle’s signature on the back.",
+    "productUrl": "https://hungry-market.playec.jp/products/%E5%88%BA%E7%B9%A1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-%E3%82%A4%E3%83%8B%E3%82%B7%E3%83%A3%E3%83%ABc-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5-%E5%A4%A7%E4%BA%BA%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B5%E3%82%A4%E3%82%BA",
+    "sourceUrl": "https://hungry-market.playec.jp/products/%E5%88%BA%E7%B9%A1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-%E3%82%A4%E3%83%8B%E3%82%B7%E3%83%A3%E3%83%ABc-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5-%E5%A4%A7%E4%BA%BA%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B5%E3%82%A4%E3%82%BA",
+    "sourceImageUrl": "https://hungry-market.playec.jp/cdn/shop/files/IMG_5734-1.jpg?v=1768889664",
+    "image": "img/objects/cutouts/hungry-market-initial-c-cap.webp",
+    "width": 1550,
+    "height": 1550,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/hungry-market-initial-c-cap.jpg",
+        "width": 1764,
+        "height": 1764,
+        "sourceUrl": "https://hungry-market.playec.jp/products/%E5%88%BA%E7%B9%A1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-%E3%82%A4%E3%83%8B%E3%82%B7%E3%83%A3%E3%83%ABc-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5-%E5%A4%A7%E4%BA%BA%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B5%E3%82%A4%E3%82%BA",
+        "sourceImageUrl": "https://hungry-market.playec.jp/cdn/shop/files/IMG_5734-1.jpg?v=1768889664"
+      },
+      {
+        "image": "img/objects/gallery/hungry-market-initial-c-cap-2.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://hungry-market.playec.jp/products/%E5%88%BA%E7%B9%A1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-%E3%82%A4%E3%83%8B%E3%82%B7%E3%83%A3%E3%83%ABc-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5-%E5%A4%A7%E4%BA%BA%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B5%E3%82%A4%E3%82%BA",
+        "sourceImageUrl": "https://hungry-market.playec.jp/cdn/shop/files/IMG_5735-1.jpg?v=1768889664&width=1946"
+      },
+      {
+        "image": "img/objects/gallery/hungry-market-initial-c-cap-3.webp",
+        "width": 998,
+        "height": 998,
+        "sourceUrl": "https://hungry-market.playec.jp/products/%E5%88%BA%E7%B9%A1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-%E3%82%A4%E3%83%8B%E3%82%B7%E3%83%A3%E3%83%ABc-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5-%E5%A4%A7%E4%BA%BA%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B5%E3%82%A4%E3%82%BA",
+        "sourceImageUrl": "https://hungry-market.playec.jp/cdn/shop/files/IMG_5736-1.jpg?v=1768889664&width=1946"
+      },
+      {
+        "image": "img/objects/gallery/hungry-market-initial-c-cap-4.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://hungry-market.playec.jp/products/%E5%88%BA%E7%B9%A1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-%E3%82%A4%E3%83%8B%E3%82%B7%E3%83%A3%E3%83%ABc-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5-%E5%A4%A7%E4%BA%BA%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B5%E3%82%A4%E3%82%BA",
+        "sourceImageUrl": "https://hungry-market.playec.jp/cdn/shop/files/IMG_5743-1.jpg?v=1768889664&width=1946"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/hungry-market-initial-c-cap-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/hungry-market-initial-c-cap-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/hungry-market-initial-c-cap-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/hungry-market-initial-c-cap.webp",
+        "width": 1550
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1186,
+        1079
+      ],
+      "opticalFill": 0.765,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "daypa-kun-backpack-blue",
+    "name": "DAYPA-kun Backpack, Blue",
+    "brand": "DAYPA",
+    "category": "wear",
+    "tags": [],
+    "description": "A blue backpack with a pair of eyes, small arms, and dangling feet. A character that carries your things.",
+    "productUrl": "https://daypa.jp/products/dp26215001?variant=49041452466425",
+    "sourceUrl": "https://daypa.jp/products/dp26215001?variant=49041452466425",
+    "sourceImageUrl": "https://daypa.jp/cdn/shop/files/Canvas_Large_Blue_01_c093278d-a4c9-43aa-9e7c-19f4945e5000.jpg?v=1789107491&width=1440",
+    "image": "img/objects/cutouts/daypa-kun-backpack-blue.webp",
+    "width": 1521,
+    "height": 1521,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/daypa-kun-backpack-blue.jpg",
+        "width": 1440,
+        "height": 2000,
+        "sourceUrl": "https://daypa.jp/products/dp26215001?variant=49041452466425",
+        "sourceImageUrl": "https://daypa.jp/cdn/shop/files/Canvas_Large_Blue_01_c093278d-a4c9-43aa-9e7c-19f4945e5000.jpg?v=1789107491&width=1440"
+      }
+    ],
+    "galleryNote": "Only one verified usable view is currently available; additional photography is pending.",
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/daypa-kun-backpack-blue-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/daypa-kun-backpack-blue-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/daypa-kun-backpack-blue-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/daypa-kun-backpack-blue.webp",
+        "width": 1521
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1013,
+        1216
+      ],
+      "opticalFill": 0.8,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "lego-piranha-plant-71426",
+    "name": "Piranha Plant (71426)",
+    "brand": "LEGO × Super Mario",
+    "category": "living",
+    "tags": [],
+    "description": "A 540-piece Piranha Plant with a poseable head, mouth, stem, and leaves, built for display in its green pipe.",
+    "productUrl": "https://www.lego.com/ja-jp/product/piranha-plant-71426",
+    "sourceUrl": "https://www.lego.com/en-us/product/piranha-plant-71426",
+    "sourceImageUrl": "https://www.lego.com/cdn/cs/set/assets/bltcd23f2cb070b6d8c/71426.png",
+    "image": "img/objects/cutouts/lego-piranha-plant-71426.webp",
+    "width": 4603,
+    "height": 4603,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/lego-piranha-plant-71426.jpg",
+        "width": 1600,
+        "height": 1522,
+        "sourceUrl": "https://www.lego.com/ja-jp/product/piranha-plant-71426",
+        "sourceImageUrl": "https://www.lego.com/cdn/cs/set/assets/blt8ab7d775559f5d94/71426_alt3.jpg?width=1600&quality=90"
+      },
+      {
+        "image": "img/objects/gallery/lego-piranha-plant-71426-2.webp",
+        "width": 1369,
+        "height": 1600,
+        "sourceUrl": "https://www.lego.com/ja-jp/product/piranha-plant-71426",
+        "sourceImageUrl": "https://www.lego.com/cdn/cs/set/assets/bltb1e300356a9fa34c/71426_alt2.png?format=webply&fit=bounds&quality=60&width=1600&height=1600&dpr=2"
+      },
+      {
+        "image": "img/objects/gallery/lego-piranha-plant-71426-3.webp",
+        "width": 1600,
+        "height": 1067,
+        "sourceUrl": "https://www.lego.com/ja-jp/product/piranha-plant-71426",
+        "sourceImageUrl": "https://www.lego.com/cdn/cs/set/assets/bltf4eefeb88f3d4ae2/71426_alt5.jpg?format=webply&fit=bounds&quality=60&width=1600&height=1600&dpr=2"
+      },
+      {
+        "image": "img/objects/gallery/lego-piranha-plant-71426-4.webp",
+        "width": 1600,
+        "height": 1067,
+        "sourceUrl": "https://www.lego.com/ja-jp/product/piranha-plant-71426",
+        "sourceImageUrl": "https://www.lego.com/cdn/cs/set/assets/blt2340fdf3af4e208f/71426_alt6.jpg?format=webply&fit=bounds&quality=60&width=1600&height=1600&dpr=2"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/lego-piranha-plant-71426-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/lego-piranha-plant-71426-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/lego-piranha-plant-71426-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/lego-piranha-plant-71426-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/lego-piranha-plant-71426.webp",
+        "width": 4603
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original source alpha",
+      "subjectPixels": [
+        2398,
+        4142
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "iwate-canning-gift-stock",
+    "name": "Gift&Stock",
+    "brand": "Iwate Canning",
+    "category": "kitchen",
+    "tags": [],
+    "description": "A trio of canned risottos made with seafood from Sanriku, designed for giving, keeping, and eating.",
+    "productUrl": "https://www.iwa-kan.com/lp/gift-and-stock/",
+    "sourceUrl": "https://www.iwa-kan.com/lp/gift-and-stock/",
+    "sourceImageUrl": "https://www.iwa-kan.com/lp/gift-and-stock/img/img01.png",
+    "image": "img/objects/cutouts/iwate-canning-gift-stock.webp",
+    "width": 575,
+    "height": 575,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/iwate-canning-gift-stock.jpg",
+        "width": 1920,
+        "height": 1080,
+        "sourceUrl": "https://www.iwa-kan.com/lp/gift-and-stock/",
+        "sourceImageUrl": "https://www.iwa-kan.com/lp/gift-and-stock/img/main.jpg"
+      },
+      {
+        "image": "img/objects/gallery/iwate-canning-gift-stock-2.webp",
+        "width": 1080,
+        "height": 1080,
+        "sourceUrl": "https://www.iwa-kan.com/lp/gift-and-stock/",
+        "sourceImageUrl": "https://www.iwa-kan.com/lp/gift-and-stock/img/img01.png"
+      },
+      {
+        "image": "img/objects/gallery/iwate-canning-gift-stock-3.webp",
+        "width": 1080,
+        "height": 1080,
+        "sourceUrl": "https://www.iwa-kan.com/lp/gift-and-stock/",
+        "sourceImageUrl": "https://www.iwa-kan.com/lp/gift-and-stock/img/img05.png"
+      },
+      {
+        "image": "img/objects/gallery/iwate-canning-gift-stock-4.webp",
+        "width": 1499,
+        "height": 1010,
+        "sourceUrl": "https://www.iwa-kan.com/lp/gift-and-stock/",
+        "sourceImageUrl": "https://www.iwa-kan.com/lp/gift-and-stock/img/curry.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/iwate-canning-gift-stock-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/iwate-canning-gift-stock.webp",
+        "width": 575
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with manually traced silhouette",
+      "subjectPixels": [
+        455,
+        387
+      ],
+      "opticalFill": 0.792,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "mint-hug-shakers",
+    "name": "Hug Salt and Pepper Shakers",
+    "brand": "MINT",
+    "category": "kitchen",
+    "tags": [],
+    "description": "Alberto Mantilla’s black and white porcelain shakers fit together in a hug, with dispensing holes that become faces.",
+    "productUrl": "https://store.moma.org/en-jp/products/hug-salt-and-pepper-shakers",
+    "sourceUrl": "https://store.moma.org/en-jp/products/hug-salt-and-pepper-shakers",
+    "sourceImageUrl": "https://store.moma.org/cdn/shop/files/47822_a_12b4a99d-67cf-4778-ac88-6f374f61853c.jpg",
+    "image": "img/objects/cutouts/mint-hug-shakers.webp",
+    "width": 3612,
+    "height": 3612,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/mint-hug-shakers.jpg",
+        "width": 3600,
+        "height": 3600,
+        "sourceUrl": "https://store.moma.org/en-jp/products/hug-salt-and-pepper-shakers",
+        "sourceImageUrl": "https://store.moma.org/cdn/shop/files/47822_a_12b4a99d-67cf-4778-ac88-6f374f61853c.jpg"
+      },
+      {
+        "image": "img/objects/gallery/mint-hug-shakers-2.webp",
+        "width": 1024,
+        "height": 1024,
+        "sourceUrl": "https://www.selency.co.uk/p/Z65R7SK4/hug-salt-and-pepper-shaker",
+        "sourceImageUrl": "https://images.selency.com/6f41ab1e-92c1-41ff-a91f-4b4beb31cd21/hug-salt-and-pepper-shaker?w=1024"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/mint-hug-shakers-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/mint-hug-shakers-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/mint-hug-shakers-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/mint-hug-shakers-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/mint-hug-shakers.webp",
+        "width": 3612
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        2308,
+        3012
+      ],
+      "opticalFill": 0.834,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "subu-originals-f-line-black",
+    "name": "ORIGINALS F-LINE, Black",
+    "brand": "SUBU",
+    "category": "wear",
+    "tags": [],
+    "description": "Padded slip-on sandals for stepping outside, with a quilted upper and a soft lining.",
+    "productUrl": "https://subu2016-onlinestore.com/products/subu-black",
+    "sourceUrl": "https://subu2016-onlinestore.com/products/subu-black",
+    "sourceImageUrl": "https://subu2016-onlinestore.com/cdn/shop/files/SUBU_ORIGINALS_F-LINE_BLACK_upper_side.jpg?v=1781071627",
+    "image": "img/objects/cutouts/subu-originals-f-line-black.webp",
+    "width": 3281,
+    "height": 3281,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/subu-originals-f-line-black.jpg",
+        "width": 3498,
+        "height": 3498,
+        "sourceUrl": "https://subu2016-onlinestore.com/products/subu-black",
+        "sourceImageUrl": "https://subu2016-onlinestore.com/cdn/shop/files/SUBU_ORIGINALS_F-LINE_BLACK_upper_side.jpg?v=1781071627"
+      },
+      {
+        "image": "img/objects/gallery/subu-originals-f-line-black-2.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://subu2016-onlinestore.com/products/subu-black",
+        "sourceImageUrl": "https://subu2016-onlinestore.com/cdn/shop/files/SUBU_ORIGINALS_F-LINE_BLACK_side.jpg?v=1781071740&width=1946"
+      },
+      {
+        "image": "img/objects/gallery/subu-originals-f-line-black-3.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://subu2016-onlinestore.com/products/subu-black",
+        "sourceImageUrl": "https://subu2016-onlinestore.com/cdn/shop/files/SUBU_ORIGINALS_F-LINE_BLACK_upper_side_2.jpg?v=1781071752&width=1946"
+      },
+      {
+        "image": "img/objects/gallery/subu-originals-f-line-black-4.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://subu2016-onlinestore.com/products/subu-black",
+        "sourceImageUrl": "https://subu2016-onlinestore.com/cdn/shop/files/SUBU_ORIGINALS_F-LINE_BLACK_BAG.jpg?v=1781071805&width=1946"
+      },
+      {
+        "image": "img/objects/gallery/subu-originals-f-line-black-hq-5.webp",
+        "width": 1706,
+        "height": 2560,
+        "sourceUrl": "https://subu2016-onlinestore.com/products/subu-black",
+        "sourceImageUrl": "https://subu2016-onlinestore.com/cdn/shop/files/SUBU_ORIGINALS_F-LINE_BLACK_image_1.jpg?v=1781071853"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/subu-originals-f-line-black-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/subu-originals-f-line-black-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/subu-originals-f-line-black-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/subu-originals-f-line-black-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/subu-originals-f-line-black.webp",
+        "width": 3281
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        2202,
+        2605
+      ],
+      "opticalFill": 0.794,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "nintendo-switch-2",
+    "name": "Nintendo Switch 2",
+    "brand": "Nintendo",
+    "category": "living",
+    "tags": [],
+    "description": "A game console for the TV or your hands, with magnetic Joy-Con 2 controllers that detach from the screen.",
+    "productUrl": "https://www.nintendo.com/jp/en/switch2/index.html",
+    "sourceUrl": "https://www.nintendo.com/jp/hardware/switch2/",
+    "sourceImageUrl": "https://www.nintendo.com/jp/hardware/switch2/assets/img/scene5/collapsible-body-sound-pct.webp",
+    "image": "img/objects/cutouts/nintendo-switch-2.webp",
+    "width": 2867,
+    "height": 2867,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/nintendo-switch-2-hq-1.webp",
+        "width": 3000,
+        "height": 1100,
+        "sourceUrl": "https://www.nintendo.com/jp/hardware/switch2/",
+        "sourceImageUrl": "https://www.nintendo.com/jp/hardware/switch2/assets/img/scene5/collapsible-body-sound-pct.webp"
+      },
+      {
+        "image": "img/objects/gallery/nintendo-switch-2-2.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://www.nintendo.com/jp/en/switch2/index.html",
+        "sourceImageUrl": "https://www.nintendo.com/jp/hardware/switch2/lineup/assets/img/modal_img_dock.webp?unoptimized=true"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/nintendo-switch-2-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/nintendo-switch-2-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/nintendo-switch-2-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/nintendo-switch-2-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/nintendo-switch-2.webp",
+        "width": 2867
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        2580,
+        605
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "sharge-discho",
+    "name": "Discho Hybrid Power Bank",
+    "brand": "SHARGE",
+    "category": "work",
+    "tags": [],
+    "description": "A 10,000mAh power bank, 30W wall charger, and retractable USB-C cable in one, with a dot-matrix display.",
+    "productUrl": "https://sharge.com/ja/products/sharge-discho-%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89-%E3%83%91%E3%83%AF%E3%83%BC%E3%83%90%E3%83%B3%E3%82%AF-30w-10k-%E3%83%89%E3%83%83%E3%83%88%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9-%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4-3-in-1",
+    "sourceUrl": "https://sharge.com/ja/products/sharge-discho-%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89-%E3%83%91%E3%83%AF%E3%83%BC%E3%83%90%E3%83%B3%E3%82%AF-30w-10k-%E3%83%89%E3%83%83%E3%83%88%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9-%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4-3-in-1",
+    "sourceImageUrl": "https://sharge.com/cdn/shop/files/1_8dd4211c-6a4b-491b-a028-d3bac8326575.png?v=1766046399",
+    "image": "img/objects/cutouts/sharge-discho.webp",
+    "width": 1194,
+    "height": 1194,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/sharge-discho.png",
+        "width": 1400,
+        "height": 1400,
+        "sourceUrl": "https://sharge.com/ja/products/sharge-discho-%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89-%E3%83%91%E3%83%AF%E3%83%BC%E3%83%90%E3%83%B3%E3%82%AF-30w-10k-%E3%83%89%E3%83%83%E3%83%88%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9-%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4-3-in-1",
+        "sourceImageUrl": "https://sharge.com/cdn/shop/files/1_8dd4211c-6a4b-491b-a028-d3bac8326575.png?v=1766046399"
+      },
+      {
+        "image": "img/objects/gallery/sharge-discho-2.webp",
+        "width": 1400,
+        "height": 1400,
+        "sourceUrl": "https://sharge.com/ja/products/sharge-discho-%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89-%E3%83%91%E3%83%AF%E3%83%BC%E3%83%90%E3%83%B3%E3%82%AF-30w-10k-%E3%83%89%E3%83%83%E3%83%88%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9-%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4-3-in-1",
+        "sourceImageUrl": "https://sharge.com/cdn/shop/files/2_1acb0055-fa1d-4dda-9b90-2d2f0e57b0d9.png?v=1766046399&width=1600"
+      },
+      {
+        "image": "img/objects/gallery/sharge-discho-3.webp",
+        "width": 1400,
+        "height": 1400,
+        "sourceUrl": "https://sharge.com/ja/products/sharge-discho-%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89-%E3%83%91%E3%83%AF%E3%83%BC%E3%83%90%E3%83%B3%E3%82%AF-30w-10k-%E3%83%89%E3%83%83%E3%83%88%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9-%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4-3-in-1",
+        "sourceImageUrl": "https://sharge.com/cdn/shop/files/4_e94cf810-72c6-44f7-a64a-cade28163e50.png?v=1766046399&width=1600"
+      },
+      {
+        "image": "img/objects/gallery/sharge-discho-4.webp",
+        "width": 1400,
+        "height": 1400,
+        "sourceUrl": "https://sharge.com/ja/products/sharge-discho-%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89-%E3%83%91%E3%83%AF%E3%83%BC%E3%83%90%E3%83%B3%E3%82%AF-30w-10k-%E3%83%89%E3%83%83%E3%83%88%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9-%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4-3-in-1",
+        "sourceImageUrl": "https://sharge.com/cdn/shop/files/5-2_e8ef6896-73b6-4aa4-a513-ba3cba1c0b02.png?v=1766046399&width=1600"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/sharge-discho-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/sharge-discho-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/sharge-discho.webp",
+        "width": 1194
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original source alpha",
+      "subjectPixels": [
+        836,
+        908
+      ],
+      "opticalFill": 0.761,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "fairphone-gen-6-plus",
+    "name": "Fairphone (Gen. 6+)",
+    "brand": "Fairphone",
+    "category": "work",
+    "tags": [],
+    "description": "A smartphone built around replaceable parts, including a battery you can change yourself.",
+    "productUrl": "https://www.fairphone.com/the-fairphone-gen-6-plus",
+    "sourceUrl": "https://www.fairphone.com/the-fairphone-gen-6-plus",
+    "sourceImageUrl": "https://www.fairphone.com/theme_fairphone/static/src/img/image_ds/hero_green.webp",
+    "image": "img/objects/cutouts/fairphone-gen-6-plus.webp",
+    "width": 1351,
+    "height": 1351,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/fairphone-gen-6-plus.webp",
+        "width": 1500,
+        "height": 1500,
+        "sourceUrl": "https://www.fairphone.com/the-fairphone-gen-6-plus",
+        "sourceImageUrl": "https://www.fairphone.com/theme_fairphone/static/src/img/image_ds/hero_green.webp"
+      },
+      {
+        "image": "img/objects/gallery/fairphone-gen-6-plus-2.webp",
+        "width": 1280,
+        "height": 960,
+        "sourceUrl": "https://www.fairphone.com/the-fairphone-gen-6-plus",
+        "sourceImageUrl": "https://www.fairphone.com/theme_fairphone/static/src/img/image_ds/card_software.webp"
+      },
+      {
+        "image": "img/objects/gallery/fairphone-gen-6-plus-3.webp",
+        "width": 1300,
+        "height": 731,
+        "sourceUrl": "https://www.fairphone.com/the-fairphone-gen-6-plus",
+        "sourceImageUrl": "https://www.fairphone.com/theme_fairphone/static/src/img/image_ds/card_chipset.webp"
+      },
+      {
+        "image": "img/objects/gallery/fairphone-gen-6-plus-4.webp",
+        "width": 1300,
+        "height": 731,
+        "sourceUrl": "https://www.fairphone.com/the-fairphone-gen-6-plus",
+        "sourceImageUrl": "https://www.fairphone.com/theme_fairphone/static/src/img/image_ds/card_camera.webp"
+      },
+      {
+        "image": "img/objects/gallery/fairphone-gen-6-plus-5.webp",
+        "width": 1280,
+        "height": 960,
+        "sourceUrl": "https://www.fairphone.com/the-fairphone-gen-6-plus",
+        "sourceImageUrl": "https://www.fairphone.com/theme_fairphone/static/src/img/image_ds/card_modules.webp"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/fairphone-gen-6-plus-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/fairphone-gen-6-plus-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/fairphone-gen-6-plus.webp",
+        "width": 1351
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original source alpha",
+      "subjectPixels": [
+        829,
+        1172
+      ],
+      "opticalFill": 0.868,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "cwandt-high-speed-jump-rope",
+    "name": "High Speed Jump Rope",
+    "brand": "CW&T",
+    "category": "living",
+    "tags": [],
+    "description": "A jump rope with machined aluminum handles, ball bearings, and a bright orange rope.",
+    "productUrl": "https://cwandt.com/en-jp/products/high-speed-jump-rope",
+    "sourceUrl": "https://cwandt.com/en-jp/products/high-speed-jump-rope",
+    "sourceImageUrl": "https://cwandt.com/cdn/shop/files/SKU-16_9-10_30ce1db7-2ee6-4b0a-8055-4f0f21e8cf5f.webp?v=1786106604",
+    "image": "img/objects/cutouts/cwandt-high-speed-jump-rope.webp",
+    "width": 1951,
+    "height": 1951,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/cwandt-high-speed-jump-rope.jpg",
+        "width": 4320,
+        "height": 2428,
+        "sourceUrl": "https://cwandt.com/en-jp/products/high-speed-jump-rope",
+        "sourceImageUrl": "https://cwandt.com/cdn/shop/files/SKU-16_9-10_30ce1db7-2ee6-4b0a-8055-4f0f21e8cf5f.webp?v=1786106604"
+      },
+      {
+        "image": "img/objects/gallery/cwandt-high-speed-jump-rope-2.webp",
+        "width": 1600,
+        "height": 1069,
+        "sourceUrl": "https://cwandt.com/en-jp/products/high-speed-jump-rope",
+        "sourceImageUrl": "https://cwandt.com/cdn/shop/products/JRHSV33_topview.jpg?v=1569290356&width=3840"
+      },
+      {
+        "image": "img/objects/gallery/cwandt-high-speed-jump-rope-3.webp",
+        "width": 1600,
+        "height": 899,
+        "sourceUrl": "https://cwandt.com/en-jp/products/high-speed-jump-rope",
+        "sourceImageUrl": "https://cwandt.com/cdn/shop/files/SKU-16_9-2_35400ad7-4aa6-4b0c-a178-0fb92770000d.webp?v=1786106605&width=3840"
+      },
+      {
+        "image": "img/objects/gallery/cwandt-high-speed-jump-rope-4.webp",
+        "width": 1600,
+        "height": 899,
+        "sourceUrl": "https://cwandt.com/en-jp/products/high-speed-jump-rope",
+        "sourceImageUrl": "https://cwandt.com/cdn/shop/files/SKU-16_9-3_9dd4732c-4b1f-44eb-972f-208041486d7e.webp?v=1786106604&width=3840"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/cwandt-high-speed-jump-rope-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/cwandt-high-speed-jump-rope-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/cwandt-high-speed-jump-rope-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/cwandt-high-speed-jump-rope-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/cwandt-high-speed-jump-rope.webp",
+        "width": 1951
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1183,
+        1713
+      ],
+      "opticalFill": 0.878,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "ikea-forlunda-red",
+    "name": "FÖRLUNDA Pouffe, Tonerud Red",
+    "brand": "IKEA",
+    "category": "living",
+    "tags": [],
+    "description": "A compact upholstered stool with storage beneath its seat. Stack a few when they’re not in use.",
+    "productUrl": "https://www.ikea.com/jp/en/p/foerlunda-pouffe-with-storage-tonerud-red-40572747/",
+    "sourceUrl": "https://www.ikea.com/jp/en/p/foerlunda-pouffe-with-storage-tonerud-red-40572747/",
+    "sourceImageUrl": "https://www.ikea.com/jp/en/images/products/foerlunda-pouffe-with-storage-tonerud-red__1320731_pe941334_s5.jpg",
+    "image": "img/objects/cutouts/ikea-forlunda-red.webp",
+    "width": 1736,
+    "height": 1736,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/ikea-forlunda-red.jpg",
+        "width": 1400,
+        "height": 1400,
+        "sourceUrl": "https://www.ikea.com/jp/en/p/foerlunda-pouffe-with-storage-tonerud-red-40572747/",
+        "sourceImageUrl": "https://www.ikea.com/jp/en/images/products/foerlunda-pouffe-with-storage-tonerud-red__1320731_pe941334_s5.jpg"
+      },
+      {
+        "image": "img/objects/gallery/ikea-forlunda-red-2.webp",
+        "width": 1400,
+        "height": 1400,
+        "sourceUrl": "https://www.ikea.com/jp/en/p/foerlunda-pouffe-with-storage-tonerud-red-40572747/",
+        "sourceImageUrl": "https://www.ikea.com/jp/en/images/products/foerlunda-pouffe-with-storage-tonerud-red__1320725_pe941332_s5.jpg?f=xxxl"
+      },
+      {
+        "image": "img/objects/gallery/ikea-forlunda-red-3.webp",
+        "width": 1400,
+        "height": 1400,
+        "sourceUrl": "https://www.ikea.com/jp/en/p/foerlunda-pouffe-with-storage-tonerud-red-40572747/",
+        "sourceImageUrl": "https://www.ikea.com/jp/en/images/products/foerlunda-pouffe-with-storage-tonerud-red__1320726_pe941333_s5.jpg?f=xxxl"
+      },
+      {
+        "image": "img/objects/gallery/ikea-forlunda-red-4.webp",
+        "width": 1400,
+        "height": 1400,
+        "sourceUrl": "https://www.ikea.com/jp/en/p/foerlunda-pouffe-with-storage-tonerud-red-40572747/",
+        "sourceImageUrl": "https://www.ikea.com/jp/en/images/products/foerlunda-pouffe-with-storage-tonerud-red__1320729_pe941335_s5.jpg?f=xxxl"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/ikea-forlunda-red-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/ikea-forlunda-red-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/ikea-forlunda-red-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/ikea-forlunda-red.webp",
+        "width": 1736
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1192,
+        1346
+      ],
+      "opticalFill": 0.776,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "dailyobjects-carbon-stack-case",
+    "name": "Carbon Stack Signature Phone Case for iPhone 18 Pro",
+    "brand": "DailyObjects",
+    "category": "work",
+    "tags": [],
+    "description": "A dark phone case with a grid of raised circles across the back, giving a familiar object a tactile surface.",
+    "productUrl": "https://www.dailyobjects.com/carbon-stack-signature-phone-case-cover-for-iphone-18-pro/dp?f=pid~CRBN-STCK-SGTR-PHN-AP-IPH18PRO%2FIPH17PRO",
+    "sourceUrl": "https://www.dailyobjects.com/carbon-stack-signature-phone-case-cover-for-iphone-18-pro/dp?f=pid~CRBN-STCK-SGTR-PHN-AP-IPH18PRO%2FIPH17PRO",
+    "sourceImageUrl": "https://images.dailyobjects.com/marche/product-images/1101/carbon-stack-signature-phone-case-cover-for-iphone-18-pro-images/Carbon-Stack-Signature-Phone-Case-Cover-for-iPhone-18-Pro.png",
+    "image": "img/objects/cutouts/dailyobjects-carbon-stack-case.webp",
+    "width": 1859,
+    "height": 1859,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/dailyobjects-carbon-stack-case.png",
+        "width": 2000,
+        "height": 2474,
+        "sourceUrl": "https://www.dailyobjects.com/carbon-stack-signature-phone-case-cover-for-iphone-18-pro/dp?f=pid~CRBN-STCK-SGTR-PHN-AP-IPH18PRO%2FIPH17PRO",
+        "sourceImageUrl": "https://images.dailyobjects.com/marche/product-images/1101/carbon-stack-signature-phone-case-cover-for-iphone-18-pro-images/Carbon-Stack-Signature-Phone-Case-Cover-for-iPhone-18-Pro.png"
+      }
+    ],
+    "galleryNote": "Only one verified usable view is currently available; additional photography is pending.",
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/dailyobjects-carbon-stack-case-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/dailyobjects-carbon-stack-case-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/dailyobjects-carbon-stack-case-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/dailyobjects-carbon-stack-case.webp",
+        "width": 1859
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original source alpha",
+      "subjectPixels": [
+        844,
+        1673
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "nendo-shoe-horn",
+    "name": "shoe-horn",
+    "brand": "nendo house",
+    "category": "living",
+    "tags": [],
+    "description": "A wooden shoehorn carved from a single conical form, with a weighted magnetic base that lets it stand upright.",
+    "productUrl": "https://nendohouse.co.jp/items/60095decbfdf097fbdbe32e7",
+    "sourceUrl": "https://nendohouse.co.jp/items/60095decbfdf097fbdbe32e7",
+    "sourceImageUrl": "https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/5f7d4afdfbe5b53af97cb08b/d063a2abfe5ea7b5b428.jpg/fit=cover,w=920,h=920",
+    "image": "img/objects/cutouts/nendo-shoe-horn.webp",
+    "width": 858,
+    "height": 858,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/nendo-shoe-horn.jpg",
+        "width": 920,
+        "height": 920,
+        "sourceUrl": "https://nendohouse.co.jp/items/60095decbfdf097fbdbe32e7",
+        "sourceImageUrl": "https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/5f7d4afdfbe5b53af97cb08b/d063a2abfe5ea7b5b428.jpg/fit=cover,w=920,h=920"
+      },
+      {
+        "image": "img/objects/gallery/nendo-shoe-horn-2.webp",
+        "width": 920,
+        "height": 920,
+        "sourceUrl": "https://nendohouse.co.jp/items/60095decbfdf097fbdbe32e7",
+        "sourceImageUrl": "https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/5f7d4afdfbe5b53af97cb08b/c99a90a37aa6f95b3a00.jpg/fit=cover,w=920,h=920"
+      },
+      {
+        "image": "img/objects/gallery/nendo-shoe-horn-3.webp",
+        "width": 920,
+        "height": 920,
+        "sourceUrl": "https://nendohouse.co.jp/items/60095decbfdf097fbdbe32e7",
+        "sourceImageUrl": "https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/5f7d4afdfbe5b53af97cb08b/133e62f6723718f12cf8.jpg/fit=cover,w=920,h=920"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/nendo-shoe-horn-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/nendo-shoe-horn.webp",
+        "width": 858
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        90,
+        772
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "mr-maria-first-light-snoopy",
+    "name": "First Light Snoopy",
+    "brand": "Mr Maria",
+    "category": "living",
+    "tags": [],
+    "description": "A rechargeable Snoopy light made from soft silicone, small enough to carry from room to room.",
+    "productUrl": "https://www.momastore.jp/shop/g/g4520535216739",
+    "sourceUrl": "https://www.momastore.jp/shop/g/g4520535216739",
+    "sourceImageUrl": "https://www.momastore.jp/img/goods/L/4520535216739_2.jpg",
+    "image": "img/objects/cutouts/mr-maria-first-light-snoopy.webp",
+    "width": 887,
+    "height": 887,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/mr-maria-first-light-snoopy.jpg",
+        "width": 1061,
+        "height": 1061,
+        "sourceUrl": "https://www.momastore.jp/shop/g/g4520535216739",
+        "sourceImageUrl": "https://www.momastore.jp/img/goods/L/4520535216739_2.jpg"
+      },
+      {
+        "image": "img/objects/gallery/mr-maria-first-light-snoopy-2.webp",
+        "width": 1061,
+        "height": 1061,
+        "sourceUrl": "https://www.momastore.jp/shop/g/g4520535216739",
+        "sourceImageUrl": "https://www.momastore.jp/img/goods/1/4520535216739_1_detail.jpg"
+      },
+      {
+        "image": "img/objects/gallery/mr-maria-first-light-snoopy-3.webp",
+        "width": 1061,
+        "height": 1061,
+        "sourceUrl": "https://www.momastore.jp/shop/g/g4520535216739",
+        "sourceImageUrl": "https://www.momastore.jp/img/goods/3/4520535216739_3_detail.jpg"
+      },
+      {
+        "image": "img/objects/gallery/mr-maria-first-light-snoopy-4.webp",
+        "width": 1061,
+        "height": 1061,
+        "sourceUrl": "https://www.momastore.jp/shop/g/g4520535216739",
+        "sourceImageUrl": "https://www.momastore.jp/img/goods/4/4520535216739_4_detail.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/mr-maria-first-light-snoopy-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/mr-maria-first-light-snoopy.webp",
+        "width": 887
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        533,
+        786
+      ],
+      "opticalFill": 0.886,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "flos-snoopy-black",
+    "name": "Snoopy Table Lamp, Black",
+    "brand": "Flos",
+    "category": "living",
+    "tags": [],
+    "description": "Achille and Pier Giacomo Castiglioni’s table lamp balances an enameled metal shade on a marble base.",
+    "productUrl": "https://flos.com/en/cy/snoopy/M-snoopy.html",
+    "sourceUrl": "https://flos.com/en/cy/snoopy/M-snoopy.html",
+    "sourceImageUrl": "https://flos.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Sites-FLOS-master/default/dw595d8e91/images/packshot/DECORATIVE/DECORATIVE_TABLE_SNOOPY/FU638030/Flos-Pim-Image-Luminaire-Table-Snoopy-Black.jpg",
+    "image": "img/objects/cutouts/flos-snoopy-black.webp",
+    "width": 1728,
+    "height": 1728,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/flos-snoopy-black-hq-1.webp",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://flos.com/en/cy/snoopy/M-snoopy.html",
+        "sourceImageUrl": "https://flos.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Sites-FLOS-master/default/dw595d8e91/images/packshot/DECORATIVE/DECORATIVE_TABLE_SNOOPY/FU638030/Flos-Pim-Image-Luminaire-Table-Snoopy-Black.jpg"
+      },
+      {
+        "image": "img/objects/gallery/flos-snoopy-black-hq-2.webp",
+        "width": 3000,
+        "height": 3000,
+        "sourceUrl": "https://flos.com/en/cy/snoopy/M-snoopy.html",
+        "sourceImageUrl": "https://flos.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Sites-FLOS-master/default/dwc21e25d4/images/square_lifestyle/snoopy/g_snoopy_black.jpg"
+      },
+      {
+        "image": "img/objects/gallery/flos-snoopy-black-hq-3.webp",
+        "width": 1024,
+        "height": 768,
+        "sourceUrl": "https://flos.com/en/cy/snoopy/M-snoopy.html",
+        "sourceImageUrl": "https://flos.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Sites-FLOS-master/default/dw1422c612/images/lifeshot/F63800/lifestyle_snoopy_black_06.jpg"
+      },
+      {
+        "image": "img/objects/gallery/flos-snoopy-black-hq-4.webp",
+        "width": 1024,
+        "height": 768,
+        "sourceUrl": "https://flos.com/en/cy/snoopy/M-snoopy.html",
+        "sourceImageUrl": "https://flos.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Sites-FLOS-master/default/dw285715fe/images/lifeshot/F63800/lifestyle_snoopy_black_05.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/flos-snoopy-black-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/flos-snoopy-black-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/flos-snoopy-black-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/flos-snoopy-black.webp",
+        "width": 1728
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1555,
+        1005
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "magis-spun",
+    "name": "Spun",
+    "brand": "Magis",
+    "category": "living",
+    "tags": [],
+    "description": "Thomas Heatherwick’s molded chair rocks and rotates like a spinning top when you sit in it.",
+    "productUrl": "https://www.magisdesign.com/product/spun/",
+    "sourceUrl": "https://www.magisdesign.com/product/spun/",
+    "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_product_SD660_purple_01.jpg",
+    "image": "img/objects/cutouts/magis-spun.webp",
+    "width": 3903,
+    "height": 3903,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/magis-spun.jpg",
+        "width": 4277,
+        "height": 6496,
+        "sourceUrl": "https://www.magisdesign.com/product/spun/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_product_SD660_purple_01.jpg"
+      },
+      {
+        "image": "img/objects/gallery/magis-spun-2.webp",
+        "width": 800,
+        "height": 800,
+        "sourceUrl": "https://www.magisdesign.com/product/spun/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_ambient_mono_SD660_anthracite_outdoor_01-800x800.jpg"
+      },
+      {
+        "image": "img/objects/gallery/magis-spun-3.webp",
+        "width": 800,
+        "height": 800,
+        "sourceUrl": "https://www.magisdesign.com/product/spun/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_ambient_mono_SD660_purple_anthracite_outdoor_01-800x800.jpg"
+      },
+      {
+        "image": "img/objects/gallery/magis-spun-4.webp",
+        "width": 903,
+        "height": 540,
+        "sourceUrl": "https://www.magisdesign.com/product/spun/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2015/02/Magis_spun_product_detail_SD660_black_01-903x540.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/magis-spun-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/magis-spun-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/magis-spun-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/magis-spun-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/magis-spun.webp",
+        "width": 3903
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        2917,
+        2782
+      ],
+      "opticalFill": 0.748,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "magis-air-chair-red",
+    "name": "Air-Chair, Red",
+    "brand": "Magis",
+    "category": "living",
+    "tags": [],
+    "description": "Jasper Morrison’s lightweight, stackable chair, made with air-molding technology.",
+    "productUrl": "https://www.magisdesign.com/product/air-chair/",
+    "sourceUrl": "https://www.magisdesign.com/product/air-chair/",
+    "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_air_chair_product_lateral_SD74_red_01.jpg",
+    "image": "img/objects/cutouts/magis-air-chair-red.webp",
+    "width": 2957,
+    "height": 2957,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/magis-air-chair-red.jpg",
+        "width": 3514,
+        "height": 4393,
+        "sourceUrl": "https://www.magisdesign.com/product/air-chair/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_air_chair_product_lateral_SD74_red_01.jpg"
+      },
+      {
+        "image": "img/objects/gallery/magis-air-chair-red-2.webp",
+        "width": 800,
+        "height": 800,
+        "sourceUrl": "https://www.magisdesign.com/product/air-chair/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_air_chair_product_lateral_SD74_red_01-800x800.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/magis-air-chair-red-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/magis-air-chair-red-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/magis-air-chair-red-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/magis-air-chair-red-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/magis-air-chair-red.webp",
+        "width": 2957
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1903,
+        2448
+      ],
+      "opticalFill": 0.828,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "hay-table-clock-black",
+    "name": "Table Clock, Black",
     "brand": "HAY",
     "category": "living",
-    "tags": [
-      "lighting",
-      "Pierre Charpin"
+    "tags": [],
+    "description": "Jasper Morrison’s clear, quiet clock has a removable stand for use on a table or wall.",
+    "productUrl": "https://www.hay-japan.com/category/STRY/STRY000039.html",
+    "sourceUrl": "https://www.hay-japan.com/category/STRY/STRY000039.html",
+    "sourceImageUrl": "https://www.hay-japan.com/client_info/HAYJAPAN/itemimage/STRY000039/hay_variation/STRY000039-B035.jpg",
+    "image": "img/objects/cutouts/hay-table-clock-black.webp",
+    "width": 1422,
+    "height": 1422,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/hay-table-clock-black.jpg",
+        "width": 2800,
+        "height": 2022,
+        "sourceUrl": "https://www.hay-japan.com/category/STRY/STRY000039.html",
+        "sourceImageUrl": "https://www.hay-japan.com/client_info/HAYJAPAN/itemimage/STRY000039/hay_variation/STRY000039-B035.jpg"
+      },
+      {
+        "image": "img/objects/gallery/hay-table-clock-black-2.webp",
+        "width": 1280,
+        "height": 1600,
+        "sourceUrl": "https://www.hay-japan.com/category/STRY/STRY000039.html",
+        "sourceImageUrl": "https://www.hay-japan.com/client_info/HAYJAPAN/itemimage/STRY000039/STRY000039_01.jpg"
+      },
+      {
+        "image": "img/objects/gallery/hay-table-clock-black-3.webp",
+        "width": 1280,
+        "height": 1600,
+        "sourceUrl": "https://www.hay-japan.com/category/STRY/STRY000039.html",
+        "sourceImageUrl": "https://www.hay-japan.com/client_info/HAYJAPAN/itemimage/STRY000039/STRY000039_04.jpg"
+      }
     ],
-    "description": "A portable lamp designed by Pierre Charpin.",
-    "productUrl": "https://hayshop.com.au/products/pc-portable-light",
-    "sourceUrl": "https://hayshop.com.au/products/pc-portable-light",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0059/4581/9225/files/67a41bbe9a58685ace332cef.jpg?v=1791120540",
-    "image": "img/objects/hay-portable.jpg",
-    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
-    "width": 1213,
-    "height": 1213
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/hay-table-clock-black-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/hay-table-clock-black-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/hay-table-clock-black.webp",
+        "width": 1422
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        953,
+        1130
+      ],
+      "opticalFill": 0.795,
+      "upscaled": false
+    }
   },
   {
-    "id": "hay-crate",
-    "name": "Colour Crate Mini, Red",
-    "brand": "HAY",
-    "category": "work",
-    "tags": [
-      "storage",
-      "colour"
+    "id": "muji-wall-mounted-cd-player",
+    "name": "Wall-Mounted CD Player (CPD-4)",
+    "brand": "MUJI",
+    "category": "living",
+    "tags": [],
+    "description": "A wall-mounted CD player with an exposed disc and built-in speakers. Pull the power cord to start or stop it.",
+    "productUrl": "https://www.muji.com/jp/ja/store/cmdty/detail/4548076475576",
+    "sourceUrl": "https://www.muji.com/jp/ja/store/cmdty/detail/4548076475576",
+    "sourceImageUrl": "https://www.muji.com/public/media/img/item/4548076475576_org.jpg?im=Resize%2Ctype%3Ddownsize%2Cwidth%3D1920",
+    "image": "img/objects/cutouts/muji-wall-mounted-cd-player.webp",
+    "width": 1274,
+    "height": 1274,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/muji-wall-mounted-cd-player.jpg",
+        "width": 1260,
+        "height": 1260,
+        "sourceUrl": "https://www.muji.com/jp/ja/store/cmdty/detail/4548076475576",
+        "sourceImageUrl": "https://www.muji.com/public/media/img/item/4548076475576_org.jpg?im=Resize%2Ctype%3Ddownsize%2Cwidth%3D1920"
+      },
+      {
+        "image": "img/objects/gallery/muji-wall-mounted-cd-player-2.webp",
+        "width": 1260,
+        "height": 840,
+        "sourceUrl": "https://www.multicore.blog/p/muji-wall-mounted-cd-player-review",
+        "sourceImageUrl": "https://substack-post-media.s3.amazonaws.com/public/images/95b9605d-48b3-4652-b237-bb30b1f9e00f_1260x840.jpeg"
+      }
     ],
-    "description": "Small, stackable storage crates in a bold red.",
-    "productUrl": "https://hayshop.com.au/products/colour-crate-mini-set-of-2-red",
-    "sourceUrl": "https://hayshop.com.au/products/colour-crate-mini-set-of-2-red",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0059/4581/9225/files/66fcc8b64a25bf50ea91c0b2_31593a48-abaf-4a53-bcfa-b583420b6f38.jpg?v=1776729305",
-    "image": "img/objects/hay-crate.jpg",
-    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
-    "width": 1200,
-    "height": 1200
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/muji-wall-mounted-cd-player-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/muji-wall-mounted-cd-player-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/muji-wall-mounted-cd-player.webp",
+        "width": 1274
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        434,
+        1146
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "groove-x-lovot-3",
+    "name": "LOVOT 3.0",
+    "brand": "GROOVE X",
+    "category": "living",
+    "tags": [],
+    "description": "A warm companion robot that moves around the home and responds to touch and attention.",
+    "productUrl": "https://store.lovot.life/buy",
+    "sourceUrl": "https://store.lovot.life/buy",
+    "sourceImageUrl": "https://storelovotlife.imgix.net/large/110_cha_nest.webp",
+    "image": "img/objects/cutouts/groove-x-lovot-3.webp",
+    "width": 2312,
+    "height": 2312,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/groove-x-lovot-3-hq-1.webp",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://store.lovot.life/buy",
+        "sourceImageUrl": "https://storelovotlife.imgix.net/large/110_cha_nest.webp"
+      },
+      {
+        "image": "img/objects/gallery/groove-x-lovot-3-2.webp",
+        "width": 1600,
+        "height": 1068,
+        "sourceUrl": "https://lovot.life/en/",
+        "sourceImageUrl": "https://lovot.life/_nuxt/hero_01.C3qRAO1K.webp"
+      },
+      {
+        "image": "img/objects/gallery/groove-x-lovot-3-3.webp",
+        "width": 1600,
+        "height": 1068,
+        "sourceUrl": "https://lovot.life/en/",
+        "sourceImageUrl": "https://lovot.life/_nuxt/hero_02.CjHRGss9.webp"
+      },
+      {
+        "image": "img/objects/gallery/groove-x-lovot-3-4.webp",
+        "width": 780,
+        "height": 432,
+        "sourceUrl": "https://lovot.life/en/",
+        "sourceImageUrl": "https://lovot.life/_nuxt/color_variations_kv_sp.U3IPm_Ui.webp"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/groove-x-lovot-3-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/groove-x-lovot-3-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/groove-x-lovot-3-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/groove-x-lovot-3-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/groove-x-lovot-3.webp",
+        "width": 2312
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1706,
+        1669
+      ],
+      "opticalFill": 0.738,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "teenage-engineering-grip-car",
+    "name": "grip car",
+    "brand": "teenage engineering",
+    "category": "living",
+    "tags": [],
+    "description": "Anders Hermansen’s aluminum toy car, with a sculptural grip and rubber wheels on ball bearings.",
+    "productUrl": "https://teenage.engineering/products/grip-car",
+    "sourceUrl": "https://teenage.engineering/products/grip-car",
+    "sourceImageUrl": "https://assets.teenage.engineering/_img/65bb87fb604563e4f94ebf7d_2048.webp",
+    "image": "img/objects/cutouts/teenage-engineering-grip-car.webp",
+    "width": 1673,
+    "height": 1673,
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/teenage-engineering-grip-car.webp",
+        "width": 1024,
+        "height": 1024,
+        "sourceUrl": "https://teenage.engineering/products/grip-car",
+        "sourceImageUrl": "https://assets.teenage.engineering/_img/65b25239bc21198003493815_1024.webp"
+      },
+      {
+        "image": "img/objects/gallery/teenage-engineering-grip-car-2.webp",
+        "width": 1600,
+        "height": 1195,
+        "sourceUrl": "https://teenage.engineering/products/grip-car",
+        "sourceImageUrl": "https://assets.teenage.engineering/_img/65bbb76a5933e71626d4fdb8_2048.webp"
+      },
+      {
+        "image": "img/objects/gallery/teenage-engineering-grip-car-3.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://teenage.engineering/products/grip-car",
+        "sourceImageUrl": "https://assets.teenage.engineering/_img/65bb87f3604563e4f94ebf6e_2048.webp"
+      },
+      {
+        "image": "img/objects/gallery/teenage-engineering-grip-car-4.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://teenage.engineering/products/grip-car",
+        "sourceImageUrl": "https://assets.teenage.engineering/_img/65bb87fb604563e4f94ebf7d_2048.webp"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/teenage-engineering-grip-car-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/teenage-engineering-grip-car-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/teenage-engineering-grip-car-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/teenage-engineering-grip-car.webp",
+        "width": 1673
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original source alpha",
+      "subjectPixels": [
+        1054,
+        1415
+      ],
+      "opticalFill": 0.846,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "cliik-press-glass-family-pack",
+    "name": "Press Glass Family Pack",
+    "brand": "Cliik",
+    "category": "kitchen",
+    "tags": [],
+    "description": "Three glass pantry jars with press-to-lock lids and magnets that connect them side by side. A little order for the everyday essentials.",
+    "productUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
+    "image": "img/objects/cutouts/cliik-press-glass-family-pack.webp",
+    "width": 2155,
+    "height": 2155,
+    "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
+    "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/07b0e2ae1da9c9660f1840a048e2867439d41f1c-2560x2560.jpg",
+    "usageCaveat": "Official Cliik product photography. No unrestricted-use license verified; private preview pending rights review.",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/cliik-press-glass-family-pack-hq-1.webp",
+        "width": 2560,
+        "height": 2560,
+        "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
+        "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/07b0e2ae1da9c9660f1840a048e2867439d41f1c-2560x2560.jpg"
+      },
+      {
+        "image": "img/objects/gallery/cliik-press-glass-family-pack-2.jpg",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
+        "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/ac5e287cfc29f74af5f5a503912316e5b1bfb613-2560x2560.jpg?w=1600&fm=jpg&q=85"
+      },
+      {
+        "image": "img/objects/gallery/cliik-press-glass-family-pack-3.jpg",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
+        "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/d8b549496deb174e1fa1a845f6e7f60d0f8cd4dd-2560x2560.jpg?w=1600&fm=jpg&q=85"
+      },
+      {
+        "image": "img/objects/gallery/cliik-press-glass-family-pack-4.jpg",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
+        "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/eededf0095dbb9ba58ad29580af09ca939aa99f1-2560x2560.jpg?w=1600&fm=jpg&q=85"
+      },
+      {
+        "image": "img/objects/gallery/cliik-press-glass-family-pack-5.jpg",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
+        "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/397b2ed1015a66136512fdea3cd1c425e28ae79c-2560x2560.jpg?w=1600&fm=jpg&q=85"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/cliik-press-glass-family-pack-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/cliik-press-glass-family-pack-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/cliik-press-glass-family-pack-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/cliik-press-glass-family-pack-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/cliik-press-glass-family-pack.webp",
+        "width": 2155
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1277,
+        1937
+      ],
+      "opticalFill": 0.899,
+      "upscaled": false
+    }
   }
 ]

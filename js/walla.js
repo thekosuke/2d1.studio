@@ -13,17 +13,12 @@
   function paintScene() {
     sceneQueued = false;
     if (heroCover && main) {
-      // The cover travels at native scroll speed; the page beneath travels at
-      // 70% on desktop; phones reveal the intro sooner. Native scroll is never held.
+      // Keep native scrolling; reveal the first line below the cover at 70vh.
       const remaining = Math.max(0, heroCover.offsetHeight - Math.max(0, scrollY));
       let coverFactor = .3;
-      if (mobile.matches && intro) {
-        // The first line emerges when intro padding exceeds the cover offset.
-        // Reduce that scroll distance by 25%, rather than shortening a timer.
+      if (intro) {
         const padding = parseFloat(getComputedStyle(intro).paddingTop) || 0;
-        const originalEntry = Math.max(0, heroCover.offsetHeight - padding / .3);
-        const earlierEntry = originalEntry * .75;
-        coverFactor = Math.min(.3, padding / Math.max(1, heroCover.offsetHeight - earlierEntry));
+        coverFactor = Math.min(.3, padding / Math.max(1, innerHeight * .7));
       }
       main.style.setProperty('--cover-offset', `${reduced.matches ? 0 : -remaining * coverFactor}px`);
     }
@@ -32,7 +27,7 @@
       const height = innerHeight;
       const mix = reduced.matches ? Number(box.top <= height * .5 && box.bottom > height * .5)
         : Math.min(smooth((height * .85 - box.top) / (height * .65)), smooth((box.bottom - height * .15) / (height * .65)));
-      const warm = [250,240,230], cool = [224,220,215];
+      const warm = [250,240,230], cool = [214,206,197];
       const color = warm.map((channel,i) => Math.round(channel + (cool[i] - channel) * mix));
       document.documentElement.style.setProperty('--page-background', `rgb(${color.join(',')})`);
     }
@@ -53,58 +48,34 @@
   addEventListener('pageshow', () => { if (scrollY > 4) finishLanding(); });
   reduced.addEventListener('change', () => { if (reduced.matches) finishLanding(); });
   if (scrollY > 4 || reduced.matches) finishLanding();
-  // Preserve the real heading and emphasis; wrap only text for reading ink.
-  const inkBlocks = [...document.querySelectorAll('[data-ink]')].map(block => {
-    const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
-    const nodes = [];
-    while (walker.nextNode()) nodes.push(walker.currentNode);
-    const words = [];
-    const segmenter = document.documentElement.lang === 'ja' && typeof Intl.Segmenter === 'function'
-      ? new Intl.Segmenter('ja', {granularity: 'word'}) : null;
-    nodes.forEach(node => {
-      const parts = segmenter ? [...segmenter.segment(node.textContent)].map(part => part.segment)
-        : node.textContent.split(/(\s+)/);
-      const fragment = document.createDocumentFragment();
-      parts.forEach(part => {
-        if (!part) return;
-        if (/^\s+$/.test(part)) { fragment.append(part); return; }
-        const word = document.createElement('span');
-        word.className = 'ink';
-        word.textContent = part;
-        words.push(word);
-        fragment.append(word);
-      });
-      node.replaceWith(fragment);
-    });
-    block.classList.add('is-inking');
-    return {block, words, count: -1};
-  });
-  let inkQueued = false;
-  function inkIn() {
-    inkQueued = false;
-    inkBlocks.forEach(ink => {
-      const box = ink.block.getBoundingClientRect();
-      const coverBottom = heroCover && !reduced.matches ? Math.max(0, heroCover.getBoundingClientRect().bottom) : 0;
-      const start = innerHeight * .85 - coverBottom * .85;
-      // Longer phone paragraphs finish as their final lines enter the reading area.
-      const end = Math.min(innerHeight * .25, innerHeight * .7 - box.height);
-      const progress = reduced.matches ? 1 : Math.max(0, Math.min(1, (start - box.top) / Math.max(1, start - end)));
-      const count = Math.round(progress * ink.words.length);
-      if (count === ink.count) return;
-      ink.count = count;
-      ink.words.forEach((word, i) => word.classList.toggle('is-inked', i < count));
-    });
-  }
-  const queueInk = () => { if (!inkQueued) { inkQueued = true; requestAnimationFrame(inkIn); } };
-  if (inkBlocks.length) {
-    addEventListener('scroll', queueInk, {passive: true});
-    addEventListener('resize', queueInk);
-    reduced.addEventListener('change', queueInk);
-    document.fonts.ready.then(queueInk);
-    inkIn();
-  }
   const slot = document.querySelector('.logo-slot');
   const logo = slot?.querySelector('.site-logo');
+  // A hero tap opens the introduction; swipes remain native page scrolling.
+  if (heroCover && intro && main) {
+    let heroPress;
+    const onHero = target => heroCover.contains(target) ||
+      (heroCover.getBoundingClientRect().bottom > 0 && logo?.contains(target));
+    document.addEventListener('pointerdown', event => {
+      heroPress = event.isPrimary && event.button === 0 && onHero(event.target)
+        ? {x:event.clientX, y:event.clientY, scroll:scrollY, moved:false} : null;
+    }, {passive:true});
+    document.addEventListener('pointermove', event => {
+      if (heroPress && Math.hypot(event.clientX-heroPress.x,event.clientY-heroPress.y)>8) heroPress.moved=true;
+    }, {passive:true});
+    document.addEventListener('pointercancel', () => { heroPress=null; });
+    document.addEventListener('click', event => {
+      if (!onHero(event.target) || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (event.detail && (!heroPress || heroPress.moved || Math.abs(scrollY-heroPress.scroll)>8)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      heroPress=null;
+      finishLanding();
+      // Use layout offsets, not the temporary cover-parallax transform.
+      window.scrollTo({top:main.offsetTop + intro.offsetTop, behavior:reduced.matches?'instant':'smooth'});
+      intro.setAttribute('tabindex','-1');
+      intro.focus({preventScroll:true});
+    }, true);
+  }
   const pageNav = document.querySelector('.page-nav');
   const languageSwitch = document.querySelector('.home-page > .language-switch');
   const sections = [...document.querySelectorAll('main > section[id]')];

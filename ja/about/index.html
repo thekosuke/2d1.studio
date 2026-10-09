@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2D1について</title>
+  <title>2D1 | About</title>
   <meta name="description" content="2D1は、自分たちのショップも持つ独立系デザインスタジオ。私たちのこと、そして身近なものが大切になる理由について。">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#FAF0E6">
@@ -34,12 +34,17 @@
   
   <link rel="stylesheet" href="../../css/fonts.css?v=4">
   <link rel="stylesheet" href="../../css/japanese-font.css?v=1">
-  <link rel="stylesheet" href="../../css/walla.css?v=29">
-  <link rel="stylesheet" href="../../css/about.css?v=7">
+  <link rel="stylesheet" href="../../css/walla.css?v=45">
+  <link rel="stylesheet" href="../../css/about.css?v=9">
   <script src="../../js/ja.js?v=5" defer></script>
   <script src="../../js/language.js?v=1" defer></script>
+  <link rel="stylesheet" href="../../css/dialogs.css?v=12">
+  <script src="../../js/config.js" defer></script>
+  <script src="../../js/drawers.js?v=2" defer></script>
+  <script src="../../js/contact.js?v=6" defer></script>
   <script src="../../js/site.js?v=4" defer></script>
   <script src="../../js/about.js" defer></script>
+  <script src="../../js/reading-ink.js?v=4" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "name": "2D1について", "url": "https://2d1.studio/ja/about/", "mainEntity": {"@type": "Organization", "name": "2D1", "url": "https://2d1.studio/", "logo": "https://2d1.studio/img/brand/2d1-brand.png?v=2", "slogan": "身近なものに、らしさを。"}}</script>
 </head>
 <body class="about-page" id="top">
@@ -47,6 +52,8 @@
   <template id="about-hero-archive">
   <header class="masthead about-masthead"><a class="site-logo" href="../" aria-label="2D1、ホームへ"><img src="../../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a><p class="brand-caption">身近なものに、らしさを。</p></header>
   </template>
+  <a class="site-logo about-docked-logo" href="../" aria-label="2D1、ホームへ"><img src="../../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a>
+  <nav class="page-nav is-visible" aria-label="ページ内・ページ間ナビゲーション"><span class="page-nav-left"><a href="../#studio">スタジオ</a><a href="../#shop">ショップ</a></span><a href="../#connect">つながる</a><span class="page-nav-pages" role="group" aria-label="ページ"><a href="./" aria-current="page">2D1について</a><a href="../objects/">Finds</a></span><span class="page-nav-contact"><button type="button" data-contact aria-haspopup="dialog" aria-controls="contact">お問い合わせ</button></span></nav>
 
   <main id="main" class="essay-page column">
     <!-- The essay. Placeholder text throughout: replace the title, the
@@ -60,26 +67,26 @@
         <p class="essay-dek">らしさ、親しみ、そして手元に残しておきたい日用品のこと。ショップを持つデザインスタジオからの、ちょっとした考えごと。</p>
       </header>
       <div class="essay-body">
-        <p class="essay-lede">2D1は、自分たちのショップも持つ独立系デザインスタジオです。企業のためには、明快なアイデアを見つけ、その企業らしさをかたちにします。最初の戦略から、人々が毎日使うプロダクトやブランドまで。そして、みなさんに向けては、2D1の名前で日用品をつくります。どれも、いつか誰かの<em>お気に入り</em>になれることを願って。</p>
+        <p class="essay-lede" data-ink>2D1は、自分たちのショップも持つ独立系デザインスタジオです。企業のためには、明快なアイデアを見つけ、その企業らしさをかたちにします。最初の戦略から、人々が毎日使うプロダクトやブランドまで。そして、みなさんに向けては、2D1の名前で日用品をつくります。どれも、いつか誰かの<em>お気に入り</em>になれることを願って。</p>
         <div class="essay-rest" id="essay-rest">
-          <p>持ちものの大半は、あまり記憶に残りません。役目を果たすと、暮らしの背景に溶け込んでいきます。でも、その中のいくつかは、ずっとそばに残ります。三度の引っ越しをともにしたマグカップ。つい最初に手が伸びるペン。入れてきたもののかたちが、少しずつなじんだバッグ。珍しいからでも、高価だからでもなく、すっかり身近な存在になったから、手放せないのです。</p>
+          <p data-ink>持ちものの大半は、あまり記憶に残りません。役目を果たすと、暮らしの背景に溶け込んでいきます。でも、その中のいくつかは、ずっとそばに残ります。三度の引っ越しをともにしたマグカップ。つい最初に手が伸びるペン。入れてきたもののかたちが、少しずつなじんだバッグ。珍しいからでも、高価だからでもなく、すっかり身近な存在になったから、手放せないのです。</p>
           <h2>らしさが、つながりを生む</h2>
-          <p>身近なものは、退屈なものとは違います。愛着を感じるものには、たいてい、そのものだけの何かがあります。手にしっくりくるバランス、思わず笑顔になる細部、必要以上に少しだけ気の利いた使い心地。その「何か」が、らしさです。最初に目を留める理由になり、やがて少しの不完全さも受け入れられる理由になります。</p>
-          <p>でも、らしさだけでは十分ではありません。個性豊かでも、引き出しの奥にしまわれてしまうものはたくさんあります。らしさが愛着に変わるには、時間が必要です。繰り返し役に立ち、無理なく使い続けられて、暮らしの習慣の一部になること。親しみが、そこに意味を与えてくれます。</p>
-          <blockquote class="essay-pull"><p>ものに意味が生まれるのは、<em>そのそばで日々が積み重なっていくから</em>。</p></blockquote>
+          <p data-ink>身近なものは、退屈なものとは違います。愛着を感じるものには、たいてい、そのものだけの何かがあります。手にしっくりくるバランス、思わず笑顔になる細部、必要以上に少しだけ気の利いた使い心地。その「何か」が、らしさです。最初に目を留める理由になり、やがて少しの不完全さも受け入れられる理由になります。</p>
+          <p data-ink>でも、らしさだけでは十分ではありません。個性豊かでも、引き出しの奥にしまわれてしまうものはたくさんあります。らしさが愛着に変わるには、時間が必要です。繰り返し役に立ち、無理なく使い続けられて、暮らしの習慣の一部になること。親しみが、そこに意味を与えてくれます。</p>
+          <blockquote class="essay-pull"><p data-ink>ものに意味が生まれるのは、<em>そのそばで日々が積み重なっていくから</em>。</p></blockquote>
           <h2>そぎ落として、ひとさじの遊び心を。</h2>
-          <p>これが、クライアントのためにも、自分たちのためにも大切にしているつくり方です。アイデアが明快になり、日々に無理なくなじむまでそぎ落とす。そして、記憶に残る理由になるひと工夫を残す。遊び心のない引き算は味気なく、引き算のない遊び心は騒がしい。私たちは、その二つがちょうど出会うところを探しています。</p>
-          <p>だからこそ、ありふれたものを大切に考えます。水筒、トートバッグ、玄関のトレイ。いちばん長い時間をともにするものだからこそ、きちんとつくる価値があります。</p>
+          <p data-ink>これが、クライアントのためにも、自分たちのためにも大切にしているつくり方です。アイデアが明快になり、日々に無理なくなじむまでそぎ落とす。そして、記憶に残る理由になるひと工夫を残す。遊び心のない引き算は味気なく、引き算のない遊び心は騒がしい。私たちは、その二つがちょうど出会うところを探しています。</p>
+          <p data-ink>だからこそ、ありふれたものを大切に考えます。水筒、トートバッグ、玄関のトレイ。いちばん長い時間をともにするものだからこそ、きちんとつくる価値があります。</p>
           <h2>身近なものたちの家</h2>
-          <p>私たちがつくるものは、みんな同じ場所に暮らしている。親しみのある顔ぶれが集まる、一軒の家のように考えています。ほかの企業のためにデザインするもの。2D1の名前でつくるもの。ただ好きで、手元に置いているもの。それらをつなぐのは、スタイルでも、価格でも、カテゴリーでもありません。日用品は、らしさを持つものから、誰かの暮らしの登場人物になっていく。そんな、ものの見方です。</p>
-          <p>私たちがつくりたいのは、そういうものです。注目を求めるのではなく、少しずつ居場所を得ていくもの。いつの間にか、なくなると寂しいと感じるもの。<span class="essay-end" aria-hidden="true"></span></p>
+          <p data-ink>私たちがつくるものは、みんな同じ場所に暮らしている。親しみのある顔ぶれが集まる、一軒の家のように考えています。ほかの企業のためにデザインするもの。2D1の名前でつくるもの。ただ好きで、手元に置いているもの。それらをつなぐのは、スタイルでも、価格でも、カテゴリーでもありません。日用品は、らしさを持つものから、誰かの暮らしの登場人物になっていく。そんな、ものの見方です。</p>
+          <p data-ink>私たちがつくりたいのは、そういうものです。注目を求めるのではなく、少しずつ居場所を得ていくもの。いつの間にか、なくなると寂しいと感じるもの。<span class="essay-end" aria-hidden="true"></span></p>
         </div>
         <button class="essay-more" type="button" aria-controls="essay-rest" aria-expanded="false" hidden><span class="essay-more-label intro-cta">続きを読む<span class="essay-more-arrow" aria-hidden="true">↓</span></span></button>
       </div>
     </article>
   </main>
 
-  <footer class="site-footer"><div class="footer-line column"><p>©<span data-year>2026</span> 2D1</p><nav class="footer-pages" aria-label="2D1を知る"><a href="../about/">2D1について</a><a href="../objects/" translate="no">Objects</a></nav></div></footer>
+  <footer class="site-footer"><div class="footer-line column"><p>©<span data-year>2026</span> 2D1</p></div></footer>
   <nav class="language-switch" aria-label="言語"><a href="../../about/" lang="en" hreflang="en" aria-label="English">EN</a><a href="./" lang="ja" hreflang="ja" aria-label="日本語" aria-current="page">JA</a></nav>
 </body>
 </html>

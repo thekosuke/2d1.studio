@@ -1,0 +1,47 @@
+{
+  "id": "rement-isabelle-happy-room",
+  "name": "Animal Crossing Happy Room — Isabelle",
+  "brand": "Re-Ment",
+  "category": "living",
+  "tags": [],
+  "description": "A miniature room with Isabelle at her desk, from Re-Ment’s Animal Crossing collection.",
+  "productUrl": "https://www.re-ment.co.jp/product/r20883",
+  "sourceUrl": "https://www.re-ment.co.jp/product/r20883",
+  "sourceImageUrl": "https://www.re-ment.co.jp/data/photo/product/t/226839189.jpg",
+  "image": "img/objects/cutouts/rement-isabelle-happy-room.webp",
+  "width": 409,
+  "height": 409,
+  "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+  "gallery": [
+    {
+      "image": "img/objects/rement-isabelle-happy-room.jpg",
+      "width": 460,
+      "height": 325,
+      "sourceUrl": "https://www.re-ment.co.jp/product/r20883",
+      "sourceImageUrl": "https://www.re-ment.co.jp/data/photo/product/t/226839189.jpg"
+    },
+    {
+      "image": "img/objects/gallery/rement-isabelle-happy-room-2.webp",
+      "width": 1024,
+      "height": 1024,
+      "sourceUrl": "https://hamee.com/products/re-ment-blind-box-mini-figures-animal-crossing-happy-room",
+      "sourceImageUrl": "https://hamee.com/cdn/shop/files/REMENT_AnimalCrossing_HappyRoom-Main_Image_1024x1024.png?v=1768589746"
+    }
+  ],
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/rement-isabelle-happy-room.webp",
+      "width": 409
+    }
+  ],
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Original RGB with locally generated foreground mask",
+    "subjectPixels": [
+      303,
+      294
+    ],
+    "opticalFill": 0.741,
+    "upscaled": false
+  }
+}

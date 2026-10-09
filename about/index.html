@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About — 2D1</title>
+  <title>2D1 | About</title>
   <meta name="description" content="2D1 is an independent design studio with a shop of its own. About the studio, and why familiar things matter.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#FAF0E6">
@@ -33,11 +33,16 @@
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preload" href="../fonts/SC%20Walla%20Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/fonts.css?v=4">
-  <link rel="stylesheet" href="../css/walla.css?v=29">
-  <link rel="stylesheet" href="../css/about.css?v=7">
+  <link rel="stylesheet" href="../css/walla.css?v=45">
+  <link rel="stylesheet" href="../css/about.css?v=9">
   <script src="../js/language.js?v=1" defer></script>
+  <link rel="stylesheet" href="../css/dialogs.css?v=12">
+  <script src="../js/config.js" defer></script>
+  <script src="../js/drawers.js?v=2" defer></script>
+  <script src="../js/contact.js?v=6" defer></script>
   <script src="../js/site.js?v=4" defer></script>
   <script src="../js/about.js" defer></script>
+  <script src="../js/reading-ink.js?v=4" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About 2D1","url":"https://2d1.studio/about/","mainEntity":{"@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/2d1-brand.png?v=2","slogan":"Familiar Characters"}}</script>
 </head>
 <body class="about-page" id="top">
@@ -45,6 +50,8 @@
   <template id="about-hero-archive">
   <header class="masthead about-masthead"><a class="site-logo" href="../" aria-label="2D1, home"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a><p class="brand-caption">Familiar characters</p></header>
   </template>
+  <a class="site-logo about-docked-logo" href="../" aria-label="2D1, home"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a>
+  <nav class="page-nav is-visible" aria-label="Sections and pages"><span class="page-nav-left"><a href="../#studio">Studio</a><a href="../#shop">Shop</a></span><a href="../#connect">Connect</a><span class="page-nav-pages" role="group" aria-label="Pages"><a href="./" aria-current="page">About</a><a href="../objects/">Finds</a></span><span class="page-nav-contact"><button type="button" data-contact aria-haspopup="dialog" aria-controls="contact">Contact</button></span></nav>
 
   <main id="main" class="essay-page column">
     <!-- The essay. Placeholder text throughout: replace the title, the
@@ -58,26 +65,26 @@
         <p class="essay-dek">On character, familiarity, and the everyday objects we choose to keep. Notes from a design studio with a shop of its own.</p>
       </header>
       <div class="essay-body">
-        <p class="essay-lede">2D1 is an independent design studio with a shop of its own. For companies, we find a clear idea and give it character, from the first strategy to the products and brands people use every day. For everyone else, we make everyday objects under our own name, each one hoping to become someone’s <em>favorite something</em>.</p>
+        <p class="essay-lede" data-ink>2D1 is an independent design studio with a shop of its own. For companies, we find a clear idea and give it character, from the first strategy to the products and brands people use every day. For everyone else, we make everyday objects under our own name, each one hoping to become someone’s <em>favorite something</em>.</p>
         <div class="essay-rest" id="essay-rest">
-          <p>Most of the things we own are forgettable. They do their job and then disappear into the background of our lives. But a few of them stay. A mug that has moved with us through three apartments. The pen we always reach for first. A bag that has taken the shape of everything we have carried in it. We don’t keep these things because they are rare or expensive. We keep them because they became familiar.</p>
+          <p data-ink>Most of the things we own are forgettable. They do their job and then disappear into the background of our lives. But a few of them stay. A mug that has moved with us through three apartments. The pen we always reach for first. A bag that has taken the shape of everything we have carried in it. We don’t keep these things because they are rare or expensive. We keep them because they became familiar.</p>
           <h2>Character creates the connection</h2>
-          <p>A familiar object is not the same as a boring one. The things we grow attached to almost always have something particular about them: a proportion that feels right in the hand, a detail that makes us smile, a way of doing their job that is a little better than it needed to be. That particular something is character. It is what makes us notice an object in the first place, and what makes us forgive its imperfections later.</p>
-          <p>Character alone isn’t enough, though. Plenty of objects are full of personality and still end up in a drawer. What turns character into attachment is time. An object has to be useful often enough, and easy enough to live with, that it becomes part of the routine. Familiarity gives it meaning.</p>
-          <blockquote class="essay-pull"><p>Objects become meaningful because <em>life happens around them</em>.</p></blockquote>
+          <p data-ink>A familiar object is not the same as a boring one. The things we grow attached to almost always have something particular about them: a proportion that feels right in the hand, a detail that makes us smile, a way of doing their job that is a little better than it needed to be. That particular something is character. It is what makes us notice an object in the first place, and what makes us forgive its imperfections later.</p>
+          <p data-ink>Character alone isn’t enough, though. Plenty of objects are full of personality and still end up in a drawer. What turns character into attachment is time. An object has to be useful often enough, and easy enough to live with, that it becomes part of the routine. Familiarity gives it meaning.</p>
+          <blockquote class="essay-pull"><p data-ink>Objects become meaningful because <em>life happens around them</em>.</p></blockquote>
           <h2>Reductionist, with wit</h2>
-          <p>This is how we work, for clients and for ourselves. We edit until the idea is clear and the object is easy to live with, then we keep the one detail that gives it a reason to be remembered. Reduction without wit is sterile; wit without reduction is noise. We look for the point where the two meet.</p>
-          <p>It is also why we care about ordinary things. A water bottle, a tote bag, a tray by the door: these are the objects that spend the most time with us, so they are the ones most worth getting right.</p>
+          <p data-ink>This is how we work, for clients and for ourselves. We edit until the idea is clear and the object is easy to live with, then we keep the one detail that gives it a reason to be remembered. Reduction without wit is sterile; wit without reduction is noise. We look for the point where the two meet.</p>
+          <p data-ink>It is also why we care about ordinary things. A water bottle, a tote bag, a tray by the door: these are the objects that spend the most time with us, so they are the ones most worth getting right.</p>
           <h2>The House of Familiar Things</h2>
-          <p>We think of everything we make as living in the same place, a house full of familiar characters. Some we design for other companies. Some we make under our own name. Some we simply admire and keep around. What connects them is not a style, a price, or a category, but a way of seeing: the belief that the best everyday objects go from having character to becoming a character in someone’s life.</p>
-          <p>That is what we are trying to make. Not things that demand attention, but things that earn a place. Things that, after a while, you would miss.<span class="essay-end" aria-hidden="true"></span></p>
+          <p data-ink>We think of everything we make as living in the same place, a house full of familiar characters. Some we design for other companies. Some we make under our own name. Some we simply admire and keep around. What connects them is not a style, a price, or a category, but a way of seeing: the belief that the best everyday objects go from having character to becoming a character in someone’s life.</p>
+          <p data-ink>That is what we are trying to make. Not things that demand attention, but things that earn a place. Things that, after a while, you would miss.<span class="essay-end" aria-hidden="true"></span></p>
         </div>
         <button class="essay-more" type="button" aria-controls="essay-rest" aria-expanded="false" hidden><span class="essay-more-label intro-cta">Continue reading <span class="essay-more-arrow" aria-hidden="true">↓</span></span></button>
       </div>
     </article>
   </main>
 
-  <footer class="site-footer"><div class="footer-line column"><p>©<span data-year>2026</span> 2D1</p><nav class="footer-pages" aria-label="Explore 2D1"><a href="../about/">About</a><a href="../objects/" translate="no">Objects</a></nav></div></footer>
+  <footer class="site-footer"><div class="footer-line column"><p>©<span data-year>2026</span> 2D1</p></div></footer>
   <nav class="language-switch" aria-label="Language"><a href="./" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a><a href="../ja/about/" lang="ja" hreflang="ja" aria-label="日本語">JA</a></nav>
 </body>
 </html>

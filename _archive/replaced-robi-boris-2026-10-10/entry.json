@@ -1,0 +1,53 @@
+{
+  "id": "arms-flying-robi-boris",
+  "name": "Robi Boris",
+  "brand": "Arms Flying Everywhere",
+  "category": "living",
+  "tags": [],
+  "description": "A Robi figure based on Think Packaging’s Boris mascot: a box-shaped character with boots.",
+  "productUrl": "https://armsflyingeverywhere.com/products/robi-boris",
+  "sourceUrl": "https://armsflyingeverywhere.com/products/robi-boris",
+  "sourceImageUrl": "https://armsflyingeverywhere.com/cdn/shop/files/Boris_b580347c-6fb3-4878-bc59-a6f6124122db.jpg?v=1783921745",
+  "image": "img/objects/cutouts/arms-flying-robi-boris.webp",
+  "width": 1694,
+  "height": 1694,
+  "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+  "gallery": [
+    {
+      "image": "img/objects/arms-flying-robi-boris.jpg",
+      "width": 1800,
+      "height": 1800,
+      "sourceUrl": "https://armsflyingeverywhere.com/products/robi-boris",
+      "sourceImageUrl": "https://armsflyingeverywhere.com/cdn/shop/files/Boris_b580347c-6fb3-4878-bc59-a6f6124122db.jpg?v=1783921745"
+    }
+  ],
+  "galleryNote": "Only one verified usable view is currently available; additional photography is pending.",
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/arms-flying-robi-boris-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/cutouts/arms-flying-robi-boris-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/arms-flying-robi-boris-1440.webp",
+      "width": 1440
+    },
+    {
+      "image": "img/objects/cutouts/arms-flying-robi-boris.webp",
+      "width": 1694
+    }
+  ],
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Original RGB with locally generated foreground mask",
+    "subjectPixels": [
+      620,
+      1524
+    ],
+    "opticalFill": 0.9,
+    "upscaled": false
+  }
+}

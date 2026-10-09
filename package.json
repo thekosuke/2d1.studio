@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "build:hosted": "node scripts/build-hosted-preview.mjs",
-    "test": "node tests/mobile-interactions.mjs && node tests/objects.mjs && node tests/purchased-backend.mjs",
+    "test": "node tests/mobile-interactions.mjs && node tests/objects.mjs && node tests/purchased-backend.mjs && node tests/reading-ink.mjs",
     "db:generate": "drizzle-kit generate",
     "preview:worker": "wrangler dev --local --ip 127.0.0.1 --port 8787",
     "db:local": "wrangler d1 migrations apply DB --local"
