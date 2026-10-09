@@ -163,3 +163,14 @@ html:not(.js) .home-page > .language-switch{position:static;width:fit-content;ma
 
 /* Scripted horizontal touch drag; vertical scrolling and pinch zoom stay native. */
 .work-belt.is-touch-draggable{touch-action:pan-y pinch-zoom}
+
+/* Shared dock placement: the same inline layout at phone, tablet and desktop widths. */
+@media(min-width:768px){
+ .js .home-page .page-nav{top:10px;left:32px;right:32px;display:grid;grid-template-columns:minmax(0,1fr) 96px minmax(0,1fr);gap:0;align-items:center}
+ .js .home-page .page-nav-left{grid-column:1;display:flex;gap:32px;align-items:center}
+ .js .home-page .page-nav>a{grid-column:3;justify-self:end}
+ .js .home-page .page-nav a{display:flex;align-items:center;min-height:44px;padding-block:0;white-space:nowrap}
+ .home-page section{scroll-margin-top:80px}
+}
+.footer-pages{display:flex;gap:24px;padding-bottom:24px;font:500 13px/1.4 var(--mono)}
+.footer-pages a{display:flex;align-items:center;min-height:44px}.footer-pages a:hover{color:var(--red)}

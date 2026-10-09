@@ -48,7 +48,7 @@ python3 scripts/build-japanese.py
 python3 scripts/build-preview.py
 ```
 
-The second command writes the ignored `dist/` directory, with four active pages
+The second command writes the ignored `dist/` directory, with six active pages
 and their assets. The package excludes repository metadata, archives, private
 configuration, handoff documents, server code and the production CNAME.
 It adds noindex/nofollow metadata and a disallow-all robots file. A compatible
@@ -69,7 +69,7 @@ Publishing a preview must not deploy to `2d1.studio`.
 - Hero rises over slower-moving main content. Studio smoothly changes the
   page ground from beige to gray and back. Native scrolling is preserved.
 - Page anchors enter from the left after the hero; the language switch enters
-  from the right at the same threshold. Both hide on returning to the hero. Phones place Studio/Shop left of the logo and Connect right. The phone intro emerges after 25% less scroll distance; desktop motion is unchanged.
+  from the right at the same threshold. Both hide on returning to the hero. All viewport widths place Studio/Shop inline left of the centered logo and Connect right. The phone intro emerges after 25% less scroll distance; desktop motion is unchanged.
 - Dark brown `#140B00` primary ink, Icon Red `#FF2B00`, beige `#FAF0E6`,
   Studio gray `#E0DCD7`. Square UI, local SC Walla, Noto Sans JP for Japanese.
 - Shop render sits between the first and second description paragraphs.
@@ -137,3 +137,30 @@ JavaScript syntax, Japanese generation, local references and packaging pass.
 Real-browser visual/touch verification remains outstanding: standalone Chromium
 cannot open its required sockets in this executor, and the separate browser
 cannot access its localhost. No production hosting or backend was changed.
+
+
+## Objects checkpoint — 9 October 2026
+
+Private preview version 5 is published from Sites source
+`cfd6e5d7a651c684bf92354eb38e1217b6809282`. Objects is available at `/objects/`
+and `/ja/objects/` on the same private preview URL. It contains ten placeholder
+selections with original-resolution, source-credited product photographs,
+category/tag filters, a bounded-DOM infinite draggable canvas, accessible List
+mode and native product dialogs. Home intro and Home/About footers link to it.
+Desktop/tablet anchors now use the phone’s horizontal, inline arrangement.
+
+Product metadata is in `data/objects.json`; provenance and rights notes are in
+`docs/OBJECTS-SOURCES.md`. Regenerate with `python3 scripts/build-objects.py`,
+then `python3 scripts/build-japanese.py` and `python3 scripts/build-preview.py`.
+The preview now includes six pages. `node tests/objects.mjs` checks repeating
+coordinates, empty/small filter sets, tap versus drag, interrupted gestures,
+keyboard event isolation and focus-return hooks. Existing mobile tests remain.
+All automated/source/package checks passed. Real rendered browser/device QA
+remains unverified because the cloud browser cannot reach this executor’s
+preview and standalone Chromium cannot create its required sockets.
+
+The collection explicitly calls these placeholders; extra products are not
+confirmed personal recommendations. No public-use image license is implied;
+review rights before any public deployment. Source and private preview are
+synchronized in the branch checkpoint containing this handoff. Production,
+backend and access settings remain unchanged.

@@ -1,0 +1,184 @@
+[
+  {
+    "id": "hay-miz",
+    "name": "Miz Water Bottle, Red",
+    "brand": "HAY",
+    "category": "kitchen",
+    "tags": [
+      "drinkware",
+      "Naoto Fukasawa",
+      "colour"
+    ],
+    "description": "A slim water bottle designed by Naoto Fukasawa.",
+    "productUrl": "https://www.hay.com/hay/accessories/travel/miz-water-bottle",
+    "sourceUrl": "https://www.framaspace.com/products/miz-water-bottle",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0510/5192/1569/files/AE366-D807-AB27_variant_Miz-Water-Bottle-0_54-litre-red_gb_1220x1220_53781c69-363f-4c10-a77e-d4356f3e9ab4.jpg?v=1774824166",
+    "image": "img/objects/hay-miz.jpg",
+    "width": 1220,
+    "height": 1220,
+    "usageCaveat": "HAY product photography from retailer FRAMA; official HAY and designer pages verified the product but image hosts returned 403. No unrestricted-use license verified; private preview pending rights review."
+  },
+  {
+    "id": "alessi-anna-g",
+    "name": "Anna G. Corkscrew",
+    "brand": "Alessi",
+    "category": "kitchen",
+    "tags": [
+      "design classic",
+      "tableware"
+    ],
+    "description": "Alessandro Mendini’s smiling, figure-shaped corkscrew.",
+    "productUrl": "https://us.alessi.com/products/anna-g-corkscrew",
+    "sourceUrl": "https://us.alessi.com/products/anna-g-corkscrew",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0342/9262/9644/products/Z-01-new_AM01.jpg?v=1643879847",
+    "image": "img/objects/alessi-anna-g.jpg",
+    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
+    "width": 1648,
+    "height": 2062
+  },
+  {
+    "id": "alessi-juicy-salif",
+    "name": "Juicy Salif",
+    "brand": "Alessi",
+    "category": "kitchen",
+    "tags": [
+      "design classic",
+      "tableware"
+    ],
+    "description": "Philippe Starck’s sculptural citrus squeezer.",
+    "productUrl": "https://us.alessi.com/products/juicy-salif-citrus-squeezer",
+    "sourceUrl": "https://us.alessi.com/products/juicy-salif-citrus-squeezer",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0342/9262/9644/products/01_PSJS_aaf8c62d-b352-4aa9-b63a-2a52c9ae15aa.jpg?v=1652871135",
+    "image": "img/objects/alessi-juicy-salif.jpg",
+    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
+    "width": 1648,
+    "height": 2062
+  },
+  {
+    "id": "alessi-pulcina",
+    "name": "Pulcina",
+    "brand": "Alessi",
+    "category": "kitchen",
+    "tags": [
+      "design classic",
+      "tableware"
+    ],
+    "description": "Michele De Lucchi’s stepped espresso coffee maker.",
+    "productUrl": "https://us.alessi.com/products/pulcina-espresso-coffee-maker",
+    "sourceUrl": "https://us.alessi.com/products/pulcina-espresso-coffee-maker",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0342/9262/9644/products/01-1_MDL02_42b3b7c0-89b8-46ac-b877-1cf365b73b5b.jpg?v=1650387797",
+    "image": "img/objects/alessi-pulcina.jpg",
+    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
+    "width": 1648,
+    "height": 2062
+  },
+  {
+    "id": "alessi-9093",
+    "name": "9093 Kettle",
+    "brand": "Alessi",
+    "category": "kitchen",
+    "tags": [
+      "design classic",
+      "tableware"
+    ],
+    "description": "Michael Graves’s kettle with a bird-shaped whistle.",
+    "productUrl": "https://us.alessi.com/products/9093-kettle",
+    "sourceUrl": "https://us.alessi.com/products/9093-kettle",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0342/9262/9644/products/01-1_9093_f42fa548-afd3-4120-95af-5473acdf8058.jpg?v=1650387853",
+    "image": "img/objects/alessi-9093.jpg",
+    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
+    "width": 1648,
+    "height": 2062
+  },
+  {
+    "id": "dusen-slippers",
+    "name": "Terry Stripe Slippers, Ladybug",
+    "brand": "Dusen Dusen",
+    "category": "wear",
+    "tags": [
+      "textile",
+      "stripes",
+      "colour"
+    ],
+    "description": "Striped terry slippers from Dusen Dusen.",
+    "productUrl": "https://www.dusendusen.com/products/terry-stripe-slippers",
+    "sourceUrl": "https://www.dusendusen.com/products/terry-stripe-slippers",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0999/7114/files/LadybugSlippers1.jpg?v=1786470804",
+    "image": "img/objects/dusen-slippers.jpg",
+    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
+    "width": 1200,
+    "height": 1500
+  },
+  {
+    "id": "dusen-tissue",
+    "name": "Everybody Tissue Box Holder",
+    "brand": "Dusen Dusen",
+    "category": "living",
+    "tags": [
+      "storage",
+      "colour"
+    ],
+    "description": "A colourful tissue-box cover from Dusen Dusen and Areaware.",
+    "productUrl": "https://www.dusendusen.com/products/everybody-tissue-box-holder",
+    "sourceUrl": "https://www.dusendusen.com/products/everybody-tissue-box-holder",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0999/7114/files/DD25-BFerry-20250729-0211-WEB.jpg?v=1759868042",
+    "image": "img/objects/dusen-tissue.jpg",
+    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
+    "width": 1800,
+    "height": 2250
+  },
+  {
+    "id": "hay-clock",
+    "name": "Table Clock, Green",
+    "brand": "HAY",
+    "category": "work",
+    "tags": [
+      "time",
+      "Jasper Morrison"
+    ],
+    "description": "A compact tabletop clock designed by Jasper Morrison.",
+    "productUrl": "https://hayshop.com.au/products/table-clock-green",
+    "sourceUrl": "https://hayshop.com.au/products/table-clock-green",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0059/4581/9225/files/655da968f0fc236d4e08884d.jpg?v=1791203936",
+    "image": "img/objects/hay-clock.jpg",
+    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
+    "width": 1100,
+    "height": 1100
+  },
+  {
+    "id": "hay-portable",
+    "name": "PC Portable",
+    "brand": "HAY",
+    "category": "living",
+    "tags": [
+      "lighting",
+      "Pierre Charpin"
+    ],
+    "description": "A portable lamp designed by Pierre Charpin.",
+    "productUrl": "https://hayshop.com.au/products/pc-portable-light",
+    "sourceUrl": "https://hayshop.com.au/products/pc-portable-light",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0059/4581/9225/files/67a41bbe9a58685ace332cef.jpg?v=1791120540",
+    "image": "img/objects/hay-portable.jpg",
+    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
+    "width": 1213,
+    "height": 1213
+  },
+  {
+    "id": "hay-crate",
+    "name": "Colour Crate Mini, Red",
+    "brand": "HAY",
+    "category": "work",
+    "tags": [
+      "storage",
+      "colour"
+    ],
+    "description": "Small, stackable storage crates in a bold red.",
+    "productUrl": "https://hayshop.com.au/products/colour-crate-mini-set-of-2-red",
+    "sourceUrl": "https://hayshop.com.au/products/colour-crate-mini-set-of-2-red",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0059/4581/9225/files/66fcc8b64a25bf50ea91c0b2_31593a48-abaf-4a53-bcfa-b583420b6f38.jpg?v=1776729305",
+    "image": "img/objects/hay-crate.jpg",
+    "usageCaveat": "Brand product photography. No unrestricted-use license verified; private preview use only pending rights review.",
+    "width": 1200,
+    "height": 1200
+  }
+]

@@ -16,10 +16,10 @@ def translate(value):
     return TRANSLATIONS[key] if key in TRANSLATIONS else value
 
 class JapanesePage(HTMLParser):
-    def __init__(self, about):
+    def __init__(self, path):
         super().__init__(convert_charrefs=False)
-        self.about = about
-        self.path = 'about/' if about else ''
+        self.about = bool(path)
+        self.path = path
         self.english = 'https://2d1.studio/' + self.path
         self.japanese = 'https://2d1.studio/ja/' + self.path
         self.output = []
@@ -51,7 +51,7 @@ class JapanesePage(HTMLParser):
             else: a['href'] = './'; a['aria-current'] = 'page'
         if tag == 'script' and 'js/language.js' in a.get('src',''):
             prefix = '../../' if self.about else '../'
-            self.output.append(f'<script src="{prefix}js/ja.js?v=4" defer></script>\n  ')
+            self.output.append(f'<script src="{prefix}js/ja.js?v=5" defer></script>\n  ')
         self.output.append('<' + tag + ''.join(' '+k if v is None else ' '+k+'="'+escape(v,quote=True)+'"' for k,v in a.items()) + '>')
         if tag == 'link' and 'css/fonts.css' in a.get('href',''):
             prefix = '../../' if self.about else '../'
@@ -78,10 +78,10 @@ class JapanesePage(HTMLParser):
             self.output.append('になれることを願って。')
         else: self.output.append(escape(translate(data),quote=False))
 
-for about in [False,True]:
-    source = ROOT / ('about/index.html' if about else 'index.html')
-    destination = ROOT / ('ja/about/index.html' if about else 'ja/index.html')
-    parser = JapanesePage(about)
+for path in ['', 'about/', 'objects/']:
+    source = ROOT / (path + 'index.html')
+    destination = ROOT / ('ja/' + path + 'index.html')
+    parser = JapanesePage(path)
     parser.feed(source.read_text())
     destination.parent.mkdir(parents=True,exist_ok=True)
     destination.write_text(''.join(parser.output))

@@ -9,7 +9,7 @@ import shutil
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / 'dist'
 MARKER = OUTPUT / '.2d1-preview-build'
-PAGES = ('index.html', 'about/index.html', 'ja/index.html', 'ja/about/index.html')
+PAGES = ('index.html', 'about/index.html', 'ja/index.html', 'ja/about/index.html', 'objects/index.html', 'ja/objects/index.html')
 ASSETS = ('css', 'js', 'img', 'fonts')
 EXTENSIONS = {'.css', '.js', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif',
               '.ico', '.avif', '.woff', '.woff2', '.eot', '.ttf', '.otf', '.txt', '.md'}
@@ -49,7 +49,7 @@ def build():
     files = [p for p in OUTPUT.rglob('*') if p.is_file()]
     print(f'Preview package: {OUTPUT}')
     print(f'{len(files)} files, {sum(p.stat().st_size for p in files) / 1024 / 1024:.1f} MiB')
-    print('Only the four active pages and site assets are included. No publication performed.')
+    print('Only the six active pages and site assets are included. No publication performed.')
 
 
 if __name__ == '__main__':

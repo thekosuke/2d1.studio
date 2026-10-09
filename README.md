@@ -80,3 +80,32 @@ All content sections on Home and About, plus the footer, share a maximum 960px c
 ### Brand assets — 8 October
 
 The updated logo is used by the hero, docked mark, eye overlay, tote embroidery and structured-data organization image. SVG/PNG/ICO favicons, the 180px Apple touch icon, 512px brand tile and 1200 × 630 social card use Icon Red on soft beige. Square assets match the supplied reference with the logo at 70% width; the social card uses a centered 600px mark with no extra copy. All four pages reference versioned assets, with English/Japanese social-image descriptions. The logo remains transparent wherever it overlays the site or appears on the tote. Original assets are preserved in `_archive/pre-logo-2026-10-08/`. `scripts/build-brand-assets.mjs` regenerates the branded exports from `logo_red.svg` using Sharp as a development-only dependency.
+
+
+## Objects — private working collection
+
+`/objects/` and `/ja/objects/` show ten source-credited placeholder selections,
+including HAY’s Miz water bottle, Alessi’s Anna G. corkscrew and Dusen Dusen
+slippers. Objects is linked from the home introduction and both existing page
+footers. Brand/product names remain original; interface text and descriptions
+are translated. Extra selections are placeholders, not confirmed personal endorsements.
+
+The quiet, beige canvas repeats the filtered finite collection in all directions.
+Drag with a mouse or finger, or use a trackpad/wheel. Category and tag filters
+combine; empty results have a Clear filters control. A List view presents each
+object once, supports normal tab navigation, and is the no-JavaScript default.
+In Grid view, focus the canvas and use arrow keys to pan, Enter/Space to open the
+center object, or Home to reset. A tap/click opens a native dialog with the full
+image, factual description, tags, product link and image-source link. Escape,
+Close and backdrop dismissal restore focus. Drag release/cancellation never
+opens a product. There is no inertia, autoplay, backend or saved browsing state.
+Virtualization bounds live tiles to the viewport rather than growing the DOM.
+
+Canonical product metadata: `data/objects.json`; original-resolution local images:
+`img/objects/`. `python3 scripts/build-objects.py` regenerates English HTML; then
+run Japanese and preview generators. Sources/dimensions/rights caveats are in
+`docs/OBJECTS-SOURCES.md`. Brand photography is retained for private review;
+public-use clearance is not implied. The preview package now includes six pages.
+`node tests/objects.mjs` checks indexing/filter edge cases and pointer lifecycles.
+Desktop and tablet page anchors now share the mobile inline arrangement: Studio
+and Shop left of the centered docked logo, Connect right.
