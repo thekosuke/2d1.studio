@@ -9,7 +9,7 @@
  * Notion form itself.
  */
 (() => {
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const t = window.SiteLanguage?.t || (text => text);
   if (!document.querySelector('#contact')) {
     document.body.insertAdjacentHTML('beforeend', `
     <dialog class="contact" id="contact" aria-labelledby="contact-title">
@@ -20,7 +20,8 @@
         </div>
         <form class="contact-form" id="contact-form" novalidate>
           <h2 class="contact-title" id="contact-title">Say hello.</h2>
-          <p class="contact-intro">Tell us a little about you and what you have in mind. We’ll get back to you within five business days.</p>
+          <p class="contact-intro">Tell us a little about you and what you have in mind.</p>
+          <p class="contact-notice">This form isn’t connected yet. Nothing you enter is sent or saved.</p>
           <div class="field">
             <label class="field-label" for="c-name">Full name <span class="req" aria-hidden="true"></span></label>
             <input class="field-input" id="c-name" name="name" type="text" autocomplete="name" required maxlength="120">
@@ -47,20 +48,21 @@
           </div>
           <div class="field-trap" aria-hidden="true"><label for="c-website">Website</label><input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="contact-foot">
-            <button class="contact-send" type="submit"><span class="send-label">Send</span><span class="send-arrow" aria-hidden="true">→</span></button>
+            <button class="contact-send intro-cta" type="submit"><span class="send-label">Send</span><span class="send-arrow" aria-hidden="true">→</span></button>
             <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
           </div>
         </form>
         <div class="contact-done" hidden>
           <p class="contact-title contact-done-title" tabindex="-1">Thank you<span class="done-name"></span>.</p>
           <p class="contact-intro">Your message is in. We’ll get back to you within five business days.</p>
-          <button class="contact-send" type="button" data-close><span class="send-label">Close</span></button>
+          <button class="contact-send intro-cta" type="button" data-close><span class="send-label">Close</span></button>
         </div>
         <p class="contact-fallback" hidden>Our form isn’t connected yet, so nothing was sent. You can reach us through <a href="https://temporal-sight-127.notion.site/966aab52301b4588a1c875bf81ac421a?pvs=105" target="_blank" rel="noopener noreferrer">our Notion form<span class="sr-only"> (opens in a new tab)</span></a> instead.</p>
       </div>
     </dialog>`);
   }
   const contact = document.querySelector('#contact');
+  window.SiteLanguage?.translate(contact);
   const contactForm = document.querySelector('#contact-form');
   if (contact && contactForm && typeof contact.showModal === 'function') {
     const eyes = contact.querySelector('.contact-eyes');
@@ -85,24 +87,10 @@
     function open(event) {
       if (event) { if (event.metaKey || event.ctrlKey || event.shiftKey || event.button > 0) return; event.preventDefault(); }
       opener = document.activeElement;
-      contact.classList.remove('is-closing');
-      contact.showModal();
-      document.documentElement.classList.add('has-dialog');
-      mood('closed');
-      window.setTimeout(() => mood(''), reducedMotion.matches ? 0 : 650);   // they open once it lands
+      window.SiteDrawer.open(contact, opener);
+      mood('');
       look(0, 0.4);
-      if (!done.hidden) return;
-      window.setTimeout(() => contactForm.querySelector('#c-name').focus({ preventScroll: true }), reducedMotion.matches ? 0 : 520);
     }
-    function close() {
-      if (!contact.open) return;
-      if (reducedMotion.matches) { contact.close(); return; }
-      contact.classList.add('is-closing');
-      window.setTimeout(() => { contact.classList.remove('is-closing'); contact.close(); }, 380);
-    }
-    contact.addEventListener('close', () => { document.documentElement.classList.remove('has-dialog'); opener?.focus?.({ preventScroll: true }); });
-    contact.addEventListener('cancel', (event) => { event.preventDefault(); close(); });
-    contact.addEventListener('click', (event) => { if (event.target === contact || event.target.closest('[data-close]')) close(); });
     document.querySelectorAll('[data-contact]').forEach((link) => link.addEventListener('click', open));
 
     fields.forEach((field) => {
@@ -126,7 +114,7 @@
       message.style.height = `${Math.min(message.scrollHeight, 320)}px`;
     });
 
-    const say = (text, state) => { cStatus.textContent = text; cStatus.dataset.state = state; };
+    const say = (text, state) => { cStatus.textContent = t(text); cStatus.dataset.state = state; };
 
     async function deliver(data) {
       const endpoint = window.TWO_D_ONE_CONFIG?.contactEndpoint;
@@ -157,26 +145,25 @@
         const field = invalid.closest('.field');
         field.classList.remove('is-wrong'); void field.offsetWidth; field.classList.add('is-wrong');
         invalid.setAttribute('aria-invalid', 'true');
-        const label = field.querySelector('.field-label').childNodes[0].textContent.trim();
-        say(invalid.type === 'email' && invalid.value ? 'Please check your email address.' : invalid.type === 'radio' ? 'Please choose a category.' : `Please add your ${label.toLowerCase()}.`, 'error');
+        say(invalid.type === 'email' && invalid.value ? 'Please check your email address.' : invalid.type === 'radio' ? 'Please choose a category.' : t('Please fill in this required field.'), 'error');
         mood('squint');
         invalid.focus();
         return;
       }
       const data = Object.fromEntries(new FormData(contactForm));
-      if (data.website) { say('Thank you.', 'success'); return; } // a bot filled the hidden field
+      if (data.website) { say('Nothing was sent.', 'error'); return; } // a bot filled the hidden field
       delete data.website;
       sending = true;
       send.disabled = true;
       contactForm.setAttribute('aria-busy', 'true');
-      sendLabel.textContent = 'Sending';
+      sendLabel.textContent = t('Sending');
       contactForm.classList.add('is-sending');
       mood('up');
       say('One moment…', 'loading');
       try {
         await deliver(data);
         say('', '');
-        done.querySelector('.done-name').textContent = data.name ? `, ${data.name.split(/\s+/)[0]}` : '';
+        done.querySelector('.done-name').textContent = window.SiteLanguage?.japanese ? '' : data.name ? `, ${data.name.split(/\s+/)[0]}` : '';
         contactForm.hidden = true;
         done.hidden = false;
         contactForm.reset();
@@ -197,7 +184,7 @@
         send.disabled = false;
         contactForm.removeAttribute('aria-busy');
         contactForm.classList.remove('is-sending');
-        sendLabel.textContent = 'Send';
+        sendLabel.textContent = t('Send');
       }
     });
     // Reopening after a sent message starts a fresh form.

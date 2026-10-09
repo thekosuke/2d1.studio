@@ -7,3 +7,6 @@ tmp/
 
 # Local-only Figma capture pages
 _figma-export/
+
+# Generated hosted-preview package
+/dist/

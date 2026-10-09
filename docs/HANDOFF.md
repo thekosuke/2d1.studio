@@ -1,39 +1,106 @@
-# 2D1 collaboration handoff
+# 2D1 — cloud and iPhone handoff
 
 ## Start here
 
-Read `AGENTS.md` completely, then `README.md`. The current-direction block at the top of AGENTS supersedes its historical design notes. The owner is iterating in Figma next; wait for their revised frames and implementation request before redesigning.
+Read `AGENTS.md` completely, then `README.md`. The current-direction block
+supersedes historical design notes. The latest design source is
+[Figma frame 298:650](https://www.figma.com/design/z1J8lyfvwOqtHpQqfNin3x/Website-2026?node-id=298-650),
+with the subsequent copy, color, spacing and interaction changes recorded in
+README. Do not implement from the older exported Figma frames.
 
-Repository: https://github.com/thekosuke/newfiction-web
-Working branch: `site-redesign` (not `main`). No build step or package installation is required.
+The GitHub repository currently resolves to
+https://github.com/thekosuke/2d1.studio.
+The local `origin` still uses the old `newfiction-web` URL; leave that remote
+unchanged unless the owner requests otherwise. Work on `site-redesign`, not
+`main`. The latest local changes must be committed and pushed before a cloud
+clone can use them. Do not assume an older remote checkpoint is current.
+
+## Cloud work with Saul
+
+The owner wants to work from the iOS app with the Mac switched off. Use Saul’s
+cloud computer or a cloud coding environment connected to the repository.
+A local desktop task or `localhost:4173` on this Mac cannot satisfy that goal.
+GitHub access in this desktop session does not establish Saul’s cloud access;
+verify the repository connection in Saul’s environment before starting.
+
+In a new cloud checkout:
 
 ```sh
-git clone --branch site-redesign https://github.com/thekosuke/newfiction-web.git
-cd newfiction-web
+git clone --branch site-redesign https://github.com/thekosuke/2d1.studio.git
+cd 2d1.studio
 python3 scripts/preview.py
 ```
 
-Open http://localhost:4173 and http://localhost:4173/about/. In an existing clone, use a clean working tree, fetch origin, and check out `site-redesign`; do not discard local work. GitHub access must be provided through the agent environment’s repository connection or normal Git credentials, never committed tokens.
+In an existing checkout, inspect `git status` and the branch first. Fetch and
+fast-forward only when the checkout is clean. Do not reset, discard, or
+force-push someone else’s work. Coordinate one active editor at a time on
+`site-redesign`, or use an explicitly requested separate branch.
 
-## Figma source for the next iteration
+No npm install, framework build, API key or backend is required. The local
+server is for the agent’s browser checks; iPhone review requires the separately
+hosted preview URL. Keep the production domain, `main`, GitHub Pages settings,
+DNS and `CNAME` unchanged.
 
-Page: https://www.figma.com/design/z1J8lyfvwOqtHpQqfNin3x/Website-2026?node-id=242-319
+## Prepare the hosted preview
 
-The original sketch is untouched. Eight editable captures are arranged with default views above expanded views:
+```sh
+python3 scripts/build-japanese.py
+python3 scripts/build-preview.py
+```
 
-| Page/state | Desktop 1440 | Mobile 390 |
-| --- | --- | --- |
-| Home default | 252:2 | 259:2 |
-| Home all projects expanded | 255:2 | 261:2 |
-| About folded | 258:2 | 260:2 |
-| About full essay | 256:2 | 262:2 |
+The second command writes the ignored `dist/` directory, with four active pages
+and their assets. The package excludes repository metadata, archives, private
+configuration, handoff documents, server code and the production CNAME.
+It adds noindex/nofollow metadata and a disallow-all robots file. A compatible
+host can also use the generated `_headers` file. These indexing controls are
+not access controls: use the chosen host’s private/authenticated access policy.
 
-Frames include all project images, forms, and footers. The 3D tote is represented by a still. Text retains Rand and Rand Mono assignments; local font access may be needed in Figma. The owner will supply revised frames; these exports are the current baseline, not a new approved design. Figma access must be available to the agent separately from GitHub access. Local-only `_figma-export/` capture copies are excluded from Git.
+Private preview: https://two-d-one-design-preview.kosuke-2d1.chatgpt.site
 
-## Constraints and verification
+Sites project ID: `appgprj_6ac8448dc6f081919531a44b83b1c463`. Reuse this Site; do not create a duplicate. Sign in with the owner's ChatGPT account to view it. The local publishing checkout is `tmp/hosted-preview/` (ignored); its `.openai/hosting.json` stores the same ID. To update from another computer, use the Sites skill to open this existing Site, rebuild the latest approved GitHub source with `scripts/build-preview.py`, copy the resulting `dist/` into the Site checkout, and publish through the Sites workflow. GitHub remains the canonical editable source; changes do not automatically deploy. The owner approved this checkpoint and private preview on 9 October 2026; later publication still requires authorization. Once it is, record the exact preview URL,
+project identity and refresh command here. Do not substitute the production
+site URL or claim localhost is accessible from an iPhone with the Mac off.
+Publishing a preview must not deploy to `2d1.studio`.
 
-Preserve copy and archived iterations. Use Icon Red #FF2B00, square UI, accessible native interactions, reduced-motion support, and clean in-page navigation. Both contact and waitlist are intentionally unconnected: never report saved or sent data. No deployment or backend setup is authorized.
+## Current implementation
 
-Preview both pages at 390×844, 768×1024, 1280×800, 1440×900, and 1920×1080 after visual changes. Check overflow, focus, reduced motion, no-JavaScript behavior, project disclosures, and the About fold. Three.js loads from jsDelivr; the tote poster is the fallback when CDN/WebGL is unavailable.
+- Home: viewport-height bordered hero with landing wipe and blinking eyes;
+  intro → Studio → Shop → Connect. Community and its profile form are removed.
+- Hero rises over slower-moving main content. Studio smoothly changes the
+  page ground from beige to gray and back. Native scrolling is preserved.
+- Page anchors enter from the left after the hero; the language switch enters
+  from the right at the same threshold. Both hide on returning to the hero.
+- Dark brown `#140B00` primary ink, Icon Red `#FF2B00`, beige `#FAF0E6`,
+  Studio gray `#E0DCD7`. Square UI, local SC Walla, Noto Sans JP for Japanese.
+- Shop render sits between the first and second description paragraphs.
+  Specifications use 15px text, 8px row padding and a 16px note gap.
+- Live tote follows the mouse, with hover/tap/keyboard X-ray; no dragging.
+- Connect input is 40px. No initial/focus footnote; submission truthfully says
+  nothing was sent or saved. Contact is also unconnected. Do not add a backend.
+- About retains the short-version/expand essay and has no hero.
+- English sources: `index.html`, `about/index.html`; edit `locales/ja.json` and
+  regenerate Japanese with `python3 scripts/build-japanese.py`.
+- Active CSS: `css/walla.css`, `css/fonts.css`, `css/dialogs.css`, `css/about.css`.
+  Active behavior is documented in README; old archived implementations are
+  not the active site.
 
-This checkpoint was explicitly authorized for commit and push. Future commits/pushes and any deployment need a new request. Do not merge to main or change Pages settings. Leave tracked .DS_Store changes out of commits.
+## Verification and Git boundaries
+
+Check Home and About in both languages. Visual changes need phone/tablet/
+desktop review, no horizontal overflow, keyboard focus, reduced motion and
+no-JavaScript fallbacks. Three.js loads from jsDelivr; the tote poster remains
+when WebGL or the CDN is unavailable. Preserve clean in-page URLs.
+
+Do not commit, push or deploy without the owner’s approval for that checkpoint.
+Keep tracked `.DS_Store` changes out of commits. Do not include unrelated local
+font deletions unless the owner explicitly asks. Never merge to `main` or alter
+production hosting as part of a preview update.
+
+## Suggested first message to Saul
+
+> Continue the 2D1 website in the cloud so I can work from my iPhone with my Mac
+> off. Use thekosuke/2d1.studio on branch site-redesign. Read AGENTS.md, README.md
+> and docs/HANDOFF.md before editing, and verify you have the latest approved
+> checkpoint. Use the separate hosted preview for my review. Preserve the
+> English/Japanese site, current design and truthful unconnected forms. Do not
+> change production, merge to main, or publish new changes without my approval.

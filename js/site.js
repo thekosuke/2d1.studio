@@ -1,5 +1,9 @@
 /* Shared navigation: native scrolling, clean addresses, explicit focus. */
 (() => {
+  // Use the usable viewport width so the edge rules exclude scrollbars.
+  const measureViewport = () => document.documentElement.style.setProperty('--viewport-width', `${document.body.clientWidth}px`);
+  measureViewport();
+  addEventListener('resize', measureViewport);
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   function land(target, behavior) {
     target.scrollIntoView({behavior, block: 'start'});

@@ -1,0 +1,5 @@
+/* Brand webfonts supplied with the project. Keep replacements local. */
+@font-face{font-family:Rand;src:url('../fonts/Rand/Rand-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Rand Mono';src:url('../fonts/Rand Mono/RandMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+
+@font-face{font-family:Rand;src:url('../fonts/Rand/Rand-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}

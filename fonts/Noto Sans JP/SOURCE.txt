@@ -1,0 +1,5 @@
+Noto Sans JP variable webfont, weights 400–700.
+Downloaded 2026-10-08 from the official Google Fonts CSS API.
+https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400..700&display=swap
+https://github.com/google/fonts/tree/main/ofl/notosansjp
+Unmodified WOFF2 subsets. License: OFL.txt

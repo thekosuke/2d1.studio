@@ -1,7 +1,7 @@
 // The 2D1 tote, rendered live. Loaded only when the Shop comes near.
 // Units are centimetres. Based on the prototype drawing: black canvas body,
 // one long strap (black outside, red inside) sewn to the side panels, a red
-// square tag in the left seam, the logo embroidered tone on tone beside it,
+// square tag in the left seam, a back logo and tonal pixel eyes on the front,
 // and every pocket on the inside. The front is kept visually square.
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -14,12 +14,13 @@ const TAG = 5.6;
 const RED = 0xff2b00;                // Icon Red, the only red
 const ASPECT = 0.66;                // the framing box; the poster uses the same box
 const FOV = 24, ELEVATION = 11 * Math.PI / 180, DISTANCE = 262, TARGET_Y = 30;
+const CONTAINED_ANGLE = 0, POINTER_TURN = Math.PI * 0.75; // front at rest, ±135° at screen edges
 const BASE_ANGLE = 0.6;             // three-quarter view: front and the tag side
 
 // Front-face placements, in cm along the face (s from its left edge) and down from the rim.
 // The logo, embroidered at the top right of the front face (s = cm from the face's
-// left edge, top = cm down from the rim). Paths from img/brand/logo_eyes.svg.
-const LOGO_VB = [610, 200];
+// left edge, top = cm down from the rim). Paths from the owner’s updated img/brand/logo_white.svg.
+const LOGO_VB = [829, 280];
 const LOGO_W = 5.6;                                  // cm: subtle, not a billboard
 const LOGO_H = LOGO_W * LOGO_VB[1] / LOGO_VB[0];
 // Top right: the gap from the lower hem stitch (1.85 cm) to the logo equals the
@@ -27,12 +28,12 @@ const LOGO_H = LOGO_W * LOGO_VB[1] / LOGO_VB[0];
 const LOGO_TOP = 4.4, LOGO_MARGIN = LOGO_TOP - 1.85;
 const LOGO_AT = { s: (W - 2 * R) + R - LOGO_MARGIN - LOGO_W, top: LOGO_TOP };
 const LOGO = [
-  'M0.0055584 0H150C177 0 200 21.2281 200 50C200 75.9649 179 100 150 100H200V200H0C0 200 0 171.053 0 150C0 126 19 100 50 100H0L0.0055584 0Z',
-  'M305 0C355 0 405 30 405 99.9996C405 170 355 200 305 200H205V0L305 0Z',
-  'M609.438 0V200H460V100H410V0L609.438 0Z'
+  "M828.804 0V280H618.804V140H576.8V0L828.804 0Z",
+  "M428.4 0C498.4 0 568.4 42 568.4 140C568.4 238 498.4 280 428.4 280H288.4V0L428.4 0Z",
+  "M0.00778177 0H210C247.8 0 280 29.7193 280 70C280 106.351 250.6 140 210 140H280V280H0C0 280 0 239.474 0 210C0 176.4 26.6 140 70 140H0L0.00778177 0Z"
 ];
 // Two square eyes (pixels) inside the D (logo units: centres and half-side). They blink.
-const LOGO_EYES = [[253.2, 90.7], [280.3, 90.7]], LOGO_EYE_R = 9.3; // from the logo artwork (26-unit squares at 343/381, y 114 on the 775-unit logo)
+const LOGO_EYES = [[356, 127], [394, 127]], LOGO_EYE_R = 13; // 26-unit squares in the updated mark
 
 /* Deterministic noise ---------------------------------------------------------- */
 function rng(seed) {
@@ -291,7 +292,7 @@ function flatNormal() {
 // Large-scale surface of the body, drawn in cm along the perimeter: hem and
 // stitching, seam puckers, creases, wear, lint, and the pucker around the
 // embroidery. The weave itself comes from the tiled detail layer.
-function bodyTextures(px) {
+function bodyTextures(px, logoAt = LOGO_AT) {
   const w = Math.round(PERIM * px), h = Math.round(H * px);
   const color = document.createElement('canvas'); color.width = w; color.height = h;
   const height = document.createElement('canvas'); height.width = w; height.height = h;
@@ -387,7 +388,7 @@ function bodyTextures(px) {
   const logoScale = X(LOGO_W) / LOGO_VB[0];
   const paths = LOGO.map((d) => new Path2D(d));
   const marks = (ctx) => {
-    ctx.save(); ctx.translate(X(LOGO_AT.s), X(LOGO_AT.top)); ctx.scale(logoScale, logoScale); paths.forEach((p) => ctx.fill(p)); ctx.restore();
+    ctx.save(); ctx.translate(X(logoAt.s), X(logoAt.top)); ctx.scale(logoScale, logoScale); paths.forEach((p) => ctx.fill(p)); ctx.restore();
   };
   cc.save(); cc.shadowColor = 'rgba(0,0,0,0.75)'; cc.shadowBlur = X(0.18); cc.fillStyle = '#3a3a3f'; marks(cc); cc.restore();
   hc.save(); hc.shadowColor = '#000'; hc.shadowBlur = X(0.22); hc.fillStyle = '#9a9a9a'; marks(hc); hc.restore();
@@ -446,7 +447,9 @@ function embroidery(shapes, s0, top, lift = 0) {
   const clean = shapes.map((sh) => {
     const pts = sh.getPoints(16).filter((p, i, arr) => i === 0 || p.distanceTo(arr[i - 1]) > 1e-3);
     if (pts.length > 2 && pts[0].distanceTo(pts[pts.length - 1]) < 1e-3) pts.pop();
-    return new THREE.Shape(pts);
+    const outline = new THREE.Shape(pts);
+    outline.holes = sh.holes.map(hole => new THREE.Path(hole.getPoints(1)));
+    return outline;
   });
   // Split into small triangles (≤ 4 mm) so the patch follows the canvas's bulge
   // instead of cutting chords through it.
@@ -712,6 +715,8 @@ function buildXray(geometries) {
 /* Mount ------------------------------------------------------------------------- */
 export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], onChapter = () => {}, presentation = 'story' }) {
   const contained = presentation === 'contained';
+  const restAngle = contained ? CONTAINED_ANGLE : BASE_ANGLE;
+  const logoAt = contained ? { s: SW + 2 * ARC + SD + (SW - LOGO_W) / 2, top: LOGO_TOP } : LOGO_AT;
   const canvas = document.createElement('canvas');
   canvas.className = 'tote-canvas';
   canvas.setAttribute('aria-hidden', 'true');
@@ -742,7 +747,7 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
   scene.add(rimLight);
 
   const small = Math.min(window.innerWidth, window.innerHeight) < 700;
-  const tex = bodyTextures(small ? 16 : 24);
+  const tex = bodyTextures(small ? 16 : 24, logoAt);
   const aniso = renderer.capabilities.getMaxAnisotropy();
   const canvasTex = (c, srgb) => {
     const t = new THREE.CanvasTexture(c);
@@ -789,14 +794,14 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
   for (let i = 0; i < 260; i++) { wall((i / 260) * PERIM, 1, WALL / 2, hp); hemPts.push(new THREE.Vector3(hp.x, hp.y - 0.1, hp.z)); }
   add(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(hemPts, true, 'centripetal'), 520, 0.2, 10, true), hemMat);
 
-  // Embroidery: the logo at the top right of the face.
+  // The current tote has its logo centered high on the back. Preserve the story placement.
   const logoShapes = LOGO.map((d) => shapeFromPath(d, LOGO_W / LOGO_VB[0]));
-  add(embroidery(logoShapes, LOGO_AT.s, LOGO_AT.top), threadMat).castShadow = false;
+  add(embroidery(logoShapes, logoAt.s, logoAt.top), threadMat).castShadow = false;
   // The eyes: two square pixels of canvas-black thread, raised a touch above the
   // logo so they can blink (each scaled about its own centre).
   const eyeMat = new THREE.MeshPhysicalMaterial({ color: 0x1b1b1e, roughness: 0.5, normalMap: stitches, normalScale: new THREE.Vector2(1.1, 1.1), sheen: 0.5, sheenRoughness: 0.4, sheenColor: 0x55555c });
   const k = LOGO_W / LOGO_VB[0], eyeR = LOGO_EYE_R * k;
-  const eyes = LOGO_EYES.map(([cx, cy]) => {
+  const eyes = (contained ? [] : LOGO_EYES).map(([cx, cy]) => {
     const d = eyeR * 2;
     const pixel = new THREE.Shape([new THREE.Vector2(0, 0), new THREE.Vector2(d, 0), new THREE.Vector2(d, -d), new THREE.Vector2(0, -d)]);
     const g = embroidery([pixel], LOGO_AT.s + (cx - LOGO_EYE_R) * k, LOGO_AT.top + (cy - LOGO_EYE_R) * k, 0.03);
@@ -809,6 +814,34 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     solid.add(m);
     return m;
   });
+
+  // A charcoal, directional finish: barely there face-on, catching light as it turns.
+  // Ghost reference: each eye is a 4 × 4 pixel silhouette with a single
+  // square highlight at column 2, row 2; the eyes sit six pixels apart.
+  let characterMat = null, characterGlintMat = null;
+  if (contained) {
+    characterMat = new THREE.MeshPhysicalMaterial({
+      color: 0x29292d, roughness: 0.38, metalness: 0.15,
+      normalMap: stitches, normalScale: new THREE.Vector2(0.12, 0.12),
+      clearcoat: 0.45, clearcoatRoughness: 0.28, anisotropy: 0.85,
+      sheen: 0.65, sheenColor: 0x55555b, sheenRoughness: 0.35,
+      transparent: true, depthWrite: false
+    });
+    characterGlintMat = characterMat.clone();
+    characterGlintMat.color.setHex(0x707078);
+    const unit = 1.35, pairWidth = 14 * unit;
+    for (const offset of [0, 10 * unit]) {
+      const eye = shapeFromPath('M1 0H3V1H4V3H3V4H1V3H0V1H1Z', unit);
+      eye.holes.push(new THREE.Path([
+        new THREE.Vector2(unit, -unit), new THREE.Vector2(2 * unit, -unit),
+        new THREE.Vector2(2 * unit, -2 * unit), new THREE.Vector2(unit, -2 * unit)
+      ]));
+      const mesh = add(embroidery([eye], (SW - pairWidth) / 2 + offset, 15), characterMat);
+      mesh.castShadow = false;
+      const glint = shapeFromPath('M1 1H2V2H1Z', unit);
+      add(embroidery([glint], (SW - pairWidth) / 2 + offset, 15), characterGlintMat).castShadow = false;
+    }
+  }
 
   const strapGeo = buildStrap();
   shapeStrap(strapGeo, 0);
@@ -828,6 +861,11 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
 
   const xray = buildXray({ shell: [body.outer, body.bottom], strap: strapGeo, tag });
   bag.add(xray.group);
+  // Dark X-ray lines stay readable on the transparent, white-ground preview.
+  if (contained) {
+    xray.mats.forEach(m => { if (m.uniforms.uColor.value.getHex() !== RED) m.uniforms.uColor.value.setHex(0x303038); });
+    xray.dashes.forEach(d => d.material.color.setHex(0x303038));
+  }
   const xrayTag = xray.group.children.find((c) => c.userData.follow);
   tagGroup.updateMatrix();
   xrayTag.matrixAutoUpdate = false;
@@ -908,8 +946,17 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
   }
 
   /* Motion state */
-  let xr = 0, xrTarget = 0;
-  let progress = 0, angle = BASE_ANGLE, drag = 0, dragVel = 0, swingPos = 0, swingVel = 0;
+  let xr = 0, xrTarget = 0, xrHover = false;
+  const raycaster = new THREE.Raycaster();
+  const pointer = new THREE.Vector2();
+  function hitTest(clientX, clientY) {
+    const box = canvas.getBoundingClientRect();
+    pointer.set((clientX-box.left)/box.width*2-1, -(clientY-box.top)/box.height*2+1);
+    bag.updateWorldMatrix(true,true);
+    raycaster.setFromCamera(pointer,camera);
+    return raycaster.intersectObject(solid,true).length > 0;
+  }
+  let progress = 0, angle = restAngle, drag = 0, dragVel = 0, swingPos = 0, swingVel = 0;
   let last = performance.now(), dirty = true, visible = false, raf = 0, dragging = false, lastX = 0, lastT = 0;
   // Camera: where it looks and how far away, eased toward the current view.
   const DIR = new THREE.Vector3(0, Math.sin(ELEVATION), Math.cos(ELEVATION));
@@ -997,7 +1044,7 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     raf = 0;
     const dt = Math.min(0.05, (now - last) / 1000); last = now;
     if (!still()) readScroll();
-    if (!dragging) { drag += dragVel * dt; dragVel *= Math.exp(-dt * 3.2); }
+    if (!dragging && !contained) { drag += dragVel * dt; dragVel *= Math.exp(-dt * 3.2); }
     const { c: ch, t: ct } = chapterAt(still() ? 1 : progress);
     if (ch.key !== chapterKey) { chapterKey = ch.key; onChapter(chapterKey); }
     stage.style.setProperty('--chapter-t', ct.toFixed(3)); // fills the current chapter's bar
@@ -1006,10 +1053,13 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     const f = story;
     let yawGoal;
     if (f) yawGoal = f.yaw;
-    else if (contained) yawGoal = BASE_ANGLE;
+    else if (contained) yawGoal = restAngle;
     else if (ch.key === 'intro') yawGoal = BASE_ANGLE - (1 - ct) * 2.6;          // turning in
     else yawGoal = BASE_ANGLE + (still() ? 0 : smoothstep(0, 0.7, ct) * Math.PI * 2); // one full lap, ending where it started
-    let target = yawGoal + Math.PI * 2 * Math.round((angle - yawGoal) / (Math.PI * 2)) + drag;
+    // Wrap around the complete goal, including drag, so crossing half a turn
+    // cannot add another revolution on every frame. The contained tote has hard stops.
+    const draggedYaw = yawGoal + drag;
+    let target = contained ? draggedYaw : draggedYaw + Math.PI * 2 * Math.round((angle - draggedYaw) / (Math.PI * 2));
     const ease = (rate) => (still() ? 1 : 1 - Math.exp(-dt * rate));
     if (still()) { tiltGoal = 0; turnGoal = 0; dragVel = 0; }
     tilt += (tiltGoal - tilt) * ease(5);
@@ -1019,7 +1069,7 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     angle = still() ? target : angle + (target - angle) * (1 - Math.exp(-dt * 7));
     const omega = (angle - prev) / Math.max(dt, 1e-3);
     // The strap lags behind the spin and settles like fabric does.
-    const force = still() ? 0 : -omega * 1.6;
+    const force = still() ? 0 : -omega * (contained ? 0.6 : 1.6);
     swingVel += ((force - swingPos) * 38 - swingVel * 7.5) * dt;
     swingPos += swingVel * dt;
     swingPos = Math.max(-9, Math.min(9, swingPos));
@@ -1028,10 +1078,16 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     spin.rotation.y = angle;
     blobSpin.rotation.y = angle;
     // X-ray: cross-fade the solid bag into the see-through one.
-    const xrGoal = xrTarget || ch.xray ? 1 : 0;
+    const xrGoal = xrTarget || xrHover || ch.xray ? 1 : 0;
+    if(contained) stage.dataset.xray = xrGoal ? 'true' : 'false';
     xr = still() ? xrGoal : xr + (xrGoal - xr) * (1 - Math.exp(-dt * 8));
     if (Math.abs(xrGoal - xr) < 0.002) xr = xrGoal;
     solidMats.forEach((m) => { m.opacity = 1 - xr; m.depthWrite = xr < 0.5; });
+    if (characterMat) {
+      // A monochrome reveal at oblique angles, never a bright decal at rest.
+      const reveal = smoothstep(0.12, 0.95, Math.abs(Math.sin(angle)));
+      characterMat.opacity = characterGlintMat.opacity = (0.08 + 0.44 * reveal) * (1 - xr);
+    }
     xray.mats.forEach((m) => { m.uniforms.uOpacity.value = xr; });
     xray.dashes.forEach((d) => { d.material.opacity = xr * d.material.userData.max; });
     solid.visible = xr < 0.999;
@@ -1083,18 +1139,36 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
   reducedMotion.addEventListener('change', wake);
   if (!contained) window.setInterval(() => { if (visible && !still() && performance.now() >= blinkAt) request(); }, 500);
   document.addEventListener('visibilitychange', () => { if (!document.hidden && visible) wake(); });
-  // The bag follows a fine pointer anywhere over the stage.
+  // Full-viewport mapping: left reveals the right side, right reveals the left.
+  // Bounded absolute angles cannot accumulate extra revolutions.
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)');
-  (contained ? stage : window).addEventListener('pointermove', (e) => {
-    if (!visible || still() || !fine.matches || dragging || e.pointerType !== 'mouse') return;
+  window.addEventListener('pointermove', (e) => {
+    if (!visible || still() || !fine.matches || dragging || e.pointerType !== 'mouse' || document.documentElement.classList.contains('has-dialog')) return;
     const box = stage.getBoundingClientRect();
-    const nx = Math.max(-1, Math.min(1, (e.clientX - (box.left + box.width / 2)) / (box.width / 2)));
+    const nx = Math.max(-1, Math.min(1, contained ? e.clientX / window.innerWidth * 2 - 1 : (e.clientX - (box.left + box.width / 2)) / (box.width / 2)));
     const ny = Math.max(-1, Math.min(1, (e.clientY - (box.top + box.height / 2)) / (box.height / 2)));
-    tiltGoal = ny * 0.2; turnGoal = nx * 0.22;
+    tiltGoal = ny * (contained ? 0.12 : 0.2); turnGoal = nx * (contained ? POINTER_TURN : 0.22);
     request();
   }, { passive: true });
-  stage.addEventListener('pointerleave', () => { tiltGoal = 0; turnGoal = 0; request(); });
+  if (contained) stage.addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse' || !fine.matches) return;
+    const next = hitTest(e.clientX,e.clientY);
+    if (next !== xrHover) { xrHover=next; request(); }
+  }, {passive:true});
+  stage.addEventListener('pointerleave', () => {
+    xrHover = false;
+    if (!contained) { tiltGoal = 0; turnGoal = 0; }
+    request();
+  });
+  const resetPointer = () => { xrHover = false; tiltGoal = 0; turnGoal = 0; if (visible) wake(); };
+  if (contained) {
+    document.documentElement.addEventListener('pointerleave', resetPointer);
+    window.addEventListener('blur', resetPointer);
+    fine.addEventListener('change', resetPointer);
+  }
 
+  // Preserve the older story interaction; the current contained tote only follows the pointer.
+  if (!contained) {
   // Drag to turn it yourself (horizontal only; vertical swipes still scroll).
   canvas.addEventListener('pointerdown', (e) => {
     if (still()) return;
@@ -1104,31 +1178,39 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
   canvas.addEventListener('pointermove', (e) => {
     if (!dragging || still()) return;
     const dx = e.clientX - lastX, dtm = Math.max(1, e.timeStamp - lastT);
-    drag += dx * 0.012; dragVel = (dx * 0.012) / (dtm / 1000);
+    if (contained) {
+      drag = Math.max(-Math.PI, Math.min(Math.PI, drag + dx * 0.004));
+      dragVel = 0;
+    } else { drag += dx * 0.012; dragVel = (dx * 0.012) / (dtm / 1000); }
     lastX = e.clientX; lastT = e.timeStamp; wake();
   });
-  const release = () => { dragging = false; if (still()) dragVel = 0; stage.classList.remove('is-grabbing'); wake(); };
+  const release = () => { dragging = false; if (still() || contained) dragVel = 0; stage.classList.remove('is-grabbing'); wake(); };
   canvas.addEventListener('pointerup', release);
   canvas.addEventListener('pointercancel', release);
+  canvas.addEventListener('lostpointercapture', release);
+
+  }
 
   resize();
   readScroll();
-  angle = BASE_ANGLE;
+  angle = restAngle;
   stage.prepend(canvas);
   renderer.render(scene, camera);
   placeSpots();
 
   return {
     canvas,
+    hitTest,
     setXray(on) { xrTarget = on ? 1 : 0; wake(); },
     setOpen(key) { openKey = key; wake(); },
-    // Renders the resting three-quarter view into a transparent PNG (used to make the poster).
+    // Renders the resting view into a transparent PNG (used to make the poster).
     snapshot(w = 960, h = 1200) {
       const keep = [width, height, angle, swingPos];
       renderer.setPixelRatio(1); renderer.setSize(w, h, false);
       camera.aspect = w / h; camera.fov = FOV; camera.updateProjectionMatrix();
       camera.clearViewOffset(); camera.position.set(0, TARGET_Y + DISTANCE * Math.sin(ELEVATION), DISTANCE * Math.cos(ELEVATION)); camera.lookAt(0, TARGET_Y, 0);
-      spin.rotation.y = blobSpin.rotation.y = BASE_ANGLE; shapeStrap(strapGeo, 0); lean.position.y = 0; lean.rotation.set(0.05, 0, -0.045); eyes.forEach((e) => { e.visible = false; });
+      spin.rotation.y = blobSpin.rotation.y = restAngle; shapeStrap(strapGeo, 0); lean.position.y = 0; lean.rotation.set(0.05, 0, -0.045); eyes.forEach((e) => { e.visible = false; });
+      if (characterMat) characterMat.opacity = characterGlintMat.opacity = 0.08;
       renderer.render(scene, camera);
       const url = canvas.toDataURL('image/png');
       [width, height, angle, swingPos] = keep;
