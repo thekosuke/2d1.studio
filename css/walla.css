@@ -150,3 +150,13 @@ html[lang="ja"] .section-copy,html[lang="ja"] .services dt,html[lang="ja"] .serv
 .js .home-page > .language-switch.is-visible{opacity:1;transform:translateX(0);visibility:visible;pointer-events:auto;transition-delay:0s}
 /* Without scroll scripting, language links remain available at the page end. */
 html:not(.js) .home-page > .language-switch{position:static;width:fit-content;margin:0 24px 24px auto}
+
+/* Mobile dock: Studio and Shop to the left of the centered 96px mark. */
+.page-nav-left{display:contents}
+@media(max-width:767px){
+  .js .home-page .page-nav{top:10px;left:max(16px,env(safe-area-inset-left));right:max(16px,env(safe-area-inset-right));display:grid;grid-template-columns:minmax(0,1fr) 96px minmax(0,1fr);gap:0;align-items:center;font-size:clamp(10px,2.82vw,11px)}
+  .js .home-page .page-nav-left{grid-column:1;display:flex;align-items:center;gap:clamp(12px,4vw,32px)}
+  .js .home-page .page-nav>a{grid-column:3;justify-self:end}
+  .js .home-page .page-nav a{display:flex;align-items:center;min-height:44px;padding-block:0;white-space:nowrap}
+  .home-page section{scroll-margin-top:80px}
+}

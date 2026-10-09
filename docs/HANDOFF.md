@@ -69,12 +69,12 @@ Publishing a preview must not deploy to `2d1.studio`.
 - Hero rises over slower-moving main content. Studio smoothly changes the
   page ground from beige to gray and back. Native scrolling is preserved.
 - Page anchors enter from the left after the hero; the language switch enters
-  from the right at the same threshold. Both hide on returning to the hero.
+  from the right at the same threshold. Both hide on returning to the hero. Phones place Studio/Shop left of the logo and Connect right. The phone intro emerges after 25% less scroll distance; desktop motion is unchanged.
 - Dark brown `#140B00` primary ink, Icon Red `#FF2B00`, beige `#FAF0E6`,
   Studio gray `#E0DCD7`. Square UI, local SC Walla, Noto Sans JP for Japanese.
 - Shop render sits between the first and second description paragraphs.
   Specifications use 15px text, 8px row padding and a 16px note gap.
-- Live tote follows the mouse, with hover/tap/keyboard X-ray; no dragging.
+- Live tote follows the mouse; touch/pen horizontal dragging rotates it with ±135° stops and no momentum. Vertical swipes retain page scroll; hover/tap/keyboard X-ray is preserved.
 - Connect input is 40px. No initial/focus footnote; submission truthfully says
   nothing was sent or saved. Contact is also unconnected. Do not add a backend.
 - About retains the short-version/expand essay and has no hero.
@@ -104,3 +104,30 @@ production hosting as part of a preview update.
 > checkpoint. Use the separate hosted preview for my review. Preserve the
 > English/Japanese site, current design and truthful unconnected forms. Do not
 > change production, merge to main, or publish new changes without my approval.
+
+## Cloud mobile review — 9 October 2026
+
+Private preview version 3 is published at the same URL above, from Sites source
+commit `41455659a3524063c76dd7431537c2b8acf1a61a`. It includes the owner's mobile
+anchor placement, touch tote rotation, and 25%-earlier intro-entry requests.
+Version 3 doubles only the mobile Studio–Shop gap from `clamp(6px,2vw,16px)`
+to `clamp(12px,4vw,32px)` in both languages (7.8px → 15.6px at 390px).
+The owner requested synchronizing these accumulated refinements to GitHub for
+cross-device work. The `site-redesign` checkpoint containing this handoff includes
+all three mobile changes and the doubled gap. The separate Sites source commit
+above has the same generated site content; GitHub and Sites have different commit
+IDs because the Sites repository contains only the packaged preview.
+
+For desktop browser review, open the private URL above with the owner's ChatGPT
+account. For local editing, inspect local changes first, then fetch and fast-forward
+`site-redesign` only when clean. Never reset a dirty desktop checkout to synchronize
+it. Continue using one active editor at a time; requested preview refinements must
+be kept aligned between canonical source and the private preview, without changing
+production hosting.
+
+`node tests/mobile-interactions.mjs` checks touch direction, capture, cancellation,
+bounds and repeated gestures, plus intro-entry calculations at six phone heights.
+JavaScript syntax, Japanese generation, local references and packaging pass.
+Real-browser visual/touch verification remains outstanding: standalone Chromium
+cannot open its required sockets in this executor, and the separate browser
+cannot access its localhost. No production hosting or backend was changed.

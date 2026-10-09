@@ -4,6 +4,7 @@
 // square tag in the left seam, a back logo and tonal pixel eyes on the front,
 // and every pocket on the inside. The front is kept visually square.
 import * as THREE from 'three';
+import { bindTouchRotation } from './tote-touch.js?v=1';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { TessellateModifier } from 'three/addons/modifiers/TessellateModifier.js';
@@ -1147,6 +1148,7 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     const box = stage.getBoundingClientRect();
     const nx = Math.max(-1, Math.min(1, contained ? e.clientX / window.innerWidth * 2 - 1 : (e.clientX - (box.left + box.width / 2)) / (box.width / 2)));
     const ny = Math.max(-1, Math.min(1, (e.clientY - (box.top + box.height / 2)) / (box.height / 2)));
+    if (contained) drag = 0; // A real mouse resumes the original absolute mapping.
     tiltGoal = ny * (contained ? 0.12 : 0.2); turnGoal = nx * (contained ? POINTER_TURN : 0.22);
     request();
   }, { passive: true });
@@ -1167,7 +1169,15 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
     fine.addEventListener('change', resetPointer);
   }
 
-  // Preserve the older story interaction; the current contained tote only follows the pointer.
+  // Touch rotation is direct even with reduced motion; vertical swipes stay native.
+  if (contained) bindTouchRotation({
+    stage, hitTest, limit: POINTER_TURN,
+    getAngle: () => angle - restAngle,
+    setAngle: value => { drag = value; turn = turnGoal = 0; tiltGoal = 0; xrHover = false; wake(); },
+    setDragging: value => { dragging = value; dragVel = 0; wake(); }
+  });
+
+  // Preserve the older story's mouse/drag interaction.
   if (!contained) {
   // Drag to turn it yourself (horizontal only; vertical swipes still scroll).
   canvas.addEventListener('pointerdown', (e) => {

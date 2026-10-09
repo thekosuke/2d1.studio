@@ -63,7 +63,7 @@ window.TWO_D_ONE_JA = {
   "For example, whether you’re single, dating, or in a relationship.": "例：現在は独身、デート中、パートナーがいるなど。",
   "Black canvas 2D1 tote with a red strap lining and square tag": "赤いストラップの裏地と四角いタグがついた、2D1の黒いキャンバストート",
   "Black canvas tote with subtle charcoal pixel eyes on the front, a small 2D1 logo on the back, red strap lining, and a square red tag.": "前面に控えめなチャコールグレーのピクセルアイ、背面に小さな2D1ロゴ、赤いストラップの裏地と四角い赤タグを配した黒いキャンバストート。",
-  "2D1 tote. Hover over the bag to see inside; tap or press Enter to toggle X-ray.": "2D1のトート。バッグにカーソルを重ねると中が見えます。タップまたはEnterキーで透視表示を切り替えられます。",
+  "2D1 tote. Drag horizontally on touch screens to rotate. Hover over the bag to see inside; tap or press Enter to toggle X-ray.": "2D1のトート。タッチ画面では横にドラッグして回転できます。バッグにカーソルを重ねると中が見えます。タップまたはEnterキーで透視表示を切り替えられます。",
   "Aviator identity against a purple sky": "紫の空を背景にしたAviatorのブランドアイデンティティ",
   "Aviator website design": "Aviatorのウェブサイト",
   "Aviator identity on a water bottle": "ボトルに展開したAviatorのロゴ",

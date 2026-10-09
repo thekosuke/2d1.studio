@@ -4,6 +4,8 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const heroCover = document.querySelector('.home-page > .masthead');
   const main = document.getElementById('main');
+  const intro = main?.querySelector('.intro');
+  const mobile = matchMedia('(max-width: 767px)');
   const studio = document.getElementById('studio');
   const clamp = value => Math.max(0, Math.min(1, value));
   const smooth = value => { const n = clamp(value); return n * n * (3 - 2 * n); };
@@ -12,9 +14,18 @@
     sceneQueued = false;
     if (heroCover && main) {
       // The cover travels at native scroll speed; the page beneath travels at
-      // 70% until the cover clears. Neither scrolling nor document flow is held.
+      // 70% on desktop; phones reveal the intro sooner. Native scroll is never held.
       const remaining = Math.max(0, heroCover.offsetHeight - Math.max(0, scrollY));
-      main.style.setProperty('--cover-offset', `${reduced.matches ? 0 : -remaining * .3}px`);
+      let coverFactor = .3;
+      if (mobile.matches && intro) {
+        // The first line emerges when intro padding exceeds the cover offset.
+        // Reduce that scroll distance by 25%, rather than shortening a timer.
+        const padding = parseFloat(getComputedStyle(intro).paddingTop) || 0;
+        const originalEntry = Math.max(0, heroCover.offsetHeight - padding / .3);
+        const earlierEntry = originalEntry * .75;
+        coverFactor = Math.min(.3, padding / Math.max(1, heroCover.offsetHeight - earlierEntry));
+      }
+      main.style.setProperty('--cover-offset', `${reduced.matches ? 0 : -remaining * coverFactor}px`);
     }
     if (studio) {
       const box = studio.getBoundingClientRect();
