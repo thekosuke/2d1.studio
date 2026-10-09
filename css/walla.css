@@ -174,3 +174,13 @@ html:not(.js) .home-page > .language-switch{position:static;width:fit-content;ma
 }
 .footer-pages{display:flex;gap:24px;padding-bottom:24px;font:500 13px/1.4 var(--mono)}
 .footer-pages a{display:flex;align-items:center;min-height:44px}.footer-pages a:hover{color:var(--red)}
+
+/* Desktop returns to the quiet left-hand index; mobile remains inline. */
+@media(min-width:1100px){
+ .js .home-page .page-nav{display:flex;top:16px;left:24px;right:auto;flex-direction:column;gap:0;align-items:flex-start}
+ .js .home-page .page-nav-left{display:contents}
+ .js .home-page .page-nav a{min-height:0;padding-block:6px}
+}
+.footer-line{display:flex;align-items:center;gap:32px}
+.footer-line p{flex:none}.footer-line .footer-pages{margin:0;padding:0;gap:24px}
+@media(max-width:767px){.footer-line{gap:16px}.footer-line .footer-pages{gap:16px;font-size:12px}.footer-line p{font-size:12px}}

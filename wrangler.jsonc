@@ -1,0 +1,8 @@
+{
+  // LOCAL DEVELOPMENT ONLY. Sites owns real database provisioning/publication.
+  "name": "2d1-preview-local",
+  "main": "server/purchased-worker.mjs",
+  "compatibility_date": "2026-10-09",
+  "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "2d1-purchased-local", "database_id": "local-only", "migrations_dir": "drizzle" }]
+}

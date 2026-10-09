@@ -10,3 +10,6 @@ _figma-export/
 
 # Generated hosted-preview package
 /dist/
+
+# Local Worker state
+.wrangler/

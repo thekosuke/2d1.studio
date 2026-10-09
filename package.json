@@ -1,0 +1,18 @@
+{
+  "name": "2d1-preview-tools",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:hosted": "node scripts/build-hosted-preview.mjs",
+    "test": "node tests/mobile-interactions.mjs && node tests/objects.mjs && node tests/purchased-backend.mjs",
+    "db:generate": "drizzle-kit generate",
+    "preview:worker": "wrangler dev --local --ip 127.0.0.1 --port 8787",
+    "db:local": "wrangler d1 migrations apply DB --local"
+  },
+  "devDependencies": {
+    "drizzle-kit": "0.31.11",
+    "drizzle-orm": "0.45.4",
+    "esbuild": "0.28.2",
+    "wrangler": "^4.149.0"
+  }
+}

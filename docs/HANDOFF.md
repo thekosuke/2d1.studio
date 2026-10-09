@@ -36,7 +36,8 @@ fast-forward only when the checkout is clean. Do not reset, discard, or
 force-push someone else’s work. Coordinate one active editor at a time on
 `site-redesign`, or use an explicitly requested separate branch.
 
-No npm install, framework build, API key or backend is required. The local
+For the buildless layout preview, no npm install or API key is required.
+The approved Purchased feature additionally needs the Worker/D1 path below. The local
 server is for the agent’s browser checks; iPhone review requires the separately
 hosted preview URL. Keep the production domain, `main`, GitHub Pages settings,
 DNS and `CNAME` unchanged.
@@ -69,14 +70,14 @@ Publishing a preview must not deploy to `2d1.studio`.
 - Hero rises over slower-moving main content. Studio smoothly changes the
   page ground from beige to gray and back. Native scrolling is preserved.
 - Page anchors enter from the left after the hero; the language switch enters
-  from the right at the same threshold. Both hide on returning to the hero. All viewport widths place Studio/Shop inline left of the centered logo and Connect right. The phone intro emerges after 25% less scroll distance; desktop motion is unchanged.
+  from the right at the same threshold. Both hide on returning to the hero. Phone/tablet widths place Studio/Shop inline left of the centered logo and Connect right; desktop 1100px+ uses a vertical list at the left. The phone intro emerges after 25% less scroll distance; desktop motion is unchanged.
 - Dark brown `#140B00` primary ink, Icon Red `#FF2B00`, beige `#FAF0E6`,
   Studio gray `#E0DCD7`. Square UI, local SC Walla, Noto Sans JP for Japanese.
 - Shop render sits between the first and second description paragraphs.
   Specifications use 15px text, 8px row padding and a 16px note gap.
 - Live tote follows the mouse; touch/pen horizontal dragging rotates it with ±135° stops and no momentum. Vertical swipes retain page scroll; hover/tap/keyboard X-ray is preserved.
 - Connect input is 40px. No initial/focus footnote; submission truthfully says
-  nothing was sent or saved. Contact is also unconnected. Do not add a backend.
+  nothing was sent or saved. Contact is also unconnected. Only Objects Purchased has an approved backend.
 - About retains the short-version/expand essay and has no hero.
 - English sources: `index.html`, `about/index.html`; edit `locales/ja.json` and
   regenerate Japanese with `python3 scripts/build-japanese.py`.
@@ -164,3 +165,65 @@ confirmed personal recommendations. No public-use image license is implied;
 review rights before any public deployment. Source and private preview are
 synchronized in the branch checkpoint containing this handoff. Production,
 backend and access settings remain unchanged.
+
+## Immersive Objects checkpoint — 9 October 2026
+
+Private preview version 7 is successfully published from Sites source
+`f97a48d84cc6f096de634c5ea7bef6dbed93b95b`, at the same owner-private URL.
+This supersedes the layout notes for version 5: desktop anchors are vertical
+at the left; mobile/tablet keep the inline layout. Shop adds Explore Objects,
+and Home/About footer links follow the copyright inline.
+
+Objects now fills the viewport with a centered, all-direction draggable grid.
+Header, filters, view, language, info and zoom controls float above it. Maximum
+zoom becomes a one-product horizontal carousel; reducing zoom preserves the
+selected product in the grid. List/no-JavaScript browsing remains available.
+The info popup contains the requested working Familiar Characters description
+and identifies the collection as placeholders. Preserve both language routes.
+
+The owner explicitly approved a small anonymous shared Purchased database,
+one mark per browser/product and no login. The private Site now uses a Worker
+and D1; the initial migration was applied by the successful version 6 deployment
+and must not be edited. Version 7 retains that schema. Cookie-based reversible
+marks are idempotent and counts are shared, but separate browsers or cleared
+cookies can count twice. Nothing was seeded. Contact/signup remain unconnected.
+Details, privacy limits, API and local setup: `docs/PURCHASED-BACKEND.md`.
+
+For a full local preview with Node 24 and Python 3:
+
+```sh
+npm ci
+npm run build:hosted
+npm run db:local
+npm run preview:worker
+```
+
+Open `http://localhost:8787`. This uses an isolated local database, not hosted
+counts. The existing `python3 scripts/preview.py` on port 4173 still supports
+layout review but reports Purchased unavailable, never a fabricated zero.
+Do not run remote Wrangler database commands or deploy with Wrangler.
+
+`npm run build:hosted` regenerates all pages and creates ignored
+`tmp/hosted-build/`: static files in `dist/client`, bundled Worker in
+`dist/server/index.js`, the existing project manifest with `d1: "DB"`, and
+immutable Drizzle migrations. Copy that generated package to the existing
+Sites publishing checkout, preserving its history, then use the Sites workflow.
+Do not use the old static-only package when publishing the Purchased feature.
+
+Verification: `npm test` passes prior mobile/tote/Studio regression checks,
+finite-repeat grid and empty/small filters, interrupted pointer gestures,
+zoom/carousel transitions, focus-return hooks, async count race/failure handling,
+and backend tests applying the actual migration/SQL to real local SQLite via a
+D1 adapter (two browser IDs, repeat toggles, shared reads and uniqueness).
+The local Wrangler migration also succeeded. These are NOT live deployed API
+tests. Hosted publication and source package alignment are verified; actual
+hosted cookie/API persistence and rendered desktop/iPhone interactions remain
+unverified. The authenticated preview has no available authorized cloud browser
+session; standalone Chromium sockets and the local Worker server's network
+interface operation are blocked in this executor. No hosted test votes were
+created. Do not claim screenshots or on-device verification.
+
+Keep requested refinements aligned between canonical `site-redesign` source and
+this private preview. Fetch before edits/pushes and preserve concurrent local
+work; never force-push or reset another editor's dirty checkout. No production
+merge, public audience, DNS or production domain change is included.

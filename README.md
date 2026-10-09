@@ -98,7 +98,7 @@ In Grid view, focus the canvas and use arrow keys to pan, Enter/Space to open th
 center object, or Home to reset. A tap/click opens a native dialog with the full
 image, factual description, tags, product link and image-source link. Escape,
 Close and backdrop dismissal restore focus. Drag release/cancellation never
-opens a product. There is no inertia, autoplay, backend or saved browsing state.
+opens a product. There is no inertia, autoplay or saved browsing state. Purchased marks use the approved backend described below.
 Virtualization bounds live tiles to the viewport rather than growing the DOM.
 
 Canonical product metadata: `data/objects.json`; original-resolution local images:
@@ -107,5 +107,36 @@ run Japanese and preview generators. Sources/dimensions/rights caveats are in
 `docs/OBJECTS-SOURCES.md`. Brand photography is retained for private review;
 public-use clearance is not implied. The preview package now includes six pages.
 `node tests/objects.mjs` checks indexing/filter edge cases and pointer lifecycles.
-Desktop and tablet page anchors now share the mobile inline arrangement: Studio
-and Shop left of the centered docked logo, Connect right.
+Phone/tablet page anchors place Studio and Shop left of the centered docked
+logo and Connect right. Desktop anchors are vertical at the left.
+
+
+## Immersive Objects and shared Purchased marks — 9 October
+
+Desktop (1100px and up) restores the vertical page-anchor list at the left;
+phone/tablet anchors remain inline. Shop now includes Explore Objects. Home and
+About footer links sit inline after the copyright.
+
+Objects’ enhanced canvas fills the viewport behind floating Home/About/logo,
+filter/view controls, language links, info button and zoom slider. It starts
+centered and supports dragging in all directions. The slider’s rightmost value
+switches to a large, one-product horizontal carousel with swipe, arrow buttons
+and keyboard navigation; lowering zoom returns to the same selected product in
+the grid. Resize preserves the selected slide. List/no-JavaScript fallback
+remains available. The info popup contains the owner-requested working copy and
+explicitly identifies the selection as placeholders.
+
+Purchased is a real anonymous, reversible shared mark, using the approved
+private Site Worker and D1 database. One secure first-party browser cookie
+identifies a visitor; a composite database key allows one mark per product per
+browser. The count is not a verified purchase or unique-person tally: separate
+browsers and cleared cookies can count twice. No fake counts, optimistic saves,
+localStorage ownership, personal profile data or seed rows are used. GET must
+succeed before marking; failed or uncertain writes require reloading the count.
+Contact and signup remain unconnected.
+
+Run `npm ci` and `npm test` for development checks. `npm run build:hosted` creates
+an isolated Worker/static package in ignored `tmp/hosted-build/`, without
+publishing. Local full-feature steps are in `docs/PURCHASED-BACKEND.md`.
+The plain Python preview still works for layout but cannot serve shared counts.
+The generated Drizzle migration must remain immutable after deployment.
