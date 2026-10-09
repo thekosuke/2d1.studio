@@ -160,3 +160,6 @@ html:not(.js) .home-page > .language-switch{position:static;width:fit-content;ma
   .js .home-page .page-nav a{display:flex;align-items:center;min-height:44px;padding-block:0;white-space:nowrap}
   .home-page section{scroll-margin-top:80px}
 }
+
+/* Scripted horizontal touch drag; vertical scrolling and pinch zoom stay native. */
+.work-belt.is-touch-draggable{touch-action:pan-y pinch-zoom}

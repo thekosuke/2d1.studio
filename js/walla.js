@@ -201,6 +201,41 @@
     reduced.addEventListener('change', schedule);
     position();
   }
+  // Direct touch browsing avoids autoplay fighting a native momentum scroll.
+  function bindWorkTouch(belt, { setActive, getPeriod, shouldWrap }) {
+    let gesture = null;
+    const release = event => {
+      if (!gesture || (event?.pointerId != null && event.pointerId !== gesture.id)) return;
+      const id = gesture.id;
+      gesture = null;
+      if (belt.hasPointerCapture(id)) belt.releasePointerCapture(id);
+      setActive(false);
+    };
+    belt.addEventListener('pointerdown', event => {
+      if (event.pointerType === 'mouse' || !event.isPrimary || gesture || event.target.closest?.('a,button,input,textarea,select')) return;
+      gesture = { id: event.pointerId, x: event.clientX, y: event.clientY, start: belt.scrollLeft, horizontal: false };
+      setActive(true);
+    });
+    belt.addEventListener('pointermove', event => {
+      if (!gesture || event.pointerId !== gesture.id) return;
+      const dx = event.clientX - gesture.x, dy = event.clientY - gesture.y;
+      if (!gesture.horizontal) {
+        if (Math.max(Math.abs(dx), Math.abs(dy)) < 8) return;
+        if (Math.abs(dy) >= Math.abs(dx)) { release(event); return; }
+        gesture.horizontal = true;
+        belt.setPointerCapture(event.pointerId);
+      }
+      const next = gesture.start - dx, period = getPeriod();
+      belt.scrollLeft = shouldWrap() && period > 0 ? ((next % period) + period) % period
+        : Math.max(0, Math.min(belt.scrollWidth - belt.clientWidth, next));
+    }, { passive: true });
+    belt.addEventListener('pointerup', release);
+    belt.addEventListener('pointercancel', release);
+    belt.addEventListener('lostpointercapture', event => { if (event.target === belt) release(event); });
+    window.addEventListener('blur', () => release());
+    document.addEventListener('visibilitychange', () => { if (document.hidden) release(); });
+    belt.classList.add('is-touch-draggable');
+  }
   const belt = document.querySelector('[data-carousel]');
   if (belt) {
     const track = belt.querySelector('.work-track'), set = belt.querySelector('.work-set');
@@ -218,10 +253,13 @@
     function update(){if(run()&&!frame){position=belt.scrollLeft;last=0;frame=requestAnimationFrame(tick);}}
     function toggle(){paused=!paused;if(!paused)focused=false;update();}
     // Pointer focus must not turn a click into an accidental pause.
-    belt.addEventListener('pointerdown',e=>{focused=false;touching=e.pointerType!=='mouse';update();});
+    belt.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'){focused=false;update();}});
     const releaseTouch=()=>{touching=false;update();};
-    window.addEventListener('pointerup',releaseTouch,{passive:true});
-    window.addEventListener('pointercancel',releaseTouch,{passive:true});
+    bindWorkTouch(belt, {
+      setActive(value) { focused=false;touching=value;position=belt.scrollLeft;update(); },
+      getPeriod: () => set.getBoundingClientRect().width,
+      shouldWrap: () => !reduced.matches
+    });
     belt.addEventListener('focusin',()=>{focused=belt.matches(':focus-visible');update();});
     belt.addEventListener('focusout',()=>{focused=false;paused=false;update();});
     belt.addEventListener('keydown',e=>{if(e.key===' '){e.preventDefault();focused=false;toggle();}if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();paused=true;belt.scrollBy({left:e.key==='ArrowRight'?312:-312,behavior:reduced.matches?'instant':'smooth'});}});

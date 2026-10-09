@@ -4,7 +4,7 @@
 // square tag in the left seam, a back logo and tonal pixel eyes on the front,
 // and every pocket on the inside. The front is kept visually square.
 import * as THREE from 'three';
-import { bindTouchRotation } from './tote-touch.js?v=1';
+import { bindTouchRotation } from './tote-touch.js?v=2';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { TessellateModifier } from 'three/addons/modifiers/TessellateModifier.js';
@@ -1171,7 +1171,7 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
 
   // Touch rotation is direct even with reduced motion; vertical swipes stay native.
   if (contained) bindTouchRotation({
-    stage, hitTest, limit: POINTER_TURN,
+    stage, limit: POINTER_TURN,
     getAngle: () => angle - restAngle,
     setAngle: value => { drag = value; turn = turnGoal = 0; tiltGoal = 0; xrHover = false; wake(); },
     setDragging: value => { dragging = value; dragVel = 0; wake(); }

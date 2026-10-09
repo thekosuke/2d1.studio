@@ -1,5 +1,5 @@
 /* Horizontal touch/pen rotation. Vertical gestures remain native page scroll. */
-export function bindTouchRotation({ stage, hitTest, getAngle, setAngle, setDragging, limit }) {
+export function bindTouchRotation({ stage, getAngle, setAngle, setDragging, limit }) {
   let gesture = null;
   const release = event => {
     if (!gesture || (event?.pointerId != null && event.pointerId !== gesture.id)) return;
@@ -9,7 +9,7 @@ export function bindTouchRotation({ stage, hitTest, getAngle, setAngle, setDragg
     if (stage.hasPointerCapture(id)) stage.releasePointerCapture(id);
   };
   stage.addEventListener('pointerdown', event => {
-    if (event.pointerType === 'mouse' || !event.isPrimary || gesture || !hitTest(event.clientX, event.clientY)) return;
+    if (event.pointerType === 'mouse' || !event.isPrimary || gesture || event.target.closest?.('a,button,input,textarea,select')) return;
     gesture = { id: event.pointerId, x: event.clientX, y: event.clientY, angle: getAngle(), horizontal: false };
   });
   stage.addEventListener('pointermove', event => {

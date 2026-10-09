@@ -107,11 +107,16 @@ production hosting as part of a preview update.
 
 ## Cloud mobile review — 9 October 2026
 
-Private preview version 3 is published at the same URL above, from Sites source
-commit `41455659a3524063c76dd7431537c2b8acf1a61a`. It includes the owner's mobile
+Private preview version 4 is published at the same URL above, from Sites source
+commit `d310688931d0be34ba589ca2ba4cbd5b840508e9`. It includes the owner's mobile
 anchor placement, touch tote rotation, and 25%-earlier intro-entry requests.
 Version 3 doubles only the mobile Studio–Shop gap from `clamp(6px,2vw,16px)`
 to `clamp(12px,4vw,32px)` in both languages (7.8px → 15.6px at 390px).
+Version 4 adds direct horizontal touch/pen dragging to the Studio artwork strip,
+with looping and safe vertical-scroll/cancellation handling. Tote rotation can
+now start anywhere in its presentation stage, including the surrounding blank
+space shown in the owner’s screenshot. A stationary tap still toggles X-ray only
+on the bag itself. Both languages retain the same behavior.
 The owner requested synchronizing these accumulated refinements to GitHub for
 cross-device work. The `site-redesign` checkpoint containing this handoff includes
 all three mobile changes and the doubled gap. The separate Sites source commit
@@ -126,7 +131,8 @@ be kept aligned between canonical source and the private preview, without changi
 production hosting.
 
 `node tests/mobile-interactions.mjs` checks touch direction, capture, cancellation,
-bounds and repeated gestures, plus intro-entry calculations at six phone heights.
+bounds and repeated gestures, all four surrounding tote-stage areas, carousel
+loop seams and reduced-motion bounds, plus intro-entry calculations at six phone heights.
 JavaScript syntax, Japanese generation, local references and packaging pass.
 Real-browser visual/touch verification remains outstanding: standalone Chromium
 cannot open its required sockets in this executor, and the separate browser

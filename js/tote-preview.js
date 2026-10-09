@@ -8,12 +8,12 @@
     if (started) return;
     started = true;
     try {
-      const { mountTote } = await import('./tote.js?v=10');
+      const { mountTote } = await import('./tote.js?v=11');
       const tote = mountTote({ stage, reducedMotion, presentation: 'contained' });
       stage.classList.add('is-ready');
       stage.tabIndex = 0;
       stage.setAttribute('role','button');
-      stage.setAttribute('aria-label',(window.SiteLanguage?.t || (text => text))('2D1 tote. Drag horizontally on touch screens to rotate. Hover over the bag to see inside; tap or press Enter to toggle X-ray.'));
+      stage.setAttribute('aria-label',(window.SiteLanguage?.t || (text => text))('2D1 tote. Drag horizontally anywhere in this area on touch screens to rotate. Hover over the bag to see inside; tap or press Enter to toggle X-ray.'));
       stage.setAttribute('aria-pressed','false');
       let pinned=false, down;
       function toggle(){pinned=!pinned;tote.setXray(pinned);stage.setAttribute('aria-pressed',String(pinned));}

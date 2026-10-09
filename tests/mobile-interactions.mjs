@@ -13,8 +13,8 @@ class Surface {
 }
 globalThis.window = new Surface(); globalThis.document = new Surface();
 const stage = new Surface(), limit = Math.PI * .75;
-let angle = 0, dragging = false, changes = 0, hit = true;
-bindTouchRotation({stage,limit,hitTest:()=>hit,getAngle:()=>angle,setAngle:v=>{angle=v;changes++;},setDragging:v=>dragging=v});
+let angle = 0, dragging = false, changes = 0;
+bindTouchRotation({stage,limit,getAngle:()=>angle,setAngle:v=>{angle=v;changes++;},setDragging:v=>dragging=v});
 stage.emit('pointerdown'); stage.emit('pointermove',{clientX:104});
 assert.equal(changes,0); assert.equal(stage.captures.size,0);
 stage.emit('pointerup'); assert.equal(changes,0);
@@ -33,7 +33,11 @@ stage.emit('pointercancel'); assert.equal(dragging,false); assert.equal(stage.ca
 const beforeMouse = changes;
 stage.emit('pointerdown',{pointerType:'mouse'}); stage.emit('pointermove',{pointerType:'mouse',clientX:400});assert.equal(changes,beforeMouse);
 stage.emit('pointerdown',{isPrimary:false}); stage.emit('pointermove',{clientX:400}); assert.equal(changes,beforeMouse);
-hit=false;stage.emit('pointerdown');stage.emit('pointermove',{clientX:400});assert.equal(changes,beforeMouse);hit=true;
+// Every blank part of the presentation stage can begin a rotation.
+for(const [x,y] of [[10,100],[320,100],[100,10],[100,230]]){
+ const before=changes;stage.emit('pointerdown',{clientX:x,clientY:y});stage.emit('pointermove',{clientX:x+20,clientY:y});assert.equal(changes,before+1);stage.emit('pointerup');
+}
+const beforeControl=changes;stage.emit('pointerdown',{target:{closest:()=>({tagName:'BUTTON'})}});stage.emit('pointermove',{clientX:400});assert.equal(changes,beforeControl);
 for(const ending of ['lostpointercapture','blur','hidden']){
  stage.emit('pointerdown');stage.emit('pointermove',{clientX:120});assert.equal(dragging,true);
  if(ending==='blur')window.emit('blur');else if(ending==='hidden'){document.hidden=true;document.emit('visibilitychange');document.hidden=false;}else stage.emit(ending);
@@ -51,3 +55,29 @@ for(const height of [568,667,740,844,896,932]){
  context.mobile.matches=false;assert.equal(vm.runInNewContext(calculation+'\ncoverFactor;',{...context}),.3);
 }
 console.log('PASS intro: 25% less entry scroll at six phone heights; desktop factor unchanged.');
+
+// Exercise the carousel's production binder without requiring WebGL or a browser.
+const helper=source.slice(source.indexOf('function bindWorkTouch('),source.indexOf("  const belt = document.querySelector('[data-carousel]');"));
+const bindWorkTouch=vm.runInNewContext(helper+'\nbindWorkTouch;',{window,document});
+const belt=new Surface();belt.scrollLeft=100;belt.scrollWidth=1200;belt.clientWidth=300;belt.classList={add:()=>{}};
+let active=false,wrap=true;
+bindWorkTouch(belt,{setActive:value=>active=value,getPeriod:()=>600,shouldWrap:()=>wrap});
+belt.emit('pointerdown');assert.equal(active,true);belt.emit('pointermove',{clientX:104});assert.equal(belt.scrollLeft,100);assert.equal(belt.captures.size,0);
+belt.emit('pointermove',{clientX:50});assert.equal(belt.scrollLeft,150);assert.equal(belt.hasPointerCapture(1),true);
+belt.emit('lostpointercapture',{target:{tagName:'IMG'}});assert.equal(active,true);
+belt.emit('pointermove',{pointerId:2,clientX:0});assert.equal(belt.scrollLeft,150);
+belt.emit('pointerup');assert.equal(active,false);assert.equal(belt.captures.size,0);
+belt.scrollLeft=0;belt.emit('pointerdown');belt.emit('pointermove',{clientX:150});assert.equal(belt.scrollLeft,550);belt.emit('pointerup');
+belt.scrollLeft=590;belt.emit('pointerdown');belt.emit('pointermove',{clientX:50});assert.equal(belt.scrollLeft,40);belt.emit('pointerup');
+wrap=false;belt.scrollLeft=10;belt.emit('pointerdown');belt.emit('pointermove',{clientX:150});assert.equal(belt.scrollLeft,0);belt.emit('pointerup');
+belt.scrollLeft=890;belt.emit('pointerdown');belt.emit('pointermove',{clientX:50});assert.equal(belt.scrollLeft,900);belt.emit('pointerup');
+belt.scrollLeft=100;belt.emit('pointerdown');belt.emit('pointermove',{clientX:110,clientY:130});assert.equal(active,false);assert.equal(belt.scrollLeft,100);assert.equal(belt.captures.size,0);
+for(const props of [{pointerType:'mouse'},{isPrimary:false},{target:{closest:()=>({tagName:'A'})}}]){belt.emit('pointerdown',props);belt.emit('pointermove',{clientX:50});assert.equal(active,false);assert.equal(belt.scrollLeft,100);}
+for(const ending of ['pointercancel','lostpointercapture','blur','hidden']){
+ belt.emit('pointerdown');belt.emit('pointermove',{clientX:120});assert.equal(active,true);
+ if(ending==='blur')window.emit('blur');else if(ending==='hidden'){document.hidden=true;document.emit('visibilitychange');document.hidden=false;}else belt.emit(ending);
+ assert.equal(active,false);assert.equal(belt.captures.size,0);
+}
+assert.match(readFileSync(new URL('../js/tote-preview.js',import.meta.url),'utf8'),/!down.moved.*tote.hitTest/);
+console.log('PASS carousel: direct drag, both loop seams, reduced-motion bounds, vertical scroll, controls, pointer identity, capture transfer and interrupted gestures.');
+console.log('PASS tote: all four surrounding stage areas rotate; silhouette-only tap X-ray gate remains.');
