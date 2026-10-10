@@ -323,3 +323,25 @@ in before its corresponding service details, in English and Japanese.
 
 ### Finds floating menus — 10 October
 Home has no arrow. Hover or keyboard focus reveals the shared page links from the left over 480ms; on touch, the first tap opens the menu and the next follows Home. Each link has its own white background. Category uses the same individual-label backgrounds and leftward fade/slide entrance and exit. Reduced motion is instant. Contact opens the shared form.
+
+Finds opens at minimum zoom (0%). Canvas name/brand captions appear at 50% and above, hiding again below halfway. Detail dialogs and the no-JavaScript list retain their text.
+
+### Finds controls and additions — 10 October
+Floating labels share the language switch’s 12px regular Walla style (Noto Sans JP in Japanese), 1px dark-brown borders, and matching 6px/12px menu-item padding. Navigation dividers are removed. Zoom −/+ buttons step by 10 points and clamp at 0/100. Captions fade and gently rise at 50%; reduced motion is instant. The info dialog is a full-width, 60vh red sheet with white type, entering from the top and retaining Escape/outside-click dismissal and remembered first-visit behavior.
+
+Yoto Player 4th Gen and Freckle Phone (Orange) bring the catalog to 57. Both use official product imagery and Japanese descriptions; Freckle is labeled as available for preorder. The Yoto retail link is the fourth generation, so imagery is not mixed with the supplied third-generation Pentagram reference.
+
+Loop Cocoon Baby Earmuffs in Berry joins Finds as item 58, with a transparent main image and three official detail photographs. The linked Berry variant was unavailable when checked and is labeled Not for sale.
+
+Finds now contains 63 selections, adding Magis × Iittala Linnut Sulo S, &Tradition Flowerpot VP9 (Zesty Orange), B-Line Boby 3/4 (Paprika), Hey Bag (Green Lines), and Hey Classic Cap. All five link to original-brand pages and include Japanese descriptions and transparent main photographs.
+
+Intro reveal correction: the first line progresses word by word until the hero edge reaches 70vh. Remaining words use a separate 70vh-to-50vh reading range, preventing the moving cover from collapsing the reveal into a whole-block jump. Reduced motion remains fully visible.
+
+Finds detail browsing now uses a vertical product deck: the active card places vertically stacked photographs beside sticky details on desktop, stacking the sections on phones, with persistent previous/next product previews. Tapping either preview slides to that item within the active category, wraps at the ends, and resets the gallery/details position. Native vertical scrolling remains available for long descriptions; product changes require a deliberate tap. Horizontal image controls are removed; reduced motion switches instantly, and ownership requests retain their stale-response protection. Canvas captions are centered.
+
+Finds page-nav labels no longer shift, change color, or show a hover square; the Home-trigger menu reveal and keyboard focus cues remain. The info modal is now a white, content-sized floating card at the right, with contact-form margins, a 40% scrim, and a 720ms entrance from above. On phones it uses the available width and caps overflow to the viewport.
+
+
+### Nine design selections — 10 October
+
+Finds now contains 72 entries. Added La conica, First, Most Illustrious Achille, Frida 752, Valentine, Rabbit Chair (Light Blue), Magic Bunny (Black), Girotondo Round Tray, and Ray (White Dial). The latter three are one representative each from the linked Plastic, Girotondo, and Watches portfolios. Valentine and Ray use Not for sale. New entries have EN/JA descriptions, transparent optically sized original-photo cutouts, responsive derivatives, and source-credited galleries. No image was upscaled. Full provenance and native subject sizes are in docs/OBJECTS-SOURCES.md.

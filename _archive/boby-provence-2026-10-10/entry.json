@@ -1,0 +1,56 @@
+{
+  "item": {
+    "id": "b-line-boby-34-provence",
+    "name": "Boby Trolley, 3/4, Provence",
+    "brand": "B-Line",
+    "category": "living",
+    "tags": [],
+    "description": "Joe Colombo’s rolling storage trolley, with three levels and four swing-out trays. A compact home for tools and everyday odds and ends, in Provence purple.",
+    "productUrl": "https://www.b-line.it/en/prodotti/boby/",
+    "forSale": true,
+    "sourceUrl": "https://www.b-line.it/en/prodotti/boby/",
+    "sourceImageUrl": "https://www.b-line.it/wp-content/uploads/2019/11/B34PZ.jpg",
+    "image": "img/objects/cutouts/b-line-boby-34-provence.webp",
+    "width": 1597,
+    "height": 1597,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/b-line-boby-34-provence-1.webp",
+        "width": 2500,
+        "height": 2500,
+        "sourceUrl": "https://www.b-line.it/en/prodotti/boby/",
+        "sourceImageUrl": "https://www.b-line.it/wp-content/uploads/2019/11/B34PZ.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/b-line-boby-34-provence-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/b-line-boby-34-provence-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/b-line-boby-34-provence-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/b-line-boby-34-provence.webp",
+        "width": 1597
+      }
+    ],
+    "usageCaveat": "Original-brand product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        968,
+        1403
+      ],
+      "opticalFill": 0.879,
+      "upscaled": false
+    }
+  },
+  "translation": "ジョエ・コロンボによる、3段・4トレイのキャスター付き収納。回転式トレイに道具や日々の小物をまとめられます。カラーは紫がかったプロヴァンス。"
+}

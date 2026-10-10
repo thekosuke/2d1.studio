@@ -36,6 +36,11 @@
       : Math.max(0, Math.min(1, (scroll - from) / (to - from)));
     return {progress, end: to};
   }
+  function introCursor(progress, coverBottom, height, openingLength, wordCount) {
+    const opening = Math.max(0, Math.min(1, (height * .9 - coverBottom) / (height * .2)));
+    return opening < 1 ? opening * openingLength
+      : openingLength + progress * (wordCount - openingLength);
+  }
   let inkQueued = false;
   function inkIn() {
     inkQueued = false;
@@ -45,31 +50,26 @@
     inkBlocks.forEach(ink => {
       const box = ink.block.getBoundingClientRect();
       const coverBottom = ink.block.closest('.intro') && heroCover && !reduced.matches ? Math.max(0, heroCover.getBoundingClientRect().bottom) : 0;
-      const start = innerHeight * .85 - coverBottom * .85;
+      const isIntro = Boolean(ink.block.closest('.intro') && heroCover);
+      const start = innerHeight * (isIntro ? .7 : .85);
       // Finish the whole block when its leading edge reaches mid-screen,
       // regardless of its height. readingWindow also clamps to the page end.
       const end = innerHeight * .5;
       const reading = readingWindow(box.top, start, end, scroll, previousEnd, maxScroll);
       previousEnd = reading.end;
       const progress = reduced.matches ? 1 : reading.progress;
-      // The opening line reaches full opacity exactly when the cover reaches
-      // 70vh, with a scroll-linked fade from 90vh and no time-based lag.
-      if (ink.block.closest('.intro') && heroCover) {
+      // The first line finishes at cover=70vh; remaining words then use a
+      // non-collapsing 70vh→50vh range, independent of the moving cover.
+      let cursor = progress * ink.words.length;
+      if (isIntro && !reduced.matches) {
         const firstWord = ink.words[0]?.getBoundingClientRect();
         const nextLine = firstWord
           ? ink.words.findIndex(word => word.getBoundingClientRect().top > firstWord.top + 2) : 0;
         const openingLength = nextLine === -1 ? ink.words.length : nextLine;
-        if (openingLength !== ink.openingLength) {
-          ink.openingLength = openingLength;
-          ink.words.forEach((word, i) => word.classList.toggle('is-opening-line', i < openingLength));
-        }
-        const openingProgress = reduced.matches ? 1
-          : Math.max(0, Math.min(1, (innerHeight * .9 - coverBottom) / (innerHeight * .2)));
-        ink.block.style.setProperty('--opening-opacity', String(.25 + .75 * openingProgress));
+        cursor = introCursor(progress, coverBottom, innerHeight, openingLength, ink.words.length);
       }
       // Drive opacity from scroll directly: a trailing timed fade would overlap
       // the next paragraph even after its predecessor's scroll range finishes.
-      const cursor = progress * ink.words.length;
       ink.words.forEach((word, i) => {
         const amount = Math.max(0, Math.min(1, cursor - i));
         word.style.setProperty('--word-opacity', String(.25 + .75 * amount));

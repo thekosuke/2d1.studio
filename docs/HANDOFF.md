@@ -475,3 +475,45 @@ Sand Gray #D6CEC5, section-focus transition fix, and hero click-to-intro.
 English and Japanese are regenerated. `npm test` and `git diff --check` pass.
 Tracked `.DS_Store` edits are excluded. No production or private-preview deployment
 is part of this checkpoint. Future commits/pushes require new authorization.
+
+
+## Collaboration checkpoint — 10 October 2026, 72 Finds
+
+The owner authorized committing and pushing all accumulated updates after the
+previous `6862f32` checkpoint so Saul can continue on `site-redesign`. This
+section supersedes older gallery-layout and catalog-count notes above.
+
+- Finds has 72 entries, EN/JA descriptions, local source-credited galleries,
+  transparent cutouts, and responsive assets. The Boby is Paprika; Provence
+  metadata is archived. Plastic, Girotondo, and Watches each have one selected
+  representative: Magic Bunny, Girotondo Round Tray, and Alessi Ray.
+- Canvas starts at minimum zoom. Labels appear at 50% with a small entrance
+  animation; −/+ buttons operate zoom. Canvas captions are centered.
+- Floating labels, padding, and border weight match. Page-nav dividers and
+  item hover effects are removed; the Home-trigger menu reveal remains.
+- Product details use two columns on desktop: vertically stacked photos left,
+  sticky details right. Phones stack photos and details. Previous/next cards
+  above and below switch products within the active category via a vertical
+  transition. No horizontal image carousel.
+- Info is a white, content-sized floating card on the right, with contact-card
+  margins and a 40% scrim. It slides DOWN from ABOVE over 720ms; reduced motion
+  is instant. First-visit dismissal behavior is unchanged.
+- Home intro ink reveal now finishes the first line at hero edge=70vh, then
+  reveals the remaining words continuously instead of snapping the block on.
+
+Continue from a fresh fetch of `site-redesign`; preserve concurrent local work.
+Read AGENTS.md and README.md before editing. Edit data/objects.json and
+locales/ja.json for catalog changes; run the Objects and Japanese generators.
+Use docs/OBJECTS-SOURCES.md for photograph provenance and selected variants.
+
+Validation: npm test, bilingual generation, local hosted-package build, and
+git diff --check. Browser checks covered the info card at 390, 768, 1280,
+1440, and 1920px, plus new product details on phone/desktop.
+
+Local layout preview: `python3 scripts/preview.py` at http://127.0.0.1:4173/.
+The static preview cannot serve shared ownership counts. For the local Worker
+and isolated database, follow docs/PURCHASED-BACKEND.md. No hosted votes, schema,
+backend configuration, production deployment, or private cloud publication were
+changed. GitHub source synchronization alone does not update chatgpt.site.
+Tracked .DS_Store changes stay local and are excluded. Future commits/pushes
+require fresh authorization.

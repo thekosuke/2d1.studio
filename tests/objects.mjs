@@ -69,7 +69,7 @@ assert.match(css,/aspect-ratio:1 \/ 1;object-fit:contain/);assert.doesNotMatch(s
 console.log('PASS spatial focus: 8 directions, interrupted animation, zoom-out context, reduced motion, neighbor versus focused clicks, square images and 40% neighbors.');
 // Test the production count controller against controlled asynchronous responses.
 const purchaseButton=new Surface(),purchaseRetry=new Surface(),purchaseStatus={};purchaseButton.setAttribute=()=>{};
-const purchaseCode=source.slice(source.indexOf('  const purchaseButton='),source.indexOf('  function show('));
+const purchaseCode=source.slice(source.indexOf('  const purchaseButton='),source.indexOf('  let detailItem='));
 let pendingRequests=[];
 const purchaseContext={dialog:{querySelector:q=>q.includes('retry')?purchaseRetry:purchaseButton},document:{getElementById:()=>purchaseStatus},t:x=>x,fetch:(url,options)=>new Promise((resolve,reject)=>pendingRequests.push({url,options,resolve,reject})),encodeURIComponent};
 vm.createContext(purchaseContext);vm.runInContext(purchaseCode,purchaseContext);
@@ -140,7 +140,7 @@ console.log('PASS integrated interruption: blank tap resumes zoom, moving target
 // A non-sale item must not inherit the previous item's live destination.
 const dialogFields=new Map();
 const saleDialog={querySelector(selector){if(!dialogFields.has(selector))dialogFields.set(selector,{hidden:false,href:null,replaceChildren(...children){this.children=children},removeAttribute(name){delete this[name]}});return dialogFields.get(selector)},showModal(){}};
-const saleContext={URL,document:{createElement:()=>({})},dialog:saleDialog,close:{focus(){}},focusMode:false,cancelGesture(){},stopMotion(){},settleGeometry(){},loadPurchased(){}};
+const saleContext={URL,document:{createElement:()=>({})},dialog:saleDialog,close:{focus(){}},focusMode:false,cancelGesture(){},stopMotion(){},settleGeometry(){},loadPurchased(){},paintDetailNavigation(){}};
 vm.createContext(saleContext);
 vm.runInContext(source.slice(source.indexOf('  function show('),source.indexOf('  function cancelGesture(')),saleContext);
 for(const url of ['https://example.com/first',null,'https://example.com/second',null]){
@@ -159,3 +159,18 @@ for(const url of ['https://example.com/first',null,'https://example.com/second',
  assert.deepEqual(Array.from(dialogFields.get('.objects-dialog-sources').children,link=>link.href),['https://example.com/source','https://photos.example.com/second']);
 }
 console.log('PASS sale state: sequential dialogs clear stale URLs, restore live links and replace galleries, reset scrolling, defer extra images and retain all source credits.');
+
+// Switching uses the filtered catalog, wraps, resets photos, and ignores rapid taps.
+const peekBack=new Surface(),peekNext=new Surface();
+peekBack.dataset={productStep:'-1'};peekNext.dataset={productStep:'1'};
+for(const button of [peekBack,peekNext]){button.replaceChildren=(...children)=>button.children=children;button.setAttribute=()=>{};}
+const transitions=[];const sheet={animate(){return {finished:new Promise(resolve=>transitions.push(resolve))}}};
+const fields={'.objects-dialog-scroll':sheet,'.objects-dialog-title':{focus(){}}};
+const detailContext={dialog:{open:true,querySelector:s=>fields[s],querySelectorAll:s=>s==='[data-product-step]'?[peekBack,peekNext]:[]},active:products.filter(p=>p.category==='wear').slice(0,3).map(p=>({...p,gallery:[{},{}]})),mod:(v,n)=>(v%n+n)%n,document:{createElement:()=>({})},t:x=>x,reduced:{matches:false},returnFocus:{},show(item){detailContext.seen=item.id;detailContext.paintDetailNavigation(item)}};
+vm.createContext(detailContext);vm.runInContext(source.slice(source.indexOf('  let detailItem='),source.indexOf('  function show(')),detailContext);
+detailContext.paintDetailNavigation(detailContext.active[0]);assert.match(peekBack.children[1].textContent,new RegExp(detailContext.active[2].brand));
+const changing=peekNext.handlers.get('click')();await peekNext.handlers.get('click')();assert.equal(transitions.length,1);
+transitions.shift()();await new Promise(r=>setImmediate(r));assert.equal(detailContext.seen,detailContext.active[1].id);transitions.shift()();await changing;
+assert.doesNotMatch(source,/data-photo-step|scrollBy/);
+assert.match(css,/objects-dialog-photo\{display:block;height:auto/);
+console.log('PASS detail deck: filtered neighbors, wraparound, rapid-tap guard, slide completion, vertical photo stack without carousel controls.');

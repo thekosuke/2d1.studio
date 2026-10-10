@@ -32,3 +32,20 @@ for(const viewport of [568,844,900,1080]) {
  assert.ok(sample(maxScroll).every(progress=>progress===1),'last paragraph finishes at page end');
 }
 console.log('PASS reading ink: sequential paragraphs, a single partial word, reversible scroll, mid-screen completion, and complete page-end reveal.');
+
+const introCursor=vm.runInNewContext(functionSource+'\nintroCursor;');
+for (const height of [568,844,900,1080]) {
+ const count=90, opening=8;
+ assert.equal(introCursor(0,height*.9,height,opening,count),0);
+ assert.equal(introCursor(0,height*.7,height,opening,count),opening);
+ let last=opening;
+ for(let top=height*.7;top>=height*.5;top-=1) {
+  const scroll=height-top;
+  const reading=readingWindow(top,height*.7,height*.5,scroll,-Infinity,10000);
+  const cursor=introCursor(reading.progress,top,height,opening,count);
+  assert.ok(cursor>=last && cursor-last<2,'intro progresses without a whole-block jump');
+  last=cursor;
+ }
+ assert.equal(introCursor(1,0,height,opening,count),count);
+}
+console.log('PASS intro: first line at 70vh and continuous remaining-word progression.');

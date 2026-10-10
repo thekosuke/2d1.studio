@@ -822,3 +822,113 @@ A subtle shared warm grade is reversible CSS, not baked into the originals.
 ## Robi Persi replacement — 10 October 2026
 
 Replaces Robi Boris at the owner’s request. [Official product](https://armsflyingeverywhere.com/products/robi-persi); [original 1800px image](https://cdn.shopify.com/s/files/1/0672/5697/5494/files/Robi-Persi_e04e2a91-0a1a-43c1-b571-07b42ff2142b.jpg?v=1786355493). One official view is available. Transparent cutout preserves native RGB; usable subject 581 × 1510px, no enlargement. Previous entry and Japanese description are archived in `_archive/replaced-robi-boris-2026-10-10/`.
+
+## Yoto and Freckle additions — 10 October 2026
+
+- Yoto Player, 4th Gen: https://eu.yotoplay.com/players/yoto-player-4 — two official 1302×1196 product views. Main subject 865×935 native pixels; local cutout with original RGB, no enlargement. Pentagram’s supplied reference is the third generation and is not used as fourth-generation imagery.
+- Freckle Phone, Orange: https://freckle.tech/ and https://buy.freckle.tech/products/freckle — official transparent 3000px product renders (orange, green, blue); orange main subject 1161×1337 pixels. Preorder status verified on the official listing. Original alpha retained.
+
+Exact image URLs and credits are stored per item/gallery in data/objects.json.
+
+## Loop Cocoon addition — 10 October 2026
+
+[Loop Cocoon Baby Earmuffs, Berry](https://www.loopearplugs.com/products/cocoon?variant=57886842257743): three official 3240px photographs. Main cutout retains original RGB and a 1564 × 1324px native subject without enlargement. Berry variant 57886842257743 was unavailable when checked. Exact sources are recorded in data/objects.json.
+
+## Five brand-direct additions — 10 October 2026
+
+Linnut Sulo S: native subject 884 × 1445px; 4 views; https://www.magisdesign.com/product/linnut-sulo/
+Flowerpot VP9, Zesty Orange: native subject 461 × 862px; 1 views; https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260
+Boby Trolley, 3/4, Provence: native subject 968 × 1403px; 1 views; https://www.b-line.it/en/prodotti/boby/
+Hey Bag, Green Lines: native subject 1799 × 1849px; 3 views; https://heyshop.es/products/hey-bag?variant=35440377102500
+Classic Cap: native subject 1082 × 736px; 3 views; https://heyshop.es/products/classic-cap
+
+Main photos come from original brands, with pixel-preserving transparent cutouts and no enlargement. Hey Bag uses the available Green Lines variant. Flowerpot Zesty Orange was unavailable in the official Japanese shop and uses Not for sale. Magis and B-Line link to official product pages; no direct checkout was verified. Flowerpot and Boby each retain one unique confirmed view rather than duplicate photographs. Source URLs and native dimensions are recorded in the catalog.
+
+## Boby Paprika — 10 October 2026
+
+Owner-selected Paprika replaces Provence. Original B-Line 2500px B34PR packshot: https://www.b-line.it/wp-content/uploads/2019/11/B34PR.jpg. Native colors preserved in the transparent main image. New product ID avoids reassigning ownership marks between colorways; the old entry/translation is archived in `_archive/boby-provence-2026-10-10/`.
+
+
+## Nine design selections — 10 October 2026
+
+The owner chose one representative each for Plastic, Girotondo, and Watches: Magic Bunny, Girotondo Round Tray, and Alessi Ray. Ray was chosen over the initially considered Octopussy because a complete, clear watch can be isolated from the designer’s photograph; Octopussy’s portfolio photo crops the watches. Rabbit Chair uses the sharper light-blue designer packshot (1828 × 1887), instead of the smaller pink brand PNG. Original RGB is preserved; only backgrounds, framing, and responsive sizes change. Existing warm CSS treatment is shared. No artificial enlargement.
+
+### Alessi — La conica
+
+- Product/reference: https://alessi.com/products/la-conica-espresso-coffee-maker
+- Native isolated subject: 535 × 1125px. 3 distinct views.
+- Sale state: Product page.
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/01_90002.jpg?v=1680531313 — source: https://alessi.com/products/la-conica-espresso-coffee-maker
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/03_90002.jpg?v=1687176021 — source: https://alessi.com/products/la-conica-espresso-coffee-maker
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/04_90002.jpg?v=1687176021 — source: https://alessi.com/products/la-conica-espresso-coffee-maker
+
+### Memphis Milano — First
+
+- Product/reference: https://www.italianradical.design/products/first
+- Native isolated subject: 1232 × 1764px. 2 distinct views.
+- Sale state: Product page.
+- Photo (2500 × 2500): https://cdn.shopify.com/s/files/1/0983/4840/1027/files/20260309Memphis-StillLife-First-01.jpg?v=1783085553 — source: https://www.italianradical.design/products/first
+- Photo (2500 × 2500): https://cdn.shopify.com/s/files/1/0983/4840/1027/files/20260309_Memphis-StillLife-First-02.jpg?v=1783513140 — source: https://www.italianradical.design/products/first
+
+### Bosa — Most Illustrious Achille
+
+- Product/reference: https://www.bosatrade.com/prodotto/mostillustrious-achille/
+- Native isolated subject: 746 × 1689px. 4 distinct views.
+- Sale state: Product page.
+- Photo (1843 × 1843): https://cdn.shopify.com/s/files/1/1124/7646/products/Bosa-Most-Illustrious-Achille-Castiglioni-Sculpture-by-Elena-Salmistraro.jpg?v=1527856977 — source: https://janerichardsinteriors.com/products/bosa-most-illustrious-achille-castiglioni-sculpture-by-elena-salmistraro
+- Photo (2048 × 2048): https://cdn.shopify.com/s/files/1/1124/7646/products/Bosa-Most-Illustrious-Achille-Castiglioni-Sculpture-by-Elena-Salmistraro-Side.jpg?v=1527857423 — source: https://janerichardsinteriors.com/products/bosa-most-illustrious-achille-castiglioni-sculpture-by-elena-salmistraro
+- Photo (2048 × 2048): https://cdn.shopify.com/s/files/1/1124/7646/products/Bosa-Most-Illustrious-Achille-Castiglioni-Sculpture-by-Elena-Salmistraro-Base.jpg?v=1527857428 — source: https://janerichardsinteriors.com/products/bosa-most-illustrious-achille-castiglioni-sculpture-by-elena-salmistraro
+- Photo (2048 × 2048): https://cdn.shopify.com/s/files/1/1124/7646/products/Bosa-Most-Illustrious-Achille-Castiglioni-Sculpture-by-Elena-Salmistraro-Group.jpg?v=1527857434 — source: https://janerichardsinteriors.com/products/bosa-most-illustrious-achille-castiglioni-sculpture-by-elena-salmistraro
+
+### Pedrali — Frida 752
+
+- Product/reference: https://www.pedrali.com/en-us/products/chairs-design/frida-752
+- Native isolated subject: 575 × 1040px. 4 distinct views.
+- Sale state: Product page.
+- Photo (2000 × 1515): https://www.stylepark.com/assets/articles/Frida-Chair_752_Pedrali_slider-1.jpg — source: https://www.stylepark.com/en/pedrali/frida-752
+- Photo (1240 × 700): https://www.fioravanti.eu/images/frida_0223.jpg — source: https://www.fioravanti.eu/project/Frida
+- Photo (1240 × 700): https://www.fioravanti.eu/images/frida_06b39.jpg — source: https://www.fioravanti.eu/project/Frida
+- Photo (1240 × 700): https://www.fioravanti.eu/images/frida_0747.jpg — source: https://www.fioravanti.eu/project/Frida
+
+### Olivetti — Valentine
+
+- Product/reference: https://museoomero.it/en/opere/valentine/
+- Native isolated subject: 1299 × 776px. 1 distinct views.
+- Sale state: Not for sale; no current direct purchase page verified.
+- Photo (1772 × 1181): https://museoomero.it/wp-content/uploads/2021/12/Opera-Valentine-Sottsass_AAB5715-2.jpg — source: https://museoomero.it/en/opere/valentine/
+
+### Qeeboo — Rabbit Chair, Light Blue
+
+- Product/reference: https://www.qeeboo.com/en/products/rabbit-chair-design-stefano-giovannoni
+- Native isolated subject: 929 × 1446px. 2 distinct views.
+- Sale state: Product page.
+- Photo (1828 × 1887): https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/81e58eed-16a7-48ee-8287-b3259e67091b/01-qeeboo-rabbit-chair-by-stefano-giovannoni--light-blue.jpg — source: https://www.stefanogiovannoni.com/portfolio-2/rabbit-chair-qeeboo
+- Photo (2500 × 1458): https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/893533a5-c795-49ce-9dd8-823a76f935dc/04-qeeboo-rabbit-chair-by-stefano-giovannoni.jpg — source: https://www.stefanogiovannoni.com/portfolio-2/rabbit-chair-qeeboo
+
+### Alessi — Magic Bunny, Black
+
+- Product/reference: https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054
+- Native isolated subject: 509 × 1052px. 3 distinct views.
+- Sale state: Product page.
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ASG16-B-SL-frontside-1.jpg?v=1680619472 — source: https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ASG16-B-SL-frontside-2.jpg?v=1680619472 — source: https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/SG16.jpg?v=1680619472 — source: https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054
+
+### Alessi — Girotondo Round Tray
+
+- Product/reference: https://alessi.com/products/girotondo-round-tray
+- Native isolated subject: 1298 × 392px. 4 distinct views.
+- Sale state: Product page.
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/01_AKKGT_b3a8c313-2b98-4399-8b62-f175409da743.jpg?v=1652871069 — source: https://alessi.com/products/girotondo-round-tray
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/AKKGT-03.jpg?v=1715871252 — source: https://alessi.com/products/girotondo-round-tray
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/AKKGT-04.jpg?v=1715871252 — source: https://alessi.com/products/girotondo-round-tray
+- Photo (1648 × 2062): https://cdn.shopify.com/s/files/1/0337/3603/2392/products/KKGT_7550520b-de19-427c-9ed1-34cd751204da.jpg?v=1652871069 — source: https://alessi.com/products/girotondo-round-tray
+
+### Alessi — Ray, White Dial
+
+- Product/reference: https://www.stefanogiovannoni.com/portfolio-2-294g7/watches
+- Native isolated subject: 640 × 1270px. 1 distinct views.
+- Sale state: Not for sale; no current direct purchase page verified.
+- Photo (795 × 1505): https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/3552c489-c5fe-4035-a476-12946fe10f75/30b-Alessi-Ray.jpg — source: https://www.stefanogiovannoni.com/portfolio-2-294g7/watches
+
+Valentine photography: Maurizio Bolognini / Museo Tattile Statale Omero Archive. The Commons photograph researched during sourcing was not used. Ray’s canvas and gallery photo are a crop of the center, white-dial watch in the designer’s three-watch photograph. The group view for Rabbit Chair includes other colors as contextual photography. Original-brand destinations are used where available; manufacturer pages are retained when there is no direct brand checkout. Private-preview source credit does not establish unrestricted publication rights.

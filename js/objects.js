@@ -25,7 +25,7 @@
   let x = 0, y = 0, cell = 280, row = 324, frame = 0, gesture = null, suppressClick = false, returnFocus = null;
   const zoomInput=document.getElementById('objects-zoom');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let zoom=35, focusMode=false, focusColumn=0, focusRow=0, motion=null, motionFrame=0, wheelTimer=0;
+  let zoom=0, focusMode=false, focusColumn=0, focusRow=0, motion=null, motionFrame=0, wheelTimer=0;
   const geometry=(width,value,height=canvas.clientHeight)=>{const small=Math.min(width<=600?112:144,Math.max(48,height*.2)),large=Math.max(small,Math.min(width*.72,height*.64,Math.max(64,height-192),640)),size=small+(large-small)*value/100;return {cell:size,row:size+52};};
   const mod = (value, divisor) => ((value % divisor) + divisor) % divisor;
   const indexAt = (column, line, count) => mod(column + line * (Math.ceil(Math.sqrt(count)) + 1), count);
@@ -95,7 +95,7 @@
     cancelGesture();stopMotion();const center=nearest(),cx=canvas.clientWidth/2,cy=canvas.clientHeight/2;
     const worldX=(cx-x)/cell,worldY=(cy-y-cell/2)/row;
     zoom=Math.max(0,Math.min(100,value));focusMode=zoom===100;
-    page.classList.toggle('objects-focused',focusMode);page.classList.toggle('objects-min-zoom',zoom===0);
+    page.classList.toggle('objects-focused',focusMode);page.classList.toggle('objects-min-zoom',zoom===0);page.classList.toggle('objects-show-labels',zoom>=50);
     zoomInput.setAttribute('aria-valuetext',focusMode?t('Focused canvas'):`${zoom}% ${t('Canvas')}`);
     canvas.setAttribute('aria-label',t(focusMode?'Focused object canvas':'Infinite object grid'));
     document.getElementById('objects-instructions').textContent=t(focusMode?'Select a neighboring image in any direction to center it. Select the centered image to open details. Arrow keys move between neighbors.':'Drag in any direction to explore. Arrow keys move the grid. Enter opens the object at the center.');
@@ -129,6 +129,33 @@
     finally{if(generation===purchaseGeneration)purchasePending=false;}
   });
   purchaseRetry.addEventListener('click',()=>{if(purchaseItem&&!purchasePending)loadPurchased(purchaseItem);});
+  let detailItem=null, detailTransition=0, detailBusy=false;
+  const detailSheet=dialog.querySelector('.objects-dialog-scroll');
+  function paintDetailNavigation(item) {
+    detailItem=item;
+    const index=active.indexOf(item);
+    dialog.querySelectorAll('[data-product-step]').forEach(button=>{
+      const step=Number(button.dataset.productStep),neighbor=active[mod(index+step,active.length)];
+      button.hidden=active.length<2;
+      const image=document.createElement('img');image.src=neighbor.image;image.alt='';
+      const label=document.createElement('span');label.textContent=neighbor.brand+' — '+neighbor.name;
+      button.setAttribute('aria-label',t(step<0?'Previous product':'Next product')+': '+neighbor.name);
+      button.replaceChildren(image,label);
+    });
+  }
+  dialog.querySelectorAll('[data-product-step]').forEach(button=>button.addEventListener('click',async()=>{
+    if(detailBusy||!detailItem||active.length<2)return;
+    detailBusy=true;
+    const token=++detailTransition,step=Number(button.dataset.productStep);
+    const item=active[mod(active.indexOf(detailItem)+step,active.length)];
+    const duration=reduced.matches?0:260;
+    await detailSheet.animate([{transform:'translateY(0)',opacity:1},{transform:`translateY(${-step*80}px)`,opacity:0}],{duration,easing:'cubic-bezier(.4,0,1,1)'}).finished.catch(()=>{});
+    if(token!==detailTransition||!dialog.open)return;
+    show(item,returnFocus);
+    const title=dialog.querySelector('.objects-dialog-title');title.tabIndex=-1;title.focus({preventScroll:true});
+    await detailSheet.animate([{transform:`translateY(${step*80}px)`,opacity:0},{transform:'translateY(0)',opacity:1}],{duration:reduced.matches?0:420,easing:'cubic-bezier(.2,.8,.2,1)'}).finished.catch(()=>{});
+    if(token===detailTransition)detailBusy=false;
+  }));
   function show(item, trigger){
     if(!item)return;
     cancelGesture();stopMotion();if(focusMode)focusAt(focusColumn,focusRow,false);else settleGeometry();
@@ -156,7 +183,8 @@
       link.textContent=new URL(url).hostname.replace(/^www\./,'');
       return link;
     }));
-    loadPurchased(item);dialog.showModal();
+    loadPurchased(item);if(!dialog.open)dialog.showModal();
+    paintDetailNavigation(item);
     dialog.querySelector('.objects-dialog-scroll').scrollTop=0;
     dialog.querySelector('.objects-dialog-copy').scrollTop=0;
     close.focus({preventScroll:true});
@@ -216,11 +244,15 @@
   });
   close.addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});
-  dialog.addEventListener('close',()=>{purchaseGeneration++;returnFocus?.focus({preventScroll:true});returnFocus=null;});
+  dialog.addEventListener('close',()=>{detailTransition++;detailBusy=false;detailSheet.getAnimations().forEach(animation=>animation.cancel());purchaseGeneration++;returnFocus?.focus({preventScroll:true});returnFocus=null;});
   categoryButtons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.categoryFilter;filter();}));
   document.querySelectorAll('[data-reset-filters]').forEach(button=>button.addEventListener('click',()=>{category='all';filter();}));
   document.querySelector('[data-reset-view]').addEventListener('click',reset);
   zoomInput.addEventListener('input',()=>setZoom(Number(zoomInput.value)));
+  document.querySelectorAll('[data-zoom-step]').forEach(button=>button.addEventListener('click',()=>{
+    zoomInput.value=String(Math.max(0,Math.min(100,zoom+Number(button.dataset.zoomStep))));
+    setZoom(Number(zoomInput.value));
+  }));
   const infoButton=document.querySelector('.objects-info'),infoDialog=document.getElementById('objects-info-dialog');
   const infoSeenKey='2d1-finds-info-dismissed-v1';
   const openInfo=()=>{if(dialog.open||infoDialog.open)return;cancelGesture();stopMotion();settleGeometry();infoDialog.showModal();infoDialog.querySelector('button').focus();};
@@ -239,7 +271,7 @@
   }).observe(canvas);
   reduced.addEventListener('change',()=>{if(reduced.matches&&motion)pose(motion.target,false);});
   document.querySelector('.skip-link').addEventListener('click',event=>{event.preventDefault();canvas.focus();});
-  page.classList.add('objects-ready');filter();
+  page.classList.add('objects-ready','objects-min-zoom');filter();
   let infoSeen=false;try{infoSeen=localStorage.getItem(infoSeenKey)==='1';}catch{}
   if(!infoSeen)openInfo();
 })();

@@ -225,8 +225,3 @@ html:not(.js) .page-nav-contact{display:none}
 .page-nav :is(a,button)::before{content:"";position:absolute;left:-12px;top:50%;width:0;height:6px;transform:translateY(-50%);background:var(--red);transition:width .2s ease;pointer-events:none}
 @media(hover:hover) and (pointer:fine){.page-nav :is(a,button):hover{transform:translateX(12px)}.page-nav :is(a,button):hover::before{width:6px}}
 @media(prefers-reduced-motion:reduce){.page-nav :is(a,button),.page-nav :is(a,button)::before{transition:none}}
-
-/* Intro lead line is driven directly by the cover position, reaching 1 at 70vh. */
-.intro [data-ink].is-inking .ink.is-opening-line{opacity:var(--opening-opacity,.25);transition:none}
-.intro [data-ink].is-inking .ink.is-opening-line.is-inked{opacity:1}
-@media(prefers-reduced-motion:reduce){.intro [data-ink].is-inking .ink.is-opening-line{opacity:1}}

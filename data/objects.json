@@ -3699,5 +3699,1073 @@
       "opticalFill": 0.899,
       "upscaled": false
     }
+  },
+  {
+    "id": "yoto-player-4",
+    "name": "Yoto Player, 4th Gen",
+    "brand": "Yoto",
+    "category": "living",
+    "description": "A card-operated audio player for stories, music, and everyday listening, with tactile controls and a playful pixel display.",
+    "productUrl": "https://eu.yotoplay.com/players/yoto-player-4",
+    "image": "img/objects/cutouts/yoto-player-4.webp",
+    "width": 1232,
+    "height": 1232,
+    "tags": [],
+    "sourceUrl": "https://eu.yotoplay.com/players/yoto-player-4",
+    "sourceImageUrl": "https://www.datocms-assets.com/48136/1788969790-gallery-player-1-welcome-card-eu-fr-1.png",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/yoto-player-4-1.webp",
+        "width": 1302,
+        "height": 1196,
+        "sourceUrl": "https://eu.yotoplay.com/players/yoto-player-4",
+        "sourceImageUrl": "https://www.datocms-assets.com/48136/1788969790-gallery-player-1-welcome-card-eu-fr-1.png"
+      },
+      {
+        "image": "img/objects/gallery/yoto-player-4-2.webp",
+        "width": 1302,
+        "height": 1196,
+        "sourceUrl": "https://eu.yotoplay.com/players/yoto-player-4",
+        "sourceImageUrl": "https://www.datocms-assets.com/48136/1788864480-player-4-sideview.png"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/yoto-player-4-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/yoto-player-4-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/yoto-player-4.webp",
+        "width": 1232
+      }
+    ],
+    "usageCaveat": "Official product imagery for source-credited private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with local foreground mask",
+      "subjectPixels": [
+        865,
+        935
+      ],
+      "opticalFill": 0.759,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "freckle-phone-orange",
+    "name": "Freckle Phone, Orange",
+    "brand": "Freckle",
+    "category": "work",
+    "description": "A phone built for kids, with a compact body, playful ClayOS interface, and parent-managed tools for growing independence. Available for preorder.",
+    "productUrl": "https://freckle.tech/",
+    "image": "img/objects/cutouts/freckle-phone-orange.webp",
+    "width": 1707,
+    "height": 1707,
+    "tags": [],
+    "sourceUrl": "https://freckle.tech/",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0964/3556/9006/files/orange_freckle.png?v=1786052033",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/freckle-phone-orange-1.webp",
+        "width": 3000,
+        "height": 3000,
+        "sourceUrl": "https://freckle.tech/",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0964/3556/9006/files/orange_freckle.png?v=1786052033"
+      },
+      {
+        "image": "img/objects/gallery/freckle-phone-orange-2.webp",
+        "width": 3000,
+        "height": 3000,
+        "sourceUrl": "https://freckle.tech/",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0964/3556/9006/files/green_freckle.png?v=1786052036"
+      },
+      {
+        "image": "img/objects/gallery/freckle-phone-orange-3.webp",
+        "width": 3000,
+        "height": 3000,
+        "sourceUrl": "https://freckle.tech/",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0964/3556/9006/files/blue_freckle.png?v=1786052040"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/freckle-phone-orange-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/freckle-phone-orange-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/freckle-phone-orange-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/freckle-phone-orange.webp",
+        "width": 1707
+      }
+    ],
+    "usageCaveat": "Official product imagery for source-credited private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original source alpha",
+      "subjectPixels": [
+        1161,
+        1337
+      ],
+      "opticalFill": 0.783,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "loop-cocoon-berry",
+    "name": "Cocoon Baby Earmuffs, Berry",
+    "brand": "Loop",
+    "category": "wear",
+    "tags": [],
+    "description": "Soft-cushioned earmuffs for little ears, with an adjustable fabric strap and a lavender-and-berry color pairing.",
+    "productUrl": "https://www.loopearplugs.com/products/cocoon?variant=57886842257743",
+    "forSale": false,
+    "sourceUrl": "https://www.loopearplugs.com/products/cocoon?variant=57886842257743",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1442/3288/files/PDPImages.png?v=1782128858",
+    "image": "img/objects/cutouts/loop-cocoon-berry.webp",
+    "width": 1972,
+    "height": 1972,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/loop-cocoon-berry-1.webp",
+        "width": 3200,
+        "height": 3200,
+        "sourceUrl": "https://www.loopearplugs.com/products/cocoon?variant=57886842257743",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1442/3288/files/PDPImages.png?v=1782128858"
+      },
+      {
+        "image": "img/objects/gallery/loop-cocoon-berry-2.webp",
+        "width": 3200,
+        "height": 3200,
+        "sourceUrl": "https://www.loopearplugs.com/products/cocoon?variant=57886842257743",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1442/3288/files/Optionalasset_1.png?v=1782128860"
+      },
+      {
+        "image": "img/objects/gallery/loop-cocoon-berry-3.webp",
+        "width": 3200,
+        "height": 3200,
+        "sourceUrl": "https://www.loopearplugs.com/products/cocoon?variant=57886842257743",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1442/3288/files/PDP_McLaren_4_cb5ea5c2-c4dc-4d94-8e53-f7b7eb25e466.png?v=1782128860"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/loop-cocoon-berry-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/loop-cocoon-berry-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/loop-cocoon-berry-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/loop-cocoon-berry-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/loop-cocoon-berry.webp",
+        "width": 1972
+      }
+    ],
+    "usageCaveat": "Official Loop product photography for private preview; no unrestricted-use license verified. Berry variant 57886842257743 was unavailable at source on 10 October 2026.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1564,
+        1324
+      ],
+      "opticalFill": 0.793,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "magis-linnut-sulo-s",
+    "name": "Linnut Sulo S",
+    "brand": "Magis × Iittala",
+    "category": "living",
+    "tags": [],
+    "description": "A small rechargeable lamp with an owl-like face. Oiva Toikka’s bird forms become a softly glowing companion in molded polycarbonate.",
+    "productUrl": "https://www.magisdesign.com/product/linnut-sulo/",
+    "forSale": true,
+    "sourceUrl": "https://www.magisdesign.com/product/linnut-sulo/",
+    "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_front_LI01_off_01.jpg",
+    "image": "img/objects/cutouts/magis-linnut-sulo-s.webp",
+    "width": 1606,
+    "height": 1606,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/magis-linnut-sulo-s-1.webp",
+        "width": 3200,
+        "height": 2136,
+        "sourceUrl": "https://www.magisdesign.com/product/linnut-sulo/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_front_LI01_off_01.jpg"
+      },
+      {
+        "image": "img/objects/gallery/magis-linnut-sulo-s-2.webp",
+        "width": 3200,
+        "height": 2136,
+        "sourceUrl": "https://www.magisdesign.com/product/linnut-sulo/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_front_LI01_on_01.jpg"
+      },
+      {
+        "image": "img/objects/gallery/magis-linnut-sulo-s-3.webp",
+        "width": 3200,
+        "height": 2136,
+        "sourceUrl": "https://www.magisdesign.com/product/linnut-sulo/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_side_LI01_off_01.jpg"
+      },
+      {
+        "image": "img/objects/gallery/magis-linnut-sulo-s-4.webp",
+        "width": 3200,
+        "height": 2136,
+        "sourceUrl": "https://www.magisdesign.com/product/linnut-sulo/",
+        "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_side_LI01_on_01.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/magis-linnut-sulo-s-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/magis-linnut-sulo-s-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/magis-linnut-sulo-s-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/magis-linnut-sulo-s.webp",
+        "width": 1606
+      }
+    ],
+    "usageCaveat": "Original-brand product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        884,
+        1445
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "flowerpot-vp9-zesty-orange",
+    "name": "Flowerpot VP9, Zesty Orange",
+    "brand": "&Tradition",
+    "category": "living",
+    "tags": [],
+    "description": "Verner Panton’s two-domed Flowerpot, made portable. A compact rechargeable table lamp in a vivid orange finish.",
+    "productUrl": "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
+    "forSale": false,
+    "sourceUrl": "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0571/9310/3500/files/VP9_Zesty-Orange_Front_ON.jpg?v=1772503667",
+    "image": "img/objects/cutouts/flowerpot-vp9-zesty-orange.webp",
+    "width": 958,
+    "height": 958,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/flowerpot-vp9-zesty-orange-1.webp",
+        "width": 1412,
+        "height": 1883,
+        "sourceUrl": "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0571/9310/3500/files/VP9_Zesty-Orange_Front_ON.jpg?v=1772503667"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/flowerpot-vp9-zesty-orange-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/flowerpot-vp9-zesty-orange.webp",
+        "width": 958
+      }
+    ],
+    "usageCaveat": "Original-brand product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        461,
+        862
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "b-line-boby-34-paprika",
+    "name": "Boby Trolley, 3/4, Paprika",
+    "brand": "B-Line",
+    "category": "living",
+    "tags": [],
+    "description": "Joe Colombo’s rolling storage trolley, with three levels and four swing-out trays. A compact home for tools and everyday odds and ends, in Paprika.",
+    "productUrl": "https://www.b-line.it/en/prodotti/boby/",
+    "forSale": true,
+    "sourceUrl": "https://www.b-line.it/en/prodotti/boby/",
+    "sourceImageUrl": "https://www.b-line.it/wp-content/uploads/2019/11/B34PR.jpg",
+    "image": "img/objects/cutouts/b-line-boby-34-paprika.webp",
+    "width": 1590,
+    "height": 1590,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/b-line-boby-34-paprika-1.webp",
+        "width": 2500,
+        "height": 2500,
+        "sourceUrl": "https://www.b-line.it/en/prodotti/boby/",
+        "sourceImageUrl": "https://www.b-line.it/wp-content/uploads/2019/11/B34PR.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/b-line-boby-34-paprika-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/b-line-boby-34-paprika-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/b-line-boby-34-paprika-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/b-line-boby-34-paprika.webp",
+        "width": 1590
+      }
+    ],
+    "usageCaveat": "Original-brand product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        967,
+        1393
+      ],
+      "opticalFill": 0.876,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "hey-bag-green-lines",
+    "name": "Hey Bag, Green Lines",
+    "brand": "Hey",
+    "category": "wear",
+    "tags": [],
+    "description": "A striped everyday bag designed with Júlia Esqué and made by Nukak. Locally woven awning fabric brings color, structure, and weather resistance to a familiar shape.",
+    "productUrl": "https://heyshop.es/products/hey-bag?variant=35440377102500",
+    "forSale": true,
+    "sourceUrl": "https://heyshop.es/products/hey-bag?variant=35440377102500",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1152/7278/files/heybag01.jpg?v=1767958657",
+    "image": "img/objects/cutouts/hey-bag-green-lines.webp",
+    "width": 2499,
+    "height": 2499,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/hey-bag-green-lines-1.webp",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://heyshop.es/products/hey-bag?variant=35440377102500",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1152/7278/files/heybag01.jpg?v=1767958657"
+      },
+      {
+        "image": "img/objects/gallery/hey-bag-green-lines-2.webp",
+        "width": 2000,
+        "height": 2500,
+        "sourceUrl": "https://heyshop.es/products/hey-bag?variant=35440377102500",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1152/7278/files/Hey-Bag_06.jpg?v=1767958657"
+      },
+      {
+        "image": "img/objects/gallery/hey-bag-green-lines-3.webp",
+        "width": 893,
+        "height": 1143,
+        "sourceUrl": "https://heyshop.es/products/hey-bag?variant=35440377102500",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1152/7278/products/9daec985-d02f-48c7-bd30-2d9e3323fe86_1b5e846b-84c1-4538-9fda-9a1a4b1fe9e7.jpg?v=1767958657"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/hey-bag-green-lines-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/hey-bag-green-lines-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/hey-bag-green-lines-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/hey-bag-green-lines-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/hey-bag-green-lines.webp",
+        "width": 2499
+      }
+    ],
+    "usageCaveat": "Original-brand product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1799,
+        1849
+      ],
+      "opticalFill": 0.74,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "hey-classic-cap",
+    "name": "Classic Cap",
+    "brand": "Hey",
+    "category": "wear",
+    "tags": [],
+    "description": "A black cotton cap with a curved brim and multicolored Hey embroidery. Made in Barcelona, with a simple shape and one bright detail.",
+    "productUrl": "https://heyshop.es/products/classic-cap",
+    "forSale": true,
+    "sourceUrl": "https://heyshop.es/products/classic-cap",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1152/7278/products/HeyCap2.png?v=1636470987",
+    "image": "img/objects/cutouts/hey-classic-cap.webp",
+    "width": 1223,
+    "height": 1223,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/hey-classic-cap-1.webp",
+        "width": 1790,
+        "height": 2502,
+        "sourceUrl": "https://heyshop.es/products/classic-cap",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1152/7278/products/HeyCap2.png?v=1636470987"
+      },
+      {
+        "image": "img/objects/gallery/hey-classic-cap-2.webp",
+        "width": 1788,
+        "height": 2518,
+        "sourceUrl": "https://heyshop.es/products/classic-cap",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1152/7278/products/HeyCap1.png?v=1636470987"
+      },
+      {
+        "image": "img/objects/gallery/hey-classic-cap-3.webp",
+        "width": 540,
+        "height": 703,
+        "sourceUrl": "https://heyshop.es/products/classic-cap",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1152/7278/products/HeyClassicCap4.jpg?v=1607679860"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/hey-classic-cap-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/hey-classic-cap-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/hey-classic-cap.webp",
+        "width": 1223
+      }
+    ],
+    "usageCaveat": "Original-brand product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1082,
+        736
+      ],
+      "opticalFill": 0.885,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "alessi-la-conica",
+    "name": "La conica",
+    "brand": "Alessi",
+    "category": "kitchen",
+    "tags": [],
+    "description": "Aldo Rossi’s stovetop espresso maker turns a cylinder and a cone into a small piece of architecture. Polished stainless steel sits on a copper base.",
+    "productUrl": "https://alessi.com/products/la-conica-espresso-coffee-maker",
+    "forSale": true,
+    "sourceUrl": "https://alessi.com/products/la-conica-espresso-coffee-maker",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/01_90002.jpg?v=1680531313",
+    "image": "img/objects/cutouts/alessi-la-conica.webp",
+    "width": 1250,
+    "height": 1250,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/alessi-la-conica-1.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/la-conica-espresso-coffee-maker",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/01_90002.jpg?v=1680531313"
+      },
+      {
+        "image": "img/objects/gallery/alessi-la-conica-2.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/la-conica-espresso-coffee-maker",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/03_90002.jpg?v=1687176021"
+      },
+      {
+        "image": "img/objects/gallery/alessi-la-conica-3.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/la-conica-espresso-coffee-maker",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/04_90002.jpg?v=1687176021"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/alessi-la-conica-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/alessi-la-conica-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/alessi-la-conica.webp",
+        "width": 1250
+      }
+    ],
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        535,
+        1125
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "memphis-first",
+    "name": "First",
+    "brand": "Memphis Milano",
+    "category": "living",
+    "tags": [],
+    "description": "Michele De Lucchi’s 1983 chair brings a blue disc and two black spheres together on a curved metal frame. A seat with a playful sense of balance.",
+    "productUrl": "https://www.italianradical.design/products/first",
+    "forSale": true,
+    "sourceUrl": "https://www.italianradical.design/products/first",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0983/4840/1027/files/20260309Memphis-StillLife-First-01.jpg?v=1783085553",
+    "image": "img/objects/cutouts/memphis-first.webp",
+    "width": 2020,
+    "height": 2020,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/memphis-first-1.webp",
+        "width": 2500,
+        "height": 2500,
+        "sourceUrl": "https://www.italianradical.design/products/first",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0983/4840/1027/files/20260309Memphis-StillLife-First-01.jpg?v=1783085553"
+      },
+      {
+        "image": "img/objects/gallery/memphis-first-2.webp",
+        "width": 2500,
+        "height": 2500,
+        "sourceUrl": "https://www.italianradical.design/products/first",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0983/4840/1027/files/20260309_Memphis-StillLife-First-02.jpg?v=1783513140"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/memphis-first-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/memphis-first-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/memphis-first-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/memphis-first-1920.webp",
+        "width": 1920
+      },
+      {
+        "image": "img/objects/cutouts/memphis-first.webp",
+        "width": 2020
+      }
+    ],
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1232,
+        1764
+      ],
+      "opticalFill": 0.874,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "bosa-most-illustrious-achille",
+    "name": "Most Illustrious Achille",
+    "brand": "Bosa",
+    "category": "living",
+    "tags": [],
+    "description": "Elena Salmistraro’s ceramic tribute to Achille Castiglioni. Colorful glazes and stacked forms turn a designer and his work into a small, watchful character.",
+    "productUrl": "https://www.bosatrade.com/prodotto/mostillustrious-achille/",
+    "forSale": true,
+    "sourceUrl": "https://janerichardsinteriors.com/products/bosa-most-illustrious-achille-castiglioni-sculpture-by-elena-salmistraro",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1124/7646/products/Bosa-Most-Illustrious-Achille-Castiglioni-Sculpture-by-Elena-Salmistraro.jpg?v=1527856977",
+    "image": "img/objects/cutouts/bosa-most-illustrious-achille.webp",
+    "width": 1877,
+    "height": 1877,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/bosa-most-illustrious-achille-1.webp",
+        "width": 1843,
+        "height": 1843,
+        "sourceUrl": "https://janerichardsinteriors.com/products/bosa-most-illustrious-achille-castiglioni-sculpture-by-elena-salmistraro",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1124/7646/products/Bosa-Most-Illustrious-Achille-Castiglioni-Sculpture-by-Elena-Salmistraro.jpg?v=1527856977"
+      },
+      {
+        "image": "img/objects/gallery/bosa-most-illustrious-achille-2.webp",
+        "width": 2048,
+        "height": 2048,
+        "sourceUrl": "https://janerichardsinteriors.com/products/bosa-most-illustrious-achille-castiglioni-sculpture-by-elena-salmistraro",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1124/7646/products/Bosa-Most-Illustrious-Achille-Castiglioni-Sculpture-by-Elena-Salmistraro-Side.jpg?v=1527857423"
+      },
+      {
+        "image": "img/objects/gallery/bosa-most-illustrious-achille-3.webp",
+        "width": 2048,
+        "height": 2048,
+        "sourceUrl": "https://janerichardsinteriors.com/products/bosa-most-illustrious-achille-castiglioni-sculpture-by-elena-salmistraro",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1124/7646/products/Bosa-Most-Illustrious-Achille-Castiglioni-Sculpture-by-Elena-Salmistraro-Base.jpg?v=1527857428"
+      },
+      {
+        "image": "img/objects/gallery/bosa-most-illustrious-achille-4.webp",
+        "width": 2048,
+        "height": 2048,
+        "sourceUrl": "https://janerichardsinteriors.com/products/bosa-most-illustrious-achille-castiglioni-sculpture-by-elena-salmistraro",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1124/7646/products/Bosa-Most-Illustrious-Achille-Castiglioni-Sculpture-by-Elena-Salmistraro-Group.jpg?v=1527857434"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/bosa-most-illustrious-achille-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/bosa-most-illustrious-achille-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/bosa-most-illustrious-achille-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/bosa-most-illustrious-achille.webp",
+        "width": 1877
+      }
+    ],
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        746,
+        1689
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "pedrali-frida-752",
+    "name": "Frida 752",
+    "brand": "Pedrali",
+    "category": "living",
+    "tags": [],
+    "description": "Odo Fioravanti’s oak chair pairs a solid wood frame with a thin, curved plywood shell. Light in appearance, with a quietly sculpted seat and back.",
+    "productUrl": "https://www.pedrali.com/en-us/products/chairs-design/frida-752",
+    "forSale": true,
+    "sourceUrl": "https://www.stylepark.com/en/pedrali/frida-752",
+    "sourceImageUrl": "https://www.stylepark.com/assets/articles/Frida-Chair_752_Pedrali_slider-1.jpg",
+    "image": "img/objects/cutouts/pedrali-frida-752.webp",
+    "width": 1156,
+    "height": 1156,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/pedrali-frida-752-1.webp",
+        "width": 2000,
+        "height": 1515,
+        "sourceUrl": "https://www.stylepark.com/en/pedrali/frida-752",
+        "sourceImageUrl": "https://www.stylepark.com/assets/articles/Frida-Chair_752_Pedrali_slider-1.jpg"
+      },
+      {
+        "image": "img/objects/gallery/pedrali-frida-752-2.webp",
+        "width": 1240,
+        "height": 700,
+        "sourceUrl": "https://www.fioravanti.eu/project/Frida",
+        "sourceImageUrl": "https://www.fioravanti.eu/images/frida_0223.jpg"
+      },
+      {
+        "image": "img/objects/gallery/pedrali-frida-752-3.webp",
+        "width": 1240,
+        "height": 700,
+        "sourceUrl": "https://www.fioravanti.eu/project/Frida",
+        "sourceImageUrl": "https://www.fioravanti.eu/images/frida_06b39.jpg"
+      },
+      {
+        "image": "img/objects/gallery/pedrali-frida-752-4.webp",
+        "width": 1240,
+        "height": 700,
+        "sourceUrl": "https://www.fioravanti.eu/project/Frida",
+        "sourceImageUrl": "https://www.fioravanti.eu/images/frida_0747.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/pedrali-frida-752-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/pedrali-frida-752-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/pedrali-frida-752.webp",
+        "width": 1156
+      }
+    ],
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        575,
+        1040
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "olivetti-valentine",
+    "name": "Valentine",
+    "brand": "Olivetti",
+    "category": "work",
+    "tags": [],
+    "description": "Ettore Sottsass and Perry King’s portable typewriter, introduced in 1969. A bright red shell, black keys, and a matching carrying case made a work tool feel personal.",
+    "productUrl": "https://museoomero.it/en/opere/valentine/",
+    "forSale": false,
+    "sourceUrl": "https://museoomero.it/en/opere/valentine/",
+    "sourceImageUrl": "https://museoomero.it/wp-content/uploads/2021/12/Opera-Valentine-Sottsass_AAB5715-2.jpg",
+    "image": "img/objects/cutouts/olivetti-valentine.webp",
+    "width": 1444,
+    "height": 1444,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/olivetti-valentine-1.webp",
+        "width": 1772,
+        "height": 1181,
+        "sourceUrl": "https://museoomero.it/en/opere/valentine/",
+        "sourceImageUrl": "https://museoomero.it/wp-content/uploads/2021/12/Opera-Valentine-Sottsass_AAB5715-2.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/olivetti-valentine-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/olivetti-valentine-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/olivetti-valentine-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/olivetti-valentine.webp",
+        "width": 1444
+      }
+    ],
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1299,
+        776
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "qeeboo-rabbit-chair-light-blue",
+    "name": "Rabbit Chair, Light Blue",
+    "brand": "Qeeboo",
+    "category": "living",
+    "tags": [],
+    "description": "A rabbit-shaped chair by Stefano Giovannoni, for indoors or out. Its long ears work as a backrest, or a place to rest your arms when sitting the other way around.",
+    "productUrl": "https://www.qeeboo.com/en/products/rabbit-chair-design-stefano-giovannoni",
+    "forSale": true,
+    "sourceUrl": "https://www.stefanogiovannoni.com/portfolio-2/rabbit-chair-qeeboo",
+    "sourceImageUrl": "https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/81e58eed-16a7-48ee-8287-b3259e67091b/01-qeeboo-rabbit-chair-by-stefano-giovannoni--light-blue.jpg",
+    "image": "img/objects/cutouts/qeeboo-rabbit-chair-light-blue.webp",
+    "width": 1607,
+    "height": 1607,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/qeeboo-rabbit-chair-light-blue-1.webp",
+        "width": 1828,
+        "height": 1887,
+        "sourceUrl": "https://www.stefanogiovannoni.com/portfolio-2/rabbit-chair-qeeboo",
+        "sourceImageUrl": "https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/81e58eed-16a7-48ee-8287-b3259e67091b/01-qeeboo-rabbit-chair-by-stefano-giovannoni--light-blue.jpg"
+      },
+      {
+        "image": "img/objects/gallery/qeeboo-rabbit-chair-light-blue-2.webp",
+        "width": 2500,
+        "height": 1458,
+        "sourceUrl": "https://www.stefanogiovannoni.com/portfolio-2/rabbit-chair-qeeboo",
+        "sourceImageUrl": "https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/893533a5-c795-49ce-9dd8-823a76f935dc/04-qeeboo-rabbit-chair-by-stefano-giovannoni.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/qeeboo-rabbit-chair-light-blue-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/qeeboo-rabbit-chair-light-blue-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/qeeboo-rabbit-chair-light-blue-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/qeeboo-rabbit-chair-light-blue.webp",
+        "width": 1607
+      }
+    ],
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        929,
+        1446
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "alessi-magic-bunny-black",
+    "name": "Magic Bunny, Black",
+    "brand": "Alessi",
+    "category": "kitchen",
+    "tags": [],
+    "description": "A rabbit in a top hat, with toothpicks hiding inside. Stefano Giovannoni turns a small table accessory into a familiar magic trick.",
+    "productUrl": "https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054",
+    "forSale": true,
+    "sourceUrl": "https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ASG16-B-SL-frontside-1.jpg?v=1680619472",
+    "image": "img/objects/cutouts/alessi-magic-bunny-black.webp",
+    "width": 1169,
+    "height": 1169,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/alessi-magic-bunny-black-1.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ASG16-B-SL-frontside-1.jpg?v=1680619472"
+      },
+      {
+        "image": "img/objects/gallery/alessi-magic-bunny-black-2.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ASG16-B-SL-frontside-2.jpg?v=1680619472"
+      },
+      {
+        "image": "img/objects/gallery/alessi-magic-bunny-black-3.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/SG16.jpg?v=1680619472"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/alessi-magic-bunny-black-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/alessi-magic-bunny-black-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/alessi-magic-bunny-black.webp",
+        "width": 1169
+      }
+    ],
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        509,
+        1052
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "alessi-girotondo-round-tray",
+    "name": "Girotondo Round Tray",
+    "brand": "Alessi",
+    "category": "kitchen",
+    "tags": [],
+    "description": "A stainless steel tray ringed with cutout paper-doll figures. Designed by King-Kong, the duo of Stefano Giovannoni and Guido Venturini.",
+    "productUrl": "https://alessi.com/products/girotondo-round-tray",
+    "forSale": true,
+    "sourceUrl": "https://alessi.com/products/girotondo-round-tray",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/01_AKKGT_b3a8c313-2b98-4399-8b62-f175409da743.jpg?v=1652871069",
+    "image": "img/objects/cutouts/alessi-girotondo-round-tray.webp",
+    "width": 1443,
+    "height": 1443,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/alessi-girotondo-round-tray-1.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/girotondo-round-tray",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/01_AKKGT_b3a8c313-2b98-4399-8b62-f175409da743.jpg?v=1652871069"
+      },
+      {
+        "image": "img/objects/gallery/alessi-girotondo-round-tray-2.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/girotondo-round-tray",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/AKKGT-03.jpg?v=1715871252"
+      },
+      {
+        "image": "img/objects/gallery/alessi-girotondo-round-tray-3.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/girotondo-round-tray",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/AKKGT-04.jpg?v=1715871252"
+      },
+      {
+        "image": "img/objects/gallery/alessi-girotondo-round-tray-4.webp",
+        "width": 1648,
+        "height": 2062,
+        "sourceUrl": "https://alessi.com/products/girotondo-round-tray",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/KKGT_7550520b-de19-427c-9ed1-34cd751204da.jpg?v=1652871069"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/alessi-girotondo-round-tray-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/alessi-girotondo-round-tray-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/alessi-girotondo-round-tray-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/alessi-girotondo-round-tray.webp",
+        "width": 1443
+      }
+    ],
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        1298,
+        392
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
+  },
+  {
+    "id": "alessi-ray-white",
+    "name": "Ray, White Dial",
+    "brand": "Alessi",
+    "category": "wear",
+    "tags": [],
+    "description": "Stefano Giovannoni’s watch puts a round dial inside a softly squared case. A black strap, white face, and bright hands keep it simple and easy to read.",
+    "productUrl": "https://www.stefanogiovannoni.com/portfolio-2-294g7/watches",
+    "forSale": false,
+    "sourceUrl": "https://www.stefanogiovannoni.com/portfolio-2-294g7/watches",
+    "sourceImageUrl": "https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/3552c489-c5fe-4035-a476-12946fe10f75/30b-Alessi-Ray.jpg",
+    "image": "img/objects/cutouts/alessi-ray-white.webp",
+    "width": 1412,
+    "height": 1412,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/alessi-ray-white-1.webp",
+        "width": 795,
+        "height": 1505,
+        "sourceUrl": "https://www.stefanogiovannoni.com/portfolio-2-294g7/watches",
+        "sourceImageUrl": "https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/3552c489-c5fe-4035-a476-12946fe10f75/30b-Alessi-Ray.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/alessi-ray-white-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/alessi-ray-white-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/alessi-ray-white.webp",
+        "width": 1412
+      }
+    ],
+    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Original RGB with locally generated foreground mask",
+      "subjectPixels": [
+        640,
+        1270
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    }
   }
 ]

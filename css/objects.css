@@ -105,7 +105,8 @@
 
 .objects-zoom label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .objects-zoom span{min-width:12px;font-size:16px;text-align:center}
-.objects-min-zoom .objects-tile figcaption{opacity:0}
+.objects-ready .objects-tile figcaption{opacity:0;visibility:hidden}
+.objects-ready.objects-show-labels .objects-tile figcaption{opacity:1;visibility:visible}
 
 /* Compact white controls, outlined in ink, with view controls at lower left. */
 .objects-ready .objects-header>a:not(.site-logo){justify-self:start;width:max-content;border:1px solid #000;padding:8px 12px}
@@ -197,10 +198,8 @@
 .finds-home-trigger{display:block;width:fit-content;padding:8px 12px;background:var(--white);border:1px solid var(--ink)}
 .finds-page-nav{position:absolute;left:0;top:100%;padding-top:8px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:140px;background:transparent;opacity:0;transform:translateX(calc(-100% - 32px));visibility:hidden;pointer-events:none;transition:opacity .48s cubic-bezier(.2,.8,.2,1),transform .48s cubic-bezier(.2,.8,.2,1),visibility 0s .48s}
 .finds-home-menu.is-open .finds-page-nav{opacity:1;transform:none;visibility:visible;pointer-events:auto;transition-delay:0s}
-.finds-page-nav a{position:relative;display:block;width:fit-content;padding:6px 12px;background:var(--white);white-space:nowrap;transition:transform .2s ease,color .2s ease}
-.finds-page-nav a[aria-current],.finds-page-nav a:hover,.finds-home-trigger:hover{color:var(--red)}
-.finds-page-nav a::before{content:"";position:absolute;left:0;top:50%;width:0;height:6px;transform:translateY(-50%);background:var(--red);transition:width .2s ease}
-.finds-page-nav a:hover{transform:translateX(12px)}.finds-page-nav a:hover::before{width:6px}
+.finds-page-nav a{position:relative;display:block;width:fit-content;padding:6px 12px;background:var(--white);white-space:nowrap}
+.finds-page-nav a[aria-current],.finds-home-trigger:hover{color:var(--red)}
 .finds-nav-divider{width:64px;height:1px;background:var(--ink);margin:8px 0}
 .objects-ready .objects-view-dock .objects-tools-panel{width:max-content;min-width:140px;padding:0;left:0;background:transparent;border:0;overflow:visible}
 .objects-categories{align-items:flex-start;gap:4px}
@@ -212,3 +211,57 @@
 .objects-tools::details-content{position:absolute;left:0;bottom:calc(100% + 8px);width:max-content}
 .objects-ready .objects-view-dock .objects-tools-panel{position:static}
 .objects-page:not(.objects-ready) .finds-home-menu:is(:hover,:focus-within) .finds-page-nav{opacity:1;transform:none;visibility:visible;pointer-events:auto}
+
+/* One shared label style and border weight for every floating control. */
+.objects-page{--floating-label:400 12px/1.4 var(--font);--floating-border:1px solid var(--ink)}
+.objects-page :is(.finds-home-trigger,.finds-page-nav a,.objects-tools summary,.objects-categories button,.objects-language a,.objects-info,.objects-zoom button){font:var(--floating-label);letter-spacing:0;text-transform:none}
+.objects-page :is(.finds-home-trigger,.finds-page-nav a,.objects-categories button){padding:6px 12px;min-height:33px;border:var(--floating-border)}
+.objects-ready :is(.objects-tools,.objects-language,.objects-zoom),.objects-page .objects-info{border:var(--floating-border)}
+.objects-page .objects-tools summary{padding:6px 12px;min-height:31px}
+.objects-page .objects-info{width:33px;height:33px;min-height:33px;padding:6px}
+.objects-ready .objects-language{padding:3px 12px}
+.objects-ready .objects-language a{min-height:25px}
+.objects-zoom{gap:4px;padding:0 4px;min-height:33px}
+.objects-zoom button{min-width:28px;min-height:31px;padding:6px;border:0;background:transparent;color:var(--ink)}
+.objects-zoom button:hover{color:var(--red)}
+.objects-ready .objects-tile figcaption{transform:translateY(8px);transition:opacity .28s ease,transform .4s cubic-bezier(.3,1.4,.5,1),visibility 0s .28s}
+.objects-ready.objects-show-labels .objects-tile figcaption{transform:translateY(0);transition-delay:0s}
+/* Content-sized info card, using the contact drawer's margins and motion. */
+#objects-info-dialog{position:fixed;inset:max(var(--dialog-margin),env(safe-area-inset-top)) max(var(--dialog-margin),env(safe-area-inset-right)) auto auto;margin:0;box-sizing:border-box;width:calc((100% - 2 * var(--dialog-margin)) / 2);max-width:none;height:auto;max-height:calc(100dvh - 2 * var(--dialog-margin));padding:72px clamp(24px,3vw,44px) clamp(24px,3vw,44px);border:0;background:var(--white);color:var(--ink);overflow:auto;overscroll-behavior:contain;transform:translateY(calc(-100% - var(--dialog-margin)));transition:transform var(--drawer-duration) var(--drawer-ease),display var(--drawer-duration) allow-discrete,overlay var(--drawer-duration) allow-discrete}
+#objects-info-dialog[open]{transform:translateY(0)}
+#objects-info-dialog::backdrop{background:rgba(50,5,5,0);transition:background-color var(--drawer-duration) var(--drawer-ease),display var(--drawer-duration) allow-discrete,overlay var(--drawer-duration) allow-discrete}
+#objects-info-dialog[open]::backdrop{background:rgba(50,5,5,.4)}
+@starting-style{#objects-info-dialog[open]{transform:translateY(calc(-100% - var(--dialog-margin)))}#objects-info-dialog[open]::backdrop{background:rgba(50,5,5,0)}}
+#objects-info-dialog .objects-info-about{color:var(--red)}
+#objects-info-dialog .objects-dialog-close{background:transparent;color:var(--ink);border:1px solid var(--ink);font:var(--floating-label)}
+@media(max-width:767px){#objects-info-dialog{width:calc(100% - 2 * var(--dialog-margin))}}
+@media(prefers-reduced-motion:reduce){#objects-info-dialog::backdrop{transition:none}}
+@media(prefers-reduced-motion:reduce){.objects-ready .objects-tile figcaption,#objects-info-dialog{transition:none;transform:none}}
+
+/* A vertical product deck with stacked photographs inside each card. */
+.objects-tile figcaption{text-align:center}
+#object-dialog{inset:0;margin:auto;width:min(90%,900px);height:100dvh;max-height:100dvh;padding:12px 0;box-sizing:border-box;background:transparent;border:0;grid-template-rows:48px minmax(0,1fr) 48px;gap:12px;overflow:hidden}
+#object-dialog[open]{display:grid}
+#object-dialog .objects-dialog-scroll{background:var(--beige);min-height:0;height:100%;overflow-y:auto;overscroll-behavior:contain}
+#object-dialog .objects-dialog-layout{display:block;min-height:0}
+#object-dialog .objects-dialog-photo{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;touch-action:pan-x pan-y;aspect-ratio:4/3}
+#object-dialog .objects-dialog-photo::-webkit-scrollbar{display:none}
+#object-dialog .objects-dialog-image{flex:0 0 100%;width:100%;min-width:0;height:100%!important;object-fit:cover;scroll-snap-align:start;scroll-snap-stop:always}
+#object-dialog .objects-dialog-copy{position:static;max-height:none;overflow:visible;padding:32px clamp(24px,5vw,56px) 40px;gap:20px}
+#object-dialog .objects-dialog-close{top:84px;right:16px;z-index:3}
+.objects-product-peek{display:flex;align-items:center;justify-content:center;gap:16px;width:96%;margin:0 auto;padding:0 20px;border:0;background:var(--beige);color:var(--ink);font:400 12px/1.4 var(--font);overflow:hidden;cursor:pointer}
+.objects-product-peek img{width:64px;height:64px;object-fit:contain;flex:none}
+.objects-product-peek span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.objects-product-peek:hover,.objects-product-peek:focus-visible{background:var(--red)}
+.objects-product-peek[hidden]{display:none}
+@media(max-width:600px){#object-dialog{width:calc(100% - 24px);padding-block:max(8px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-bottom));gap:8px;grid-template-rows:44px minmax(0,1fr) 44px}#object-dialog .objects-dialog-close{top:72px;right:12px}#object-dialog .objects-dialog-photo{aspect-ratio:1}#object-dialog .objects-dialog-copy{padding:24px 20px 32px}.objects-product-peek{width:96%;padding-inline:12px;gap:8px}}
+/* Images scroll with the sheet; the desktop details remain alongside them. */
+#object-dialog .objects-dialog-scroll{overflow-y:auto}
+#object-dialog .objects-dialog-photo{display:block;height:auto;aspect-ratio:auto;overflow:visible;scroll-snap-type:none;touch-action:auto}
+#object-dialog .objects-dialog-image{width:100%;height:auto!important;max-height:none;aspect-ratio:auto;object-fit:cover}
+@media(min-width:768px){
+ #object-dialog{width:90%;max-width:none}
+ #object-dialog .objects-dialog-layout{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);grid-template-rows:auto;height:auto;min-height:100%;align-items:start}
+ #object-dialog .objects-dialog-photo{grid-column:1;grid-row:1}
+ #object-dialog .objects-dialog-copy{grid-column:2;grid-row:1;position:sticky;top:0;min-height:0;max-height:calc(100dvh - 144px);overflow-y:auto;overscroll-behavior:contain;padding:72px clamp(24px,3vw,56px) 40px;justify-content:flex-start}
+}
