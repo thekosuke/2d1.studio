@@ -36,6 +36,12 @@
       : Math.max(0, Math.min(1, (scroll - from) / (to - from)));
     return {progress, end: to};
   }
+  function readingEnd(height, blockHeight) {
+    // Split the scroll distance between the recent 50vh finish and the
+    // former height-aware finish, which gave longer paragraphs more room.
+    const earlierEnd = Math.min(height * .25, height * .7 - blockHeight);
+    return (height * .5 + earlierEnd) / 2;
+  }
   function introCursor(progress, coverBottom, height, openingLength, wordCount) {
     const opening = Math.max(0, Math.min(1, (height * .9 - coverBottom) / (height * .2)));
     return opening < 1 ? opening * openingLength
@@ -52,14 +58,15 @@
       const coverBottom = ink.block.closest('.intro') && heroCover && !reduced.matches ? Math.max(0, heroCover.getBoundingClientRect().bottom) : 0;
       const isIntro = Boolean(ink.block.closest('.intro') && heroCover);
       const start = innerHeight * (isIntro ? .7 : .85);
-      // Finish the whole block when its leading edge reaches mid-screen,
-      // regardless of its height. readingWindow also clamps to the page end.
-      const end = innerHeight * .5;
+      // Short copy finishes at 37.5vh; taller paragraphs get half their former
+      // extra reading distance. readingWindow still clamps to the page end.
+      const end = readingEnd(innerHeight, box.height);
       const reading = readingWindow(box.top, start, end, scroll, previousEnd, maxScroll);
       previousEnd = reading.end;
       const progress = reduced.matches ? 1 : reading.progress;
       // The first line finishes at cover=70vh; remaining words then use a
-      // non-collapsing 70vh→50vh range, independent of the moving cover.
+      // non-collapsing range from 70vh to the shared halfway finish position,
+      // independent of the moving cover.
       let cursor = progress * ink.words.length;
       if (isIntro && !reduced.matches) {
         const firstWord = ink.words[0]?.getBoundingClientRect();

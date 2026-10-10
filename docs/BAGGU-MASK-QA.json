@@ -1,0 +1,108 @@
+{
+  "status": "accepted",
+  "source": "/workspace/shared/baggu-assets/standard-pop-pink-happy-hero.jpg",
+  "source_copy": "baggu-original.jpg",
+  "source_size": [
+    2048,
+    2560
+  ],
+  "source_sha256": "9b1992efa2ec6957170546b62e930a8aa3ce735099a4d931e7eb111ade2594a6",
+  "master": {
+    "file": "baggu-transparent-master.png",
+    "size": [
+      2560,
+      2560
+    ],
+    "bytes": 2774507,
+    "sha256": "d2fe21860c119b8f2bbca5b392f91674d28bd2eea780aed845930d46a80b455d",
+    "encoding": "lossless RGBA PNG",
+    "subject_scale_from_source": 1.0,
+    "source_translation_xy": [
+      252,
+      -7
+    ]
+  },
+  "subject_bounds_source_xyxy": [
+    344,
+    276,
+    1712,
+    2297
+  ],
+  "subject_bounds_master_xyxy": [
+    596,
+    269,
+    1964,
+    2290
+  ],
+  "optical_fill": {
+    "height_percent": 78.9453,
+    "width_percent": 53.4375,
+    "top_margin_percent": 10.5078,
+    "bottom_margin_percent": 10.5469,
+    "left_margin_percent": 23.2812,
+    "right_margin_percent": 23.2812,
+    "nonzero_alpha_canvas_coverage_percent": 30.7781,
+    "alpha_weighted_canvas_coverage_percent": 30.6323
+  },
+  "pixel_preservation": {
+    "retained_master_pixels_checked": 2017073,
+    "pixels_with_changed_rgb": 0,
+    "maximum_rgb_channel_difference": 0,
+    "source_resampling": false,
+    "source_rgb_recoloring": false,
+    "source_texture_regeneration": false,
+    "source_image_preserved": true
+  },
+  "mask_method": "Deterministic source chroma segmentation (threshold 32), largest connected product component, fill internal holes, antialias only a narrow edge using chroma 26–58, fully opaque >=3 pixels inside silhouette. Alpha only; all retained native RGB copied exactly. Transparent RGB zeroed to reduce file size.",
+  "qa": {
+    "backgrounds_inspected": [
+      "neutral light gray",
+      "warm beige",
+      "black"
+    ],
+    "full_resolution_edges_inspected": [
+      "top-left handle and fold",
+      "bottom-left hem",
+      "inner-right handle opening",
+      "right edge and BAGGU label"
+    ],
+    "product_alpha_components": 1,
+    "handle_opening_alpha_check": 0,
+    "floor_shadow_alpha_check": 0,
+    "result": "Acceptable. No original background panel or cast shadow remains. Product geometry, print, fabric and label retained. A faint source anti-alias fringe is visible on black at native resolution in a few edge areas; no edge recoloring/decontamination was applied because original RGB preservation was required. It is inconspicuous at catalog display size.",
+    "proof_directory": "qa"
+  },
+  "variants": {
+    "480": {
+      "file": "baggu-transparent-480.webp",
+      "dimensions": [
+        480,
+        480
+      ],
+      "bytes": 127330,
+      "encoding": "lossless WebP after LANCZOS downsample",
+      "sha256": "19b76a8204d151568cbf6778697c64c03a5e29ec9831c1f10d2b564a67b68c6e"
+    },
+    "960": {
+      "file": "baggu-transparent-960.webp",
+      "dimensions": [
+        960,
+        960
+      ],
+      "bytes": 416354,
+      "encoding": "lossless WebP after LANCZOS downsample",
+      "sha256": "60664474804c3aefeb1cf9a5ac2a314ca6e6a14751e0653b1be1d91305071553"
+    },
+    "1440": {
+      "file": "baggu-transparent-1440.webp",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "bytes": 806570,
+      "encoding": "lossless WebP after LANCZOS downsample",
+      "sha256": "c14e18dae4f486d7573e0c54688e27b2e018f84442965b9192264d6ad06e0028"
+    }
+  },
+  "rejected_imagegen_candidates": "baggu-cutout-rejected.png and prior result-metadata.json remain as audit records; do not use them."
+}

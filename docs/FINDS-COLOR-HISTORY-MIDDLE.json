@@ -1,0 +1,770 @@
+{
+  "homeinfun-storage-stool": {
+    "index": 24,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Yellow, provisional existing selection",
+    "selectionStatus": "current_only",
+    "recommendation": "Retain the verified current variant provisionally; do not describe it as original or most iconic.",
+    "preciseClaim": "HomeinFun offers the storage stool in multiple colors. The audited product data associates the existing hero with Yellow. The page does not identify a designer, a first release, or a culturally recognized color.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "low"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://homeinfun.ca/products/cute-storage-stool-side-table",
+        "sourceType": "official product page; existing source audit",
+        "claimType": "current-product evidence only",
+        "claim": "Official product JSON explicitly maps hero to Yellow; ten colors listed, with no launch chronology."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "Original designer/manufacturer and launch palette are not established. Yellow must remain an editorial current-variant choice, not an original/iconic claim."
+    ]
+  },
+  "odd-universe-peepers": {
+    "index": 25,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Orange Peepers collection, provisional brand-associated selection",
+    "selectionStatus": "current_only",
+    "recommendation": "Retain the verified current variant provisionally; do not describe it as original or most iconic.",
+    "preciseClaim": "Orange is an official Peepers color and is consistent with the strong orange identity described by the studio that developed Odd Universe’s brand. This supports a brand-associated editorial choice, not a claim that orange was first or most recognized.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "low"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://www.odduniverse.xyz/products/the-peepers-locked",
+        "sourceType": "primary, from existing audited product data",
+        "claimType": "current-product evidence",
+        "claim": "Existing official product audit maps Orange to the main image and finds eight offered colors."
+      },
+      {
+        "url": "https://maybedesignstudio.com/projects/odd-universe",
+        "sourceType": "primary, participating brand-design studio",
+        "claimType": "direct text",
+        "claim": "The brand-design studio says the existing Odd Universe identity combined black and white with strong orange. Its case study presents Peepers in cream, orange and grey; it does not identify one original stool color."
+      },
+      {
+        "url": "https://www.newspaperclub.com/blog/posts/28590-7-newspapers-we-love-this-october",
+        "sourceType": "primary collaborator",
+        "claimType": "direct text",
+        "claim": "The printing collaborator reports Peepers was launched at London Design Festival in 2025. This dates the collection but does not establish orange as the first or dominant color."
+      }
+    ],
+    "inference": "Orange is a reasonable representative of the label because its branding agency describes orange as an existing signature color and shows orange among the product range. The brand color alone cannot establish Peepers color chronology.",
+    "limitations": [
+      "No uniquely original or most-recognized Peepers color established. Current main-image order is insufficient proof."
+    ]
+  },
+  "atonemo-nts-radio-player": {
+    "index": 26,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Standard black NTS Radio Player with red and white controls",
+    "selectionStatus": "canonical_design_no_color_choice",
+    "recommendation": "Retain the standard black hardware. Treat this as the sole documented design, with no competing colorway selection to resolve.",
+    "preciseClaim": "Atonemo and NTS both sell one standard Radio Player design. The official maker page discusses the first production run and names the red reset/control button; the existing audited gallery consistently shows the standard black hardware.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high for standard design; original chronology not independently proven"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://atonemo.com/products/nts",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official page presents one Radio Player product, says its first production run sold out, and identifies the red button in operating instructions."
+      },
+      {
+        "url": "https://shop.nts.live/products/atonemo-nts-radio-player",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "NTS’s own shop sells the same Radio Player as a single product without a color selector."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "Do not use the single Default Title variant by itself as proof of launch color. No alternative official finish was found; standard-design selection is justified without that historical claim."
+    ]
+  },
+  "not-boring-camera-app": {
+    "index": 27,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Official !Camera app artwork and interface examples",
+    "selectionStatus": "not_applicable_software",
+    "recommendation": "Keep official app imagery. Do not apply a physical-product colorway ranking.",
+    "preciseClaim": "The maker identifies !Camera as an app released 2025-06-05 and explicitly allows users to customize every part of the camera interface and share a colorway.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "not applicable"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://notbor.ing/product/camera",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "The official page labels Type: App, gives release date 6.5.25, and describes customizable camera colorways."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "A configurable UI skin is not a physical color variant. The current app icon is not claimed to be the original launch icon."
+    ]
+  },
+  "not-boring-weather-app": {
+    "index": 28,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Official !Weather app artwork and representative interface",
+    "selectionStatus": "not_applicable_software",
+    "recommendation": "Keep official app imagery. Do not label a weather scene or skin as a historical product finish.",
+    "preciseClaim": "The maker identifies !Weather as an app released 2021-02-18, with weather-dependent procedural scenes and new skin collections each season.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "not applicable"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://notbor.ing/product/weather",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "The official page labels Type: App, gives release date 2.18.21, describes procedural weather and seasonal skins."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "Current promotional art is suitable to represent the app, but does not prove an original launch skin."
+    ]
+  },
+  "not-boring-camera-art-model": {
+    "index": 29,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Graphite Edition, explicitly brand-derived editorial choice",
+    "selectionStatus": "current_only",
+    "recommendation": "Retain the verified current variant provisionally; do not describe it as original or most iconic.",
+    "preciseClaim": "The maker directly describes Graphite Edition as based on !Boring’s work-gear-inspired colors: black body and wrap with yellow highlights. Cube Edition is separately inspired by the Nintendo GameCube. Both are offered together; precedence is unstated.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "low"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://notboring.shop/products/camera-collectible-art-model",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "The official product page names Graphite and Cube editions and explains each palette’s inspiration."
+      }
+    ],
+    "inference": "Graphite is the more directly brand-associated edition, which is a reasonable editorial tie-breaker. This is not evidence of being the first release or the most widely recognized model.",
+    "limitations": [
+      "No dated first-edition release or recognition ranking was found. Do not upgrade the status to verified original/iconic solely because it uses brand colors."
+    ]
+  },
+  "mkbhd-color-picker-stickers": {
+    "index": 30,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Official eight-piece Color Picker Sticker Pack",
+    "selectionStatus": "canonical_design_no_color_choice",
+    "recommendation": "Retain the single official graphic pack; there is no finish choice to resolve.",
+    "preciseClaim": "MKBHD’s shop offers one Color Picker Sticker Pack containing four large and four small stickers, made with dbrand, with no separate color selector.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "not applicable to this single graphic pack"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://mkbhd.com/products/color-picker-sticker-pack",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official page specifies eight stickers, four large and four small, with the same color-picker graphic and no color option."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "Single-pack identity is verified; no claim of a historically first graphic revision is needed."
+    ]
+  },
+  "mkbhd-overlay-deskpad": {
+    "index": 31,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Official multicolor Overlay artwork",
+    "selectionStatus": "canonical_design_no_color_choice",
+    "recommendation": "Retain the one Overlay graphic. Smooth and Rough are surface-texture options, not alternate colorways.",
+    "preciseClaim": "The official product is the Overlay Deskpad designed by MKBHD and produced with Omnitype. Its two selectors are Smooth and Rough; both use the same layered multicolor artwork.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "not applicable to this one graphic"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://mkbhd.com/products/overlay-deskpad",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official page credits the MKBHD/Omnitype design and lists only Smooth and Rough as selectable options."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "Do not confuse the separate Production, Deconstructed or Shutter Speed products with color versions of Overlay."
+    ]
+  },
+  "bobo-choses-bolder-belt-pouch": {
+    "index": 32,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Bolder multicolor B226AI081",
+    "selectionStatus": "canonical_design_no_color_choice",
+    "recommendation": "Retain the exact B226AI081 multicolor design.",
+    "preciseClaim": "Bobo Choses identifies B226AI081 as Multicolor and offers only ONE SIZE. It is a specific designed color-block pouch, not an item with competing finish options.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "not applicable within this SKU"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://bobochoses.com/en-fr/products/b226ai081-bobo-choses-bolder-belt-pouch",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official product page gives reference B226AI081, Multicolor, and a size-only option."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "No cross-season claim that this is the first-ever Bobo Choses belt pouch. The exact design identity is the relevant selection."
+    ]
+  },
+  "hungry-market-initial-c-cap": {
+    "index": 33,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Beige adult Initial C cap, current revised version",
+    "selectionStatus": "current_only",
+    "recommendation": "Retain the verified current variant provisionally; do not describe it as original or most iconic.",
+    "preciseClaim": "The official beige adult cap page calls the body/color proprietary and also says the body/color were refined and the crown made deeper. That is evidence of a revised product, not proof of the earliest beige cap.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "low"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://hungry-market.playec.jp/products/%E5%88%BA%E7%B9%A1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-%E3%82%A4%E3%83%8B%E3%82%B7%E3%83%A3%E3%83%ABc-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5-%E5%A4%A7%E4%BA%BA%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B5%E3%82%A4%E3%82%BA",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "The maker labels this Beige, adult free size, ABH_0104, and says its body/color were refined and the cap made deeper."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "Japanese オリジナル here describes a proprietary design. It must not be translated into a first-launch color claim. No evidence makes beige more recognized than black."
+    ]
+  },
+  "daypa-kun-backpack-blue": {
+    "index": 34,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Blue canvas DAYPA KUN, probable member of original seven-color range",
+    "selectionStatus": "original_palette_inferred",
+    "recommendation": "Retain Blue, with the original-palette conclusion clearly labeled as an inference unless the dated launch visual is matched explicitly.",
+    "preciseClaim": "The manufacturer announced the DAYPA brand on 2026-09-30, with launch from October 1 and DAYPA KUN in seven colors. The contemporaneous official product audit on October 10 verifies Blue as a canvas DAYPA KUN variant.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "medium"
+    },
+    "originalLaunchColorJustifiable": "inference only: member of original palette, not sole first color",
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://prtimes.jp/main/html/rd/p/000000013.000131153.html",
+        "sourceType": "primary manufacturer press release",
+        "claimType": "direct text",
+        "claim": "Goko’s own dated launch release announces DAYPA from 2026-10-01 and the canvas DAYPA KUN in seven colors, with special-order colors described as future plans."
+      },
+      {
+        "url": "https://daypa.jp/products/dp26215001?variant=49041452466425",
+        "sourceType": "primary, audited product data",
+        "claimType": "current-product evidence",
+        "claim": "Existing official product audit maps this exact variant ID to BLUE."
+      }
+    ],
+    "inference": "A verified Blue variant only nine days after the seven-color brand launch is likely part of the initial palette. The press-release text does not individually name the seven colors.",
+    "limitations": [
+      "No sole original or most iconic color identified. Store launch dates and available colors may vary according to the press release."
+    ]
+  },
+  "lego-piranha-plant-71426": {
+    "index": 35,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Original red/green/white LEGO Piranha Plant set 71426",
+    "selectionStatus": "original_design_documented",
+    "recommendation": "Retain the standard set and its original character palette.",
+    "preciseClaim": "LEGO’s dated September 2023 announcement identifies set 71426 as the Piranha Plant, released 2023-11-06; the official building-instruction archive also assigns it to 2023. This is a specified set with an inherent licensed character palette, not a colorway choice.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high"
+    },
+    "originalLaunchColorJustifiable": true,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://www.lego.com/en-us/aboutus/news/2023/september/lego-super-mario-piranha-plant",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Dated official reveal names set 71426, 540 pieces, and availability from November 6, 2023; it describes capturing the iconic Piranha Plant’s distinctive features."
+      },
+      {
+        "url": "https://www.lego.com/en-us/service/building-instructions/71426",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official instruction archive identifies the Piranha Plant 71426 set and year 2023."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "Do not substitute another Piranha Plant set or a fan recolor; authenticity is the exact set identity."
+    ]
+  },
+  "iwate-canning-gift-stock": {
+    "index": 36,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "The original three-flavor Gift&Stock collection with its colored packaging",
+    "selectionStatus": "original_collection_documented",
+    "recommendation": "Retain the three-color collection. Its colors distinguish flavors rather than competing cosmetic finishes.",
+    "preciseClaim": "Takram, which developed the brand and packaging, says the brand’s first products were three canned seafood risottos launched in 2022. The maker identifies the current three as mackerel curry, squid cream and yellowtail tomato risotto.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high"
+    },
+    "originalLaunchColorJustifiable": true,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://www.takram.com/projects/gift-and-stock",
+        "sourceType": "primary designer",
+        "claimType": "direct text",
+        "claim": "The design studio dates the project to 2022, calls the three risottos the brand’s first products, and explains the intentionally eye-catching packaging."
+      },
+      {
+        "url": "https://www.hakuhodo.co.jp/news/newsrelease/99595/",
+        "sourceType": "primary project partner",
+        "claimType": "direct text",
+        "claim": "The project partner’s 2022-09-01 announcement records the Gift&Stock brand launch."
+      },
+      {
+        "url": "https://www.iwa-kan.com/lp/gift-and-stock/",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "The maker presents the three risotto flavors as the collection."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "There is no reason to select one flavor’s label color as the most iconic entire collection. This establishes the original product collection, not an unchanged printing specification for every later can."
+    ]
+  },
+  "mint-hug-shakers": {
+    "index": 37,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Black-and-white Hug pair",
+    "selectionStatus": "iconic_color_supported",
+    "recommendation": "Retain the black-and-white pair as the directly supported canonical design.",
+    "preciseClaim": "Designer-owned Curve ID/MINT explicitly ties the intentional black-and-white contrast to Hug’s meaning, and its company history calls Hug one of MINT’s most iconic and successful MoMA-store products.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": true,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://www.curveid.com/mint-store/p/hug",
+        "sourceType": "primary designer",
+        "claimType": "direct text",
+        "claim": "The designer explains that black and white differentiate salt from pepper and deliberately express the design’s theme of human kinship."
+      },
+      {
+        "url": "https://www.curveid.com/who-we-are/ourhistory-yetgb",
+        "sourceType": "primary designer",
+        "claimType": "direct text",
+        "claim": "The designer company identifies Hug by Alberto Mantilla as one of MINT’s most iconic products and a successful MoMA-store product."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "This supports iconic/canonical black-and-white without needing to invent an exact first retail color chronology."
+    ]
+  },
+  "subu-originals-f-line-black": {
+    "index": 38,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Black ORIGINALS F-LINE",
+    "selectionStatus": "recognized_palette_supported",
+    "recommendation": "Retain Black as a maker-confirmed recognizable Permanent Collection color.",
+    "preciseClaim": "SUBU’s brand director explains that BLACK, RED, STEEL GRAY, MOUNTAIN KHAKI, DOTS and DUCK CAMO were deliberately made a permanent collection so customers would associate them with SUBU. Black is therefore a supported recognized brand color, though not proved uniquely most iconic.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high for recognized permanent color"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": true,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://www.subu2016.com/post/subu-eleykishimoto-01",
+        "sourceType": "primary brand-director interview",
+        "claimType": "direct text",
+        "claim": "Official interview explains the deliberate six-color Permanent Collection and explicitly names BLACK. It says the collection followed three years of changing seasonal themes."
+      },
+      {
+        "url": "https://subu2016-onlinestore.com/products/subu-black",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official Black product listing verifies the current exact color and standard silhouette."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "The interview supports one of several recognized permanent colors, not a unique ranking or proof that black alone was the first 2016 launch color."
+    ]
+  },
+  "nintendo-switch-2": {
+    "index": 39,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Standard black console with Light Blue / Light Red Joy-Con 2 accents",
+    "selectionStatus": "original_palette_documented",
+    "recommendation": "Retain the standard launch hardware and original Light Blue / Light Red controller pair.",
+    "preciseClaim": "Nintendo’s official Light Blue / Light Red Joy-Con 2 listing gives release date June 5, 2025. The same page dates the Light Purple / Light Green pair to February 12, 2026 and Blue / Light Yellow to July 23, 2026, directly distinguishing the original controller palette from later additions.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high"
+    },
+    "originalLaunchColorJustifiable": true,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://www.nintendo.com/us/store/products/nintendo-switch-2-joy-con-2-l-r-light-blue-light-red-123677/",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Nintendo explicitly names Light Blue / Light Red and its 2025-06-05 release date, and lists the later color-pair dates."
+      },
+      {
+        "url": "https://www.nintendo.com/en-ca/whatsnew/nintendo-switch-2-to-be-released-in-2025/",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Nintendo’s 2025-01-16 first-look announcement supplies contemporaneous original hardware context."
+      },
+      {
+        "url": "https://www.nintendo.com/us/gaming-systems/switch-2/features/",
+        "sourceType": "primary, existing audited gallery",
+        "claimType": "current-product evidence",
+        "claim": "The audited official feature gallery identifies the standard black system with Light Blue / Light Red accents."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "Nintendo’s official names are Light Blue and Light Red; avoid treating later controller colors as original launch colors."
+    ]
+  },
+  "sharge-discho": {
+    "index": 40,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Standard translucent silver/white Discho",
+    "selectionStatus": "canonical_design_no_color_choice",
+    "recommendation": "Retain the single documented transparent Discho design.",
+    "preciseClaim": "The official Discho page offers one Default Title product and directly describes its transparent design. The transparency is a core design feature, not one of several offered color finishes.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high for sole documented design; launch chronology unproven"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://sharge.com/products/discho-hybrid-power-bank",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official page gives one product configuration, calls out the transparent design, and describes Braun Audio 300 as an inspiration."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "Do not equate a single present-day SKU with proven original-release chronology. It resolves current color selection because no alternative finish is documented."
+    ]
+  },
+  "fairphone-gen-6-plus": {
+    "index": 41,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Forest Green, one of the documented launch colors",
+    "selectionStatus": "original_palette_documented",
+    "recommendation": "Retain Forest Green; it meets the original-launch-palette criterion. Do not call it uniquely most iconic.",
+    "preciseClaim": "Fairphone’s official US launch story dated 2026-10-08 explicitly lists Horizon Black and Forest Green alongside a new Cobalt Blue edition. Forest Green is therefore documented in the launch palette; Cobalt Blue is the specifically highlighted new color.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high for US launch palette"
+    },
+    "originalLaunchColorJustifiable": true,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://us.fairphone.com/stories/the-fairphone-gen-6-is-all-about-giving-you-more",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official US launch announcement explicitly names Horizon Black, Forest Green and Cobalt Blue and explains the latter’s origin-story significance."
+      },
+      {
+        "url": "https://us.fairphone.com/the-fairphone-gen-6-plus",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Current official specification and selector list the same three colors."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "The cited announcement is the US launch. Other official material dates the model’s earlier launch to August 2026, so do not call October the worldwide first release. No source ranks Forest Green as most iconic."
+    ]
+  },
+  "cwandt-high-speed-jump-rope": {
+    "index": 42,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Original durable-resin handle version for strict historical selection; current aluminum/orange version only if explicitly treated as a later model",
+    "selectionStatus": "current_variant_not_original",
+    "recommendation": "Do not certify the current aluminum/orange gallery as original or iconic. Prefer original white/translucent resin imagery if the original-release requirement is strict, even if that leaves fewer verified photos; otherwise disclose the current model exception.",
+    "preciseClaim": "CW&T explicitly dates the initial durable-resin/ball-bearing version to 2019-06-11 and says the aluminum model was created after years of testing, after which the resin model was discontinued. Current aluminum ships assembled with neon-orange rope and includes green as an alternate.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high that current version is not original; iconic status unproven"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://cwandt.com/products/high-speed-jump-rope",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official history explicitly distinguishes the initial 2019 durable-resin model from the later aluminum model; current specifications name orange assembled rope and green alternate."
+      }
+    ],
+    "inference": "The original white/translucent handle appearance comes from the historical image already inspected in the source audit, not from the current aluminum packshot. The text establishes original material but does not spell out an original color name.",
+    "limitations": [
+      "No primary or credible comparative evidence establishes the later aluminum/orange model as most iconic. Do not use the 2019 date with current aluminum photography without qualification."
+    ]
+  },
+  "ikea-forlunda-red": {
+    "index": 43,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Tonerud Red FÖRLUNDA, article 405.727.47",
+    "selectionStatus": "original_palette_supported",
+    "recommendation": "Retain Tonerud Red as supported early/original-range color, with no claim of unique primacy.",
+    "preciseClaim": "IKEA Korea’s exact Tonerud Red article 405.727.47 gives the model-release date as 7/1/2024. The Grey and Beige product pages give the same release date. IKEA also uses red in a category feature introducing FÖRLUNDA as new.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high for original-range membership; not unique color priority"
+    },
+    "originalLaunchColorJustifiable": true,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://www.ikea.com/kr/ko/p/foerlunda-pouffe-with-storage-tonerud-red-40572747/",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official exact Red SKU page states model-release date 7/1/2024 under 동일모델의 출시년월."
+      },
+      {
+        "url": "https://www.ikea.com/kr/ko/p/foerlunda-pouffe-with-storage-tonerud-grey-50572742/",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official Grey SKU gives the same 7/1/2024 date, supporting simultaneous colors rather than a red-only claim."
+      },
+      {
+        "url": "https://www.ikea.com/kw/en/cat/ottomans-footstools-pouffes-20926/?page=2",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "IKEA’s category editorial presents red FÖRLUNDA in its new-product storage feature."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "This is a manufacturer-declared model-release date on the Korean exact-color page, not a complete worldwide introduction history. Red is one original-range choice, not proven uniquely first or most popular."
+    ]
+  },
+  "dailyobjects-carbon-stack-case": {
+    "index": 44,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Carbon Stack Signature for iPhone 18 Pro, a documented launch-palette choice",
+    "selectionStatus": "original_palette_supported_by_launch_reporting",
+    "recommendation": "Retain Carbon as one of the documented iPhone 18 Pro launch colors; do not describe it as uniquely first or most iconic.",
+    "preciseClaim": "Notebookcheck’s dated 2026-09-12 launch coverage specifically lists Stack Signature for iPhone 18 Pro and Pro Max in Carbon, Indigo, Slate, Fig and Lagoon. A 2025 Indulge review already documented Carbon in the previous Stack generation. The official exact-product audit confirms the current Carbon SKU.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high for exact-model launch palette; based on credible dated reporting"
+    },
+    "originalLaunchColorJustifiable": true,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://www.notebookcheck.net/DailyObjects-unveils-largest-iPhone-case-collection-to-date.1397281.0.html",
+        "sourceType": "credible publisher reporting manufacturer launch",
+        "claimType": "direct text",
+        "claim": "Dated launch coverage explicitly lists Carbon in the iPhone 18 Pro/Pro Max Stack Signature release palette, alongside Indigo, Slate, Fig and Lagoon."
+      },
+      {
+        "url": "https://www.indulgexpress.com/gadgets/2025/Nov/14/mix-and-match-if-you-have-any-variant-of-the-latest-iphone-17",
+        "sourceType": "credible publisher",
+        "claimType": "direct text",
+        "claim": "Dated 2025 hands-on coverage names Carbon black among the Stack and Stack Signature range colors. This establishes prior-family presence, not the exact iPhone 18 case."
+      },
+      {
+        "url": "https://www.dailyobjects.com/carbon-stack-signature-phone-case-cover-for-iphone-18-pro/dp?f=pid~CRBN-STCK-SGTR-PHN-AP-IPH18PRO%2FIPH17PRO",
+        "sourceType": "primary, existing audited product page",
+        "claimType": "current-product evidence",
+        "claim": "The existing official audit identifies the exact Carbon Stack Signature case and its product-specific image gallery."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "The launch-color evidence is dated independent reporting, not a preserved manufacturer launch press release. It supports membership in the release palette and continuity with the previous family; no uniquely iconic color ranking is established."
+    ]
+  },
+  "nendo-shoe-horn": {
+    "index": 45,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Natural-looking/whitish maple No.5461-30, NL-0 urethane finish",
+    "selectionStatus": "original_design_documented_in_images",
+    "recommendation": "Retain the pale maple version represented in nendo’s dated original project documentation.",
+    "preciseClaim": "Nendo’s own shoe-horn project is dated 2009.12 and credits Masayuki Hayashi’s photography. Its pale wooden version, inspected in the source audit, matches Maruni’s currently named whitish maple No.5461-30. Maruni also sells natural black No.5461-90.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high for historical documented appearance; medium for exact finish-code continuity"
+    },
+    "originalLaunchColorJustifiable": "historical designer project imagery supports pale wood; exact 2009 finish code is not stated",
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://www.nendo.jp/en/works/shoe-horn-2/",
+        "sourceType": "primary designer",
+        "claimType": "dated project documentation plus images",
+        "claim": "Designer’s original project page gives 2009.12, client 361° maruni, wood-grain continuity concept, and photographer Masayuki Hayashi."
+      },
+      {
+        "url": "https://www.maruni.com/en/product/shoehorn/",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Manufacturer identifies both maple finishes: No.5461-30 whitish NL-0 and No.5461-90 natural black NK-1."
+      }
+    ],
+    "inference": "The natural-looking current whitish finish is the closest supported match to the designer’s original pale-wood photographs. The dated project does not name NL-0 or assert that black was absent at launch.",
+    "limitations": [
+      "Do not claim whitish was the only 2009 finish, or that current finish chemistry is unchanged. The source establishes original visual treatment rather than an exhaustive launch palette."
+    ]
+  },
+  "mr-maria-first-light-snoopy": {
+    "index": 46,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "All-white Snoopy First Light",
+    "selectionStatus": "canonical_design_no_color_choice",
+    "recommendation": "Retain the all-white First Light design. No competing colorway choice is documented.",
+    "preciseClaim": "Mr Maria explicitly calls this the all-white night-light edition of Snoopy. First Light is a named size/function version; Bundle of Light is a different smaller product, not a color alternative.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high for canonical single design; precise first-release chronology unproven"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": false,
+    "colorSelectionApplicable": false,
+    "evidence": [
+      {
+        "url": "https://www.mrmaria.com/snoopy-first-light/",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Maker explicitly describes its all-white Snoopy night-light edition and identifies the First Light product."
+      },
+      {
+        "url": "https://mrmaria.us/products/snoopy-first-light",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official US store presents the same all-white First Light product."
+      },
+      {
+        "url": "https://prtimes.jp/main/html/rd/p/000000147.000050227.html",
+        "sourceType": "primary distributor",
+        "claimType": "direct text",
+        "claim": "Authorized Japanese importer’s 2025-10-23 release distinguishes First Light from Bundle of Light and describes the matte silicone treatment."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "The iconic character’s 1950 origin is not the lamp’s launch date. No exact first lamp-release chronology is claimed."
+    ]
+  },
+  "flos-snoopy-black": {
+    "index": 47,
+    "reviewedAt": "2026-10-10",
+    "recommendedVariant": "Black enameled metal shade with white marble base",
+    "selectionStatus": "iconic_color_supported",
+    "recommendation": "Retain Black. It directly satisfies the iconic-color criterion.",
+    "preciseClaim": "Flos explicitly calls Snoopy’s black enameled metal shade iconic and says it was later developed into orange and green palettes; the same 2025 announcement introduces navy blue. Black has direct manufacturer support as the canonical historical appearance.",
+    "confidence": {
+      "variantIdentity": "high",
+      "originalOrIconicSelection": "high"
+    },
+    "originalLaunchColorJustifiable": false,
+    "iconicOrRecognizedColorJustifiable": true,
+    "colorSelectionApplicable": true,
+    "evidence": [
+      {
+        "url": "https://japan.flos.com/snoopy/",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official navy-blue launch text dates the design to 1967, explicitly identifies the iconic black enameled shade, and describes expansion into orange, green and now navy blue."
+      },
+      {
+        "url": "https://flos.com/en/cy/snoopy/M-snoopy.html",
+        "sourceType": "primary",
+        "claimType": "direct text",
+        "claim": "Official Black product gallery verifies the existing selected finish."
+      }
+    ],
+    "inference": null,
+    "limitations": [
+      "The strongest explicit claim is iconic black. Avoid adding unsupported claims about the precise enamel specification of every 1967 production example."
+    ]
+  }
+}

@@ -33,17 +33,19 @@
   <script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('is-landing');</script>
   <link rel="preload" href="fonts/SC%20Walla%20Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/fonts.css?v=4">
-  <link rel="stylesheet" href="css/walla.css?v=45">
+  <link rel="stylesheet" href="css/walla.css?v=47">
   <link rel="stylesheet" href="css/dialogs.css?v=12">
+  <link rel="stylesheet" href="css/mobile-nav.css?v=3">
   <script src="js/language.js?v=1" defer></script>
   <script src="js/config.js" defer></script>
   <script src="js/drawers.js?v=2" defer></script>
-  <script src="js/contact.js?v=6" defer></script>
+  <script src="js/contact.js?v=7" defer></script>
   <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
   <script src="js/tote-preview.js?v=12" defer></script>
+  <script src="js/mobile-nav.js?v=2" defer></script>
   <script src="js/site.js?v=4" defer></script>
-  <script src="js/walla.js?v=26" defer></script>
-  <script src="js/reading-ink.js?v=5" defer></script>
+  <script src="js/walla.js?v=28" defer></script>
+  <script src="js/reading-ink.js?v=6" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/2d1-brand.png?v=2","slogan":"Familiar Characters","description":"An independent design studio working in branding and digital products, and an editorial home for Familiar Characters."}</script>
 </head>
 <body id="top" class="home-page">
@@ -56,10 +58,11 @@
     <div class="landing-mark"><img src="img/brand/logo_beige.svg" width="829" height="280" alt=""><svg class="landing-eyes" viewBox="0 0 829 280"><image href="img/brand/eyes.svg" x="317" y="103" width="116" height="48"/></svg></div>
     <p class="brand-caption"><span>A Design House</span></p>
   </div>
-  <nav class="page-nav" aria-label="Sections and pages"><span class="page-nav-left"><a href="#studio">Studio</a><a href="#shop">Shop</a></span><a href="#connect">Connect</a><span class="page-nav-pages" role="group" aria-label="Pages"><a href="about/">About</a><a href="objects/">Finds</a></span><span class="page-nav-contact"><button type="button" data-contact aria-haspopup="dialog" aria-controls="contact">Contact</button></span></nav>
+  <button class="mobile-nav-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <nav class="page-nav" id="page-navigation" aria-label="Sections and pages"><span class="page-nav-left"><a href="#studio">Studio</a><a href="#shop">Shop</a></span><a href="#connect">Connect</a><span class="page-nav-pages" role="group" aria-label="Pages"><a href="about/">About</a><a href="objects/">Finds</a></span><span class="page-nav-contact"><button type="button" data-contact aria-haspopup="dialog" aria-controls="contact">Contact</button></span></nav>
   <main id="main">
     <section class="intro column section-stack" aria-label="Introduction">
-      <h1 data-ink>2D1 is an independent design house working across brands, digital products, and ideas. We help shape things from early thinking through to how they look, work, and live in the world.<br><br>Alongside client work, we make things of our own and collaborate with people we like. We call these objects and ideas <em translate="no">Familiar Characters</em> — things with enough character to earn a place in everyday life.</h1>
+      <h1 data-ink>2D1 is an independent design house working across brands, digital products, and ideas. We help shape things from early thinking through to how they look, work, and live in the world.<br><br>Alongside client work, we make things of our own and collaborate with people we like. We call these objects and ideas <a class="familiar-characters" href="objects/" translate="no">Familiar Characters</a> — things with enough character to earn a place in everyday life.</h1>
       <div class="button-stack"><a class="intro-cta" href="about/">More about us <span aria-hidden="true">→</span></a></div>
     </section>
     <section id="studio" class="section-stack studio" aria-labelledby="studio-label">
@@ -94,6 +97,7 @@
       <div class="product-details" aria-label="Product details">
         <dl class="product-specs">
           <div><dt>Material</dt><dd>Tightly woven black canvas.</dd></div>
+          <div><dt>Origin</dt><dd>Made in Japan</dd></div>
           <div><dt>Dimensions</dt><dd>Approx. W 40 × H 36 × D 10 cm, excluding the strap.</dd></div>
           <div><dt>Strap</dt><dd>One long strap, black outside and red inside. For shoulder carry.</dd></div>
           <div><dt>Red tag</dt><dd>A square woven label, folded into the side seam.</dd></div>

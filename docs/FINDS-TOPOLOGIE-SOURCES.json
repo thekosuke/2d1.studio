@@ -1,0 +1,456 @@
+{
+  "reviewed": "2026-10-10",
+  "status": "ready_for_parent_review",
+  "objectProposal": {
+    "id": "topologie-6mm-rope-strap",
+    "name": "6.0mm Rope Strap",
+    "brand": "Topologie",
+    "category": "wear",
+    "tags": [
+      "strap",
+      "carry",
+      "rope"
+    ],
+    "description": "An adjustable rope strap with a pair of swivel carabiners.",
+    "variantName": "6.0mm Rope, Navy Orange",
+    "productUrl": "https://topologie.jp/products/6-0mm-rope?variant=56944637837478",
+    "sourceUrl": "https://intl.topologie.com/products/6-0mm-rope?variant=48911963029643",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0075/7825/5415/files/6mm-NavyOrange_2a199376-7cac-486c-9c62-e4160d3bdaba.jpg?v=1786607368",
+    "sourceFile": "6mm-navy-orange.jpg",
+    "image": "img/objects/cutouts/topologie-6mm-navy-orange.webp",
+    "width": 1833,
+    "height": 1833,
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/topologie-6mm-navy-orange-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/topologie-6mm-navy-orange-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/topologie-6mm-navy-orange-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/topologie-6mm-navy-orange.webp",
+        "width": 1833
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-product.jpg",
+        "width": 2000,
+        "height": 2500,
+        "sourceUrl": "https://intl.topologie.com/products/6-0mm-rope?variant=48911963029643",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0075/7825/5415/files/6mm-NavyOrange_2a199376-7cac-486c-9c62-e4160d3bdaba.jpg?v=1786607368",
+        "sourceFile": "6mm-navy-orange.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/6mm-navy-orange.jpg",
+        "credit": "Topologie",
+        "description": "Product arranged in a wide loop",
+        "originalBytes": 284498,
+        "servedBytes": 284498,
+        "sha256Original": "4ad8cb44f5d4dd161b9ef28b8fda7d9f9e7eb17049ba05fd2c1a02731c19d55e",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-worn.jpg",
+        "width": 3239,
+        "height": 4049,
+        "sourceUrl": "https://eu.topologie.com/products/6-0mm-rope-navy-orange",
+        "sourceImageUrl": "https://eu.topologie.com/cdn/shop/products/Verdon_Lookbook_NavyOrange_01_04dfe2b0-4ea1-4b05-8e26-4ea502b1086c.jpg?v=1680577476",
+        "sourceFile": "navy-orange-lookbook-01.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-lookbook-01.jpg",
+        "credit": "Topologie",
+        "description": "Strap worn across the body with a phone",
+        "originalBytes": 1262052,
+        "servedBytes": 1262052,
+        "sha256Original": "9281df56f3518e481d90c3f7399d92a97f275e8ad0bae3a6af2273db2ea5d330",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-held.jpg",
+        "width": 3657,
+        "height": 4571,
+        "sourceUrl": "https://eu.topologie.com/products/6-0mm-rope-navy-orange",
+        "sourceImageUrl": "https://eu.topologie.com/cdn/shop/products/Verdon_Lookbook_NavyOrange_03_6b55dc47-1312-433c-ba91-a6436329d303.jpg?v=1680577476",
+        "sourceFile": "navy-orange-lookbook-03.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-lookbook-03.jpg",
+        "credit": "Topologie",
+        "description": "Strap held by hand with a phone",
+        "originalBytes": 1618363,
+        "servedBytes": 1618363,
+        "sha256Original": "027b7138f7d1fd9221ba3b6dca404461bf80880cbe8e075afc51fb59c426c5b9",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-detail-4.jpg",
+        "width": 1440,
+        "height": 1728,
+        "sourceUrl": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+        "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/090/587/26090587000510_dt_N_004_org.jpg",
+        "sourceFile": "navy-orange-baycrews-04.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-baycrews-04.jpg",
+        "credit": "BAYCREW’S / AP STUDIO",
+        "description": "Complete strap in a narrow folded arrangement",
+        "originalBytes": 52679,
+        "servedBytes": 52679,
+        "sha256Original": "2024a7a9dca9258b10899ae011c2152b2edb92de020b478ea426cc59fbfbaecb",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-detail-5.jpg",
+        "width": 1440,
+        "height": 1728,
+        "sourceUrl": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+        "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/090/587/26090587000510_dt_N_005_org.jpg",
+        "sourceFile": "navy-orange-baycrews-05.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-baycrews-05.jpg",
+        "credit": "BAYCREW’S / AP STUDIO",
+        "description": "Close-up of the rope, swivel ring, and stamped collar",
+        "originalBytes": 141800,
+        "servedBytes": 141800,
+        "sha256Original": "030e55ad7736d8b3106919045c5c3c5731038d3e366884e48f4a7df653e34de2",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-detail-6.jpg",
+        "width": 1440,
+        "height": 1728,
+        "sourceUrl": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+        "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/090/587/26090587000510_dt_N_006_org.jpg",
+        "sourceFile": "navy-orange-baycrews-06.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-baycrews-06.jpg",
+        "credit": "BAYCREW’S / AP STUDIO",
+        "description": "Close-up of the woven red logo label",
+        "originalBytes": 78069,
+        "servedBytes": 78069,
+        "sha256Original": "5026c8814a17a18422d05766b6c2966a69b28aaeb8a8633e638f24a9cfdfaf09",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-detail-7.jpg",
+        "width": 1440,
+        "height": 1728,
+        "sourceUrl": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+        "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/090/587/26090587000510_dt_N_007_org.jpg",
+        "sourceFile": "navy-orange-baycrews-07.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-baycrews-07.jpg",
+        "credit": "BAYCREW’S / AP STUDIO",
+        "description": "Close-up of the two gold-tone carabiners",
+        "originalBytes": 119438,
+        "servedBytes": 119438,
+        "sha256Original": "fe4dd841857d24e075ad3e05df20e2bc774fd1ace1667eca9e39cf5072ffba10",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Conventional luminance/chroma segmentation; alpha-only native master; no synthesized pixels; original RGB retained exactly",
+      "subjectPixels": [
+        1625,
+        1649
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "nativeSourceDimensions": [
+        2000,
+        2500
+      ],
+      "nativeAlphaMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/masters/topologie-6mm-navy-orange-alpha.png",
+      "squareMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/masters/topologie-6mm-navy-orange-square.png",
+      "cropBoundingBox": [
+        182,
+        418,
+        1807,
+        2067
+      ],
+      "pixelComparison": {
+        "nativeMasterRGBExact": true,
+        "servedPrimaryMatchesSquareRGBAExactly": true
+      }
+    },
+    "usageCaveat": "Source-credited Topologie and BAYCREW’S/AP STUDIO product photography for a private preview. No unrestricted-use license verified.",
+    "catalogAudit": {
+      "reviewed": "2026-10-10",
+      "variantConfidence": "High match for 6.0mm Rope / Navy Orange at the center of the user’s photograph; original-launch or iconic color status unverified.",
+      "desiredVariant": "Navy Orange",
+      "notes": [
+        "One 6.0mm Navy Orange representative is a reversible selection assumption following the optional clarification window, per parent instruction.",
+        "Seven matching distinct gallery photographs: one official packshot, two official in-use views, and four stockist product/detail views. Six views differ from the primary packshot.",
+        "Current official mixed-color lifestyle images were retained as research candidates but are not included or counted.",
+        "No duplicate Topologie item exists in the current 74-item catalog."
+      ],
+      "sourceLimitations": [
+        "Native transparent official photography was not found; the approved conventional pixel-preserving masking was used.",
+        "Historical launch/most-recognized color status could not be verified.",
+        "Four detail images are from established stockist BAYCREW’S/AP STUDIO; they are not official Topologie-hosted originals."
+      ]
+    },
+    "colorwayEvidence": {
+      "status": "unverified",
+      "selectionBasis": "Reversible representative inferred from the owner’s shelf photo; not claimed to be the launch or most-recognized colorway.",
+      "findings": [
+        {
+          "url": "https://topologie.jp/products/6-0mm-rope?variant=56944637837478",
+          "finding": "Official variant identifies Navy Orange in the 6.0mm Rope product family."
+        },
+        {
+          "url": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+          "finding": "Stockist confirms manufacturer color NAVY ORANGE and manufacturer model TP-WST-R06-NVO-00-BO."
+        },
+        {
+          "url": "https://eu.topologie.com/products/6-0mm-rope-navy-orange",
+          "finding": "Official color-specific page supplies matching Navy Orange packshot and two in-use photographs; no launch or iconic ranking is stated."
+        }
+      ]
+    }
+  },
+  "japanese": {
+    "name": "6.0mm ロープストラップ",
+    "description": "結び目で長さを調節できる、回転式カラビナ付きのロープストラップ。"
+  },
+  "referencePhoto": "/workspace/scratch/8667b50c4bf5/finds-new-products-2026-10-10/IMG_7069.jpeg",
+  "referenceIdentification": {
+    "count": 7,
+    "models": "Six boxes marked 6.0mm Rope Strap and one front-left box marked 8.0mm Rope Strap.",
+    "confirmedColorMatches": [
+      "Center: 6.0mm Navy Orange",
+      "Front right: 6.0mm Black Reflective",
+      "Front left: 8.0mm Black Solid (high-confidence visual match)"
+    ],
+    "remainingColorCandidates": [
+      "Mint Solid / teal at far left; exact color uncertain under store lighting",
+      "Bright red/orange second from left; exact legacy color uncertain",
+      "Beige Melange / warm gray center-right; likely",
+      "Dark olive/green at far right; exact color uncertain"
+    ]
+  },
+  "qualityEvidence": {
+    "allGalleryNativeLongEdgesAtLeast1200": true,
+    "galleryLongEdges": [
+      2500,
+      4049,
+      4571,
+      1728,
+      1728,
+      1728,
+      1728
+    ],
+    "largestServedFileBytes": 2467830,
+    "primaryBytes": 1282438,
+    "primaryAlphaVerified": true,
+    "visualReviewFiles": [
+      "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/navy-orange-cutout-qa.jpg",
+      "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/navy-orange-edge-qa.jpg",
+      "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/navy-orange-gallery-contact.jpg"
+    ]
+  },
+  "noRepositoryEdits": true,
+  "integratedCatalogObject": {
+    "id": "topologie-6mm-rope-strap",
+    "name": "6.0mm Rope Strap",
+    "brand": "Topologie",
+    "category": "wear",
+    "tags": [
+      "strap",
+      "carry",
+      "rope"
+    ],
+    "description": "An adjustable rope strap with a pair of swivel carabiners.",
+    "variantName": "6.0mm Rope, Navy Orange",
+    "productUrl": "https://topologie.jp/products/6-0mm-rope?variant=56944637837478",
+    "sourceUrl": "https://intl.topologie.com/products/6-0mm-rope?variant=48911963029643",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0075/7825/5415/files/6mm-NavyOrange_2a199376-7cac-486c-9c62-e4160d3bdaba.jpg?v=1786607368",
+    "sourceFile": "6mm-navy-orange.jpg",
+    "image": "img/objects/cutouts/topologie-6mm-navy-orange.webp",
+    "width": 1833,
+    "height": 1833,
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/topologie-6mm-navy-orange-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/topologie-6mm-navy-orange-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/topologie-6mm-navy-orange-1440.webp",
+        "width": 1440
+      },
+      {
+        "image": "img/objects/cutouts/topologie-6mm-navy-orange.webp",
+        "width": 1833
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-product.jpg",
+        "width": 2000,
+        "height": 2500,
+        "sourceUrl": "https://intl.topologie.com/products/6-0mm-rope?variant=48911963029643",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0075/7825/5415/files/6mm-NavyOrange_2a199376-7cac-486c-9c62-e4160d3bdaba.jpg?v=1786607368",
+        "sourceFile": "6mm-navy-orange.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/6mm-navy-orange.jpg",
+        "credit": "Topologie",
+        "description": "Product arranged in a wide loop",
+        "originalBytes": 284498,
+        "servedBytes": 284498,
+        "sha256Original": "4ad8cb44f5d4dd161b9ef28b8fda7d9f9e7eb17049ba05fd2c1a02731c19d55e",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-worn.jpg",
+        "width": 3239,
+        "height": 4049,
+        "sourceUrl": "https://eu.topologie.com/products/6-0mm-rope-navy-orange",
+        "sourceImageUrl": "https://eu.topologie.com/cdn/shop/products/Verdon_Lookbook_NavyOrange_01_04dfe2b0-4ea1-4b05-8e26-4ea502b1086c.jpg?v=1680577476",
+        "sourceFile": "navy-orange-lookbook-01.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-lookbook-01.jpg",
+        "credit": "Topologie",
+        "description": "Strap worn across the body with a phone",
+        "originalBytes": 1262052,
+        "servedBytes": 1262052,
+        "sha256Original": "9281df56f3518e481d90c3f7399d92a97f275e8ad0bae3a6af2273db2ea5d330",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-detail-4.jpg",
+        "width": 1440,
+        "height": 1728,
+        "sourceUrl": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+        "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/090/587/26090587000510_dt_N_004_org.jpg",
+        "sourceFile": "navy-orange-baycrews-04.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-baycrews-04.jpg",
+        "credit": "BAYCREW’S / AP STUDIO",
+        "description": "Complete strap in a narrow folded arrangement",
+        "originalBytes": 52679,
+        "servedBytes": 52679,
+        "sha256Original": "2024a7a9dca9258b10899ae011c2152b2edb92de020b478ea426cc59fbfbaecb",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-detail-5.jpg",
+        "width": 1440,
+        "height": 1728,
+        "sourceUrl": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+        "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/090/587/26090587000510_dt_N_005_org.jpg",
+        "sourceFile": "navy-orange-baycrews-05.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-baycrews-05.jpg",
+        "credit": "BAYCREW’S / AP STUDIO",
+        "description": "Close-up of the rope, swivel ring, and stamped collar",
+        "originalBytes": 141800,
+        "servedBytes": 141800,
+        "sha256Original": "030e55ad7736d8b3106919045c5c3c5731038d3e366884e48f4a7df653e34de2",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-detail-6.jpg",
+        "width": 1440,
+        "height": 1728,
+        "sourceUrl": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+        "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/090/587/26090587000510_dt_N_006_org.jpg",
+        "sourceFile": "navy-orange-baycrews-06.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-baycrews-06.jpg",
+        "credit": "BAYCREW’S / AP STUDIO",
+        "description": "Close-up of the woven red logo label",
+        "originalBytes": 78069,
+        "servedBytes": 78069,
+        "sha256Original": "5026c8814a17a18422d05766b6c2966a69b28aaeb8a8633e638f24a9cfdfaf09",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      },
+      {
+        "image": "img/objects/gallery/topologie-6mm-navy-orange-detail-7.jpg",
+        "width": 1440,
+        "height": 1728,
+        "sourceUrl": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+        "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/090/587/26090587000510_dt_N_007_org.jpg",
+        "sourceFile": "navy-orange-baycrews-07.jpg",
+        "originalFile": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/originals/navy-orange-baycrews-07.jpg",
+        "credit": "BAYCREW’S / AP STUDIO",
+        "description": "Close-up of the two gold-tone carabiners",
+        "originalBytes": 119438,
+        "servedBytes": 119438,
+        "sha256Original": "fe4dd841857d24e075ad3e05df20e2bc774fd1ace1667eca9e39cf5072ffba10",
+        "upscaled": false,
+        "encodingNote": "Unmodified native original JPEG, smaller than proposed re-encoding."
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Conventional luminance/chroma segmentation; alpha-only native master; no synthesized pixels; original RGB retained exactly",
+      "subjectPixels": [
+        1625,
+        1649
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "nativeSourceDimensions": [
+        2000,
+        2500
+      ],
+      "nativeAlphaMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/masters/topologie-6mm-navy-orange-alpha.png",
+      "squareMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/topologie/masters/topologie-6mm-navy-orange-square.png",
+      "cropBoundingBox": [
+        182,
+        418,
+        1807,
+        2067
+      ],
+      "pixelComparison": {
+        "nativeMasterRGBExact": true,
+        "servedPrimaryMatchesSquareRGBAExactly": true
+      }
+    },
+    "usageCaveat": "Source-credited Topologie and BAYCREW’S/AP STUDIO product photography for a private preview. No unrestricted-use license verified.",
+    "catalogAudit": {
+      "reviewed": "2026-10-10",
+      "variantConfidence": "High match for 6.0mm Rope / Navy Orange at the center of the user’s photograph; original-launch or iconic color status unverified.",
+      "desiredVariant": "Navy Orange",
+      "notes": [
+        "One 6.0mm Navy Orange representative is a reversible selection assumption following the optional clarification window, per parent instruction.",
+        "Current official mixed-color lifestyle images were retained as research candidates but are not included or counted.",
+        "No duplicate Topologie item exists in the current 74-item catalog.",
+        "Six distinct views selected: original packshot, worn lifestyle and four stockist detail views. Additional held-phone source remains preserved outside the served gallery."
+      ],
+      "sourceLimitations": [
+        "Native transparent official photography was not found; the approved conventional pixel-preserving masking was used.",
+        "Historical launch/most-recognized color status could not be verified.",
+        "Four detail images are from established stockist BAYCREW’S/AP STUDIO; they are not official Topologie-hosted originals."
+      ]
+    },
+    "colorwayEvidence": {
+      "status": "unverified",
+      "selectionBasis": "Reversible representative inferred from the owner’s shelf photo; not claimed to be the launch or most-recognized colorway.",
+      "findings": [
+        {
+          "url": "https://topologie.jp/products/6-0mm-rope?variant=56944637837478",
+          "finding": "Official variant identifies Navy Orange in the 6.0mm Rope product family."
+        },
+        {
+          "url": "https://baycrews.jp/item/detail/apstudio/goods/26090587000510",
+          "finding": "Stockist confirms manufacturer color NAVY ORANGE and manufacturer model TP-WST-R06-NVO-00-BO."
+        },
+        {
+          "url": "https://eu.topologie.com/products/6-0mm-rope-navy-orange",
+          "finding": "Official color-specific page supplies matching Navy Orange packshot and two in-use photographs; no launch or iconic ranking is stated."
+        }
+      ]
+    }
+  },
+  "integrationNote": "The integratedCatalogObject is authoritative for served paths, dimensions and selected gallery. Other fields preserve source-research/proposal history. Original files remain retained."
+}

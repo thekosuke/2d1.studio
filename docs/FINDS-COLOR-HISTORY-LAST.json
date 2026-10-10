@@ -1,0 +1,435 @@
+{
+  "magis-spun": {
+    "index": 48,
+    "recommendation": "Retain Dark Purple 1133 C provisionally; describe it as a documented early palette color, not the unique original or most iconic color.",
+    "recommendedVariant": "Dark Purple 1133 C",
+    "action": "retain_with_qualification",
+    "status": "verified_historical_palette_only",
+    "confidence": "medium",
+    "claim": "Magis's technical sheet lists Dark Purple alongside Red, Grey Anthracite and White; the 2014 Living product record also names dark purple. No inspected source establishes a single original or most recognized color.",
+    "proof": "Manufacturer sheet directly names Dark Purple 1133 C and dates the design 2010. Its URL is in a 2015 upload directory, so it is not itself a 2010 launch document.",
+    "inference": "Dark Purple is an established early option worth retaining. A design year beside a modern palette does not date every finish to launch.",
+    "evidenceUrls": [
+      "https://www.magisdesign.com/wp-content/uploads/2015/02/spun_en.pdf",
+      "https://living.corriere.it/catalogo/prodotti/magis/spun/",
+      "https://www.magisdesign.com/product/spun/",
+      "https://heatherwick.com/studio/shop/spun/"
+    ],
+    "limitations": [
+      "The 2010 manufacturer launch article exists but its imagery could not be inspected; no launch-color upgrade is justified."
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "magis-air-chair-red": {
+    "index": 49,
+    "recommendation": "Change the coordinated main image, gallery and variant to White 1730 C. White has direct early manufacturer and designer representation. The current Red 1825 C is explicitly a 2025 addition.",
+    "recommendedVariant": "White 1730 C",
+    "action": "coordinate_variant_change",
+    "status": "red_disproved_as_launch_white_verified_early",
+    "confidence": "high that Red 1825 C is later; medium-high that white is the best historical representation",
+    "claim": "Magis 2025 price list marks Red 1825 C NEW. Jasper Morrison's own 1999 project entry uses a white chair photograph. Magis's April 2002 Agenda features white Air-Chairs in its Air-Chair Portrait.",
+    "proof": "Downloaded and visually inspected the manufacturer's price list, PDF page 12 / printed page 10: red 1825 C, dark green 1826 C and cream 1827 C each carry NEW. Visually inspected the designer photo and the 2002 Agenda PDF page 18 / printed pages 32-33, both showing white chairs.",
+    "inference": "White is a defensible canonical/early presentation. This is not proof that white was the sole color at the 1999/2000 launch.",
+    "evidenceUrls": [
+      "https://roomstore.dk/wp-content/uploads/Magis_Pricelist_2025_DKK.pdf#page=12",
+      "https://www.adero.de/pdf/Magis_Agenda_0204.pdf#page=18",
+      "https://jaspermorrison.com/projects/chairs/air-chair"
+    ],
+    "sourceImageUrls": [
+      "https://jaspermorrison.com/media/pages/projects/chairs/air-chair/24c2ef5098-1609850778/00-projects_chairs_magis_air_chair_01.jpg"
+    ],
+    "imageNote": "The designer's photograph is 2000x1500 JPG with a white background, not native transparency.",
+    "localEvidenceFiles": [
+      "/workspace/shared/finds-audit/last/air-chair-2025.png",
+      "/workspace/shared/finds-audit/last/air-chair-2002.png",
+      "/workspace/shared/finds-audit/last/air-chair-designer.jpg"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "hay-table-clock-black": {
+    "index": 50,
+    "recommendation": "Retain Black.",
+    "recommendedVariant": "Black",
+    "action": "retain",
+    "status": "verified_launch",
+    "confidence": "high",
+    "claim": "The designer's 2023 entry explicitly lists black among the launch face colors.",
+    "proof": "Already confirmed in the parent audit; intentionally not duplicated in this pass.",
+    "inference": "No unique-first-color claim is needed when black belongs to the launch palette.",
+    "evidenceUrls": [
+      "https://jaspermorrison.com/projects/electrical/table-clock"
+    ],
+    "notRecheckedThisPass": true,
+    "checkedOn": "2026-10-10"
+  },
+  "muji-wall-mounted-cd-player": {
+    "index": 51,
+    "recommendation": "Retain White; keep CPD-4 model identity separate from the 1999 original product generation.",
+    "recommendedVariant": "White",
+    "action": "retain",
+    "status": "verified_iconic",
+    "confidence": "high",
+    "claim": "The recognizable white square form is documented by the designer and retained in the current CPD-4.",
+    "proof": "Already confirmed in the parent audit; intentionally not duplicated in this pass.",
+    "inference": "White is iconic across generations, but the current model is not literally a 1999 unit.",
+    "evidenceUrls": [
+      "https://naotofukasawa.com/projects/540/",
+      "https://www.muji.com/jp/ja/store/cmdty/detail/4548076475576"
+    ],
+    "notRecheckedThisPass": true,
+    "checkedOn": "2026-10-10"
+  },
+  "groove-x-lovot-3": {
+    "index": 52,
+    "recommendation": "Retain Cha (ちゃ). Upgrade the face/body color evidence to verified LOVOT 3.0 launch palette; keep any clothing-color assertion separate.",
+    "recommendedVariant": "Cha / brown",
+    "action": "retain_upgrade_evidence",
+    "status": "verified_launch",
+    "confidence": "high",
+    "claim": "GROOVE X's May 28, 2024 launch release explicitly lists cha among the four existing colors available for LOVOT 3.0, alongside the five newly added colors.",
+    "proof": "Official press release page 1 names ちゃ, うす, こげ, くろ; page 3 prices alternatives as changes from the base configuration. The current official model page calls cha the basic color.",
+    "inference": "No inference is needed for cha's membership in the 3.0 launch palette. White base wear is an accessory/configuration detail and is not established by this textual color list alone.",
+    "evidenceUrls": [
+      "https://files.microcms-assets.io/assets/8cf7ef0587c34d1e8fdc856fe14c0c2e/53387af76a714d1cb10980c8c34d9745/240528%E3%80%90PressRelease%E3%80%91%E3%80%8ELOVOT%203.0%E3%80%8F%E3%81%8C%E7%99%BB%E5%A0%B4.pdf",
+      "https://lovot.life/lovot-3",
+      "https://store.lovot.life/buy"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "teenage-engineering-grip-car": {
+    "index": 53,
+    "recommendation": "Retain Glossy Red. It is an original release option, not an unsupported unique first color.",
+    "recommendedVariant": "Glossy Red",
+    "action": "retain_upgrade_evidence",
+    "status": "verified_launch_palette",
+    "confidence": "high",
+    "claim": "The official product page explicitly names glossy red, matte black and anodized aluminum. Contemporaneous release coverage lists red among the available launch colors, and the official Japanese distributor's dated 2024 introduction also lists the three finishes.",
+    "proof": "Manufacturer identifies the exact finish; launch-era publisher coverage corroborates release availability. Japanese distributor release is dated September 6, 2024 with a local September 13 release, not the worldwide first release.",
+    "inference": "Red is a valid original palette choice; no evidence establishes it as uniquely most iconic.",
+    "evidenceUrls": [
+      "https://teenage.engineering/products/grip-car",
+      "https://hypebeast.com/2023/11/teenage-engineering-aluminum-toy-car-release",
+      "https://www.minet.jp/contents/info/teenage-engineering-grip-car-news/"
+    ],
+    "imageNote": "Existing audit already records original-source alpha for https://assets.teenage.engineering/_img/65bb87fb604563e4f94ebf7d_2048.webp; no new alpha inspection in this pass.",
+    "checkedOn": "2026-10-10"
+  },
+  "cliik-press-glass-family-pack": {
+    "index": 54,
+    "recommendation": "Retain Maroon provisionally as part of the current new Press Glass palette. Do not label it the original color of the earlier plastic Cliik system.",
+    "recommendedVariant": "Maroon",
+    "action": "retain_with_qualification",
+    "status": "current_new_model_palette_historical_unverified",
+    "confidence": "medium for launch-era glass palette; low for a unique first or iconic color",
+    "claim": "The manufacturer homepage introduces Press Glass as a new return in glass and lists cream, maroon, green, grey and black together.",
+    "proof": "The official homepage distinguishes the new glass model from the previous plastic design and directly lists maroon among five Press colors.",
+    "inference": "The new-product presentation supports maroon as an initial-looking glass option, but no dated launch archive or popularity evidence was found. Current presentation alone is insufficient for a definitive original/most-iconic claim.",
+    "evidenceUrls": [
+      "https://cliikhome.com/",
+      "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
+      "https://cliikhome.com/about"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "yoto-player-4": {
+    "index": 55,
+    "recommendation": "Retain the 4th Gen off-white body with orange controls and Green Button. Do not substitute an older generation.",
+    "recommendedVariant": "4th Gen standard body and controls",
+    "action": "retain",
+    "status": "verified_current_initial_release_configuration",
+    "confidence": "high",
+    "claim": "The official 4th Gen preorder page shows the standard configuration and specifically identifies its Green Button; as checked October 10, 2026, dispatch is estimated from October 15.",
+    "proof": "The page identifies the generation, preorder status, control and official gallery. No alternative body-color choice is presented in the inspected page.",
+    "inference": "This is the announced initial 4th Gen configuration, not yet a historically established iconic colorway. Body/orange color descriptions depend on the previously inspected official images.",
+    "evidenceUrls": [
+      "https://eu.yotoplay.com/players/yoto-player-4"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "freckle-phone-orange": {
+    "index": 56,
+    "recommendation": "Retain Orange as the official initial preorder presentation, with a qualifier that it is not yet an established design icon.",
+    "recommendedVariant": "Orange",
+    "action": "retain_with_qualification",
+    "status": "initial_preorder_presentation_not_historical_icon",
+    "confidence": "medium-high for the current first-release presentation; low for most iconic",
+    "claim": "Freckle's own site states that the first batch ships December 2026 and links to the initial preorder. Orange appears in the official photography already inspected in the parent audit.",
+    "proof": "The current manufacturer page directly establishes first-batch/prelaunch status. Orange source identification is carried forward from the inspected parent audit.",
+    "inference": "Orange can reasonably represent this first-release product. It should not be described as a proven most-recognized color, nor should a current preorder image be treated as proof of a final shipped finish.",
+    "evidenceUrls": [
+      "https://freckle.tech/",
+      "https://buy.freckle.tech/products/freckle"
+    ],
+    "imageNote": "Existing audit already records original-source alpha for https://cdn.shopify.com/s/files/1/0964/3556/9006/files/orange_freckle.png?v=1786052033; no new alpha inspection in this pass.",
+    "checkedOn": "2026-10-10"
+  },
+  "loop-cocoon-berry": {
+    "index": 57,
+    "recommendation": "Retain Berry provisionally, with historical original/iconic status unverified.",
+    "recommendedVariant": "Berry",
+    "action": "retain_with_qualification",
+    "status": "unverified",
+    "confidence": "high for exact current variant; low for historical original or most iconic",
+    "claim": "Official product and use-case pages label Cocoon New and select Berry. No dated release source establishing Berry as a launch color or strongest recognition was located.",
+    "proof": "Current official pages directly name Berry.",
+    "inference": "Its repeated featured presentation makes it a sensible provisional selection, but a New badge and default selection do not prove the original palette.",
+    "evidenceUrls": [
+      "https://us.loopearplugs.com/products/cocoon",
+      "https://www.loopearplugs.com/pages/baby-earmuffs-for-travel",
+      "https://www.loopearplugs.com/products/cocoon?variant=57886842257743"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "magis-linnut-sulo-s": {
+    "index": 58,
+    "recommendation": "Retain Sulo S White 1729. Describe the orange facial detail visually without treating it as a separate selectable colorway.",
+    "recommendedVariant": "Sulo S, White 1729",
+    "action": "retain_upgrade_exact_finish",
+    "status": "verified_canonical_product_finish_launch_not_dated",
+    "confidence": "high for the canonical exact finish; medium for launch continuity",
+    "claim": "The official Magis Sulo page dates the design 2019 and lists Sulo S Body: white 1729 and Sulo L Body: white 1729, with no alternate Sulo body color.",
+    "proof": "The manufacturer explicitly supplies the finish code. The linked original booklet lives under a 2019 upload path but was not successfully inspected, so its contents cannot be used as launch proof.",
+    "inference": "White is the canonical Sulo S finish and a stronger fit than inventing another color. Sole-current-finish status alone is not absolute proof of the original 2019 launch palette.",
+    "evidenceUrls": [
+      "https://www.magisdesign.com/it/product/linnut-sulo/",
+      "https://www.magisdesign.com/product/linnut-sulo/"
+    ],
+    "unreadSourceUrls": [
+      "https://www.magisdesign.com/wp-content/uploads/2019/05/LINNUT_BOOKLET-1.pdf"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "flowerpot-vp9-zesty-orange": {
+    "index": 59,
+    "recommendation": "Coordinate a change to Mustard, a documented VP9 launch color. Do not rationalize Zesty Orange as original.",
+    "recommendedVariant": "Mustard",
+    "action": "coordinate_variant_change",
+    "status": "verified_launch_alternative_current_color_later",
+    "confidence": "high",
+    "claim": "The 2020 VP9 launch release lists Mustard among ten colors; current Zesty Orange is identified as a new color in the existing official-store audit.",
+    "proof": "Already verified in the parent audit; intentionally not duplicated here.",
+    "inference": "Mustard is one launch option, not proven the sole or most famous Flowerpot color across every model.",
+    "evidenceUrls": [
+      "https://cdn.mohd.it/uploads/attachments/product/a/m/amptraditionpressreleaseflowerpotvp9200811.pdf",
+      "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260"
+    ],
+    "notRecheckedThisPass": true,
+    "checkedOn": "2026-10-10"
+  },
+  "b-line-boby-34-paprika": {
+    "index": 60,
+    "recommendation": "Use classic Red for the historical/iconic choice if a coordinated authentic B34 gallery can be sourced. Do not rename Paprika imagery Red or mix the museum's three-drawer configuration with B34.",
+    "recommendedVariant": "Classic Red; exact B34 configuration separately verified",
+    "action": "coordinate_variant_change",
+    "status": "red_verified_historical_paprika_not_original",
+    "confidence": "high for red's historical representation; medium for ranking red most iconic",
+    "claim": "The Montreal Museum of Fine Arts collection presents a red 1970 Bieffeplast Boby. The current manufacturer page lists Paprika among modern finishes; a current Japanese retailer explicitly markets Paprika as 2026 NEW COLOR.",
+    "proof": "The museum collection page identifies designer, manufacturer, 1970 date, accession D99.136.1 and the red object's image. Current B-Line names Paprika, while its historical 2018 catalog predates it. The 2026 statement is retailer evidence, not a primary manufacturer launch release.",
+    "inference": "Museum-backed classic red is substantially more defensible as a historical/iconic representation than the recent Paprika shade. The museum record does not prove a unique original launch color or that its unit is B34.",
+    "evidenceUrls": [
+      "https://partnersindesign.org/object/storage-cart-boby/",
+      "https://www.moma.org/collection/works/2281",
+      "https://www.b-line.it/en/prodotti/boby/",
+      "https://www.b-line.it/download/B-LINE_CATALOGUE_IT-EN_2018.pdf",
+      "https://www.casestudynagoya.jp/SHOP/bobywagon-paprika.html"
+    ],
+    "limitations": [
+      "MoMA image download returned 403; no color claim is based on that uninspected image.",
+      "Current B-Line page does not list the old color name Red, so current availability must not be assumed."
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "hey-bag-green-lines": {
+    "index": 61,
+    "recommendation": "Retain Green Lines provisionally; keep original/iconic status unverified.",
+    "recommendedVariant": "Green Lines",
+    "action": "retain_with_qualification",
+    "status": "unverified",
+    "confidence": "medium for canonical designer presentation; low for a dated original color claim",
+    "claim": "Hey Studio's own project case study and official store document the Júlia Esqué collaboration. Neither inspected text states a launch color, palette chronology or most-recognized variant.",
+    "proof": "The official designer/brand case study is stronger product provenance than the store alone. Existing product JSON was reported in the parent audit as containing White and Green Lines.",
+    "inference": "A product creation date cannot establish that every current variant existed on that date. Do not convert the parent's 'since 2020' shorthand into proof of Green Lines' original availability.",
+    "evidenceUrls": [
+      "https://heystudio.es/project/hey-bag/",
+      "https://heyshop.es/products/hey-bag?variant=35440377102500"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "hey-classic-cap": {
+    "index": 62,
+    "recommendation": "Retain the black cap with multicolor Hey embroidery as the sole current product design.",
+    "recommendedVariant": "Black with multicolor Hey embroidery",
+    "action": "retain_with_qualification",
+    "status": "verified_current_canonical_only",
+    "confidence": "high for exact current product; low for dated launch history",
+    "claim": "The official Classic Cap page presents only Default Title and the cap's own images, without a color selector or historic launch statement.",
+    "proof": "The sole current model and embroidery are consistent with the previously inspected gallery; official page directly confirms the single default variant.",
+    "inference": "No alternate color is called for. Sole-current-model status and the word Classic do not establish historical recognition or original launch chronology.",
+    "evidenceUrls": [
+      "https://heyshop.es/products/classic-cap"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "alessi-la-conica": {
+    "index": 63,
+    "recommendation": "Retain polished stainless steel with copper base.",
+    "recommendedVariant": "Polished stainless steel / copper base",
+    "action": "retain",
+    "status": "verified_classic_design",
+    "confidence": "high",
+    "claim": "Alessi's official design history dates production to 1984 and identifies the classic stainless body/copper base.",
+    "proof": "Confirmed in the parent audit; not duplicated in this pass.",
+    "inference": "No unsupported alternate finish is needed.",
+    "evidenceUrls": [
+      "https://alessi.com/products/la-conica-espresso-coffee-maker"
+    ],
+    "notRecheckedThisPass": true,
+    "checkedOn": "2026-10-10"
+  },
+  "memphis-first": {
+    "index": 64,
+    "recommendation": "Retain the blue back disc, black spheres/seat and gray frame.",
+    "recommendedVariant": "Blue / black / gray classic composition",
+    "action": "retain",
+    "status": "verified_classic_design",
+    "confidence": "high",
+    "claim": "The manufacturer dates First to 1983 and explicitly describes the blue back and black spheres.",
+    "proof": "Already confirmed in the parent audit; intentionally not duplicated.",
+    "inference": "None required for the canonical composition.",
+    "evidenceUrls": [
+      "https://www.italianradical.design/products/first"
+    ],
+    "notRecheckedThisPass": true,
+    "checkedOn": "2026-10-10"
+  },
+  "bosa-most-illustrious-achille": {
+    "index": 65,
+    "recommendation": "Retain the original multicolor MI/01 Achille composition.",
+    "recommendedVariant": "MI/01 original multicolor enamels and precious-metal details",
+    "action": "retain_upgrade_evidence",
+    "status": "verified_canonical_design_composition",
+    "confidence": "high for canonical design; medium-high for 2018 continuity",
+    "claim": "Bosa's official MI/01 page specifies colored enamels and precious-metal details, and connects the collection to Castiglioni's 2018 centenary. The designer's own exhibition history records Most Illustrious at Triennale in April 2018 and the July 2018 Casum award.",
+    "proof": "The manufacturer confirms the design-specific decoration and SKU; the designer's dated history establishes the collection's 2018 presence.",
+    "inference": "The current matching decoration is the canonical artwork composition. The dates alone do not independently prove that every enamel hue was unchanged; do not describe a unique commercial launch color beyond the original composition.",
+    "evidenceUrls": [
+      "https://www.bosatrade.com/prodotto/mostillustrious-achille/",
+      "https://www.elenasalmistraro.com/exhibitions",
+      "https://www.domusweb.it/it/eventi/salone-del-mobile/interviste-salone/2018/mondo-salmistraro-intervista-allambasciatrice-del-brera-design-district.amp.html"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "pedrali-frida-752": {
+    "index": 66,
+    "recommendation": "Retain the pale oak representation. Prefer 'pale oak' until the source asset's finish code is matched; RS is formally Bleached Oak, not a finish literally named Natural Oak.",
+    "recommendedVariant": "Pale oak; likely RS Bleached Oak, exact asset finish to confirm",
+    "action": "retain_correct_finish_terminology",
+    "status": "verified_original_material_exact_tint_qualified",
+    "confidence": "high for original oak design; medium for exact RS finish identification",
+    "claim": "Pedrali's history states Frida first launched at Promosedia in 2008 and won the 2011 Compasso d'Oro. The designer's project labels the photos Frida – Pedrali – 2008. The manufacturer's seating catalog names finish RS Bleached Oak.",
+    "proof": "Manufacturer history directly establishes the original oak construction and launch. Designer HTML directly captions its project 2008. Manufacturer catalog material reproduced in the indexed seating document maps RS to Bleached Oak.",
+    "inference": "Pale oak is a defensible canonical presentation. Assigning RS to an untagged photograph remains an inference; material oak does not itself prove an exact coating color.",
+    "evidenceUrls": [
+      "https://www.pedrali.com/en-us/news/08-created-in-italy-jakarta",
+      "https://www.pedrali.com/en-us/special-projects/frida-compasso-d%E2%80%99oro-adi",
+      "https://www.fioravanti.eu/project/frida",
+      "https://www.pedrali.com/it-it/prodotti/sedie-design/frida-752",
+      "https://www.scribd.com/document/556552243/Pedrali-Chair-1"
+    ],
+    "sourceImageUrls": [
+      "https://www.fioravanti.eu/images/frida_0177.jpg",
+      "https://www.fioravanti.eu/images/frida_0223.jpg",
+      "https://www.fioravanti.eu/images/frida_0348.jpg"
+    ],
+    "imageNote": "URLs were found in designer HTML but new image downloads were not completed; do not claim pixel/alpha verification.",
+    "checkedOn": "2026-10-10"
+  },
+  "olivetti-valentine": {
+    "index": 67,
+    "recommendation": "Retain Red.",
+    "recommendedVariant": "Red",
+    "action": "retain",
+    "status": "verified_iconic",
+    "confidence": "high",
+    "claim": "Red is the Valentine design's museum- and contemporary-history-backed identity.",
+    "proof": "Confirmed in the parent audit; not duplicated in this pass.",
+    "inference": "No unique-first-color assertion beyond the documented iconic red identity is necessary.",
+    "evidenceUrls": [
+      "https://museoomero.it/en/opere/valentine/",
+      "https://www.moma.org/collection/works/4576",
+      "https://www.domusweb.it/en/from-the-archive/2011/08/25/red-valentine.html"
+    ],
+    "notRecheckedThisPass": true,
+    "checkedOn": "2026-10-10"
+  },
+  "qeeboo-rabbit-chair-light-blue": {
+    "index": 68,
+    "recommendation": "Retain Light Blue provisionally because it is represented by the designer. Do not elevate it to most iconic or original launch without color-specific evidence.",
+    "recommendedVariant": "Light Blue",
+    "action": "retain_with_qualification",
+    "status": "unverified_color_history",
+    "confidence": "high for model history; low for light-blue launch or comparative recognition",
+    "claim": "Qeeboo's official 2026 anniversary page explicitly dates Rabbit Chair's launch to 2016 and calls the model its most iconic product. The designer's portfolio represents multiple colors; the model-level icon statement does not single out Light Blue.",
+    "proof": "Manufacturer confirms launch and icon status of the design, not any one finish. Designer image match is carried forward from the parent audit.",
+    "inference": "Light Blue is a defensible designer-selected illustration. Listing 'Manufacture year 2016' alongside today's color palette is not proof every listed shade launched in 2016.",
+    "evidenceUrls": [
+      "https://www.qeeboo.com/en/events/rabbit-ten-years-anniversary",
+      "https://www.stefanogiovannoni.com/portfolio-2/rabbit-chair-qeeboo",
+      "https://www.adicorbetta.org/sites/default/files/pr_qeeboo_eng_0904_0.pdf"
+    ],
+    "limitations": [
+      "The 2016 press release text explains the design but does not establish a specific light-blue launch finish."
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "alessi-magic-bunny-black": {
+    "index": 69,
+    "recommendation": "Retain Black provisionally; do not call it the original or most iconic color as a verified fact.",
+    "recommendedVariant": "Black hat / pale rabbit",
+    "action": "retain_with_qualification",
+    "status": "unverified_color_history",
+    "confidence": "high for exact current official variant; low for original/most-iconic color",
+    "claim": "Alessi's official gallery prominently includes the black hat and pale rabbit, and its official Japan store identifies the black ASG16 B variant. The 1998 design date is established, but inspected sources do not date black specifically to 1998.",
+    "proof": "Manufacturer pages establish this exact commercial variant; 2025 manufacturer catalog lists black among multiple colors while giving 1998 as the design year.",
+    "inference": "Black/pale resembles the familiar magician's-hat motif, but that aesthetic rationale is not evidence of launch priority or market recognition.",
+    "evidenceUrls": [
+      "https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229258054",
+      "https://www.alessi-jp.shop/view/item/000000000306",
+      "https://www.brandivaate.fi/wp-content/uploads/2024/11/ALESSI_2025.pdf"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "alessi-girotondo-round-tray": {
+    "index": 70,
+    "recommendation": "Retain mirror-polished 18/10 stainless steel.",
+    "recommendedVariant": "Mirror-polished stainless steel",
+    "action": "retain_upgrade_evidence",
+    "status": "verified_original_design_finish",
+    "confidence": "high",
+    "claim": "Alessi's official tray page dates production to 1989, describes the original perforated steel tray and specifies polished 18/10 stainless steel. Giovannoni's history confirms that Girotondo debuted in Alessi's 1989 catalog as a simple circular metal tray.",
+    "proof": "Manufacturer and designer both connect the original tray to its uncolored metal construction. The current official product specifies the matching mirror-polished finish.",
+    "inference": "This is the well-supported canonical finish. No claim is made that later colored extensions never existed.",
+    "evidenceUrls": [
+      "https://alessi.com/it/products/girotondo-round-tray",
+      "https://www.stefanogiovannoni.com/furniture/girotondo-alessi-1989",
+      "https://alessi.com/products/girotondo-round-tray"
+    ],
+    "checkedOn": "2026-10-10"
+  },
+  "baggu-standard-pop-pink-happy": {
+    "index": 71,
+    "recommendation": "Preserve Pop Pink Happy exactly under the user's explicit selection exception.",
+    "recommendedVariant": "Pop Pink Happy",
+    "action": "preserve_user_exception",
+    "status": "explicit_user_selection",
+    "confidence": "high",
+    "claim": "This selection is authorized by the owner's explicit exception and does not require an original/iconic-history rationale.",
+    "proof": "Parent task explicitly instructs preservation of this owner-selected variant.",
+    "inference": "None.",
+    "evidenceUrls": [
+      "https://baggu.com/products/standard-baggu-pop-pink-happy"
+    ],
+    "notRecheckedThisPass": true,
+    "checkedOn": "2026-10-10"
+  }
+}

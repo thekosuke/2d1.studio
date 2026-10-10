@@ -1,0 +1,69 @@
+{
+  "status": "accepted",
+  "source": "/workspace/shared/finds-audit/anya-eyes/03-5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg",
+  "source_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg?v=1725951435",
+  "source_dimensions": [
+    1500,
+    1500
+  ],
+  "source_sha256": "50e0371fbbd7920c65fabc792c0b20a360a519ea4b84d63eb57f0277d8e54674",
+  "master": "/workspace/shared/finds-audit/cutout-upgrades/anya-eyes/anya-eyes-master.png",
+  "master_dimensions": [
+    1744,
+    1744
+  ],
+  "source_subject_bounds_xyxy": [
+    337,
+    55,
+    1158,
+    1446
+  ],
+  "master_subject_bounds_xyxy": [
+    461,
+    176,
+    1282,
+    1567
+  ],
+  "source_translation_xy": [
+    124,
+    121
+  ],
+  "source_scale": 1,
+  "subject_fill_percent": {
+    "height": 79.759,
+    "width": 47.076
+  },
+  "top_bottom_margins_percent": [
+    10.092,
+    10.149
+  ],
+  "retained_pixel_checks": {
+    "pixels_checked": 770662,
+    "changed_rgb_pixels": 0,
+    "max_rgb_channel_difference": 0,
+    "source_resampled": false
+  },
+  "mask_notes": "Deterministic luminance mask with largest product component, enclosed handle opening retained as transparent, cream eyes/metal highlights filled opaque, narrow source-color edge antialias, visible lower contact contour removes floor shadow. Original retained RGB copied exactly; no decontamination, recoloring, rescaling, or generation.",
+  "variants": {
+    "480": {
+      "file": "/workspace/shared/finds-audit/cutout-upgrades/anya-eyes/anya-eyes-480.webp",
+      "width": 480,
+      "height": 480,
+      "bytes": 43306
+    },
+    "960": {
+      "file": "/workspace/shared/finds-audit/cutout-upgrades/anya-eyes/anya-eyes-960.webp",
+      "width": 960,
+      "height": 960,
+      "bytes": 132592
+    },
+    "1440": {
+      "file": "/workspace/shared/finds-audit/cutout-upgrades/anya-eyes/anya-eyes-1440.webp",
+      "width": 1440,
+      "height": 1440,
+      "bytes": 244830
+    }
+  },
+  "qa": "/workspace/shared/finds-audit/cutout-upgrades/anya-eyes/qa",
+  "qa_result": "Inspected beige and black full composites, native top/inner handle edges, cream eyes, burgundy lining/gold zipper, and bottom contact edge. Original geometry retained, handle opening transparent, eyes and lining opaque, floor shadow removed; all retained source RGB exact. No visual blocker."
+}

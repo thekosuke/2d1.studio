@@ -1,0 +1,289 @@
+{
+  "status": "READY_FOR_PARENT_REVIEW",
+  "catalogObject": {
+    "id": "kinto-water-bottle-300ml",
+    "name": "Water Bottle 300ml",
+    "brand": "KINTO",
+    "category": "kitchen",
+    "tags": [
+      "drinkware",
+      "portable"
+    ],
+    "description": "A compact 300ml water bottle with a one-turn lid and a handle for easy carrying.",
+    "productUrl": "https://kinto.co.jp/products/20121?variant=45562694303969",
+    "sourceUrl": "https://kinto.co.jp/products/20121",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/20381_0a53f0ba-a22d-402b-8537-07aad682c3fa.jpg?v=1723083874",
+    "sourceFile": "20381_0a53f0ba-a22d-402b-8537-07aad682c3fa.jpg",
+    "image": "img/objects/cutouts/kinto-water-bottle-300ml-clear.webp",
+    "width": 860,
+    "height": 860,
+    "variantName": "WATER BOTTLE 300ml, Clear (20121)",
+    "usageCaveat": "Official KINTO product photography, source credited for a private preview. No unrestricted-use license verified.",
+    "gallery": [
+      {
+        "image": "img/objects/gallery/kinto-water-bottle-300ml-clear-studio.webp",
+        "width": 1500,
+        "height": 1500,
+        "sourceUrl": "https://kinto.co.jp/products/20121",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/20381_0a53f0ba-a22d-402b-8537-07aad682c3fa.jpg?v=1723083874",
+        "sourceFile": "20381_0a53f0ba-a22d-402b-8537-07aad682c3fa.jpg"
+      },
+      {
+        "image": "img/objects/gallery/kinto-water-bottle-300ml-clear-in-hand.webp",
+        "width": 1080,
+        "height": 1080,
+        "sourceUrl": "https://kinto.co.jp/products/20121",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/200904_lifestyle_waterbottle_002_253d4c54-17bb-427b-8a54-f5b78d892215.jpg?v=1722234454",
+        "sourceFile": "200904_lifestyle_waterbottle_002_253d4c54-17bb-427b-8a54-f5b78d892215.jpg"
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/kinto-water-bottle-300ml-clear-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/kinto-water-bottle-300ml-clear.webp",
+        "width": 860
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Native source RGB preserved exactly; white exterior and open handle hole masked locally, 0.5px alpha-edge feather; square crop without resizing.",
+      "subjectPixels": [
+        325,
+        774
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false
+    },
+    "catalogAudit": {
+      "reviewed": "2026-10-10",
+      "variantConfidence": "High for identification; Clear chosen as reversible representative of the owner photo, not an explicit color choice.",
+      "desiredVariant": "Clear, 300ml, SKU20121",
+      "notes": [
+        "Photo IMG_7066.jpeg shows Clear, Amber, Blue, Green and Smoke left to right.",
+        "Parent instructed one Clear representative after the optional clarification window.",
+        "Two distinct authentic views retained. Generic larger-bottle and other-color photographs excluded.",
+        "Original master RGB pixel comparison passes exactly; cutout visually reviewed against original on light and dark backgrounds.",
+        "No existing KINTO catalog entry found."
+      ],
+      "sourceLimitations": [
+        "Only two verified Clear 300ml views retained, below the 4–8 gallery target.",
+        "Official packshot native canvas is 1500×1500, but useful product detail is approximately323×772 pixels (325×774 including alpha feather). Native normalized cutout is860×860; no upscaling.",
+        "In-hand official master is1080×1080, below1200px gallery floor.",
+        "Clear body retains the photographed white-ground appearance; only exterior and actual handle opening are transparent.",
+        "Two remaining US image downloads and later HTML retrieval were cancelled by automatic approval review; not retried after the parent requested stopping retrieval."
+      ]
+    },
+    "colorwayEvidence": {
+      "status": "representative-photo-assumption",
+      "findings": [
+        {
+          "url": "https://kinto.co.jp/blogs/news/2020aw-new-product-information",
+          "finding": "Official July13,2020 news announces WATER BOTTLE for2020AW. It does not rank colorways."
+        },
+        {
+          "url": "https://kinto.co.jp/blogs/news/2023ss-new-product-information",
+          "finding": "Official2023SS news explicitly calls Blue and Green new colors. No iconic-color ranking was established."
+        },
+        {
+          "url": "https://kinto.co.jp/products/20121",
+          "finding": "Current official page and product JSON identify Clear300ml as SKU20121. Manufacturer says the material renewal did not change design or capacity."
+        }
+      ]
+    }
+  },
+  "ja": {
+    "name": "ウォーターボトル 300ml",
+    "description": "ひと回しで開く蓋と持ち運びやすいハンドルを備えた、300mlの軽量ボトル。"
+  },
+  "sources": [
+    {
+      "sourceUrl": "https://kinto.co.jp/products/20121",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/20381_0a53f0ba-a22d-402b-8537-07aad682c3fa.jpg?v=1723083874",
+      "sourceFile": "20381_0a53f0ba-a22d-402b-8537-07aad682c3fa.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/20381_0a53f0ba-a22d-402b-8537-07aad682c3fa.jpg",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "bytes": 25447,
+      "sha256": "5b34590ebe0569e48bc710f79438e8e854a40e58d85377f676ee6a3440ead977"
+    },
+    {
+      "sourceUrl": "https://kinto.co.jp/products/20121",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/20382_1a087769-efda-495d-9d98-70ebb7a9b808.jpg?v=1722573081",
+      "sourceFile": "20382_1a087769-efda-495d-9d98-70ebb7a9b808.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/20382_1a087769-efda-495d-9d98-70ebb7a9b808.jpg",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "bytes": 31395,
+      "sha256": "535dfde213d582dd0d5127a12ac531e1b18b17ee3c2d3c485971ed4a0f327bc4"
+    },
+    {
+      "sourceUrl": "https://kinto.co.jp/products/20121",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/20383_e068fa40-3605-4677-acab-8fd06bd623d7.jpg?v=1722234454",
+      "sourceFile": "20383_e068fa40-3605-4677-acab-8fd06bd623d7.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/20383_e068fa40-3605-4677-acab-8fd06bd623d7.jpg",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "bytes": 26518,
+      "sha256": "7c93ac0912f49919176bdeebb11a4df642b2a10c8b12c1a9309cdc382ab90dd9"
+    },
+    {
+      "sourceUrl": "https://kinto.co.jp/products/20121",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/20402_313c408b-dedd-4c99-b26e-e71afe6d8798.jpg?v=1722234454",
+      "sourceFile": "20402_313c408b-dedd-4c99-b26e-e71afe6d8798.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/20402_313c408b-dedd-4c99-b26e-e71afe6d8798.jpg",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "bytes": 31528,
+      "sha256": "0f4c2fd391601f066d36be6647f305e280641ba25967976be3fb4ec6ff10d2d3"
+    },
+    {
+      "sourceUrl": "https://kinto.co.jp/products/20121",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/20403_5c07b962-a4a5-4072-a809-ade90ac573ec.jpg?v=1722234454",
+      "sourceFile": "20403_5c07b962-a4a5-4072-a809-ade90ac573ec.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/20403_5c07b962-a4a5-4072-a809-ade90ac573ec.jpg",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "bytes": 30269,
+      "sha256": "d107d6fff213a73ce65d858368fc76cf7e810b6b03b2903a81b85913873f6562"
+    },
+    {
+      "sourceUrl": "https://kinto.co.jp/products/20121",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/200904_lifestyle_waterbottle_002_253d4c54-17bb-427b-8a54-f5b78d892215.jpg?v=1722234454",
+      "sourceFile": "200904_lifestyle_waterbottle_002_253d4c54-17bb-427b-8a54-f5b78d892215.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/200904_lifestyle_waterbottle_002_253d4c54-17bb-427b-8a54-f5b78d892215.jpg",
+      "width": 1080,
+      "height": 1080,
+      "mode": "RGB",
+      "bytes": 221501,
+      "sha256": "716baa66cfcec80ee998ac37673a2d1c7e2028735790fa8709a3dfddb47ce827"
+    },
+    {
+      "sourceUrl": "https://kinto.co.jp/products/20121",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0093/4785/8510/files/200904_lifestyle_waterbottle_007_d0c09b18-1619-4452-900c-d906cc1ba3d2.jpg?v=1722234454",
+      "sourceFile": "200904_lifestyle_waterbottle_007_d0c09b18-1619-4452-900c-d906cc1ba3d2.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/200904_lifestyle_waterbottle_007_d0c09b18-1619-4452-900c-d906cc1ba3d2.jpg",
+      "width": 1080,
+      "height": 1080,
+      "mode": "RGB",
+      "bytes": 262766,
+      "sha256": "a71be3ed0b958d611fca3f398fbfad51f5e156724287e3658c15e89a876ee876"
+    },
+    {
+      "sourceUrl": "https://kinto-usa.com/products/20121",
+      "sourceImageUrl": "https://kinto-usa.com/cdn/shop/files/wb_slide_1_1a76239d-5ebe-4871-8965-3ba9ea8dbb1d.jpg?v=1760976120",
+      "sourceFile": "wb_slide_1_1a76239d-5ebe-4871-8965-3ba9ea8dbb1d.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/wb_slide_1_1a76239d-5ebe-4871-8965-3ba9ea8dbb1d.jpg",
+      "width": 1080,
+      "height": 1080,
+      "mode": "RGB",
+      "bytes": 270664,
+      "sha256": "fbaf74c5e1511e4d42d15ed461fb0c7a7ab4f3c17bd423c1a936522a1f2dbb77",
+      "selected": false,
+      "exclusionReason": "US collection image: exact Clear 300ml matching not established; first two appear to be larger bottles and third shows other colors."
+    },
+    {
+      "sourceUrl": "https://kinto-usa.com/products/20121",
+      "sourceImageUrl": "https://kinto-usa.com/cdn/shop/files/wb_slide_2_5a599d14-1def-4649-8eef-1366bf70b8b6.jpg?v=1760976120",
+      "sourceFile": "wb_slide_2_5a599d14-1def-4649-8eef-1366bf70b8b6.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/wb_slide_2_5a599d14-1def-4649-8eef-1366bf70b8b6.jpg",
+      "width": 1080,
+      "height": 1080,
+      "mode": "RGB",
+      "bytes": 129837,
+      "sha256": "4ae899db753666e34932d977362b963083c5178a84300677c5ba3dd9b783de48",
+      "selected": false,
+      "exclusionReason": "US collection image: exact Clear 300ml matching not established; first two appear to be larger bottles and third shows other colors."
+    },
+    {
+      "sourceUrl": "https://kinto-usa.com/products/20121",
+      "sourceImageUrl": "https://kinto-usa.com/cdn/shop/files/wb_slide_3_815d8330-c4f8-472c-bc68-bbb06bbc390a.jpg?v=1760976121",
+      "sourceFile": "wb_slide_3_815d8330-c4f8-472c-bc68-bbb06bbc390a.jpg",
+      "localMaster": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/masters/wb_slide_3_815d8330-c4f8-472c-bc68-bbb06bbc390a.jpg",
+      "width": 1080,
+      "height": 1080,
+      "mode": "RGB",
+      "bytes": 203069,
+      "sha256": "10549d62ecc572de5dc344f08eb595f21c0536d039d13343c58a2106cffffda9",
+      "selected": false,
+      "exclusionReason": "US collection image: exact Clear 300ml matching not established; first two appear to be larger bottles and third shows other colors."
+    }
+  ],
+  "fileMap": [
+    {
+      "local": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/serve/kinto-water-bottle-300ml-clear.webp",
+      "destination": "img/objects/cutouts/kinto-water-bottle-300ml-clear.webp"
+    },
+    {
+      "local": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/serve/kinto-water-bottle-300ml-clear-480.webp",
+      "destination": "img/objects/cutouts/kinto-water-bottle-300ml-clear-480.webp"
+    },
+    {
+      "local": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/serve/kinto-water-bottle-300ml-clear-studio.webp",
+      "destination": "img/objects/gallery/kinto-water-bottle-300ml-clear-studio.webp"
+    },
+    {
+      "local": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/serve/kinto-water-bottle-300ml-clear-in-hand.webp",
+      "destination": "img/objects/gallery/kinto-water-bottle-300ml-clear-in-hand.webp"
+    }
+  ],
+  "maskReport": {
+    "rgbComparison": "Every native master RGB channel unchanged: numpy.array_equal = true",
+    "sourceDimensions": [
+      1500,
+      1500
+    ],
+    "subjectBounds": [
+      588,
+      364,
+      913,
+      1138
+    ],
+    "subjectPixels": [
+      325,
+      774
+    ],
+    "squareCrop": [
+      320,
+      321,
+      1180,
+      1181
+    ],
+    "squareDimensions": [
+      860,
+      860
+    ],
+    "opticalFill": 0.9,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "opaqueFraction": 0.08874044444444444,
+    "upscaled": false,
+    "gallery": [
+      {
+        "file": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/serve/kinto-water-bottle-300ml-clear-studio.webp",
+        "width": 1500,
+        "height": 1500,
+        "bytes": 20848
+      },
+      {
+        "file": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/serve/kinto-water-bottle-300ml-clear-in-hand.webp",
+        "width": 1080,
+        "height": 1080,
+        "bytes": 311116
+      }
+    ],
+    "servedTotalBytes": 389852,
+    "servedLosslessRGBAExact": true
+  },
+  "originalUserPhoto": "/workspace/scratch/8667b50c4bf5/finds-new-products-2026-10-10/IMG_7066.jpeg",
+  "visualQA": "/workspace/scratch/8667b50c4bf5/finds-new-products/kinto/prepared/clear-mask-qa.jpg"
+}

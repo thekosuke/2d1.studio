@@ -56,7 +56,7 @@ class JapanesePage(HTMLParser):
             else: a['href'] = './'; a['aria-current'] = 'page'
         if tag == 'script' and 'js/language.js' in a.get('src',''):
             prefix = '../../' if self.about else '../'
-            self.output.append(f'<script src="{prefix}js/ja.js?v=5" defer></script>\n  ')
+            self.output.append(f'<script src="{prefix}js/ja.js?v=9" defer></script>\n  ')
         self.output.append('<' + tag + ''.join(' '+k if v is None else ' '+k+'="'+escape(v,quote=True)+'"' for k,v in a.items()) + '>')
         if tag == 'link' and 'css/fonts.css' in a.get('href',''):
             prefix = '../../' if self.about else '../'

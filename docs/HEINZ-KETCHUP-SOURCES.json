@@ -1,0 +1,335 @@
+{
+  "id": "heinz-tomato-ketchup",
+  "name": "Tomato Ketchup",
+  "brand": "Heinz",
+  "url": "https://www.heinz.com/products/00013000006057-tomato-ketchup",
+  "sku": "00013000006057",
+  "upc": "013000006057",
+  "variant": "32 oz inverted squeeze bottle",
+  "category": "Food & Drink",
+  "description": "Heinz tomato ketchup in the 32 oz inverted squeeze bottle, with its familiar shield label and white flip-top cap.",
+  "image": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-front.webp",
+  "images": [
+    "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-front.webp",
+    "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-back.jpg",
+    "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-angle-left.jpg",
+    "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-angle-right.jpg",
+    "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-side-left.jpg",
+    "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-side-right.jpg",
+    "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-top.jpg",
+    "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-bottom.jpg"
+  ],
+  "imageCount": 8,
+  "servedBytesTotal": 3180846,
+  "colorway_owner_exception": {
+    "applies": true,
+    "reason": "User explicitly requested Heinz URL identifying GTIN 00013000006057. Retain this standard 32 oz inverted squeeze SKU and its classic tomato-red bottle with white cap; do not substitute historical glass bottles or a commemorative edition.",
+    "nameHasColor": false
+  },
+  "imageAudit": {
+    "status": "verified",
+    "nativeDimensions": "2400×2400 primary; 2200×2200 seven secondary views",
+    "count": 8,
+    "uniqueViews": true,
+    "primaryTransparent": true,
+    "rgbPreservation": "Primary lossless WebP matches original visible RGB and alpha. Seven secondary JPEGs are byte-for-byte source originals with their studio backgrounds.",
+    "notUsed": [
+      "20 oz metadata/hero URL ending 00013000006408",
+      "USA 250 commemorative Acme/Smart & Final packaging",
+      "500×500 Smart & Final imagery",
+      "nutrition panels",
+      "marketing graphics",
+      "video thumbnails"
+    ],
+    "skuProof": [
+      "provenance/official-exact-sku.json",
+      "provenance/walmart-product-proof.json",
+      "Visible barcode on back source reads 0 13000 00605 7"
+    ],
+    "qaContactSheet": "provenance/final-contact-sheet.jpg"
+  },
+  "assets": [
+    {
+      "view": "front",
+      "original": "originals/source-0.img",
+      "master": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/masters/heinz-ketchup-front.png",
+      "served": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-front.webp",
+      "dimensions": [
+        2400,
+        2400
+      ],
+      "bytes": 1848566,
+      "method": "Official native transparency, no masking or pixel changes.",
+      "originalSha256": "d53878c98af11f801ae0e6f2d5622cf67f9a2f60ceb4b7a3f40aeab93d03ba83",
+      "masterSha256": "2e68208ef546ee78958268f9558625f251c7083007a0181ac2d65cd7ac8f68f0",
+      "servedSha256": "a4fb3de443ca47ed16c320a544edb108986c8849be3c86484a554188db8a7cbd",
+      "originalRgbIdentical": true,
+      "servedVisibleRgbIdentical": true,
+      "servedEncoding": "lossless WebP",
+      "hasAlpha": true,
+      "sourceUrl": "https://res.cloudinary.com/kraft-heinz-whats-cooking-ca/image/upload/v1/dxp-images/heinz/products/00013000006057-tomato-ketchup/marketing-view-color-front_content-hub-13595745_1eef3ee57cbf1a0966bb1af4f993c96d",
+      "sourcePage": "https://www.heinz.com/products/00013000006057-tomato-ketchup",
+      "subjectBoundsPx": {
+        "x": 615,
+        "y": 61,
+        "width": 1168,
+        "height": 2278
+      },
+      "subjectBoundsNormalized": {
+        "x": 0.25625,
+        "y": 0.025417,
+        "width": 0.486667,
+        "height": 0.949167
+      },
+      "alt": "Heinz Tomato Ketchup 32 oz inverted squeeze bottle, front view"
+    },
+    {
+      "view": "back",
+      "original": "originals/walmart-8.img",
+      "master": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/originals/walmart-8.img",
+      "served": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-back.jpg",
+      "dimensions": [
+        2200,
+        2200
+      ],
+      "bytes": 234600,
+      "method": "Unmodified native product image; white studio background retained.",
+      "originalSha256": "2e6cd480d725a24f39a8cda7a9a78405c1b5bc5562244557a24950797665a37a",
+      "masterSha256": "2e6cd480d725a24f39a8cda7a9a78405c1b5bc5562244557a24950797665a37a",
+      "servedSha256": "2e6cd480d725a24f39a8cda7a9a78405c1b5bc5562244557a24950797665a37a",
+      "originalRgbIdentical": true,
+      "servedVisibleRgbIdentical": true,
+      "servedEncoding": "Original native JPEG bytes; no re-encoding",
+      "hasAlpha": false,
+      "sourceUrl": "https://i5.walmartimages.com/asr/64ccf71b-710b-476c-a311-1aab2169644b.5c4bd31f4684c9c5af183df14ada658c.jpeg",
+      "sourcePage": "https://www.walmart.com/ip/15529427",
+      "subjectBoundsPx": {
+        "x": 562,
+        "y": 54,
+        "width": 1075,
+        "height": 2090
+      },
+      "subjectBoundsNormalized": {
+        "x": 0.255455,
+        "y": 0.024545,
+        "width": 0.488636,
+        "height": 0.95
+      },
+      "alt": "Heinz Tomato Ketchup 32 oz inverted squeeze bottle, back view"
+    },
+    {
+      "view": "angle-left",
+      "original": "originals/walmart-9.img",
+      "master": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/originals/walmart-9.img",
+      "served": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-angle-left.jpg",
+      "dimensions": [
+        2200,
+        2200
+      ],
+      "bytes": 217189,
+      "method": "Unmodified native product image; white studio background retained.",
+      "originalSha256": "06dc9dc35b55233962e9c614b76ecb8372bdd72f88712578bc6fb7e481b93be6",
+      "masterSha256": "06dc9dc35b55233962e9c614b76ecb8372bdd72f88712578bc6fb7e481b93be6",
+      "servedSha256": "06dc9dc35b55233962e9c614b76ecb8372bdd72f88712578bc6fb7e481b93be6",
+      "originalRgbIdentical": true,
+      "servedVisibleRgbIdentical": true,
+      "servedEncoding": "Original native JPEG bytes; no re-encoding",
+      "hasAlpha": false,
+      "sourceUrl": "https://i5.walmartimages.com/asr/83e099d4-2189-40c8-9406-41f20747b08e.549f56affb75485efa9b3f3bc6b79f00.jpeg",
+      "sourcePage": "https://www.walmart.com/ip/15529427",
+      "subjectBoundsPx": {
+        "x": 554,
+        "y": 55,
+        "width": 1092,
+        "height": 2090
+      },
+      "subjectBoundsNormalized": {
+        "x": 0.251818,
+        "y": 0.025,
+        "width": 0.496364,
+        "height": 0.95
+      },
+      "alt": "Heinz Tomato Ketchup 32 oz inverted squeeze bottle, angle left view"
+    },
+    {
+      "view": "angle-right",
+      "original": "originals/walmart-10.img",
+      "master": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/originals/walmart-10.img",
+      "served": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-angle-right.jpg",
+      "dimensions": [
+        2200,
+        2200
+      ],
+      "bytes": 222368,
+      "method": "Unmodified native product image; white studio background retained.",
+      "originalSha256": "ae28457d9960448917a1137fc0e623215c160116c1cf3e42f6e8ba492f58c812",
+      "masterSha256": "ae28457d9960448917a1137fc0e623215c160116c1cf3e42f6e8ba492f58c812",
+      "servedSha256": "ae28457d9960448917a1137fc0e623215c160116c1cf3e42f6e8ba492f58c812",
+      "originalRgbIdentical": true,
+      "servedVisibleRgbIdentical": true,
+      "servedEncoding": "Original native JPEG bytes; no re-encoding",
+      "hasAlpha": false,
+      "sourceUrl": "https://i5.walmartimages.com/asr/b81c93b9-be68-4db3-9930-3b57a6b84ef5.647a3c04b9d47f964c91f84dbff839b2.jpeg",
+      "sourcePage": "https://www.walmart.com/ip/15529427",
+      "subjectBoundsPx": {
+        "x": 554,
+        "y": 56,
+        "width": 1092,
+        "height": 2089
+      },
+      "subjectBoundsNormalized": {
+        "x": 0.251818,
+        "y": 0.025455,
+        "width": 0.496364,
+        "height": 0.949545
+      },
+      "alt": "Heinz Tomato Ketchup 32 oz inverted squeeze bottle, angle right view"
+    },
+    {
+      "view": "side-left",
+      "original": "originals/walmart-11.img",
+      "master": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/originals/walmart-11.img",
+      "served": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-side-left.jpg",
+      "dimensions": [
+        2200,
+        2200
+      ],
+      "bytes": 146962,
+      "method": "Unmodified native product image; white studio background retained.",
+      "originalSha256": "c83b402708e51a752baa57312baad8e3e45b137ab6ccabb072b4a5fecafa3476",
+      "masterSha256": "c83b402708e51a752baa57312baad8e3e45b137ab6ccabb072b4a5fecafa3476",
+      "servedSha256": "c83b402708e51a752baa57312baad8e3e45b137ab6ccabb072b4a5fecafa3476",
+      "originalRgbIdentical": true,
+      "servedVisibleRgbIdentical": true,
+      "servedEncoding": "Original native JPEG bytes; no re-encoding",
+      "hasAlpha": false,
+      "sourceUrl": "https://i5.walmartimages.com/asr/e1317b28-9548-4e91-8329-50ef8d0c542f.15f8d74a932042dc087851edd6daecab.jpeg",
+      "sourcePage": "https://www.walmart.com/ip/15529427",
+      "subjectBoundsPx": {
+        "x": 723,
+        "y": 54,
+        "width": 754,
+        "height": 2090
+      },
+      "subjectBoundsNormalized": {
+        "x": 0.328636,
+        "y": 0.024545,
+        "width": 0.342727,
+        "height": 0.95
+      },
+      "alt": "Heinz Tomato Ketchup 32 oz inverted squeeze bottle, side left view"
+    },
+    {
+      "view": "side-right",
+      "original": "originals/walmart-12.img",
+      "master": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/originals/walmart-12.img",
+      "served": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-side-right.jpg",
+      "dimensions": [
+        2200,
+        2200
+      ],
+      "bytes": 145448,
+      "method": "Unmodified native product image; white studio background retained.",
+      "originalSha256": "f2c409ce1dc3876fd1f05aad288ae6417bb93511ee21bf544e02a26a0b89cd27",
+      "masterSha256": "f2c409ce1dc3876fd1f05aad288ae6417bb93511ee21bf544e02a26a0b89cd27",
+      "servedSha256": "f2c409ce1dc3876fd1f05aad288ae6417bb93511ee21bf544e02a26a0b89cd27",
+      "originalRgbIdentical": true,
+      "servedVisibleRgbIdentical": true,
+      "servedEncoding": "Original native JPEG bytes; no re-encoding",
+      "hasAlpha": false,
+      "sourceUrl": "https://i5.walmartimages.com/asr/a579210f-ab19-4674-9155-b15efdf6dbe1.40fa37ddb33ae7acf127ed18d7a02a22.jpeg",
+      "sourcePage": "https://www.walmart.com/ip/15529427",
+      "subjectBoundsPx": {
+        "x": 723,
+        "y": 54,
+        "width": 754,
+        "height": 2090
+      },
+      "subjectBoundsNormalized": {
+        "x": 0.328636,
+        "y": 0.024545,
+        "width": 0.342727,
+        "height": 0.95
+      },
+      "alt": "Heinz Tomato Ketchup 32 oz inverted squeeze bottle, side right view"
+    },
+    {
+      "view": "top",
+      "original": "originals/walmart-13.img",
+      "master": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/originals/walmart-13.img",
+      "served": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-top.jpg",
+      "dimensions": [
+        2200,
+        2200
+      ],
+      "bytes": 225800,
+      "method": "Unmodified native product image; white studio background retained.",
+      "originalSha256": "09acc85858372ab5a7f17b33ebc9ba0b2137cc4bdbe4df8b856842a9e42aa988",
+      "masterSha256": "09acc85858372ab5a7f17b33ebc9ba0b2137cc4bdbe4df8b856842a9e42aa988",
+      "servedSha256": "09acc85858372ab5a7f17b33ebc9ba0b2137cc4bdbe4df8b856842a9e42aa988",
+      "originalRgbIdentical": true,
+      "servedVisibleRgbIdentical": true,
+      "servedEncoding": "Original native JPEG bytes; no re-encoding",
+      "hasAlpha": false,
+      "sourceUrl": "https://i5.walmartimages.com/asr/cfbbf8f3-875b-403b-be66-dff35b6f3303.e452a7746c1e00b3daa508878b8d5604.jpeg",
+      "sourcePage": "https://www.walmart.com/ip/15529427",
+      "subjectBoundsPx": {
+        "x": 56,
+        "y": 325,
+        "width": 2089,
+        "height": 1550
+      },
+      "subjectBoundsNormalized": {
+        "x": 0.025455,
+        "y": 0.147727,
+        "width": 0.949545,
+        "height": 0.704545
+      },
+      "alt": "Heinz Tomato Ketchup 32 oz inverted squeeze bottle, top view"
+    },
+    {
+      "view": "bottom",
+      "original": "originals/walmart-14.img",
+      "master": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/originals/walmart-14.img",
+      "served": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/served/heinz-ketchup-bottom.jpg",
+      "dimensions": [
+        2200,
+        2200
+      ],
+      "bytes": 139913,
+      "method": "Unmodified native product image; white studio background retained.",
+      "originalSha256": "a910faab8d778088cbb5fd2fee491187328bb02b7399043bac5fa8d0b3b793f6",
+      "masterSha256": "a910faab8d778088cbb5fd2fee491187328bb02b7399043bac5fa8d0b3b793f6",
+      "servedSha256": "a910faab8d778088cbb5fd2fee491187328bb02b7399043bac5fa8d0b3b793f6",
+      "originalRgbIdentical": true,
+      "servedVisibleRgbIdentical": true,
+      "servedEncoding": "Original native JPEG bytes; no re-encoding",
+      "hasAlpha": false,
+      "sourceUrl": "https://i5.walmartimages.com/asr/200d153e-168d-4707-a869-58b89d66bf7d.6cedd500bc2cc933be7a24c9634a252c.jpeg",
+      "sourcePage": "https://www.walmart.com/ip/15529427",
+      "subjectBoundsPx": {
+        "x": 56,
+        "y": 336,
+        "width": 2088,
+        "height": 1528
+      },
+      "subjectBoundsNormalized": {
+        "x": 0.025455,
+        "y": 0.152727,
+        "width": 0.949091,
+        "height": 0.694545
+      },
+      "alt": "Heinz Tomato Ketchup 32 oz inverted squeeze bottle, bottom view"
+    }
+  ],
+  "hostingDerivative": {
+    "image": "img/objects/cutouts/heinz-ketchup-front.webp",
+    "dimensions": [
+      2400,
+      2400
+    ],
+    "encoding": "WebP quality 100; alpha unchanged; visually verified original and served label crop",
+    "reason": "256 MiB expanded hosting limit",
+    "losslessMaster": "/workspace/scratch/8667b50c4bf5/finds-audit/heinz-ketchup/masters/heinz-ketchup-front-lossless.webp"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "method": "PNG to lossless WebP; dimensions and complete decoded RGBA bytes identical; original source files retained",
+  "files": [
+    {
+      "source": "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-2a9c585893.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/stokke-tripp-trapp-warm-red-audit-2a9c585893.webp",
+      "original_bytes": 8234458,
+      "new_bytes": 6481816,
+      "saving": 1752642,
+      "size": [
+        3000,
+        3000
+      ],
+      "rgba_sha256": "091dbadec7b8d8e1fa9a8b7f460af6f4e8c8462321834db6a1bb7f1126fb0653",
+      "served_path": "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-2a9c585893.webp"
+    },
+    {
+      "source": "img/objects/gallery/nintendo-switch-2-audit-71cf469fc2.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/nintendo-switch-2-audit-71cf469fc2.webp",
+      "original_bytes": 4409566,
+      "new_bytes": 2739270,
+      "saving": 1670296,
+      "size": [
+        3285,
+        1570
+      ],
+      "rgba_sha256": "0df61cc9d02dfa09c29d71b89045913037770e2cf0730d1a1a6f194de75aed0e",
+      "served_path": "img/objects/gallery/nintendo-switch-2-audit-71cf469fc2.webp"
+    },
+    {
+      "source": "img/objects/cutouts/baggu-standard-pop-pink-happy.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/baggu-standard-pop-pink-happy.webp",
+      "original_bytes": 2774507,
+      "new_bytes": 1747984,
+      "saving": 1026523,
+      "size": [
+        2560,
+        2560
+      ],
+      "rgba_sha256": "4b4a5559cbdece01a3c4876472033cd5168c72abb4411be1f742b6f21da48745",
+      "served_path": "img/objects/cutouts/baggu-standard-pop-pink-happy.webp"
+    },
+    {
+      "source": "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-69ec2cafa5.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/stokke-tripp-trapp-warm-red-audit-69ec2cafa5.webp",
+      "original_bytes": 2476567,
+      "new_bytes": 1630948,
+      "saving": 845619,
+      "size": [
+        3000,
+        3000
+      ],
+      "rgba_sha256": "3af1ed045c7dd0ba7941e3dfdd3d66bac5a53a98b5344f807789e3c3bb193e71",
+      "served_path": "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-69ec2cafa5.webp"
+    },
+    {
+      "source": "img/objects/gallery/dailyobjects-carbon-stack-case-audit-1beb23ed48.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/dailyobjects-carbon-stack-case-audit-1beb23ed48.webp",
+      "original_bytes": 1920538,
+      "new_bytes": 1116716,
+      "saving": 803822,
+      "size": [
+        2000,
+        2474
+      ],
+      "rgba_sha256": "a39b4b23911b07c69c33f9051f665cf8cd6ed4a7a9dd4d9b33eb3b18a6ec0578",
+      "served_path": "img/objects/gallery/dailyobjects-carbon-stack-case-audit-1beb23ed48.webp"
+    },
+    {
+      "source": "img/objects/gallery/nintendo-switch-2-audit-2bbd5feeb8.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/nintendo-switch-2-audit-2bbd5feeb8.webp",
+      "original_bytes": 1835748,
+      "new_bytes": 1152476,
+      "saving": 683272,
+      "size": [
+        1868,
+        1256
+      ],
+      "rgba_sha256": "424608e88d8d5005ba900528b2d955394145ba83ad3f3404edf4b32d1c2b9d5f",
+      "served_path": "img/objects/gallery/nintendo-switch-2-audit-2bbd5feeb8.webp"
+    },
+    {
+      "source": "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-e4793b7f1b.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/stokke-tripp-trapp-warm-red-audit-e4793b7f1b.webp",
+      "original_bytes": 1406679,
+      "new_bytes": 981096,
+      "saving": 425583,
+      "size": [
+        3000,
+        3000
+      ],
+      "rgba_sha256": "27b636f76f84434663bb4c5612a7a4422d2ede33c7228f2a3156a5fa09360f8d",
+      "served_path": "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-e4793b7f1b.webp"
+    },
+    {
+      "source": "img/objects/gallery/loop-cocoon-berry-audit-9e3269f26c.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/loop-cocoon-berry-audit-9e3269f26c.webp",
+      "original_bytes": 1381229,
+      "new_bytes": 860708,
+      "saving": 520521,
+      "size": [
+        1254,
+        1254
+      ],
+      "rgba_sha256": "17d21ab23291f865066db517241a529ceeedb3bf45471912e21d840284e6d17c",
+      "served_path": "img/objects/gallery/loop-cocoon-berry-audit-9e3269f26c.webp"
+    },
+    {
+      "source": "img/objects/dailyobjects-carbon-stack-case.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/dailyobjects-carbon-stack-case.webp",
+      "original_bytes": 1339874,
+      "new_bytes": 767302,
+      "saving": 572572,
+      "size": [
+        2000,
+        2474
+      ],
+      "rgba_sha256": "cb6c997ca91e03fb412d685bd5df2e1695e49cdb09dd9bf473a3e74a2cfb122c",
+      "served_path": "img/objects/dailyobjects-carbon-stack-case.webp"
+    },
+    {
+      "source": "img/objects/cutouts/alessi-twergi-es19-yellow-native.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/alessi-twergi-es19-yellow-native.webp",
+      "original_bytes": 986242,
+      "new_bytes": 669802,
+      "saving": 316440,
+      "size": [
+        1632,
+        1632
+      ],
+      "rgba_sha256": "152dd787bb430faf1b412378abbb52a3afd2ad52937719cb5be3749cc96e0f0b",
+      "served_path": "img/objects/cutouts/alessi-twergi-es19-yellow-native.webp"
+    },
+    {
+      "source": "img/objects/cutouts/dusen-everybody-wall-clock-native.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/dusen-everybody-wall-clock-native.webp",
+      "original_bytes": 952161,
+      "new_bytes": 611292,
+      "saving": 340869,
+      "size": [
+        2080,
+        2080
+      ],
+      "rgba_sha256": "545e12981e3c90b670291674298564c80267253ce94272268d168396da1df629",
+      "served_path": "img/objects/cutouts/dusen-everybody-wall-clock-native.webp"
+    },
+    {
+      "source": "img/objects/atonemo-nts-radio-player.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/atonemo-nts-radio-player.webp",
+      "original_bytes": 879607,
+      "new_bytes": 589060,
+      "saving": 290547,
+      "size": [
+        1080,
+        1080
+      ],
+      "rgba_sha256": "81eef0bfb5bb49d161a66f03cd91e625d36f49f9e4ab0a0c57fececd38f038df",
+      "served_path": "img/objects/atonemo-nts-radio-player.webp"
+    },
+    {
+      "source": "img/objects/sharge-discho.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/sharge-discho.webp",
+      "original_bytes": 768530,
+      "new_bytes": 430220,
+      "saving": 338310,
+      "size": [
+        1400,
+        1400
+      ],
+      "rgba_sha256": "750c4dbabfb3de9bed52d00b36eb7eb7596dca6001bfe9a9306026ee4df3e8fd",
+      "served_path": "img/objects/sharge-discho.webp"
+    },
+    {
+      "source": "img/objects/gallery/yoto-player-4-audit-a474a8208d.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/yoto-player-4-audit-a474a8208d.webp",
+      "original_bytes": 718381,
+      "new_bytes": 441408,
+      "saving": 276973,
+      "size": [
+        1302,
+        1196
+      ],
+      "rgba_sha256": "d8cd6a24ec341c96c64a159445e6d5e0a4042dd088eafac7929b87208dfbdb6e",
+      "served_path": "img/objects/gallery/yoto-player-4-audit-a474a8208d.webp"
+    },
+    {
+      "source": "img/objects/gallery/yoto-player-4-audit-4ce29e8e6f.png",
+      "candidate": "/workspace/scratch/8667b50c4bf5/finds-new-products/encoding/yoto-player-4-audit-4ce29e8e6f.webp",
+      "original_bytes": 594027,
+      "new_bytes": 355660,
+      "saving": 238367,
+      "size": [
+        1302,
+        1196
+      ],
+      "rgba_sha256": "332ff7120d51d2b7a510cd1b54722e1776686e3bed4129d517d42ca6a21851cf",
+      "served_path": "img/objects/gallery/yoto-player-4-audit-4ce29e8e6f.webp"
+    }
+  ],
+  "bytes_saved": 10102356
+}

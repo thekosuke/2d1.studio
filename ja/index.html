@@ -34,18 +34,20 @@
   
   <link rel="stylesheet" href="../css/fonts.css?v=4">
   <link rel="stylesheet" href="../css/japanese-font.css?v=1">
-  <link rel="stylesheet" href="../css/walla.css?v=45">
+  <link rel="stylesheet" href="../css/walla.css?v=47">
   <link rel="stylesheet" href="../css/dialogs.css?v=12">
-  <script src="../js/ja.js?v=5" defer></script>
+  <link rel="stylesheet" href="../css/mobile-nav.css?v=3">
+  <script src="../js/ja.js?v=9" defer></script>
   <script src="../js/language.js?v=1" defer></script>
   <script src="../js/config.js" defer></script>
   <script src="../js/drawers.js?v=2" defer></script>
-  <script src="../js/contact.js?v=6" defer></script>
+  <script src="../js/contact.js?v=7" defer></script>
   <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
   <script src="../js/tote-preview.js?v=12" defer></script>
+  <script src="../js/mobile-nav.js?v=2" defer></script>
   <script src="../js/site.js?v=4" defer></script>
-  <script src="../js/walla.js?v=26" defer></script>
-  <script src="../js/reading-ink.js?v=5" defer></script>
+  <script src="../js/walla.js?v=28" defer></script>
+  <script src="../js/reading-ink.js?v=6" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "2D1", "url": "https://2d1.studio/ja/", "logo": "https://2d1.studio/img/brand/2d1-brand.png?v=2", "slogan": "身近なものに、らしさを。", "description": "ブランディングとデジタルプロダクトに取り組み、身近なものの「らしさ」を考える独立系デザインスタジオ。"}</script>
 </head>
 <body id="top" class="home-page">
@@ -58,10 +60,11 @@
     <div class="landing-mark"><img src="../img/brand/logo_beige.svg" width="829" height="280" alt=""><svg class="landing-eyes" viewbox="0 0 829 280"><image href="../img/brand/eyes.svg" x="317" y="103" width="116" height="48"></image></svg></div>
     <p class="brand-caption"><span>デザインハウス</span></p>
   </div>
-  <nav class="page-nav" aria-label="ページ内・ページ間ナビゲーション"><span class="page-nav-left"><a href="#studio">スタジオ</a><a href="#shop">ショップ</a></span><a href="#connect">つながる</a><span class="page-nav-pages" role="group" aria-label="ページ"><a href="about/">2D1について</a><a href="objects/">Finds</a></span><span class="page-nav-contact"><button type="button" data-contact aria-haspopup="dialog" aria-controls="contact">お問い合わせ</button></span></nav>
+  <button class="mobile-nav-toggle" type="button" aria-label="ナビゲーションメニュー" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <nav class="page-nav" id="page-navigation" aria-label="ページ内・ページ間ナビゲーション"><span class="page-nav-left"><a href="#studio">スタジオ</a><a href="#shop">ショップ</a></span><a href="#connect">つながる</a><span class="page-nav-pages" role="group" aria-label="ページ"><a href="about/">2D1について</a><a href="objects/">Finds</a></span><span class="page-nav-contact"><button type="button" data-contact aria-haspopup="dialog" aria-controls="contact">お問い合わせ</button></span></nav>
   <main id="main">
     <section class="intro column section-stack" aria-label="はじめに">
-      <h1 data-ink>2D1は、ブランド、デジタルプロダクト、アイデアを横断して活動する、独立したデザインハウスです。初期の構想から、見た目や使い心地、世の中でのあり方まで、一緒にかたちにしていきます。<br><br>クライアントワークと並行して、自分たちのものをつくり、気の合う人たちと協働しています。私たちは、こうしたオブジェクトやアイデアを<em translate="no">Familiar Characters</em>と呼びます。日々の暮らしに居場所を見つけるだけの個性を持ったものたちです。</h1>
+      <h1 data-ink>2D1は、ブランド、デジタルプロダクト、アイデアを横断して活動する、独立したデザインハウスです。初期の構想から、見た目や使い心地、世の中でのあり方まで、一緒にかたちにしていきます。<br><br>クライアントワークと並行して、自分たちのものをつくり、気の合う人たちと協働しています。私たちは、こうしたオブジェクトやアイデアを<a class="familiar-characters" href="objects/" translate="no">Familiar Characters</a>と呼びます。日々の暮らしに居場所を見つけるだけの個性を持ったものたちです。</h1>
       <div class="button-stack"><a class="intro-cta" href="about/">2D1について<span aria-hidden="true">→</span></a></div>
     </section>
     <section id="studio" class="section-stack studio" aria-labelledby="studio-label">
@@ -96,6 +99,7 @@
       <div class="product-details" aria-label="製品仕様">
         <dl class="product-specs">
           <div><dt>素材</dt><dd>高密度に織られた黒いキャンバス。</dd></div>
+          <div><dt>生産国</dt><dd>日本製</dd></div>
           <div><dt>サイズ</dt><dd>約 幅40 × 高さ36 × マチ10cm。ストラップを除きます。</dd></div>
           <div><dt>ストラップ</dt><dd>外側は黒、内側は赤の長いストラップ。肩掛けに対応。</dd></div>
           <div><dt>赤いタグ</dt><dd>サイドの縫い目に挟み込んだ、四角い織りネーム。</dd></div>

@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-10T03:00:00Z",
+  "catalogEdited": false,
+  "range": [
+    0,
+    23
+  ],
+  "kind": "incremental retry delta after first proposal integration",
+  "baseProposal": "/workspace/shared/finds-audit/first/proposal.json",
+  "retryStatus": {
+    "freshUserApproval": true,
+    "originalCallsRetriedOnce": true,
+    "renewedApprovalDenials": false,
+    "result": "Authorized public-source retrieval retries completed. Remaining failures are ordinary HTTP404 or timeout responses, not an active approval block."
+  },
+  "policy": "Authentic distinct photos only. No downloads were edited, upscaled, synthesized, or duplicated. Lifestyle/in-use views retained as user-approved; distinguish frame resolution from subject resolution.",
+  "summary": {
+    "productCount": 4,
+    "photoActions": 14,
+    "mainSourcesRequiringMask": [
+      "dusen-everybody-wall-clock",
+      "alessi-twergi-es19-yellow"
+    ],
+    "galleryCountsAfterApplying": {
+      "dusen-everybody-wall-clock": 4,
+      "alessi-twergi-es19-yellow": 4,
+      "block-design-play-tin": 4,
+      "hay-regn-umbrella-gray-blue": 5
+    }
+  },
+  "products": [
+    {
+      "index": 4,
+      "id": "dusen-everybody-wall-clock",
+      "displayName": "Everybody Wall Clock",
+      "variantName": "Everybody Wall Clock, Blue / Red",
+      "existingCountAtDelta": 4,
+      "existingPhotosAtDelta": [
+        {
+          "image": "img/objects/dusen-everybody-wall-clock.jpg",
+          "width": 1061,
+          "height": 1061,
+          "sourceUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+          "sourceImageUrl": "https://www.momastore.jp/img/goods/L/0708389001945_2.jpg"
+        },
+        {
+          "image": "img/objects/gallery/dusen-everybody-wall-clock-2.webp",
+          "width": 1061,
+          "height": 1061,
+          "sourceUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+          "sourceImageUrl": "https://www.momastore.jp/img/goods/1/0708389001945_1_detail.jpg"
+        },
+        {
+          "image": "img/objects/gallery/dusen-everybody-wall-clock-3.webp",
+          "width": 1061,
+          "height": 1061,
+          "sourceUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+          "sourceImageUrl": "https://www.momastore.jp/img/goods/3/0708389001945_3_detail.jpg"
+        },
+        {
+          "image": "img/objects/gallery/dusen-everybody-wall-clock-4.webp",
+          "width": 1061,
+          "height": 1061,
+          "sourceUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
+          "sourceImageUrl": "https://www.momastore.jp/img/goods/4/0708389001945_4_detail.jpg"
+        }
+      ],
+      "galleryAction": "replace_all",
+      "expectedFinalCount": 4,
+      "desiredVariant": "Blue / Red / Yellow MoMA palette",
+      "variantConfidence": "high exact design; medium launch palette",
+      "variantEvidence": [
+        {
+          "url": "https://store.moma.org/products/dusen-dusen-everybody-wall-clock",
+          "finding": "MoMA describes this as its exclusively selected color combination, Year of Design 2024. The source verifies the established MoMA edition, not a global popularity ranking."
+        },
+        {
+          "url": "https://stackedstore.mom/products/areaware-everybody-clock?variant=40660902281280",
+          "finding": "Retailer gallery identifies the matching Blue/Red/Yellow edition. Four native 2568px-long-edge photographs were downloaded and visually checked; the other four gallery photographs show the wrong green/yellow edition and are excluded."
+        }
+      ],
+      "proposedImages": [
+        {
+          "file": "/workspace/shared/finds-audit/first/dusen-clock-hq-1.jpg",
+          "width": 2568,
+          "height": 2568,
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0573/4088/7104/files/Areaware-Everybody-Clock-Blue-Red-Yellow-1.jpg?v=1749614944",
+          "sourceUrl": "https://stackedstore.mom/products/areaware-everybody-clock?variant=40660902281280",
+          "role": "packshot",
+          "action": "replace_gallery",
+          "pixelInspected": true,
+          "sha256": "8fdf79a810812c78526aad59591ae27267e64377093a9a342b7c40573929131a",
+          "requiresMaskForMain": true,
+          "notes": "Exact blue/red/yellow edition. Sharp large product subject; remove beige background for catalog main."
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/dusen-clock-hq-2.jpg",
+          "width": 2568,
+          "height": 2568,
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0573/4088/7104/files/Areaware-Everybody-Clock-Blue-Red-Yellow-2.jpg?v=1749614959",
+          "sourceUrl": "https://stackedstore.mom/products/areaware-everybody-clock?variant=40660902281280",
+          "role": "alternate face position",
+          "action": "replace_gallery",
+          "pixelInspected": true,
+          "sha256": "4c645b07b5d28d2b8e9d332349225df3f71a26499f20c05a8ad05e717a0d5a12",
+          "requiresMaskForMain": false,
+          "notes": "Exact blue/red/yellow edition. Different clock-face position and photograph."
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/dusen-clock-hq-3.jpg",
+          "width": 1926,
+          "height": 2568,
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0573/4088/7104/files/Areaware-Everybody-Clock-Blue-Red-Yellow-4.jpg?v=1749614969",
+          "sourceUrl": "https://stackedstore.mom/products/areaware-everybody-clock?variant=40660902281280",
+          "role": "lifestyle",
+          "action": "replace_gallery",
+          "pixelInspected": true,
+          "sha256": "5c6dfb6f95f4c7e37f1266537d6ffb2d0d7b660f746dca18b73deb2f314fc3e6",
+          "requiresMaskForMain": false,
+          "notes": "Exact blue/red/yellow edition. Native high-resolution lifestyle frame; clock is a smaller contextual subject."
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/dusen-clock-hq-4.jpg",
+          "width": 2054,
+          "height": 2568,
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0573/4088/7104/files/Areaware-Everybody-Clock-Blue-Red-Yellow-3.jpg?v=1749614976",
+          "sourceUrl": "https://stackedstore.mom/products/areaware-everybody-clock?variant=40660902281280",
+          "role": "alternate lifestyle",
+          "action": "replace_gallery",
+          "pixelInspected": true,
+          "sha256": "2ef2cfcd24b99c8c27be02c28475190270d55bb5c0ac1ffcd4315443a2e6bad6",
+          "requiresMaskForMain": false,
+          "notes": "Exact blue/red/yellow edition. Native high-resolution lifestyle frame; clock is a smaller contextual subject."
+        }
+      ],
+      "remainingLimitations": [
+        "Exact established MoMA edition is verified; earliest launch palette or popularity ranking is not fully established.",
+        "Two lifestyle frames are high-resolution source files with a smaller product subject."
+      ],
+      "integrationPolicy": "Apply only this incremental delta, match stable id, deduplicate by source image identity and photo composition, preserve color-free name and variantName. No image may be upscaled."
+    },
+    {
+      "index": 17,
+      "id": "alessi-twergi-es19-yellow",
+      "displayName": "Twergi ES19 Spice Mill",
+      "variantName": "Twergi ES19 Spice Mill, Yellow",
+      "existingCountAtDelta": 2,
+      "existingPhotosAtDelta": [
+        {
+          "image": "img/objects/alessi-twergi-es19-yellow.jpg",
+          "width": 1648,
+          "height": 2062,
+          "sourceUrl": "https://alessi.com/de/products/es19-pepper-salt-and-spice-mill",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ES19-04.jpg?v=1680531360"
+        },
+        {
+          "image": "img/objects/gallery/alessi-twergi-es19-yellow-hq-2.webp",
+          "width": 1648,
+          "height": 2062,
+          "sourceUrl": "https://alessi.com/de/products/es19-pepper-salt-and-spice-mill",
+          "sourceImageUrl": "https://alessi.com/cdn/shop/products/ES18-ES19-MP0210-02_054ce3f4-9a6e-4798-98b5-c7136422560f.jpg?v=1680531360"
+        }
+      ],
+      "galleryAction": "replace_all",
+      "expectedFinalCount": 4,
+      "desiredVariant": "Yellow ES19",
+      "variantConfidence": "high exact variant; original1989 color unresolved",
+      "variantEvidence": [
+        {
+          "url": "https://alessi.com/de/products/es19-pepper-salt-and-spice-mill",
+          "finding": "Official ES19 feed identifies Yellow variant46488901648710 with ES19-04.jpg. The Twergi collection design dates to1989, but current100 Values reissue color alone does not prove the original color."
+        },
+        {
+          "url": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
+          "finding": "Yellow ES19 product gallery supplies an isolated product photo and multiple authentic lifestyle photos visibly containing the same yellow variant. Four distinct selected originals are 1500–2000px long edge."
+        }
+      ],
+      "proposedImages": [
+        {
+          "file": "/workspace/shared/finds-audit/first/fds-twergi-retry-1.png",
+          "width": 1500,
+          "height": 1500,
+          "sourceImageUrl": "https://media.fds.fi/product_image/2000/15_Alessi_21_TH.png",
+          "sourceUrl": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
+          "role": "packshot",
+          "action": "replace_gallery",
+          "pixelInspected": true,
+          "sha256": "ce4fb1286e9efe1ae2d2f8ad63bb14dfff035a3ac5282c68f19c36d9da39e78a",
+          "requiresMaskForMain": true,
+          "notes": "Native source is 1500x1500 despite /2000/ URL. Sharp large yellow mill, plain white RGB background; requires mask for main."
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/fds-twergi-retry-2.jpg",
+          "width": 1400,
+          "height": 2000,
+          "sourceImageUrl": "https://media.fds.fi/decor_image/2000/07_Alessi-MP0210-1_ES18-1_ES19-1-V.jpg",
+          "sourceUrl": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
+          "role": "lifestyle group",
+          "action": "replace_gallery",
+          "pixelInspected": true,
+          "sha256": "6817fcea68c13bfbb27e29949dee5b273c1d551b61df8214029261fc5c5f2219",
+          "requiresMaskForMain": false,
+          "notes": "Exact full-yellow ES19 is the middle mill; related black/white/yellow mills share the scene."
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/fds-twergi-retry-4.jpg",
+          "width": 2000,
+          "height": 1333,
+          "sourceImageUrl": "https://media.fds.fi/decor_image/2000/FDS_ruoka-Alessi10.jpg",
+          "sourceUrl": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
+          "role": "kitchen lifestyle",
+          "action": "replace_gallery",
+          "pixelInspected": true,
+          "sha256": "99549d635a5b76942fca44807a23f3fb208e2b024686d6229777c6df808422dc",
+          "requiresMaskForMain": false,
+          "notes": "Exact yellow ES19 beside flowers; smaller subject within authentic kitchen scene."
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/fds-twergi-retry-8.jpg",
+          "width": 2000,
+          "height": 1334,
+          "sourceImageUrl": "https://media.fds.fi/decor_image/2000/2021_09_30_FDS_Valmiit_VVV-3.jpg",
+          "sourceUrl": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
+          "role": "dining lifestyle",
+          "action": "replace_gallery",
+          "pixelInspected": true,
+          "sha256": "b390a59eabac90ce8573dbb0e95c9fce7db93ef172c0e0f12c13b0c3cae9d928",
+          "requiresMaskForMain": false,
+          "notes": "Exact yellow ES19 in right foreground; meaningful contextual view with warm scene lighting."
+        }
+      ],
+      "remainingLimitations": [
+        "Specific yellow launch chronology remains unresolved; preserve the existing selected yellow edition.",
+        "Lifestyle files are high resolution, but product pixels are shared with the rest of the scene."
+      ],
+      "integrationPolicy": "Apply only this incremental delta, match stable id, deduplicate by source image identity and photo composition, preserve color-free name and variantName. No image may be upscaled.",
+      "correction": "Existing second Alessi gallery photograph shows pink/red variants, not this full-yellow ES19. Replace the old two-photo gallery with the four selected yellow-matching photos. The old hero URL provenance has already been corrected to ES19-04.jpg; do not restore 03_ES19.jpg."
+    },
+    {
+      "index": 19,
+      "id": "block-design-play-tin",
+      "displayName": "Tinned Goods — Play",
+      "variantName": null,
+      "existingCountAtDelta": 2,
+      "existingPhotosAtDelta": [
+        {
+          "image": "img/objects/block-design-play-tin.jpg",
+          "width": 2000,
+          "height": 2000,
+          "sourceUrl": "https://blockdesign.co.uk/collections/tinned-goods/products/play",
+          "sourceImageUrl": "https://blockdesign.co.uk/cdn/shop/files/play-flatlay.jpg?v=1753096888&width=2000"
+        },
+        {
+          "image": "img/objects/gallery/block-design-play-tin-2.webp",
+          "width": 1600,
+          "height": 1600,
+          "sourceUrl": "https://blockdesign.co.uk/collections/tinned-goods/products/play",
+          "sourceImageUrl": "https://blockdesign.co.uk/cdn/shop/files/play_811538cf-8c8a-4ee5-9995-ec7099a85524.jpg?v=1753096913&width=1800"
+        }
+      ],
+      "galleryAction": "append",
+      "expectedFinalCount": 4,
+      "desiredVariant": "Play tin (original illustrated set)",
+      "variantConfidence": "high exact original illustrated Play design; verified brand launch context",
+      "variantEvidence": [
+        {
+          "url": "https://blockdesign.co.uk/collections/tinned-goods/products/play",
+          "finding": "Official product feed exposes exactly three photographs: play flatlay, open cards, play strap. Existing catalog contains only first two."
+        },
+        {
+          "url": "https://blockdesign.co.uk/blogs/news/the-tinned-goods-collection-a-love-letter-to-craft-culture",
+          "finding": "Brand launch article dated April 24, 2025 introduces the Tinned Goods collection including Play and its Cubist-inspired graphic design."
+        },
+        {
+          "url": "https://blockdesign.co.uk/collections/tinned-goods",
+          "finding": "Brand collection image shows the matching original Play graphic among other tins; this is a distinct fourth context photo."
+        }
+      ],
+      "proposedImages": [
+        {
+          "file": "/workspace/shared/finds-audit/first/block-design-play-tin-candidate-3.jpg",
+          "width": 2000,
+          "height": 2000,
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0580/1272/9553/files/play-strap.jpg?v=1753447855",
+          "sourceUrl": "https://blockdesign.co.uk/collections/tinned-goods/products/play",
+          "role": "packaging lifestyle",
+          "action": "add",
+          "pixelInspected": true,
+          "sha256": "8e82af2bf5e5a0978cfb7e5660489580d4c287f80ce58bc1717320c08e3711b7",
+          "requiresMaskForMain": false,
+          "notes": "Matching Play tin with branded sleeve beside another collection tin. Distinct from current flatlay/open-card photographs."
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/block-collection.jpg",
+          "width": 3750,
+          "height": 2500,
+          "sourceImageUrl": "https://blockdesign.co.uk/cdn/shop/collections/tinned_goods.jpg?v=1734698329",
+          "sourceUrl": "https://blockdesign.co.uk/collections/tinned-goods",
+          "role": "collection lifestyle",
+          "action": "add",
+          "pixelInspected": true,
+          "sha256": "4add62faf1799906d36a6d59eeb84bb53b4584161e7098dd8fa3a7334d87b4ee",
+          "requiresMaskForMain": false,
+          "notes": "Authentic brand collection photograph; multiple matching Play tins are visible among other models. Resolution is shared across the collection."
+        }
+      ],
+      "remainingLimitations": [
+        "The fourth image is a collection scene rather than an isolated view; do not claim every frame dedicates all pixels to one tin."
+      ],
+      "integrationPolicy": "Apply only this incremental delta, match stable id, deduplicate by source image identity and photo composition, preserve color-free name and variantName. No image may be upscaled."
+    },
+    {
+      "index": 22,
+      "id": "hay-regn-umbrella-gray-blue",
+      "displayName": "Regn Umbrella",
+      "variantName": "Regn Umbrella, Gray / Blue",
+      "existingCountAtDelta": 4,
+      "existingPhotosAtDelta": [
+        {
+          "image": "img/objects/gallery/hay-regn-umbrella-gray-blue-hq-1.webp",
+          "width": 3200,
+          "height": 2133,
+          "sourceUrl": "https://hay.presscloud.com/digitalshowroom/",
+          "sourceImageUrl": "https://hay.presscloud.com/digitalshowroom/",
+          "sourceFile": "AF794-A659_Regn Umbrella grey.jpg"
+        },
+        {
+          "image": "img/objects/gallery/hay-regn-umbrella-gray-blue-2.webp",
+          "width": 751,
+          "height": 1000,
+          "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+          "sourceImageUrl": "https://cdn.hay.nl/thumbnail/07/20/ca/1785023624/hay-regn-umbrella-grey-103549_1000x1000.webp"
+        },
+        {
+          "image": "img/objects/gallery/hay-regn-umbrella-gray-blue-3.webp",
+          "width": 750,
+          "height": 1000,
+          "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+          "sourceImageUrl": "https://cdn.hay.nl/thumbnail/b2/24/5b/1785023626/hay-regn-umbrella-grey-103550_1000x1000.webp"
+        },
+        {
+          "image": "img/objects/gallery/hay-regn-umbrella-gray-blue-4.webp",
+          "width": 749,
+          "height": 1000,
+          "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+          "sourceImageUrl": "https://cdn.hay.nl/thumbnail/f7/ce/34/1785494530/Regn%20Umbrella%20family_01_1000x1000.jpg"
+        }
+      ],
+      "galleryAction": "replace_three_append_one",
+      "expectedFinalCount": 5,
+      "desiredVariant": "Gray / Blue",
+      "variantConfidence": "high exact selected variant; earliest or most-recognized palette unresolved",
+      "variantEvidence": [
+        {
+          "url": "https://hay.presscloud.com/digitalshowroom/",
+          "finding": "Official HAY photo and catalog description verify the gray/blue umbrella. Three existing lifestyle views include other family colors. No launch hierarchy established."
+        },
+        {
+          "url": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+          "finding": "Official HAY photo and catalog description verify the gray/blue umbrella. Three existing lifestyle views include other family colors. No launch hierarchy established."
+        },
+        {
+          "url": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+          "finding": "Native HAY Netherlands gallery sources upgrade the three existing 1000px lifestyle files to 1393–1731px long edge and add a distinct 1382px folded gray/blue view. Downloaded duplicate lifestyle source and smaller hero were excluded."
+        }
+      ],
+      "proposedImages": [
+        {
+          "file": "/workspace/shared/finds-audit/first/hay-regn-retry-3.webp",
+          "width": 1045,
+          "height": 1393,
+          "sourceImageUrl": "https://cdn.hay.nl/media/07/20/ca/1785023624/hay-regn-umbrella-grey-103549.webp",
+          "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+          "role": "lifestyle",
+          "action": "replace_existing",
+          "pixelInspected": true,
+          "sha256": "be0b9d50989c8cf8f8bf28859e416ee778bf08eee230c1e60d7be93b6042fad4",
+          "requiresMaskForMain": false,
+          "notes": "Same photograph as the named existing gallery entry, retrieved at its native larger source size. Replace it; do not add as another photo. Gray/blue umbrella appears alongside other family colors.",
+          "replaceExistingImage": "img/objects/gallery/hay-regn-umbrella-gray-blue-2.webp"
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/hay-regn-retry-4.webp",
+          "width": 1200,
+          "height": 1600,
+          "sourceImageUrl": "https://cdn.hay.nl/media/b2/24/5b/1785023626/hay-regn-umbrella-grey-103550.webp",
+          "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+          "role": "lifestyle",
+          "action": "replace_existing",
+          "pixelInspected": true,
+          "sha256": "3cbc1954e35401c73344fecc0d8137584d1c8a0fc79f34a882432363e094ae2c",
+          "requiresMaskForMain": false,
+          "notes": "Same photograph as the named existing gallery entry, retrieved at its native larger source size. Replace it; do not add as another photo. Gray/blue umbrella appears alongside other family colors.",
+          "replaceExistingImage": "img/objects/gallery/hay-regn-umbrella-gray-blue-3.webp"
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/hay-regn-retry-5.jpg",
+          "width": 1296,
+          "height": 1731,
+          "sourceImageUrl": "https://cdn.hay.nl/media/f7/ce/34/1785494530/Regn%20Umbrella%20family_01.jpg",
+          "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+          "role": "lifestyle",
+          "action": "replace_existing",
+          "pixelInspected": true,
+          "sha256": "7831c8dcef35e631760446c574e507c99fb9c206df4640bf45a58b571b768603",
+          "requiresMaskForMain": false,
+          "notes": "Same photograph as the named existing gallery entry, retrieved at its native larger source size. Replace it; do not add as another photo. Gray/blue umbrella appears alongside other family colors.",
+          "replaceExistingImage": "img/objects/gallery/hay-regn-umbrella-gray-blue-4.webp"
+        },
+        {
+          "file": "/workspace/shared/finds-audit/first/hay-regn-retry-2.webp",
+          "width": 1382,
+          "height": 933,
+          "sourceImageUrl": "https://cdn.hay.nl/media/d0/bb/8e/1785023623/hay-regn-umbrella-grey-103548.webp",
+          "sourceUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
+          "role": "folded packshot",
+          "action": "add",
+          "pixelInspected": true,
+          "sha256": "8fe5c6ac1ef152ee81d5ccabaaf38337b5c7a23536c1ea303a75b276d4556993",
+          "requiresMaskForMain": false,
+          "notes": "New distinct folded gray/blue view. Native 1382x933 frame, but thin umbrella occupies a smaller portion; preserve as gallery original."
+        }
+      ],
+      "remainingLimitations": [
+        "Earliest or most-recognized palette remains unresolved.",
+        "Lifestyle photographs show multiple colors and the folded image has a relatively small/thin product subject."
+      ],
+      "integrationPolicy": "Apply only this incremental delta, match stable id, deduplicate by source image identity and photo composition, preserve color-free name and variantName. No image may be upscaled.",
+      "preserveExistingHero": "img/objects/gallery/hay-regn-umbrella-gray-blue-hq-1.webp"
+    }
+  ],
+  "unresolved": [
+    {
+      "index": 0,
+      "id": "hay-miz-dark-green",
+      "finding": "Two current matching Miz original-model photographs. All eight previously found HAY Australia image URLs returned HTTP404 on the fresh authorized retry. New No.2 bottle is a different model and was excluded."
+    },
+    {
+      "index": 5,
+      "id": "subu-dusen-checker",
+      "finding": "Only three large/relevant matching views; the initial proposal optional fourth is a real official press collage with a tiny Checker pair. Do not count it as a fourth sharp large-subject photo."
+    },
+    {
+      "index": 12,
+      "id": "arms-flying-robi-persi",
+      "finding": "Official product feed again exposes one native1800px photograph; three further authentic matching photos not found."
+    },
+    {
+      "index": 13,
+      "id": "alessi-9090",
+      "finding": "Four installed views, but fourth native source is624x788 and padded full-body sources have limited product pixels."
+    },
+    {
+      "index": 18,
+      "id": "nuutajarvi-tumbler-1709",
+      "finding": "Two vintage glass-group photographs; additional identical-specimen/original-color evidence unavailable."
+    },
+    {
+      "index": 20,
+      "id": "seiko-w286",
+      "finding": "Two vintage clock photographs, one512x640 collage; no four clean high-resolution views of same specimen verified."
+    },
+    {
+      "index": 21,
+      "id": "herman-miller-girard-throw",
+      "finding": "Initial proposal supports three distinct matching Orange/Fuchsia photographs; other current brand candidates are wrong design/color or repeats."
+    },
+    {
+      "index": 23,
+      "id": "moodulo-pop-culture-act-ii",
+      "finding": "Three ActII collection photographs; two secondary files have640px long edge. No fourth exact-collection high-resolution image verified."
+    }
+  ]
+}

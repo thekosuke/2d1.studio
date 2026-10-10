@@ -345,3 +345,135 @@ Finds page-nav labels no longer shift, change color, or show a hover square; the
 ### Nine design selections — 10 October
 
 Finds now contains 72 entries. Added La conica, First, Most Illustrious Achille, Frida 752, Valentine, Rabbit Chair (Light Blue), Magic Bunny (Black), Girotondo Round Tray, and Ray (White Dial). The latter three are one representative each from the linked Plastic, Girotondo, and Watches portfolios. Valentine and Ray use Not for sale. New entries have EN/JA descriptions, transparent optically sized original-photo cutouts, responsive derivatives, and source-credited galleries. No image was upscaled. Full provenance and native subject sizes are in docs/OBJECTS-SOURCES.md.
+
+
+### 10 October cloud refinement
+
+Built on Codex’s `6bd73072f24f1588b76274aede1bbc8a83d390eb` catalog and interaction update. Finds adds BAGGU Standard Baggu in Pop Pink Happy with three original official photos and removes Ray, White Dial (72 active items). Page-menu and Category items now enter sequentially and exit in reverse order; exit panels become inert immediately and reduced motion is instant. GitHub synchronization remains on hold; see the latest HANDOFF entry for preview/source status.
+
+
+### Finds catalog quality and rolodex motion — 10 October
+
+Product display names omit color; selected variant labels remain in catalog metadata. Future catalog work follows `docs/FINDS-CATALOG-PROCESS.md`, targeting transparent primary photography and 4–8 distinct native high-resolution detail images with verified source/colorway evidence. Run `python3 scripts/audit-finds.py` to refresh the per-product Markdown/JSON audit; its automated checks do not replace visual review.
+
+The detail deck now expands the selected preview into the active card with a 640ms rolodex transition: bottom rolls upward, top downward. The outgoing sheet preserves its scroll positions, remains visually separate and inert, and is removed on completion or dismissal. Rapid repeat taps are guarded; reduced motion switches immediately; ownership requests change generation as soon as the product switches. Home’s intro underlines Familiar Characters without adding a link.
+
+
+## 10 October — transparent photography and catalog follow-through
+
+BAGGU Pop Pink Happy now uses an owner-approved conventional alpha mask that preserves every retained original RGB pixel. Added Anya Hindmarch Eyes Tote using exactly the third official carousel image (open mouth pocket) as its transparent primary, with seven authentic original gallery photographs. Both selected variants are explicit owner exceptions to the launch/iconic-color preference. Higher-resolution native primaries also replace the Dusen clock and yellow Twergi mill; master-pixel comparison and edge QA are recorded in the matching mask reports. All73 primary images now have transparency; this does not mean every source has sufficient native product detail.
+
+Lifestyle/in-use gallery settings are retained as requested. Verified studio and contextual additions bring53 of73 galleries to4–8 distinct photos;46 also pass the1200px native-file long-edge check.20 remain below4. Genuine source-resolution and historical-color gaps are itemized in docs/FINDS-AUDIT.json/.md; no images were invented, duplicated, or enlarged to meet a count. Source history now has dedicated middle/last-range evidence records, distinguishing proof from inference. Current Air-Chair Red1825C, Boby Paprika and VP9 ZestyOrange are later colors; matching historical replacements are under review and are not silently mislabeled as originals.
+
+Canvas captions place product name above brand in both locales, preserving typography and the minimum-zoom hidden state. Modal title/brand positions are unchanged. The prior rolodex transition, color-free display names, Home intro underline, and staircase menus remain included.
+
+The owner approved conventional pixel-preserving catalog masking going forward, with before/after geometry, color, edge and transparency checks. Keep originals, exact source links, native usable dimensions and QA records. Gallery photos retain their real setting.
+
+GitHub writes are still HELD; current work is uncommitted on base6bd73072f24f1588b76274aede1bbc8a83d390eb. The private Site publishing workflow is separately authorized. Do not push GitHub or imply pulling it includes this work. Backend configuration, schema and stored ownership rows are unchanged; rebuilding updates the product allowlist for the new entry. Real browser/device QA and authenticated deployed API checks remain unverified because the existing cloud browser restriction was not bypassed.
+
+
+Latest interaction additions: the underlined Familiar Characters phrase is a real same-tab Finds link; relative objects/ resolves to /objects/ and /ja/objects/ respectively. Reading-ink wrapping preserves the anchor. Each fresh Finds document generates a randomized brand-aware canvas order, scoring the actual horizontal/vertical/diagonal repeating-grid offsets. All and each category keep their own fixed permutation for that visit, including modal navigation. The heuristic reduces brand clusters without dropping any product or changing IDs. Seeded tests cover24 catalog permutations, dominant brands, tiny sets and order stability; JavaScript cache version16.
+
+
+GitHub authorization update,10 October2026 03:09UTC: the owner explicitly approved GitHub sync. The previous hold is lifted. Fetch site-redesign, preserve concurrent changes, commit/push the completed source safely without force, and verify its remote SHA. Production deployment/merge and access changes remain outside this approval. The actual source-sync result is recorded after verification.
+
+
+The owner requested a halfway pace for paragraph word reveals. Current6bd7307 and6862f32 both finished at50vh; the earlier3a9da38 implementation used min(25vh,70vh − block height). The new finish is their exact midpoint: min(37.5vh,60vh − half the block height). Short paragraphs reveal over47.5vh rather than35vh (old slower60vh). Intro first-line completion at70vh and hero/mobile entrance logic are preserved. Reading-ink cache version6; focused controller tests cover reflow, reverse scroll, reduced motion and completion.
+
+
+## Final10 October photographic checkpoint
+
+The catalog contains73 entries. All73 primary images have real transparency.55 galleries contain4–8 distinct authentic images;48 also pass the1200px long-edge file-dimension floor.18 galleries remain below4;14 include at least one smaller image.29 primary sources have less than1200px of actual subject detail. These are disclosed source limitations, not fabricated/upscaled passes. Perceptual near-pair warnings for seven products were visually reviewed against29 originals: genuine angles, mechanisms, lighting states and details, no duplicate removals required. Hash-bound review results are preserved in docs/FINDS-DISTINCTNESS-REVIEW.json.
+
+Historical corrections are now installed coherently: Air-Chair White1730C (five views; documented early designer/manufacturer presentation, not a claim of sole launch color), Flowerpot VP9 Mustard (four views; one of the original2020 colors, contextual fourth image has small lamps), and classic-red Boby B34 (exact four-drawer configuration, one verified1200×900 photo with447×646 subject detail). Product IDs retain their old color suffixes to preserve ownership association; display names omit color. Earlier notes saying these corrections were pending are superseded. Original photos and removed selections remain recoverable.
+
+One Nintendo source PNG was51.4MB and one Stokke PNG25.1MB, exceeding publication source-object limits. Stokke now uses pixel-identical native lossless WebP. Nintendo uses a3840×2561 web derivative of its7659×5108 original, lossless after downsampling; full original and native lossless encoding are retained in /workspace/shared/finds-audit/source-originals. No enlargement or generated replacement was used. Every packaged file is below10MiB.
+
+The final application build contains1097 files and passes source/package byte checks, npm test and git diff --check. It includes the slower midpoint reading reveal, clickable underlined Familiar Characters link, fresh brand-aware per-load canvas orders, product-above-brand captions, Anya/BAGGU cutouts, all gallery work, rolodex and staircase menus. Only image pixels were visually reviewed; live rendered browser/device and authenticated deployed API checks were not performed. Shared data/schema/access remain unchanged.
+
+
+Private publication succeeded10 October2026 at03:24:36UTC: https://two-d-one-design-preview.kosuke-2d1.chatgpt.site/objects/ . Site source `a5efd16c765fa8fe3f0c9b710b25217e587d1b02`; saved version `appgprj_6ac8448dc6f081919531a44b83b1c463~appgver_e423d3cddc5881918142fb956792f0e2`; deployment `appgdep_6ac9afd3e2308191aaf0f9681e9f7120`.825 packaged files match the tested build; archive249.1MiB. Publication checkout is tmp/hosted-preview-refinements. Prior oversized attempts were not live versions.
+
+GitHub synchronization remains unfinished despite the owner's03:09UTC approval: the upload worker was interrupted after three automatic approval rejections.35 of112 immutable image blobs are confirmed uploaded, but no final tree/commit/ref update was performed. Remote site-redesign remains `6bd73072f24f1588b76274aede1bbc8a83d390eb`. Do not resume blocked source writes until the owner confirms continuation. Resumable SHA ledger: ../github-finds-sync-ledger.json. Keep this technical transfer state separate from the successfully deployed private Site.
+
+Recovery patch: tmp/2d1-finds-recovery/changes.patch, based on6bd73072f24f1588b76274aede1bbc8a83d390eb, includes new binary/text assets and tracked changes. It is verified by git apply --reverse --check against this checkout. Inspect/reconcile local work and run git apply --check before applying elsewhere. No credentials are included. The current per-product audit was also replaced at its existing Library identity, libfile_e87693a1995c8191a0d5364d7b75b17c, version1.
+
+
+## Mobile product photographs — 10 October 2026
+
+The Finds product dialog uses a native horizontal scroll-snap photo strip on phones, including short coarse-pointer landscape viewports. Images retain their complete proportions with contain fitting. The gallery uses the remaining sheet height above the details, with a144px minimum; long descriptions or short screens retain vertical sheet scrolling instead of clipping content. Desktop keeps its stacked gallery.
+
+Arrow Left/Right and Home/End page through photos when the gallery has keyboard focus; modified shortcuts keep browser behavior. The gallery is a localized, named region and is focusable only for a multi-photo mobile strip. Horizontal photo browsing never changes the product or ownership state. Opening/switching a product resets to photo1; the outgoing rolodex clone preserves its current horizontal photo position. Native touch/scroll-snap and pinch zoom handle swipes without custom pointer capture.
+
+Checks cover eight images, repeated paging, bounds, responsive width changes, EN/JA labels, single-photo focus, product replacement/reset, reduced motion and outgoing-animation position. Actual mobile browser swipes/rendering remain unverified under the existing browser restriction. CSS/JS cache versions33/17; Japanese dictionary version6. GitHub continuation remains paused pending explicit approval after automatic review rejection.
+
+
+Mobile gallery publication verified: private version 22, Site source e362f779a83130c6ce721b515584f675eda10ac2, succeeded 10 October 2026 at 03:39:33 UTC. See the current top of docs/HANDOFF.md for source, validation and recovery status.
+
+### Mobile navigation and Heinz addition — 10 October 2026
+
+Home, About and Finds share a mobile hamburger disclosure (`css/mobile-nav.css`,
+`js/mobile-nav.js`) with retained menu styling and accessible dismissal/focus
+handling. It also covers short coarse-pointer phone landscape. Desktop navigation
+is unchanged. `tests/mobile-nav.mjs` runs through the existing test command.
+Finds detail photographs use square contain-fit frames; phones retain horizontal
+photo scrolling while the outer product sheet may scroll vertically.
+
+The catalog contains 74 products, including the owner-linked Heinz Tomato Ketchup
+32 oz inverted squeeze bottle (GTIN 00013000006057) in Kitchen. Eight matching
+classic-label photographs are documented in `docs/HEINZ-KETCHUP-SOURCES.json`.
+The official primary is natively transparent, and retailer gallery originals
+retain their studio backgrounds. The private preview is updated independently of
+the paused GitHub synchronization; use the latest HANDOFF checkpoint.
+
+### Photo controls and focus correction — 10 October 2026
+
+Multi-photo mobile product galleries loop through native horizontal scrolling,
+with square pagination, photo arrows and a swipe/tap hint. Single-photo controls
+remain hidden. Detail photos fill square frames using cover fitting; canvas
+cutouts retain contain fitting. Mobile zoom uses vertical +/− buttons above the
+language toggle (25-point steps), while desktop retains its range. Finds Close
+buttons are accessible icon-only 44px controls.
+
+The canvas always keeps Soft Beige when focus returns after a dialog. Its center
+caption supplies a compact keyboard cue, avoiding the shared Sand Gray region
+focus fill. Queued close events are ignored after a dialog has reopened, so stale
+cleanup cannot steal focus or cancel a fresh gallery session.
+
+### Photo tap refinement — 10 October 2026
+
+Mobile photo pagination sits inside the square image on a compact white, black-bordered overlay. Visible arrows are removed; clean left/right-half taps step backward/forward. Swiping and direct pagination remain, with passive gesture guards against accidental activation after scrolling or pinching. Keyboard controls and English/Japanese instructions remain available.
+
+### Full-width mobile product sheet — 10 October 2026
+
+Mobile Finds details use a full-width 95dvh sheet with a stationary safe-area footer. The single product-page CTA/availability state and previous/next product arrows remain visible while photos and information scroll. Desktop preview navigation is retained. Photo pagination is background-free with tighter 16px visual gaps and non-overlapping 24×44px targets.
+
+### Horizontal product-card push — 10 October 2026
+
+Product changes now slide horizontally on every viewport: next pushes the current card left while entering from the right; previous reverses. This supersedes the older vertical rolodex. The mobile CTA/product-arrow footer stays stationary, desktop preview controls remain, and photo swiping stays independent. Reduced motion switches immediately; interrupted navigation and dismissal clean up outgoing visual copies.
+
+### Two-finger canvas zoom — 10 October 2026
+
+Finds supports two-finger pinch/spread on its canvas, anchored between the fingers and synchronized with the zoom controls. One-finger dragging remains available; photo-gallery and browser gestures outside the canvas are independent. Releasing at maximum zoom settles into the focused spatial view.
+
+### Mobile language and zoom placement — 10 October 2026
+
+On Finds phones, EN/JA lives inside Info. The same route links return to their floating position on desktop. A compact horizontal zoom slider occupies the mobile bottom-right corner, replacing the vertical plus/minus stack; pinch and slider share one zoom state. Desktop placement remains unchanged.
+
+Finds mobile menu, centered logo and Info use one safe-area-aware 44px row so their vertical centers align in portrait and short landscape.
+
+### Catalog and shared navigation refinement — 10 October2026
+
+Finds adds Playdate, KINTO Water Bottle300ml, JOURNAL STANDARD FURNITURE Glass Cup & Saucer, and Topologie6.0mm Rope Strap. Air-Chair returns to the owner-selected red. Authentic photo count/resolution gaps are documented rather than filled with duplicate or generated views. Shared mobile navigation now follows the Finds style across Home, About and Finds, including EN/JA links inside navigation. Photo pagination uses a discreet mono current/total count in the image’s bottom-right. See HANDOFF for the verified deployed checkpoint.
+
+### Hero-to-intro breathing room — 10 October 2026
+
+Home adds 48px before the intro below 768px and 64px at larger widths, shared by English and Japanese. The section’s existing 80px/128px top padding remains, making the combined settled spacing 128px/192px. This extra space belongs to main rather than the intro padding, preserving the hero parallax factor and the chosen halfway word-reveal pace.
+
+### Mobile Finds menu visibility — 10 October 2026
+
+Shared mobile menu styling is gated by the controller’s mobile-navigation-ready class alone. Finds does not have the Home/About html.js bootstrap marker; requiring it prevented the open panel and its items from becoming visible. The shared fix applies to all six routes while preserving no-JavaScript fallback and desktop menus.
+
+### Mobile Finds controls — 10 October 2026
+
+On phones, Category is hidden and excluded from keyboard/accessibility navigation. Entering the mobile breakpoint closes any open Category panel and returns its focus to zoom. The horizontal slider is centered at the bottom safe area, with pinch synchronization preserved. Desktop Category and zoom remain unchanged.

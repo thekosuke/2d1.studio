@@ -1,0 +1,190 @@
+[
+  {
+    "status": "accepted",
+    "source": "/workspace/shared/finds-audit/color-corrections/air-chair-white-primary.jpg",
+    "source_url": null,
+    "source_dimensions": [
+      2000,
+      1500
+    ],
+    "source_sha256": "ed6d0c125226031998937ddd6b3b6098f49e51e61f6b95d604d3ee45e3e3f1fe",
+    "master": "/workspace/shared/finds-audit/cutout-upgrades/air-chair-white/air-chair-white-master.png",
+    "master_dimensions": [
+      1712,
+      1712
+    ],
+    "source_subject_bounds_xyxy": [
+      512,
+      47,
+      1383,
+      1408
+    ],
+    "master_subject_bounds_xyxy": [
+      420,
+      175,
+      1291,
+      1536
+    ],
+    "source_translation_xy": [
+      -92,
+      128
+    ],
+    "source_scale": 1,
+    "subject_fill_percent": {
+      "height": 79.498,
+      "width": 50.876
+    },
+    "top_bottom_margins_percent": [
+      10.222,
+      10.28
+    ],
+    "retained_pixel_checks": {
+      "pixels_checked": 375367,
+      "changed_rgb_pixels": 0,
+      "max_rgb_channel_difference": 0,
+      "source_resampled": false
+    },
+    "mask_notes": "Source worker confirmed designer primary and White 1730 C variant. Deterministic near-white-background mask; real seat/leg openings retained. Neutral floor shadows removed with region-specific luminance thresholds at four foot regions. All retained source RGB copied exactly; no recoloring or redraw.",
+    "variants": {
+      "480": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/air-chair-white/air-chair-white-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 35220
+      },
+      "960": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/air-chair-white/air-chair-white-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 94882
+      },
+      "1440": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/air-chair-white/air-chair-white-1440.webp",
+        "width": 1440,
+        "height": 1440,
+        "bytes": 163610
+      }
+    },
+    "qa": "/workspace/shared/finds-audit/cutout-upgrades/air-chair-white/qa",
+    "qa_result": "Passed beige/black full composite and native back, seat aperture, four individual foot crops. True leg/seat openings transparent. White product highlights preserved. Neutral floor shadows removed. All 375367 retained native RGB pixels unchanged."
+  },
+  {
+    "status": "accepted",
+    "source": "/workspace/shared/finds-audit/color-corrections/vp9-mustard-primary.jpg",
+    "source_url": null,
+    "source_dimensions": [
+      1500,
+      2000
+    ],
+    "source_sha256": "15d5262d18f4111444e4fb026fac568b8627ce35791a5c990dead5b6dc0ffb38",
+    "master": "/workspace/shared/finds-audit/cutout-upgrades/vp9-mustard/vp9-mustard-master.png",
+    "master_dimensions": [
+      1152,
+      1152
+    ],
+    "source_subject_bounds_xyxy": [
+      511,
+      733,
+      1001,
+      1643
+    ],
+    "master_subject_bounds_xyxy": [
+      331,
+      121,
+      821,
+      1031
+    ],
+    "source_translation_xy": [
+      -180,
+      -612
+    ],
+    "source_scale": 1,
+    "subject_fill_percent": {
+      "height": 78.993,
+      "width": 42.535
+    },
+    "top_bottom_margins_percent": [
+      10.503,
+      10.503
+    ],
+    "retained_pixel_checks": {
+      "pixels_checked": 169189,
+      "changed_rgb_pixels": 0,
+      "max_rgb_channel_difference": 0,
+      "source_resampled": false
+    },
+    "mask_notes": "Source worker confirmed exact launch Mustard VP9 official packshot. Chroma segmentation plus explicit chrome-knob/black-base support; neutral floor shadow excluded. All original retained RGB preserved at native scale. Square padding only.",
+    "variants": {
+      "480": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/vp9-mustard/vp9-mustard-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 34540
+      },
+      "960": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/vp9-mustard/vp9-mustard-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 96888
+      }
+    },
+    "qa": "/workspace/shared/finds-audit/cutout-upgrades/vp9-mustard/qa",
+    "qa_result": "Beige composite plus native chrome knob/shade/base inspected. Original mustard reflection and shape retained. Neutral floor shadow removed; physical black base retained. Master subject is 910 px tall; 1440 derivative intentionally omitted to avoid upscaling."
+  },
+  {
+    "status": "pending_visual_qa",
+    "source": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-final-4.jpg",
+    "source_url": "https://shop.mohd.it/en/boby-storage-trolley-b34.html",
+    "source_dimensions": [
+      1200,
+      900
+    ],
+    "source_sha256": "3b4ea60879893a111fc6c82230f0ea8b70d6721832cccf2964ebe8bf7af18214",
+    "master": "/workspace/shared/finds-audit/cutout-upgrades/boby-b34-red/boby-b34-red-master.png",
+    "master_dimensions": [
+      816,
+      816
+    ],
+    "source_subject_bounds_xyxy": [
+      344,
+      113,
+      791,
+      759
+    ],
+    "master_subject_bounds_xyxy": [
+      184,
+      85,
+      631,
+      731
+    ],
+    "source_translation_xy": [
+      -160,
+      -28
+    ],
+    "source_scale": 1,
+    "subject_fill_percent": {
+      "height": 79.167,
+      "width": 54.779
+    },
+    "top_bottom_margins_percent": [
+      10.417,
+      10.417
+    ],
+    "retained_pixel_checks": {
+      "pixels_checked": 241877,
+      "changed_rgb_pixels": 0,
+      "max_rgb_channel_difference": 0,
+      "source_resampled": false
+    },
+    "mask_notes": "Exact classic-red B34 independently visually verified: four shallow drawers open in two pairs, three storage tiers, wheeled base. Native 1200x900 source has one verified view. Chroma body silhouette plus black-wheel support; white top-tray reflections retained opaque; floor reflection removed. All retained source RGB exact. Actual subject resolution remains limited, so no upscaled derivatives.",
+    "variants": {
+      "480": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/boby-b34-red/boby-b34-red-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 75314
+      }
+    },
+    "qa": "/workspace/shared/finds-audit/cutout-upgrades/boby-b34-red/qa"
+  }
+]

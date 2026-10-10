@@ -1,0 +1,49 @@
+{
+  "id": "alessi-ray-white",
+  "name": "Ray, White Dial",
+  "brand": "Alessi",
+  "category": "wear",
+  "tags": [],
+  "description": "Stefano Giovannoni’s watch puts a round dial inside a softly squared case. A black strap, white face, and bright hands keep it simple and easy to read.",
+  "productUrl": "https://www.stefanogiovannoni.com/portfolio-2-294g7/watches",
+  "forSale": false,
+  "sourceUrl": "https://www.stefanogiovannoni.com/portfolio-2-294g7/watches",
+  "sourceImageUrl": "https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/3552c489-c5fe-4035-a476-12946fe10f75/30b-Alessi-Ray.jpg",
+  "image": "img/objects/cutouts/alessi-ray-white.webp",
+  "width": 1412,
+  "height": 1412,
+  "gallery": [
+    {
+      "image": "img/objects/gallery/alessi-ray-white-1.webp",
+      "width": 795,
+      "height": 1505,
+      "sourceUrl": "https://www.stefanogiovannoni.com/portfolio-2-294g7/watches",
+      "sourceImageUrl": "https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/3552c489-c5fe-4035-a476-12946fe10f75/30b-Alessi-Ray.jpg"
+    }
+  ],
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/alessi-ray-white-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/cutouts/alessi-ray-white-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/alessi-ray-white.webp",
+      "width": 1412
+    }
+  ],
+  "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Original RGB with locally generated foreground mask",
+    "subjectPixels": [
+      640,
+      1270
+    ],
+    "opticalFill": 0.9,
+    "upscaled": false
+  }
+}

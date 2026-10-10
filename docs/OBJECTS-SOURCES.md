@@ -932,3 +932,47 @@ The owner chose one representative each for Plastic, Girotondo, and Watches: Mag
 - Photo (795 × 1505): https://images.squarespace-cdn.com/content/v1/607eb259a005d62cda4defda/3552c489-c5fe-4035-a476-12946fe10f75/30b-Alessi-Ray.jpg — source: https://www.stefanogiovannoni.com/portfolio-2-294g7/watches
 
 Valentine photography: Maurizio Bolognini / Museo Tattile Statale Omero Archive. The Commons photograph researched during sourcing was not used. Ray’s canvas and gallery photo are a crop of the center, white-dial watch in the designer’s three-watch photograph. The group view for Rabbit Chair includes other colors as contextual photography. Original-brand destinations are used where available; manufacturer pages are retained when there is no direct brand checkout. Private-preview source credit does not establish unrestricted publication rights.
+
+
+## 10 October — BAGGU selection and Ray removal
+
+BAGGU — Standard Baggu, Pop Pink Happy matches the owner’s supplied screenshot (pink with blue smiley faces). Official product: https://baggu.com/products/standard-baggu-pop-pink-happy . Three unmodified official 2048 × 2560 JPEGs are stored as `img/objects/gallery/baggu-standard-pop-pink-happy-{1,2,3}.jpg`: full bag, worn view, and folded pouch. The full-bag original is also the canvas image; its pale photographic background is retained to preserve exact product detail. No artificial enlargement or generated product pixels are used. See each gallery entry in `data/objects.json` for its original Shopify CDN URL. Private-preview source credit does not establish unrestricted publication rights.
+
+Ray, White Dial is removed from the active selection at the owner’s request. Its entry and Japanese copy are preserved in `_archive/removed-ray-2026-10-10/`; old assets and ownership records remain untouched. The active catalog still contains 72 products.
+
+
+## 10 October catalog quality audit, first applied pass
+
+The full72-product review is in `FINDS-SOURCE-REVIEW.json`; the reproducible current-file audit is `FINDS-AUDIT.md` / `FINDS-AUDIT.json`. This pass integrates31 unmodified native studio/product image files. Original source URLs and dimensions are retained on each gallery entry; no product pixels were regenerated or upscaled. Original gallery choices remain archived in `_archive/pre-finds-audit-2026-10-10/objects.json`.
+
+Tripp Trapp now uses Natural beech: Stokke explicitly confirms it was the sole original finish before colors were added in2003 (https://support.stokke.com/hc/en-us/articles/44348332711825-General-info-Tripp-Trapp-Chair). Its primary image is an unmodified native-alpha3000px official PNG; the existing product ID is retained for ownership continuity. Three studio/detail views are included; the fourth in-use photograph awaits the owner’s gallery-background guidance.
+
+Braun BC22 receives five distinct1800px originals; Hug shakers, Yoto, Loop, Valentine and several other galleries gain authentic distinct views. Nendo’s real photographs replace its drawing, but remain only1000px originals. Anna G.’s fourth photograph is1648×2062 while the subject occupies roughly1120px, so it is not claimed as a large-subject resolution upgrade. Sharper grip-car and LOVOT photographs replace existing compositions, not additional views. Freckle’s unrelated green/blue color duplicates are removed; orange lifestyle replacements await guidance. Twergi’s yellow full-mill provenance is corrected from the pink-detail03_ES19 URL toES19-04.
+
+BAGGU masking and contextual-gallery additions remain pending. Zesty Orange VP9 is a later color; a verified original-launch Mustard image is researched but not substituted until an accurate transparent primary can be prepared. No synthetic or duplicate photos are used to conceal shortfalls.
+
+
+## Anya Hindmarch — Eyes Tote
+
+Owner-selected Black variant, SKU5050925193580: https://www.anyahindmarch.jp/products/tote-eyes-in-black-econyl-r-regenerated-nylon . The exact third carousel image is verified from the official HTML node with zero-based `data-index="2"`: full-front tote with the mouth pocket open and burgundy lining visible. The gallery includes all seven distinct original1500px photos (model photo1500×1501), beginning with that third image. Supporting views show closed front, angle, interior, back, eyes detail and in-use scale. Originals are unchanged; complete source/order/checksum evidence is in `ANYA-EYES-SOURCES.json`. Selected Black is an explicit owner exception to historical-color selection.
+
+
+###10 October audited native galleries and historical corrections
+
+Complete per-image provenance is stored alongside each gallery entry in data/objects.json, and in FINDS-SOURCE-REVIEW.json, FINDS-SOURCE-RETRY-DELTA.json, ANYA-EYES-SOURCES.json, and FINDS-HISTORICAL-CORRECTIONS.json. These records distinguish original source dimensions, source URLs, exact selected variants, contextual views and unavailable photos. Anya uses official carousel image3. White Air-Chair, Mustard VP9 and classic-red Boby B34 replace later color selections coherently; old images are retained. Lifecycle/source and pixel-mask proof files accompany the audit. Rights clearance has not been broadened beyond private review.
+
+## Heinz — Tomato Ketchup (10 October 2026)
+
+Owner-selected [32 oz inverted squeeze bottle, GTIN 00013000006057](https://www.heinz.com/products/00013000006057-tomato-ketchup). The official page contains a misleading 20 oz metadata image; the exact GTIN in page data, product description, retailer UPC and photographed barcode were reconciled. Uses the native-transparent 2400 × 2400 official front and seven distinct 2200 × 2200 classic-label views from [Walmart](https://www.walmart.com/ip/15529427). Studio backgrounds remain in secondary photographs. No image synthesis, enlargement or label changes. The matching bottle fits the existing Kitchen category. See HEINZ-KETCHUP-SOURCES.json for exact URLs, dimensions and hashes.
+
+Hosting encoding note: Heinz’s 2400px primary uses quality-100 WebP with byte-identical alpha; original and lossless native master are retained. A side-by-side label crop was inspected after encoding. Seven secondary JPEGs remain original source bytes. This keeps the package below the expanded 256 MiB hosting limit without reducing resolution.
+
+## 10 October additions from Playdate and supplied shop photographs
+
+Added Panic Playdate (five official media-kit views, native transparent hero; yellow launch verified), KINTO Water Bottle300ml (Clear representative, two matching official views), JOURNAL STANDARD FURNITURE Glass Cup & Saucer (Gray006 representative, seven official views), and Topologie6.0mm Rope Strap (Navy Orange representative, six official/stockist views). The latter three are reversible representative selections from photographs showing multiple variants, not assertions of exclusive owner color choices. Per-item metadata records exact URLs, originals, dimensions, masks, and historical-evidence qualifications. See FINDS-PLAYDATE-SOURCES.json, FINDS-KINTO-SOURCES.json, FINDS-JSF-GLASS-SOURCES.json and FINDS-TOPOLOGIE-SOURCES.json.
+
+KINTO has only two verified matching photographs, including one1080px lifestyle image; native subject detail is below1200px. JSF’s primary also has under1200px resolved subject detail despite its1200px canvas. These limits are explicit. Playdate’s in-hand gallery is served at its full2500×2365 native dimensions; originals stay outside the repo. Topologie galleries retain the smaller unmodified native JPEGs rather than larger WebP re-encodings.
+
+The owner explicitly restored red Air-Chair. Its source RGB is unchanged in a new alpha-only mask replacing visible artifacts in the old preserved cutout. Two distinct red views (official three-quarter and retailer-hosted manufacturer front) replace white photos; the duplicate low-resolution three-quarter is excluded. The four-photo target remains unmet. White assets and historical evidence are preserved; red is an owner-selected exception.
+
+Fifteen existing PNGs now have pixel-identical lossless WebP served representations, freeing10,102,356bytes without changing any RGBA pixel or dimension. Full originals remain in source. FINDS-LOSSLESS-ENCODING-2026-10-10.json stores source/served paths and decoded RGBA hashes. No unrestricted image license is implied by private-preview use.

@@ -1,0 +1,138 @@
+{
+  "id": "journal-standard-furniture-glass-cup-saucer",
+  "name": "Glass Cup & Saucer",
+  "brand": "JOURNAL STANDARD FURNITURE",
+  "variantName": "Gray (006), smoked glass",
+  "category": "kitchen",
+  "tags": [
+    "drinkware",
+    "glass"
+  ],
+  "description": "A heat-resistant glass cup with a rounded loop handle and matching saucer.",
+  "productUrl": "https://baycrews.jp/item/detail/js-furniture/interior/26014960002670",
+  "sourceUrl": "https://baycrews.jp/item/detail/js-furniture/interior/26014960002670",
+  "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/014/960/26014960002670_dt_N_001_org.jpg",
+  "sourceFile": "26014960002670_dt_N_001_org.jpg",
+  "image": "img/objects/cutouts/jsf-glass-cup-saucer.webp",
+  "width": 1200,
+  "height": 1200,
+  "gallery": [
+    {
+      "image": "img/objects/gallery/jsf-glass-cup-saucer-1.webp",
+      "width": 1600,
+      "height": 1920,
+      "sourceUrl": "https://baycrews.jp/blog/detail/100006450",
+      "sourceImageUrl": "https://media.like-s.com/images/2db85b5e-6394-4cc5-aeb3-da6abb3e8ee0?fit=inside",
+      "sourceFile": "2db85b5e-6394-4cc5-aeb3-da6abb3e8ee0.jpg",
+      "view": "Tea on a wooden table",
+      "kind": "lifestyle"
+    },
+    {
+      "image": "img/objects/gallery/jsf-glass-cup-saucer-2.webp",
+      "width": 1440,
+      "height": 1728,
+      "sourceUrl": "https://baycrews.jp/item/detail/js-furniture/interior/26014960002670",
+      "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/014/960/26014960002670_dt_N_001_org.jpg",
+      "sourceFile": "26014960002670_dt_N_001_org.jpg",
+      "view": "Cup and saucer, three-quarter view",
+      "kind": "product"
+    },
+    {
+      "image": "img/objects/gallery/jsf-glass-cup-saucer-3.webp",
+      "width": 1440,
+      "height": 1728,
+      "sourceUrl": "https://baycrews.jp/item/detail/js-furniture/interior/26014960002670",
+      "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/014/960/26014960002670_dt_N_003_org.jpg",
+      "sourceFile": "26014960002670_dt_N_003_org.jpg",
+      "view": "Cup and saucer, front view",
+      "kind": "product"
+    },
+    {
+      "image": "img/objects/gallery/jsf-glass-cup-saucer-4.webp",
+      "width": 1440,
+      "height": 1728,
+      "sourceUrl": "https://baycrews.jp/item/detail/js-furniture/interior/26014960002670",
+      "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/014/960/26014960002670_dt_N_004_org.jpg",
+      "sourceFile": "26014960002670_dt_N_004_org.jpg",
+      "view": "Cup and saucer, opposite side",
+      "kind": "product"
+    },
+    {
+      "image": "img/objects/gallery/jsf-glass-cup-saucer-5.webp",
+      "width": 1440,
+      "height": 1728,
+      "sourceUrl": "https://baycrews.jp/item/detail/js-furniture/interior/26014960002670",
+      "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/014/960/26014960002670_dt_N_005_org.jpg",
+      "sourceFile": "26014960002670_dt_N_005_org.jpg",
+      "view": "Cup and saucer, handle-end view",
+      "kind": "product"
+    },
+    {
+      "image": "img/objects/gallery/jsf-glass-cup-saucer-6.webp",
+      "width": 1440,
+      "height": 1728,
+      "sourceUrl": "https://baycrews.jp/item/detail/js-furniture/interior/26014960002670",
+      "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/014/960/26014960002670_dt_N_006_org.jpg",
+      "sourceFile": "26014960002670_dt_N_006_org.jpg",
+      "view": "Cup shown separately",
+      "kind": "product"
+    },
+    {
+      "image": "img/objects/gallery/jsf-glass-cup-saucer-7.webp",
+      "width": 1440,
+      "height": 1728,
+      "sourceUrl": "https://baycrews.jp/item/detail/js-furniture/interior/26014960002670",
+      "sourceImageUrl": "https://images.baycrews.jp/itemimages/i/26/014/960/26014960002670_dt_N_007_org.jpg",
+      "sourceFile": "26014960002670_dt_N_007_org.jpg",
+      "view": "Saucer shown separately",
+      "kind": "product"
+    }
+  ],
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/jsf-glass-cup-saucer-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/cutouts/jsf-glass-cup-saucer-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/jsf-glass-cup-saucer.webp",
+      "width": 1200
+    }
+  ],
+  "usageCaveat": "Official BAYCREW’S / JOURNAL STANDARD FURNITURE photography for private preview. No unrestricted-use license verified.",
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Conventional silhouette and handle-hole masking; native master RGB unchanged. Square crop without rescaling, lossless WebP primary, responsive derivatives downsampled only. Glass-body pixels retain the photographed tint and reflections.",
+    "subjectPixels": [
+      988,
+      984
+    ],
+    "opticalFill": 0.823333,
+    "upscaled": false
+  },
+  "colorwayEvidence": {
+    "status": "original_launch_colorway",
+    "findings": "The official March 19, 2026 new-release article presents both Gray (006) and Gray A (007). Gray (006), the smoked-body version, is selected as one reversible representative of the product; no claim that it is uniquely original or iconic.",
+    "sources": [
+      "https://baycrews.jp/blog/detail/100006450",
+      "https://baycrews.jp/item/detail/js-furniture/interior/26014960002670"
+    ]
+  },
+  "catalogAudit": {
+    "reviewed": "2026-10-10",
+    "variantConfidence": "Exact product name, price and silhouette match the supplied shop photograph; official source identifies the smoked-body variant as Gray (006).",
+    "desiredVariant": "Gray (006)",
+    "notes": [
+      "Seven distinct official gallery photographs: six separate studio views at 1440×1728 and one lifestyle original at 1600×1920. Alternate-size and colorway duplicates excluded.",
+      "Originals, native alpha master, mask, source HTML, launch evidence and pixel-difference QA retained outside repository.",
+      "The apparent brand lettering in the supplied shop photo aligns with the boxes behind the glass; the official product photos show unprinted cups. No logo was removed or fabricated.",
+      "The original white background is removed around the silhouette and inside the handle opening. The glass surface remains exactly as photographed; no synthetic physically transmissive material was constructed."
+    ],
+    "sourceLimitations": [
+      "No native-alpha official photo was available. The primary subject occupies about 986 native pixels despite the 1440×1728 source canvas; it was not enlarged."
+    ]
+  }
+}

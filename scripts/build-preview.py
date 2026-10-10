@@ -4,6 +4,8 @@ No dependencies. Does not commit, upload, change DNS, or publish anything.
 """
 from pathlib import Path
 import re
+import json
+from urllib.parse import unquote
 import shutil
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -32,6 +34,20 @@ def build():
         target = OUTPUT / name
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html)
+    # Retain full source archives locally, but publish only current catalog
+    # photos and referenced font files. Retired galleries and desktop font
+    # formats otherwise exceed the host's finite archive budget.
+    catalog = json.loads((ROOT / 'data/objects.json').read_text())
+    object_assets = {item['image'] for item in catalog}
+    for item in catalog:
+        object_assets.update(photo['image'] for photo in item.get('gallery', []))
+        object_assets.update(photo['image'] for photo in item.get('imageVariants', []))
+    font_assets = set()
+    for stylesheet in (ROOT / 'css').rglob('*.css'):
+        for url in re.findall(r"url\(\s*['\"]?([^)'\"]+)", stylesheet.read_text()):
+            decoded = unquote(url.strip()).split('?', 1)[0]
+            if 'fonts/' in decoded:
+                font_assets.add('fonts/' + decoded.split('fonts/', 1)[1])
     for folder in ASSETS:
         for source in (ROOT / folder).rglob('*'):
             relative = source.relative_to(ROOT)
@@ -41,9 +57,15 @@ def build():
                 raise SystemExit(f'Refusing to package symlink: {relative}')
             if not source.is_file() or source.suffix.lower() not in EXTENSIONS:
                 continue
+            relative_path = relative.as_posix()
+            if relative_path.startswith('img/objects/') and relative_path not in object_assets:
+                continue
+            if folder == 'fonts' and source.suffix.lower() not in {'.txt', '.md'} and relative_path not in font_assets:
+                continue
             target = OUTPUT / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
+    assert all((OUTPUT / asset).is_file() for asset in object_assets | font_assets), 'Missing active catalog/font asset'
     (OUTPUT / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
     (OUTPUT / '_headers').write_text('/*\n  X-Robots-Tag: noindex, nofollow\n  X-Content-Type-Options: nosniff\n')
     files = [p for p in OUTPUT.rglob('*') if p.is_file()]

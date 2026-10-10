@@ -37,12 +37,14 @@
   <link rel="stylesheet" href="../css/about.css?v=9">
   <script src="../js/language.js?v=1" defer></script>
   <link rel="stylesheet" href="../css/dialogs.css?v=12">
+  <link rel="stylesheet" href="../css/mobile-nav.css?v=3">
   <script src="../js/config.js" defer></script>
   <script src="../js/drawers.js?v=2" defer></script>
-  <script src="../js/contact.js?v=6" defer></script>
+  <script src="../js/contact.js?v=7" defer></script>
+  <script src="../js/mobile-nav.js?v=2" defer></script>
   <script src="../js/site.js?v=4" defer></script>
   <script src="../js/about.js" defer></script>
-  <script src="../js/reading-ink.js?v=5" defer></script>
+  <script src="../js/reading-ink.js?v=6" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About 2D1","url":"https://2d1.studio/about/","mainEntity":{"@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/2d1-brand.png?v=2","slogan":"Familiar Characters"}}</script>
 </head>
 <body class="about-page" id="top">
@@ -51,7 +53,8 @@
   <header class="masthead about-masthead"><a class="site-logo" href="../" aria-label="2D1, home"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a><p class="brand-caption">Familiar characters</p></header>
   </template>
   <a class="site-logo about-docked-logo" href="../" aria-label="2D1, home"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a>
-  <nav class="page-nav is-visible" aria-label="Sections and pages"><span class="page-nav-left"><a href="../#studio">Studio</a><a href="../#shop">Shop</a></span><a href="../#connect">Connect</a><span class="page-nav-pages" role="group" aria-label="Pages"><a href="./" aria-current="page">About</a><a href="../objects/">Finds</a></span><span class="page-nav-contact"><button type="button" data-contact aria-haspopup="dialog" aria-controls="contact">Contact</button></span></nav>
+  <button class="mobile-nav-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <nav class="page-nav is-visible" id="page-navigation" aria-label="Sections and pages"><span class="page-nav-left"><a href="../#studio">Studio</a><a href="../#shop">Shop</a></span><a href="../#connect">Connect</a><span class="page-nav-pages" role="group" aria-label="Pages"><a href="./" aria-current="page">About</a><a href="../objects/">Finds</a></span><span class="page-nav-contact"><button type="button" data-contact aria-haspopup="dialog" aria-controls="contact">Contact</button></span></nav>
 
   <main id="main" class="essay-page column">
     <!-- The essay. Placeholder text throughout: replace the title, the

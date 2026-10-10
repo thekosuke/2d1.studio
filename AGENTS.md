@@ -331,3 +331,14 @@ and remains manually reopenable. Local preference storage is not ownership data.
 The owner explicitly requested 128px bottom-left and bottom-right corners on
 Home’s hero. Top corners remain square. This is a scoped exception to the
 square UI rule; keep the 20px red border and match the landing fill inside it.
+
+
+## Finds catalog and product-deck direction — 10 October
+
+Every catalog addition follows `docs/FINDS-CATALOG-PROCESS.md`: transparent primary product photograph, consistent square framing/reversible grade, authentic native-resolution images and source provenance. Target 4–8 distinct high-resolution gallery photographs; document unavailable sources rather than pad counts with duplicate crops or synthetic photos. Prefer verified original-launch or iconic colorways; preserve explicit owner selections such as BAGGU Pop Pink Happy. Display product names omit color; keep selected-variant information and evidence internally. Read `docs/FINDS-AUDIT.json` for unresolved quality/source issues.
+
+Product detail navigation uses a coordinated horizontal card push: next enters from the right as the current card exits left; previous reverses. No vertical roll, folding or scaling. Preserve desktop preview controls, the stationary mobile footer, native scrolling, modal focus, reduced motion, cancellation cleanup and ownership-response isolation.
+
+## Shared interface consistency — 10 October 2026
+
+When changing an element shared across pages, apply the same design and behavior to every active route in English and Japanese. Finds is the reference for the mobile hamburger menu: shared type, spacing, bordered items, stagger and language links inside navigation. Preserve each page’s correct destinations, active state and Contact behavior; desktop layout and Home hero reveal remain intentional page-specific behavior. Check Home, About and Finds together after shared changes.

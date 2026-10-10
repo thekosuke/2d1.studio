@@ -1,0 +1,200 @@
+{
+  "servedBytes": 2988870,
+  "uniqueGalleryPhotos": 5,
+  "primaryNativeRGBAIdentical": true,
+  "sourceArchive": "https://assets.play.date/media/Playdate%20Media%20Kit%204.0.zip",
+  "originalsDirectory": "/workspace/scratch/8667b50c4bf5/finds-new-products/playdate/originals/media-kit/Playdate Media Kit 4.0/Playdate photos",
+  "files": [
+    {
+      "sourceFile": "Playdate-1.png",
+      "sourceDimensions": [
+        1600,
+        1600
+      ],
+      "servedDimensions": [
+        1600,
+        1600
+      ],
+      "servedBytes": 1855858,
+      "sha256Original": "8e854ebbc9c1d8b4ace6b19ef9a0942a5ff7a22c30d9e01ea25158532e238d8f"
+    },
+    {
+      "sourceFile": "Playdate-2.png",
+      "sourceDimensions": [
+        1600,
+        1600
+      ],
+      "servedDimensions": [
+        1600,
+        1600
+      ],
+      "servedBytes": 366106,
+      "sha256Original": "74728f19b1dd82e05b0fcbb9a00323085385b1daef2fdd0344feabd8d1d7478d"
+    },
+    {
+      "sourceFile": "Playdate-photo-3.jpeg",
+      "sourceDimensions": [
+        2500,
+        2365
+      ],
+      "servedDimensions": [
+        1920,
+        1816
+      ],
+      "servedBytes": 347682,
+      "sha256Original": "b199ebbecf930f838aa6d36ba21055729a0ddd66628827b0c5ae23d55b1d9f54"
+    },
+    {
+      "sourceFile": "Playdate-cover-photo-2.jpg",
+      "sourceDimensions": [
+        1600,
+        1600
+      ],
+      "servedDimensions": [
+        1600,
+        1600
+      ],
+      "servedBytes": 157018,
+      "sha256Original": "b8abd0a4c82486d0a52d40e8056be688ff09c2c9479c7d8ae0d9db052c6a341d"
+    },
+    {
+      "sourceFile": "Playdate-cover-photo-1.png",
+      "sourceDimensions": [
+        2211,
+        1378
+      ],
+      "servedDimensions": [
+        2211,
+        1378
+      ],
+      "servedBytes": 99058,
+      "sha256Original": "bb1d7b51b605298823b835e89d788eb747d684a1e8e8cc2a54e89374cd6c70c4"
+    }
+  ],
+  "assetMapping": "Copy served/cutouts and served/gallery into img/objects/cutouts and img/objects/gallery; catalog JSON already references these target paths.",
+  "integratedCatalogObject": {
+    "id": "panic-playdate",
+    "name": "Playdate",
+    "brand": "Panic",
+    "category": "work",
+    "tags": [
+      "gaming",
+      "handheld",
+      "Teenage Engineering"
+    ],
+    "description": "A pocket-size game system with a monochrome screen and a hand-cranked controller, designed with Teenage Engineering.",
+    "productUrl": "https://play.date/",
+    "sourceUrl": "https://help.play.date/press/is-there-a-media-kit/",
+    "sourceImageUrl": "https://assets.play.date/media/Playdate%20Media%20Kit%204.0.zip",
+    "image": "img/objects/cutouts/panic-playdate.webp",
+    "width": 1600,
+    "height": 1600,
+    "usageCaveat": "Official Panic Playdate media-kit photography. The official help site offers the kit for media use; no unrestricted-use license verified. Source-credited private preview pending rights review. Covers shown in three gallery photos are optional accessories.",
+    "gallery": [
+      {
+        "image": "img/objects/cutouts/panic-playdate.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://help.play.date/press/is-there-a-media-kit/",
+        "sourceImageUrl": "https://assets.play.date/media/Playdate%20Media%20Kit%204.0.zip",
+        "sourceFile": "Playdate Media Kit 4.0/Playdate photos/Playdate-1.png",
+        "qualityNote": "Front three-quarter view with crank extended.",
+        "encodingNote": "Lossless WebP; every decoded RGBA pixel equals the native official PNG."
+      },
+      {
+        "image": "img/objects/gallery/panic-playdate-2.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://help.play.date/press/is-there-a-media-kit/",
+        "sourceImageUrl": "https://assets.play.date/media/Playdate%20Media%20Kit%204.0.zip",
+        "sourceFile": "Playdate Media Kit 4.0/Playdate photos/Playdate-2.png",
+        "qualityNote": "Low three-quarter view with crank folded.",
+        "encodingNote": "High-quality WebP at native dimensions; original retained."
+      },
+      {
+        "image": "img/objects/gallery/panic-playdate-3.webp",
+        "width": 2500,
+        "height": 2365,
+        "sourceUrl": "https://help.play.date/press/is-there-a-media-kit/",
+        "sourceImageUrl": "https://assets.play.date/media/Playdate%20Media%20Kit%204.0.zip",
+        "sourceFile": "Playdate Media Kit 4.0/Playdate photos/Playdate-photo-3.jpeg",
+        "qualityNote": "In-hand use with optional purple cover; original setting preserved.",
+        "encodingNote": "High-quality WebP at full native dimensions; original retained. No resizing or enlargement."
+      },
+      {
+        "image": "img/objects/gallery/panic-playdate-4.webp",
+        "width": 1600,
+        "height": 1600,
+        "sourceUrl": "https://help.play.date/press/is-there-a-media-kit/",
+        "sourceImageUrl": "https://assets.play.date/media/Playdate%20Media%20Kit%204.0.zip",
+        "sourceFile": "Playdate Media Kit 4.0/Playdate photos/Playdate-cover-photo-2.jpg",
+        "qualityNote": "Front and bottom ports with optional aqua cover open.",
+        "encodingNote": "High-quality WebP at native dimensions; original retained."
+      },
+      {
+        "image": "img/objects/gallery/panic-playdate-5.webp",
+        "width": 2211,
+        "height": 1378,
+        "sourceUrl": "https://help.play.date/press/is-there-a-media-kit/",
+        "sourceImageUrl": "https://assets.play.date/media/Playdate%20Media%20Kit%204.0.zip",
+        "sourceFile": "Playdate Media Kit 4.0/Playdate photos/Playdate-cover-photo-1.png",
+        "qualityNote": "Side and bottom ports with optional purple cover closed.",
+        "encodingNote": "High-quality WebP at native dimensions; original retained."
+      }
+    ],
+    "imageVariants": [
+      {
+        "image": "img/objects/cutouts/panic-playdate-480.webp",
+        "width": 480
+      },
+      {
+        "image": "img/objects/cutouts/panic-playdate-960.webp",
+        "width": 960
+      },
+      {
+        "image": "img/objects/cutouts/panic-playdate.webp",
+        "width": 1600
+      }
+    ],
+    "imageTreatment": {
+      "background": "transparent",
+      "method": "Official native-alpha image, re-encoded as lossless WebP; every RGBA pixel preserved",
+      "subjectPixels": [
+        1415,
+        1265
+      ],
+      "opticalFill": 0.884,
+      "upscaled": false
+    },
+    "sourceFile": "Playdate Media Kit 4.0/Playdate photos/Playdate-1.png",
+    "variantName": "Playdate, original yellow",
+    "catalogAudit": {
+      "reviewed": "2026-10-10",
+      "variantConfidence": "high; original yellow verified in the official 2019 announcement",
+      "desiredVariant": "Original yellow",
+      "notes": [
+        "Five distinct official images, including the primary hero. All original long edges are at least 1600px.",
+        "Native hero RGBA equality verified after lossless encoding; inspected against original on light and dark grounds.",
+        "No masking or synthetic image editing was necessary."
+      ],
+      "sourceLimitations": [
+        "Three of the five gallery views show separately sold protective covers; the device remains the original yellow Playdate."
+      ]
+    },
+    "colorwayEvidence": {
+      "status": "verified_launch",
+      "findings": [
+        {
+          "url": "https://blog.panic.com/playdate/",
+          "finding": "Panic’s original 2019 Playdate announcement explicitly identifies the handheld as yellow."
+        },
+        {
+          "url": "https://play.date/",
+          "finding": "The current official product page credits Panic as creator and Teenage Engineering for the design; official media-kit photos show the original yellow device."
+        }
+      ],
+      "sources": []
+    }
+  },
+  "integrationNote": "The integratedCatalogObject is authoritative for served paths, dimensions and selected gallery. Other fields preserve source-research/proposal history. Original files remain retained."
+}

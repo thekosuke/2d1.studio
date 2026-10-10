@@ -1,0 +1,14 @@
+{
+  "method": "Alpha-only red/neutral-background separation; alpha ramp at red-chroma20\u201340. Original RGB copied unchanged to centered native-resolution canvas. No generated details or enlargement.",
+  "source": "img/objects/magis-air-chair-red.jpg",
+  "subjectPixels": [
+    1885,
+    2430
+  ],
+  "canvas": 2761,
+  "rgb_unchanged": true,
+  "visible_rgb_component_differences": 0,
+  "alpha_exact": true,
+  "original_sha256": "909a7c171cfd1669314d58f6f35a0ee3706e57ee2e17215d1f6613aac26db180",
+  "visual_review": "Original and corrected primary compared on Soft Beige and dark grounds; old white-mask artifacts and foot shadows excluded."
+}

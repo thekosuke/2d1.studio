@@ -100,7 +100,11 @@ assert.match(navCss,/\.page-nav-pages\{[^}]*border-top:1px solid currentColor/);
 console.log('PASS page navigation: grouped routes in both languages, desktop divider, mobile second row.');
 
 const homeMarkup=readFileSync(new URL('../index.html',import.meta.url),'utf8');
-assert.doesNotMatch(homeMarkup.match(/<section[^>]*class="intro[^"]*"[\s\S]*?<\/section>/)[0],/href="objects\/"/);
+for(const path of ['../index.html','../ja/index.html']){
+ const markup=readFileSync(new URL(path,import.meta.url),'utf8'),intro=markup.match(/<section[^>]*class="intro[^"]*"[\s\S]*?<\/section>/)[0];
+ assert.match(intro,/<a class="familiar-characters" href="objects\/" translate="no">Familiar Characters<\/a>/);
+ assert.doesNotMatch(intro,/<a class="intro-cta" href="objects\/"/);
+}
 assert.doesNotMatch(homeMarkup.match(/<section[^>]*id="shop"[\s\S]*?<\/section>/)[0],/href="objects\/"/);
 
 for (const path of ['../about/index.html','../ja/about/index.html']){
@@ -137,3 +141,5 @@ assert.match(navCss, /:focus-visible\{[^}]*background-color:var\(--red\)!importa
 assert.match(navCss,/\.page-nav :is\(a,button\)::before\{[^}]*width:0;height:6px/);
 assert.match(navCss,/:hover::before\{width:6px\}/);
 assert.match(navCss,/:hover\{transform:translateX\(12px\)\}/);
+
+await import('./mobile-nav.mjs');

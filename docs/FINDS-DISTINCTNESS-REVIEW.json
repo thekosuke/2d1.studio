@@ -1,0 +1,487 @@
+{
+  "reviewedAt": "2026-10-10T03:09:00Z",
+  "catalogEntries": 73,
+  "method": "Visually inspected current repository gallery pixels for all seven requested products. Created QA-only contact sheets with whitespace cropped and thumbnails downsampled; original files and repository were not modified. Inspected the Nendo tip and full view at native size to check the flagged macro pair. Perceptual-hash flags are candidate matches, not duplicate determinations.",
+  "indexing": "Gallery indices in this report are one-based and refer to the current objects.json order.",
+  "scope": "Resolve the specified perceptual near-pair warnings. No new image retrieval or external provenance expansion.",
+  "summary": {
+    "productsReviewed": 7,
+    "photosInspected": 29,
+    "confirmedDuplicates": 0,
+    "mustRemove": [],
+    "result": "All specified near-pair warnings are explained by genuine angle, functional-state, detail or front/back differences. Keep the flagged photographs; retain explicit count and resolution exceptions."
+  },
+  "products": [
+    {
+      "id": "alessi-anna-g-black",
+      "name": "Anna G. Corkscrew",
+      "flaggedPairsOneBased": [
+        [
+          1,
+          4
+        ]
+      ],
+      "decision": "keep_flagged_images",
+      "confidence": "high",
+      "finding": "Different functional positions: image 1 has both corkscrew arms extended outward; image 4 has the arms lowered against the skirt and more of the threaded shaft exposed. The change is in product geometry, so this is not a crop or resized duplicate.",
+      "currentGalleryCount": 4,
+      "images": [
+        {
+          "indexOneBased": 1,
+          "image": "img/objects/alessi-anna-g-black.jpg",
+          "width": 1600,
+          "height": 2002,
+          "observedView": "Arms extended packshot",
+          "sourceImageUrl": "https://alessi.com/cdn/shop/products/01-03-new_AAM01.jpg?v=1764323960&width=1600",
+          "sha256": "e32ac386f3f1d916a2fa012651d4c71a883f8fd4b903ecb4cfa8a21e25151698"
+        },
+        {
+          "indexOneBased": 2,
+          "image": "img/objects/gallery/alessi-anna-g-black-hq-2.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Corkscrew with bottle and glasses in use",
+          "sourceImageUrl": "https://alessi.com/cdn/shop/products/AM01B.jpg?v=1680619550",
+          "sha256": "4e77b47f51c204f894606aa5392a486e1209fd65b76ee6441d6453ef54b72b92"
+        },
+        {
+          "indexOneBased": 3,
+          "image": "img/objects/gallery/alessi-anna-g-black-hq-3.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Close-up of face, threaded shaft and gear mechanism",
+          "sourceImageUrl": "https://alessi.com/cdn/shop/products/01-04-new_AAM01.jpg?v=1764323960",
+          "sha256": "6418cdfa6162253f23afe1fcaaec56ebcd2449f36a12110514692df29ed79e1b"
+        },
+        {
+          "indexOneBased": 4,
+          "image": "img/objects/gallery/alessi-anna-g-black-audit-f7a90e1cb8.jpg",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Arms lowered packshot",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/AAM01-01-01-new.jpg?v=1680619550",
+          "sha256": "f7a90e1cb83aabb9f98629b1d25723bef4376520d826a71a42f8ece2310ca9e5"
+        }
+      ],
+      "mustRemoveDuplicates": [],
+      "remainingLimitations": [
+        "The packshots contain significant white padding; file resolution is not the same as subject resolution."
+      ],
+      "qaContactSheet": "/workspace/shared/finds-audit/distinctness/alessi-anna-g-black.jpg"
+    },
+    {
+      "id": "alessi-9090",
+      "name": "9090 Espresso Coffee Maker",
+      "flaggedPairsOneBased": [
+        [
+          1,
+          3
+        ]
+      ],
+      "decision": "keep_flagged_images",
+      "confidence": "high",
+      "finding": "Image 1 is a near-side-on view with the handle broadly visible and safety valve near the right edge; image 3 rotates the pot to show its spout and valve on the front-facing surfaces. Handle width, lid ellipse and visible spout geometry differ, establishing a distinct angle.",
+      "currentGalleryCount": 4,
+      "images": [
+        {
+          "indexOneBased": 1,
+          "image": "img/objects/alessi-9090.jpg",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Side-on full product",
+          "sourceImageUrl": "https://us.alessi.com/cdn/shop/products/9090-1_01.jpg?v=1764323890&width=2000",
+          "sha256": "f412ca9a93cd966d8e9206c9af1aed01298496056da1a9713b96050fd13d7077"
+        },
+        {
+          "indexOneBased": 2,
+          "image": "img/objects/gallery/alessi-9090-hq-2.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Hands using/opening the coffee maker",
+          "sourceImageUrl": "https://us.alessi.com/cdn/shop/products/9090.jpg?v=1752135045",
+          "sha256": "6d2447e4d9dab0930dcf743e11865f1ee2b997b4a2d0fd14c4539c05f6484292"
+        },
+        {
+          "indexOneBased": 3,
+          "image": "img/objects/gallery/alessi-9090-hq-3.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Rotated three-quarter full product",
+          "sourceImageUrl": "https://us.alessi.com/cdn/shop/products/03_9090_2777b594-f5eb-4d51-a768-1d2078f08523.jpg?v=1764323890",
+          "sha256": "e686c4ee927b2b8bdc384e94a590bcde06b91caeb6e1aa6664829f0eba22a912"
+        },
+        {
+          "indexOneBased": 4,
+          "image": "img/objects/gallery/alessi-9090-4.webp",
+          "width": 624,
+          "height": 788,
+          "observedView": "Lid and spout detail",
+          "sourceImageUrl": "https://us.alessi.com/cdn/shop/products/04_9090_fc92405b-3551-472e-9ae3-296862a18cb8.jpg?v=1764323890&width=1600",
+          "sha256": "7159e99a07000419b4ca21d5eaf7e4b62f831dd12642b079a8fa39778ac255f6"
+        }
+      ],
+      "mustRemoveDuplicates": [],
+      "remainingLimitations": [
+        "Image 4 is only624x788; this remains a resolution exception even though it supplies a detail view."
+      ],
+      "qaContactSheet": "/workspace/shared/finds-audit/distinctness/alessi-9090.jpg"
+    },
+    {
+      "id": "nendo-shoe-horn",
+      "name": "shoe-horn",
+      "flaggedPairsOneBased": [
+        [
+          1,
+          3
+        ]
+      ],
+      "decision": "keep_flagged_images",
+      "confidence": "high",
+      "finding": "Image 1 shows the complete assembled shoehorn and stand. Image 3 is a macro photograph of the curved rounded tip, with visible end grain, a different camera elevation and shallow depth of field. The near-pair hash is driven by a narrow light wooden subject on an almost white background; it is not a repeated full-view crop.",
+      "currentGalleryCount": 4,
+      "images": [
+        {
+          "indexOneBased": 1,
+          "image": "img/objects/gallery/nendo-shoe-horn-audit-84594ca1d7.jpg",
+          "width": 667,
+          "height": 1000,
+          "observedView": "Complete assembled shoehorn and stand",
+          "sourceImageUrl": "https://www.maruni.com/en/img/pages/products/shoehorn/Gallery/gallery1.jpg",
+          "sha256": "84594ca1d767367be2786df576464a4e83741b563220e5cf20110b31599b62a5"
+        },
+        {
+          "indexOneBased": 2,
+          "image": "img/objects/gallery/nendo-shoe-horn-audit-8f076f6b46.jpg",
+          "width": 667,
+          "height": 1000,
+          "observedView": "Shoe horn lifted out of the stand",
+          "sourceImageUrl": "https://www.maruni.com/en/img/pages/products/shoehorn/Gallery/gallery2.jpg",
+          "sha256": "8f076f6b4658b4a2f43793fd3596a496dfc2e158850efc5d55684a87899b85e1"
+        },
+        {
+          "indexOneBased": 3,
+          "image": "img/objects/gallery/nendo-shoe-horn-audit-f9ef14c6eb.jpg",
+          "width": 667,
+          "height": 1000,
+          "observedView": "Macro of rounded tip and wood grain",
+          "sourceImageUrl": "https://www.maruni.com/en/img/pages/products/shoehorn/Gallery/gallery3.jpg",
+          "sha256": "f9ef14c6ebf24069ddccefed1ad538f99ed802d3de6a84bbacd2b44b5a9e1259"
+        },
+        {
+          "indexOneBased": 4,
+          "image": "img/objects/gallery/nendo-shoe-horn-audit-94edf767f7.jpg",
+          "width": 667,
+          "height": 1000,
+          "observedView": "Macro of lower curved junction/stand",
+          "sourceImageUrl": "https://www.maruni.com/en/img/pages/products/shoehorn/Gallery/gallery4.jpg",
+          "sha256": "94edf767f7c0fd6a7ad8693718a4df40c863370fa85b2378c83f11af78f67b05"
+        }
+      ],
+      "mustRemoveDuplicates": [],
+      "remainingLimitations": [
+        "All four supplied official files are667x1000, below the1200px long-edge target. Do not present them as high-resolution merely because they are distinct."
+      ],
+      "qaContactSheet": "/workspace/shared/finds-audit/distinctness/nendo-shoe-horn.jpg"
+    },
+    {
+      "id": "magis-linnut-sulo-s",
+      "name": "Linnut Sulo S",
+      "flaggedPairsOneBased": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "decision": "keep_flagged_images",
+      "confidence": "high",
+      "finding": "Four meaningful product views: front unlit, front illuminated, side unlit, side illuminated. Front/side changes are evident from eye overlap and profile; on/off changes reveal the illuminated glass texture and usable lighting state. The warm illuminated appearance is the same lamp operating, not another colorway.",
+      "currentGalleryCount": 4,
+      "images": [
+        {
+          "indexOneBased": 1,
+          "image": "img/objects/gallery/magis-linnut-sulo-s-1.webp",
+          "width": 3200,
+          "height": 2136,
+          "observedView": "Front, light off",
+          "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_front_LI01_off_01.jpg",
+          "sha256": "d667294767c26ce4cf26992ce014c5175aee81ddebfbe99ccbe90c410e96a2c2"
+        },
+        {
+          "indexOneBased": 2,
+          "image": "img/objects/gallery/magis-linnut-sulo-s-2.webp",
+          "width": 3200,
+          "height": 2136,
+          "observedView": "Front, light on",
+          "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_front_LI01_on_01.jpg",
+          "sha256": "d8c9c2f753f5e3cc6fedddbb1de00cc17adedfc72b819b8678cad7e1f156b13d"
+        },
+        {
+          "indexOneBased": 3,
+          "image": "img/objects/gallery/magis-linnut-sulo-s-3.webp",
+          "width": 3200,
+          "height": 2136,
+          "observedView": "Side, light off",
+          "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_side_LI01_off_01.jpg",
+          "sha256": "9ce3638eb933201165d6bc5a5c233ed4bc652c3ee526b2721014beac5bed5b1e"
+        },
+        {
+          "indexOneBased": 4,
+          "image": "img/objects/gallery/magis-linnut-sulo-s-4.webp",
+          "width": 3200,
+          "height": 2136,
+          "observedView": "Side, light on",
+          "sourceImageUrl": "https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_side_LI01_on_01.jpg",
+          "sha256": "d9f476afc1e1bd0eccc8efa9a42f97d846f671588da256547d4fa3e810bc3b75"
+        }
+      ],
+      "mustRemoveDuplicates": [],
+      "remainingLimitations": [],
+      "qaContactSheet": "/workspace/shared/finds-audit/distinctness/magis-linnut-sulo-s.jpg"
+    },
+    {
+      "id": "alessi-la-conica",
+      "name": "La conica",
+      "flaggedPairsOneBased": [
+        [
+          1,
+          2
+        ]
+      ],
+      "decision": "keep_flagged_images",
+      "confidence": "high",
+      "finding": "Image 1 shows a near-side-on spout and broad open handle. Image 2 rotates the brewer, exposing the dark interior of the spout and narrowing the visible handle; the body and lid reflections also shift consistently. These are distinct angles of the same finish.",
+      "currentGalleryCount": 3,
+      "images": [
+        {
+          "indexOneBased": 1,
+          "image": "img/objects/gallery/alessi-la-conica-1.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Side-on full product",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/01_90002.jpg?v=1680531313",
+          "sha256": "4bfe1d2eaeb75ab298abe570f2359077500702b9c19c1f6263d1aa60d2c01242"
+        },
+        {
+          "indexOneBased": 2,
+          "image": "img/objects/gallery/alessi-la-conica-2.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Rotated three-quarter full product",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/03_90002.jpg?v=1687176021",
+          "sha256": "7e22bf4fdbbfd397b3a34e701fac1c62653fd91850dce6fbccdfc5fa905bf8d5"
+        },
+        {
+          "indexOneBased": 3,
+          "image": "img/objects/gallery/alessi-la-conica-3.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Conical lid and spout detail",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/04_90002.jpg?v=1687176021",
+          "sha256": "7d4a63473019916e9c97c25d06e74d6b98898558e14524fc0dd292478e9a2389"
+        }
+      ],
+      "mustRemoveDuplicates": [],
+      "remainingLimitations": [
+        "Only three current photos; distinctness review does not resolve the minimum-four shortfall."
+      ],
+      "qaContactSheet": "/workspace/shared/finds-audit/distinctness/alessi-la-conica.jpg"
+    },
+    {
+      "id": "alessi-magic-bunny-black",
+      "name": "Magic Bunny",
+      "flaggedPairsOneBased": [
+        [
+          1,
+          2
+        ]
+      ],
+      "decision": "keep_flagged_images",
+      "confidence": "high",
+      "finding": "Image 1 has the bunny lowered into the hat with only its head visible; image 2 shows it raised, exposing the long neck and opening in the hat. This is a distinct functional state, not a repeated crop. The third image additionally demonstrates toothpick retrieval with a hand.",
+      "currentGalleryCount": 3,
+      "images": [
+        {
+          "indexOneBased": 1,
+          "image": "img/objects/gallery/alessi-magic-bunny-black-1.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Bunny lowered in hat",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ASG16-B-SL-frontside-1.jpg?v=1680619472",
+          "sha256": "3b5390c0913d1741e101df071deb67f1327c90688ea178331f9cfb7817c96f13"
+        },
+        {
+          "indexOneBased": 2,
+          "image": "img/objects/gallery/alessi-magic-bunny-black-2.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Bunny raised from hat",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ASG16-B-SL-frontside-2.jpg?v=1680619472",
+          "sha256": "37325fb16fdee3dc502b6f5a8f0e982a697f697be1a413ebc28af5bacb1a89ce"
+        },
+        {
+          "indexOneBased": 3,
+          "image": "img/objects/gallery/alessi-magic-bunny-black-3.webp",
+          "width": 1648,
+          "height": 2062,
+          "observedView": "Hands retrieving toothpicks in use",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/SG16.jpg?v=1680619472",
+          "sha256": "f192dc926ccf650985e3d22813f59ab4e6465352421ba822a0ec913347c372e5"
+        }
+      ],
+      "mustRemoveDuplicates": [],
+      "remainingLimitations": [
+        "Only three current photos; distinctness review does not resolve the minimum-four shortfall."
+      ],
+      "qaContactSheet": "/workspace/shared/finds-audit/distinctness/alessi-magic-bunny-black.jpg"
+    },
+    {
+      "id": "anya-hindmarch-eyes-tote",
+      "name": "Eyes Tote",
+      "flaggedPairsOneBased": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "decision": "keep_flagged_images",
+      "confidence": "high",
+      "finding": "Image 1 is the front with the exterior mouth pocket open, showing burgundy lining and gold zipper; image 2 is the front with that pocket closed; image 5 is the back, with no eyes or exterior front pocket and a small brand label at the base. Similar outline/background caused the near-pair warning. All three show substantively different product information.",
+      "currentGalleryCount": 7,
+      "images": [
+        {
+          "indexOneBased": 1,
+          "image": "img/objects/gallery/anya-hindmarch-eyes-tote-3.jpg",
+          "width": 1500,
+          "height": 1500,
+          "observedView": "Front, mouth pocket open",
+          "sourceImageUrl": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg?v=1725951435",
+          "sha256": "50e0371fbbd7920c65fabc792c0b20a360a519ea4b84d63eb57f0277d8e54674"
+        },
+        {
+          "indexOneBased": 2,
+          "image": "img/objects/gallery/anya-hindmarch-eyes-tote-1.jpg",
+          "width": 1500,
+          "height": 1500,
+          "observedView": "Front, mouth pocket closed",
+          "sourceImageUrl": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT.jpg?v=1714009413",
+          "sha256": "1794b109fcdc677152dc6bfe877482c4597574716552df72b33e34c98ec7856b"
+        },
+        {
+          "indexOneBased": 3,
+          "image": "img/objects/gallery/anya-hindmarch-eyes-tote-4.jpg",
+          "width": 1500,
+          "height": 1500,
+          "observedView": "Three-quarter front",
+          "sourceImageUrl": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_ANGLE.jpg?v=1725951439",
+          "sha256": "89bab5178ec41daabb1b5e18f2e37701143d9173762f9f3890db7023aaae1378"
+        },
+        {
+          "indexOneBased": 4,
+          "image": "img/objects/gallery/anya-hindmarch-eyes-tote-5.jpg",
+          "width": 1500,
+          "height": 1500,
+          "observedView": "Open top and lining",
+          "sourceImageUrl": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_INSIDE.jpg?v=1725951439",
+          "sha256": "5de4cbe81b0306cfe9898d88f7342923ba2e4d69fa0084aac3c9cc1f7ecb93f3"
+        },
+        {
+          "indexOneBased": 5,
+          "image": "img/objects/gallery/anya-hindmarch-eyes-tote-6.jpg",
+          "width": 1500,
+          "height": 1500,
+          "observedView": "Back with small brand label",
+          "sourceImageUrl": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_BACK.jpg?v=1725951439",
+          "sha256": "09c44622e7774fdda07a2ef2216e7ccee3665dfafc15017c4e511b085bf42495"
+        },
+        {
+          "indexOneBased": 6,
+          "image": "img/objects/gallery/anya-hindmarch-eyes-tote-7.jpg",
+          "width": 1500,
+          "height": 1500,
+          "observedView": "Eye embroidery and front-pocket detail",
+          "sourceImageUrl": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_DETAIL.jpg?v=1725951439",
+          "sha256": "a53fd33e83c4e4f9629e927a89737f7113ca9e255e39d4a86840f785c11e7901"
+        },
+        {
+          "indexOneBased": 7,
+          "image": "img/objects/gallery/anya-hindmarch-eyes-tote-2.jpg",
+          "width": 1500,
+          "height": 1501,
+          "observedView": "Model carrying tote for scale",
+          "sourceImageUrl": "https://www.anyahindmarch.jp/cdn/shop/files/24_02_06_Model_May1067copy_1.jpg?v=1714440628",
+          "sha256": "5cf73023ae2e1d149bc09e59356d8a72cc920c23ff83ed2ddc46fec057740400"
+        }
+      ],
+      "mustRemoveDuplicates": [],
+      "remainingLimitations": [],
+      "qaContactSheet": "/workspace/shared/finds-audit/distinctness/anya-hindmarch-eyes-tote.jpg"
+    },
+    {
+      "id": "heinz-tomato-ketchup",
+      "decision": "keep_flagged_images",
+      "finding": "Front, back, two three-quarter angles, two sides, top and cap underside each show different packaging geometry. Matching 32 oz classic label and photographed UPC were inspected; no alternate edition or duplicated crop.",
+      "images": [
+        {
+          "image": "img/objects/cutouts/heinz-ketchup-front.webp",
+          "sha256": "d7007c6491e2ea380740462906f3bd52c15fea645ab7dfe08734f9599d13f45e"
+        },
+        {
+          "image": "img/objects/gallery/heinz-ketchup-back.jpg",
+          "sha256": "2e6cd480d725a24f39a8cda7a9a78405c1b5bc5562244557a24950797665a37a"
+        },
+        {
+          "image": "img/objects/gallery/heinz-ketchup-angle-left.jpg",
+          "sha256": "06dc9dc35b55233962e9c614b76ecb8372bdd72f88712578bc6fb7e481b93be6"
+        },
+        {
+          "image": "img/objects/gallery/heinz-ketchup-angle-right.jpg",
+          "sha256": "ae28457d9960448917a1137fc0e623215c160116c1cf3e42f6e8ba492f58c812"
+        },
+        {
+          "image": "img/objects/gallery/heinz-ketchup-side-left.jpg",
+          "sha256": "c83b402708e51a752baa57312baad8e3e45b137ab6ccabb072b4a5fecafa3476"
+        },
+        {
+          "image": "img/objects/gallery/heinz-ketchup-side-right.jpg",
+          "sha256": "f2c409ce1dc3876fd1f05aad288ae6417bb93511ee21bf544e02a26a0b89cd27"
+        },
+        {
+          "image": "img/objects/gallery/heinz-ketchup-top.jpg",
+          "sha256": "09acc85858372ab5a7f17b33ebc9ba0b2137cc4bdbe4df8b856842a9e42aa988"
+        },
+        {
+          "image": "img/objects/gallery/heinz-ketchup-bottom.jpg",
+          "sha256": "a910faab8d778088cbb5fd2fee491187328bb02b7399043bac5fa8d0b3b793f6"
+        }
+      ]
+    }
+  ]
+}

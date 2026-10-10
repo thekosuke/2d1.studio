@@ -91,7 +91,7 @@ html{background:var(--page-background,var(--beige))}
 .home-page{background:var(--page-background,var(--beige))}
 .home-page .section-stack,.home-page .section-stack-inner{gap:64px}
 .home-page > .masthead{height:100vh;height:100svh;padding:24px;border:20px solid var(--red);border-radius:0 0 128px 128px;position:relative;z-index:2;justify-content:center}
-.home-page > main{position:relative;z-index:1;background:var(--page-background,var(--beige))}
+.home-page > main{position:relative;z-index:1;padding-top:48px;background:var(--page-background,var(--beige))}
 .home-page > .site-footer{position:relative;z-index:1;width:100%;max-width:none;background:var(--page-background,var(--beige))}
 .js .home-page > main{transform:translateY(var(--cover-offset,0px))}
 .home-page .brand-caption{font-weight:700;letter-spacing:-1px}
@@ -125,6 +125,7 @@ html[lang="ja"] .home-page{--reading:24px}
 html[lang="ja"] .section-copy,html[lang="ja"] .services dt,html[lang="ja"] .services dd,html[lang="ja"] .section-heading>p{line-height:1.65}
 @media(min-width:768px){
   :root{--reading:40px;--section-title:64px}
+  .home-page > main{padding-top:64px}
   .home-page .section-stack,.home-page .section-stack-inner{gap:96px}
   .studio-opening,.home-page .studio .section-stack-inner{gap:64px}
   .product-specs>div{grid-template-columns:200px minmax(0,1fr);gap:0}
@@ -225,3 +226,6 @@ html:not(.js) .page-nav-contact{display:none}
 .page-nav :is(a,button)::before{content:"";position:absolute;left:-12px;top:50%;width:0;height:6px;transform:translateY(-50%);background:var(--red);transition:width .2s ease;pointer-events:none}
 @media(hover:hover) and (pointer:fine){.page-nav :is(a,button):hover{transform:translateX(12px)}.page-nav :is(a,button):hover::before{width:6px}}
 @media(prefers-reduced-motion:reduce){.page-nav :is(a,button),.page-nav :is(a,button)::before{transition:none}}
+
+/* Owner emphasis in the Home intro; this remains plain text. */
+.intro .familiar-characters{text-decoration:underline;text-decoration-thickness:.045em;text-underline-offset:.14em}

@@ -118,3 +118,20 @@ No blurred derivative is presented as an upgraded original.
 | GROOVE X — LOVOT 3.0 | 1706 × 1669 | [Source](https://store.lovot.life/buy) |
 | teenage engineering — grip car | 1054 × 1415 | [Source](https://teenage.engineering/products/grip-car) |
 | Cliik — Press Glass Family Pack | 1277 × 1937 | [Source](https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063) |
+
+
+## 10 October BAGGU addition
+
+Standard Baggu, Pop Pink Happy uses an unmodified official 2048 × 2560 full-bag photograph with its pale background retained. It is contained within the existing square canvas frame. This is an explicit exception to the transparent-cutout presentation above: a generated extraction was rejected because exact color/print fidelity is more important than removing the background. The rejected derivative is not part of the website. Its three detail-gallery originals retain their native resolution.
+
+
+## 10 October BAGGU background removal completed
+
+The owner approved conventional pixel-preserving masking after two generated extractions were rejected. BAGGU now has a lossless2560px square transparent primary image, with2021px native subject height and~10.5% top/bottom margin. Every retained master RGB pixel (2,017,073 pixels) matches the original exactly. Only alpha and placement changed; no resampling, color edits or generated detail.480/960/1440px WebP derivatives are smaller than the master.
+
+Beige, neutral and black composites plus native handle/hem/label edges were inspected. Handle opening and cast shadow are transparent. A faint source antialias fringe remains on black at native size; it is inconspicuous at catalog size. The original official gallery photos remain unchanged. Full method/checksums are in `BAGGU-MASK-QA.json`. This supersedes the earlier pale-background exception.
+
+
+### 10 October cloud source-preserving additions
+
+BAGGU, Anya Eyes Tote, Dusen Everybody Wall Clock, and yellow Twergi ES19 use conventional masks explicitly approved by the owner. Native master RGB remains identical at every retained pixel; transparent square padding is not upscaling. Lossless responsive derivatives only reduce dimensions. BAGGU and Anya preserve the exact owner-selected variants. Detailed numerical/visual checks: BAGGU-MASK-QA.json, ANYA-EYES-MASK-QA.json, FINDS-CUTOUT-UPGRADE-QA.json. The shared CSS grade remains reversible and consistent. All73 primaries have alpha; low-detail source exceptions remain in FINDS-AUDIT.json.

@@ -1,0 +1,146 @@
+[
+  {
+    "status": "accepted",
+    "source": "/workspace/shared/finds-audit/first/dusen-clock-hq-1.jpg",
+    "source_url": "https://cdn.shopify.com/s/files/1/0573/4088/7104/files/Areaware-Everybody-Clock-Blue-Red-Yellow-1.jpg?v=1749614944",
+    "source_dimensions": [
+      2568,
+      2568
+    ],
+    "source_sha256": "8fdf79a810812c78526aad59591ae27267e64377093a9a342b7c40573929131a",
+    "master": "/workspace/shared/finds-audit/cutout-upgrades/dusen-clock/dusen-clock-master.png",
+    "master_dimensions": [
+      2080,
+      2080
+    ],
+    "source_subject_bounds_xyxy": [
+      433,
+      448,
+      2086,
+      2102
+    ],
+    "master_subject_bounds_xyxy": [
+      213,
+      213,
+      1866,
+      1867
+    ],
+    "source_translation_xy": [
+      -220,
+      -235
+    ],
+    "source_scale": 1,
+    "subject_fill_percent": {
+      "height": 79.519,
+      "width": 79.471
+    },
+    "top_bottom_margins_percent": [
+      10.24,
+      10.24
+    ],
+    "retained_pixel_checks": {
+      "pixels_checked": 1815640,
+      "changed_rgb_pixels": 0,
+      "max_rgb_channel_difference": 0,
+      "source_resampled": false
+    },
+    "mask_notes": "Deterministic difference-from-uniform-background segmentation, single connected subject, internal bright details preserved opaque, narrow source-color alpha antialias. Original RGB copied exactly; no resampling/recoloring/decontamination/generation. Square canvas adds transparent padding at native subject scale.",
+    "variants": {
+      "480": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/dusen-clock/dusen-clock-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 93620
+      },
+      "960": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/dusen-clock/dusen-clock-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 242638
+      },
+      "1440": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/dusen-clock/dusen-clock-1440.webp",
+        "width": 1440,
+        "height": 1440,
+        "bytes": 423312
+      }
+    },
+    "qa": "/workspace/shared/finds-audit/cutout-upgrades/dusen-clock/qa",
+    "qa_result": "Accepted after beige/black full composites and native upper-wave/lower-tip edge inspection. Blue/red/yellow MoMA palette and all face markings retained. Exterior scallops cut cleanly. A thin original pale anti-alias edge is visible against black at native resolution; no recoloring used. Beige catalog composite is clean.",
+    "master_sha256": "494a628282ca07bc0ecf61d9d2aa453e3d87659daeb1faeeeb398d53dc8c375e",
+    "variants_encoding": "Lossless WebP after Lanczos downsample; no derivative exceeds native master dimensions.",
+    "catalog_id": "dusen-everybody-wall-clock"
+  },
+  {
+    "status": "accepted",
+    "source": "/workspace/shared/finds-audit/first/fds-twergi-retry-1.png",
+    "source_url": "https://media.fds.fi/product_image/2000/15_Alessi_21_TH.png",
+    "source_dimensions": [
+      1500,
+      1500
+    ],
+    "source_sha256": "ce4fb1286e9efe1ae2d2f8ad63bb14dfff035a3ac5282c68f19c36d9da39e78a",
+    "master": "/workspace/shared/finds-audit/cutout-upgrades/alessi-twergi/alessi-twergi-master.png",
+    "master_dimensions": [
+      1632,
+      1632
+    ],
+    "source_subject_bounds_xyxy": [
+      459,
+      108,
+      1070,
+      1403
+    ],
+    "master_subject_bounds_xyxy": [
+      510,
+      168,
+      1121,
+      1463
+    ],
+    "source_translation_xy": [
+      51,
+      60
+    ],
+    "source_scale": 1,
+    "subject_fill_percent": {
+      "height": 79.35,
+      "width": 37.439
+    },
+    "top_bottom_margins_percent": [
+      10.294,
+      10.355
+    ],
+    "retained_pixel_checks": {
+      "pixels_checked": 617175,
+      "changed_rgb_pixels": 0,
+      "max_rgb_channel_difference": 0,
+      "source_resampled": false
+    },
+    "mask_notes": "Deterministic difference-from-uniform-background segmentation, single connected subject, internal bright details preserved opaque, narrow source-color alpha antialias. Original RGB copied exactly; no resampling/recoloring/decontamination/generation. Square canvas adds transparent padding at native subject scale.",
+    "variants": {
+      "480": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/alessi-twergi/alessi-twergi-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 68636
+      },
+      "960": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/alessi-twergi/alessi-twergi-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 266646
+      },
+      "1440": {
+        "file": "/workspace/shared/finds-audit/cutout-upgrades/alessi-twergi/alessi-twergi-1440.webp",
+        "width": 1440,
+        "height": 1440,
+        "bytes": 560680
+      }
+    },
+    "qa": "/workspace/shared/finds-audit/cutout-upgrades/alessi-twergi/qa",
+    "qa_result": "Accepted after beige/black full composites and native top/bottom edge inspection. Entire yellow ES19 silhouette, top highlight, wood grain and base retained. Background removed with narrow original source-color antialias. No geometry/detail blocker.",
+    "master_sha256": "86daa4d6e16424cc635fb5ae237217c3cdf5d37d630f7f686ab561d90edb4c8d",
+    "variants_encoding": "Lossless WebP after Lanczos downsample; no derivative exceeds native master dimensions.",
+    "catalog_id": "alessi-twergi-es19-yellow"
+  }
+]

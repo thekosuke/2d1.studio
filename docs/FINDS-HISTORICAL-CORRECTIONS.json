@@ -1,0 +1,276 @@
+[
+  {
+    "id": "magis-air-chair-red",
+    "variant": "White 1730 C",
+    "proposedImages": [
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/air-chair-white-primary.jpg",
+        "width": 2000,
+        "height": 1500,
+        "sourceUrl": "https://jaspermorrison.com/projects/chairs/air-chair",
+        "sourceImageUrl": "https://jaspermorrison.com/media/pages/projects/chairs/air-chair/24c2ef5098-1609850778/00-projects_chairs_magis_air_chair_01.jpg",
+        "role": "primary",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false,
+        "note": "Native designer photograph of the white Air-Chair, selected by parent for the coordinated White 1730 C correction."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/air-chair-white-1.jpg",
+        "width": 1500,
+        "height": 1500,
+        "sourceUrl": "https://lamptwist.com/products/magis-air-chair-stacking-chair",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0659/2646/3734/files/Magis_air_chair_product_back_SD74_white_01_hr.jpg?v=1767423950",
+        "role": "gallery",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/air-chair-white-2.jpg",
+        "width": 1500,
+        "height": 1500,
+        "sourceUrl": "https://lamptwist.com/products/magis-air-chair-stacking-chair",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0659/2646/3734/files/Magis_air_chair_product_back-lateral_SD74_white_01_hr.jpg?v=1767423949",
+        "role": "gallery",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/air-chair-white-3.jpg",
+        "width": 1500,
+        "height": 1500,
+        "sourceUrl": "https://lamptwist.com/products/magis-air-chair-stacking-chair",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0659/2646/3734/files/Magis_air_chair_product_front_SD74_white_01_hr.jpg?v=1767423949",
+        "role": "gallery",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/air-chair-white-4.jpg",
+        "width": 1500,
+        "height": 1500,
+        "sourceUrl": "https://lamptwist.com/products/magis-air-chair-stacking-chair",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0659/2646/3734/files/Magis_air_chair_product_side_SD74_white_01_hr.jpg?v=1767423951",
+        "role": "gallery",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false
+      }
+    ],
+    "highResolutionMatchingCount": 5,
+    "status": "ready",
+    "evidenceUrls": [
+      "https://jaspermorrison.com/projects/chairs/air-chair",
+      "https://lamptwist.com/products/magis-air-chair-stacking-chair",
+      "https://www.magisdesign.com/wp-content/uploads/2015/01/Air-Chair_technical_sheet_rev.2.pdf",
+      "https://roomstore.dk/wp-content/uploads/Magis_Pricelist_2025_DKK.pdf#page=12",
+      "https://www.adero.de/pdf/Magis_Agenda_0204.pdf#page=18"
+    ],
+    "notes": [
+      "Five distinct views: four native 1500×1500 manufacturer packshots hosted by retailer, plus the 2000×1500 designer view.",
+      "No other color or Air-Armchair substituted. All backgrounds are source RGB, not native transparency."
+    ],
+    "variantConfidence": "high that Red 1825 C is later; medium-high that white is the best historical representation",
+    "historicalClaim": "Magis 2025 price list marks Red 1825 C NEW. Jasper Morrison's own 1999 project entry uses a white chair photograph. Magis's April 2002 Agenda features white Air-Chairs in its Air-Chair Portrait.",
+    "historicalQualification": "White is a defensible canonical/early presentation. This is not proof that white was the sole color at the 1999/2000 launch.",
+    "checkedOn": "2026-10-10",
+    "blockers": [],
+    "pixelInspection": "Downloaded source pixels inspected; candidate contact sheets retained in this directory."
+  },
+  {
+    "id": "flowerpot-vp9-zesty-orange",
+    "variant": "Mustard",
+    "proposedImages": [
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/vp9-mustard-primary.jpg",
+        "width": 1500,
+        "height": 2000,
+        "sourceUrl": "https://andtradition.jp/products/flowerpot-vp9",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0571/9310/3500/files/Flowerpot_VP9_Mustard_Lighting.jpg?v=1727148915",
+        "role": "primary",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/vp9-mustard-1.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://designitch.com/products/flowerpot-vp9-portable-table-lamp-mustard",
+        "sourceImageUrl": "https://designitch.com/cdn/shop/products/FlowerpotVP9PortableTableLamp-Mustard-Lif1.jpg?v=1677225199",
+        "role": "gallery",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/vp9-mustard-3.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://designitch.com/products/flowerpot-vp9-portable-table-lamp-mustard",
+        "sourceImageUrl": "https://designitch.com/cdn/shop/products/FlowerpotVP9PortableTableLamp-Mustard-Lif2.jpg?v=1677225195",
+        "role": "gallery",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/vp9-mustard-final-1.jpg",
+        "width": 1365,
+        "height": 1365,
+        "sourceUrl": "https://www.nordicnest.nl/inspiratie-tips/scandinavische-lifestyle-en-recepten/Creeer-een-feestelijke-sfeer/",
+        "sourceImageUrl": "https://www.nordicnest.nl/assets/contentful/p7vzp7ftmsr1/658bKAxD8XSgHfzXz1LEWW/71811364f2a2f887f7fdd50712d82cdd/how-to-throw-party-set-table-yellow-accents-mustard-vp9-flowerpot-lamp.jpg",
+        "role": "gallery",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false,
+        "note": "Authentic distinct contextual dining photograph with two Mustard VP9 lamps. The article explicitly identifies Mustard. Native 1365×1365 meets file-size threshold, but lamp subjects are relatively small, around 200–400 px high; use as context, not a detail view."
+      }
+    ],
+    "highResolutionMatchingCount": 4,
+    "status": "ready_with_contextual_resolution_qualification",
+    "evidenceUrls": [
+      "https://cdn.mohd.it/uploads/attachments/product/a/m/amptraditionpressreleaseflowerpotvp9200811.pdf",
+      "https://andtradition.jp/products/flowerpot-vp9",
+      "https://designitch.com/products/flowerpot-vp9-portable-table-lamp-mustard",
+      "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
+      "https://www.nordicnest.nl/inspiratie-tips/scandinavische-lifestyle-en-recepten/Creeer-een-feestelijke-sfeer/"
+    ],
+    "notes": [
+      "Mustard is explicitly listed in the manufacturer 2020 launch release.",
+      "Four distinct exact-variant photographs are available, with the fourth a contextual image whose lamps occupy a small part of the frame.",
+      "Rejected vp9-mustard-2.jpg: the retailer Mustard gallery also includes a Beige Red/Brown-looking lamp, so that image is not accepted as the exact finish."
+    ],
+    "variantConfidence": "high",
+    "historicalClaim": "The 2020 VP9 launch release lists Mustard among ten colors; current Zesty Orange is identified as a new color in the existing official-store audit.",
+    "historicalQualification": "Mustard is one launch option, not proven the sole or most famous Flowerpot color across every model.",
+    "checkedOn": "2026-10-10",
+    "blockers": [],
+    "pixelInspection": "Downloaded source pixels inspected; candidate contact sheets retained in this directory.",
+    "highResolutionSubjectDetailCount": 3,
+    "rejectedFiles": [
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/vp9-mustard-2.jpg",
+        "reason": "Different-looking finish despite placement in the Mustard retailer gallery; excluded conservatively."
+      }
+    ]
+  },
+  {
+    "id": "b-line-boby-34-paprika",
+    "variant": "Classic Red, B34 three sections/four drawers",
+    "proposedImages": [
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-final-4.jpg",
+        "width": 1200,
+        "height": 900,
+        "sourceUrl": "https://shop.mohd.it/en/boby-storage-trolley-b34.html",
+        "sourceImageUrl": "https://cdn.mohd.it/cache/image/format=webp/media/catalog/product/b/-/b-line-b34-storage-trolley3.jpg",
+        "role": "primary",
+        "pixelsInspected": true,
+        "nativeDownload": true,
+        "upscaled": false,
+        "note": "Exact classic red B34, three sections and four open drawers. Native 1200×900; subject is roughly 400×700 px. Same underlying photograph as the lower-resolution 1stDibs and Bob & Friends sources, so those are not additional views."
+      }
+    ],
+    "highResolutionMatchingCount": 1,
+    "status": "incomplete_matching_photography",
+    "evidenceUrls": [
+      "https://www.1stdibs.com/furniture/storage-case-pieces/cabinets/joe-colombo-boby-trolley-size-m-4-drawers-red-b-line/id-f_34256112/",
+      "https://www.b-line.it/en/prodotti/boby/",
+      "https://partnersindesign.org/object/storage-cart-boby/",
+      "https://www.moma.org/collection/works/2281",
+      "https://www.b-line.it/download/B-LINE_CATALOGUE_IT-EN_2018.pdf",
+      "https://www.casestudynagoya.jp/SHOP/bobywagon-paprika.html",
+      "https://shop.mohd.it/en/boby-storage-trolley-b34.html",
+      "https://www.bobandfriends.co.nz/products/boby-trolley-m-4-drawers"
+    ],
+    "notes": [
+      "Classic red historical representation and exact B34 identity are separate checks; the museum three-drawer object is not substituted.",
+      "The best matching source is a native 1200×900 Mohd image. Product text identifies B34 and dimensions 43×42×73.5 cm; its photograph shows four drawers.",
+      "The 824×824 1stDibs and 1010×1010 Bob & Friends images depict the same pose and are lower-resolution duplicates, not additional gallery photos.",
+      "Remaining inspected galleries show different colors or configurations and are excluded. Do not fill the shortfall with Paprika or a red three-drawer museum image.",
+      "Bounded official/retailer research is complete; no retrieval approval remains blocked."
+    ],
+    "variantConfidence": "high for red's historical representation; medium for ranking red most iconic",
+    "historicalClaim": "The Montreal Museum of Fine Arts collection presents a red 1970 Bieffeplast Boby. The current manufacturer page lists Paprika among modern finishes; a current Japanese retailer explicitly markets Paprika as 2026 NEW COLOR.",
+    "historicalQualification": "Museum-backed classic red is substantially more defensible as a historical/iconic representation than the recent Paprika shade. The museum record does not prove a unique original launch color or that its unit is B34.",
+    "checkedOn": "2026-10-10",
+    "blockers": [
+      "Only one distinct matching native photo reached the 1200 px file threshold. Three additional exact classic-red B34 views remain unavailable in the inspected official and retailer galleries."
+    ],
+    "pixelInspection": "Downloaded source pixels inspected; candidate contact sheets retained in this directory.",
+    "rejectedFiles": [
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-1.jpg",
+        "reason": "824×824; same pose as accepted Mohd image."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-final-1.jpg",
+        "reason": "1010×1010; same pose as accepted Mohd image."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-2.jpg",
+        "reason": "Wrong color or wrong configuration."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-3.jpg",
+        "reason": "Wrong color or wrong configuration."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-4.jpg",
+        "reason": "Wrong color or wrong configuration."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-5.jpg",
+        "reason": "Wrong color or wrong configuration."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-6.jpg",
+        "reason": "Wrong color or wrong configuration."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-7.jpg",
+        "reason": "Wrong color or wrong configuration."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-8.jpg",
+        "reason": "Wrong color or wrong configuration."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-9.jpg",
+        "reason": "Wrong color or wrong configuration."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-10.jpg",
+        "reason": "Wrong color or wrong configuration."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-final-2.jpg",
+        "reason": "Different color: white."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-final-3.jpg",
+        "reason": "Different color: black."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-final-5.jpg",
+        "reason": "Different color: dark gray."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-final-6.jpg",
+        "reason": "Different color: honey yellow."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-final-7.jpg",
+        "reason": "Different color: cumin."
+      },
+      {
+        "file": "/workspace/shared/finds-audit/color-corrections/boby-b34-red-final-8.jpg",
+        "reason": "Different color: whale blue."
+      }
+    ]
+  }
+]

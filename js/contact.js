@@ -86,7 +86,8 @@
 
     function open(event) {
       if (event) { if (event.metaKey || event.ctrlKey || event.shiftKey || event.button > 0) return; event.preventDefault(); }
-      opener = document.activeElement;
+      const navigation = event?.currentTarget?.closest('.mobile-nav-panel')?.mobileNavigation;
+      opener = navigation?.active ? navigation.returnFocus : document.activeElement;
       window.SiteDrawer.open(contact, opener);
       mood('');
       look(0, 0.4);

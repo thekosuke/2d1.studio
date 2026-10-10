@@ -1,0 +1,381 @@
+{
+  "display_name": "Eyes Tote",
+  "brand": "Anya Hindmarch",
+  "official_title": "Eyes トート",
+  "selected_variant": "Black",
+  "variant_id": 47690085925057,
+  "sku": "5050925193580",
+  "product_id": 10173446226113,
+  "product_url": "https://www.anyahindmarch.jp/products/tote-eyes-in-black-econyl-r-regenerated-nylon",
+  "retrieved_at_utc": "2026-10-10T02:59:39.559529+00:00",
+  "primary_carousel_ordinal": 3,
+  "primary_path": "/workspace/shared/finds-audit/anya-eyes/03-5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg",
+  "primary_source_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg?v=1725951435",
+  "official_carousel_count": 7,
+  "official_unique_variant_count": 1,
+  "carousel_verification": {
+    "method": "Direct official HTML product-carousel.item nodes and their explicit zero-based data-index values. Each link is the official product-photoswipe image. Confirmed matching secondary thumbnails and product media positions.",
+    "primary_html_evidence": "data-el=\"product-carousel.item\" data-index=\"2\"; third image ID 37890978218177; link path /cdn/shop/files/5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg",
+    "saved_page_path": "/workspace/shared/finds-audit/anya-eyes/official-product.html",
+    "saved_evidence_path": "/workspace/shared/finds-audit/anya-eyes/carousel-evidence.html",
+    "variant_notes": "Official page has exactly one product variant, Black, SKU 5050925193580. No different color variant or variant-specific carousel ambiguity."
+  },
+  "authenticity": "All seven files downloaded byte-for-byte from image URLs directly linked by the official product carousel. Width transformation query stripped to request original files. Native decoded dimensions match official data-pswp-width/height.",
+  "native_alpha_summary": "None of the seven official carousel images has alpha. All are original RGB JPEGs. No PNG or other alpha-bearing asset is linked by the product carousel.",
+  "duplicates_check": {
+    "distinct_encoded_sha256_count": 7,
+    "distinct_decoded_pixel_sha256_count": 7,
+    "visual_result": "All seven are distinct views or product states; no duplicates."
+  },
+  "recommended_gallery_carousel_ordinals": [
+    3,
+    1,
+    4,
+    5,
+    6,
+    7,
+    2
+  ],
+  "images_in_official_carousel_order": [
+    {
+      "carousel_index_zero_based": 0,
+      "carousel_ordinal": 1,
+      "source_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT.jpg?v=1714009413",
+      "official_lightbox_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT.jpg?v=1714009413&width=2880",
+      "declared_width": 1500,
+      "declared_height": 1500,
+      "filename": "01-5050925193580_FRONT.jpg",
+      "path": "/workspace/shared/finds-audit/anya-eyes/01-5050925193580_FRONT.jpg",
+      "bytes": 46390,
+      "sha256": "1794b109fcdc677152dc6bfe877482c4597574716552df72b33e34c98ec7856b",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_alpha": false,
+      "pixel_sha256": "c023e00f9f5a811035e53c73d9e95207aad446b357e47710f052cec1d6bb900e",
+      "corner_pixels": [
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ]
+      ],
+      "view_description": "Straight front, exterior mouth pocket closed",
+      "visually_inspected": true,
+      "role": "supporting",
+      "edits_applied": false,
+      "upscaled": false,
+      "native_original_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT.jpg?v=1714009413"
+    },
+    {
+      "carousel_index_zero_based": 1,
+      "carousel_ordinal": 2,
+      "source_url": "https://www.anyahindmarch.jp/cdn/shop/files/24_02_06_Model_May1067copy_1.jpg?v=1714440628",
+      "official_lightbox_url": "https://www.anyahindmarch.jp/cdn/shop/files/24_02_06_Model_May1067copy_1.jpg?v=1714440628&width=2880",
+      "declared_width": 1500,
+      "declared_height": 1501,
+      "filename": "02-24_02_06_Model_May1067copy_1.jpg",
+      "path": "/workspace/shared/finds-audit/anya-eyes/02-24_02_06_Model_May1067copy_1.jpg",
+      "bytes": 102123,
+      "sha256": "5cf73023ae2e1d149bc09e59356d8a72cc920c23ff83ed2ddc46fec057740400",
+      "width": 1500,
+      "height": 1501,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_alpha": false,
+      "pixel_sha256": "47fbfadf46b177af5fa121437ce6487b35ef00bf8967b638668220225fb61747",
+      "corner_pixels": [
+        [
+          232,
+          229,
+          222
+        ],
+        [
+          236,
+          233,
+          226
+        ],
+        [
+          220,
+          215,
+          209
+        ],
+        [
+          228,
+          225,
+          218
+        ]
+      ],
+      "view_description": "Model holding exact black tote, scale/context",
+      "visually_inspected": true,
+      "role": "supporting",
+      "edits_applied": false,
+      "upscaled": false,
+      "native_original_url": "https://www.anyahindmarch.jp/cdn/shop/files/24_02_06_Model_May1067copy_1.jpg?v=1714440628"
+    },
+    {
+      "carousel_index_zero_based": 2,
+      "carousel_ordinal": 3,
+      "source_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg?v=1725951435",
+      "official_lightbox_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg?v=1725951435&width=2880",
+      "declared_width": 1500,
+      "declared_height": 1500,
+      "filename": "03-5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg",
+      "path": "/workspace/shared/finds-audit/anya-eyes/03-5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg",
+      "bytes": 66886,
+      "sha256": "50e0371fbbd7920c65fabc792c0b20a360a519ea4b84d63eb57f0277d8e54674",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_alpha": false,
+      "pixel_sha256": "9612a36f443adb851030eb980bd9ca22b44699f8a4771256d7816ff1cd53ebff",
+      "corner_pixels": [
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ]
+      ],
+      "view_description": "Straight front, exterior mouth pocket open, burgundy lining and gold zipper visible",
+      "visually_inspected": true,
+      "role": "primary",
+      "edits_applied": false,
+      "upscaled": false,
+      "native_original_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_FRONT_d744174c-0864-465f-863e-d2b20f926264.jpg?v=1725951435",
+      "pixel_inspection": {
+        "background_mode_rgb": [
+          238,
+          238,
+          238
+        ],
+        "exact_background_mode_pixel_count": 1428952,
+        "exact_background_mode_fraction": 0.6350897777777778,
+        "all_corners_rgb": [
+          238,
+          238,
+          238
+        ],
+        "native_alpha": false,
+        "visual_observation": "Pale-gray studio background surrounds complete black tote; background also occupies enclosed loop between handles. Cream eyes, black pupils, gold zipper, burgundy pocket lining, nylon folds and stitched trim remain visible. Soft natural floor shadow below base. Subject does not touch canvas edges.",
+        "masking_complexity": "Low to moderate. High black-versus-gray contrast and simple outer silhouette. Preserve handle curvature, remove enclosed handle-hole background separately, and carefully treat anti-aliased edges and soft floor shadow. Do not remove cream eye patches or burgundy lining. No masking performed."
+      }
+    },
+    {
+      "carousel_index_zero_based": 3,
+      "carousel_ordinal": 4,
+      "source_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_ANGLE.jpg?v=1725951439",
+      "official_lightbox_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_ANGLE.jpg?v=1725951439&width=2880",
+      "declared_width": 1500,
+      "declared_height": 1500,
+      "filename": "04-5050925193580_ANGLE.jpg",
+      "path": "/workspace/shared/finds-audit/anya-eyes/04-5050925193580_ANGLE.jpg",
+      "bytes": 49812,
+      "sha256": "89bab5178ec41daabb1b5e18f2e37701143d9173762f9f3890db7023aaae1378",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_alpha": false,
+      "pixel_sha256": "415b7ad1c9eec530f2bac976420220937c15162508d60ef9011e79ecf20edfb9",
+      "corner_pixels": [
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ]
+      ],
+      "view_description": "Three-quarter front view, mouth pocket closed",
+      "visually_inspected": true,
+      "role": "supporting",
+      "edits_applied": false,
+      "upscaled": false,
+      "native_original_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_ANGLE.jpg?v=1725951439"
+    },
+    {
+      "carousel_index_zero_based": 4,
+      "carousel_ordinal": 5,
+      "source_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_INSIDE.jpg?v=1725951439",
+      "official_lightbox_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_INSIDE.jpg?v=1725951439&width=2880",
+      "declared_width": 1500,
+      "declared_height": 1500,
+      "filename": "05-5050925193580_INSIDE.jpg",
+      "path": "/workspace/shared/finds-audit/anya-eyes/05-5050925193580_INSIDE.jpg",
+      "bytes": 72968,
+      "sha256": "5de4cbe81b0306cfe9898d88f7342923ba2e4d69fa0084aac3c9cc1f7ecb93f3",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_alpha": false,
+      "pixel_sha256": "17c4a891a4641d9aebf65bda4fdf304a198d8260c4082559420165065cd690dd",
+      "corner_pixels": [
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ]
+      ],
+      "view_description": "Elevated interior view with logo lining and inside pocket",
+      "visually_inspected": true,
+      "role": "supporting",
+      "edits_applied": false,
+      "upscaled": false,
+      "native_original_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_INSIDE.jpg?v=1725951439"
+    },
+    {
+      "carousel_index_zero_based": 5,
+      "carousel_ordinal": 6,
+      "source_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_BACK.jpg?v=1725951439",
+      "official_lightbox_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_BACK.jpg?v=1725951439&width=2880",
+      "declared_width": 1500,
+      "declared_height": 1500,
+      "filename": "06-5050925193580_BACK.jpg",
+      "path": "/workspace/shared/finds-audit/anya-eyes/06-5050925193580_BACK.jpg",
+      "bytes": 35832,
+      "sha256": "09c44622e7774fdda07a2ef2216e7ccee3665dfafc15017c4e511b085bf42495",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_alpha": false,
+      "pixel_sha256": "95b220acd22c5d729e70b8c7cad5e658bd9f65293ea5a5296a3c839fd622f6fc",
+      "corner_pixels": [
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ],
+        [
+          238,
+          238,
+          238
+        ]
+      ],
+      "view_description": "Straight back view, small Anya Hindmarch label near base",
+      "visually_inspected": true,
+      "role": "supporting",
+      "edits_applied": false,
+      "upscaled": false,
+      "native_original_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_BACK.jpg?v=1725951439"
+    },
+    {
+      "carousel_index_zero_based": 6,
+      "carousel_ordinal": 7,
+      "source_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_DETAIL.jpg?v=1725951439",
+      "official_lightbox_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_DETAIL.jpg?v=1725951439&width=2880",
+      "declared_width": 1500,
+      "declared_height": 1500,
+      "filename": "07-5050925193580_DETAIL.jpg",
+      "path": "/workspace/shared/finds-audit/anya-eyes/07-5050925193580_DETAIL.jpg",
+      "bytes": 443227,
+      "sha256": "a53fd33e83c4e4f9629e927a89737f7113ca9e255e39d4a86840f785c11e7901",
+      "width": 1500,
+      "height": 1500,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_alpha": false,
+      "pixel_sha256": "3874b543689ca803529240b96e02c86bf143152f7bcea558fa9770c05f3a852f",
+      "corner_pixels": [
+        [
+          40,
+          41,
+          43
+        ],
+        [
+          30,
+          29,
+          34
+        ],
+        [
+          43,
+          44,
+          48
+        ],
+        [
+          41,
+          42,
+          46
+        ]
+      ],
+      "view_description": "Close-up of eyes, nylon texture, and closed exterior pocket",
+      "visually_inspected": true,
+      "role": "supporting",
+      "edits_applied": false,
+      "upscaled": false,
+      "native_original_url": "https://www.anyahindmarch.jp/cdn/shop/files/5050925193580_DETAIL.jpg?v=1725951439"
+    }
+  ],
+  "image_editing_status": "No image edits, resizing, upscaling, recompression, masking, or color changes performed."
+}
