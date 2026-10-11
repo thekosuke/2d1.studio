@@ -1,0 +1,88 @@
+{
+  "id": "maika-revomax-bottle",
+  "name": "Mag Bottle",
+  "brand": "maika × REVOMAX",
+  "category": "kitchen",
+  "tags": [
+    "kitchen"
+  ],
+  "description": "A vacuum-insulated bottle with maika’s engraved mark and a quick-release cap.",
+  "productUrl": "https://maikalife.theshop.jp/items/151611456",
+  "sourceUrl": "https://maikalife.theshop.jp/items/151611456",
+  "sourceImageUrl": "https://baseec-img-mng.akamaized.net/images/item/origin/25f7a44313f68864aaf3dbb4a6707d95.png",
+  "image": "img/objects/cutouts/maika-revomax-bottle.webp",
+  "width": 982,
+  "height": 982,
+  "gallery": [
+    {
+      "image": "img/objects/gallery/maika-revomax-bottle-1.png",
+      "width": 1280,
+      "height": 1280,
+      "sourceUrl": "https://maikalife.theshop.jp/items/151611456",
+      "sourceImageUrl": "https://baseec-img-mng.akamaized.net/images/item/origin/25f7a44313f68864aaf3dbb4a6707d95.png"
+    },
+    {
+      "image": "img/objects/gallery/maika-revomax-bottle-2.png",
+      "width": 1280,
+      "height": 1280,
+      "sourceUrl": "https://maikalife.theshop.jp/items/151611456",
+      "sourceImageUrl": "https://baseec-img-mng.akamaized.net/images/item/origin/12196d86f533d3361b1ad1e334a5ea48.png"
+    },
+    {
+      "image": "img/objects/gallery/maika-revomax-bottle-3.png",
+      "width": 1280,
+      "height": 1280,
+      "sourceUrl": "https://maikalife.theshop.jp/items/151611456",
+      "sourceImageUrl": "https://baseec-img-mng.akamaized.net/images/item/origin/be62b38eae9fb6d64f06ab863a66580e.png"
+    },
+    {
+      "image": "img/objects/gallery/maika-revomax-bottle-4.png",
+      "width": 1280,
+      "height": 1280,
+      "sourceUrl": "https://maikalife.theshop.jp/items/151611456",
+      "sourceImageUrl": "https://baseec-img-mng.akamaized.net/images/item/origin/29953d5b2a49d90eda9a11b48d8137c2.png"
+    }
+  ],
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/maika-revomax-bottle-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/cutouts/maika-revomax-bottle-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/maika-revomax-bottle.webp",
+      "width": 982
+    }
+  ],
+  "variantName": "12oz / 355ml, gray",
+  "usageCaveat": "Authentic brand or retailer photography; private preview, no unrestricted image license verified.",
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Native original RGB with alpha-only foreground mask",
+    "subjectPixels": [
+      269,
+      884
+    ],
+    "opticalFill": 0.9,
+    "upscaled": false
+  },
+  "colorwayEvidence": {
+    "status": "owner_exception",
+    "findings": [
+      {
+        "url": "https://maikalife.theshop.jp/items/151611456",
+        "finding": "Variant selected to represent the owner-linked product; original launch color not established."
+      }
+    ]
+  },
+  "catalogAudit": {
+    "reviewed": "2026-10-11",
+    "notes": [
+      "Native RGB unchanged; complete geometry inspected on light and dark backgrounds."
+    ],
+    "sourceLimitations": []
+  }
+}

@@ -2,6 +2,17 @@
 from pathlib import Path
 from html import escape as e
 import json
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
+
+def tracked_product_url(url):
+    if not url:
+        return ""
+    parts = urlsplit(url)
+    tracking = {"utm_source": "2d1.studio", "utm_medium": "referral", "utm_campaign": "finds"}
+    query = [(key, value) for key, value in parse_qsl(parts.query, keep_blank_values=True) if key not in tracking]
+    query.extend(tracking.items())
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
+
 ROOT=Path(__file__).resolve().parent.parent
 items=json.loads((ROOT/'data/objects.json').read_text())
 categories=[('all','All objects'),('living','Living'),('kitchen','Kitchen'),('wear','Wear'),('work','Work')]
@@ -13,7 +24,7 @@ for item in items:
         assert (ROOT/variant['image']).is_file(), variant['image']
     srcset = ', '.join(f'../{variant["image"]} {variant["width"]}w' for variant in variants)
     responsive = f' srcset="{e(srcset)}" sizes="(max-width: 600px) 45vw, 320px"' if variants else ''
-    product_url = item.get('productUrl') or ''
+    product_url = tracked_product_url(item.get('productUrl') or '')
     for_sale = item.get('forSale', True) and bool(product_url)
     assert not product_url or product_url.startswith('https://')
     assert item['sourceUrl'].startswith('https://')
@@ -40,11 +51,11 @@ html=f'''<!doctype html>
 <link rel="alternate" hreflang="en" href="https://2d1.studio/objects/"><link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/objects/"><link rel="alternate" hreflang="x-default" href="https://2d1.studio/objects/">
 <meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Finds — 2D1"><meta property="og:description" content="An open shelf of everyday objects with character. Explore the 2D1 Finds collection."><meta property="og:url" content="https://2d1.studio/objects/"><meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2"><meta property="og:image:alt" content="The red 2D1 logo on a soft beige background.">
 <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml"><link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2">
-<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=74"><link rel="stylesheet" href="../css/objects.css?v=79">
+<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=75"><link rel="stylesheet" href="../css/objects.css?v=83">
 <link rel="stylesheet" href="../css/dialogs.css?v=18"><link rel="stylesheet" href="../css/mobile-nav.css?v=3">
 <link rel="stylesheet" href="../css/typography.css?v=10">
 <script src="../js/config.js" defer></script><script src="../js/drawers.js" defer></script><script src="../js/contact.js?v=10" defer></script><script src="../js/mobile-nav.js?v=2" defer></script><script src="../js/finds-menus.js?v=6" defer></script>
-<script src="../js/language.js?v=1" defer></script><script src="../js/objects.js?v=38" defer></script>
+<script src="../js/language.js?v=1" defer></script><script src="../js/objects.js?v=40" defer></script>
 </head>
 <body class="objects-page">
 <a class="skip-link" href="#objects-canvas">Skip to objects</a>
@@ -64,7 +75,7 @@ html=f'''<!doctype html>
 <button class="objects-info" data-js-only type="button" aria-label="About this collection" aria-haspopup="dialog" aria-expanded="false" aria-controls="objects-info-dialog"><span translate="no">Familiar Characters</span><span aria-hidden="true">+</span></button>
 <footer class="objects-footer"><p><span class="objects-status" id="objects-status" role="status">{len(items)} objects</span> <span aria-hidden="true">·</span> <span>Selected by Kosuke</span></p><p class="objects-hint" data-js-only>Drag to explore. Select to discover.</p><button class="objects-reset" data-reset-view data-js-only type="button">Reset view</button><nav class="objects-language" aria-label="Language"><a href="./" hreflang="en" lang="en" aria-current="page">EN</a><a href="../ja/objects/" hreflang="ja" lang="ja">JA</a></nav></footer>
 <dialog class="objects-dialog" id="object-dialog" aria-labelledby="object-title"><button class="objects-dialog-close" type="button" data-close aria-label="Close"><span aria-hidden="true">×</span></button><button type="button" class="objects-product-peek" data-product-step="-1"></button><div class="objects-dialog-scroll"><div class="objects-dialog-layout"><div class="objects-dialog-gallery"><div class="objects-dialog-photo" role="region" tabindex="-1" aria-label="Product photographs"></div><span class="objects-photo-count" aria-hidden="true" hidden></span><p class="objects-photo-status sr-only" role="status" aria-atomic="true"></p></div><div class="objects-dialog-copy"><p class="objects-dialog-brand" translate="no"></p><h2 class="objects-dialog-title" id="object-title" translate="no"></h2><p class="objects-dialog-description"></p><div class="objects-dialog-tags"></div><div class="objects-purchased"><button type="button" class="objects-purchased-button" disabled aria-describedby="objects-purchased-status">I have it</button><p id="objects-purchased-status" role="status"></p><p>Anonymous browser-based tally.</p></div><div class="objects-dialog-action"><a class="objects-dialog-link" href="#" target="_blank" rel="noopener noreferrer">Visit product page ↗</a><p class="objects-dialog-availability" hidden>Not for sale</p></div><p class="objects-dialog-credit"><span>Product photography:</span> <span class="objects-dialog-sources"></span></p></div></div></div><button type="button" class="objects-product-peek" data-product-step="1"></button><div class="objects-dialog-footer" hidden><div class="objects-dialog-footer-action"></div><div class="objects-product-arrows" role="group" aria-label="Product navigation"><button type="button" class="objects-product-arrow" data-product-step="-1" data-product-arrow aria-label="Previous product"><span aria-hidden="true">←</span></button><button type="button" class="objects-product-arrow" data-product-step="1" data-product-arrow aria-label="Next product"><span aria-hidden="true">→</span></button></div></div></dialog>
-<dialog class="objects-info-dialog objects-dialog" id="objects-info-dialog" aria-labelledby="objects-info-title"><img class="objects-info-eyes" src="../img/brand/eyes.svg" width="116" height="48" alt="" aria-hidden="true"><h2 id="objects-info-title" translate="no">Familiar Characters</h2><p class="objects-info-note">A growing collection of everyday companions that goes from having character to becoming a character.</p><p>Hand-picked by Kosuke Futsukaichi and updated monthly, this is a collection of everyday objects with character—thoughtfully designed things with a clear point of view and a little wit.</p><p>Character is what draws us in, but familiarity is what gives them meaning. Through everyday use and the moments that happen around them, these objects accumulate stories, memories, and a sense of familiarity. Over time, what starts as an object with character becomes a character in our lives—something personal, meaningful, and worth keeping for decades.</p><a class="objects-info-about objects-dialog-link" href="../about/">Learn more <span aria-hidden="true">→</span></a></dialog>
+<dialog class="objects-info-dialog objects-dialog" id="objects-info-dialog" aria-labelledby="objects-info-title"><img class="objects-info-eyes" src="../img/brand/eyes.svg" width="116" height="48" alt="" aria-hidden="true"><h2 id="objects-info-title" translate="no">Familiar Characters</h2><p class="objects-info-note">A growing collection of everyday companions that goes from having character to becoming a character.</p><p>Hand-picked by Kosuke Futsukaichi and updated monthly, this is a collection of everyday objects with character—thoughtfully designed things with a clear point of view and a little wit.</p><p>Character is what draws us in, but familiarity is what gives them meaning. Through everyday use and the moments that happen around them, these objects accumulate stories, memories, and a sense of familiarity. Over time, what starts as an object with character becomes a character in our lives—something personal, meaningful, and worth keeping for a long time.</p><p>I personally wish I owned everything you see here.</p><a class="objects-info-about objects-dialog-link" href="../about/">Learn more <span aria-hidden="true">→</span></a></dialog>
 </body></html>'''
 (ROOT/'objects').mkdir(exist_ok=True)
 (ROOT/'objects/index.html').write_text(html)

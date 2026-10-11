@@ -1,0 +1,107 @@
+{
+  "id": "olivetti-valentine",
+  "name": "Valentine",
+  "brand": "Olivetti",
+  "category": "work",
+  "tags": [
+    "typewriter",
+    "writing"
+  ],
+  "description": "Ettore Sottsass and Perry King’s portable typewriter, introduced in 1969. A bright red shell, black keys, and a matching carrying case made a work tool feel personal.",
+  "productUrl": "https://museoomero.it/en/opere/valentine/",
+  "forSale": false,
+  "sourceUrl": "https://museoomero.it/en/opere/valentine/",
+  "sourceImageUrl": "https://museoomero.it/wp-content/uploads/2021/12/Opera-Valentine-Sottsass_AAB5715-2.jpg",
+  "image": "img/objects/cutouts/olivetti-valentine.webp",
+  "width": 1444,
+  "height": 1444,
+  "gallery": [
+    {
+      "image": "img/objects/gallery/olivetti-valentine-1.webp",
+      "width": 1772,
+      "height": 1181,
+      "sourceUrl": "https://museoomero.it/en/opere/valentine/",
+      "sourceImageUrl": "https://museoomero.it/wp-content/uploads/2021/12/Opera-Valentine-Sottsass_AAB5715-2.jpg"
+    },
+    {
+      "image": "img/objects/gallery/olivetti-valentine-audit-ca89fdafc3.jpg",
+      "width": 2000,
+      "height": 1990,
+      "sourceUrl": "https://www.moma.org/collection/works/4576",
+      "sourceImageUrl": "https://www.moma.org/media/W1siZiIsIjIzMDAwNCJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=078f5af2e154f306"
+    },
+    {
+      "image": "img/objects/gallery/olivetti-valentine-audit-90e88f5635.jpg",
+      "width": 2000,
+      "height": 583,
+      "sourceUrl": "https://www.moma.org/collection/works/4576",
+      "sourceImageUrl": "https://www.moma.org/media/W1siZiIsIjIzMDAwNSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=1cc857d66bb8e0a6"
+    },
+    {
+      "image": "img/objects/gallery/olivetti-valentine-audit-066a491544.jpg",
+      "width": 2000,
+      "height": 1720,
+      "sourceUrl": "https://www.moma.org/collection/works/4576",
+      "sourceImageUrl": "https://www.moma.org/media/W1siZiIsIjIzMDAwNiJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=4720dd78ca41e97d"
+    }
+  ],
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/olivetti-valentine-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/cutouts/olivetti-valentine-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/olivetti-valentine-1440.webp",
+      "width": 1440
+    },
+    {
+      "image": "img/objects/cutouts/olivetti-valentine.webp",
+      "width": 1444
+    }
+  ],
+  "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Original RGB with locally generated foreground mask",
+    "subjectPixels": [
+      1299,
+      776
+    ],
+    "opticalFill": 0.9,
+    "upscaled": false
+  },
+  "catalogAudit": {
+    "reviewed": "2026-10-10",
+    "variantConfidence": "high",
+    "desiredVariant": "Red",
+    "notes": [],
+    "sourceLimitations": []
+  },
+  "colorwayEvidence": {
+    "status": "verified_iconic",
+    "selectionStatus": "verified_iconic",
+    "claim": "Red is the Valentine design's museum- and contemporary-history-backed identity.",
+    "findings": [
+      {
+        "url": "https://museoomero.it/en/opere/valentine/",
+        "finding": "Confirmed in the parent audit; not duplicated in this pass."
+      },
+      {
+        "url": "https://www.moma.org/collection/works/4576",
+        "finding": "Confirmed in the parent audit; not duplicated in this pass."
+      },
+      {
+        "url": "https://www.domusweb.it/en/from-the-archive/2011/08/25/red-valentine.html",
+        "finding": "Confirmed in the parent audit; not duplicated in this pass."
+      }
+    ],
+    "inference": "No unique-first-color assertion beyond the documented iconic red identity is necessary.",
+    "limitations": [],
+    "recommendedVariant": "Red",
+    "action": "retain"
+  }
+}

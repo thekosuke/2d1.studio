@@ -331,14 +331,14 @@ html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd{
 @media(hover:hover) and (pointer:fine){.page-nav :is(a,button):hover{transform:none}.page-nav :is(a,button):hover .nav-label{transform:translateX(12px)}}
 @media(prefers-reduced-motion:reduce){.page-nav .nav-label{transition:none}}
 
-/* The Studio ground travels with the section; only its empty edges soften. */
+/* The Studio ground travels with the section; its boundaries stay crisp. */
 .js .home-page > main{
  background:linear-gradient(to bottom,
  var(--beige) 0,
- var(--beige) calc(var(--studio-start,0px) - 4px),
- var(--studio-background) calc(var(--studio-start,0px) + 4px),
- var(--studio-background) calc(var(--studio-end,0px) - 4px),
- var(--beige) calc(var(--studio-end,0px) + 4px));
+ var(--beige) var(--studio-start,0px),
+ var(--studio-background) var(--studio-start,0px),
+ var(--studio-background) var(--studio-end,0px),
+ var(--beige) var(--studio-end,0px));
  --ink:var(--cranberry-brown);--line:rgba(50,5,5,.18);color:var(--ink)
 }
 .js .home-page .studio{--ink:var(--beige);--line:rgba(250,240,230,.25);color:var(--beige)}

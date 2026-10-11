@@ -688,23 +688,32 @@
       "selectedVariant": "Pikmin Single-Flower Vase Set",
       "transparentPrimary": true,
       "primaryPixels": [
-        1790,
-        1790
+        1928,
+        1928
       ],
       "primaryNativeSubjectPixels": [
-        1557,
-        1362
+        1735,
+        1409
       ],
       "subjectBounds": [
-        116,
-        214,
-        1673,
-        1576
+        96,
+        259,
+        1831,
+        1668
       ],
-      "galleryCount": 4,
+      "galleryCount": 2,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
+        {
+          "image": "img/objects/gallery/nintendo-pikmin-vases-front.jpg",
+          "width": 1920,
+          "height": 1920,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "97191e59ddbd3ffd44fffe36c199a6b504e784e293cfa5b4a58e69893f486695",
+          "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
+          "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:best/m5igyh0szzcvzmsuypus"
+        },
         {
           "image": "img/objects/nintendo-pikmin-vases-refined.jpg",
           "width": 1920,
@@ -713,33 +722,6 @@
           "sha256": "8cd7214676bd3b4b29a84ac2eb568021d52510e0363abac957261fc339d44509",
           "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
           "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:best/wvpqwxtelmxtmp8j2rwt"
-        },
-        {
-          "image": "img/objects/gallery/nintendo-pikmin-vases-2.webp",
-          "width": 1600,
-          "height": 1600,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "cadce42b9c6161940047443b42cf3a8524a9db78debd2ab3a2b22712e996e5c3",
-          "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
-          "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:low/erlgya1ic6c6zwgomgoa"
-        },
-        {
-          "image": "img/objects/gallery/nintendo-pikmin-vases-3.webp",
-          "width": 1600,
-          "height": 1600,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "1a1e5c44982ca62163cb3f291459d480da5d749e0026366a057524c3a0708971",
-          "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
-          "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:low/vpmcglfj0bj5s174vmeg"
-        },
-        {
-          "image": "img/objects/gallery/nintendo-pikmin-vases-4.webp",
-          "width": 1600,
-          "height": 1600,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "3de209379a8aa35e08b42fdd226d7302461e573974ab179fb171f1b84c227bd2",
-          "sourceUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
-          "sourceImageUrl": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:low/kjgjwqsfqnwgbvvmnb3v"
         }
       ],
       "issues": [
@@ -756,10 +738,12 @@
         "sources": []
       },
       "editorialReview": {
-        "reviewed": "2026-10-10",
+        "reviewed": "2026-10-11",
         "variantConfidence": "high exact product",
         "desiredVariant": "Original Red / Yellow / Blue three-piece set",
-        "notes": [],
+        "notes": [
+          "Owner requested front-facing set: official1920px front photo now canvas main and first modal image; flowers retained. Original RGB comparison passed."
+        ],
         "sourceLimitations": [
           "No count blocker: five distinct native1600–1920px views. Existing secondary CDN links request q_auto:low; sharper originals may exist but were not retrieved in this pass."
         ]
@@ -1169,88 +1153,74 @@
       "id": "alessi-twergi-es19-yellow",
       "name": "Twergi ES19 Spice Mill",
       "brand": "Alessi",
-      "selectedVariant": "Twergi ES19 Spice Mill, Yellow",
+      "selectedVariant": "Twergi ES19 Spice Mill, Red",
       "transparentPrimary": true,
       "primaryPixels": [
-        1632,
-        1632
+        760,
+        760
       ],
       "primaryNativeSubjectPixels": [
-        611,
-        1295
+        324,
+        684
       ],
       "subjectBounds": [
-        510,
-        168,
-        1121,
-        1463
+        218,
+        38,
+        542,
+        722
       ],
-      "galleryCount": 4,
+      "galleryCount": 3,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
         {
-          "image": "img/objects/gallery/alessi-twergi-es19-yellow-audit-native-1.png",
-          "width": 1500,
-          "height": 1500,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "ce4fb1286e9efe1ae2d2f8ad63bb14dfff035a3ac5282c68f19c36d9da39e78a",
-          "sourceUrl": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
-          "sourceImageUrl": "https://media.fds.fi/product_image/2000/15_Alessi_21_TH.png"
+          "image": "img/objects/gallery/alessi-es19-red-full-square.jpg",
+          "width": 1000,
+          "height": 1000,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "46a002c826758f28bde4d751ef10c588f70f159f06d47c0cdb12b2c3e43906ed",
+          "sourceUrl": "https://alessi.com/products/es19-pepper-salt-and-spice-mill?variant=46488901681478",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/05_ES19.jpg?v=1680531360"
         },
         {
-          "image": "img/objects/gallery/alessi-twergi-es19-yellow-audit-native-2.jpg",
-          "width": 1400,
-          "height": 2000,
+          "image": "img/objects/gallery/alessi-es19-red-2.jpg",
+          "width": 1648,
+          "height": 2062,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "6817fcea68c13bfbb27e29949dee5b273c1d551b61df8214029261fc5c5f2219",
-          "sourceUrl": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
-          "sourceImageUrl": "https://media.fds.fi/decor_image/2000/07_Alessi-MP0210-1_ES18-1_ES19-1-V.jpg"
+          "sha256": "b65a6b59296a41a4974fe1fbb1de5c0820eb8bd1b1e00295c2a11c7630bce540",
+          "sourceUrl": "https://alessi.com/products/es19-pepper-salt-and-spice-mill?variant=46488901681478",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ES18-ES19-MP0210-02_054ce3f4-9a6e-4798-98b5-c7136422560f.jpg?v=1680531360"
         },
         {
-          "image": "img/objects/gallery/alessi-twergi-es19-yellow-audit-native-3.jpg",
-          "width": 2000,
-          "height": 1333,
+          "image": "img/objects/gallery/alessi-es19-red-3.jpg",
+          "width": 1648,
+          "height": 2062,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "99549d635a5b76942fca44807a23f3fb208e2b024686d6229777c6df808422dc",
-          "sourceUrl": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
-          "sourceImageUrl": "https://media.fds.fi/decor_image/2000/FDS_ruoka-Alessi10.jpg"
-        },
-        {
-          "image": "img/objects/gallery/alessi-twergi-es19-yellow-audit-native-4.jpg",
-          "width": 2000,
-          "height": 1334,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "b390a59eabac90ce8573dbb0e95c9fce7db93ef172c0e0f12c13b0c3cae9d928",
-          "sourceUrl": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
-          "sourceImageUrl": "https://media.fds.fi/decor_image/2000/2021_09_30_FDS_Valmiit_VVV-3.jpg"
+          "sha256": "cb41d4230ea649d740bfe07b29a8ddabeeb48c5d6459ef9d896b6c43b860de5d",
+          "sourceUrl": "https://alessi.com/products/es19-pepper-salt-and-spice-mill?variant=46488901681478",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/03_ES19.jpg?v=1680531360"
         }
       ],
       "issues": [
-        "Original/iconic colorway evidence remains unresolved"
+        "Primary native product detail below 1200px long edge",
+        "One or more photographs below 1200px long edge"
       ],
       "colorwayEvidence": {
-        "status": "unverified",
+        "status": "owner_exception",
         "findings": [
           {
-            "url": "https://alessi.com/de/products/es19-pepper-salt-and-spice-mill",
-            "finding": "Official ES19 feed identifies Yellow variant46488901648710 with ES19-04.jpg. The Twergi collection design dates to1989, but current100 Values reissue color alone does not prove the original color."
-          },
-          {
-            "url": "https://www.finnishdesignshop.com/en-us/product/twergi-es19-grinder-yellow",
-            "finding": "Yellow ES19 product gallery supplies an isolated product photo and multiple authentic lifestyle photos visibly containing the same yellow variant. Four distinct selected originals are 1500–2000px long edge."
+            "url": "https://alessi.com/products/es19-pepper-salt-and-spice-mill?variant=46488901681478",
+            "finding": "Owner requested Red; official Alessi variant46488901681478 identifies red ES19 by Ettore Sottsass."
           }
-        ],
-        "sources": []
+        ]
       },
       "editorialReview": {
-        "reviewed": "2026-10-10",
-        "variantConfidence": "high exact variant; original1989 color unresolved",
-        "desiredVariant": "Yellow ES19",
-        "notes": [],
+        "reviewed": "2026-10-11",
+        "notes": [
+          "Original RGB comparison passed. Gallery shows complete red mill, collection in use, and wood detail in pink variant."
+        ],
         "sourceLimitations": [
-          "Specific yellow launch chronology remains unresolved; preserve the existing selected yellow edition.",
-          "Lifestyle files are high resolution, but product pixels are shared with the rest of the scene."
+          "Official red source1648 × 2062 has substantial padding; framed view retains native product pixels without enlargement."
         ]
       }
     },
@@ -1274,10 +1244,19 @@
         765,
         1140
       ],
-      "galleryCount": 2,
+      "galleryCount": 4,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
+        {
+          "image": "img/objects/gallery/tumbler-1709-red-square.jpg",
+          "width": 1080,
+          "height": 1080,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "b0d7f865ce0b25b38e386bbd42ffe2612c72dae1408d70cb80526a077c45efeb",
+          "sourceUrl": "https://www.ajan-muisto.fi/p/3148-juomalasi-nuutajarvi",
+          "sourceImageUrl": "https://www.ajan-muisto.fi/WebRoot/VilkasStoreFI/Shops/ajan-muisto/61BB/1E70/76A5/9FFA/20D0/0A0C/0616/D976/190219-06.JPG"
+        },
         {
           "image": "img/objects/nuutajarvi-tumbler-1709.jpg",
           "width": 1080,
@@ -1295,10 +1274,20 @@
           "sha256": "ae5ecf9c355120832ac702bb706bc58352f522e20b51eaace17ce69caf140a37",
           "sourceUrl": "https://www.instagram.com/p/Dcije-fksXb/?img_index=1",
           "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/787178171_18557055934073002_4708606169349439400_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=Mzk3Mjg5MzcxOTc2MTg5MzU5NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_b7tOTKLbKIQ7kNvwGSlsbR&_nc_oc=AdoV-MKu6vgALUIgLYDVj4Bf4Zp8mQ9xc_bP6dSYjCMdlqPOeR3AjkXiGFvfLpAtWAWcyYukvTdCQruz5WLx4xum&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=jFoXN-l8yzp-0w0nfR0lig&_nc_ss=7b689&oh=00_AQP-cmaa6pH6Kk-uug3rVxeISu0ALBCV9aN67LVo3fuwfA&oe=6ACEB54B"
+        },
+        {
+          "image": "img/objects/gallery/tumbler-1709-top.jpg",
+          "width": 660,
+          "height": 660,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "332f12135fc9177fede2be0d7183676df0dafbd5bff743ce79620485d9dc3c40",
+          "sourceUrl": "https://www.primitive-sanchikagu.com/SHOP/2302-001-01.html",
+          "sourceImageUrl": "https://www.primitive-sanchikagu.com/pic-labo/2302-001-01_3.jpg"
         }
       ],
       "issues": [
         "Primary native product detail below 1200px long edge",
+        "One or more photographs below 1200px long edge",
         "Original/iconic colorway evidence remains unresolved"
       ],
       "colorwayEvidence": {
@@ -1677,34 +1666,49 @@
       "id": "homeinfun-storage-stool",
       "name": "Playful Storage Stool Side Table",
       "brand": "HomeinFun",
-      "selectedVariant": "Playful Storage Stool Side Table",
+      "selectedVariant": "Blue",
       "transparentPrimary": true,
       "primaryPixels": [
-        827,
-        827
+        599,
+        599
       ],
-      "primaryNativeSubjectPixels": [
-        585,
-        622
-      ],
+      "primaryNativeSubjectPixels": null,
       "subjectBounds": [
-        121,
-        102,
-        706,
-        724
+        136,
+        30,
+        462,
+        569
       ],
       "galleryCount": 4,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
         {
-          "image": "img/objects/gallery/homeinfun-storage-stool-review-0e6ecfb530.webp",
-          "width": 1145,
-          "height": 1432,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "928546606f4d1002692910f33415a35a942b6025d4a0ce252a3d603e6dec9d7e",
+          "image": "img/objects/gallery/homeinfun-blue-open.jpg",
+          "width": 640,
+          "height": 800,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "1a99063e3ef503ff542d1b41bd74b59d62b3eb135020c9ed016f96bab166ad0a",
           "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
-          "sourceImageUrl": "https://homeinfun.ca/cdn/shop/files/7b5ddb17-d573-4dc6-95e1-a0097328eac6.jpg?v=1766462145"
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0795/6329/2961/files/3d893bff-68ea-486b-bfae-09d78696c382.jpg?v=1766462104"
+        },
+        {
+          "image": "img/objects/gallery/homeinfun-color-group.jpg",
+          "width": 1095,
+          "height": 1369,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "b0fd481f19264f0956772a6824bc1902b26a04aad979a0ba129661ede1568a8e",
+          "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0795/6329/2961/files/ad742fc7-7ba3-4bba-a8da-34d4626cf82b.jpg?v=1766462104"
+        },
+        {
+          "image": "img/objects/gallery/homeinfun-blue-compartments.jpg",
+          "width": 1090,
+          "height": 1362,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "313270a76f7a21d2ab298516904a73ae2106d8b9c781600794d814065083adca",
+          "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0795/6329/2961/files/f7c681d9-bb0d-4eff-8367-145357873c4f.jpg?v=1766462104"
         },
         {
           "image": "img/objects/gallery/homeinfun-storage-stool-review-80805ade36.webp",
@@ -1714,57 +1718,23 @@
           "sha256": "c688640dfcfe0882d8bdb0e5b3c57b9992c7be7e178b3edde2dca23e7452367e",
           "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
           "sourceImageUrl": "https://homeinfun.ca/cdn/shop/files/c17923dc-61c3-4bdc-b46b-83c8bb0dd643.jpg?v=1766462145"
-        },
-        {
-          "image": "img/objects/gallery/homeinfun-storage-stool-review-e2b3f65533.webp",
-          "width": 1135,
-          "height": 1419,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "e1ad3c3de0d9b1915dc8d1a22df5e4b556a53150f935cb982e381315ee2c3b68",
-          "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
-          "sourceImageUrl": "https://homeinfun.ca/cdn/shop/files/37b8d5d6-33bc-4faa-8aa2-dbed810c3a3c.jpg?v=1766462145"
-        },
-        {
-          "image": "img/objects/gallery/homeinfun-storage-stool-review-53d2f763ad.webp",
-          "width": 1200,
-          "height": 1500,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "292c1f6671f6005c0be5eba7109f2ee298a09f596382d6602c84033f10a6235b",
-          "sourceUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table",
-          "sourceImageUrl": "https://homeinfun.ca/cdn/shop/files/2cfd2401-5af1-44ff-91a9-70d8d58ac6e7.jpg?v=1766462145"
         }
       ],
       "issues": [
-        "Primary native product detail below 1200px long edge",
+        "One or more photographs below 1200px long edge",
         "Original/iconic colorway evidence remains unresolved"
       ],
       "colorwayEvidence": {
-        "status": "current_only",
-        "selectionStatus": "current_only",
-        "claim": "HomeinFun offers the storage stool in multiple colors. The audited product data associates the existing hero with Yellow. The page does not identify a designer, a first release, or a culturally recognized color.",
-        "findings": [
-          {
-            "url": "https://homeinfun.ca/products/cute-storage-stool-side-table",
-            "sourceType": "official product page; existing source audit",
-            "claimType": "current-product evidence only",
-            "claim": "Official product JSON explicitly maps hero to Yellow; ten colors listed, with no launch chronology."
-          }
-        ],
-        "inference": null,
-        "limitations": [
-          "Original designer/manufacturer and launch palette are not established. Yellow must remain an editorial current-variant choice, not an original/iconic claim."
-        ]
+        "basis": "Owner selected blue; official variant and complete product photograph verified",
+        "notes": "Display name keeps its existing color-free wording."
       },
       "editorialReview": {
-        "reviewed": "2026-10-10",
-        "variantConfidence": "current variant high; original/iconic unknown",
-        "desiredVariant": "Retain existing yellow selection pending original-color evidence",
+        "reviewed": "2026-10-11",
         "notes": [
-          "Existing gallery second image contains other colors but no selected yellow. Third contains yellow as part of a group. Candidate homeinfun-storage-stool-13.jpg is an additional warm-yellow/orange room scene, but the source does not associate it to a variant; do not silently treat it as verified Yellow.",
-          "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+          "Blue main image matches official selected variant; no synthesized colors."
         ],
         "sourceLimitations": [
-          "No four verified photographs of the same yellow variant found. Hero native 669×836; native source is already low-resolution."
+          "Official complete blue view is 640 × 800; higher-resolution group and compartment photographs complement it."
         ]
       }
     },
@@ -4743,101 +4713,83 @@
       "id": "flowerpot-vp9-zesty-orange",
       "name": "Flowerpot VP9",
       "brand": "&Tradition",
-      "selectedVariant": "Flowerpot VP9, Mustard",
+      "selectedVariant": "Flowerpot VP9, Zesty Orange",
       "transparentPrimary": true,
       "primaryPixels": [
-        1152,
-        1152
+        967,
+        967
       ],
       "primaryNativeSubjectPixels": [
-        490,
-        910
+        468,
+        870
       ],
       "subjectBounds": [
-        331,
-        121,
-        821,
-        1031
+        249,
+        48,
+        717,
+        918
       ],
       "galleryCount": 4,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
         {
-          "image": "img/objects/gallery/vp9-mustard-1.jpg",
-          "width": 1500,
-          "height": 2000,
+          "image": "img/objects/gallery/flowerpot-vp9-orange-full-square.jpg",
+          "width": 1200,
+          "height": 1200,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "15d5262d18f4111444e4fb026fac568b8627ce35791a5c990dead5b6dc0ffb38",
-          "sourceUrl": "https://andtradition.jp/products/flowerpot-vp9",
-          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0571/9310/3500/files/Flowerpot_VP9_Mustard_Lighting.jpg?v=1727148915"
+          "sha256": "9df5fa68cea84848da7f7cf2f339f5cc8e5915fc20e12b77273b7a85245efe8f",
+          "sourceUrl": "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0571/9310/3500/files/VP9_Zesty-Orange_Front_ON.jpg?v=1772503667"
         },
         {
-          "image": "img/objects/gallery/vp9-mustard-2.jpg",
-          "width": 2000,
+          "image": "img/objects/gallery/flowerpot-vp9-orange-2.jpg",
+          "width": 1334,
           "height": 2000,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "1c0506e730037d9bae5734631c5b6d686a2a317e570d4bd2159485d6333492f2",
-          "sourceUrl": "https://designitch.com/products/flowerpot-vp9-portable-table-lamp-mustard",
-          "sourceImageUrl": "https://designitch.com/cdn/shop/products/FlowerpotVP9PortableTableLamp-Mustard-Lif1.jpg?v=1677225199"
+          "sha256": "da97fde81486bfb0c6eba57437fec6647fc68fbbbee916c070450ca5d55d55ae",
+          "sourceUrl": "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0571/9310/3500/files/ATD_Retail_2023_Flowerpot-VP9_Lato-LN8.jpg?v=1772503667"
         },
         {
-          "image": "img/objects/gallery/vp9-mustard-3.jpg",
-          "width": 2000,
-          "height": 2000,
+          "image": "img/objects/gallery/flowerpot-vp9-orange-3.jpg",
+          "width": 1200,
+          "height": 1600,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "c682d0a09cfed3d5ee4d81b480e06775b956ae6ca07399eef237a5a33ba26680",
-          "sourceUrl": "https://designitch.com/products/flowerpot-vp9-portable-table-lamp-mustard",
-          "sourceImageUrl": "https://designitch.com/cdn/shop/products/FlowerpotVP9PortableTableLamp-Mustard-Lif2.jpg?v=1677225195"
+          "sha256": "20d2faaae6e67a8375ccad5bfd6a99da86ca49c388b9f9ce91b47e6b971d119b",
+          "sourceUrl": "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0571/9310/3500/files/ATD_Retail_2023_Flowerpot-VP9_Collect-Glass-SC78_Collect-Carafe-SC62-1200x1600.jpg?v=1772503667"
         },
         {
-          "image": "img/objects/gallery/vp9-mustard-4.jpg",
-          "width": 1365,
-          "height": 1365,
+          "image": "img/objects/gallery/flowerpot-vp9-orange-4.jpg",
+          "width": 1200,
+          "height": 1600,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "0118e74a9f3887435fc76571cac9e19e2dc7d462faa434b8eedefb7f579aa326",
-          "sourceUrl": "https://www.nordicnest.nl/inspiratie-tips/scandinavische-lifestyle-en-recepten/Creeer-een-feestelijke-sfeer/",
-          "sourceImageUrl": "https://www.nordicnest.nl/assets/contentful/p7vzp7ftmsr1/658bKAxD8XSgHfzXz1LEWW/71811364f2a2f887f7fdd50712d82cdd/how-to-throw-party-set-table-yellow-accents-mustard-vp9-flowerpot-lamp.jpg"
+          "sha256": "ffdf7d5346be23c2bc9ba29e2cdf119fd689670d39c839f72cf9f2a414d8c9d7",
+          "sourceUrl": "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0571/9310/3500/files/ATD_Retail_2023_Flowerpot-VP9_2-1200x1600.jpg?v=1772503667"
         }
       ],
       "issues": [
         "Primary native product detail below 1200px long edge"
       ],
       "colorwayEvidence": {
-        "status": "verified_launch",
-        "claim": "The 2020 VP9 launch release lists Mustard among ten colors; current Zesty Orange is identified as a new color in the existing official-store audit.",
-        "qualification": "Mustard is one launch option, not proven the sole or most famous Flowerpot color across every model.",
+        "status": "owner_exception",
         "findings": [
           {
-            "url": "https://cdn.mohd.it/uploads/attachments/product/a/m/amptraditionpressreleaseflowerpotvp9200811.pdf",
-            "finding": "The 2020 VP9 launch release lists Mustard among ten colors; current Zesty Orange is identified as a new color in the existing official-store audit."
-          },
-          {
-            "url": "https://andtradition.jp/products/flowerpot-vp9",
-            "finding": "The 2020 VP9 launch release lists Mustard among ten colors; current Zesty Orange is identified as a new color in the existing official-store audit."
-          },
-          {
-            "url": "https://designitch.com/products/flowerpot-vp9-portable-table-lamp-mustard",
-            "finding": "The 2020 VP9 launch release lists Mustard among ten colors; current Zesty Orange is identified as a new color in the existing official-store audit."
-          },
-          {
             "url": "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
-            "finding": "The 2020 VP9 launch release lists Mustard among ten colors; current Zesty Orange is identified as a new color in the existing official-store audit."
-          },
-          {
-            "url": "https://www.nordicnest.nl/inspiratie-tips/scandinavische-lifestyle-en-recepten/Creeer-een-feestelijke-sfeer/",
-            "finding": "The 2020 VP9 launch release lists Mustard among ten colors; current Zesty Orange is identified as a new color in the existing official-store audit."
+            "finding": "Owner requested Orange; official Zesty Orange variant46448475013260, available true in product feed on2026-10-11."
           }
         ]
       },
       "editorialReview": {
-        "reviewed": "2026-10-10",
+        "reviewed": "2026-10-11",
         "notes": [
-          "Mustard is explicitly listed in the manufacturer 2020 launch release.",
-          "Four distinct exact-variant photographs are available, with the fourth a contextual image whose lamps occupy a small part of the frame.",
-          "Rejected vp9-mustard-2.jpg: the retailer Mustard gallery also includes a Beige Red/Brown-looking lamp, so that image is not accepted as the exact finish."
+          "Official Zesty Orange front photo used for main; supporting official photos show other colorways in real settings. Original RGB comparison passed."
         ],
-        "sourceLimitations": []
+        "sourceLimitations": [
+          "Native main photo1412 × 1883; usable isolated subject below1200px. No enlargement."
+        ]
       }
     },
     {
@@ -6396,7 +6348,7 @@
         702,
         988
       ],
-      "galleryCount": 1,
+      "galleryCount": 2,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
@@ -6408,10 +6360,20 @@
           "sha256": "1e618924054c8c334a91aea4fdee16caa34ad1a4735bd7ca7330a1c494cd96be",
           "sourceUrl": "https://yokipoetry.stores.jp/items/6a65d000d90e543dbab1830b",
           "sourceImageUrl": "https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/production/6222f69c9a706255092396f8/74c2dc97-fe0e-45a1-a544-f08fbbf8383f/w=2048,fit=scale-down"
+        },
+        {
+          "image": "img/objects/gallery/yoki-pillar-flowers-owner.png",
+          "width": 920,
+          "height": 920,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "7e7d3a440723b38d68ea0ecb6a831aeac07d616a0c05208c2da2a593ee134904",
+          "sourceUrl": "https://yokipoetry.stores.jp/items/6a65d000d90e543dbab1830b",
+          "sourceImageUrl": null
         }
       ],
       "issues": [
         "Primary native product detail below 1200px long edge",
+        "One or more photographs below 1200px long edge",
         "Original/iconic colorway evidence remains unresolved"
       ],
       "colorwayEvidence": {},
@@ -7982,7 +7944,7 @@
         665,
         798
       ],
-      "galleryCount": 4,
+      "galleryCount": 3,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
@@ -8012,15 +7974,6 @@
           "sha256": "7e2c74ced70d24dc1df199c1b0507917257436ccf4a62b639feb94fb133cc81b",
           "sourceUrl": "https://online.actus-interior.com/item/2415508/",
           "sourceImageUrl": "https://online.actus-interior.com/contents/images/goods/detail/L/d8e/24155083_06_new.jpg"
-        },
-        {
-          "image": "img/objects/gallery/actus-deco-dot-photo-frame-owner.webp",
-          "width": 768,
-          "height": 1024,
-          "nativeLongEdgeAtLeast1200": false,
-          "sha256": "0eefd97bdd5d41e909f21de1b5731a8f3b53f6c21a9fd7b3f4487be1ce70aa6e",
-          "sourceUrl": "https://online.actus-interior.com/item/2415508/",
-          "sourceImageUrl": "https://online.actus-interior.com/item/2415508/"
         }
       ],
       "issues": [
@@ -8053,20 +8006,20 @@
       "selectedVariant": "Yellow with orange handles",
       "transparentPrimary": true,
       "primaryPixels": [
-        802,
-        802
+        887,
+        887
       ],
       "primaryNativeSubjectPixels": [
-        345,
-        690
+        410,
+        798
       ],
       "subjectBounds": [
-        228,
-        56,
-        573,
-        746
+        238,
+        44,
+        648,
+        842
       ],
-      "galleryCount": 2,
+      "galleryCount": 3,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
@@ -8080,13 +8033,22 @@
           "sourceImageUrl": "https://online.actus-interior.com/contents/images/goods/detail/L/9ca/2390149_img.jpg"
         },
         {
-          "image": "img/objects/gallery/actus-object-flower-vase-owner.webp",
-          "width": 768,
-          "height": 1024,
+          "image": "img/objects/gallery/actus-object-flower-vase-official-2.jpg",
+          "width": 900,
+          "height": 900,
           "nativeLongEdgeAtLeast1200": false,
-          "sha256": "5f56280ee4b3d3e51752e603fa7f08122adc0497f3910b369390969811eed1b0",
+          "sha256": "ff4ceca3b2cd20d137848c835bdda705b78710bdda5e6d880529ff2f45f87dd2",
           "sourceUrl": "https://online.actus-interior.com/item/2390149/",
-          "sourceImageUrl": "https://online.actus-interior.com/item/2390149/"
+          "sourceImageUrl": "https://online.actus-interior.com/contents/images/goods/detail/L/db8/2390150_img_02.jpg"
+        },
+        {
+          "image": "img/objects/gallery/actus-object-flower-vase-official-3.jpg",
+          "width": 900,
+          "height": 900,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "ec4b766570ae219734e6a21a4963e19aa679d9a7414118460c6a9bc39f26d014",
+          "sourceUrl": "https://online.actus-interior.com/item/2390149/",
+          "sourceImageUrl": "https://online.actus-interior.com/contents/images/goods/detail/L/c30/2390150_img_03.jpg"
         }
       ],
       "issues": [
@@ -8098,7 +8060,7 @@
         "findings": [
           {
             "url": "https://online.actus-interior.com/item/2390149/",
-            "finding": "Variant matches the owner-supplied photograph; cat on right explicitly selected."
+            "finding": "Owner-selected yellow vase with orange handles."
           }
         ]
       },
@@ -8108,7 +8070,7 @@
           "Product identity verified against official retailer/manufacturer page; source photos visually reviewed. Alpha-only RGB comparison passes."
         ],
         "sourceLimitations": [
-          "ACTUS official originals are 900px; owner shop photograph is 1024px. Retained without enlargement."
+          "Official ACTUS gallery originals are 900 × 900; retained at native resolution."
         ]
       }
     },
@@ -8119,20 +8081,20 @@
       "selectedVariant": "Black",
       "transparentPrimary": true,
       "primaryPixels": [
-        508,
-        508
+        363,
+        363
       ],
       "primaryNativeSubjectPixels": [
-        396,
-        437
+        321,
+        327
       ],
       "subjectBounds": [
-        56,
-        35,
-        452,
-        472
+        21,
+        18,
+        342,
+        345
       ],
-      "galleryCount": 4,
+      "galleryCount": 3,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
@@ -8162,20 +8124,10 @@
           "sha256": "b3b02ce048312c7d1321926d31c312daa84def26dc0c73f695c710773c67848c",
           "sourceUrl": "https://iwachu.co.jp/en/products/29540",
           "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0586/5780/0252/files/138_3.jpg?v=1711004218"
-        },
-        {
-          "image": "img/objects/gallery/iwachu-cat-candle-stand-owner.webp",
-          "width": 1024,
-          "height": 768,
-          "nativeLongEdgeAtLeast1200": false,
-          "sha256": "5e84a72b9408ee859fd6d25796ce80e4bf2126e1a9a77916f9770ab6f1203418",
-          "sourceUrl": "https://iwachu.co.jp/en/products/29540",
-          "sourceImageUrl": "https://iwachu.co.jp/en/products/29540"
         }
       ],
       "issues": [
-        "Primary native product detail below 1200px long edge",
-        "One or more photographs below 1200px long edge"
+        "Primary native product detail below 1200px long edge"
       ],
       "colorwayEvidence": {
         "status": "owner_exception",
@@ -8192,7 +8144,7 @@
           "Product identity verified against official retailer/manufacturer page; source photos visually reviewed. Alpha-only RGB comparison passes."
         ],
         "sourceLimitations": [
-          "Three official photos are 1485×990. Owner’s fourth shop view is 1024px; not enlarged."
+          "Official photos1485 × 990; isolated main subject below1200px, retained without enlargement."
         ]
       }
     },
@@ -8274,6 +8226,741 @@
         ],
         "sourceLimitations": []
       }
+    },
+    {
+      "id": "seiko-diver-alarm-clock",
+      "name": "Diver-Inspired Alarm Clock",
+      "brand": "Seiko",
+      "selectedVariant": "QHE207S — silver case, white dial",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1020,
+        1020
+      ],
+      "primaryNativeSubjectPixels": null,
+      "subjectBounds": [
+        60,
+        51,
+        960,
+        969
+      ],
+      "galleryCount": 4,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/seiko-diver-original.png",
+          "width": 1100,
+          "height": 1100,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "f9916c92f18434cd3b24f0ee1d3e28b7594e73a174e4dfe3f6294a0ed2179d2d",
+          "sourceUrl": "https://www.seiko-clocks.co.uk/product/seiko-sports-white-diver-inspired-alarm-clock-qhe207s/",
+          "sourceImageUrl": "https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHE207S_-copy.png"
+        },
+        {
+          "image": "img/objects/gallery/seiko-diver-right.jpg",
+          "width": 2000,
+          "height": 2000,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "05a3b6c52a7cc66c23fa5c7b79f447d53b708da3c919b5c121be6d23a5402225",
+          "sourceUrl": "https://www.seiko-clocks.co.uk/product/seiko-sports-white-diver-inspired-alarm-clock-qhe207s/",
+          "sourceImageUrl": "https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHE207S_right.jpg"
+        },
+        {
+          "image": "img/objects/gallery/seiko-diver-back.jpg",
+          "width": 2000,
+          "height": 2000,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "932c61182c9e5037d71199b19f3627e3b3745a344a4fe95d76f1412a257b8424",
+          "sourceUrl": "https://www.seiko-clocks.co.uk/product/seiko-sports-white-diver-inspired-alarm-clock-qhe207s/",
+          "sourceImageUrl": "https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHE207S_back.jpg"
+        },
+        {
+          "image": "img/objects/gallery/seiko-diver-setting.jpg",
+          "width": 2198,
+          "height": 2198,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "93b8cd9bd124181288f1e265fd96d1793a24bc2c7cd1b7cb56ddfa58b483558d",
+          "sourceUrl": "https://www.seiko-clocks.co.uk/product/seiko-sports-white-diver-inspired-alarm-clock-qhe207s/",
+          "sourceImageUrl": "https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHE207S_LS_basic.jpg"
+        }
+      ],
+      "issues": [
+        "One or more photographs below 1200px long edge",
+        "Original/iconic colorway evidence remains unresolved"
+      ],
+      "colorwayEvidence": {},
+      "editorialReview": {
+        "reviewed": "2026-10-11",
+        "variantConfidence": "Owner reference matched to official product photography",
+        "desiredVariant": "QHE207S — silver case, white dial",
+        "notes": [
+          "Attached reference photographs were not used as website assets.",
+          "Native source resolution retained; source exceptions documented."
+        ]
+      }
+    },
+    {
+      "id": "seiko-stadium-clock",
+      "name": "Sports Timer Clock",
+      "brand": "Seiko",
+      "selectedVariant": "QHL083Y — yellow",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1532,
+        1532
+      ],
+      "primaryNativeSubjectPixels": null,
+      "subjectBounds": [
+        76,
+        123,
+        1455,
+        1409
+      ],
+      "galleryCount": 3,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/seiko-stadium-original.png",
+          "width": 1500,
+          "height": 1500,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "23b90764d96a7edd72db59bf047f0b3c77bcc63e43df2351f4373fa00664f690",
+          "sourceUrl": "https://www.seiko-clocks.co.uk/product/seiko-sports-multi-function-medium-mantel-clock-qhl083y/",
+          "sourceImageUrl": "https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHL083Y_SCH-copy.png"
+        },
+        {
+          "image": "img/objects/gallery/seiko-stadium-sizes.jpg",
+          "width": 1275,
+          "height": 1275,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "003b276b8275a1536d558a2492c2d8e09ec661d4db32965d9391e2a7377ca4e6",
+          "sourceUrl": "https://www.seiko-clocks.co.uk/product/seiko-sports-multi-function-medium-mantel-clock-qhl083y/",
+          "sourceImageUrl": "https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHL062Y_QHL083Y_QHL073Y_2.1-copy.jpg"
+        },
+        {
+          "image": "img/objects/gallery/seiko-stadium-light.jpg",
+          "width": 1500,
+          "height": 1500,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "a390b42196638253256919df88e76206d0586e67271a52bdf61dcbc1fb14dae9",
+          "sourceUrl": "https://www.seiko-clocks.co.uk/product/seiko-sports-multi-function-medium-mantel-clock-qhl083y/",
+          "sourceImageUrl": "https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHL083Y_Lighting-copy.jpg"
+        }
+      ],
+      "issues": [
+        "Original/iconic colorway evidence remains unresolved"
+      ],
+      "colorwayEvidence": {},
+      "editorialReview": {
+        "reviewed": "2026-10-11",
+        "variantConfidence": "Owner reference matched to official product photography",
+        "desiredVariant": "QHL083Y — yellow",
+        "notes": [
+          "Attached reference photographs were not used as website assets.",
+          "Native source resolution retained; source exceptions documented."
+        ]
+      }
+    },
+    {
+      "id": "nahe-packing-pouch",
+      "name": "Packing Pouch L",
+      "brand": "nähe",
+      "selectedVariant": "GB269 — neon orange",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1363,
+        1363
+      ],
+      "primaryNativeSubjectPixels": null,
+      "subjectBounds": [
+        68,
+        114,
+        1295,
+        1248
+      ],
+      "galleryCount": 4,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/nahe-packing-front.jpg",
+          "width": 1500,
+          "height": 1500,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "7c522bbd81eaea71a94a75b69b0b2e92ec792d6897c22cdc2130f197e62fc31a",
+          "sourceUrl": "https://www.hightide.co.jp/c/feature/clearpouch/item-gb269",
+          "sourceImageUrl": "https://hightide.itembox.cloud/product/049/000000004960/000000004960-04.jpg"
+        },
+        {
+          "image": "img/objects/gallery/nahe-packing-back.jpg",
+          "width": 1500,
+          "height": 1500,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "0af552e49d799f8267a80b8dbe7305c753b840c229a8847ed2ff4808def9ad1a",
+          "sourceUrl": "https://www.hightide.co.jp/c/feature/clearpouch/item-gb269",
+          "sourceImageUrl": "https://hightide.itembox.cloud/product/049/000000004960/000000004960-07.jpg"
+        },
+        {
+          "image": "img/objects/gallery/nahe-packing-use.jpg",
+          "width": 760,
+          "height": 560,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "62628bc2b83ad1e2a22dc313a7e37e3ad893fca8ffa9f1bda34c881d09e44e4c",
+          "sourceUrl": "https://www.hightide.co.jp/c/feature/clearpouch/item-gb269",
+          "sourceImageUrl": "https://image.rakuten.co.jp/htdd/cabinet/gold10/gb267-01.jpg"
+        },
+        {
+          "image": "img/objects/gallery/nahe-packing-zipper.jpg",
+          "width": 520,
+          "height": 520,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "f46cea13d00c04f09479171e94fe9c1b1d2504d1f61ee4b2dfb3dcbdaa7b2cc5",
+          "sourceUrl": "https://www.hightide.co.jp/c/feature/clearpouch/item-gb269",
+          "sourceImageUrl": "https://hightide.itembox.cloud/product/049/000000004960/000000004960-08.jpg"
+        }
+      ],
+      "issues": [
+        "One or more photographs below 1200px long edge",
+        "Original/iconic colorway evidence remains unresolved"
+      ],
+      "colorwayEvidence": {},
+      "editorialReview": {
+        "reviewed": "2026-10-11",
+        "variantConfidence": "Owner reference matched to official product photography",
+        "desiredVariant": "GB269 — neon orange",
+        "notes": [
+          "Attached reference photographs were not used as website assets.",
+          "Native source resolution retained; source exceptions documented."
+        ]
+      }
+    },
+    {
+      "id": "heim-egg-spoon",
+      "name": "Egg Spoon",
+      "brand": "Heim Söhne",
+      "selectedVariant": "Coral",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        628,
+        628
+      ],
+      "primaryNativeSubjectPixels": [
+        565,
+        336
+      ],
+      "subjectBounds": [
+        31,
+        146,
+        596,
+        482
+      ],
+      "galleryCount": 3,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/heim-egg-spoon-1.jpg",
+          "width": 1024,
+          "height": 1024,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "d15bedcc4e07c9baa831c64c876fe9a4677db56cc76c5484f2c280697ca6329b",
+          "sourceUrl": "https://www.bostongeneralstore.com/products/egg-spoon",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0211/7300/files/egg-spoon-heim-sohne-boston-general-store-7256725.jpg?v=1772064506"
+        },
+        {
+          "image": "img/objects/gallery/heim-egg-spoon-2.jpg",
+          "width": 3136,
+          "height": 3136,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "ac0a5a7c7c012b5015e7793055d7d3ed28b9c4f2b52a6eb0aaa4d9bf8638539c",
+          "sourceUrl": "https://www.instagram.com/p/DZ_fO4zEsZY/",
+          "sourceImageUrl": "https://www.instagram.com/p/DZ_fO4zEsZY/"
+        },
+        {
+          "image": "img/objects/gallery/heim-egg-spoon-3.jpg",
+          "width": 4096,
+          "height": 4095,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "9f10d2cf7d926afeccebbac87984ae5e3c84e531c9e932b05301f16ee709259d",
+          "sourceUrl": "https://www.instagram.com/p/DZ_fO4zEsZY/",
+          "sourceImageUrl": "https://www.instagram.com/p/DZ_fO4zEsZY/"
+        }
+      ],
+      "issues": [
+        "Primary native product detail below 1200px long edge",
+        "One or more photographs below 1200px long edge"
+      ],
+      "colorwayEvidence": {
+        "status": "owner_exception",
+        "findings": [
+          {
+            "url": "https://www.bostongeneralstore.com/products/egg-spoon",
+            "finding": "Variant selected to represent the owner-linked product; original launch color not established."
+          }
+        ]
+      },
+      "editorialReview": {
+        "reviewed": "2026-10-11",
+        "notes": [
+          "Native RGB unchanged; complete geometry inspected on light and dark backgrounds."
+        ],
+        "sourceLimitations": [
+          "Native single spoon1024px; group3136px and usage4096px."
+        ]
+      }
+    },
+    {
+      "id": "maul-m8-calculator",
+      "name": "M 8 Pocket Calculator",
+      "brand": "MAUL",
+      "selectedVariant": "Blue",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        950,
+        950
+      ],
+      "primaryNativeSubjectPixels": [
+        525,
+        855
+      ],
+      "subjectBounds": [
+        212,
+        47,
+        737,
+        902
+      ],
+      "galleryCount": 4,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/maul-m8-calculator-1.jpg",
+          "width": 1600,
+          "height": 1600,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "47ade2756a59ec24c178aee92575d5ccc0afe53452caa5f60b4fd6c21fe1394c",
+          "sourceUrl": "https://www.maul.de/de/taschenrechner-m-8-7261034",
+          "sourceImageUrl": "https://mau-cdn.b-cdn.net/media/2f/96/31/1754304232/7261034-zusatz-a-sw.jpg"
+        },
+        {
+          "image": "img/objects/gallery/maul-m8-calculator-2.jpg",
+          "width": 1600,
+          "height": 1600,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "2e52d1202765b001b02d06ccb405f9851f6a3c1cd7ed40e7492aa073215a5db4",
+          "sourceUrl": "https://www.maul.de/de/taschenrechner-m-8-7261034",
+          "sourceImageUrl": "https://mau-cdn.b-cdn.net/media/b9/19/07/1754298502/7261022-zusatz-group-a-sw.jpg"
+        },
+        {
+          "image": "img/objects/gallery/maul-m8-calculator-3.jpg",
+          "width": 1600,
+          "height": 1600,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "fa557bf3a96a22d4718d316966c521f82c5b41e4962ea1bfa56ec500b4fe39f5",
+          "sourceUrl": "https://www.maul.de/de/taschenrechner-m-8-7261034",
+          "sourceImageUrl": "https://mau-cdn.b-cdn.net/media/a0/44/3d/1754303456/7261034-zusatz-use-d-sw.jpg"
+        },
+        {
+          "image": "img/objects/gallery/maul-m8-calculator-4.jpg",
+          "width": 1600,
+          "height": 1600,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "35dd3616bf6faecb78ec026961374938b766cb1590601c97aa83ec12c3b1f1da",
+          "sourceUrl": "https://www.maul.de/de/taschenrechner-m-8-7261034",
+          "sourceImageUrl": "https://mau-cdn.b-cdn.net/media/78/b8/40/1754299345/7261034-zusatz-c-sw.jpg"
+        }
+      ],
+      "issues": [
+        "Primary native product detail below 1200px long edge"
+      ],
+      "colorwayEvidence": {
+        "status": "owner_exception",
+        "findings": [
+          {
+            "url": "https://www.maul.de/de/taschenrechner-m-8-7261034",
+            "finding": "Variant selected to represent the owner-linked product; original launch color not established."
+          }
+        ]
+      },
+      "editorialReview": {
+        "reviewed": "2026-10-11",
+        "notes": [
+          "Native RGB unchanged; complete geometry inspected on light and dark backgrounds."
+        ],
+        "sourceLimitations": []
+      }
+    },
+    {
+      "id": "may-bookends",
+      "name": "Bookends",
+      "brand": "may × Offbrand Library",
+      "selectedVariant": "Green",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        2039,
+        2039
+      ],
+      "primaryNativeSubjectPixels": [
+        1835,
+        1339
+      ],
+      "subjectBounds": [
+        102,
+        350,
+        1937,
+        1689
+      ],
+      "galleryCount": 4,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/may-bookends-1.png",
+          "width": 2000,
+          "height": 2000,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "a67a1256150c45bbc53c7e0b834e291fdc24b5b563d7384646bff8febb17ca45",
+          "sourceUrl": "https://offbrandlibrary.com/products/may-bookends",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0842/7395/5133/files/Artboard1_640871d4-51f8-4882-a506-3e949f1d9014.png?v=1790133919"
+        },
+        {
+          "image": "img/objects/gallery/may-bookends-2.jpg",
+          "width": 1980,
+          "height": 1320,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "902d7551cba737e46ce6387742c79b9ef2d404e98cdf527618a9e7da2c9fae37",
+          "sourceUrl": "https://offbrandlibrary.com/products/may-bookends",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0842/7395/5133/files/IMG_3441.jpg?v=1790738192"
+        },
+        {
+          "image": "img/objects/gallery/may-bookends-3.jpg",
+          "width": 1980,
+          "height": 1320,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "bbcf13a46d814b517c460cace9a6a8eff83ed5bc2ddba40d58bfeac0634c4a69",
+          "sourceUrl": "https://offbrandlibrary.com/products/may-bookends",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0842/7395/5133/files/IMG_3579.jpg?v=1790738027"
+        },
+        {
+          "image": "img/objects/gallery/may-bookends-4.jpg",
+          "width": 2250,
+          "height": 1500,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "e9fc0ce5c9bd4b62ee6c5598c65f31bc77442ac9f5c10ac3f5746eacb6a8eaee",
+          "sourceUrl": "https://offbrandlibrary.com/products/may-bookends",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0842/7395/5133/files/Capture_3a5afd39-f21e-43c4-a0fb-de98fcc152c8.jpg?v=1790739071"
+        }
+      ],
+      "issues": [],
+      "colorwayEvidence": {
+        "status": "owner_exception",
+        "findings": [
+          {
+            "url": "https://offbrandlibrary.com/products/may-bookends",
+            "finding": "Variant selected to represent the owner-linked product; original launch color not established."
+          }
+        ]
+      },
+      "editorialReview": {
+        "reviewed": "2026-10-11",
+        "notes": [
+          "Native RGB unchanged; complete geometry inspected on light and dark backgrounds."
+        ],
+        "sourceLimitations": []
+      }
+    },
+    {
+      "id": "alessi-dede",
+      "name": "Dédé Doorstop",
+      "brand": "Alessi",
+      "selectedVariant": "Black PS18B",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1161,
+        1161
+      ],
+      "primaryNativeSubjectPixels": [
+        1045,
+        1042
+      ],
+      "subjectBounds": [
+        58,
+        59,
+        1103,
+        1101
+      ],
+      "galleryCount": 3,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/alessi-dede-1.jpg",
+          "width": 1648,
+          "height": 2062,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "9dbc843110d314c4de9269a382eedb7bac759df9900e8bb3dee642e218678a4a",
+          "sourceUrl": "https://alessi.com/products/dede-doorstop-1",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/files/PS18-01.jpg?v=1728397280"
+        },
+        {
+          "image": "img/objects/gallery/alessi-dede-2.jpg",
+          "width": 1648,
+          "height": 2062,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "19d7df7e758318de5446d8a3c0b676b1862905a3c3eeb50625e5c43b83e74a78",
+          "sourceUrl": "https://alessi.com/products/dede-doorstop-1",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/files/PS18-02.jpg?v=1728397280"
+        },
+        {
+          "image": "img/objects/gallery/alessi-dede-3.jpg",
+          "width": 1648,
+          "height": 2062,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "71d8c2a679328571e6facda4cbedd01640bf6afb8eac969bba128e0e304f2227",
+          "sourceUrl": "https://alessi.com/products/dede-doorstop-1",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/files/PS18-03.jpg?v=1728397280"
+        }
+      ],
+      "issues": [
+        "Primary native product detail below 1200px long edge"
+      ],
+      "colorwayEvidence": {
+        "status": "owner_exception",
+        "findings": [
+          {
+            "url": "https://www.alessi-jp.shop/view/item/000000000786",
+            "finding": "Variant selected to represent the owner-linked product; original launch color not established."
+          }
+        ]
+      },
+      "editorialReview": {
+        "reviewed": "2026-10-11",
+        "notes": [
+          "Native RGB unchanged; complete geometry inspected on light and dark backgrounds."
+        ],
+        "sourceLimitations": []
+      }
+    },
+    {
+      "id": "andlight-slab-series",
+      "name": "Slab Light Series",
+      "brand": "ANDlight",
+      "selectedVariant": "SLAB 90, Marigold",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        2167,
+        2167
+      ],
+      "primaryNativeSubjectPixels": [
+        1950,
+        1075
+      ],
+      "subjectBounds": [
+        108,
+        546,
+        2058,
+        1621
+      ],
+      "galleryCount": 4,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/andlight-slab-series-1.jpg",
+          "width": 5000,
+          "height": 3333,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "8485a996056f0c92dc2f30653cdf0264a92f90f8683d913268071db1c2accabe",
+          "sourceUrl": "https://www.lukaspeet.com/Slab-Light-Series-2013",
+          "sourceImageUrl": "https://payload.cargocollective.com/1/17/570011/9054096/ANDlight---SLAB-90-Marigold-Editorial1_5000.jpg"
+        },
+        {
+          "image": "img/objects/gallery/andlight-slab-series-2.jpg",
+          "width": 2000,
+          "height": 1333,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "f7cfb6bbd315400b53d4fd53e181aed0e29a0c805d546bf15eab8247d01808de",
+          "sourceUrl": "https://www.lukaspeet.com/Slab-Light-Series-2013",
+          "sourceImageUrl": "https://payload.cargocollective.com/1/17/570011/9054096/ANDlight---Lukas-Peet---SLAB-Group-2_2000.jpg"
+        },
+        {
+          "image": "img/objects/gallery/andlight-slab-series-3.jpg",
+          "width": 2000,
+          "height": 1335,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "765d7db3616130ba547d7ab411240e4661712b90538bb0a09708df93309f5c9d",
+          "sourceUrl": "https://www.lukaspeet.com/Slab-Light-Series-2013",
+          "sourceImageUrl": "https://payload.cargocollective.com/1/17/570011/9054096/ANDlight---SLAB-Felt-4_2000.jpg"
+        },
+        {
+          "image": "img/objects/gallery/andlight-slab-series-4.jpg",
+          "width": 5000,
+          "height": 3333,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "e45aea37141567b0ea8f10d6412ad65570d8437533467dcb2f40d9a0f2f8669d",
+          "sourceUrl": "https://www.lukaspeet.com/Slab-Light-Series-2013",
+          "sourceImageUrl": "https://payload.cargocollective.com/1/17/570011/9054096/AND-light---Lukas-Peet---SLAB-Situation-D-B-Cloud---Photographer-Ema-Peter_5000.jpg"
+        }
+      ],
+      "issues": [],
+      "colorwayEvidence": {
+        "status": "owner_exception",
+        "findings": [
+          {
+            "url": "https://www.lukaspeet.com/Slab-Light-Series-2013",
+            "finding": "Marigold SLAB90 selected from owner-linked series page; launch color priority unresolved."
+          }
+        ]
+      },
+      "editorialReview": {
+        "reviewed": "2026-10-11",
+        "notes": [
+          "Four distinct designer-published originals: pendant, series variety, felt detail, installation. Original RGB comparison passed."
+        ],
+        "sourceLimitations": []
+      }
+    },
+    {
+      "id": "flos-mayday",
+      "name": "Mayday",
+      "brand": "Flos",
+      "selectedVariant": "Mayday, Orange",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1397,
+        1397
+      ],
+      "primaryNativeSubjectPixels": [
+        511,
+        1257
+      ],
+      "subjectBounds": [
+        443,
+        70,
+        954,
+        1327
+      ],
+      "galleryCount": 4,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/flos-mayday-1.jpg",
+          "width": 3000,
+          "height": 3000,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "7b5408856702be86da8d889ee14c6110d115cd186b76eb0c9607e9f2864dbb7e",
+          "sourceUrl": "https://flos.com/en/wo/mayday/M-mayday.html",
+          "sourceImageUrl": "https://flos.com/on/demandware.static/-/Sites-FLOS-master/default/dw4c912fcb/images/square_lifestyle/mayday/g_mayday_orange.jpg"
+        },
+        {
+          "image": "img/objects/gallery/flos-mayday-2.jpg",
+          "width": 3830,
+          "height": 2873,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "a2e5a7ce562380344a532750bd2d298916e4e31cab93396e80203adb8b01f214",
+          "sourceUrl": "https://flos.com/en/wo/mayday/M-mayday.html",
+          "sourceImageUrl": "https://flos.com/on/demandware.static/-/Sites-FLOS-master/default/dw933e6d54/images/lifeshot/F37800/Desktop/mayday-orange-table-grcic-flos-02.jpg"
+        },
+        {
+          "image": "img/objects/gallery/flos-mayday-3.jpg",
+          "width": 3744,
+          "height": 2808,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "1222a7837c63d78fdedc8e0af8c0855def05ae4b754eb623e9955339ae51a80e",
+          "sourceUrl": "https://flos.com/en/wo/mayday/M-mayday.html",
+          "sourceImageUrl": "https://flos.com/on/demandware.static/-/Sites-FLOS-master/default/dw8c3eaf62/images/lifeshot/F37800/Desktop/mayday-orange-table-grcic-flos-03.jpg"
+        },
+        {
+          "image": "img/objects/gallery/flos-mayday-4.jpg",
+          "width": 6599,
+          "height": 4949,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "f2f629b26564f42996ba4809b8e439638e6a2c41458b14844b911137f452dcb6",
+          "sourceUrl": "https://flos.com/en/wo/mayday/M-mayday.html",
+          "sourceImageUrl": "https://flos.com/on/demandware.static/-/Sites-FLOS-master/default/dw14b39f20/images/lifeshot/F37800/Desktop/mayday-orange-black-table-grcic-flos-01.jpg"
+        }
+      ],
+      "issues": [],
+      "colorwayEvidence": {
+        "status": "owner_exception",
+        "findings": [
+          {
+            "url": "https://www.amazon.co.jp/dp/B01MQH0OIG",
+            "finding": "Orange selected in owner-linked Amazon listing; identity matches official Flos F3780002 orange Mayday."
+          }
+        ]
+      },
+      "editorialReview": {
+        "reviewed": "2026-10-11",
+        "notes": [
+          "Four distinct official lifestyle views show standing, floor use, hanging use, and black/orange variety. Complete product geometry and original RGB verified."
+        ],
+        "sourceLimitations": [
+          "Native product photo2300px square; meaningful isolated subject below1200px, never enlarged."
+        ]
+      }
+    },
+    {
+      "id": "alessi-sleek",
+      "name": "Sleek Spoon for Jars",
+      "brand": "Alessi",
+      "selectedVariant": "Sleek Spoon for Jars",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1288,
+        1288
+      ],
+      "primaryNativeSubjectPixels": [
+        205,
+        1159
+      ],
+      "subjectBounds": [
+        541,
+        64,
+        746,
+        1223
+      ],
+      "galleryCount": 3,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/alessi-sleek-full.jpg",
+          "width": 1648,
+          "height": 1648,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "b47d00f15d3b64769635cdbe0d5e0f8371905ba37743f4955f0c774af66e09a9",
+          "sourceUrl": "https://alessi.com/products/sleek-spoon-for-jars",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/AAC09-AZ-04.jpg?v=1637257738"
+        },
+        {
+          "image": "img/objects/gallery/alessi-sleek-2.jpg",
+          "width": 1648,
+          "height": 2062,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "f6c2c977c89d246bf7094a356a871f7e04331a091a9756cc31e9a68e7ac388c6",
+          "sourceUrl": "https://alessi.com/products/sleek-spoon-for-jars",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/02_AC09.jpg?v=1637257738"
+        },
+        {
+          "image": "img/objects/gallery/alessi-sleek-3.jpg",
+          "width": 1648,
+          "height": 2062,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "4bd676584358efb4b0392b8bc06099f5d117eaded1d00c31e10e58c44031d78a",
+          "sourceUrl": "https://alessi.com/products/sleek-spoon-for-jars",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/AAC09-AZ-03.jpg?v=1637257738"
+        }
+      ],
+      "issues": [
+        "Primary native product detail below 1200px long edge",
+        "Original/iconic colorway evidence remains unresolved"
+      ],
+      "colorwayEvidence": {},
+      "editorialReview": {}
     }
   ]
 }

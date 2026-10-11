@@ -797,18 +797,41 @@
   }).observe(canvas);
   reduced.addEventListener('change',()=>{if(reduced.matches){if(motion)pose(motion.target,false);detailAnimations.forEach(animation=>animation.finish());}});
   document.querySelector('.skip-link').addEventListener('click',event=>{event.preventDefault();canvas.focus();});
+  // A stationary pointer must not reveal a product as photos arrive beneath it.
+  let entranceSettled=reduced.matches;
+  let pageLoaded=document.readyState==='complete';
+  if(!pageLoaded)window.addEventListener('load',()=>{pageLoaded=true;},{once:true});
+  canvas.addEventListener('pointermove',event=>{
+    if(event.pointerType==='mouse'&&pageLoaded&&entranceSettled){
+      page.classList.add('objects-hover-ready');
+    }
+  },{passive:true});
   page.classList.add('objects-ready','objects-min-zoom');filter();
   let infoSeen=false;try{infoSeen=localStorage.getItem(infoSeenKey)==='1';}catch{}
   if(reduced.matches){if(!infoSeen)openInfo();}
   else{
     page.classList.add('finds-entering');
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    // Establish the first layout before observing size changes, so the initial
+    // resize notification cannot discard the tiles receiving the entrance.
+    measuredWidth=canvas.clientWidth;measuredHeight=canvas.clientHeight;
+    if(frame){cancelAnimationFrame(frame);frame=0;}
+    draw();
+    requestAnimationFrame(()=>requestAnimationFrame(async ()=>{
       const images=[...layer.querySelectorAll('.objects-tile img')].filter(image=>{const r=image.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth;});
+      // Cold-cache photos must be decoded before their visible entrance begins.
+      await Promise.all(images.map(image=>image.decode().catch(()=>{})));
+      if(reduced.matches){
+        entranceSettled=true;
+        page.classList.remove('finds-entering');
+        if(!infoSeen)openInfo();
+        return;
+      }
       const duration=760;
       // A ripple from the center: each object hops into place with a little tilt.
       const ranked=images.map(image=>{const r=image.getBoundingClientRect();return {image,distance:Math.hypot((r.left+r.width/2-innerWidth/2)/cell,(r.top+r.height/2-innerHeight/2)/row)};}).sort((a,b)=>a.distance-b.distance);
       ranked.forEach(({image},index)=>{
         const tilt=index%2?6:-6;
+        image.style.opacity='1';
         image.animate([
           {opacity:0,transform:`translateY(32px) rotate(${tilt}deg) scale(.72)`,offset:0},
           {opacity:1,transform:`translateY(-8px) rotate(${-tilt*.3}deg) scale(1.04)`,offset:.6},
@@ -816,7 +839,7 @@
           {opacity:1,transform:'translateY(0) rotate(0deg) scale(1)',offset:1}
         ],{duration,delay:Math.min(index*32,640),easing:'cubic-bezier(.2,.8,.2,1)',fill:'backwards'});
       });
-      setTimeout(()=>{page.classList.remove('finds-entering');page.classList.add('finds-controls-enter');setTimeout(()=>{page.classList.remove('finds-controls-enter');if(!infoSeen)openInfo();},480);},duration+Math.min(Math.max(0,images.length-1)*32,640));
+      setTimeout(()=>{page.classList.remove('finds-entering');page.classList.add('finds-controls-enter');setTimeout(()=>{page.classList.remove('finds-controls-enter');entranceSettled=true;if(!infoSeen)openInfo();},480);},duration+Math.min(Math.max(0,images.length-1)*32,640));
     }));
   }
 })();

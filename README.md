@@ -607,4 +607,10 @@ Finds canvas hover keeps the transparent product image at its normal size and re
 
 Studio’s complete description now precedes the full-width artwork carousel, which sits directly above the Services table. The copy uses “a fresh pair of eyes and a hands-on approach” in place of the earlier editing sentence.
 
-Studio now carries its Ash Brown ground with the section, with a narrow 8px softened boundary in the surrounding whitespace. Shop retains Soft Beige and dark-brown type; the whole viewport no longer blends through gray. Reduced motion uses solid section grounds.
+Studio now carries its Ash Brown ground with the section, with crisp boundaries in the surrounding whitespace. Shop retains Soft Beige and dark-brown type; the whole viewport no longer blends through gray. Reduced motion uses solid section grounds.
+
+Finds waits for the visible canvas photos to decode before playing its staggered product entrance. Initial canvas measurement preserves the animated tiles, including on a cold cache; reduced motion shows them immediately.
+
+Finds product hover labels and pointer cursors activate only after page loading and the entrance sequence finish, followed by a fresh mouse movement over the canvas. A stationary pointer cannot reveal a label while products load beneath it. Reduced motion skips the entrance wait; keyboard access is unchanged.
+
+Finds outgoing product links include `utm_source=2d1.studio`, `utm_medium=referral`, and `utm_campaign=finds`, generated centrally by `scripts/build-objects.py` for both language routes and the no-JavaScript catalog. The modal uses the same generated link. Other query parameters and fragments remain intact; photography credits remain untagged. This identifies referral traffic to retailers that read UTMs, without affiliate commissions or a new tracking service on 2D1.

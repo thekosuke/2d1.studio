@@ -11,3 +11,9 @@ Run `python3 scripts/audit-finds.py` (development dependency: Pillow), inspect i
 ## Gallery composition and framing
 
 Aim for four complementary authentic photographs: a clear complete product view, a second angle or mechanism, a close view of material/construction, and real use in a believable setting. Adapt the selection to the product; retain fewer when verified native-resolution sources are unavailable. Owner override, 11 October: fill detail containers edge to edge (`object-fit: cover`), centered at every viewport, with no letterboxing. Portrait photos fill the width; landscape photos fill the height. Choose compositions that keep the important product features within this crop. The canvas uses its separate transparent master.
+
+## Required modal framing check — owner correction, 11 October
+
+The first detail image is a complete product overview: the entire product must remain visible, including its top and base, with breathing room. Do not use a tight portrait crop with the square cover container. Prepare a native square crop that includes the whole product whenever the source allows; retain the original and never enlarge. Intentional close-ups belong later in the gallery.
+
+Before reporting any addition or image replacement complete, open the actual detail modal at desktop and phone widths and inspect the first image. A source-file preview or transparent canvas preview does not replace this check. Verify the product’s top, sides and bottom remain visible in the rendered cover crop. Save a screenshot of the modal as proof. Repeat whenever a gallery’s first image changes.

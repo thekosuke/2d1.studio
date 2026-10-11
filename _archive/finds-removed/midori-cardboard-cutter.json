@@ -1,0 +1,82 @@
+{
+  "id": "midori-cardboard-cutter",
+  "name": "Cardboard Cutter",
+  "brand": "MIDORI",
+  "category": "work",
+  "tags": [
+    "work"
+  ],
+  "description": "A compact folding ceramic cutter for opening packages, with a magnetic back for keeping it close.",
+  "productUrl": "https://www.midori-store.net/SHOP/35409006.html",
+  "sourceUrl": "https://www.midori-store.net/SHOP/35409006.html",
+  "sourceImageUrl": "https://image1.shopserve.jp/midori-store.net/pic-labo/35409_2.jpg",
+  "image": "img/objects/cutouts/midori-cardboard-cutter.webp",
+  "width": 392,
+  "height": 392,
+  "gallery": [
+    {
+      "image": "img/objects/gallery/midori-cardboard-cutter-1.jpg",
+      "width": 600,
+      "height": 600,
+      "sourceUrl": "https://www.midori-store.net/SHOP/35409006.html",
+      "sourceImageUrl": "https://image1.shopserve.jp/midori-store.net/pic-labo/35409_2.jpg"
+    },
+    {
+      "image": "img/objects/gallery/midori-cardboard-cutter-2.jpg",
+      "width": 600,
+      "height": 600,
+      "sourceUrl": "https://www.midori-store.net/SHOP/35409006.html",
+      "sourceImageUrl": "https://image1.shopserve.jp/midori-store.net/pic-labo/35409_5.jpg"
+    },
+    {
+      "image": "img/objects/gallery/midori-cardboard-cutter-3.jpg",
+      "width": 600,
+      "height": 600,
+      "sourceUrl": "https://www.midori-store.net/SHOP/35409006.html",
+      "sourceImageUrl": "https://image1.shopserve.jp/midori-store.net/pic-labo/35409_6.jpg"
+    },
+    {
+      "image": "img/objects/gallery/midori-cardboard-cutter-4.jpg",
+      "width": 600,
+      "height": 600,
+      "sourceUrl": "https://www.midori-store.net/SHOP/35409006.html",
+      "sourceImageUrl": "https://image1.shopserve.jp/midori-store.net/pic-labo/35409_7.jpg"
+    }
+  ],
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/midori-cardboard-cutter.webp",
+      "width": 392
+    }
+  ],
+  "variantName": "Black",
+  "usageCaveat": "Authentic brand or retailer photography; private preview, no unrestricted image license verified.",
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Native original RGB with alpha-only foreground mask",
+    "subjectPixels": [
+      353,
+      286
+    ],
+    "opticalFill": 0.9,
+    "upscaled": false
+  },
+  "colorwayEvidence": {
+    "status": "owner_exception",
+    "findings": [
+      {
+        "url": "https://www.midori-store.net/SHOP/35409006.html",
+        "finding": "Variant selected to represent the owner-linked product; original launch color not established."
+      }
+    ]
+  },
+  "catalogAudit": {
+    "reviewed": "2026-10-11",
+    "notes": [
+      "Native RGB unchanged; complete geometry inspected on light and dark backgrounds."
+    ],
+    "sourceLimitations": [
+      "Native MIDORI photographs600px; no enlargement."
+    ]
+  }
+}

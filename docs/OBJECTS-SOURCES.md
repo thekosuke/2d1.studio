@@ -1311,3 +1311,126 @@ Owner-selected red polyethylene canvas and first detail photo. Alpha-only native
 - https://www.magisdesign.com/wp-content/uploads/2015/02/Magis_spun_product_detail_SD660_black_01.jpg
 
 Diffar now uses Tokyo Balance (11001), with native transparent canvas photography and four official square gallery scenes showing Tokyo Balance, Woody Earthy, Herbal Floral and Japanese Citrus. The stable catalog ID is retained for ownership counts.
+
+Playful Storage Stool Side Table uses the owner-selected Blue variant, with an original-RGB transparent main image. The official complete blue photo is limited to 640 × 800; gallery includes higher-resolution color-group and blue storage-detail photos.
+
+## Owner reference additions — 11 October
+
+Three products added using official photography only; attached shop photographs serve solely as identification references. Display names omit colors.
+
+### Seiko — Diver-Inspired Alarm Clock
+
+[Official product and photo source](https://www.seiko-clocks.co.uk/product/seiko-sports-white-diver-inspired-alarm-clock-qhe207s/). Selected variant: QHE207S — silver case, white dial. Original RGB retained; square canvas master uses official alpha or alpha-only masking without enlargement.
+- img/objects/gallery/seiko-diver-original.png — 1100 × 1100; https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHE207S_-copy.png
+- img/objects/gallery/seiko-diver-right.jpg — 2000 × 2000; https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHE207S_right.jpg
+- img/objects/gallery/seiko-diver-back.jpg — 2000 × 2000; https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHE207S_back.jpg
+- img/objects/gallery/seiko-diver-setting.jpg — 2198 × 2198; https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHE207S_LS_basic.jpg
+
+### Seiko — Sports Timer Clock
+
+[Official product and photo source](https://www.seiko-clocks.co.uk/product/seiko-sports-multi-function-medium-mantel-clock-qhl083y/). Selected variant: QHL083Y — yellow. Original RGB retained; square canvas master uses official alpha or alpha-only masking without enlargement.
+- img/objects/gallery/seiko-stadium-original.png — 1500 × 1500; https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHL083Y_SCH-copy.png
+- img/objects/gallery/seiko-stadium-sizes.jpg — 1275 × 1275; https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHL062Y_QHL083Y_QHL073Y_2.1-copy.jpg
+- img/objects/gallery/seiko-stadium-light.jpg — 1500 × 1500; https://www.seiko-clocks.co.uk/wp-content/uploads/2025/11/QHL083Y_Lighting-copy.jpg
+
+### nähe — Packing Pouch L
+
+[Official product and photo source](https://www.hightide.co.jp/c/feature/clearpouch/item-gb269). Selected variant: GB269 — neon orange. Original RGB retained; square canvas master uses official alpha or alpha-only masking without enlargement.
+- img/objects/gallery/nahe-packing-front.jpg — 1500 × 1500; https://hightide.itembox.cloud/product/049/000000004960/000000004960-04.jpg
+- img/objects/gallery/nahe-packing-back.jpg — 1500 × 1500; https://hightide.itembox.cloud/product/049/000000004960/000000004960-07.jpg
+- img/objects/gallery/nahe-packing-use.jpg — 760 × 560; https://image.rakuten.co.jp/htdd/cabinet/gold10/gb267-01.jpg
+- img/objects/gallery/nahe-packing-zipper.jpg — 520 × 520; https://hightide.itembox.cloud/product/049/000000004960/000000004960-08.jpg
+
+Source exceptions: Seiko diver front is 1100px (other angles 2000px+). HIGHTIDE lifestyle is 760 × 560 and zipper view 520px; these are native published originals, retained without enlargement. Stadium group photograph includes QHL062Y, QHL083Y and QHL073Y, fulfilling the owner’s request to show both pictured stadium sizes.
+
+### Object Flower Vase — canvas replacement, 11 October
+
+Owner-supplied 900 × 900 ACTUS product photograph replaces the canvas main. Original saved as `img/objects/gallery/actus-object-flower-vase-owner-main.png`. Native RGB is unchanged; alpha-only foreground masking removes the background. New versioned filenames prevent stale canvas caches. Detail gallery remains unchanged.
+
+## Six linked additions — 11 October2026
+
+Authentic native photos; alpha-only canvas masking, unchanged RGB, no enlargement. Display names omit colors. MIDORI photos are native600px; Heim single spoon1024px. These source exceptions are retained transparently rather than enlarged.
+- `img/objects/gallery/maika-revomax-bottle-1.png` — 1280 × 1280; https://baseec-img-mng.akamaized.net/images/item/origin/25f7a44313f68864aaf3dbb4a6707d95.png
+- `img/objects/gallery/maika-revomax-bottle-2.png` — 1280 × 1280; https://baseec-img-mng.akamaized.net/images/item/origin/12196d86f533d3361b1ad1e334a5ea48.png
+- `img/objects/gallery/maika-revomax-bottle-3.png` — 1280 × 1280; https://baseec-img-mng.akamaized.net/images/item/origin/be62b38eae9fb6d64f06ab863a66580e.png
+- `img/objects/gallery/maika-revomax-bottle-4.png` — 1280 × 1280; https://baseec-img-mng.akamaized.net/images/item/origin/29953d5b2a49d90eda9a11b48d8137c2.png
+
+Mag Bottle — https://maikalife.theshop.jp/items/151611456; variant: 12oz / 355ml, gray.
+
+- `img/objects/gallery/midori-cardboard-cutter-1.jpg` — 600 × 600; https://image1.shopserve.jp/midori-store.net/pic-labo/35409_2.jpg
+- `img/objects/gallery/midori-cardboard-cutter-2.jpg` — 600 × 600; https://image1.shopserve.jp/midori-store.net/pic-labo/35409_5.jpg
+- `img/objects/gallery/midori-cardboard-cutter-3.jpg` — 600 × 600; https://image1.shopserve.jp/midori-store.net/pic-labo/35409_6.jpg
+- `img/objects/gallery/midori-cardboard-cutter-4.jpg` — 600 × 600; https://image1.shopserve.jp/midori-store.net/pic-labo/35409_7.jpg
+
+Cardboard Cutter — https://www.midori-store.net/SHOP/35409006.html; variant: Black.
+
+- `img/objects/gallery/heim-egg-spoon-1.jpg` — 1024 × 1024; https://cdn.shopify.com/s/files/1/0211/7300/files/egg-spoon-heim-sohne-boston-general-store-7256725.jpg?v=1772064506
+- `img/objects/gallery/heim-egg-spoon-2.jpg` — 3136 × 3136; https://www.instagram.com/p/DZ_fO4zEsZY/
+- `img/objects/gallery/heim-egg-spoon-3.jpg` — 4096 × 4095; https://www.instagram.com/p/DZ_fO4zEsZY/
+
+Egg Spoon — https://www.bostongeneralstore.com/products/egg-spoon; variant: Coral.
+
+- `img/objects/gallery/maul-m8-calculator-1.jpg` — 1600 × 1600; https://mau-cdn.b-cdn.net/media/2f/96/31/1754304232/7261034-zusatz-a-sw.jpg
+- `img/objects/gallery/maul-m8-calculator-2.jpg` — 1600 × 1600; https://mau-cdn.b-cdn.net/media/b9/19/07/1754298502/7261022-zusatz-group-a-sw.jpg
+- `img/objects/gallery/maul-m8-calculator-3.jpg` — 1600 × 1600; https://mau-cdn.b-cdn.net/media/a0/44/3d/1754303456/7261034-zusatz-use-d-sw.jpg
+- `img/objects/gallery/maul-m8-calculator-4.jpg` — 1600 × 1600; https://mau-cdn.b-cdn.net/media/78/b8/40/1754299345/7261034-zusatz-c-sw.jpg
+
+M 8 Pocket Calculator — https://www.maul.de/de/taschenrechner-m-8-7261034; variant: Blue.
+
+- `img/objects/gallery/may-bookends-1.png` — 2000 × 2000; https://cdn.shopify.com/s/files/1/0842/7395/5133/files/Artboard1_640871d4-51f8-4882-a506-3e949f1d9014.png?v=1790133919
+- `img/objects/gallery/may-bookends-2.jpg` — 1980 × 1320; https://cdn.shopify.com/s/files/1/0842/7395/5133/files/IMG_3441.jpg?v=1790738192
+- `img/objects/gallery/may-bookends-3.jpg` — 1980 × 1320; https://cdn.shopify.com/s/files/1/0842/7395/5133/files/IMG_3579.jpg?v=1790738027
+- `img/objects/gallery/may-bookends-4.jpg` — 2250 × 1500; https://cdn.shopify.com/s/files/1/0842/7395/5133/files/Capture_3a5afd39-f21e-43c4-a0fb-de98fcc152c8.jpg?v=1790739071
+
+Bookends — https://offbrandlibrary.com/products/may-bookends; variant: Green.
+
+- `img/objects/gallery/alessi-dede-1.jpg` — 1648 × 2062; https://cdn.shopify.com/s/files/1/0337/3603/2392/files/PS18-01.jpg?v=1728397280
+- `img/objects/gallery/alessi-dede-2.jpg` — 1648 × 2062; https://cdn.shopify.com/s/files/1/0337/3603/2392/files/PS18-02.jpg?v=1728397280
+- `img/objects/gallery/alessi-dede-3.jpg` — 1648 × 2062; https://cdn.shopify.com/s/files/1/0337/3603/2392/files/PS18-03.jpg?v=1728397280
+
+Dédé Doorstop — https://www.alessi-jp.shop/view/item/000000000786; variant: Black PS18B.
+
+Cat Candle Stand — owner selected the first official detail photo as the canvas main, with alpha-only masking and unchanged native RGB. Removed the last (owner shop) detail photo; three official views remain. Original source: https://cdn.shopify.com/s/files/1/0586/5780/0252/files/138_1.jpg?v=1711004218
+
+Twergi ES19 — owner-selected Red variant46488901681478 by Ettore Sottsass. Stable product ID retained; color-free name unchanged. Three official original photographs; native red view cropped for framing, never enlarged. Original RGB comparison passed.
+https://cdn.shopify.com/s/files/1/0337/3603/2392/products/05_ES19.jpg?v=1680531360
+https://cdn.shopify.com/s/files/1/0337/3603/2392/products/ES18-ES19-MP0210-02_054ce3f4-9a6e-4798-98b5-c7136422560f.jpg?v=1680531360
+https://cdn.shopify.com/s/files/1/0337/3603/2392/products/03_ES19.jpg?v=1680531360
+
+Pikmin Single-Flower Vase Set — owner requested front-facing view. Official1920 × 1920 set photograph replaces canvas main and leads detail gallery. Original RGB unchanged; alpha-only mask, native framing, no enlargement. Source: https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:best/m5igyh0szzcvzmsuypus
+
+Flowerpot VP9 — owner-selected Zesty Orange, official variant46448475013260. Restored forSale=true: Japanese official product feed available=true on2026-10-11; product link selects Orange. smow also lists orange in stock. Four authentic official views show Orange and other colorways in use; native RGB unchanged, alpha-only main, no enlargement.
+https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260
+https://cdn.shopify.com/s/files/1/0571/9310/3500/files/VP9_Zesty-Orange_Front_ON.jpg?v=1772503667
+https://cdn.shopify.com/s/files/1/0571/9310/3500/files/ATD_Retail_2023_Flowerpot-VP9_Lato-LN8.jpg?v=1772503667
+https://cdn.shopify.com/s/files/1/0571/9310/3500/files/ATD_Retail_2023_Flowerpot-VP9_Collect-Glass-SC78_Collect-Carafe-SC62-1200x1600.jpg?v=1772503667
+https://cdn.shopify.com/s/files/1/0571/9310/3500/files/ATD_Retail_2023_Flowerpot-VP9_2-1200x1600.jpg?v=1772503667
+
+Slab Light Series — ANDlight, Lukas Peet2013. Owner-linked designer page; Marigold SLAB90 body chosen as main, suspension cropped where it extends beyond original photograph. Alpha-only masking, unchanged native RGB, no enlargement. Four authentic originals: complete pendant, series variety, felt detail, real installation (Ema Peter).
+https://www.lukaspeet.com/Slab-Light-Series-2013
+https://payload.cargocollective.com/1/17/570011/9054096/ANDlight---SLAB-90-Marigold-Editorial1_5000.jpg
+https://payload.cargocollective.com/1/17/570011/9054096/ANDlight---Lukas-Peet---SLAB-Group-2_2000.jpg
+https://payload.cargocollective.com/1/17/570011/9054096/ANDlight---SLAB-Felt-4_2000.jpg
+https://payload.cargocollective.com/1/17/570011/9054096/AND-light---Lukas-Peet---SLAB-Situation-D-B-Cloud---Photographer-Ema-Peter_5000.jpg
+
+Mayday — Flos, Konstantin Grcic. Owner-linked Amazon orange lamp; official Flos F3780002 orange identity and photographs. Canvas native RGB unchanged with alpha-only mask, no enlargement. Four distinct authentic high-resolution views show floor, tabletop, hanging use and orange/black variety. Native main2300px square has substantial background padding; no upscaling.
+https://www.amazon.co.jp/dp/B01MQH0OIG
+https://flos.com/en/wo/mayday/M-mayday.html
+https://flos-pim.imgix.net/damflos/products/DECORATIVE/DECORATIVE_SUSPENSION_MAYDAY/F3780002/Flos-Pim-Image-Luminaire-Table-MayDay-Orange.jpg
+https://flos.com/on/demandware.static/-/Sites-FLOS-master/default/dw4c912fcb/images/square_lifestyle/mayday/g_mayday_orange.jpg
+https://flos.com/on/demandware.static/-/Sites-FLOS-master/default/dw933e6d54/images/lifeshot/F37800/Desktop/mayday-orange-table-grcic-flos-02.jpg
+https://flos.com/on/demandware.static/-/Sites-FLOS-master/default/dw8c3eaf62/images/lifeshot/F37800/Desktop/mayday-orange-table-grcic-flos-03.jpg
+https://flos.com/on/demandware.static/-/Sites-FLOS-master/default/dw14b39f20/images/lifeshot/F37800/Desktop/mayday-orange-black-table-grcic-flos-01.jpg
+
+Flowerpot VP9 first modal image reframed as a native1200px square crop with space above the knob and below the base, matching the square cover container. Original source retained, no enlargement.
+
+Twergi ES19 first modal image corrected to a native1000px square crop with full top/base clearance. Original1648 × 2062 retained; no enlargement. Native source exception reflects meaningful product resolution rather than artificially padding to a threshold.
+
+### Tumbler 1709 photo and purchase review — 11 October 2026
+Added Ajan-Muisto’s native 1440 × 1080 red-glass pair, cropped to a 1080px square with both glasses fully visible, plus Primitive × Sanchikagu’s 660px overhead detail (a documented resolution exception for this vintage object). Retained the two colorful stacking photographs and canvas cutout. Ajan-Muisto’s exact 1709 listing shows in stock and an add-to-cart button at €65 per glass; it replaces the Instagram purchase link. Primitive’s listing is sold out and is used only as a photography credit. Desktop and 390px phone modal framing checked.
+
+### Sleek Spoon for Jars — 11 October 2026
+Alessi’s blue thermoplastic-resin spoon by Achille and Pier Giacomo Castiglioni. Official product feed confirms availability. Three original 1648 × 2062 photographs: complete product overview (native 1648px square crop), marmalade jar in use, and spoon-head close-up. Canvas cutout preserves original RGB with an alpha-only mask, no enlargement. Source and purchase: https://alessi.com/products/sleek-spoon-for-jars .
+
+### Furoshiki Shiki Card Case — 11 October 2026
+Owner-selected yellow Samira Boon card case. Four original designer-store photographs: complete yellow case, pink case unfolded with cards, pink case with coins, and lime variation. Yellow original 2032 × 1334; native square overview crop and original-RGB alpha-only canvas cutout, no enlargement. Designer store purchase link: https://shop.samiraboon.com/product-page/furoshiki-shiki-card-case-1 .
