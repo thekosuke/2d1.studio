@@ -540,5 +540,6 @@ window.TWO_D_ONE_JA = {
   "Tell us about your project, what you need, and your timeline.": "プロジェクトの内容、ご相談したいこと、スケジュールを教えてください。",
   "Tell us about your publication, inquiry, and deadline.": "媒体名、お問い合わせの内容、締め切りを教えてください。",
   "What’s happening, and what would you like a fresh perspective on?": "どんなことが起きていますか？違う視点から考えてみたいことを教えてください。",
-  "Stay updated": "最新情報を受け取る"
+  "Stay updated": "最新情報を受け取る",
+  "We work with small teams and businesses to make their ideas clear and give them character. From strategy and visual identity down to the pixels of an interface, we bring": "小さなチームや事業者とともに、アイデアを明確にし、その個性を形にします。戦略やビジュアルアイデンティティから、インターフェースのピクセルひとつまで。"
 };

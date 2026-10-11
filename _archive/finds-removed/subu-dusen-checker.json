@@ -1,0 +1,85 @@
+{
+  "id": "subu-dusen-checker",
+  "name": "Dusen Dusen for MoMA Sandals",
+  "brand": "SUBU × Dusen Dusen",
+  "category": "wear",
+  "tags": [
+    "footwear",
+    "outdoors"
+  ],
+  "description": "Padded slip-on sandals with Ellen Van Dusen’s checker pattern, made for MoMA.",
+  "productUrl": "https://www.dusendusen.com/pages/projects",
+  "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
+  "sourceImageUrl": "https://www.momastore.jp/img/goods/L/4977468704060_2.jpg",
+  "image": "img/objects/cutouts/subu-dusen-checker.webp",
+  "width": 1099,
+  "height": 1099,
+  "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+  "gallery": [
+    {
+      "image": "img/objects/subu-dusen-checker.jpg",
+      "width": 1061,
+      "height": 1061,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
+      "sourceImageUrl": "https://www.momastore.jp/img/goods/L/4977468704060_2.jpg"
+    },
+    {
+      "image": "img/objects/gallery/subu-dusen-checker-2.webp",
+      "width": 1600,
+      "height": 838,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
+      "sourceImageUrl": "https://prcdn.freetls.fastly.net/release_image/18324/1129/18324-1129-ce3d9af8f0fa80110c6833012c24407d-1920x1005.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1600&height=1600&fit=bounds"
+    },
+    {
+      "image": "img/objects/gallery/subu-dusen-checker-3.webp",
+      "width": 1600,
+      "height": 533,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
+      "sourceImageUrl": "https://prcdn.freetls.fastly.net/release_image/18324/1129/18324-1129-f5ea147418951cc87dcb8625fbe115c5-3000x1000.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1600&height=1600&fit=bounds"
+    }
+  ],
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/subu-dusen-checker-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/cutouts/subu-dusen-checker-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/subu-dusen-checker.webp",
+      "width": 1099
+    }
+  ],
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Original RGB with locally generated foreground mask",
+    "subjectPixels": [
+      738,
+      872
+    ],
+    "opticalFill": 0.794,
+    "upscaled": false
+  },
+  "variantName": "Dusen Dusen for MoMA Sandals, Checker",
+  "catalogAudit": {
+    "reviewed": "2026-10-10",
+    "variantConfidence": "high, one of the original launch patterns",
+    "desiredVariant": "Checker (red / light blue)",
+    "notes": [],
+    "sourceLimitations": [
+      "Only three large/relevant matching views; the initial proposal optional fourth is a real official press collage with a tiny Checker pair. Do not count it as a fourth sharp large-subject photo."
+    ]
+  },
+  "colorwayEvidence": {
+    "status": "verified_launch",
+    "findings": [
+      {
+        "url": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
+        "finding": "The MoMA operator’s 25 October 2022 launch release announces November 2022 availability and lists Stripe, Dot, Checker together. Checker is an original launch variant; no single original color needs to be invented."
+      }
+    ],
+    "sources": []
+  }
+}

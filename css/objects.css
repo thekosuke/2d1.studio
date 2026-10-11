@@ -27,7 +27,7 @@
 .objects-tile{position:absolute;width:var(--object-cell);padding:24px;display:flex;flex-direction:column;gap:12px;text-align:left;will-change:transform}
 .objects-tile img{width:100%;height:calc(var(--object-cell) - 48px);object-fit:contain;mix-blend-mode:multiply;pointer-events:none;-webkit-user-drag:none}
 .objects-tile figcaption{font-size:14px;line-height:1.25;pointer-events:none}.objects-tile figcaption span{display:block;color:var(--sub-gray);font-size:11px;margin-top:3px}
-.objects-tile:hover figcaption{color:var(--red)}
+.objects-tile:hover figcaption,.objects-tile:hover figcaption span{color:var(--ink)}
 .objects-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center;pointer-events:none}
 .objects-empty button{pointer-events:auto}
 .objects-collection{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:64px 32px;padding:40px 32px 80px}
@@ -439,12 +439,12 @@
 }
 
 /* Balanced zoom rail with a square pixel eye handle. */
-.objects-page.objects-ready .objects-zoom{gap:8px;padding:0 8px;align-items:center}
-.objects-page.objects-ready .objects-zoom button{display:grid;place-items:center;padding:0;min-width:32px;width:32px;min-height:33px;font-size:18px!important}
+.objects-page.objects-ready .objects-zoom{gap:4px;padding:0 4px;align-items:center}
+.objects-page.objects-ready .objects-zoom button{display:grid;place-items:center;padding:0;min-width:24px;width:24px;min-height:33px;font-size:18px!important}
 .objects-zoom input::-webkit-slider-runnable-track{height:2px;background:var(--line)}
 .objects-zoom input::-moz-range-track{height:2px;background:var(--line)}
-.objects-zoom input::-webkit-slider-thumb{width:24px;height:24px;margin-top:-11px;border:0;background:transparent url('../img/ui/pixel-eye.svg') center/24px 24px no-repeat}
-.objects-zoom input::-moz-range-thumb{width:24px;height:24px;border:0;background:transparent url('../img/ui/pixel-eye.svg') center/24px 24px no-repeat}
+.objects-zoom input::-webkit-slider-thumb{width:18px;height:18px;margin-top:-8px;border:0;background:transparent url('../img/ui/pixel-eye.svg') center/18px 18px no-repeat}
+.objects-zoom input::-moz-range-thumb{width:18px;height:18px;border:0;background:transparent url('../img/ui/pixel-eye.svg') center/18px 18px no-repeat}
 @media(max-width:767px){.objects-page.objects-ready .objects-zoom{width:200px;height:46px}.objects-page.objects-ready .objects-zoom button{width:36px;min-width:36px;min-height:44px}}
 
 #objects-info-dialog,#objects-info-dialog :is(h2,p,a,button){text-transform:none}
@@ -453,3 +453,21 @@
 
 .objects-info-eyes{display:block;width:58px;height:24px;margin-bottom:24px}
 @media(min-width:1100px){#objects-info-dialog{width:33.333vw;max-width:none;box-sizing:border-box}}
+
+/* Hover reveals the label while the product cutout stays unchanged. */
+.objects-tile{cursor:pointer}
+@media(hover:hover) and (pointer:fine){
+ .objects-tile:hover{z-index:3}
+ .objects-ready .objects-tile:hover figcaption{opacity:1;visibility:visible;transform:translateY(0);transition-delay:0s}
+}
+
+.objects-tile[data-object="kay-bojesen-songbird-sunshine"]>img,.object-card[data-object="kay-bojesen-songbird-sunshine"]>img{object-position:50% 100%}
+
+#object-dialog img[src*="sunshine-new-1"]{object-position:50% 100%}
+
+/* Vertical photo browsing affordance in the product detail sheet. */
+#object-dialog .objects-dialog-photo.is-interactive,
+#object-dialog .objects-dialog-photo img{cursor:ns-resize}
+
+/* Tall Diffar bottles keep their complete silhouette at every canvas zoom. */
+.objects-tile img.diffar-bottle,.object-card img.diffar-bottle{object-fit:contain!important;padding:12%;box-sizing:border-box}

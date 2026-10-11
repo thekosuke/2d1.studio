@@ -598,3 +598,13 @@ The current named palette is documented in docs/COLOR-LIBRARY.md and exposed as 
 Shop’s development note follows Specifications; signup has a Stay updated h2. Nav hover moves the inner label, retaining a stationary hit area to prevent jitter.
 
 Finds products enter in a center-out ripple, with a gentle hop, alternating tilt and small settling bounce over 760ms per object. Stagger is bounded at 640ms; floating-control entrance remains unchanged. Reduced motion skips the product animation.
+
+
+
+Diffar now uses Tokyo Balance (11001), with native transparent canvas photography and four official square gallery scenes showing Tokyo Balance, Woody Earthy, Herbal Floral and Japanese Citrus. The stable catalog ID is retained for ownership counts.
+
+Finds canvas hover keeps the transparent product image at its normal size and reveals the product name and brand in dark brown at every zoom. Original background photos are reserved for the detail gallery. Product-modal names retain their authored capitalization.
+
+Studio’s complete description now precedes the full-width artwork carousel, which sits directly above the Services table. The copy uses “a fresh pair of eyes and a hands-on approach” in place of the earlier editing sentence.
+
+Studio now carries its Ash Brown ground with the section, with a narrow 8px softened boundary in the surrounding whitespace. Shop retains Soft Beige and dark-brown type; the whole viewport no longer blends through gray. Reduced motion uses solid section grounds.

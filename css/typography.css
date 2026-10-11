@@ -37,7 +37,7 @@ html[lang="ja"] .home-page .services :is(dt,dd){font-size:var(--type-body);line-
 
 /* Owner refinements: the hero caption keeps its original fitted display style. */
 .home-page .brand-caption{font-weight:700;letter-spacing:-1px}
-h2::before{content:"";display:inline-block;width:8px;height:8px;margin-right:12px;background:var(--red);vertical-align:middle}
+h2::before{content:"";display:inline-block;width:8px;height:8px;margin-right:6px;background:var(--red);vertical-align:middle}
 #objects-info-dialog h2{font:500 var(--type-lead)/1.2 var(--font);letter-spacing:0;text-transform:none}
 #objects-info-dialog .objects-info-about{text-transform:none}
 
@@ -57,3 +57,7 @@ html[lang="ja"] body.home-page .intro h1,html[lang="ja"] body.home-page .section
 body.home-page .intro h1,body.home-page .section-copy{font-weight:500}
 
 .signup-heading{font:500 var(--type-heading)/1.4 var(--font);letter-spacing:var(--type-label-track);margin-bottom:24px;text-transform:uppercase}
+
+.objects-dialog-copy h2{text-transform:none}
+
+.objects-dialog-title::before{content:none}

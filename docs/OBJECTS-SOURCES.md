@@ -1309,3 +1309,5 @@ Owner-selected red polyethylene canvas and first detail photo. Alpha-only native
 - https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_ambient_mono_SD660_anthracite_outdoor_01.jpg
 - https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_ambient_mono_SD660_purple_anthracite_outdoor_01.jpg
 - https://www.magisdesign.com/wp-content/uploads/2015/02/Magis_spun_product_detail_SD660_black_01.jpg
+
+Diffar now uses Tokyo Balance (11001), with native transparent canvas photography and four official square gallery scenes showing Tokyo Balance, Woody Earthy, Herbal Floral and Japanese Citrus. The stable catalog ID is retained for ownership counts.

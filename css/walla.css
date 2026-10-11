@@ -316,7 +316,7 @@ html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd{
 /* Studio dark-brown scene with a matching, smoothly inverted foreground. */
 .home-page .studio{background:var(--studio-background);--ink:var(--beige);--line:rgba(250,240,230,.25);color:var(--beige)}
 .js .home-page .studio{background:transparent;--ink:var(--scene-ink,#320505);--line:var(--scene-line,rgba(50,5,5,.18));color:var(--ink)}
-.js .home-page :is(main,.page-nav,.site-footer){--ink:var(--scene-ink,#320505);--line:var(--scene-line,rgba(50,5,5,.18));color:var(--ink)}
+.js .home-page .page-nav{--ink:var(--scene-ink,#320505);--line:var(--scene-line,rgba(50,5,5,.18));color:var(--ink)}
 .home-page .studio .section-heading>p,.home-page .studio .services :is(dt,dd){color:var(--ink)}
 
 :root{--studio-background:#191416}
@@ -330,3 +330,22 @@ html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd{
 .page-nav .nav-label{display:inline-block;transition:transform .2s ease;pointer-events:none}
 @media(hover:hover) and (pointer:fine){.page-nav :is(a,button):hover{transform:none}.page-nav :is(a,button):hover .nav-label{transform:translateX(12px)}}
 @media(prefers-reduced-motion:reduce){.page-nav .nav-label{transition:none}}
+
+/* The Studio ground travels with the section; only its empty edges soften. */
+.js .home-page > main{
+ background:linear-gradient(to bottom,
+ var(--beige) 0,
+ var(--beige) calc(var(--studio-start,0px) - 4px),
+ var(--studio-background) calc(var(--studio-start,0px) + 4px),
+ var(--studio-background) calc(var(--studio-end,0px) - 4px),
+ var(--beige) calc(var(--studio-end,0px) + 4px));
+ --ink:var(--cranberry-brown);--line:rgba(50,5,5,.18);color:var(--ink)
+}
+.js .home-page .studio{--ink:var(--beige);--line:rgba(250,240,230,.25);color:var(--beige)}
+.js .home-page > .site-footer{--ink:var(--cranberry-brown);color:var(--ink)}
+@media(prefers-reduced-motion:reduce){
+ .js .home-page > main{background:var(--beige)}
+ .js .home-page .studio{background:var(--studio-background)}
+}
+
+.home-page .shop-actions :is(.connect-form,.connect-row){width:100%}

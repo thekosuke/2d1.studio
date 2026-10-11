@@ -7,8 +7,6 @@
   const intro = main?.querySelector('.intro');
   const mobile = matchMedia('(max-width: 767px)');
   const studio = document.getElementById('studio');
-  const clamp = value => Math.max(0, Math.min(1, value));
-  const smooth = value => { const n = clamp(value); return n * n * (3 - 2 * n); };
   let sceneQueued = false;
   function paintScene() {
     sceneQueued = false;
@@ -24,15 +22,13 @@
     }
     if (studio) {
       const box = studio.getBoundingClientRect();
-      const height = innerHeight;
-      const mix = reduced.matches ? Number(box.top <= height * .5 && box.bottom > height * .5)
-        : Math.min(smooth((height * .85 - box.top) / (height * .65)), smooth((box.bottom - height * .15) / (height * .65)));
-      const warm = [250,240,230], cool = [25,20,22], ink = [50,5,5];
-      const color = warm.map((channel,i) => Math.round(channel + (cool[i] - channel) * mix));
-      document.documentElement.style.setProperty('--page-background', `rgb(${color.join(',')})`);
-      const text = ink.map((channel,i) => Math.round(channel + (warm[i] - channel) * mix));
-      document.documentElement.style.setProperty('--scene-ink', `rgb(${text.join(',')})`);
-      document.documentElement.style.setProperty('--scene-line', `rgba(${text.join(',')},.25)`);
+      // Carry the two grounds through the space between sections instead of
+      // blending the entire viewport into a third color.
+      main.style.setProperty('--studio-start', `${studio.offsetTop}px`);
+      main.style.setProperty('--studio-end', `${studio.offsetTop + studio.offsetHeight}px`);
+      const navOnStudio = box.top <= 48 && box.bottom > 48;
+      document.documentElement.style.setProperty('--scene-ink', navOnStudio ? '#faf0e6' : '#320505');
+
     }
   }
   const queueScene = () => { if (!sceneQueued) { sceneQueued = true; requestAnimationFrame(paintScene); } };

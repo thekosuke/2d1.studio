@@ -466,91 +466,6 @@
     }
   },
   {
-    "id": "subu-dusen-checker",
-    "name": "Dusen Dusen for MoMA Sandals",
-    "brand": "SUBU × Dusen Dusen",
-    "category": "wear",
-    "tags": [
-      "footwear",
-      "outdoors"
-    ],
-    "description": "Padded slip-on sandals with Ellen Van Dusen’s checker pattern, made for MoMA.",
-    "productUrl": "https://www.dusendusen.com/pages/projects",
-    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
-    "sourceImageUrl": "https://www.momastore.jp/img/goods/L/4977468704060_2.jpg",
-    "image": "img/objects/cutouts/subu-dusen-checker.webp",
-    "width": 1099,
-    "height": 1099,
-    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
-    "gallery": [
-      {
-        "image": "img/objects/subu-dusen-checker.jpg",
-        "width": 1061,
-        "height": 1061,
-        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
-        "sourceImageUrl": "https://www.momastore.jp/img/goods/L/4977468704060_2.jpg"
-      },
-      {
-        "image": "img/objects/gallery/subu-dusen-checker-2.webp",
-        "width": 1600,
-        "height": 838,
-        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
-        "sourceImageUrl": "https://prcdn.freetls.fastly.net/release_image/18324/1129/18324-1129-ce3d9af8f0fa80110c6833012c24407d-1920x1005.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1600&height=1600&fit=bounds"
-      },
-      {
-        "image": "img/objects/gallery/subu-dusen-checker-3.webp",
-        "width": 1600,
-        "height": 533,
-        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
-        "sourceImageUrl": "https://prcdn.freetls.fastly.net/release_image/18324/1129/18324-1129-f5ea147418951cc87dcb8625fbe115c5-3000x1000.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1600&height=1600&fit=bounds"
-      }
-    ],
-    "imageVariants": [
-      {
-        "image": "img/objects/cutouts/subu-dusen-checker-480.webp",
-        "width": 480
-      },
-      {
-        "image": "img/objects/cutouts/subu-dusen-checker-960.webp",
-        "width": 960
-      },
-      {
-        "image": "img/objects/cutouts/subu-dusen-checker.webp",
-        "width": 1099
-      }
-    ],
-    "imageTreatment": {
-      "background": "transparent",
-      "method": "Original RGB with locally generated foreground mask",
-      "subjectPixels": [
-        738,
-        872
-      ],
-      "opticalFill": 0.794,
-      "upscaled": false
-    },
-    "variantName": "Dusen Dusen for MoMA Sandals, Checker",
-    "catalogAudit": {
-      "reviewed": "2026-10-10",
-      "variantConfidence": "high, one of the original launch patterns",
-      "desiredVariant": "Checker (red / light blue)",
-      "notes": [],
-      "sourceLimitations": [
-        "Only three large/relevant matching views; the initial proposal optional fourth is a real official press collage with a tiny Checker pair. Do not count it as a fourth sharp large-subject photo."
-      ]
-    },
-    "colorwayEvidence": {
-      "status": "verified_launch",
-      "findings": [
-        {
-          "url": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
-          "finding": "The MoMA operator’s 25 October 2022 launch release announces November 2022 availability and lists Stripe, Dot, Checker together. Checker is an original launch variant; no single original color needs to be invented."
-        }
-      ],
-      "sources": []
-    }
-  },
-  {
     "id": "bruna-bonbon-mini-orange",
     "name": "Bruna Bonbon Fluffy Mini Rabbit",
     "brand": "ides × MEDICOM TOY × BEAMS",
@@ -8398,7 +8313,7 @@
   },
   {
     "id": "diffar-spicy-wood-hair-oil",
-    "name": "Spicy Wood Fragrance Hair Oil",
+    "name": "Tokyo Balance Fragrance Hair Oil",
     "brand": "Diffar",
     "category": "living",
     "tags": [
@@ -8406,90 +8321,67 @@
       "fragrance",
       "colorful"
     ],
-    "description": "A fragrance hair oil in a red bottle with an olive cap. Spicy Wood combines wood and spice notes; a small daily ritual with a clear graphic presence.",
-    "productUrl": "https://diffar.jp/products/51823",
-    "sourceUrl": "https://diffar.jp/products/51823",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_img01_7735760d-c600-44ba-8b67-54d88d6c537f.png?v=1725535650",
+    "description": "Diffar’s Tokyo Balance fragrance hair oil pairs geranium and rose with hinoki, sandalwood and vetiver. The collection brings six scents together in distinctive, colorful bottles.",
+    "productUrl": "https://diffar.jp/products/11001",
+    "sourceUrl": "https://diffar.jp/products/11001",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/51823_img01_43ab8ab8-ff39-4f53-a2f0-38ca2cbebeef.png?v=1725535365",
     "gallery": [
       {
-        "image": "img/objects/gallery/diffar-new-2.webp",
-        "width": 1000,
-        "height": 2370,
-        "sourceUrl": "https://diffar.jp/products/51823",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_img01_7735760d-c600-44ba-8b67-54d88d6c537f.png?v=1725535650"
-      },
-      {
-        "image": "img/objects/gallery/diffar-new-1.jpg",
+        "image": "img/objects/gallery/diffar-11001-scene.jpg",
         "width": 1500,
         "height": 1500,
-        "sourceUrl": "https://diffar.jp/products/51823",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/51823_thumb_a6e44098-1eef-471d-af7e-0651d998059a.jpg?v=1727144589"
+        "sourceUrl": "https://diffar.jp/products/11001",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/11001_thumb_8eaead2c-941a-4017-989f-4b3ba9b9438d.jpg?v=1726747069"
       },
       {
-        "image": "img/objects/gallery/diffar-new-3.webp",
-        "width": 1000,
-        "height": 2312,
-        "sourceUrl": "https://diffar.jp/products/51823",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/51823_img02_1d92caaf-56db-4d7f-84d6-d898d76d0b0d.png?v=1725361449"
+        "image": "img/objects/gallery/diffar-21612-scene.jpg",
+        "width": 1500,
+        "height": 1500,
+        "sourceUrl": "https://diffar.jp/products/21612",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/21612_thumb_ff109e5d-db25-44cc-b861-2ee83a3cc96e.jpg?v=1726747086"
+      },
+      {
+        "image": "img/objects/gallery/diffar-31407-scene.jpg",
+        "width": 1500,
+        "height": 1500,
+        "sourceUrl": "https://diffar.jp/products/31407",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/31407_thumb_5f138392-8a78-4f98-86e6-59db33a1e242.jpg?v=1726747098"
+      },
+      {
+        "image": "img/objects/gallery/diffar-41504-scene.jpg",
+        "width": 1500,
+        "height": 1500,
+        "sourceUrl": "https://diffar.jp/products/41504",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_thumb_5742cf60-02b8-4821-a75a-0f8151202908.jpg?v=1726747109"
       }
     ],
-    "variantName": "51823 Spicy Wood",
+    "variantName": "11001 Tokyo Balance",
     "colorwayEvidence": {
-      "basis": "Owner photograph and verified manufacturer listing",
-      "notes": "Variant checked against owner reference; no unsupported iconic-color claim."
+      "basis": "Owner-selected Tokyo Balance product link; printed 11001 checked against official photo",
+      "notes": "Gallery also shows Woody Earthy, Herbal Floral and Japanese Citrus from the official collection."
     },
     "usageCaveat": "Source-credited original photography for private preview; rights clearance not verified.",
-    "image": "img/objects/cutouts/diffar-20261011.webp",
-    "width": 2631,
-    "height": 2631,
-    "imageVariants": [
-      {
-        "image": "img/objects/cutouts/diffar-20261011-480.webp",
-        "width": 480
-      },
-      {
-        "image": "img/objects/cutouts/diffar-20261011-960.webp",
-        "width": 960
-      },
-      {
-        "image": "img/objects/cutouts/diffar-20261011-1440.webp",
-        "width": 1440
-      },
-      {
-        "image": "img/objects/cutouts/diffar-20261011.webp",
-        "width": 2631
-      }
-    ],
+    "image": "img/objects/gallery/diffar-11001-main.png",
+    "width": 1000,
+    "height": 2370,
     "imageTreatment": {
       "background": "transparent",
-      "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+      "method": "Official transparent PNG retained at native resolution; CSS contain with optical breathing room and shared warm grade",
       "nativeSourceDimensions": [
         1000,
         2370
       ],
-      "subjectPixels": [
-        998,
-        2368
-      ],
-      "cropBoundingBox": [
-        1,
-        1,
-        999,
-        2369
-      ],
-      "opticalFill": 0.9,
-      "upscaled": false,
-      "sourceSHA256": "db3fb869b693836c5cad567f5461e1977fa47d7750a16544a2a2519d43654313",
-      "nativeMaster": "img/objects/cutouts/diffar-20261011-native.png",
-      "rgbExact": true
+      "upscaled": false
     },
     "catalogAudit": {
       "reviewed": "2026-10-11",
       "notes": [
-        "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+        "Complete bottle framed without portrait cover cropping; four native 1500px square official variant scenes."
       ],
       "sourceLimitations": []
-    }
+    },
+    "imageClass": "diffar-bottle",
+    "hoverImage": "img/objects/gallery/diffar-11001-scene.jpg"
   },
   {
     "id": "kay-bojesen-songbird-sunshine",
@@ -8535,30 +8427,12 @@
       "notes": "Variant checked against owner reference; no unsupported iconic-color claim."
     },
     "usageCaveat": "Source-credited original photography for private preview; rights clearance not verified.",
-    "image": "img/objects/cutouts/sunshine-20261011.webp",
-    "width": 2597,
-    "height": 2597,
-    "imageVariants": [
-      {
-        "image": "img/objects/cutouts/sunshine-20261011-480.webp",
-        "width": 480
-      },
-      {
-        "image": "img/objects/cutouts/sunshine-20261011-960.webp",
-        "width": 960
-      },
-      {
-        "image": "img/objects/cutouts/sunshine-20261011-1440.webp",
-        "width": 1440
-      },
-      {
-        "image": "img/objects/cutouts/sunshine-20261011.webp",
-        "width": 2597
-      }
-    ],
+    "image": "img/objects/gallery/sunshine-new-1.webp",
+    "width": 1697,
+    "height": 2400,
     "imageTreatment": {
       "background": "transparent",
-      "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+      "method": "Clean transparent source; bottom-aligned square framing in CSS; damaged cutout retained but inactive",
       "nativeSourceDimensions": [
         3508,
         4961
@@ -8585,7 +8459,8 @@
         "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
       ],
       "sourceLimitations": []
-    }
+    },
+    "hoverImage": "img/objects/cutouts/sunshine-20261011-native.png"
   },
   {
     "id": "vitra-nelson-night-clock",

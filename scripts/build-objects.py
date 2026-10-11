@@ -40,11 +40,11 @@ html=f'''<!doctype html>
 <link rel="alternate" hreflang="en" href="https://2d1.studio/objects/"><link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/objects/"><link rel="alternate" hreflang="x-default" href="https://2d1.studio/objects/">
 <meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Finds — 2D1"><meta property="og:description" content="An open shelf of everyday objects with character. Explore the 2D1 Finds collection."><meta property="og:url" content="https://2d1.studio/objects/"><meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2"><meta property="og:image:alt" content="The red 2D1 logo on a soft beige background.">
 <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml"><link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2">
-<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=72"><link rel="stylesheet" href="../css/objects.css?v=72">
+<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=74"><link rel="stylesheet" href="../css/objects.css?v=79">
 <link rel="stylesheet" href="../css/dialogs.css?v=18"><link rel="stylesheet" href="../css/mobile-nav.css?v=3">
-<link rel="stylesheet" href="../css/typography.css?v=7">
+<link rel="stylesheet" href="../css/typography.css?v=10">
 <script src="../js/config.js" defer></script><script src="../js/drawers.js" defer></script><script src="../js/contact.js?v=10" defer></script><script src="../js/mobile-nav.js?v=2" defer></script><script src="../js/finds-menus.js?v=6" defer></script>
-<script src="../js/language.js?v=1" defer></script><script src="../js/objects.js?v=35" defer></script>
+<script src="../js/language.js?v=1" defer></script><script src="../js/objects.js?v=38" defer></script>
 </head>
 <body class="objects-page">
 <a class="skip-link" href="#objects-canvas">Skip to objects</a>

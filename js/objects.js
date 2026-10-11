@@ -157,7 +157,8 @@
     const tile=document.createElement('figure');tile.className='objects-tile';tile.dataset.object=item.id;
     const image=document.createElement('img');image.sizes=`${Math.ceil(cell-48)}px`;if(item.imageSrcset)image.srcset=item.imageSrcset;image.src=item.image;image.alt='';image.draggable=false;image.decoding='async';image.className=item.imageClass||'';
     const caption=document.createElement('figcaption'),brand=document.createElement('span');brand.textContent=item.brand;caption.append(document.createTextNode(item.name),brand);
-    tile.append(image,caption);return tile;
+    tile.append(image,caption);
+    return tile;
   }
   function schedule(){if(!frame)frame=requestAnimationFrame(draw);}
   function clearTiles(){for(const tile of tiles.values())tile.remove();tiles.clear();}

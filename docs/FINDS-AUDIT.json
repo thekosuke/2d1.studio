@@ -427,82 +427,6 @@
       }
     },
     {
-      "id": "subu-dusen-checker",
-      "name": "Dusen Dusen for MoMA Sandals",
-      "brand": "SUBU × Dusen Dusen",
-      "selectedVariant": "Dusen Dusen for MoMA Sandals, Checker",
-      "transparentPrimary": true,
-      "primaryPixels": [
-        1099,
-        1099
-      ],
-      "primaryNativeSubjectPixels": [
-        738,
-        872
-      ],
-      "subjectBounds": [
-        180,
-        113,
-        918,
-        985
-      ],
-      "galleryCount": 3,
-      "possibleSimilarPhotoPairs": [],
-      "distinctnessReview": null,
-      "photos": [
-        {
-          "image": "img/objects/subu-dusen-checker.jpg",
-          "width": 1061,
-          "height": 1061,
-          "nativeLongEdgeAtLeast1200": false,
-          "sha256": "408035dc3419d5dbef45ef708836afc75f4120bf251e5e17c8f10faecec16007",
-          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
-          "sourceImageUrl": "https://www.momastore.jp/img/goods/L/4977468704060_2.jpg"
-        },
-        {
-          "image": "img/objects/gallery/subu-dusen-checker-2.webp",
-          "width": 1600,
-          "height": 838,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "be0abe74b755ba447e8afb39d448e386c2619f8ab384342064768b138b514f68",
-          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
-          "sourceImageUrl": "https://prcdn.freetls.fastly.net/release_image/18324/1129/18324-1129-ce3d9af8f0fa80110c6833012c24407d-1920x1005.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1600&height=1600&fit=bounds"
-        },
-        {
-          "image": "img/objects/gallery/subu-dusen-checker-3.webp",
-          "width": 1600,
-          "height": 533,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "1857269bcdfa1570f729722bbeae3c9089ebe1a65142cc8e74b86deb64ddb6af",
-          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
-          "sourceImageUrl": "https://prcdn.freetls.fastly.net/release_image/18324/1129/18324-1129-f5ea147418951cc87dcb8625fbe115c5-3000x1000.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1600&height=1600&fit=bounds"
-        }
-      ],
-      "issues": [
-        "Primary native product detail below 1200px long edge",
-        "One or more photographs below 1200px long edge"
-      ],
-      "colorwayEvidence": {
-        "status": "verified_launch",
-        "findings": [
-          {
-            "url": "https://prtimes.jp/main/html/rd/p/000001129.000018324.html",
-            "finding": "The MoMA operator’s 25 October 2022 launch release announces November 2022 availability and lists Stripe, Dot, Checker together. Checker is an original launch variant; no single original color needs to be invented."
-          }
-        ],
-        "sources": []
-      },
-      "editorialReview": {
-        "reviewed": "2026-10-10",
-        "variantConfidence": "high, one of the original launch patterns",
-        "desiredVariant": "Checker (red / light blue)",
-        "notes": [],
-        "sourceLimitations": [
-          "Only three large/relevant matching views; the initial proposal optional fourth is a real official press collage with a tiny Checker pair. Do not count it as a fourth sharp large-subject photo."
-        ]
-      }
-    },
-    {
       "id": "bruna-bonbon-mini-orange",
       "name": "Bruna Bonbon Fluffy Mini Rabbit",
       "brand": "ides × MEDICOM TOY × BEAMS",
@@ -7052,67 +6976,73 @@
     },
     {
       "id": "diffar-spicy-wood-hair-oil",
-      "name": "Spicy Wood Fragrance Hair Oil",
+      "name": "Tokyo Balance Fragrance Hair Oil",
       "brand": "Diffar",
-      "selectedVariant": "51823 Spicy Wood",
+      "selectedVariant": "11001 Tokyo Balance",
       "transparentPrimary": true,
       "primaryPixels": [
-        2631,
-        2631
+        1000,
+        2370
       ],
-      "primaryNativeSubjectPixels": [
-        998,
-        2368
-      ],
+      "primaryNativeSubjectPixels": null,
       "subjectBounds": [
-        816,
-        131,
-        1814,
-        2499
+        0,
+        0,
+        1000,
+        2369
       ],
-      "galleryCount": 3,
+      "galleryCount": 4,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
         {
-          "image": "img/objects/gallery/diffar-new-2.webp",
-          "width": 1000,
-          "height": 2370,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "9b4bef7792cc952355b435b2ea6f755e8e1612bf16a4099b60483d8706f32a48",
-          "sourceUrl": "https://diffar.jp/products/51823",
-          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_img01_7735760d-c600-44ba-8b67-54d88d6c537f.png?v=1725535650"
-        },
-        {
-          "image": "img/objects/gallery/diffar-new-1.jpg",
+          "image": "img/objects/gallery/diffar-11001-scene.jpg",
           "width": 1500,
           "height": 1500,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "4f21cd83d4fbb4d0b58d8edc21c7d145768ac6ba97d4c9bd7c91c51faf3c25f9",
-          "sourceUrl": "https://diffar.jp/products/51823",
-          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/51823_thumb_a6e44098-1eef-471d-af7e-0651d998059a.jpg?v=1727144589"
+          "sha256": "33c8fc0fe5ea6670eca32c69984d0ec7a7712539c058c4cb8fd78c5207cd997c",
+          "sourceUrl": "https://diffar.jp/products/11001",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/11001_thumb_8eaead2c-941a-4017-989f-4b3ba9b9438d.jpg?v=1726747069"
         },
         {
-          "image": "img/objects/gallery/diffar-new-3.webp",
-          "width": 1000,
-          "height": 2312,
+          "image": "img/objects/gallery/diffar-21612-scene.jpg",
+          "width": 1500,
+          "height": 1500,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "3ff5e371ba9a8d5fbf15cfd125f7b3629ae3499b4e6476c93a6c7fb57bdb4333",
-          "sourceUrl": "https://diffar.jp/products/51823",
-          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/51823_img02_1d92caaf-56db-4d7f-84d6-d898d76d0b0d.png?v=1725361449"
+          "sha256": "0e5e045ed6cd9a0da22f1eacd10bf14ded2d2e005ca9bba42a3fc85098bd840f",
+          "sourceUrl": "https://diffar.jp/products/21612",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/21612_thumb_ff109e5d-db25-44cc-b861-2ee83a3cc96e.jpg?v=1726747086"
+        },
+        {
+          "image": "img/objects/gallery/diffar-31407-scene.jpg",
+          "width": 1500,
+          "height": 1500,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "73e359499e0b295a6e69fce04fcb353aafcfb042fafdf3694ddc20e1cbb3d46c",
+          "sourceUrl": "https://diffar.jp/products/31407",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/31407_thumb_5f138392-8a78-4f98-86e6-59db33a1e242.jpg?v=1726747098"
+        },
+        {
+          "image": "img/objects/gallery/diffar-41504-scene.jpg",
+          "width": 1500,
+          "height": 1500,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "7ce4ef971f0e51160e57d14be6cdca1097e1cd5a5246e7ca0960004c3659d807",
+          "sourceUrl": "https://diffar.jp/products/41504",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_thumb_5742cf60-02b8-4821-a75a-0f8151202908.jpg?v=1726747109"
         }
       ],
       "issues": [
         "Original/iconic colorway evidence remains unresolved"
       ],
       "colorwayEvidence": {
-        "basis": "Owner photograph and verified manufacturer listing",
-        "notes": "Variant checked against owner reference; no unsupported iconic-color claim."
+        "basis": "Owner-selected Tokyo Balance product link; printed 11001 checked against official photo",
+        "notes": "Gallery also shows Woody Earthy, Herbal Floral and Japanese Citrus from the official collection."
       },
       "editorialReview": {
         "reviewed": "2026-10-11",
         "notes": [
-          "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+          "Complete bottle framed without portrait cover cropping; four native 1500px square official variant scenes."
         ],
         "sourceLimitations": []
       }
@@ -7124,18 +7054,18 @@
       "selectedVariant": "Sunshine / 39405",
       "transparentPrimary": true,
       "primaryPixels": [
-        2597,
-        2597
+        1697,
+        2400
       ],
       "primaryNativeSubjectPixels": [
         2337,
         2232
       ],
       "subjectBounds": [
-        130,
-        182,
-        2467,
-        2414
+        186,
+        1078,
+        1430,
+        2290
       ],
       "galleryCount": 3,
       "possibleSimilarPhotoPairs": [],
