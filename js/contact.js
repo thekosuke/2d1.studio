@@ -39,16 +39,17 @@
             <div class="chips">
               <label class="chip"><input type="radio" name="category" value="New Business" required><span>New Business</span></label>
               <label class="chip"><input type="radio" name="category" value="Media Inquiry"><span>Media Inquiry</span></label>
+              <label class="chip"><input type="radio" name="category" value="Relationship advice"><span>Relationship advice</span></label>
               <label class="chip"><input type="radio" name="category" value="Other"><span>Other</span></label>
             </div>
           </fieldset>
           <div class="field">
             <label class="field-label" for="c-message">Message <span class="req" aria-hidden="true"></span><span class="count-chars" aria-hidden="true"><span id="c-count">0</span>/2000</span></label>
-            <textarea class="field-input field-area" id="c-message" name="message" rows="3" required maxlength="2000"></textarea>
+            <textarea class="field-input field-area" id="c-message" name="message" rows="3" required maxlength="2000" placeholder="What’s on your mind?"></textarea>
           </div>
           <div class="field-trap" aria-hidden="true"><label for="c-website">Website</label><input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="contact-foot">
-            <button class="contact-send intro-cta" type="submit"><span class="send-label">Send</span><span class="send-arrow" aria-hidden="true">→</span></button>
+            <button class="contact-send intro-cta" type="submit"><span class="send-label">Send</span><span class="send-arrow pixel-arrow" aria-hidden="true">→</span></button>
             <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
           </div>
         </form>
@@ -73,6 +74,19 @@
     const fallback = contact.querySelector('.contact-fallback');
     const message = contactForm.querySelector('#c-message');
     const counter = contact.querySelector('#c-count');
+    const messagePrompts = {
+      'New Business': 'Tell us about your project, what you need, and your timeline.',
+      'Media Inquiry': 'Tell us about your publication, inquiry, and deadline.',
+      'Relationship advice': 'What’s happening, and what would you like a fresh perspective on?',
+      'Other': 'What’s on your mind?'
+    };
+    const updateMessagePrompt = () => {
+      const category = contactForm.querySelector('input[name="category"]:checked')?.value;
+      message.placeholder = t(messagePrompts[category] || 'What’s on your mind?');
+    };
+    updateMessagePrompt();
+    contactForm.addEventListener('reset', () => queueMicrotask(updateMessagePrompt));
+
     const fields = [...contactForm.querySelectorAll('.field-input, input[type="radio"]')];
     let sending = false, opener = null;
 
@@ -105,6 +119,7 @@
       });
     });
     contactForm.querySelectorAll('input[type="radio"]').forEach((r) => r.addEventListener('change', () => {
+      updateMessagePrompt();
       contactForm.classList.toggle('is-ready', contactForm.checkValidity());
       mood('happy'); window.setTimeout(() => mood(''), 500);
     }));

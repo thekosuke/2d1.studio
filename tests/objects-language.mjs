@@ -8,7 +8,7 @@ const boot=source.slice(source.indexOf('  let infoSeen=false;'),source.lastIndex
 const css=readFileSync(new URL('../css/objects.css',import.meta.url),'utf8');
 
 function fixture({seen=false,blocked=false}={}){
-  const document={activeElement:null};let stored=seen?'1':null;const pending=[];
+  const document={addEventListener(){},activeElement:null};let stored=seen?'1':null;const pending=[];
   class Element {
     handlers=new Map();scrollTop=0;
     addEventListener(name,fn){if(!this.handlers.has(name))this.handlers.set(name,[]);this.handlers.get(name).push(fn)}
@@ -17,24 +17,25 @@ function fixture({seen=false,blocked=false}={}){
   }
   const infoButton=new Element(),infoClose=new Element(),infoDialog=new Element(),dialog=new Element();
   for(const modal of [infoDialog,dialog]){
-    modal.open=false;modal.showModal=()=>{modal.open=true};
+    modal.open=false;modal.show=modal.showModal=()=>{modal.open=true};
     modal.close=()=>{if(modal.open){modal.open=false;pending.push(()=>modal.emit('close'))}};
   }
   infoDialog.querySelector=()=>infoClose;
   infoDialog.getBoundingClientRect=()=>({left:12,top:12,right:378,bottom:600});
-  const context={document,infoButton,infoDialog,dialog,cancelGesture(){},stopMotion(){},settleGeometry(){},localStorage:{getItem(){if(blocked)throw Error();return stored},setItem(key,value){if(blocked)throw Error();stored=value}}};
+  infoButton.lastElementChild={};infoButton.setAttribute=()=>{};infoButton.getBoundingClientRect=()=>({bottom:44});infoDialog.style={setProperty(){}};
+  const context={reduced:{matches:true},ResizeObserver:class{observe(){}},document,infoButton,infoDialog,dialog,cancelGesture(){},stopMotion(){},settleGeometry(){},localStorage:{getItem(){if(blocked)throw Error();return stored},setItem(key,value){if(blocked)throw Error();stored=value}}};
   vm.createContext(context);vm.runInContext(controller+boot,context);
-  return {document,infoButton,infoClose,infoDialog,dialog,stored:()=>stored,flush(){pending.splice(0).forEach(fn=>fn())},dismiss(){infoClose.emit('click');this.flush()},open(){infoButton.emit('click')}};
+  return {document,infoButton,infoClose,infoDialog,dialog,stored:()=>stored,flush(){pending.splice(0).forEach(fn=>fn())},dismiss(){infoButton.emit('click');this.flush()},open(){infoButton.emit('click')}};
 }
 for(const blocked of [false,true]){
-  const f=fixture({blocked});assert.equal(f.infoDialog.open,true);assert.equal(f.document.activeElement,f.infoClose);
+  const f=fixture({blocked});assert.equal(f.infoDialog.open,true);
   f.infoDialog.scrollTop=300;f.dismiss();assert.equal(f.document.activeElement,f.infoButton);if(!blocked)assert.equal(f.stored(),'1');
-  for(let repeat=0;repeat<4;repeat++){f.open();assert.equal(f.infoDialog.scrollTop,0);assert.equal(f.document.activeElement,f.infoClose);f.infoDialog.scrollTop=200;f.dismiss()}
+  for(let repeat=0;repeat<4;repeat++){f.open();assert.equal(f.infoDialog.scrollTop,0);f.infoDialog.scrollTop=200;f.dismiss()}
 }
 const f=fixture({seen:true});assert.equal(f.infoDialog.open,false);
 f.dialog.showModal();f.open();assert.equal(f.infoDialog.open,false,'Info never interrupts a product sheet');
-f.dialog.close();f.flush();f.open();f.infoClose.emit('click');f.open();f.flush();
-assert.equal(f.infoDialog.open,true);assert.equal(f.document.activeElement,f.infoClose);
+f.dialog.close();f.flush();f.open();f.infoButton.emit('click');f.open();f.flush();
+assert.equal(f.infoDialog.open,true);
 
 for(const [path,locale] of [['../objects/index.html','en'],['../ja/objects/index.html','ja']]){
   const html=readFileSync(new URL(path,import.meta.url),'utf8');

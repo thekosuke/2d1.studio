@@ -1,0 +1,295 @@
+/* SC Walla — the owner's single-column Figma direction. */
+:root{--red:#ff2b00;--ink:#320505;--sub-gray:#807573;--line:rgba(50,5,5,.18);--white:#fff;--beige:#faf0e6;--field:#fff;--font:'SC Walla',Arial,sans-serif;--mono:'SC Walla Mono',monospace;--pad:24px;--space:80px;--gap:40px;--column:960px;--content-right:24px;--logo-width:200px;--footer-inset:max(16px,env(safe-area-inset-bottom));--language-size:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-gutter:stable;overscroll-behavior-y:none}body{margin:0;overflow-x:clip;background:var(--beige);color:var(--ink);font:400 17px/1.4 var(--font);-webkit-font-smoothing:antialiased}h1,h2,h3,p,ul,dl,dd,blockquote{margin:0}h1,h2,h3{font-weight:500}a{color:inherit;text-decoration:none}button,input{font:inherit;border-radius:0}button,a,input{-webkit-tap-highlight-color:transparent}img{display:block;max-width:100%}em{font-style:normal}button{cursor:pointer;color:inherit}a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--red);outline-offset:6px}[tabindex='-1']:focus{outline:none}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:fixed;z-index:100;top:8px;left:8px;padding:12px;background:var(--ink);color:white;transform:translateY(-160%)}.skip-link:focus{transform:none}.column{width:calc(100% - var(--pad)*2);max-width:var(--column);margin-inline:auto}.section-stack{display:flex;flex-direction:column;gap:var(--gap);padding-block:var(--space)}.section-stack-inner{display:flex;flex-direction:column;gap:var(--gap)}section{scroll-margin-top:84px}.masthead{background:var(--beige);display:flex;flex-direction:column;align-items:center;gap:12px;padding:160px var(--pad)}.logo-slot{width:var(--logo-width);height:calc(var(--logo-width)*280/829)}.site-logo{display:block;width:200px;z-index:30}.site-logo img{width:100%;height:auto}.js .home-logo{position:fixed;left:50%;top:0;transform-origin:top center;will-change:transform}.brand-caption{width:var(--logo-width);height:calc(var(--logo-width)*.16);display:flex;align-items:center;justify-content:center;font-size:28px;line-height:1.2;font-weight:500;text-align:center;text-transform:uppercase;transform-origin:top center}.intro h1,.intro-cta{font-family:'SC Walla UnlicensedTrial',Arial,sans-serif;font-size:40px;font-style:normal;font-weight:500;line-height:1.2;text-wrap:pretty;color:var(--ink)}.intro .button-stack{flex-direction:column;align-items:flex-start;gap:16px}.intro-cta{display:block;align-self:flex-start;width:fit-content;max-width:100%;min-height:48px;margin:0;padding:0;border:0;background:transparent;color:var(--red);letter-spacing:normal;text-transform:none;text-align:left;cursor:pointer;transition:color .18s}.intro-cta [aria-hidden="true"]{display:inline-block;transition:transform .18s}.intro-cta:hover{color:var(--ink)}.intro-cta:hover [aria-hidden="true"]{transform:translateX(4px)}.button-stack{display:flex;flex-wrap:wrap;gap:12px}.button{display:flex;align-items:center;justify-content:center;align-self:flex-start;width:fit-content;min-height:48px;padding:12px 18px;border:1px solid var(--ink);background:transparent;font:500 13px/22px var(--mono);letter-spacing:.04em;text-align:center;transition:background .18s,color .18s;text-transform:uppercase}.button-ink{background:var(--ink);color:white}.button:hover{background:var(--ink);color:white}.button-ink:hover{background:var(--red);border-color:var(--red)}.section-label{position:relative;padding-top:8px;font:500 13px/22px var(--mono);letter-spacing:.04em;;text-transform:uppercase}.statement{font-size:32px;line-height:1.2;text-wrap:pretty}.subheading{font-size:20px;line-height:1.2}.prose p+p{margin-top:1.18em}.work-belt{width:100%;overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y;cursor:default}.work-belt::-webkit-scrollbar{display:none}.work-track{display:flex;width:max-content}.work-set{display:flex;list-style:none;padding:0 24px 0 0;gap:24px;flex:none}.work-set li{width:245px;flex:none;aspect-ratio:1}.work-set img{width:245px;height:245px;object-fit:cover;pointer-events:none;user-select:none}.tote-preview-stage{position:relative;width:100%;height:340px;flex:none;min-height:0;overflow:hidden;isolation:isolate;touch-action:pan-y;background:transparent}.tote-preview-stage:focus-visible{outline-offset:0}.tote-preview-poster{height:100%;width:100%;object-fit:contain;transition:opacity .2s}.tote-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}.tote-preview-stage.is-ready .tote-preview-poster{opacity:0;pointer-events:none}.tote-preview-stage.is-ready{cursor:default}.connect-form{position:relative}.connect-form input{display:block;width:100%;height:48px;padding:12px 16px;background:var(--field);border:0;color:var(--ink);font:400 18px/22px var(--font);letter-spacing:.04em}.connect-form input::placeholder{color:var(--ink);opacity:1}.connect-form input:disabled{opacity:1;-webkit-text-fill-color:var(--ink)}#connect-status,.connect-form noscript p{margin-top:12px;color:var(--sub-gray);font-size:14px}.social-links{display:flex;gap:24px}.social-links a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;transition:color .18s}.social-links svg{width:27px;height:27px}.social-links a:hover{color:var(--red)}.site-footer{padding-block:var(--space) var(--footer-inset);text-align:left;font:400 14px/17px var(--mono);letter-spacing:.04em;;text-transform:uppercase}.about-masthead{padding-block:80px}.about-masthead .site-logo{width:144px}
+@media(min-width:768px){:root{--space:128px;--gap:64px;--logo-width:240px}body{line-height:20px}.masthead{padding-block:256px}.logo-slot{width:240px}.site-logo{width:240px}.brand-caption{font-size:28px;line-height:34px}.button{font-size:14px}.statement{font-size:40px;line-height:48px}.work-set{gap:32px;padding-right:32px}.tote-preview-stage{height:405px;aspect-ratio:16/9}.social-links{gap:24px}.about-masthead{padding-block:128px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.js .home-logo{will-change:auto}}
+
+
+
+.connect-row{display:flex;flex-direction:column;gap:24px;align-items:flex-start}.connect-row input{min-width:0;flex:none}.connect-row button:disabled{cursor:default}
+
+/* One-click language links remain available with or without JavaScript. */
+.language-switch{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:var(--footer-inset);z-index:40;display:flex;border:1px solid var(--ink);background:var(--beige);font:500 12px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.language-switch a{display:flex;align-items:center;justify-content:center;min-width:var(--language-size);min-height:var(--language-size)}
+.language-switch a+a{border-left:1px solid var(--ink)}
+.language-switch a[aria-current]{background:var(--ink);color:var(--white)}
+.language-switch a:hover{background:var(--ink);color:var(--white)}
+.language-switch a:focus-visible{outline-offset:3px}
+/* Match the copyright line box to the bordered language switch at page end. */
+.site-footer p{line-height:calc(var(--language-size) + 2px)}
+html[lang="ja"]{--font:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;--mono:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif}
+html[lang="ja"] body{line-height:1.85;line-break:strict;overflow-wrap:break-word}
+html[lang="ja"] .intro h1,html[lang="ja"] .essay-lede{font-size:24px;line-height:1.65;font-weight:500;text-wrap:pretty}
+html[lang="ja"] .statement,html[lang="ja"] .essay-title{font-size:30px;line-height:1.5;text-wrap:pretty}
+html[lang="ja"] .brand-caption{font-size:20px;line-height:1.5}
+html[lang="ja"] .subheading,html[lang="ja"] .services dt,html[lang="ja"] .essay-rest h2{line-height:1.6}
+html[lang="ja"] .services dd,html[lang="ja"] .essay-dek,html[lang="ja"] .essay-rest p{line-height:1.85}
+html[lang="ja"] .essay-rest .essay-pull p{font-size:28px;line-height:1.6}
+html[lang="ja"] .button,html[lang="ja"] .section-label,html[lang="ja"] .field-label,html[lang="ja"] .chip span{letter-spacing:.02em;line-height:1.6}
+html[lang="ja"] .button,html[lang="ja"] .contact-send{font-size:14px}
+html[lang="ja"] .contact-title{font-size:32px;line-height:1.5}
+html[lang="ja"] .contact-intro,html[lang="ja"] .contact-notice,html[lang="ja"] .contact-status,html[lang="ja"] .contact-fallback,html[lang="ja"] .field-input{line-height:1.8}
+html[lang="ja"] .field-label .req{flex-shrink:0}
+html[lang="ja"] .connect-row input{letter-spacing:0}
+@media(min-width:768px){html[lang="ja"] .intro h1,html[lang="ja"] .essay-lede{font-size:28px}html[lang="ja"] .statement,html[lang="ja"] .essay-title{font-size:36px}html[lang="ja"] .brand-caption{font-size:24px}}
+
+/* Hairlines run from the content column to the viewport edge. Body clips the
+   small scrollbar-width overshoot without creating a scrolling container. */
+.section-label::before,.essay-kicker::before{content:"";position:absolute;left:0;top:0;width:calc(100% + var(--content-right));height:.5px;background:var(--ink);pointer-events:none}
+.page-nav{display:flex;gap:20px;margin:0 var(--pad);font:500 12px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.page-nav a{padding-block:8px}.page-nav a:hover,.page-nav a[aria-current]{color:var(--red)}
+.js .page-nav{position:fixed;z-index:25;top:64px;left:var(--pad);right:var(--pad);margin:0;background:transparent}
+.js .page-nav{opacity:0;transform:translateX(calc(-100% - var(--pad)));visibility:hidden;pointer-events:none;transition:opacity .48s cubic-bezier(.2,.8,.2,1),transform .48s cubic-bezier(.2,.8,.2,1),visibility 0s .48s}
+.js .page-nav.is-visible{opacity:1;transform:translateX(0);visibility:visible;pointer-events:auto;transition-delay:0s}
+@media(max-width:1099px){.home-page section{scroll-margin-top:112px}.page-nav{gap:16px;font-size:11px}}
+@media(min-width:1100px){.js .page-nav{top:16px;right:auto;flex-direction:column;gap:0;align-items:flex-start}.page-nav a{padding-block:6px}}
+
+/* A quiet focus cue, without an outline around the email box. */
+.connect-form input:focus{outline:none}
+.connect-form input:focus-visible{box-shadow:inset 0 -2px var(--red)}
+
+.brand-caption>span{display:block;width:max-content;white-space:nowrap;line-height:1}
+
+
+
+
+/* Quiet, occasional pixel-eye peeks inside the D. */
+.site-logo .logo-eyes{position:absolute;inset:0;width:100%;height:100%;fill:var(--beige);pointer-events:none}
+.logo-eyes .logo-eye{transform-box:fill-box;transform-origin:center;transform:scaleY(0);transition:transform .12s cubic-bezier(.3,1.4,.5,1)}
+.site-logo.is-awake .logo-eyes .logo-eye{transform:scaleY(1)}
+.site-logo.is-glancing .logo-eyes .logo-eye{transform:translateX(calc(var(--glance,1)*5px)) scaleY(1);transition-duration:.18s}
+.site-logo.is-blinking .logo-eyes .logo-eye{transform:scaleY(0);transition-duration:.08s}
+@media(prefers-reduced-motion:reduce){.site-logo .logo-eyes{display:none}}
+
+/* Reading ink: full contrast is the default without JavaScript. */
+.intro h1 em{color:inherit}
+[data-ink].is-inking .ink{opacity:var(--word-opacity,.25);transition:none}
+[data-ink].is-inking .ink.is-inked{opacity:1}
+@media(prefers-reduced-motion:reduce){[data-ink].is-inking .ink{opacity:1;transition:none}}
+
+/* Keep the Japanese edition’s native font and reading rhythm. */
+html[lang="ja"] .intro h1,html[lang="ja"] .intro-cta{font-family:var(--font)}
+html[lang="ja"] .intro-cta{font-size:24px;line-height:1.65}
+@media(min-width:768px){html[lang="ja"] .intro-cta{font-size:28px}}
+
+/* Figma 298:660: asymmetric desktop column, shared by Home, About and footer. */
+@media(min-width:1100px){
+  :root{--content-right:128px}
+  .column{width:calc(100% - min(27.7778vw,400px) - var(--content-right));margin-left:auto;margin-right:var(--content-right)}
+}
+/* Connect is a typographic input, with the shared text CTA below it. */
+.connect-form input{height:auto;padding:0;background:transparent;font:500 40px/1.2 var(--font);letter-spacing:0;caret-color:var(--ink)}
+.connect-form input::placeholder{color:rgba(50,5,5,.2);opacity:1}
+.connect-form input:focus{box-shadow:inset 0 -2px var(--red)}
+.intro-cta:disabled{cursor:default}
+
+
+
+/* October 9 — Figma 298:650. One shared reading scale and spacing rhythm. */
+:root{--sand:#d6cec5;--reading:28px;--section-title:44px;--footer-inset:max(24px,env(safe-area-inset-bottom))}
+html{background:var(--page-background,var(--beige))}
+.home-page{background:var(--page-background,var(--beige))}
+.home-page .section-stack,.home-page .section-stack-inner{gap:64px}
+.home-page > .masthead{height:100vh;height:100svh;padding:24px;border:20px solid var(--red);border-radius:0 0 128px 128px;position:relative;z-index:2;justify-content:center}
+.home-page > main{position:relative;z-index:1;padding-top:48px;background:var(--page-background,var(--beige))}
+.home-page > .site-footer{position:relative;z-index:1;width:100%;max-width:none;background:var(--page-background,var(--beige))}
+.js .home-page > main{transform:translateY(var(--cover-offset,0px))}
+.home-page .brand-caption{font-weight:700;letter-spacing:-1px}
+.home-page .brand-caption>span{line-height:1.077}
+.home-page .intro h1,.home-page .intro-cta,.section-copy,.services dt,.services dd,.section-heading>p{font:500 var(--reading)/1.2 var(--font);text-wrap:pretty;letter-spacing:0}
+.section-heading{display:flex;flex-direction:column;gap:8px}
+.section-heading h2{font:700 var(--reading)/1.2 var(--font);text-wrap:pretty;text-transform:uppercase}
+.section-heading>p,.services dd{color:var(--sub-gray)}
+.studio{background:var(--sand)}
+.js .studio{background:transparent}
+.studio-opening{display:flex;flex-direction:column;gap:48px}
+.home-page .studio .section-stack-inner{gap:48px}
+.services{display:grid;gap:32px;padding-block:32px;border-block:1px solid var(--ink)}
+.services>div{display:block}
+.services dt,.services dd{min-width:0;margin:0;text-align:left}
+.work-set{gap:32px;padding-right:32px}
+.work-set li{width:280px}
+.work-set img{width:280px;height:280px}
+.home-page .tote-preview-stage{height:auto;aspect-ratio:4/3}
+.product-details{display:grid;gap:16px}
+.product-specs>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding-block:8px;border-top:.5px solid var(--line)}
+.product-specs dt{font:500 15px/1.3 var(--font)}
+.product-specs dd{min-width:0;font:400 15px/1.3 var(--font);color:var(--ink);text-align:left;text-wrap:pretty}
+.product-note{font:400 15px/1.3 var(--font);color:var(--sub-gray);text-wrap:pretty}
+.connect-row{gap:32px}
+.home-page .site-footer{padding-block:24px}
+.language-switch{right:max(24px,env(safe-area-inset-right))}
+.language-switch a{padding-inline:4px}
+.home-page .connect-form input{font-size:40px;line-height:1.2}
+html[lang="ja"] .home-page{--reading:24px}
+html[lang="ja"] .section-copy,html[lang="ja"] .services dt,html[lang="ja"] .services dd,html[lang="ja"] .section-heading>p{line-height:1.65}
+@media(min-width:768px){
+  :root{--reading:40px;--section-title:64px}
+  .home-page > main{padding-top:64px}
+  .home-page .section-stack,.home-page .section-stack-inner{gap:96px}
+  .studio-opening,.home-page .studio .section-stack-inner{gap:64px}
+  .product-specs>div{grid-template-columns:200px minmax(0,1fr);gap:0}
+  html[lang="ja"] .home-page{--reading:28px}
+}
+/* The initial red sheet recedes upward, revealing the settled hero underneath.
+   CSS completes the animation even if the main script cannot load. */
+.landing-cover{display:none}
+.js.is-landing .home-page > .masthead{animation:landing-corners 1.1s cubic-bezier(.7,0,.2,1) 1.1s both}
+.js.is-landing .landing-cover{border-radius:0 0 108px 108px;position:fixed;inset:20px 20px auto;height:calc(100vh - 40px);height:calc(100svh - 40px);z-index:35;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;background:var(--red);color:var(--beige);pointer-events:none;animation:landing-wipe 1.1s cubic-bezier(.7,0,.2,1) 1.1s both}
+.landing-mark{position:relative;width:var(--logo-width)}
+.landing-mark>img{width:100%;height:auto}
+.landing-eyes{position:absolute;inset:0;width:100%;height:100%}
+.landing-eyes image{transform-box:fill-box;transform-origin:center;animation:landing-blink 1.05s both}
+@keyframes landing-wipe{from{clip-path:inset(0 0 0 0);border-radius:0}to{clip-path:inset(0 0 100% 0);border-radius:0 0 108px 108px;visibility:hidden}}
+@keyframes landing-corners{from{border-radius:0}to{border-radius:0 0 128px 128px}}
+@keyframes landing-blink{0%,12%,46%,58%,100%{transform:scaleY(1)}36%,51%{transform:scaleY(0)}}
+@media(prefers-reduced-motion:reduce){
+  .js.is-landing .landing-cover{display:none}
+  .js .home-page > main{transform:none}
+}
+
+/* Reveal both navigation groups together, entering from opposite edges. */
+.js .home-page > .language-switch{opacity:0;transform:translateX(calc(100% + max(24px,env(safe-area-inset-right))));visibility:hidden;pointer-events:none;transition:opacity .48s cubic-bezier(.2,.8,.2,1),transform .48s cubic-bezier(.2,.8,.2,1),visibility 0s .48s}
+.js .home-page > .language-switch.is-visible{opacity:1;transform:translateX(0);visibility:visible;pointer-events:auto;transition-delay:0s}
+/* Without scroll scripting, language links remain available at the page end. */
+html:not(.js) .home-page > .language-switch{position:static;width:fit-content;margin:0 24px 24px auto}
+
+/* Mobile dock: Studio and Shop to the left of the centered 96px mark. */
+.page-nav-left{display:contents}
+@media(max-width:767px){
+  .js :is(.home-page,.about-page) .page-nav{top:10px;left:max(16px,env(safe-area-inset-left));right:max(16px,env(safe-area-inset-right));display:grid;grid-template-columns:minmax(0,1fr) 96px minmax(0,1fr);gap:0;align-items:center;font-size:clamp(10px,2.82vw,11px)}
+  .js :is(.home-page,.about-page) .page-nav-left{grid-column:1;display:flex;align-items:center;gap:clamp(12px,4vw,32px)}
+  .js :is(.home-page,.about-page) .page-nav>a{grid-column:3;justify-self:end}
+  .js :is(.home-page,.about-page) .page-nav a{display:flex;align-items:center;min-height:44px;padding-block:0;white-space:nowrap}
+  .home-page section{scroll-margin-top:80px}
+}
+
+/* Scripted horizontal touch drag; vertical scrolling and pinch zoom stay native. */
+.work-belt.is-touch-draggable{touch-action:pan-y pinch-zoom}
+
+/* Shared dock placement: the same inline layout at phone, tablet and desktop widths. */
+@media(min-width:768px){
+ .js :is(.home-page,.about-page) .page-nav{top:10px;left:32px;right:32px;display:grid;grid-template-columns:minmax(0,1fr) 96px minmax(0,1fr);gap:0;align-items:center}
+ .js :is(.home-page,.about-page) .page-nav-left{grid-column:1;display:flex;gap:32px;align-items:center}
+ .js :is(.home-page,.about-page) .page-nav>a{grid-column:3;justify-self:end}
+ .js :is(.home-page,.about-page) .page-nav a{display:flex;align-items:center;min-height:44px;padding-block:0;white-space:nowrap}
+ .home-page section{scroll-margin-top:80px}
+}
+.footer-pages{display:flex;gap:24px;padding-bottom:24px;font:500 13px/1.4 var(--mono);text-transform:uppercase}
+.footer-pages a{display:flex;align-items:center;min-height:44px}.footer-pages a:hover{color:var(--red)}
+
+/* Desktop returns to the quiet left-hand index; mobile remains inline. */
+@media(min-width:1100px){
+ .js :is(.home-page,.about-page) .page-nav{display:flex;top:16px;left:24px;right:auto;flex-direction:column;gap:0;align-items:flex-start}
+ .js :is(.home-page,.about-page) .page-nav-left{display:contents}
+ .js :is(.home-page,.about-page) .page-nav a{min-height:0;padding-block:6px}
+}
+.footer-line{display:flex;align-items:center;gap:32px}
+.footer-line p{flex:none}.footer-line .footer-pages{margin:0;padding:0;gap:24px}
+@media(max-width:767px){.footer-line{gap:16px}.footer-line .footer-pages{gap:16px;font-size:12px}.footer-line p{font-size:12px}}
+
+/* Separate page destinations from in-page anchors below the existing mobile dock. */
+.page-nav-pages{display:flex;gap:inherit;align-items:center;border-left:1px solid currentColor;padding-left:20px}
+@media(min-width:1100px){
+ .js :is(.home-page,.about-page) .page-nav-pages{display:flex;flex-direction:column;align-items:flex-start;gap:0;align-self:stretch;border-left:0;border-top:1px solid currentColor;margin-top:10px;padding:10px 0 0}
+}
+@media(max-width:1099px){.js :is(.home-page,.about-page) .page-nav-pages{grid-column:1 / -1;grid-row:2;display:flex;gap:24px;border-left:0;border-top:1px solid currentColor;padding:4px 0 0;margin-top:4px;justify-self:start}}
+html:not(.js) .page-nav{flex-wrap:wrap}
+
+.page-nav-contact{border-left:1px solid currentColor;padding-left:20px}
+.page-nav-contact button{display:flex;align-items:center;min-height:44px;padding:0;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;white-space:nowrap;cursor:pointer}.page-nav-contact button:hover{color:var(--red)}
+html:not(.js) .page-nav-contact{display:none}
+@media(min-width:1100px){.js :is(.home-page,.about-page) .page-nav-contact{align-self:stretch;border-left:0;border-top:1px solid currentColor;margin-top:10px;padding:10px 0 0}.js :is(.home-page,.about-page) .page-nav-contact button{min-height:0;padding-block:6px}}
+@media(max-width:1099px){.js :is(.home-page,.about-page) .page-nav-pages{grid-column:1 / 3;gap:16px}.js :is(.home-page,.about-page) .page-nav-contact{grid-column:3;grid-row:2;justify-self:end;padding-left:12px;margin-top:4px;border-left:1px solid currentColor}}
+
+@media(max-width:1099px){.js .about-page .about-masthead{padding-top:136px}}
+/* About shares Home's settled, centered 96px docked logo. */
+.about-page .about-docked-logo{position:fixed;top:16px;left:50%;width:96px;transform:translateX(-50%);z-index:30}
+
+.shop-actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+@media(max-width:767px){.shop-actions{gap:12px}}
+/* Owner direction: focus uses a solid fill, never outlines or focus rings. */
+:is(a,button,summary,[role="button"],[role="link"]):focus{outline:none!important;box-shadow:none!important}
+:is(a,button,summary,[role="button"],[role="link"]):focus-visible{outline:none!important;box-shadow:none!important;background-color:var(--red)!important;color:var(--ink)!important}
+
+/* All controls: suppress native focus rings; retain filled keyboard cues.
+   Negative-tabindex section destinations must not mask the shared page ground. */
+*:focus,*:focus-visible{outline:none!important;box-shadow:none!important}
+:is(input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{background-color:var(--sand)!important;color:var(--ink)!important}
+:is(a,button,summary,[role="button"],[role="link"]):focus-visible{background-color:var(--red)!important;color:var(--ink)!important}
+.chip input:focus-visible + span{outline:none!important;box-shadow:none!important;background:var(--red);color:var(--ink)}
+
+@media(max-width:1099px){.js .about-page .essay-page{padding-top:144px}}
+
+/* Nav hover: label moves; square reveals by width without moving siblings. */
+.page-nav :is(a,button){position:relative;transition:transform .2s ease,color .2s ease}
+.page-nav :is(a,button)::before{content:"";position:absolute;left:-12px;top:50%;width:0;height:6px;transform:translateY(-50%);background:var(--red);transition:width .2s ease;pointer-events:none}
+@media(hover:hover) and (pointer:fine){.page-nav :is(a,button):hover{transform:translateX(12px)}.page-nav :is(a,button):hover::before{width:6px}}
+@media(prefers-reduced-motion:reduce){.page-nav :is(a,button),.page-nav :is(a,button)::before{transition:none}}
+
+/* Owner emphasis in the Home intro; this remains plain text. */
+.intro .familiar-characters{text-decoration:underline;text-decoration-thickness:.045em;text-underline-offset:.14em}
+
+/* Home refinements: text-link hover and a transparent email focus state. */
+.intro .familiar-characters:hover{color:var(--red)}
+.home-page .connect-form input{border-bottom:2px solid transparent}
+.home-page .connect-form input:focus,.home-page .connect-form input:focus-visible{background-color:transparent!important;border-bottom-color:var(--red)}
+
+/* Studio: a quiet eyebrow above the leading statement. */
+.section-heading h2{font:500 15px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.section-heading>p{color:var(--ink);font-size:var(--section-title);line-height:1.2}
+
+/* Quiet essay-scale supporting copy on Home. */
+.home-page .services{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.home-page .services dt,.home-page .services dd,.home-page .shop-support-copy{font:400 20px/1.5 var(--font);letter-spacing:0;text-wrap:pretty}
+.home-page .services dd{margin-top:8px}
+html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd,html[lang="ja"] .home-page .shop-support-copy{line-height:1.85}
+@media(max-width:767px){.home-page .services{grid-template-columns:minmax(0,1fr)}}
+@media(min-width:768px){
+ .home-page .services dt,.home-page .services dd,.home-page .shop-support-copy{font-size:28px}
+ html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd,html[lang="ja"] .home-page .shop-support-copy{font-size:24px}
+}
+
+/* Square-pixel arrow; hidden glyph preserves existing CTA semantics. */
+.intro-cta .pixel-arrow{display:inline-block;width:.8em;height:.8em;flex:none;overflow:hidden;font-size:inherit;line-height:0;color:transparent;vertical-align:-.08em;position:relative}
+.intro-cta .pixel-arrow::before{content:"";position:absolute;inset:0;background:currentColor;color:var(--red);clip-path:polygon(0 43.75%,68.75% 43.75%,68.75% 31.25%,56.25% 31.25%,56.25% 18.75%,43.75% 18.75%,43.75% 6.25%,56.25% 6.25%,56.25% 18.75%,68.75% 18.75%,68.75% 31.25%,81.25% 31.25%,81.25% 43.75%,93.75% 43.75%,93.75% 56.25%,81.25% 56.25%,81.25% 68.75%,68.75% 68.75%,68.75% 81.25%,56.25% 81.25%,56.25% 93.75%,43.75% 93.75%,43.75% 81.25%,56.25% 81.25%,56.25% 68.75%,68.75% 68.75%,68.75% 56.25%,0 56.25%)}
+.intro-cta:hover .pixel-arrow::before,.intro-cta:focus-visible .pixel-arrow::before{color:var(--ink)}
+
+/* Simple page list and compact footer socials. */
+:is(.home-page,.about-page) .page-nav .page-nav-contact{border:0!important;margin:0!important;padding:0!important;align-self:auto}
+.js :is(.home-page,.about-page) .page-nav{display:flex;gap:0}
+@media(max-width:1099px){.js :is(.home-page,.about-page) .page-nav{flex-direction:row;gap:24px;align-items:center}}
+.site-footer .footer-line{flex-wrap:wrap;gap:24px}
+.site-footer .social-links{display:flex;gap:12px;align-items:center}
+.site-footer .social-links a{width:24px;height:24px}
+.site-footer .social-links svg{width:14px;height:14px}
+@media(max-width:767px){.site-footer .footer-line{gap:16px}.site-footer .social-links{gap:8px}.site-footer .social-links svg{width:12px;height:12px}}
+
+/* Home replaces the compact disclosure with a horizontal page bar. */
+.home-page .mobile-nav-toggle{display:none!important}
+@media(max-width:1099px){
+ .js .home-page .page-nav{position:fixed;top:10px;left:max(24px,env(safe-area-inset-left));right:max(24px,env(safe-area-inset-right));display:flex;flex-direction:row;align-items:center;gap:20px;width:auto}
+ .js .home-page .page-nav>a,.js .home-page .page-nav-contact button{display:flex;align-items:center;min-height:44px;padding:0;white-space:nowrap}
+ .js .home-page .page-nav .page-nav-contact{display:block;margin-left:auto!important}
+}
+@media(max-width:767px){.js .home-page .page-nav{top:56px;left:max(16px,env(safe-area-inset-left));right:max(16px,env(safe-area-inset-right));gap:16px;font-size:11px}}
+
+/* Services share the specification table's quiet label/detail hierarchy. */
+.home-page .services{padding:0;border:0}
+.home-page .services>div{padding-block:8px;border-top:.5px solid var(--line)}
+.home-page .services dt{font:500 15px/1.3 var(--font);color:var(--ink)}
+.home-page .services dd{font:400 15px/1.3 var(--font);color:var(--ink);margin-top:8px}
+html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd{font-size:15px;line-height:1.3}
+
+/* A little name tag above each footer social icon. */
+.site-footer .social-links a{position:relative;overflow:visible}
+.site-footer .social-platform{position:absolute;bottom:calc(100% + 8px);left:50%;display:block;width:max-content;max-width:none;pointer-events:none;color:var(--ink);font:400 12px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase;opacity:0;visibility:hidden;transform:translate(-50%,8px) scale(.88);transform-origin:center bottom;transition:opacity 150ms ease,transform 220ms cubic-bezier(.3,1.4,.5,1),visibility 0s 220ms}
+.site-footer .social-links a:hover .social-platform,.site-footer .social-links a:focus-visible .social-platform{opacity:1;visibility:visible;transform:translate(-50%,0) scale(1);transition:opacity 180ms ease,transform 300ms cubic-bezier(.3,1.4,.5,1),visibility 0s}
+@media(prefers-reduced-motion:reduce){.site-footer .social-platform{transition:none;transform:translate(-50%,0)}}
+
+/* Services follows the Shop specification sheet row layout. */
+.home-page .services{display:block;padding:0;border:0}
+.home-page .services>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding-block:8px;border-top:.5px solid var(--line)}
+.home-page .services dt{font:500 15px/1.3 var(--font);color:var(--ink)}
+.home-page .services dd{min-width:0;margin:0;font:400 15px/1.3 var(--font);color:var(--ink);text-align:left;text-wrap:pretty}
+@media(min-width:768px){.home-page .services>div{grid-template-columns:200px minmax(0,1fr);gap:0}}

@@ -2,7 +2,7 @@
 .objects-page{--object-cell:280px;background:var(--beige);line-height:1.4}
 .objects-header{display:grid;grid-template-columns:1fr 96px 1fr;align-items:center;gap:24px;padding:16px 32px}
 .objects-header .site-logo{width:96px}
-.objects-header>a:not(.site-logo){font:500 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.04em;min-height:44px;display:flex;align-items:center}
+.objects-header>a:not(.site-logo){font:500 12px/1.4 var(--font);letter-spacing:.04em;min-height:44px;display:flex;align-items:center;text-transform:uppercase}
 .objects-header>a:last-child{justify-self:end}.objects-header>a:hover{color:var(--red)}
 .objects-main{padding:32px 0 0}
 .objects-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;padding:0 32px 28px}
@@ -39,7 +39,7 @@
 .objects-status{color:var(--ink)}.objects-hint{margin-left:auto}.objects-reset{padding:0;color:var(--ink);min-height:32px;font-size:12px;text-decoration:underline;text-underline-offset:4px}
 .objects-dialog{border:0;border-radius:0;padding:0;max-width:960px;width:calc(100% - 48px);max-height:calc(100dvh - 48px);background:var(--beige);color:var(--ink);overflow:auto}
 .objects-dialog::backdrop{background:rgba(50,5,5,.4)}
-.objects-dialog-close{position:absolute;top:16px;right:16px;z-index:2;border:0;background:var(--beige);font:500 13px/1.3 var(--mono);padding:12px;min-height:44px}
+.objects-dialog-close{position:absolute;top:16px;right:16px;z-index:2;border:0;background:var(--beige);font:500 13px/1.3 var(--font);padding:12px;min-height:44px;text-transform:uppercase}
 .objects-dialog-layout{display:grid;grid-template-columns:1.15fr 1fr;min-height:480px}.objects-dialog-photo{display:flex;align-items:center;padding:40px;background:rgba(255,255,255,.35)}.objects-dialog-photo img{width:100%;max-height:65vh;object-fit:contain;mix-blend-mode:multiply}
 .objects-dialog-copy{padding:80px 40px 40px;display:flex;flex-direction:column;justify-content:center;gap:20px}.objects-dialog-copy h2{font-size:36px;font-weight:700;line-height:1.1}.objects-dialog-brand{color:var(--sub-gray);font-size:14px}.objects-dialog-description{font-size:18px;line-height:1.5}.objects-dialog-tags{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--sub-gray)}.objects-dialog-tags span{border:1px solid var(--line);padding:5px 8px}.objects-dialog-link{font-size:20px;color:var(--red);padding-block:12px}.objects-dialog-credit{font-size:11px;color:var(--sub-gray);margin-top:8px}.objects-dialog-credit a{text-decoration:underline;text-underline-offset:3px}
 .objects-ready:not(.objects-list){height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
@@ -105,7 +105,7 @@
 
 
 .objects-header .site-logo:last-child{grid-column:2;justify-self:center}
-.objects-info-about{display:inline-flex;align-items:center;min-height:44px;margin-top:20px;font:500 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.04em;text-decoration:underline;text-underline-offset:4px}.objects-info-about:hover{color:var(--red)}
+.objects-info-about{display:inline-flex;align-items:center;min-height:44px;margin-top:20px;letter-spacing:normal;text-decoration:none;text-transform:none}.objects-info-about:hover{color:var(--red)}
 
 .objects-zoom label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .objects-zoom span{min-width:12px;font-size:16px;text-align:center}
@@ -199,7 +199,7 @@
 .objects-dialog-close span{font:400 28px/1 var(--font)}
 
 /* Floating navigation: backgrounds belong to labels, never the menu panel. */
-.finds-home-menu{position:relative;justify-self:start;pointer-events:auto;font:500 12px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.finds-home-menu{position:relative;justify-self:start;pointer-events:auto;font:500 12px/1.4 var(--font);letter-spacing:.04em;;text-transform:uppercase}
 .finds-home-trigger{display:block;width:fit-content;padding:8px 12px;background:var(--white);border:1px solid var(--ink)}
 .finds-page-nav{position:absolute;left:0;top:100%;padding-top:8px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:140px;background:transparent;visibility:hidden;pointer-events:none}
 .finds-home-menu:is(.is-open,.is-closing) .finds-page-nav{visibility:visible}
@@ -209,7 +209,7 @@
 .finds-nav-divider{width:64px;height:1px;background:var(--ink);margin:8px 0}
 .objects-ready .objects-view-dock .objects-tools-panel{width:max-content;min-width:140px;padding:0;left:0;background:transparent;border:0;overflow:visible}
 .objects-categories{align-items:flex-start;gap:4px}
-.objects-categories button{width:fit-content;background:var(--white);padding:6px 12px;font:500 12px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.objects-categories button{width:fit-content;background:var(--white);padding:6px 12px;font:500 12px/1.4 var(--font);letter-spacing:.04em;;text-transform:uppercase}
 .objects-categories button:hover:not([aria-pressed="true"]){background:var(--white);color:var(--red)}
 .objects-ready .objects-view-dock .objects-tools-panel{position:absolute;left:0;bottom:calc(100% + 8px)}
 .objects-page:not(.objects-ready) .finds-home-menu:is(:hover,:focus-within) .finds-page-nav{opacity:1;transform:none;visibility:visible;pointer-events:auto}
@@ -222,8 +222,8 @@
 @media(prefers-reduced-motion:reduce){.finds-menu-motion .finds-menu-item{transition:none;transform:none}}
 
 /* One shared label style and border weight for every floating control. */
-.objects-page{--floating-label:400 12px/1.4 var(--font);--floating-border:1px solid var(--ink)}
-.objects-page :is(.finds-home-trigger,.finds-page-nav a,.objects-tools summary,.objects-categories button,.objects-language a,.objects-info,.objects-zoom button){font:var(--floating-label);letter-spacing:0;text-transform:none}
+.objects-page{--floating-label:500 12px/1.4 var(--font);--floating-border:1px solid var(--ink)}
+.objects-page :is(.finds-home-trigger,.finds-page-nav a,.objects-tools summary,.objects-categories button,.objects-language a,.objects-info,.objects-zoom button){font:var(--floating-label);letter-spacing:.04em;text-transform:uppercase}
 .objects-page :is(.finds-home-trigger,.finds-page-nav a,.objects-categories button){padding:6px 12px;min-height:33px;border:var(--floating-border)}
 .objects-ready :is(.objects-tools,.objects-language,.objects-zoom),.objects-page .objects-info{border:var(--floating-border)}
 .objects-page .objects-tools summary{padding:6px 12px;min-height:31px}
@@ -265,7 +265,7 @@
 
 /* Product cards with stationary adjacent previews and stacked photographs. */
 .objects-tile figcaption{text-align:center}
-#object-dialog{inset:0;margin:auto;width:min(90%,900px);height:100dvh;max-height:100dvh;padding:12px 0;box-sizing:border-box;background:transparent;border:0;grid-template-rows:48px minmax(0,1fr) 48px;gap:12px;overflow:hidden}
+#object-dialog{inset:auto 0 0;margin:0;width:100%;max-width:none;height:90dvh;max-height:90dvh;padding:0;box-sizing:border-box;background:var(--beige);border:0;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr) 64px;gap:0;overflow:hidden}
 #object-dialog[open]{display:grid}
 #object-dialog .objects-dialog-scroll{background:var(--beige);min-height:0;height:100%;overflow-y:auto;overscroll-behavior:contain}
 #object-dialog .objects-dialog-layout{display:block;min-height:0}
@@ -299,7 +299,7 @@
 /* A native photo track on phones, including their short landscape viewport.
    Crop each photo to fill its square; the sheet can scroll vertically below it. */
 @media(max-width:767px),(max-width:1023px) and (max-height:500px) and (pointer:coarse){
- #object-dialog{inset:auto 0 0;margin:0;width:100%;height:95dvh;max-height:95dvh;padding:0;gap:0;grid-template-rows:minmax(0,1fr) auto;background:var(--beige)}
+ #object-dialog{inset:auto 0 0;margin:0;width:100%;height:90dvh;max-height:90dvh;padding:0;gap:0;grid-template-rows:minmax(0,1fr) auto;background:var(--beige)}
  #object-dialog>.objects-product-peek{display:none}
  #object-dialog .objects-dialog-scroll{grid-column:1;grid-row:1;min-width:0;min-height:0}
  #object-dialog .objects-dialog-close{top:12px;right:max(12px,env(safe-area-inset-right));width:48px;height:48px}
@@ -318,7 +318,7 @@
  #object-dialog .objects-dialog-image{flex:0 0 100%;width:100%;min-width:0;min-height:0;height:auto!important;aspect-ratio:1 / 1;object-fit:cover;object-position:center;scroll-snap-align:start;scroll-snap-stop:always;pointer-events:none;-webkit-user-drag:none}
  #object-dialog .objects-dialog-photo.is-interactive{cursor:pointer}
  #object-dialog .objects-dialog-photo:focus-visible{background-color:transparent!important}
- #object-dialog .objects-photo-count:not([hidden]){position:absolute;z-index:1;right:12px;bottom:12px;display:block;margin:0;padding:0;border:0;background:transparent;box-shadow:none;color:var(--ink);font:400 12px/1.4 var(--mono);font-variant-numeric:tabular-nums;pointer-events:none}
+ #object-dialog .objects-photo-count:not([hidden]){position:absolute;z-index:1;right:12px;bottom:12px;display:block;margin:0;padding:0;border:0;background:transparent;box-shadow:none;color:var(--ink);font:400 12px/1.4 var(--font);font-variant-numeric:tabular-nums;pointer-events:none;text-transform:uppercase}
  #object-dialog .objects-dialog-photo:focus-visible + .objects-photo-count{color:var(--red);text-decoration:underline;text-underline-offset:4px}
  #object-dialog .objects-dialog-copy{grid-column:1;grid-row:2;position:static;max-height:none;overflow:visible;padding:16px 20px 20px;gap:12px;overflow-wrap:anywhere}
  #object-dialog .objects-dialog-description{font-size:17px}
@@ -329,3 +329,127 @@
 /* Adjacent products push each other horizontally within the clipped dialog. */
 #object-dialog.is-sliding .objects-dialog-scroll{will-change:transform;pointer-events:none}
 #object-dialog .objects-detail-ghost{position:absolute;z-index:2;pointer-events:none!important;overflow:hidden}
+
+/* Named collection disclosure; allow its label to wrap on narrow screens. */
+.objects-page.objects-ready .objects-info{display:flex;align-items:center;justify-content:center;gap:8px;width:auto;padding:6px 12px}
+@media(max-width:767px),(max-width:1023px) and (max-height:500px) and (pointer:coarse){
+ .objects-page.objects-ready .objects-info{width:auto;max-width:calc((100% - 96px)/2 - 24px);height:auto;min-height:44px;text-align:left}
+ .objects-info>span:last-child{flex:none}
+}
+
+.objects-page.objects-ready.mobile-navigation-ready .mobile-nav-panel :is(a,button){font:var(--floating-label);letter-spacing:.04em;text-transform:uppercase}
+
+.objects-info-about{gap:.4em}
+
+/* Centered product sheet with a separate adjacent-product navigation row. */
+@media(min-width:768px){
+ #object-dialog{inset:auto 0 0;margin:0;width:100%;height:90dvh;max-height:90dvh;padding:0;gap:0;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr) calc(64px + env(safe-area-inset-bottom))}
+ #object-dialog .objects-dialog-scroll{grid-column:1 / -1;grid-row:1}
+ #object-dialog>.objects-product-peek{grid-row:2;width:100%;height:100%;margin:0;padding-bottom:env(safe-area-inset-bottom);border-top:1px solid var(--line)}
+ #object-dialog>.objects-product-peek[data-product-step="-1"]{grid-column:1;border-right:1px solid var(--line)}
+ #object-dialog>.objects-product-peek[data-product-step="1"]{grid-column:2}
+ #object-dialog .objects-dialog-close{top:16px}
+ #object-dialog .objects-dialog-copy{max-height:calc(90dvh - 76px - env(safe-area-inset-bottom))}
+}
+@media(max-width:767px),(max-width:1023px) and (max-height:500px) and (pointer:coarse){
+ #object-dialog{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+ #object-dialog .objects-dialog-copy{max-height:none}
+ #object-dialog .objects-dialog-close{top:12px}
+}
+
+.objects-info-dialog p + p{margin-top:24px}
+
+#object-dialog{inset:0;margin:auto;width:90vw;height:90dvh;max-height:90dvh;background:transparent;row-gap:12px}
+
+#objects-info-dialog{border:8px solid var(--red)}
+
+/* One label and hover treatment for Finds floating controls. */
+.objects-page.objects-ready :is(.finds-home-trigger,.objects-info,.objects-tools summary,.objects-categories button,.objects-language a,.objects-zoom button){font:var(--floating-label)!important;letter-spacing:.04em;text-transform:uppercase;box-sizing:border-box;padding:6px 12px;min-height:33px;color:var(--ink);transition:color 180ms,border-color 180ms}
+.objects-page.objects-ready .finds-home-trigger{display:flex;align-items:center;width:fit-content}
+.objects-page.objects-ready .objects-language{padding:0;gap:0}
+.objects-page.objects-ready .objects-language a{border:1px solid transparent}
+.objects-page.objects-ready :is(.finds-home-trigger,.objects-info,.objects-categories button):hover,
+.objects-page.objects-ready .objects-tools:has(summary:hover),
+.objects-page.objects-ready .objects-language:has(a:hover),
+.objects-page.objects-ready .objects-zoom:has(button:hover){border-color:var(--red)}
+.objects-page.objects-ready :is(.finds-home-trigger,.objects-info,.objects-tools summary,.objects-categories button,.objects-language a,.objects-zoom button):hover{color:var(--red);background:var(--white)}
+
+/* Collection disclosure sits beneath its floating trigger. */
+#objects-info-dialog{top:var(--info-top,54px);padding:24px;max-height:calc(100dvh - var(--info-top,54px) - 24px);transform:translateY(-12px);font:var(--floating-label);letter-spacing:.04em;text-transform:uppercase}
+#objects-info-dialog[open]{transform:translateY(0)}
+#objects-info-dialog h2{font:500 16px/1.4 var(--font);letter-spacing:.04em;text-transform:uppercase;margin:0 48px 20px 0}
+#objects-info-dialog p{font:var(--floating-label);line-height:1.6;text-transform:uppercase}
+#objects-info-dialog .objects-info-note{font-size:12px;margin-top:0}
+#objects-info-dialog .objects-info-about{font:var(--floating-label);text-transform:uppercase}
+#objects-info-dialog .objects-dialog-close{top:12px;right:12px;width:33px;height:33px;min-width:33px;min-height:33px}
+
+.objects-tile img{transform-origin:center}
+.objects-page.finds-entering :is(.objects-header,.objects-view-dock,.objects-info,.objects-zoom,.objects-footer){opacity:0;pointer-events:none}
+.objects-page.finds-controls-enter :is(.objects-header,.objects-info){animation:finds-controls-top 480ms cubic-bezier(.2,.8,.2,1) both}
+.objects-page.finds-controls-enter :is(.objects-view-dock,.objects-zoom,.objects-footer){animation:finds-controls-bottom 480ms cubic-bezier(.2,.8,.2,1) both}
+@keyframes finds-controls-top{from{opacity:0;translate:0 -24px}to{opacity:1;translate:0 0}}
+@keyframes finds-controls-bottom{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){.objects-page.finds-entering :is(.objects-header,.objects-view-dock,.objects-info,.objects-zoom,.objects-footer){opacity:1;pointer-events:auto}.objects-page.finds-controls-enter :is(.objects-header,.objects-view-dock,.objects-info,.objects-zoom,.objects-footer){animation:none}}
+
+#objects-info-dialog p a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.objects-page a:hover{color:var(--red)}
+#objects-info-dialog p a:hover{color:var(--red)}
+
+#objects-info-dialog{opacity:0;transform:translateY(-16px);transition:opacity 480ms cubic-bezier(.2,.8,.2,1),transform 480ms cubic-bezier(.2,.8,.2,1),display 480ms allow-discrete}
+#objects-info-dialog[open]{opacity:1;transform:translateY(0)}
+#objects-info-dialog h2{margin-right:0}
+@starting-style{#objects-info-dialog[open]{opacity:0;transform:translateY(-16px)}}
+@media(prefers-reduced-motion:reduce){#objects-info-dialog{opacity:1;transform:none;transition:none}}
+
+.objects-search{box-sizing:border-box;width:300px;max-width:calc(100vw - 24px);min-height:33px;padding:6px 12px;border:var(--floating-border);border-radius:0;background:var(--white);color:var(--ink);font:var(--floating-label);letter-spacing:.04em;outline:none;box-shadow:none;caret-color:var(--ink)}
+.objects-search::placeholder{color:var(--sub-gray)}
+.objects-search:hover,.objects-search:focus{border-color:var(--red);background:var(--white)}
+.objects-search:focus{border-bottom:2px solid var(--red)}
+@media(max-width:767px){.objects-ready .objects-view-dock{display:block!important;bottom:68px}.objects-search{width:calc(100vw - 24px)}}
+
+.objects-search-wrap{position:relative;display:block}
+.objects-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;fill:none;stroke:var(--sub-gray);stroke-width:1.5;pointer-events:none}
+.objects-search-wrap .objects-search{padding-left:34px}
+.objects-search-wrap:focus-within .objects-search-icon{stroke:var(--red)}
+
+.objects-page .objects-search:focus,.objects-page .objects-search:focus-visible{background:var(--white)!important}
+
+@media(min-width:768px){#object-dialog .objects-photo-count:not([hidden]){display:block;position:absolute;z-index:3;top:auto;left:auto;right:calc(40% + 12px);bottom:calc(64px + 12px + 12px + env(safe-area-inset-bottom));margin:0;padding:0;border:0;background:transparent;box-shadow:none;color:var(--ink);font:400 12px/1.4 var(--font);font-variant-numeric:tabular-nums;pointer-events:none;text-transform:uppercase}}
+
+.objects-tile img.dombo-wide,.object-card img.dombo-wide{object-fit:contain!important}
+
+#object-dialog .objects-dialog-photo img{cursor:pointer}
+
+/* Native transparent Freckle source has generous padding; match catalog optical size. */
+.objects-tile img.freckle-green,.object-card img.freckle-green{scale:1.72;transform-origin:center}
+
+.objects-dialog-copy .objects-purchased{border:0}
+.objects-dialog-tags button{padding:5px 8px;border:1px solid var(--line);background:transparent;color:var(--sub-gray);font:400 12px/1.4 var(--font);text-transform:uppercase;cursor:pointer}
+.objects-dialog-tags button:hover,.objects-dialog-tags button:focus-visible{color:var(--red);border-color:var(--red)}
+
+/* Owner direction: fill every detail frame edge to edge. */
+#object-dialog .objects-dialog-photo .objects-dialog-image{object-fit:cover;object-position:center}
+
+/* Desktop photos occupy exactly the sheet viewport, excluding navigation and gap. */
+@media(min-width:768px){
+ #object-dialog .objects-dialog-photo .objects-dialog-image{display:block;height:calc(90dvh - 76px - env(safe-area-inset-bottom))!important;aspect-ratio:auto;margin:0;width:100%}
+}
+@media(max-width:1023px) and (max-height:500px) and (pointer:coarse){
+ #object-dialog .objects-dialog-photo .objects-dialog-image{height:auto!important;aspect-ratio:1 / 1}
+}
+
+/* Balanced zoom rail with a square pixel eye handle. */
+.objects-page.objects-ready .objects-zoom{gap:8px;padding:0 8px;align-items:center}
+.objects-page.objects-ready .objects-zoom button{display:grid;place-items:center;padding:0;min-width:32px;width:32px;min-height:33px;font-size:18px!important}
+.objects-zoom input::-webkit-slider-runnable-track{height:2px;background:var(--line)}
+.objects-zoom input::-moz-range-track{height:2px;background:var(--line)}
+.objects-zoom input::-webkit-slider-thumb{width:24px;height:24px;margin-top:-11px;border:0;background:transparent url('../img/ui/pixel-eye.svg') center/24px 24px no-repeat}
+.objects-zoom input::-moz-range-thumb{width:24px;height:24px;border:0;background:transparent url('../img/ui/pixel-eye.svg') center/24px 24px no-repeat}
+@media(max-width:767px){.objects-page.objects-ready .objects-zoom{width:200px;height:46px}.objects-page.objects-ready .objects-zoom button{width:36px;min-width:36px;min-height:44px}}
+
+#objects-info-dialog,#objects-info-dialog :is(h2,p,a,button){text-transform:none}
+
+#objects-info-dialog h2{text-transform:uppercase}
+
+.objects-info-eyes{display:block;width:58px;height:24px;margin-bottom:24px}
+@media(min-width:1100px){#objects-info-dialog{width:33.333vw;max-width:none;box-sizing:border-box}}

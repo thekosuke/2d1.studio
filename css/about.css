@@ -2,7 +2,7 @@
    quieter long-form reading scale beneath the always-visible introduction. */
 .essay-page{--essay-gap:64px;--essay-copy:20px;padding-block:var(--space)}
 .essay-head{display:flex;flex-direction:column;gap:8px}
-.essay-kicker{margin-bottom:24px;font:500 13px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--sub-gray)}
+.essay-kicker{margin-bottom:24px;font:500 13px/1.4 var(--font);letter-spacing:.04em;color:var(--sub-gray);text-transform:uppercase}
 .essay-kicker::before{display:none}
 .essay-title{font:700 var(--section-title)/1.1 var(--font);letter-spacing:0;text-wrap:pretty}
 .essay-dek{font:500 var(--reading)/1.2 var(--font);color:var(--sub-gray);text-wrap:pretty}
@@ -12,7 +12,7 @@
 .essay-rest{margin-top:var(--essay-gap)}
 .essay-rest p{font:400 var(--essay-copy)/1.5 var(--font);text-wrap:pretty}
 .essay-rest p+p{margin-top:1.25em}
-.essay-rest h2{font:700 var(--reading)/1.2 var(--font);text-wrap:pretty;margin:var(--essay-gap) 0 24px}
+.essay-rest h2{font:700 var(--essay-copy)/1.2 var(--font);text-wrap:pretty;text-transform:uppercase;margin:var(--essay-gap) 0 24px}
 .essay-pull{margin-block:var(--essay-gap)}
 .essay-rest .essay-pull p{font:500 var(--reading)/1.2 var(--font);text-wrap:pretty}
 .essay-end{display:inline-block;width:.5em;height:.5em;margin-left:.4em;background:var(--red)}

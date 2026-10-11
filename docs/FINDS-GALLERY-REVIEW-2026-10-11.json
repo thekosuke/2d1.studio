@@ -1,0 +1,810 @@
+{
+  "reviewDate": "2026-10-11",
+  "productsReviewed": 94,
+  "scope": "Names and full-photo contact-sheet review across all products. Complete-image detail fit at every viewport.",
+  "products": [
+    {
+      "id": "hay-miz-dark-green",
+      "name": "Miz Water Bottle",
+      "galleryCount": 2,
+      "fourImageTargetMet": false,
+      "notes": []
+    },
+    {
+      "id": "stokke-tripp-trapp-warm-red",
+      "name": "Tripp Trapp Chair",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "alessi-anna-g-black",
+      "name": "Anna G. Corkscrew",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "alessi-ossidiana-black",
+      "name": "Ossidiana Espresso Coffee Maker",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "dusen-everybody-wall-clock",
+      "name": "Everybody Wall Clock",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "subu-dusen-checker",
+      "name": "Dusen Dusen for MoMA Sandals",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": []
+    },
+    {
+      "id": "bruna-bonbon-mini-orange",
+      "name": "Bruna Bonbon Fluffy Mini Rabbit",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement."
+      ]
+    },
+    {
+      "id": "playforever-viglietta-jasper",
+      "name": "Viglietta Jasper",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "brutto-sally-pepe",
+      "name": "Sally and Pepe Grinders",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "nintendo-pikmin-vases",
+      "name": "Pikmin Single-Flower Vase Set",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "arms-flying-robi-persi",
+      "name": "Robi Persi",
+      "galleryCount": 1,
+      "fourImageTargetMet": false,
+      "notes": []
+    },
+    {
+      "id": "alessi-9090",
+      "name": "9090 Espresso Coffee Maker",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "arwenn-cloud-clock",
+      "name": "CLOUD Clock",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "craighill-chroma-scissors-primary",
+      "name": "Chroma Scissors",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "craighill-swingtop-lighter",
+      "name": "Swingtop Lighter",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "alessi-twergi-es19-yellow",
+      "name": "Twergi ES19 Spice Mill",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "nuutajarvi-tumbler-1709",
+      "name": "Tumbler 1709",
+      "galleryCount": 2,
+      "fourImageTargetMet": false,
+      "notes": []
+    },
+    {
+      "id": "block-design-play-tin",
+      "name": "Tinned Goods — Play",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "herman-miller-girard-throw",
+      "name": "Girard Throw",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": []
+    },
+    {
+      "id": "hay-regn-umbrella-gray-blue",
+      "name": "Regn Umbrella",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "moodulo-pop-culture-act-ii",
+      "name": "Pop Culture: Act II",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": []
+    },
+    {
+      "id": "homeinfun-storage-stool",
+      "name": "Playful Storage Stool Side Table",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Existing gallery second image contains other colors but no selected yellow. Third contains yellow as part of a group. Candidate homeinfun-storage-stool-13.jpg is an additional warm-yellow/orange room scene, but the source does not associate it to a variant; do not silently treat it as verified Yellow.",
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "odd-universe-peepers",
+      "name": "The Peepers",
+      "galleryCount": 1,
+      "fourImageTargetMet": false,
+      "notes": [
+        "These make four distinct official images of the collection, not four photographs of the identical size-A stool. Current description uses stacking stools in plural."
+      ]
+    },
+    {
+      "id": "atonemo-nts-radio-player",
+      "name": "NTS Radio Player",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Four existing authentic distinct official views; all native sources only 1080–1081px. Three supplementary lifestyle photos are 1201×800, but product occupies only a small part of these scenes."
+      ]
+    },
+    {
+      "id": "not-boring-camera-app",
+      "name": "Camera",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Digital app, so supplied assets are authentic app artwork/renders rather than physical photographs. Existing three large promotional graphics are distinct."
+      ]
+    },
+    {
+      "id": "not-boring-weather-app",
+      "name": "Weather",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Keep icon only as canvas thumbnail. Recommended detail gallery has four authentic official app visuals >=1200px."
+      ]
+    },
+    {
+      "id": "not-boring-camera-art-model",
+      "name": "!Camera Art Model",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Fourth image is genuine included packaging. Do not use the indigo Cube product photographs for this selection.",
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "mkbhd-color-picker-stickers",
+      "name": "Color Picker Sticker Pack",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "mkbhd-overlay-deskpad",
+      "name": "Overlay Deskpad",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "No change needed. Source was blocked by HTTP403 on this fresh raw-page read; existing source metadata and pixels remain inspectable. No separate original-color claim made."
+      ]
+    },
+    {
+      "id": "bobo-choses-bolder-belt-pouch",
+      "name": "Bobo Choses Bolder Belt Pouch",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Existing four gallery photographs are distinct and sufficient."
+      ]
+    },
+    {
+      "id": "hungry-market-initial-c-cap",
+      "name": "Initial C Embroidered Cap",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Four views are authentic and distinct; paired photo includes selected beige cap."
+      ]
+    },
+    {
+      "id": "daypa-kun-backpack-blue",
+      "name": "DAYPA-kun Backpack",
+      "galleryCount": 1,
+      "fourImageTargetMet": false,
+      "notes": []
+    },
+    {
+      "id": "lego-piranha-plant-71426",
+      "name": "Piranha Plant (71426)",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Four existing distinct product and assembly/lifestyle images pass >=1600px long edge."
+      ]
+    },
+    {
+      "id": "iwate-canning-gift-stock",
+      "name": "Gift&Stock",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Removes generic portrait with no product. These show prepared contents from the three-flavor collection, not four packaging-only views."
+      ]
+    },
+    {
+      "id": "mint-hug-shakers",
+      "name": "Hug Salt and Pepper Shakers",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Excluded duplicate frontend assets and photographed-background versions of the same frame. Four recommended views are native >=2400px."
+      ]
+    },
+    {
+      "id": "subu-originals-f-line-black",
+      "name": "ORIGINALS F-LINE",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Use four actual footwear views; remove bag-only photo from minimum photo count."
+      ]
+    },
+    {
+      "id": "sharge-discho",
+      "name": "Discho Hybrid Power Bank",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "No change needed."
+      ]
+    },
+    {
+      "id": "fairphone-gen-6-plus",
+      "name": "Fairphone (Gen. 6+)",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Existing gallery mixes green, blue and black phones. All source dimensions meet1200, but color consistency is unresolved."
+      ]
+    },
+    {
+      "id": "cwandt-high-speed-jump-rope",
+      "name": "High Speed Jump Rope",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Removes original white resin and alternate green views from same-version gallery. All four current aluminum/orange views are sharp native originals.",
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "ikea-forlunda-red",
+      "name": "FÖRLUNDA Pouffe",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Four distinct native1400px photos; no change required for count/resolution. No claim of first launch color."
+      ]
+    },
+    {
+      "id": "nendo-shoe-horn",
+      "name": "shoe-horn",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Replaces line drawing with actual official photography. Native originals remain small; no enlargement performed. Designer’s1920×840 banner has a narrow subject around700px tall and is the same closed pose, so was not counted as new high-resolution photo."
+      ]
+    },
+    {
+      "id": "mr-maria-first-light-snoopy",
+      "name": "First Light Snoopy",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "All originals pass canvas long-edge1200, but studio packshots contain substantial real photographic white space; subject itself is roughly500–700px. Do not claim1200px subject resolution. Further enlargement/cropping is not proposed."
+      ]
+    },
+    {
+      "id": "flos-snoopy-black",
+      "name": "Snoopy Table Lamp",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Additional professional-model assets examined are green and navy, rejected despite large dimensions. Existing black originals preserve correct iconic color."
+      ]
+    },
+    {
+      "id": "magis-spun",
+      "name": "Spun",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "magis-air-chair-red",
+      "name": "Air-Chair",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Owner-selected red replaces prior white. Restored native official three-quarter photo plus distinct1500px front view. New alpha-only cutout replaces artifacts in old preserved mask; sourceRGB retained and light/dark QA inspected.",
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "hay-table-clock-black",
+      "name": "Table Clock",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "muji-wall-mounted-cd-player",
+      "name": "Wall-Mounted CD Player (CPD-4)",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "groove-x-lovot-3",
+      "name": "LOVOT 3.0",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "teenage-engineering-grip-car",
+      "name": "grip car",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "cliik-press-glass-family-pack",
+      "name": "Press Glass Family Pack",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "yoto-player-4",
+      "name": "Yoto Player, 4th Gen",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "freckle-phone-orange",
+      "name": "Freckle Phone",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Stable existing product ID retained for ownership continuity."
+      ]
+    },
+    {
+      "id": "loop-cocoon-berry",
+      "name": "Cocoon Baby Earmuffs",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "magis-linnut-sulo-s",
+      "name": "Linnut Sulo S",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "flowerpot-vp9-zesty-orange",
+      "name": "Flowerpot VP9",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Mustard is explicitly listed in the manufacturer 2020 launch release.",
+        "Four distinct exact-variant photographs are available, with the fourth a contextual image whose lamps occupy a small part of the frame.",
+        "Rejected vp9-mustard-2.jpg: the retailer Mustard gallery also includes a Beige Red/Brown-looking lamp, so that image is not accepted as the exact finish."
+      ]
+    },
+    {
+      "id": "b-line-boby-34-paprika",
+      "name": "Boby Trolley, 3/4",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Classic red historical representation and exact B34 identity are separate checks; the museum three-drawer object is not substituted.",
+        "The best matching source is a native 1200×900 Mohd image. Product text identifies B34 and dimensions 43×42×73.5 cm; its photograph shows four drawers.",
+        "The 824×824 1stDibs and 1010×1010 Bob & Friends images depict the same pose and are lower-resolution duplicates, not additional gallery photos.",
+        "Bounded official/retailer research is complete; no retrieval approval remains blocked.",
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame.",
+        "Paprika manufacturer room and tray-detail originals retained; purple three-drawer model excluded to preserve product identity. Three qualifying views retained."
+      ]
+    },
+    {
+      "id": "hey-bag-green-lines",
+      "name": "Hey Bag",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "hey-classic-cap",
+      "name": "Classic Cap",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "alessi-la-conica",
+      "name": "La conica",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": []
+    },
+    {
+      "id": "memphis-first",
+      "name": "First",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "bosa-most-illustrious-achille",
+      "name": "Most Illustrious Achille",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "pedrali-frida-752",
+      "name": "Frida 752",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "olivetti-valentine",
+      "name": "Valentine",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "qeeboo-rabbit-chair-light-blue",
+      "name": "Rabbit Chair",
+      "galleryCount": 2,
+      "fourImageTargetMet": false,
+      "notes": []
+    },
+    {
+      "id": "alessi-magic-bunny-black",
+      "name": "Magic Bunny",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement.",
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "alessi-girotondo-round-tray",
+      "name": "Girotondo Round Tray",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Owner-selected second detail image promoted to canvas main photo; gallery order retained."
+      ]
+    },
+    {
+      "id": "baggu-standard-pop-pink-happy",
+      "name": "Standard Baggu",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": []
+    },
+    {
+      "id": "anya-hindmarch-eyes-tote",
+      "name": "Eyes Tote",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Uses the exact third official carousel image selected by the owner. Seven authentic original gallery photos retain their settings. Transparent native master retains original RGB with no changed product pixels."
+      ]
+    },
+    {
+      "id": "heinz-tomato-ketchup",
+      "name": "Tomato Ketchup",
+      "galleryCount": 2,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Eight distinct classic-label views, official native 2400px front and seven native 2200px retailer photos. The mismatched 20 oz metadata and commemorative-label imagery were excluded.",
+        "The 2400px web image uses quality-100 WebP to meet the hosting expanded-size limit. Alpha is byte-identical to the original; the full native source and lossless master remain retained.",
+        "11 October review: removed repeated front views; two distinct source photos retained pending verified high-resolution usage photography."
+      ]
+    },
+    {
+      "id": "panic-playdate",
+      "name": "Playdate",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Five distinct official images, including the primary hero. All original long edges are at least 1600px.",
+        "Native hero RGBA equality verified after lossless encoding; inspected against original on light and dark grounds.",
+        "No masking or synthetic image editing was necessary."
+      ]
+    },
+    {
+      "id": "kinto-water-bottle-300ml",
+      "name": "Water Bottle 300ml",
+      "galleryCount": 2,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Photo IMG_7066.jpeg shows Clear, Amber, Blue, Green and Smoke left to right.",
+        "Parent instructed one Clear representative after the optional clarification window.",
+        "Two distinct authentic views retained. Generic larger-bottle and other-color photographs excluded.",
+        "Original master RGB pixel comparison passes exactly; cutout visually reviewed against original on light and dark backgrounds.",
+        "No existing KINTO catalog entry found."
+      ]
+    },
+    {
+      "id": "topologie-6mm-rope-strap",
+      "name": "6.0mm Rope Strap",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "One 6.0mm Navy Orange representative is a reversible selection assumption following the optional clarification window, per parent instruction.",
+        "Current official mixed-color lifestyle images were retained as research candidates but are not included or counted.",
+        "No duplicate Topologie item exists in the current 74-item catalog.",
+        "Six distinct views selected: original packshot, worn lifestyle and four stockist detail views. Additional held-phone source remains preserved outside the served gallery."
+      ]
+    },
+    {
+      "id": "yoki-pillar-blue",
+      "name": "04 PILLAR",
+      "galleryCount": 1,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement."
+      ]
+    },
+    {
+      "id": "gispen-dombo-red",
+      "name": "Dombo Mug",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement.",
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame.",
+        "Owner-selected colorful variants. Both handles remain visible; native images 1440–1920px long edge."
+      ]
+    },
+    {
+      "id": "vitra-eames-elephant-orange",
+      "name": "Eames Elephant",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement.",
+        "Expanded to four distinct orange views: side, front, ear/face detail and upper construction detail. Canvas primary retained."
+      ]
+    },
+    {
+      "id": "detail-nasa-snow-globe",
+      "name": "NASA Snow Globe",
+      "galleryCount": 2,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement."
+      ]
+    },
+    {
+      "id": "carpenter-hamburger-coaster",
+      "name": "Hamburger Coaster",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement."
+      ]
+    },
+    {
+      "id": "super7-beams-charlie-brown",
+      "name": "Charlie Brown — BEAMS Exclusive",
+      "galleryCount": 2,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement."
+      ]
+    },
+    {
+      "id": "running-press-ufo-cow",
+      "name": "UFO Cow Abduction",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement."
+      ]
+    },
+    {
+      "id": "notabag-original-red",
+      "name": "Original",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Transparent native cutout visually checked on beige and dark brown; no enlargement.",
+        "11 October full-catalog review: complementary original photos selected; complete image fit inside shared square frame."
+      ]
+    },
+    {
+      "id": "cotopaxi-kapai-del-dia",
+      "name": "Kapai 1.5L Hip Pack",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+      ]
+    },
+    {
+      "id": "diffar-spicy-wood-hair-oil",
+      "name": "Spicy Wood Fragrance Hair Oil",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+      ]
+    },
+    {
+      "id": "kay-bojesen-songbird-sunshine",
+      "name": "Songbird Sunshine",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+      ]
+    },
+    {
+      "id": "vitra-nelson-night-clock",
+      "name": "Night Clock",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+      ]
+    },
+    {
+      "id": "palaset-im-ok-fantti-elephant-bank",
+      "name": "FANTTI Elephant Bank",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Owner-requested gallery order: group colorways, matching red side profile, front, top. Native 1950×2600 retailer photos; canvas alpha-only mask preserves RGB."
+      ]
+    },
+    {
+      "id": "ichendorf-desert-plants-cactus-amber",
+      "name": "Desert Plants Cactus Tumbler",
+      "galleryCount": 1,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+      ]
+    },
+    {
+      "id": "curaprox-cs-smart",
+      "name": "CS 5460 Toothbrush",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Corrected model to CS 5460 based on official orange/blue source. Legacy ID retained for ownership continuity. Canvas isolates one complete side-profile brush from native official group photo with alpha only. Gallery includes assorted colors, bathroom setting, actual use and colorful pattern."
+      ]
+    },
+    {
+      "id": "soholm-cafe-reversible-tote",
+      "name": "Reversible Tote Bag",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+      ]
+    },
+    {
+      "id": "tecta-cat-black",
+      "name": "TECTA Cat",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Four authentic distinct views: front, three-quarter, side and interior use. Transparent original inspected on beige and dark brown."
+      ]
+    },
+    {
+      "id": "kikkerland-inkerie-jewelry-case",
+      "name": "Inkerie Travel Jewelry Case",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Four complementary native 1950×2600 originals: closed three-quarter, open compartments, jewelry in use and closed front."
+      ]
+    },
+    {
+      "id": "muji-porcelain-toothbrush-stand",
+      "name": "Porcelain Toothbrush Stand",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Native originals retained; transparent primary checked on beige and dark brown. Shared reversible warm canvas grade."
+      ]
+    },
+    {
+      "id": "best-years-knitted-triceratops",
+      "name": "Knitted Triceratops",
+      "galleryCount": 3,
+      "fourImageTargetMet": false,
+      "notes": [
+        "Native originals retained; transparent primary checked on beige and dark brown. Shared reversible warm canvas grade."
+      ]
+    },
+    {
+      "id": "kay-bojesen-monkey-mini-vintage-blue",
+      "name": "Monkey Mini",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Native originals retained; transparent primary checked on beige and dark brown. Shared reversible warm canvas grade."
+      ]
+    },
+    {
+      "id": "muji-smooth-gel-knock-pen",
+      "name": "Smooth Gel Ink Ballpoint Knock Pen",
+      "galleryCount": 4,
+      "fourImageTargetMet": true,
+      "notes": [
+        "Four distinct photos: color lineup, individual pen, packaged set and writing close-up."
+      ]
+    }
+  ]
+}

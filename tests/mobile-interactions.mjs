@@ -90,26 +90,26 @@ console.log('PASS tote: all four surrounding stage areas rotate; silhouette-only
 for (const path of ['../index.html','../ja/index.html']) {
  const html=readFileSync(new URL(path,import.meta.url),'utf8');
  const nav=html.match(/<nav class="page-nav"[\s\S]*?<\/nav>/)[0];
- assert.match(nav, /href="#connect"[\s\S]*class="page-nav-pages"/);
- assert.match(nav, /role="group" aria-label="[^"]+"/);
- assert.deepEqual([...nav.matchAll(/href="([^"]+)"/g)].map(m=>m[1]),['#studio','#shop','#connect','about/','objects/']);
+ assert.doesNotMatch(nav, /href="#|page-nav-pages/);
+ assert.match(nav, /data-contact/);
+ assert.deepEqual([...nav.matchAll(/href="([^"]+)"/g)].map(m=>m[1]),['./','about/','objects/']);
  assert.doesNotMatch(html, /class="footer-pages"/);
 }
 const navCss=readFileSync(new URL('../css/walla.css',import.meta.url),'utf8');
-assert.match(navCss,/\.page-nav-pages\{[^}]*border-top:1px solid currentColor/);
-console.log('PASS page navigation: grouped routes in both languages, desktop divider, mobile second row.');
+assert.match(navCss,/\.page-nav \.page-nav-contact\{border:0!important/);
+console.log('PASS page navigation: Home, About, Finds, Contact in both languages without section anchors or dividers.');
 
 const homeMarkup=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 for(const path of ['../index.html','../ja/index.html']){
  const markup=readFileSync(new URL(path,import.meta.url),'utf8'),intro=markup.match(/<section[^>]*class="intro[^"]*"[\s\S]*?<\/section>/)[0];
- assert.match(intro,/<a class="familiar-characters" href="objects\/" translate="no">Familiar Characters<\/a>/);
+ assert.match(intro,/<a class="familiar-characters copy-emphasis" href="objects\/" translate="no">Familiar Characters<\/a>/);
  assert.doesNotMatch(intro,/<a class="intro-cta" href="objects\/"/);
 }
 assert.doesNotMatch(homeMarkup.match(/<section[^>]*id="shop"[\s\S]*?<\/section>/)[0],/href="objects\/"/);
 
 for (const path of ['../about/index.html','../ja/about/index.html']){
  const html=readFileSync(new URL(path,import.meta.url),'utf8');
- assert.match(html,/class="page-nav is-visible"/);assert.match(html,/href="\.\.\/#studio"/);
+ assert.match(html,/class="page-nav is-visible"/);assert.match(html,/href="\.\.\/"/);
  assert.match(html,/href="\.\/" aria-current="page"/);
  assert.match(html,/type="button" data-contact aria-haspopup="dialog" aria-controls="contact"/);
  assert.match(html,/js\/contact.js/);assert.match(html,/js\/drawers.js/);
@@ -134,7 +134,8 @@ for(const route of ['../about/index.html','../ja/about/index.html']){
  assert.match(active,/data-contact/);
 }
 
-assert.match(homeMarkup, /class="shop-actions"[\s\S]*data-interest/);
+assert.match(homeMarkup, /class="shop-actions"[\s\S]*class="connect-form"/);
+assert.doesNotMatch(homeMarkup, /<section id="connect"/);
 assert.match(navCss, /:focus\{outline:none!important;box-shadow:none!important/);
 assert.match(navCss, /:focus-visible\{[^}]*background-color:var\(--red\)!important;color:var\(--ink\)!important/);
 

@@ -27,9 +27,12 @@
       const height = innerHeight;
       const mix = reduced.matches ? Number(box.top <= height * .5 && box.bottom > height * .5)
         : Math.min(smooth((height * .85 - box.top) / (height * .65)), smooth((box.bottom - height * .15) / (height * .65)));
-      const warm = [250,240,230], cool = [214,206,197];
+      const warm = [250,240,230], cool = [25,20,22], ink = [50,5,5];
       const color = warm.map((channel,i) => Math.round(channel + (cool[i] - channel) * mix));
       document.documentElement.style.setProperty('--page-background', `rgb(${color.join(',')})`);
+      const text = ink.map((channel,i) => Math.round(channel + (warm[i] - channel) * mix));
+      document.documentElement.style.setProperty('--scene-ink', `rgb(${text.join(',')})`);
+      document.documentElement.style.setProperty('--scene-line', `rgba(${text.join(',')},.25)`);
     }
   }
   const queueScene = () => { if (!sceneQueued) { sceneQueued = true; requestAnimationFrame(paintScene); } };
@@ -251,6 +254,5 @@
     email.disabled=false;
     form.querySelector('button[type="submit"]').disabled=false;
     form.addEventListener('submit',e=>{e.preventDefault();explain();status.textContent=t('Signup isn’t connected yet. Your email was not sent or saved.');});
-    document.querySelector('[data-interest]')?.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();document.getElementById('connect').scrollIntoView({behavior:reduced.matches?'instant':'smooth'});email.focus({preventScroll:true});});
   }
 })();

@@ -1,0 +1,537 @@
+[
+  {
+    "id": "yoki-pillar-blue",
+    "primary": "img/objects/cutouts/yoki-pillar-blue-native-v2.webp",
+    "primaryDimensions": [
+      1040,
+      1040
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        1254,
+        1254
+      ],
+      "subjectPixels": [
+        365,
+        936
+      ],
+      "cropBoundingBox": [
+        441,
+        159,
+        806,
+        1095
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "1e618924054c8c334a91aea4fdee16caa34ad1a4735bd7ca7330a1c494cd96be"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/yoki-pillar-blue-native.png",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gispen-dombo-red",
+    "primary": "img/objects/cutouts/gispen-dombo-red-native-v2.webp",
+    "primaryDimensions": [
+      1482,
+      1482
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        1920,
+        1280
+      ],
+      "subjectPixels": [
+        1334,
+        492
+      ],
+      "cropBoundingBox": [
+        278,
+        400,
+        1612,
+        892
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "6376a437920559db45ae0f89fa504f1f714925bcba8479bb711a4ce6324aa329"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/gispen-dombo-1.jpg",
+        "dimensions": [
+          1920,
+          1280
+        ]
+      },
+      {
+        "image": "img/objects/gallery/gispen-dombo-2.jpg",
+        "dimensions": [
+          1920,
+          640
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vitra-eames-elephant-orange",
+    "primary": "img/objects/cutouts/vitra-eames-elephant-orange-native-v2.webp",
+    "primaryDimensions": [
+      5190,
+      5190
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        7532,
+        5580
+      ],
+      "subjectPixels": [
+        4671,
+        2790
+      ],
+      "cropBoundingBox": [
+        1942,
+        2136,
+        6613,
+        4926
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "0f07087b126d083239d31e741138c95a0f6e46da3ce94d528b179edd85198644"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/vitra-eames-elephant-orange.png",
+        "dimensions": [
+          7532,
+          5580
+        ]
+      }
+    ]
+  },
+  {
+    "id": "detail-nasa-snow-globe",
+    "primary": "img/objects/cutouts/detail-nasa-snow-globe-native-v2.webp",
+    "primaryDimensions": [
+      899,
+      899
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        1200,
+        1440
+      ],
+      "subjectPixels": [
+        651,
+        809
+      ],
+      "cropBoundingBox": [
+        272,
+        312,
+        923,
+        1121
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "7b339419e4d40d848e8a8a47d50d99bda02f0d8dcb0bef1353693235016e9130"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/nasa-globe-1.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      },
+      {
+        "image": "img/objects/gallery/nasa-globe-2.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      }
+    ]
+  },
+  {
+    "id": "carpenter-hamburger-coaster",
+    "primary": "img/objects/cutouts/carpenter-hamburger-coaster-native-v2.webp",
+    "primaryDimensions": [
+      959,
+      959
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        1200,
+        1440
+      ],
+      "subjectPixels": [
+        863,
+        809
+      ],
+      "cropBoundingBox": [
+        166,
+        304,
+        1029,
+        1113
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "aad478a2b93a85f98919f878f7e956d28148d2c8443561bdd068b3085bf92874"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/carpenter-burger-native-2.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      },
+      {
+        "image": "img/objects/gallery/carpenter-burger-native-4.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      },
+      {
+        "image": "img/objects/gallery/carpenter-burger-native-5.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      },
+      {
+        "image": "img/objects/gallery/carpenter-burger-2.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      }
+    ]
+  },
+  {
+    "id": "super7-beams-charlie-brown",
+    "primary": "img/objects/cutouts/super7-beams-charlie-brown-native-v2.webp",
+    "primaryDimensions": [
+      1369,
+      1369
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        1200,
+        1440
+      ],
+      "subjectPixels": [
+        593,
+        1232
+      ],
+      "cropBoundingBox": [
+        305,
+        138,
+        898,
+        1370
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "769627721fdf63f3af2daf9dc0fb191c7032f526eeba92e5384ffd171bc9877d"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/charlie-beams-1.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      },
+      {
+        "image": "img/objects/gallery/charlie-beams-2.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      }
+    ]
+  },
+  {
+    "id": "running-press-ufo-cow",
+    "primary": "img/objects/cutouts/running-press-ufo-cow-native-v3.webp",
+    "primaryDimensions": [
+      1710,
+      1710
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        2500,
+        3750
+      ],
+      "subjectPixels": [
+        1236,
+        1539
+      ],
+      "cropBoundingBox": [
+        947,
+        650,
+        2183,
+        2189
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "ac4abbb85b6e522e963d61299d29eeb33eef80fec7ce1e9e4126a5beb86865c0"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/ufo-cow-urban-native-b.png",
+        "dimensions": [
+          2500,
+          3750
+        ]
+      },
+      {
+        "image": "img/objects/gallery/ufo-cow-urban-native-d.png",
+        "dimensions": [
+          2500,
+          3750
+        ]
+      },
+      {
+        "image": "img/objects/gallery/ufo-cow-urban-native-e.png",
+        "dimensions": [
+          2000,
+          3000
+        ]
+      }
+    ]
+  },
+  {
+    "id": "notabag-original-red",
+    "primary": "img/objects/cutouts/notabag-original-red-native-v2.webp",
+    "primaryDimensions": [
+      1032,
+      1032
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        991,
+        1289
+      ],
+      "subjectPixels": [
+        484,
+        929
+      ],
+      "cropBoundingBox": [
+        250,
+        161,
+        734,
+        1090
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "dcbb7d9faefd34ff9041e067abe2e3f207d5436515f3c27307aee5ca1ce6475e"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/notabag-red-1.jpg",
+        "dimensions": [
+          991,
+          1289
+        ]
+      },
+      {
+        "image": "img/objects/gallery/notabag-red-2.jpg",
+        "dimensions": [
+          1022,
+          1329
+        ]
+      },
+      {
+        "image": "img/objects/gallery/notabag-red-lifestyle.jpg",
+        "dimensions": [
+          1200,
+          1560
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bruna-bonbon-mini-orange",
+    "primary": "img/objects/cutouts/bruna-bonbon-mini-orange-native-v2.webp",
+    "primaryDimensions": [
+      793,
+      793
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        1200,
+        1440
+      ],
+      "subjectPixels": [
+        648,
+        714
+      ],
+      "cropBoundingBox": [
+        332,
+        315,
+        980,
+        1029
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "322059ca8c7584a1a1cface6c70b9d3cd043134040f9789f14586f003cc25900"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/bruna-orange-native-9.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      },
+      {
+        "image": "img/objects/gallery/bruna-orange-native-10.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      },
+      {
+        "image": "img/objects/gallery/bruna-orange-native-11.jpg",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      },
+      {
+        "image": "img/objects/gallery/bruna-bonbon-mini-orange-2.webp",
+        "dimensions": [
+          1200,
+          1440
+        ]
+      }
+    ]
+  },
+  {
+    "id": "freckle-phone-orange",
+    "primary": "img/objects/cutouts/freckle-green-native-v2.webp",
+    "primaryDimensions": [
+      1486,
+      1486
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Official source alpha and RGB preserved; empty border cropped, square optical framing with no resizing",
+      "nativeSourceDimensions": [
+        3000,
+        3000
+      ],
+      "subjectPixels": [
+        1160,
+        1337
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "fd0f46b9990d1e2b1f838e30ccc76f944ef50a1a921fa4c4cb87560eeaa2e1b6"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/freckle-phone-green.png",
+        "dimensions": [
+          3000,
+          3000
+        ]
+      },
+      {
+        "image": "img/objects/gallery/freckle-phone-orange-audit-d1bd39581b.jpg",
+        "dimensions": [
+          4196,
+          5595
+        ]
+      },
+      {
+        "image": "img/objects/gallery/freckle-lifestyle-owner-3.png",
+        "dimensions": [
+          1080,
+          1350
+        ]
+      },
+      {
+        "image": "img/objects/gallery/freckle-lifestyle-owner-4.png",
+        "dimensions": [
+          1080,
+          1350
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alessi-magic-bunny-black",
+    "primary": "img/objects/cutouts/alessi-magic-bunny-black-native-v2.webp",
+    "primaryDimensions": [
+      1159,
+      1159
+    ],
+    "transparent": true,
+    "treatment": {
+      "background": "transparent",
+      "method": "Owner-approved conventional alpha mask: local macOS Vision plus reviewed silhouette corrections; source RGB unchanged; square framing without upscaling",
+      "nativeSourceDimensions": [
+        1648,
+        2062
+      ],
+      "subjectPixels": [
+        504,
+        1043
+      ],
+      "cropBoundingBox": [
+        567,
+        665,
+        1071,
+        1708
+      ],
+      "opticalFill": 0.9,
+      "upscaled": false,
+      "sourceSHA256": "b3bd6922defac71819e7180c14fbf628bf2edf1e8c7752fccffd8e415ab2e067"
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/alessi-magic-bunny-green-1.jpg",
+        "dimensions": [
+          1648,
+          2062
+        ]
+      }
+    ]
+  }
+]

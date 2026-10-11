@@ -127,16 +127,16 @@ const api=vm.runInContext('({loadPurchased})',purchaseContext);
 const respond=(request,data)=>request.resolve({ok:true,json:async()=>data});
 let loading=api.loadPurchased({id:'hay-miz'});respond(pendingRequests.shift(),{count:2,purchased:false});await loading;assert.equal(purchaseButton.disabled,false);assert.match(purchaseStatus.textContent,/Owned by 2 users$/);
 let saving=purchaseButton.handlers.get('click')();await purchaseButton.handlers.get('click')();assert.equal(pendingRequests.length,1);assert.equal(JSON.parse(pendingRequests[0].options.body).purchased,true);respond(pendingRequests.shift(),{count:3,purchased:true});await saving;assert.equal(purchaseButton.disabled,false);assert.equal(purchaseButton.textContent,'I have it ✓');
-saving=purchaseButton.handlers.get('click')();pendingRequests.shift().reject(new Error('network'));await saving;assert.equal(purchaseButton.disabled,true);assert.equal(purchaseRetry.hidden,false);assert.match(purchaseStatus.textContent,/Could not confirm/);
+saving=purchaseButton.handlers.get('click')();pendingRequests.shift().reject(new Error('network'));await saving;assert.equal(purchaseButton.disabled,true);assert.equal(purchaseRetry.handlers.size,0);assert.match(purchaseStatus.textContent,/Could not confirm/);
 let first=api.loadPurchased({id:'a'}),a=pendingRequests.shift();let second=api.loadPurchased({id:'b'}),b=pendingRequests.shift();respond(b,{count:9,purchased:false});await second;respond(a,{count:1,purchased:true});await first;assert.match(purchaseStatus.textContent,/Owned by 9 users$/);
-loading=api.loadPurchased({id:'c'});respond(pendingRequests.shift(),{count:-1,purchased:false});await loading;assert.equal(purchaseButton.disabled,true);assert.match(purchaseStatus.textContent,/unavailable/);
-console.log('PASS count UI: authoritative GET, duplicate-click guard, reversible desired state, failed mutation reload requirement, stale-response isolation, invalid-data rejection.');
+loading=api.loadPurchased({id:'c'});respond(pendingRequests.shift(),{count:-1,purchased:false});await loading;assert.equal(purchaseButton.disabled,true);assert.equal(purchaseStatus.textContent,'');
+console.log('PASS count UI: authoritative GET, duplicate-click guard, reversible desired state, failed mutation truthful feedback, stale-response isolation, invalid-data rejection.');
 
 for(const route of ['../objects/index.html','../ja/objects/index.html']){
  const html=readFileSync(new URL(route,import.meta.url),'utf8');
- assert.match(html.match(/<nav class="finds-page-nav"[\s\S]*?<\/nav>/)[0],/href="\.\.\/about\/"/);
- assert.match(html,/class="finds-home-trigger"[^>]*aria-expanded="false"/);
- assert.match(html, /class="objects-info-about" href="\.\.\/about\/"/);
+ assert.doesNotMatch(html,/<nav class="finds-page-nav"/);
+ assert.match(html,/class="finds-home-trigger" href="\.\.\/"/);
+ assert.match(html, /class="objects-info-about objects-dialog-link" href="\.\.\/about\/"/);
 }
 console.log('PASS Finds About links remain available in localized info dialog and collapsible page navigation.');
 
@@ -156,22 +156,23 @@ console.log('PASS all-control no-outline policy and US color copy with official 
 
 const filterCode=source.slice(source.indexOf('  function filter()'),source.indexOf('  const purchaseButton='));
 const emptyGrid={};
-const filterContext={catalog:products,visitOrders,active:products,category:'all',list:false,cards:products.map(p=>({dataset:{object:p.id}})),status:{},empty:{},categoryButtons:[],document:{querySelector:()=>emptyGrid},cancelGesture(){},stopMotion(){},reset(){},t:x=>x};
+const filterContext={selectedTag:'',searchQuery:"",catalog:products,visitOrders,active:products,category:'all',list:false,cards:products.map(p=>({dataset:{object:p.id}})),status:{},empty:{},categoryButtons:[],document:{querySelector:()=>emptyGrid},cancelGesture(){},stopMotion(){},reset(){},t:x=>x};
 vm.createContext(filterContext);vm.runInContext(filterCode,filterContext);
 for(const category of ['all','wear','kitchen','missing','wear','all','kitchen','all']){
  filterContext.category=category;filterContext.filter();assert.equal(filterContext.active.length,products.filter(p=>category==='all'||p.category===category).length);
- if(visitOrders.has(category)){assert.equal(filterContext.active,visitOrders.get(category));assert.deepEqual(ids(filterContext.active),visitSnapshot.get(category));}
+ if(visitOrders.has(category)){assert.deepEqual(ids(filterContext.active),visitSnapshot.get(category));}
  for(const card of filterContext.cards)assert.equal(card.hidden,!filterContext.active.some(item=>item.id===card.dataset.object));
 }
-for(const route of ['../objects/index.html','../ja/objects/index.html']){const html=readFileSync(new URL(route,import.meta.url),'utf8');assert.doesNotMatch(html,/id="objects-tag"|data-view=|objects-slide-controls/);assert.match(html,/data-category-filter=/);}
+for(const route of ['../objects/index.html','../ja/objects/index.html']){const html=readFileSync(new URL(route,import.meta.url),'utf8');assert.doesNotMatch(html,/id="objects-tag"|data-view=|objects-slide-controls/);assert.match(html,/id="objects-search"/);}
 assert.doesNotMatch(source,/objects-tag|tags.addEventListener|setView/);
 console.log('PASS canvas-only categories: repeated filters, empty states, no tag/toggle/carousel UI.');
 // First visit is immediate; dismissal persists across languages, manual reopen remains.
 const infoCode=source.slice(source.indexOf('  const infoSeenKey='),source.indexOf('  let measuredWidth='));
 const boot=source.slice(source.indexOf('  let infoSeen=false;'),source.lastIndexOf('})();'));
 for(const blocked of [false,true]){
- let stored=null,opens=0,focused=0;const infoButton=new Surface(),infoDialog=new Surface();infoDialog.open=false;infoDialog.showModal=()=>{infoDialog.open=true;opens++};infoDialog.close=()=>{infoDialog.open=false;infoDialog.emit('close')};infoDialog.querySelector=()=>({focus(){},addEventListener(){}});infoButton.focus=()=>focused++;
- const c={infoButton,infoDialog,dialog:{open:false},cancelGesture(){},stopMotion(){},settleGeometry(){},localStorage:{getItem(){if(blocked)throw Error();return stored},setItem(k,v){if(blocked)throw Error();stored=v}}};
+ let stored=null,opens=0,focused=0;const infoButton=new Surface(),infoDialog=new Surface();infoDialog.open=false;infoDialog.show=()=>{infoDialog.open=true;opens++};infoDialog.close=()=>{infoDialog.open=false;infoDialog.emit('close')};infoDialog.querySelector=()=>({focus(){},addEventListener(){}});infoButton.focus=()=>focused++;
+ infoButton.lastElementChild={textContent:'+'};infoButton.setAttribute=()=>{};infoButton.getBoundingClientRect=()=>({bottom:44});infoDialog.style={setProperty(){}};
+ const c={reduced:{matches:true},ResizeObserver:class{observe(){}},infoButton,infoDialog,dialog:{open:false},cancelGesture(){},stopMotion(){},settleGeometry(){},localStorage:{getItem(){if(blocked)throw Error();return stored},setItem(k,v){if(blocked)throw Error();stored=v}}};
  vm.createContext(c);vm.runInContext(infoCode+boot,c);assert.equal(opens,1);infoDialog.close();assert.equal(focused,1);if(!blocked)assert.equal(stored,'1');
  infoButton.emit('click');assert.equal(opens,2);infoDialog.close();
  if(!blocked){vm.runInContext("infoSeen=localStorage.getItem(infoSeenKey)==='1';if(!infoSeen)openInfo();",c);assert.equal(opens,2);}
@@ -251,7 +252,7 @@ for(const [url,length] of [['https://example.com/first',8],[null,2],['https://ex
  assert.equal(new Set(photos.map(photo=>photo.src)).size,length);assert.equal(new Set(photos.map(photo=>photo.srcset)).size,length);
  assert.equal(dialogFields.get('.objects-dialog-scroll').scrollTop,0);assert.equal(dialogFields.get('.objects-dialog-copy').scrollTop,0);
  assert.equal(photoTrack.scrollLeft,length>1?length*366:0);assert.equal(photoTrack.tabIndex,length>1?0:-1);
- assert.equal(photoCount.hidden,length===1);assert.equal(photoCount.textContent,`1/${length}`);assert.equal(selectedPhoto(),0);assert.equal(photoCount.children.length,0);assert.equal(photoCount.handlers.size,0);
+ assert.equal(photoCount.hidden,false);assert.equal(photoCount.textContent,`1/${length}`);assert.equal(selectedPhoto(),0);assert.equal(photoCount.children.length,0);assert.equal(photoCount.handlers.size,0);
  assert.equal(photoTrack.attributes.get('aria-label'),'Product photographs: Sample product');
  const link=dialogFields.get('.objects-dialog-link'),label=dialogFields.get('.objects-dialog-availability');
  assert.equal(link.hidden,!url);assert.equal(label.hidden,!!url);if(url)assert.equal(link.href,url);else assert.equal(link.href,undefined);
@@ -308,7 +309,7 @@ console.log('PASS native photo loops: 1/2/8 photos, repeated bidirectional keys,
 for(const count of [1,2,8]){
  showPhotos(count);let expected=0;
  for(const touch of [false,true])for(const direction of [-1,1])for(let i=0;i<count*3+1;i++){
-  tapPhoto(direction,{touch});expected=count>1?(expected+direction+count)%count:0;assert.equal(selectedPhoto(),expected);
+  tapPhoto(direction,{touch});expected=count>1?(expected+1+count)%count:0;assert.equal(selectedPhoto(),expected);
  }
  assert.equal(photoTrack.classes.has('is-interactive'),count>1);
  assert.equal(photoTrack.attributes.has('aria-description'),count>1);
@@ -321,14 +322,14 @@ for(const touchFirst of [false,true])for(const touchEndsFirst of [false,true])fo
  if(touchFirst){startTouch();startPointer()}else{startPointer();startTouch()}
  const endPointer=()=>photoWindow.emit('pointerup',point),endTouch=()=>photoWindow.emit('touchend',{changedTouches:[finger],touches:[]});
  if(touchEndsFirst){endTouch();endPointer()}else{endPointer();endTouch()}
- photoTrack.emit('click',point);assert.equal(selectedPhoto(),side<.5?7:1);
- photoTrack.emit('click',point);assert.equal(selectedPhoto(),side<.5?7:1,'duplicate compatibility click is consumed');
+ photoTrack.emit('click',point);assert.equal(selectedPhoto(),1);
+ photoTrack.emit('click',point);assert.equal(selectedPhoto(),1,'duplicate compatibility click is consumed');
 }
 for(const side of [.25,.75]){
  showPhotos(8);const point=photoPoint(side),finger={identifier:770,clientX:point.clientX,clientY:point.clientY};
  photoTrack.emit('touchstart',{changedTouches:[finger],touches:[finger]});
  photoWindow.emit('touchend',{changedTouches:[finger],touches:[]});photoTrack.emit('click',point);
- assert.equal(selectedPhoto(),side<.5?7:1,'touch-only browsers retain clean taps');
+ assert.equal(selectedPhoto(),1,'touch-only browsers retain clean taps');
 }
 for(const scenario of ['horizontal','vertical','release movement','pointer cancel','touch cancel','pinch','outside pinch','parent scroll','resize','blur','hidden','wheel','secondary button','nonprimary']){
  showPhotos(8);const point=photoPoint(),finger={identifier:770,clientX:point.clientX,clientY:point.clientY};
@@ -382,7 +383,7 @@ showPhotos(8);photoReduced.matches=false;
 for(let i=0;i<29;i++)tapPhoto(1);
 assert.equal(vm.runInContext('mod(detailPhotoTarget,detailPhotoImages.length)',saleContext),5);
 assert.ok(smoothDestination>photoTrack.scrollLeft);finishPhotoScroll();assert.equal(selectedPhoto(),5);assert.equal(photoTrack.scrollLeft,13*366);
-for(let i=0;i<31;i++)tapPhoto(-1);finishPhotoScroll();assert.equal(selectedPhoto(),6);
+for(let i=0;i<31;i++)pagePhoto('ArrowLeft');finishPhotoScroll();assert.equal(selectedPhoto(),6);
 // Home uses shortest-path wrapping; the visual count excludes all loop copies.
 pagePhoto('Home');assert.equal(smoothDestination,16*366);finishPhotoScroll();
 assert.equal(selectedPhoto(),0);assert.equal(dialogFields.get('.objects-photo-status').textContent,'Photo 1 of 8');
@@ -422,7 +423,7 @@ photoReduced.matches=true;pagePhoto('End');assert.equal(dialogFields.get('.objec
 console.log('PASS photo controls: asynchronous rapid taps, accurate real-photo totals and settled announcements, stale scrollend, interrupted touch/cancel, momentum debounce, orientation, reduced-motion changes, desktop mode, stale callback/close cleanup and Japanese labels.');
 const phoneCss=css.slice(css.indexOf('/* A native photo track on phones'),css.indexOf('/* Adjacent products push'));
 assert.match(phoneCss,/@media\(max-width:767px\),\(max-width:1023px\) and \(max-height:500px\) and \(pointer:coarse\)/);
-assert.match(phoneCss,/inset:auto 0 0;margin:0;width:100%;height:95dvh;max-height:95dvh;padding:0;gap:0;grid-template-rows:minmax\(0,1fr\) auto/);
+assert.match(phoneCss,/inset:auto 0 0;margin:0;width:100%;height:90dvh;max-height:90dvh;padding:0;gap:0;grid-template-rows:minmax\(0,1fr\) auto/);
 assert.match(phoneCss,/grid-template-rows:auto max-content;min-height:0;height:auto/);
 assert.match(css,/#object-dialog \.objects-dialog-image\{width:100%;height:auto!important;max-height:none;aspect-ratio:1 \/ 1;object-fit:cover/);
 assert.match(phoneCss,/overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory/);
@@ -500,11 +501,11 @@ function menuFixture(reduce=false,mobileMode=false){
 for(const reduced of [false,true]){
  const f=menuFixture(reduced);f.summary.emit('click');f.panel.children[1].focus();
  f.mobile.matches=true;f.mobile.emit('change');
- assert.equal(f.document.activeElement,f.zoom);assert.equal(f.categories.open,false);assert.equal(f.categories.inert,true);assert.equal(f.panel.inert,true);assert.equal(f.timers.size,0);
- f.summary.emit('click');assert.equal(f.categories.open,false);
- f.mobile.matches=false;f.mobile.emit('change');assert.equal(f.categories.inert,false);f.summary.emit('click');assert.equal(f.categories.open,true);
+ assert.equal(f.document.activeElement,f.zoom);assert.equal(f.categories.open,false);assert.equal(f.categories.inert,false);assert.equal(f.panel.inert,true);assert.equal(f.timers.size,0);
+ f.summary.emit('click');assert.equal(f.categories.open,true);
+ f.summary.emit('click');f.advance(1000);f.mobile.matches=false;f.mobile.emit('change');assert.equal(f.categories.inert,false);f.summary.emit('click');assert.equal(f.categories.open,true);
  f.summary.emit('click');f.mobile.matches=true;f.mobile.emit('change');f.advance(1000);assert.equal(f.categories.open,false);
- const fresh=menuFixture(reduced,true);assert.equal(fresh.categories.inert,true);assert.equal(fresh.categories.open,false);
+ const fresh=menuFixture(reduced,true);assert.equal(fresh.categories.inert,false);assert.equal(fresh.categories.open,false);
 }
 const menu=menuFixture();
 assert.equal(menu.nav.inert,true);assert.equal(menu.panel.inert,true);assert.equal(menu.categories.open,false);

@@ -57,6 +57,7 @@ function fixture(reduce=false){
     // HTML dialog.close() removes open synchronously, then queues close.
     modal.close=()=>{if(modal.open){modal.open=false;pending.push(()=>modal.emit('close'))}};
   }
+  infoDialog.style.setProperty=()=>{};infoButton.lastElementChild={};infoButton.getBoundingClientRect=()=>({bottom:44});infoDialog.show=infoDialog.showModal;
   infoDialog.querySelector=()=>infoClose;infoDialog.getBoundingClientRect=()=>({left:12,top:12,right:378,bottom:400});
   const sheet=dialog.querySelector('.objects-dialog-scroll'),photos=dialog.querySelector('.objects-dialog-photo');
   sheet.getBoundingClientRect=()=>({left:12,top:60,width:366,height:688});
@@ -65,7 +66,7 @@ function fixture(reduce=false){
   sheet.animate=animate;sheet.cloneNode=()=>{const ghost=element(),children=new Map();ghost.querySelector=s=>{if(!children.has(s))children.set(s,element());return children.get(s)};ghost.animate=animate;ghosts.push(ghost);return ghost};
   const photo={dataset:{source:'https://example.com/photo'},cloneNode:element};
   const products=Array.from({length:3},(_,index)=>({id:String(index),name:'Product '+index,brand:'Brand',image:'image.webp',gallery:[photo],tags:[],url:'https://example.com/product',credit:'https://example.com/photo'}));
-  const context={document,URL,dialog,close,canvas,infoDialog,infoButton,detailPhotos:photos,detailProductArrows:{},detailProductButtons:[back,next],detailMobile:{matches:false},active:products,reduced:{matches:reduce},returnFocus:null,purchaseGeneration:0,focusMode:false,mod:(value,count)=>(value%count+count)%count,t:text=>text,cancelGesture(){},stopMotion(){},settleGeometry(){},renderDetailPhotos(){},positionDetailPhotos(){},loadPurchased(){context.purchaseGeneration++},cancelDetailPhotos(){context.photosCanceled++},photosCanceled:0,localStorage:{setItem(){}}};
+  const context={searchInput:null,document,URL,dialog,close,canvas,infoDialog,infoButton,detailPhotos:photos,detailProductArrows:{},detailProductButtons:[back,next],detailMobile:{matches:false},active:products,reduced:{matches:reduce},returnFocus:null,purchaseGeneration:0,focusMode:false,mod:(value,count)=>(value%count+count)%count,t:text=>text,cancelGesture(){},stopMotion(){},settleGeometry(){},renderDetailPhotos(){},positionDetailPhotos(){},loadPurchased(){context.purchaseGeneration++},cancelDetailPhotos(){context.photosCanceled++},photosCanceled:0,localStorage:{setItem(){}}};
   vm.createContext(context);
   vm.runInContext(source.slice(source.indexOf('  let detailItem='),source.indexOf('  const detailPhotos='))+source.slice(source.indexOf('  function paintDetailNavigation('),source.indexOf('  function cancelGesture('))+source.slice(source.indexOf("  close.addEventListener('click'"),source.indexOf('  categoryButtons.forEach(button=>button.addEventListener'))+source.slice(source.indexOf('  const infoSeenKey='),source.indexOf('  let measuredWidth=')),context);
   return {context,document,canvas,dialog,close,infoDialog,infoButton,infoClose,sheet,back,next,ghosts,animations,products,open(){context.show(products[0],canvas)},flush(){pending.splice(0).forEach(fn=>fn())}};
@@ -89,7 +90,7 @@ for(const reduce of [false,true])for(const dismissal of ['button','escape','outs
     assert.equal(f.context.returnFocus,null);assert.equal(f.context.photosCanceled,repeat+1);
   }
   f.infoButton.emit('click');assert.equal(f.infoDialog.open,true);
-  f.infoClose.emit('click');f.flush();assert.equal(f.infoDialog.open,false);assert.equal(f.document.activeElement,f.infoButton);
+  f.infoButton.emit('click');f.flush();assert.equal(f.infoDialog.open,false);assert.equal(f.document.activeElement,f.infoButton);
   f.open();f.infoButton.emit('click');assert.equal(f.infoDialog.open,false);
   f.close.emit('click');f.flush();f.infoButton.emit('click');assert.equal(f.infoDialog.open,true);
 }
@@ -101,8 +102,8 @@ for(const reduce of [false,true])for(const dismissal of ['button','escape','outs
   assert.equal(f.context.returnFocus,f.canvas);assert.equal(f.context.photosCanceled,0);
   assert.equal(f.sheet.inert,false);assert.ok(f.ghosts.every(ghost=>ghost.removed));
   f.close.emit('click');f.flush();assert.equal(f.document.activeElement,f.canvas);
-  f.infoButton.emit('click');f.infoClose.emit('click');f.infoButton.emit('click');f.flush();
-  assert.equal(f.infoDialog.open,true);assert.equal(f.document.activeElement,f.infoClose);
+  f.infoButton.emit('click');f.infoButton.emit('click');f.infoButton.emit('click');f.flush();
+  assert.equal(f.infoDialog.open,true);
 }
 // The keyboard cue follows the object Enter opens, at every zoom level.
 for(const focusMode of [false,true]){

@@ -1,0 +1,1 @@
+Typography snapshot before replacing Walla Mono with Walla. To restore the Mono typography while retaining later changes, set --mono in css/walla.css back to 'SC Walla Mono',monospace and restore the SC Walla Mono font-face declarations from this snapshot’s css/fonts.css. Full active page and stylesheet copies are preserved here for reference.

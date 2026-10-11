@@ -32,7 +32,7 @@ Edit English HTML and `locales/ja.json`, then run `python3 scripts/build-japanes
 - The home hero fills the viewport including its 20px Icon Red border. On arrival, a beige logo and blinking supplied pixel eyes appear on red; after 1.1 seconds, the red layer wipes bottom-to-top over 1.1 seconds. The settled hero is beige with the red mark. Scrolling or keyboard navigation dismisses the entrance immediately. There is no scroll lock. The CSS animation can finish independently of the main script.
 - Clicking or tapping the hero (including its logo) scrolls to the intro and moves focus there without adding a hash. Swipes retain native scrolling; reduced motion jumps instantly. Once the hero clears, the docked logo retains its back-to-top action.
 - On scroll, the hero moves upward at native scroll speed while the content beneath moves more slowly, settling into normal flow once the cover clears. The parallax offset is capped so the intro’s opening line clears the hero when its bottom edge reaches 70vh, on phones and desktop. The intro begins low enough to reveal its reading-ink effect. Reduced motion and no-JavaScript use ordinary scrolling with no landing sequence.
-- The page background smoothly interpolates from beige #FAF0E6 to Sand Gray #D6CEC5 as Studio enters the reading area, then returns to beige as Studio exits. The interpolation uses scroll position and smoothstep easing, without a continuous idle animation. Reduced motion switches colors discretely; without JavaScript Studio has its own gray ground. Programmatically focused section destinations stay transparent, so arriving through an anchor cannot override the shared color blend.
+- The page background smoothly interpolates from Soft Beige #FAF0E6 to Ash Brown #191416 as Studio enters the reading area, then returns to beige as Studio exits. The interpolation uses scroll position and smoothstep easing, without a continuous idle animation. Reduced motion switches colors discretely; without JavaScript Studio has its own Ash Brown ground. Programmatically focused section destinations stay transparent, so arriving through an anchor cannot override the shared color blend.
 - Primary CTAs are unboxed Icon Red text links with arrows and at least 48px hit height. The copyright and language switch share a 24px bottom inset and aligned line boxes. Language controls keep their 12px labels.
 
 - The homepage logo scales from 240px (200px on phones) to 96px and stays 16px from the top, on a transparent background. “A DESIGN HOUSE” is uppercase and fitted to the logo’s width after fonts load and on resize. It moves upward and scales with the logo, then fades during the last quarter of docking. Page overscroll bounce is disabled and negative scroll offsets are clamped, keeping the opening anchored when scrolling upward at the top. Reduced motion uses discrete size and visibility changes. Without JavaScript it remains in the opening.
@@ -72,7 +72,7 @@ Work on `site-redesign`. Read `AGENTS.md` and `docs/HANDOFF.md` before continuin
 
 ### Historical typography revision — superseded by the 9 October frame
 
-English Home uses the supplied Walla Bold for the caption and section statements (64px desktop, 40px phone), and Walla Light at 20px/28px for descriptions and service details. Service names remain Medium at 20px/28px. Studio’s mono label is Bold with 1px tracking. Shop and Community CTA labels use Medium sans at 40px desktop / 28px phone in Icon Red, retaining their existing button containers and wording. Intro typography stays 40px/48px Medium. This pass changes typography only: the 540px column, spacing values, service grid, artwork, section order, About, forms, and Japanese typography remain as before. Text naturally reflows within the existing containers.
+English Home uses the supplied Walla Bold for the caption and section statements (64px desktop, 40px phone), and Walla Regular at 20px/28px for descriptions and service details. Service names remain Medium at 20px/28px. Studio’s mono label is Bold with 1px tracking. Shop and Community CTA labels use Medium sans at 40px desktop / 28px phone in Icon Red, retaining their existing button containers and wording. Intro typography stays 40px/48px Medium. This pass changes typography only: the 540px column, spacing values, service grid, artwork, section order, About, forms, and Japanese typography remain as before. Text naturally reflows within the existing containers.
 
 ### Historical column and CTA refinement — Figma 298:660
 
@@ -477,3 +477,124 @@ Shared mobile menu styling is gated by the controller’s mobile-navigation-read
 ### Mobile Finds controls — 10 October 2026
 
 On phones, Category is hidden and excluded from keyboard/accessibility navigation. Entering the mobile breakpoint closes any open Category panel and returns its focus to zoom. The horizontal slider is centered at the bottom safe area, with pinch synchronization preserved. Desktop Category and zoom remain unchanged.
+
+
+### Home copy and field refinement
+
+Studio’s opening is split into two paragraphs above the artwork; the strategy paragraph and closing aim follow it. Shop uses “House of familiar things.” and places its development note after the specifications. The intro’s Familiar Characters link turns Icon Red on hover. Connect uses Medium body weight, stays transparent on focus, and retains a red underline. Both language routes share these changes. Section h2 headings match body size in uppercase; About essay h2 headings match essay body size.
+
+Mono typography uses uppercase throughout the active site. Finds’ collection-info control is labeled Familiar Characters ℹ, with responsive wrapping beside the mobile logo.
+
+Studio uses a 13px uppercase mono eyebrow above its dark-brown leading statement (64px desktop, 44px phone).
+
+Finds floating controls and menu labels use uppercase Walla Mono. The collection-info label is Familiar Characters ⓘ.
+
+Finds product details occupy a full-width, bottom-aligned 90dvh sheet. Desktop previous/next previews share one flush bottom row, previous left and next right; mobile retains its stationary action/arrow footer.
+
+Finds product details and their bottom navigation are centered within 90vw × 90dvh, separated by a 12px gap.
+
+Finds floating controls share Walla Mono uppercase labels, 6px × 12px label padding, and red text/borders on hover. Page navigation is a single Back to Home link on all screen sizes.
+
+Finds collection info is a nonmodal disclosure below its floating trigger, with compact uppercase Walla Mono type. The trigger toggles +/− and Escape closes the sheet.
+
+Finds enters with staggered center-scale product images, followed by the logo and floating controls sliding into view. Reduced motion skips the sequence; the initial info disclosure follows the entrance.
+
+Finds uses live keyword search instead of Category. Terms match product names, brands, descriptions, categories and tags; clearing the field restores the collection. The same input filters the no-JavaScript grid when JavaScript becomes available.
+
+Trackpad pinch zooms the Finds canvas around the pointer and synchronizes the zoom slider. Ctrl-wheel handles Chromium/Firefox pinch events; Safari gesture events use the same bounded 0–100 zoom. Ordinary two-finger scrolling pans the canvas.
+
+Finds now includes the five owner-photographed shop selections: DETAIL INC. NASA Snow Globe, carpenter Hamburger Coaster, Super7 × BEAMS Charlie Brown, Running Press UFO Cow Abduction, and Notabag Original in Red. Names and variants are verified against official listings, with English/Japanese descriptions and 1–2 original source photos per entry. See the source log for native dimensions and remaining transparent-image treatment.
+
+Product details now show 2–4 keyword tags for each Finds item. Clicking a tag closes the sheet and filters the canvas to products with that exact tag; editing or clearing search returns to ordinary keyword matching. Ownership copy is shortened to “Anonymous browser-based tally.” The reload control, unavailable-count message and ownership dividers are removed; unavailable ownership controls remain disabled.
+
+Finds photo update (11 October): eleven recent canvas images now use native transparent cutouts, consistent optical framing and the shared warm CSS treatment. YÔKI, Bruna, UFO and Hamburger Coaster have improved original imagery; Notabag includes a real-use view. Galleries remain capped at four authentic photos. See `docs/FINDS-NEW-PHOTO-QA.json` for current source dimensions and treatment records. Sources are never upscaled.
+
+The Finds photo counter uses the same transparent, 12px mono treatment on desktop and mobile, positioned 12px inside the bottom-right of the visible image area. Desktop keeps it above the separate product navigation row.
+
+Finds additions (11 October): nine verified owner-photographed selections added, with transparent canvas images, 1–4 authentic detail photos, keyword tags and Japanese descriptions. Two ribbed vases await exact identification. Native source limitations and pixel-preserving treatments are documented in `docs/OBJECTS-SOURCES.md`.
+
+TECTA Cat added in the owner-selected black finish, with its original transparent studio photograph and four authentic detail views (including an interior photograph). The catalog now contains 90 products; studio source-resolution limits are documented.
+
+Inkerie Travel Jewelry Case added with a transparent striped canvas image and four high-resolution detail views. Finds now contains 91 products.
+
+Songbird Ruth removed from the active Finds catalog at the owner’s request. Its metadata and image assets are retained for recovery. The catalog contains 90 products.
+
+Finds adds MUJI Porcelain Toothbrush Stand (yellow), Best Years Knitted Triceratops (red), and Kay Bojesen Monkey Mini (vintage blue), using transparent native-photo primaries and respectively 3, 3, and 4 distinct detail views. The catalog contains 93 products.
+
+CS Smart Toothbrush now uses a transparent gray/lime side profile on the canvas and four detail images showing assorted colors and bathroom use. Its stable product ID is preserved.
+
+Eames Elephant’s Red Orange detail gallery now has four complementary views: side, front, face/ear detail, and upper construction detail. The canvas main image is unchanged.
+
+MUJI Smooth Gel Ink Ballpoint Knock Pen added with a transparent color-lineup canvas photo and four colorful detail views. Finds now contains 94 products. Product names omit color variants.
+
+The Curaprox selection is now CS 5460: orange/blue side-profile cutout, color assortment, bathroom, actual-use and color-pattern detail photos. Its stable catalog ID remains unchanged.
+
+### Finds photo review — 11 October
+
+All 94 display names and galleries were reviewed. Color suffixes were removed from Dombo Mug, Original, and 04 PILLAR while stable product IDs and internal variant metadata remain. Detail images now fit complete originals inside square frames on desktop and mobile, preventing wide handles and portrait products from clipping. Thirteen galleries received complementary native-resolution manufacturer/designer photos; Heinz repeated front views were removed. Dombo now includes colorful assortment, interior angle, and a real setting. Source and native-original metadata are retained in the catalog. The audit records remaining small-source exceptions; four photos are a goal, not a reason to enlarge or repeat source images.
+
+### Finds detail photo fill — 11 October
+
+Owner override: all detail photos now use centered cover fitting on desktop and mobile. Portrait and landscape photographs fill the container edge to edge without added white bars; excess height or width is cropped. This supersedes the earlier complete-image fit.
+
+Finds adds ACTUS DECO Dot Photo Frame 5×7, ACTUS Object Flower Vase, and Iwachu Cat Candle Stand (the right-hand cat in the owner photo). Native transparent masters use alpha-only masks, preserving source RGB; galleries contain respectively four, two, and four authentic views. ACTUS native sources are900px and owner photographs1024px, recorded as source-resolution exceptions rather than enlarged. The lamp awaits reliable product identification. Both languages are generated; catalog count97.
+
+Finds adds Aptone Mix & Match with owner-selected Clear + Neon Green transparent canvas image and four credited native-resolution gallery photos (full product, open construction, tabletop use, alternate angle). Product name omits color; both languages updated. Catalog count98.
+
+Finds replaces the Desert Plants Cactus Tumbler’s amber variant with the owner-selected green cactus from Flymee, with a transparent canvas cutout and four official gallery views. Stable ownership ID and color-free display name retained in both languages.
+
+Spun now uses the owner-selected red version on the Finds canvas and as its first detail photo, with four native-resolution gallery photographs.
+
+Spun now uses the owner-selected red version on the Finds canvas and as its first detail photo, with four native-resolution gallery photographs.
+
+Desktop Finds detail photographs match the sheet viewport height, excluding the navigation row and gap, so the following photo does not peek into the resting frame. Mobile keeps its square horizontal gallery.
+
+The contact sheet shares Finds info typography, white ground, and thick Icon Red border. Category choices include Relationship advice in both languages. Its scrollbar has a transparent track and square dark-brown thumb.
+
+Home services use the essay reading style (28px desktop /20px phone, Regular /1.5; Japanese desktop24px /1.85) in three desktop columns, stacking on phones. Shop’s tote description and development sentence share that style; the development sentence appears immediately above the specifications. The prior Home implementation is preserved in Figma section339:649, frame343:649.
+
+Text CTAs use a shared square-pixel right arrow, scaled with the label and retaining the existing hover movement, in both languages and the contact form.
+
+Home and About navigation now contains Home, About, Finds, Contact with no section anchors or dividers. Shop includes the email notification form labeled Notify when it’s out; signup remains unconnected and never sends or saves addresses. Connect is archived in _archive/connect-20261011.html. Social links sit inline with copyright in both page footers, with14px icons. Both languages generated.
+
+Below1100px, Home uses a horizontal top navigation with Home, About and Finds on the left and Contact at the right. Phones place this row below the centered logo; the existing hero reveal threshold remains. Home no longer uses the hamburger disclosure. Other pages retain their mobile menus.
+
+Services names and descriptions remain fully visible; they do not use the word-by-word opacity reveal, in either language.
+
+Services now match the specification table:15px Medium names,15px Regular descriptions, dark-brown text and subtle top rules. The three-column desktop /stacked phone layout and fully visible copy remain.
+
+CTA pixel arrows use an0.8em box with a tuned baseline offset to match the text’s optical height and center.
+
+Footer social icons reveal mono platform labels above each icon on hover and keyboard focus, with a brief upward pop/slide entrance and downward exit. Reduced motion shows labels instantly.
+
+Active typography uses only Regular (400), Medium (500), and Bold (700). Former Light styles now use Regular; the Light font face is no longer loaded.
+
+Services uses the same two-column definition table as Shop specifications, with Medium labels, Regular details, and matching spacing and row rules.
+
+Typography experiment: all former Walla Mono styles now use proportional Walla, preserving size, weight, line height and tracking. The previous implementation is saved in `_archive/pre-walla-sans-2026-10-11/`, with restoration instructions. Japanese keeps Noto Sans JP.
+
+The Walla experiment is accepted: active styles now share --font throughout, with no Mono typography token or font-face declarations. English uses SC Walla; Japanese retains Noto Sans JP. Sizes and weights are unchanged. The pre-experiment archive remains available.
+
+Section labels and page navigation use sentence case. Home’s compact top navigation centers Home/About and Finds/Contact on either side of the 96px docked logo. Section-heading gaps are 24px. Finds floating labels use Medium, with a balanced zoom rail and 24px pixel-eye thumb.
+
+Shared typography is centralized in css/typography.css, loaded after page styles. The scale is 12px labels, 16px body/small headings, 20/28px reading copy, 28/40px lead copy, and 44/64px display. Uppercase labels are 12px, except h2 headings. Japanese retains its native reading rhythm.
+
+Finds info uses one-third viewport width on desktop, the logo eyes above its sentence-case lead heading, and closes on outside pointer interaction. H2 headings carry an 8px red square. Hero caption restores its original fitted Bold style; the zoom thumb is a red logo eye.
+
+Home Intro, Studio and Shop body copy uses Regular with 1.4 leading (supporting Shop copy 1.55; Japanese 1.75). Selective red emphasis identifies the design practice, defining detail, fresh perspective, intended qualities, making, red material detail, and development status. Wording and display headings are unchanged.
+
+Word reveal now spans an additional 15vh of native scroll for calmer reading, keeping paragraph-height-aware pacing, non-overlapping reveal ranges and instant reduced-motion behavior.
+
+Home body copy now uses Medium (500), preserving the open line spacing and red emphasis.
+
+Studio now transitions the Home ground to dark brown #320505 while foreground text transitions to beige #FAF0E6. The existing scroll-driven entry/exit and reduced-motion behavior remain; no-JS Studio is dark brown with beige text. Red emphasis and artwork colors remain.
+
+Studio background is now a separate muted raisin brown #241A1B (--studio-background). Original #320505 text, border and other ink uses are unchanged. The scene foreground still transitions from original ink to beige.
+
+Studio ground deepened to #191416: near-black with a subdued red-brown/raisin undertone, informed by the Margaret Howell dark-brown trouser reference. Original ink #320505 remains unchanged.
+
+The current named palette is documented in docs/COLOR-LIBRARY.md and exposed as CSS tokens: Icon Red, Soft Beige, Sand Gray, Sub Gray, Pure White, Cranberry Brown, Ash Brown, and Rich Black.
+
+Shop’s development note follows Specifications; signup has a Stay updated h2. Nav hover moves the inner label, retaining a stationary hit area to prevent jitter.
+
+Finds products enter in a center-out ripple, with a gentle hop, alternating tilt and small settling bounce over 760ms per object. Stagger is bounded at 640ms; floating-control entrance remains unchanged. Reduced motion skips the product animation.

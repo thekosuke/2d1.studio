@@ -163,10 +163,11 @@ assert.match(homeSource,/querySelector\('\.home-page \.language-switch'\)/);
 assert.match(homeSource,/pageNav\.querySelectorAll\('a\[href\^="#"\]'\)/);
 for(const route of ['index.html','about/index.html','objects/index.html','ja/index.html','ja/about/index.html','ja/objects/index.html']){
   const html=readFileSync(new URL(`../${route}`,import.meta.url),'utf8').replace(/<template\b[\s\S]*?<\/template>/g,'');
+  if(route.includes('objects/')){assert.doesNotMatch(html,/<nav class="finds-page-nav"/);assert.match(html,/class="finds-home-trigger" href="\.\.\/"/);continue;}
   const button=html.match(/<button class="mobile-nav-toggle"[^>]*>/)?.[0];assert.ok(button,`${route}: hamburger`);
   assert.match(button,/type="button"/);assert.match(button,/aria-expanded="false"/);assert.match(button,new RegExp(`aria-label="${route.startsWith('ja/')?'ナビゲーションメニュー':'Navigation menu'}"`));
   const id=button.match(/aria-controls="([^"]+)"/)[1];const nav=html.match(new RegExp(`<nav[^>]*id="${id}"[^>]*>[\\s\\S]*?<\\/nav>`))?.[0];assert.ok(nav,`${route}: controlled nav`);
-  assert.equal((nav.match(/href="[^"]*#connect"/g)||[]).length,1,`${route}: one Connect`);assert.equal((nav.match(/data-contact/g)||[]).length,1);
+  assert.equal((nav.match(/href="[^"]*#connect"/g)||[]).length,0,`${route}: no Connect anchor`);assert.equal((nav.match(/data-contact/g)||[]).length,1);
   assert.match(html,/css\/mobile-nav.css\?v=3/);assert.match(html,/js\/mobile-nav.js\?v=2/);
   const language=html.match(/<nav class="(?:language-switch|objects-language)"[^>]*>[\s\S]*?<\/nav>/g);assert.equal(language?.length,1,`${route}: one original language landmark`);
   assert.equal((language[0].match(/hreflang="(?:en|ja)"/g)||[]).length,2);

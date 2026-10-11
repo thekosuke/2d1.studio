@@ -44,7 +44,7 @@ function fixture({mobile=true,reduced=false,count=3,language='en',width=390}={})
   const products=Array.from({length:count},(_,i)=>({id:`item-${i}`,category:'wear',brand:'Brand',name:`Product ${i}`,description:i===1?'Long detail '.repeat(300):'Description',image:'product.png',url:i===1?null:`https://example.com/product-${i}`,credit:'https://example.com/source',tags:['color'],gallery:photoSet([1,2,8][i%3])}));
   document.getElementById=()=>purchaseStatus;
   const t=text=>language==='ja'?({'Previous product':'前の商品','Next product':'次の商品','I have it':'持っています','I have it ✓':'持っています ✓'}[text]||text):text;
-  const context={URL,document,window,dialog,close,canvas,active:products,matchMedia:()=>media,reduced:motion,t,mod:(v,n)=>(v%n+n)%n,returnFocus:null,focusMode:false,motion:null,cancelGesture(){},stopMotion(){},settleGeometry(){},ResizeObserver:class{constructor(callback){observers.push(callback)}observe(){}},setTimeout(callback){timers.set(++timerId,callback);return timerId},clearTimeout(id){timers.delete(id)},fetch:(url,options)=>new Promise((resolve,reject)=>requests.push({url,options,resolve,reject})),encodeURIComponent};
+  const context={searchInput:null,URL,document,window,dialog,close,canvas,active:products,matchMedia:()=>media,reduced:motion,t,mod:(v,n)=>(v%n+n)%n,returnFocus:null,focusMode:false,motion:null,cancelGesture(){},stopMotion(){},settleGeometry(){},ResizeObserver:class{constructor(callback){observers.push(callback)}observe(){}},setTimeout(callback){timers.set(++timerId,callback);return timerId},clearTimeout(id){timers.delete(id)},fetch:(url,options)=>new Promise((resolve,reject)=>requests.push({url,options,resolve,reject})),encodeURIComponent};
   vm.createContext(context);
   vm.runInContext(source.slice(source.indexOf('  const purchaseButton='),source.indexOf('  function cancelGesture('))+source.slice(source.indexOf("  close.addEventListener('click'"),source.indexOf('  categoryButtons.forEach(button=>button.addEventListener')),context);
   vm.runInContext(source.slice(source.indexOf("  reduced.addEventListener('change',()=>{if(reduced.matches)"),source.indexOf("  document.querySelector('.skip-link')")),context);
@@ -165,7 +165,7 @@ for(const count of [1,2]){
 // Static layout contract: full-width bottom sheet, stationary sibling footer,
 // safe-area padding, scrollable content and square photos at both phone modes.
 const mobileCss=css.slice(css.indexOf('/* A native photo track on phones'),css.indexOf('/* Adjacent products push'));
-assert.match(mobileCss,/width:100%;height:95dvh;max-height:95dvh;padding:0;gap:0;grid-template-rows:minmax\(0,1fr\) auto/);
+assert.match(mobileCss,/width:100%;height:90dvh;max-height:90dvh;padding:0;gap:0;grid-template-rows:minmax\(0,1fr\) auto/);
 assert.match(mobileCss,/objects-dialog-scroll\{grid-column:1;grid-row:1;min-width:0;min-height:0\}/);
 assert.match(mobileCss,/objects-dialog-footer:not\(\[hidden\]\)\{position:relative;z-index:4;grid-column:1;grid-row:2;display:flex/);
 assert.match(mobileCss,/calc\(12px \+ env\(safe-area-inset-bottom\)\) max\(20px,env\(safe-area-inset-left\)\)/);
@@ -174,10 +174,10 @@ assert.match(mobileCss,/height:auto!important;aspect-ratio:1 \/ 1;object-fit:cov
 assert.match(mobileCss,/objects-product-arrow\{[^}]*width:48px;height:48px/);
 assert.match(mobileCss,/objects-dialog-close span\{font-size:36px\}/);
 assert.doesNotMatch(source,/detailFooter\.animate|detailAction\.cloneNode/);
-const transitionCss=css.slice(css.indexOf('/* Adjacent products push'));
+const transitionCss=css.slice(css.indexOf('/* Adjacent products push'),css.indexOf('/* Named collection disclosure'));
 assert.doesNotMatch(transitionCss,/perspective|backface-visibility|transform-origin|will-change:transform,opacity|objects-product-peek/);
 assert.match(transitionCss,/#object-dialog.is-sliding \.objects-dialog-scroll\{will-change:transform;pointer-events:none\}/);
-assert.match(css,/#object-dialog\{[^}]*grid-template-rows:48px minmax\(0,1fr\) 48px;gap:12px;overflow:hidden\}/);
+assert.match(css,/#object-dialog\{[^}]*grid-template-columns:repeat\(2,minmax\(0,1fr\)\);grid-template-rows:minmax\(0,1fr\) 64px;gap:0;overflow:hidden\}/);
 const generator=readFileSync(new URL('../scripts/build-objects.py',import.meta.url),'utf8');
 assert.equal((generator.match(/class="objects-dialog-link"/g)||[]).length,1);
 assert.match(generator,/class="objects-product-arrows" role="group" aria-label="Product navigation"/);

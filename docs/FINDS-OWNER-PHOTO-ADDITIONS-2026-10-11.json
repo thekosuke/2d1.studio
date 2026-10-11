@@ -1,0 +1,290 @@
+{
+  "date": "2026-10-11",
+  "added": [
+    {
+      "id": "cotopaxi-kapai-del-dia",
+      "variant": "Multicolor Del Día",
+      "treatment": {
+        "background": "transparent",
+        "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+        "nativeSourceDimensions": [
+          960,
+          1200
+        ],
+        "subjectPixels": [
+          806,
+          429
+        ],
+        "cropBoundingBox": [
+          77,
+          386,
+          883,
+          815
+        ],
+        "opticalFill": 0.9,
+        "upscaled": false,
+        "sourceSHA256": "1518e6c8a7aa16ff4995f1b57bb6f7cd6ff2940b0068cc3773cc5de5d824b428",
+        "nativeMaster": "img/objects/cutouts/cotopaxi-20261011-native.png",
+        "rgbExact": true
+      },
+      "galleryCount": 3,
+      "sourceLimitations": [
+        "Resolved subject is below 1200px; file dimensions are not treated as usable product detail."
+      ]
+    },
+    {
+      "id": "diffar-spicy-wood-hair-oil",
+      "variant": "51823 Spicy Wood",
+      "treatment": {
+        "background": "transparent",
+        "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+        "nativeSourceDimensions": [
+          1000,
+          2370
+        ],
+        "subjectPixels": [
+          998,
+          2368
+        ],
+        "cropBoundingBox": [
+          1,
+          1,
+          999,
+          2369
+        ],
+        "opticalFill": 0.9,
+        "upscaled": false,
+        "sourceSHA256": "db3fb869b693836c5cad567f5461e1977fa47d7750a16544a2a2519d43654313",
+        "nativeMaster": "img/objects/cutouts/diffar-20261011-native.png",
+        "rgbExact": true
+      },
+      "galleryCount": 3,
+      "sourceLimitations": []
+    },
+    {
+      "id": "kay-bojesen-songbird-sunshine",
+      "variant": "Sunshine / 39405",
+      "treatment": {
+        "background": "transparent",
+        "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+        "nativeSourceDimensions": [
+          3508,
+          4961
+        ],
+        "subjectPixels": [
+          2337,
+          2232
+        ],
+        "cropBoundingBox": [
+          523,
+          2235,
+          2860,
+          4467
+        ],
+        "opticalFill": 0.9,
+        "upscaled": false,
+        "sourceSHA256": "c9dd67067f6c7943d05a6db0bc27c72134b8bb188d237ac57c0f3d779b455b19",
+        "nativeMaster": "img/objects/cutouts/sunshine-20261011-native.png",
+        "rgbExact": true
+      },
+      "galleryCount": 3,
+      "sourceLimitations": []
+    },
+    {
+      "id": "kay-bojesen-songbird-ruth",
+      "variant": "Ruth / 39400",
+      "treatment": {
+        "background": "transparent",
+        "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+        "nativeSourceDimensions": [
+          3508,
+          4961
+        ],
+        "subjectPixels": [
+          2391,
+          2238
+        ],
+        "cropBoundingBox": [
+          501,
+          2230,
+          2892,
+          4468
+        ],
+        "opticalFill": 0.9,
+        "upscaled": false,
+        "sourceSHA256": "57c9c380b3460c16929c2b8fabca348b573e060853b2ce6ca5c4cf0198a9c018",
+        "nativeMaster": "img/objects/cutouts/ruth-20261011-native.png",
+        "rgbExact": true
+      },
+      "galleryCount": 3,
+      "sourceLimitations": []
+    },
+    {
+      "id": "vitra-nelson-night-clock",
+      "variant": "Black / brass",
+      "treatment": {
+        "background": "transparent",
+        "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+        "nativeSourceDimensions": [
+          1200,
+          1200
+        ],
+        "subjectPixels": [
+          715,
+          851
+        ],
+        "cropBoundingBox": [
+          244,
+          197,
+          959,
+          1048
+        ],
+        "opticalFill": 0.9,
+        "upscaled": false,
+        "sourceSHA256": "e139c7bd72e734aa32c51b89204c85ed627b40aaac2612369fc5b8a67d54ccdc",
+        "nativeMaster": "img/objects/cutouts/clock-20261011-native.png",
+        "rgbExact": true
+      },
+      "galleryCount": 4,
+      "sourceLimitations": [
+        "Resolved subject is below 1200px; file dimensions are not treated as usable product detail."
+      ]
+    },
+    {
+      "id": "palaset-im-ok-fantti-elephant-bank",
+      "variant": "Red",
+      "treatment": {
+        "background": "transparent",
+        "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+        "nativeSourceDimensions": [
+          1950,
+          2600
+        ],
+        "subjectPixels": [
+          1344,
+          1280
+        ],
+        "cropBoundingBox": [
+          305,
+          660,
+          1649,
+          1940
+        ],
+        "opticalFill": 0.9,
+        "upscaled": false,
+        "sourceSHA256": "0dd7dca1385a0f0cbdefc691f32ea521c2b71be4e056676ddc1013266c58a2ae",
+        "nativeMaster": "img/objects/cutouts/palaset-20261011-native.png",
+        "rgbExact": true
+      },
+      "galleryCount": 2,
+      "sourceLimitations": []
+    },
+    {
+      "id": "ichendorf-desert-plants-cactus-amber",
+      "variant": "Amber cactus / 09352101",
+      "treatment": {
+        "background": "transparent",
+        "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+        "nativeSourceDimensions": [
+          1250,
+          917
+        ],
+        "subjectPixels": [
+          393,
+          372
+        ],
+        "cropBoundingBox": [
+          430,
+          296,
+          823,
+          668
+        ],
+        "opticalFill": 0.9,
+        "upscaled": false,
+        "sourceSHA256": "d627a35bef976bc4e2a6b87c5b9d53de78a834b62e4d5211c13eae4d448cb7a1",
+        "nativeMaster": "img/objects/cutouts/ichendorf-20261011-native.png",
+        "rgbExact": true
+      },
+      "galleryCount": 1,
+      "sourceLimitations": [
+        "Resolved subject is below 1200px; file dimensions are not treated as usable product detail."
+      ]
+    },
+    {
+      "id": "curaprox-cs-smart",
+      "variant": "Blue; assorted manufacturer colors",
+      "treatment": {
+        "background": "transparent",
+        "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+        "nativeSourceDimensions": [
+          960,
+          1200
+        ],
+        "subjectPixels": [
+          77,
+          932
+        ],
+        "cropBoundingBox": [
+          448,
+          134,
+          525,
+          1066
+        ],
+        "opticalFill": 0.9,
+        "upscaled": false,
+        "sourceSHA256": "ac6d8e64f0e6598d95d311b84b4631090b8f7b6c1526c0def41b4d726c192246",
+        "nativeMaster": "img/objects/cutouts/curaprox-20261011-native.png",
+        "rgbExact": true
+      },
+      "galleryCount": 2,
+      "sourceLimitations": [
+        "Resolved subject is below 1200px; file dimensions are not treated as usable product detail."
+      ]
+    },
+    {
+      "id": "soholm-cafe-reversible-tote",
+      "variant": "Blue × Pink",
+      "treatment": {
+        "background": "transparent",
+        "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+        "nativeSourceDimensions": [
+          900,
+          900
+        ],
+        "subjectPixels": [
+          420,
+          729
+        ],
+        "cropBoundingBox": [
+          241,
+          86,
+          661,
+          815
+        ],
+        "opticalFill": 0.9,
+        "upscaled": false,
+        "sourceSHA256": "9db30d2ffcbde02e4ebc134009693393c3f42378c281d05dc01f7327e8e5f0dc",
+        "nativeMaster": "img/objects/cutouts/actus-20261011-native.png",
+        "rgbExact": true
+      },
+      "galleryCount": 4,
+      "sourceLimitations": [
+        "Best verified original is 900px; not enlarged. A sharper manufacturer source remains desirable.",
+        "Resolved subject is below 1200px; file dimensions are not treated as usable product detail."
+      ]
+    }
+  ],
+  "pending": [
+    {
+      "reference": "Red stacked ribbed vase and yellow scalloped ribbed vase in owner photo 2",
+      "reason": "Maker and exact designs unconfirmed; awaiting shop name or label. No guessed catalog entries added."
+    }
+  ],
+  "verification": {
+    "audit": "89 of 89 transparent primary images; galleries 1–4",
+    "browser": "1280×800 desktop and 390×844 mobile: songbird/tote detail, mobile photo advance, keyword search and exact-tag filter verified",
+    "tests": "npm test stops at pre-existing desktop photo-track tabindex assertion, tests/objects.mjs:405; mobile interactions, purchased-backend and reading-ink checks pass",
+    "delivery": "Original/native alpha masters retained; active delivery uses high-quality WebP compression; no enlargement.",
+    "git": "No commit or push"
+  }
+}

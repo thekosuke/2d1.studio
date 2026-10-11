@@ -37,10 +37,9 @@
     return {progress, end: to};
   }
   function readingEnd(height, blockHeight) {
-    // Split the scroll distance between the recent 50vh finish and the
-    // former height-aware finish, which gave longer paragraphs more room.
+    // Keep the height-aware pacing, with an extra 15vh of scroll to read.
     const earlierEnd = Math.min(height * .25, height * .7 - blockHeight);
-    return (height * .5 + earlierEnd) / 2;
+    return (height * .5 + earlierEnd) / 2 - height * .15;
   }
   function introCursor(progress, coverBottom, height, openingLength, wordCount) {
     const opening = Math.max(0, Math.min(1, (height * .9 - coverBottom) / (height * .2)));
@@ -58,8 +57,8 @@
       const coverBottom = ink.block.closest('.intro') && heroCover && !reduced.matches ? Math.max(0, heroCover.getBoundingClientRect().bottom) : 0;
       const isIntro = Boolean(ink.block.closest('.intro') && heroCover);
       const start = innerHeight * (isIntro ? .7 : .85);
-      // Short copy finishes at 37.5vh; taller paragraphs get half their former
-      // extra reading distance. readingWindow still clamps to the page end.
+      // Short copy finishes at 22.5vh, leaving more time for each word.
+      // Tall paragraphs keep extra reading distance, clamped to the page end.
       const end = readingEnd(innerHeight, box.height);
       const reading = readingWindow(box.top, start, end, scroll, previousEnd, maxScroll);
       previousEnd = reading.end;

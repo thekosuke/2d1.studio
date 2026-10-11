@@ -21,7 +21,8 @@
   const status = document.getElementById('objects-status');
   const dialog = document.getElementById('object-dialog');
   const close = dialog.querySelector('[data-close]');
-  let active = [], category = 'all', list = false;
+  let active = [], category = 'all', list = false, searchQuery = '', selectedTag = '';
+  const searchInput=document.getElementById('objects-search');
   let x = 0, y = 0, cell = 280, row = 324, frame = 0, gesture = null, suppressClick = false, returnFocus = null;
   const zoomInput=document.getElementById('objects-zoom');
   const zoomButtons=[...document.querySelectorAll('[data-zoom-step]')];
@@ -191,7 +192,7 @@
     else{const size=geometry(canvas.clientWidth,zoom);pose({x:cx-worldX*size.cell,y:cy-size.cell/2-worldY*size.row,...size});}
   }
   function filter(){
-    cancelGesture();stopMotion();active=visitOrders.get(category)||[];
+    cancelGesture();stopMotion();active=(visitOrders.get(category)||[]).filter(item=>(!selectedTag||item.tags.includes(selectedTag))&&searchQuery.split(/\s+/).every(word=>[item.name,item.brand,item.description,item.category,...item.tags].join(' ').normalize('NFKC').toLocaleLowerCase().includes(word)));
     cards.forEach(card=>card.hidden=!active.some(item=>item.id===card.dataset.object));
     status.textContent=`${active.length} ${t('objects')}`;empty.hidden=active.length>0;
     document.querySelector('.objects-list-empty').hidden=active.length>0||!list;
@@ -199,24 +200,22 @@
     reset();
   }
   const purchaseButton=dialog.querySelector('.objects-purchased-button'),purchaseStatus=document.getElementById('objects-purchased-status');
-  const purchaseRetry=dialog.querySelector('[data-purchased-retry]');
   let purchaseGeneration=0,purchaseItem=null,purchased=false,purchasePending=false;
   function purchaseData(data){if(!Number.isSafeInteger(data.count)||data.count<0||typeof data.purchased!=='boolean')throw new Error('Invalid purchase response');return data;}
-  function paintPurchase(data){purchased=data.purchased;purchaseButton.setAttribute('aria-pressed',String(purchased));purchaseButton.textContent=t(purchased?'I have it ✓':'I have it');purchaseStatus.textContent=t(data.count===1?'Owned by {count} user':'Owned by {count} users').replace('{count}',String(data.count));purchaseButton.disabled=false;purchaseRetry.hidden=true;}
+  function paintPurchase(data){purchased=data.purchased;purchaseButton.setAttribute('aria-pressed',String(purchased));purchaseButton.textContent=t(purchased?'I have it ✓':'I have it');purchaseStatus.textContent=t(data.count===1?'Owned by {count} user':'Owned by {count} users').replace('{count}',String(data.count));purchaseButton.disabled=false;}
   async function loadPurchased(item){
-    const generation=++purchaseGeneration;purchaseItem=item;purchasePending=true;purchaseButton.disabled=true;purchaseButton.setAttribute('aria-pressed','false');purchaseButton.textContent=t('I have it');purchaseStatus.textContent=t('Loading shared count…');purchaseRetry.hidden=true;
+    const generation=++purchaseGeneration;purchaseItem=item;purchasePending=true;purchaseButton.disabled=true;purchaseButton.setAttribute('aria-pressed','false');purchaseButton.textContent=t('I have it');purchaseStatus.textContent=t('Loading shared count…');
     try{const response=await fetch(`/api/purchased?product=${encodeURIComponent(item.id)}`,{credentials:'same-origin',cache:'no-store'});if(!response.ok)throw new Error('Unavailable');const data=purchaseData(await response.json());if(generation===purchaseGeneration)paintPurchase(data);}
-    catch{if(generation===purchaseGeneration){purchaseStatus.textContent=t('Shared count unavailable. Nothing is recorded by this page.');purchaseRetry.hidden=false;}}
+    catch{if(generation===purchaseGeneration){purchaseStatus.textContent='';}}
     finally{if(generation===purchaseGeneration)purchasePending=false;}
   }
   purchaseButton.addEventListener('click',async()=>{
     if(purchasePending||!purchaseItem)return;
     const generation=purchaseGeneration,item=purchaseItem,desired=!purchased;purchasePending=true;purchaseButton.disabled=true;purchaseStatus.textContent=t('Saving…');
     try{const response=await fetch('/api/purchased',{method:'PUT',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({product:item.id,purchased:desired})});if(!response.ok)throw new Error('Unavailable');const data=purchaseData(await response.json());if(generation===purchaseGeneration)paintPurchase(data);}
-    catch{if(generation===purchaseGeneration){purchaseStatus.textContent=t('Could not confirm the change. Reload the count before trying again.');purchaseRetry.hidden=false;}}
+    catch{if(generation===purchaseGeneration){purchaseStatus.textContent=t('Could not confirm the change.');}}
     finally{if(generation===purchaseGeneration)purchasePending=false;}
   });
-  purchaseRetry.addEventListener('click',()=>{if(purchaseItem&&!purchasePending)loadPurchased(purchaseItem);});
   let detailItem=null, detailTransition=0, detailBusy=false, detailGhost=null, detailAnimations=[];
   const detailSheet=dialog.querySelector('.objects-dialog-scroll');
   const detailPhotos=dialog.querySelector('.objects-dialog-photo');
@@ -235,6 +234,13 @@
   const detailPhotoPointers=new Set(),detailPhotoTouches=new Set();
   const detailPhotoHeld=()=>detailPhotoPointers.size||detailPhotoTouches.size;
   const photoLabel=(text,index)=>t(text).replace('{number}',String(index+1)).replace('{count}',String(detailPhotoImages.length));
+  detailSheet.addEventListener('scroll',()=>{
+    if(detailMobile.matches||!detailPhotoImages.length)return;
+    const viewport=detailSheet.getBoundingClientRect(),center=viewport.top+viewport.height/2;
+    let nearestIndex=0,distance=Infinity;
+    detailPhotoImages.forEach((image,index)=>{const rect=image.getBoundingClientRect(),delta=Math.abs(rect.top+rect.height/2-center);if(delta<distance){distance=delta;nearestIndex=index;}});
+    detailPhotoIndex=nearestIndex;paintDetailPhoto();
+  },{passive:true});
   function paintDetailPhoto(announce=false){
     detailPhotoCount.textContent=`${detailPhotoIndex+1}/${detailPhotoImages.length}`;
     if(announce&&detailPhotoLoop){
@@ -304,10 +310,10 @@
       // no new assets or network endpoints; only the middle set is accessible.
       detailPhotos.replaceChildren(...(loop?[...duplicates(),...detailPhotoImages,...duplicates()]:detailPhotoImages));
     }
-    detailPhotos.tabIndex=loop?0:-1;detailPhotoCount.hidden=!loop;
+    detailPhotos.tabIndex=detailPhotoImages.length>1?0:-1;detailPhotoCount.hidden=detailPhotoImages.length===0;
     detailPhotos.classList.toggle('is-interactive',loop);
     if(loop){
-      detailPhotos.setAttribute('aria-description',t('Swipe, tap the left or right half of the photo, or use Left and Right arrow keys to browse photos. Home and End select the first and last photo.'));
+      detailPhotos.setAttribute('aria-description',t('Swipe, tap the photo to advance, or use Left and Right arrow keys to browse photos. Home and End select the first and last photo.'));
       detailPhotos.setAttribute('aria-keyshortcuts','ArrowLeft ArrowRight Home End');
     }else{
       detailPhotos.removeAttribute('aria-description');detailPhotos.removeAttribute('aria-keyshortcuts');detailPhotoStatus.textContent='';
@@ -440,7 +446,19 @@
     if(detailPhotoTarget!==null)jumpDetailPhoto(detailPhotoTarget*detailPhotoWidth);
     settleDetailPhoto();
   });
+  function advanceVerticalPhoto(){
+    if(detailPhotoImages.length<2)return;
+    detailPhotoIndex=mod(detailPhotoIndex+1,detailPhotoImages.length);
+    const sheet=detailSheet.getBoundingClientRect(),photo=detailPhotoImages[detailPhotoIndex].getBoundingClientRect();
+    detailSheet.scrollTo({top:detailSheet.scrollTop+photo.top-sheet.top,behavior:reduced.matches?'instant':'smooth'});
+    paintDetailPhoto(true);
+  }
   detailPhotos.addEventListener('click',event=>{
+    if(!detailMobile.matches){
+      if(event.button!==0||event.defaultPrevented)return;
+      const index=detailPhotoImages.indexOf(event.target);if(index<0)return;
+      event.stopPropagation();detailPhotoIndex=index;advanceVerticalPhoto();return;
+    }
     if(!detailPhotoLoop)return;
     event.stopPropagation();
     const tap=detailPhotoTap;detailPhotoTap=null;
@@ -450,9 +468,10 @@
     // Only a clean click activates the halves. Native swipe, vertical scrolling,
     // pinch, pointer cancellation and their compatibility clicks never page again.
     detailPhotoTarget=tap.command;
-    moveDetailPhoto(event.clientX-bounds.left<bounds.width/2?-1:1);
+    moveDetailPhoto(1);
   });
   detailPhotos.addEventListener('keydown',event=>{
+    if(!detailMobile.matches&&event.target===detailPhotos&&['Enter',' '].includes(event.key)){event.preventDefault();advanceVerticalPhoto();return;}
     if(event.target!==detailPhotos||!detailPhotoLoop||event.altKey||event.ctrlKey||event.metaKey)return;
     if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
     event.preventDefault();event.stopPropagation();
@@ -580,7 +599,7 @@
     dialog.querySelector('.objects-dialog-brand').textContent=item.brand;
     dialog.querySelector('.objects-dialog-description').textContent=item.description;
     const badges=dialog.querySelector('.objects-dialog-tags');badges.replaceChildren();
-    for(const name of item.tags){const badge=document.createElement('span');badge.textContent=t(name);badges.append(badge);}
+    for(const name of item.tags){const badge=document.createElement('button');badge.type='button';badge.textContent=t(name);badge.addEventListener('click',()=>{dialog.close();category='all';selectedTag=name;searchQuery='';if(searchInput)searchInput.value=t(name);filter();searchInput?.focus({preventScroll:true});});badges.append(badge);}
     const productLink=dialog.querySelector('.objects-dialog-link');
     productLink.hidden=!item.url;
     if(item.url)productLink.href=item.url;else productLink.removeAttribute('href');
@@ -698,8 +717,23 @@
     if(focusMode){const column=Number(tile.dataset.column),line=Number(tile.dataset.line);const target=geometry(canvas.clientWidth,zoom),centered=Math.abs(x+column*cell+cell/2-canvas.clientWidth/2)<1&&Math.abs(y+line*row+cell/2-canvas.clientHeight/2)<1&&Math.abs(cell-target.cell)<1;if(column!==focusColumn||line!==focusRow||motion||!centered){focusAt(column,line);return;}}
     show(catalog.find(item=>item.id===tile.dataset.object),canvas);
   });
+  function pinchCanvas(value,clientX,clientY){
+    if(!Number.isFinite(value)||!active.length)return;
+    cancelGesture();stopMotion();
+    const bounds=canvas.getBoundingClientRect(),cx=clientX-bounds.left,cy=clientY-bounds.top;
+    const worldX=(cx-x)/cell,worldY=(cy-y-cell/2)/row;
+    updateCanvasZoom(value);
+    const size=geometry(canvas.clientWidth,zoom);
+    pose({x:cx-worldX*size.cell,y:cy-size.cell/2-worldY*size.row,...size},false);
+    if(focusMode){const center=nearest();focusColumn=center.column;focusRow=center.line;}
+  }
+  let trackpadGesture=null;
+  canvas.addEventListener('gesturestart',event=>{event.preventDefault();trackpadGesture={zoom,scale:event.scale||1};},{passive:false});
+  canvas.addEventListener('gesturechange',event=>{if(!trackpadGesture)return;event.preventDefault();pinchCanvas(trackpadGesture.zoom+Math.log(event.scale/trackpadGesture.scale)*60,event.clientX,event.clientY);},{passive:false});
+  canvas.addEventListener('gestureend',event=>{event.preventDefault();trackpadGesture=null;if(focusMode)settleGeometry(true);},{passive:false});
   canvas.addEventListener('wheel',event=>{
-    if(event.ctrlKey||event.metaKey)return;
+    if(event.ctrlKey){event.preventDefault();if(!trackpadGesture){const unit=event.deltaMode===1?16:event.deltaMode===2?canvas.clientHeight:1;pinchCanvas(zoom-event.deltaY*unit*.4,event.clientX,event.clientY);}return;}
+    if(event.metaKey)return;
     if(canvasPointers.size)return;
     event.preventDefault();const unit=event.deltaMode===1?16:event.deltaMode===2?canvas.clientHeight:1;
     stopMotion();x-=event.deltaX*unit;y-=event.deltaY*unit;schedule();
@@ -727,8 +761,10 @@
   close.addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});
   dialog.addEventListener('close',()=>{if(dialog.open)return;cancelDetailTransition();cancelDetailPhotos();purchaseGeneration++;returnFocus?.focus({preventScroll:true});returnFocus=null;});
+  if(searchInput)searchInput.disabled=false;
+  searchInput?.addEventListener('input',()=>{selectedTag='';searchQuery=searchInput.value.normalize('NFKC').trim().toLocaleLowerCase();filter();});
   categoryButtons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.categoryFilter;filter();}));
-  document.querySelectorAll('[data-reset-filters]').forEach(button=>button.addEventListener('click',()=>{category='all';filter();}));
+  document.querySelectorAll('[data-reset-filters]').forEach(button=>button.addEventListener('click',()=>{category='all';selectedTag='';searchQuery='';if(searchInput)searchInput.value='';filter();}));
   document.querySelector('[data-reset-view]').addEventListener('click',reset);
   zoomInput.addEventListener('input',()=>setZoom(Number(zoomInput.value)));
   zoomButtons.forEach(button=>button.addEventListener('click',()=>{
@@ -739,10 +775,15 @@
   mobileZoom.addEventListener('change',updateZoomLayout);updateZoomLayout();
   const infoButton=document.querySelector('.objects-info'),infoDialog=document.getElementById('objects-info-dialog');
   const infoSeenKey='2d1-finds-info-dismissed-v1';
-  const openInfo=()=>{if(dialog.open||infoDialog.open)return;cancelGesture();stopMotion();settleGeometry();infoDialog.showModal();infoDialog.scrollTop=0;infoDialog.querySelector('button').focus();};
-  infoButton.addEventListener('click',openInfo);
-  infoDialog.querySelector('[data-info-close]').addEventListener('click',()=>infoDialog.close());
-  infoDialog.addEventListener('close',()=>{if(infoDialog.open)return;try{localStorage.setItem(infoSeenKey,'1');}catch{}infoButton.focus({preventScroll:true});});
+  const syncInfo=()=>{infoButton.lastElementChild.textContent=infoDialog.open?'−':'+';infoButton.setAttribute('aria-expanded',String(infoDialog.open));};
+  const positionInfo=()=>{const rect=infoButton.getBoundingClientRect();infoDialog.style.setProperty('--info-top',`${rect.bottom+8}px`);};
+  const openInfo=()=>{if(dialog.open||infoDialog.open)return;cancelGesture();stopMotion();settleGeometry();positionInfo();infoDialog.show();syncInfo();infoDialog.scrollTop=0;};
+  infoButton.addEventListener('click',()=>{if(infoDialog.open)infoDialog.close();else openInfo();});
+  document.addEventListener('pointerdown',event=>{if(infoDialog.open&&!infoDialog.contains(event.target)&&!infoButton.contains(event.target))infoDialog.close();});
+  infoDialog.addEventListener('keydown',event=>{if(event.key==='Escape')infoDialog.close();});
+  infoButton.addEventListener('keydown',event=>{if(event.key==='Escape'&&infoDialog.open)infoDialog.close();});
+  if(typeof ResizeObserver!=='undefined')new ResizeObserver(()=>{if(infoDialog.open)positionInfo();}).observe(infoButton);
+  infoDialog.addEventListener('close',()=>{if(infoDialog.open)return;syncInfo();try{localStorage.setItem(infoSeenKey,'1');}catch{}infoButton.focus({preventScroll:true});});
   infoDialog.addEventListener('click',event=>{if(event.target===infoDialog){const b=infoDialog.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)infoDialog.close();}});
   let measuredWidth=0,measuredHeight=0;
   new ResizeObserver(()=>{
@@ -757,5 +798,24 @@
   document.querySelector('.skip-link').addEventListener('click',event=>{event.preventDefault();canvas.focus();});
   page.classList.add('objects-ready','objects-min-zoom');filter();
   let infoSeen=false;try{infoSeen=localStorage.getItem(infoSeenKey)==='1';}catch{}
-  if(!infoSeen)openInfo();
+  if(reduced.matches){if(!infoSeen)openInfo();}
+  else{
+    page.classList.add('finds-entering');
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      const images=[...layer.querySelectorAll('.objects-tile img')].filter(image=>{const r=image.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth;});
+      const duration=760;
+      // A ripple from the center: each object hops into place with a little tilt.
+      const ranked=images.map(image=>{const r=image.getBoundingClientRect();return {image,distance:Math.hypot((r.left+r.width/2-innerWidth/2)/cell,(r.top+r.height/2-innerHeight/2)/row)};}).sort((a,b)=>a.distance-b.distance);
+      ranked.forEach(({image},index)=>{
+        const tilt=index%2?6:-6;
+        image.animate([
+          {opacity:0,transform:`translateY(32px) rotate(${tilt}deg) scale(.72)`,offset:0},
+          {opacity:1,transform:`translateY(-8px) rotate(${-tilt*.3}deg) scale(1.04)`,offset:.6},
+          {opacity:1,transform:'translateY(3px) rotate(0deg) scale(.99)',offset:.82},
+          {opacity:1,transform:'translateY(0) rotate(0deg) scale(1)',offset:1}
+        ],{duration,delay:Math.min(index*32,640),easing:'cubic-bezier(.2,.8,.2,1)',fill:'backwards'});
+      });
+      setTimeout(()=>{page.classList.remove('finds-entering');page.classList.add('finds-controls-enter');setTimeout(()=>{page.classList.remove('finds-controls-enter');if(!infoSeen)openInfo();},480);},duration+Math.min(Math.max(0,images.length-1)*32,640));
+    }));
+  }
 })();

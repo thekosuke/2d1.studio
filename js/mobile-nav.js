@@ -3,6 +3,8 @@
   const trigger = document.querySelector('.mobile-nav-toggle');
   const panel = trigger && document.getElementById(trigger.getAttribute('aria-controls'));
   if (!trigger || !panel) return;
+  // Home keeps its page links in a horizontal bar at compact widths.
+  if (document.body.classList.contains('home-page')) return;
   const mobile = matchMedia('(max-width: 767px), (max-width: 1023px) and (max-height: 500px) and (pointer: coarse)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const isFinds = panel.classList.contains('finds-page-nav');

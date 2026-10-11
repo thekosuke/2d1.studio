@@ -976,3 +976,336 @@ KINTO has only two verified matching photographs, including one1080px lifestyle 
 The owner explicitly restored red Air-Chair. Its source RGB is unchanged in a new alpha-only mask replacing visible artifacts in the old preserved cutout. Two distinct red views (official three-quarter and retailer-hosted manufacturer front) replace white photos; the duplicate low-resolution three-quarter is excluded. The four-photo target remains unmet. White assets and historical evidence are preserved; red is an owner-selected exception.
 
 Fifteen existing PNGs now have pixel-identical lossless WebP served representations, freeing10,102,356bytes without changing any RGBA pixel or dimension. Full originals remain in source. FINDS-LOSSLESS-ENCODING-2026-10-10.json stores source/served paths and decoded RGBA hashes. No unrestricted image license is implied by private-preview use.
+
+## 04 PILLAR / BLUE — YÔKI
+
+Official listing: https://yokipoetry.stores.jp/items/6a65d000d90e543dbab1830b
+Owner supplied the listing description and two 920 × 920 product photographs. Pyrex glass, handmade in Egypt, height 26 cm × width 10.5 cm. Listing screenshot shows restock notification. Original photographs retained, no upscaling or invented details.
+
+## Dombo Mug — Red / Gispen
+Official designer source: https://www.richardhutten.com/objects/dombo-mug-gispen.html
+Designed by Richard Hutten, 2000. Two native 1920px official photographs; red front view is primary. Instagram reference unavailable. Wide main image uses contain to preserve both handles.
+
+## Eames Elephant — Red Orange / Vitra
+Official listing: https://store.hermanmiller.com/decor-objects-sculptures/eames-elephant/6791.html?lang=en_US
+Listing identifies Vitra, Charles and Ray Eames, Red Orange recycled-plastic variant. Native official 7532 × 5580 PNG retained.
+
+### Owner’s shop-photo selections — 11 October 2026
+
+Added NASA Snow Globe (DETAIL INC.), Hamburger Coaster (carpenter), Charlie Brown — BEAMS Exclusive (Super7 × BEAMS), UFO Cow Abduction (Running Press), and Original — Red (Notabag). Exact sources and image URLs are recorded in `data/objects.json`. BEAMS originals are 1200 × 1440; Notabag sources are 991 × 1289 and 1022 × 1329; the publisher’s UFO kit photo is 1125 × 750. The 600px carpenter photos were replaced by sharper BEAMS photographs. No source was enlarged. Galleries contain 1–2 original photos each. New primaries retain their photographic backgrounds; transparent masking and optical normalization are pending, rather than being claimed as complete.
+
+### Freckle Green — 11 October 2026
+
+Owner explicitly selected Green. Main and gallery use the official 3000 × 3000 transparent `green_freckle.png` from https://buy.freckle.tech/products/freckle . Original alpha/RGB remain unchanged; canvas scale 1.72 compensates for transparent padding, with the existing shared reversible warm grade. Only one green view is exposed by this product page; orange gallery views were removed. Existing ownership ID is retained. Source URL and variant metadata updated in both generated routes.
+
+### Magic Bunny — owner-selected green, 11 October 2026
+
+Replaced the black variant with Alessi's green ASG16GR, variant 46491229192518. Official original `SG16-01.jpg` is 1648 × 2062; detail gallery keeps this authentic photo only, excluding black views. The transparent square canvas asset is `img/objects/cutouts/alessi-magic-bunny-green.png`, extracted using built-in imagegen with the prompt: remove only the background, preserve source geometry/color/lighting, center the complete product with clear space above and below. Stable catalog ID retained for ownership continuity. Shared reversible warm CSS treatment applies. Original and previous assets retained.
+
+### Native photo cleanup — 11 October 2026 (supersedes photo notes above)
+
+Applied the saved, owner-approved alpha-only workflow to 11 recent/updated canvas images: YÔKI, Dombo, Eames Elephant, NASA Snow Globe, Hamburger Coaster, Charlie Brown, UFO Cow Abduction, Notabag, Bruna rabbit, Freckle Green and Magic Bunny Green. Source RGB and product geometry are preserved; native cutouts use square framing at approximately 90% optical fill, with no enlargement and the shared reversible warm CSS grade. Freckle now uses cropped manufacturer transparency instead of a special scale override. Magic Bunny uses an authentic native-source mask instead of the previous generated extraction.
+
+Sharper originals replace the YÔKI 920px copy (1254px), Bruna 600px image (1200 × 1440, matching the selected view), and UFO packaging shot (2500 × 3750 retailer product/use photos). Hamburger Coaster now opens with an unpackaged product view. Notabag gains an official real-use photo. Active galleries retain 1–4 authentic photos; originals and older assets remain archived in place. BEAMS originals still have limited product detail where the object occupies only part of the native frame; no artificial resolution is claimed. Current source hashes, dimensions and asset references are recorded in `FINDS-NEW-PHOTO-QA.json`; exact image URLs remain in the catalog.
+
+## Owner-photographed additions — 11 October 2026
+
+Nine verified products added; the two ribbed vases remain pending exact identification. Two named Kay Bojesen birds are separate selections; Diffar uses Spicy Wood as one representative. ACTUS names the photographed tote Blue × Pink. Cotopaxi Del Día colors vary by maker; the official multicolor example is representative, not a promise of an exact bag.
+Native originals retained. Canvas masters change alpha only (RGB pixel comparisons pass), with 90% optical framing and shared reversible warm CSS treatment. Sources are never enlarged. ACTUS provides 900px originals; Ichendorf’s 1250px file has a smaller product subject. These limitations are recorded rather than claimed as high-resolution compliance.
+
+### Cotopaxi — Kapai 1.5L Hip Pack
+- ID: `cotopaxi-kapai-del-dia` · [Product](https://www.cotopaxi.com/products/kapai-1-5l-hip-pack-del-dia) · Variant: Multicolor Del Día
+- Main: `img/objects/cutouts/cotopaxi-20261011.webp` · Original: [source](https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26UKapai1.5LHipPack-DelDia_F.png?v=1769188337) · Native: 960 × 1200
+- Gallery: `img/objects/gallery/cotopaxi-new-1.webp` · [original](https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26UKapai1.5LHipPack-DelDia_F.png?v=1769188337) · 960 × 1200
+- Gallery: `img/objects/gallery/cotopaxi-new-2.webp` · [original](https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26UKapai1.5LHipPack-DelDia_B.png?v=1769188337) · 960 × 1200
+- Gallery: `img/objects/gallery/cotopaxi-new-3.webp` · [original](https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26UKapai1.5LHipPack-DelDia_A1.png?v=1769188337) · 960 × 1200
+
+### Diffar — Spicy Wood Fragrance Hair Oil
+- ID: `diffar-spicy-wood-hair-oil` · [Product](https://diffar.jp/products/51823) · Variant: 51823 Spicy Wood
+- Main: `img/objects/cutouts/diffar-20261011.webp` · Original: [source](https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_img01_7735760d-c600-44ba-8b67-54d88d6c537f.png?v=1725535650) · Native: 1000 × 2370
+- Gallery: `img/objects/gallery/diffar-new-2.webp` · [original](https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_img01_7735760d-c600-44ba-8b67-54d88d6c537f.png?v=1725535650) · 1000 × 2370
+- Gallery: `img/objects/gallery/diffar-new-1.jpg` · [original](https://cdn.shopify.com/s/files/1/0896/3273/5513/files/51823_thumb_a6e44098-1eef-471d-af7e-0651d998059a.jpg?v=1727144589) · 1500 × 1500
+- Gallery: `img/objects/gallery/diffar-new-3.webp` · [original](https://cdn.shopify.com/s/files/1/0896/3273/5513/files/51823_img02_1d92caaf-56db-4d7f-84d6-d898d76d0b0d.png?v=1725361449) · 1000 × 2312
+
+### Kay Bojesen — Songbird Sunshine
+- ID: `kay-bojesen-songbird-sunshine` · [Product](https://www.rosendahl.com/en/intl/products/kay-birds-songbird-turquoiseyellow-h155-cm-39405) · Variant: Sunshine / 39405
+- Main: `img/objects/cutouts/sunshine-20261011.webp` · Original: [source](https://imagebank.rosendahl.com/cdn/xZcLVR/Kay-Bojesen-Birds-Songbird-TurquoiseYellow-39405.png) · Native: 3508 × 4961
+- Gallery: `img/objects/gallery/sunshine-new-1.webp` · [original](https://imagebank.rosendahl.com/cdn/xZcLVR/Kay-Bojesen-Birds-Songbird-TurquoiseYellow-39405.png) · 1697 × 2400
+- Gallery: `img/objects/gallery/sunshine-new-2.webp` · [original](https://imagebank.rosendahl.com/cdn/xZd1WD/Kay-Bojesen-Birds-Songbird-TurquoiseYellow-39405-xZd1WD.png) · 1600 × 2400
+- Gallery: `img/objects/gallery/sunshine-new-3.webp` · [original](https://imagebank.rosendahl.com/cdn/5FPGGCF/Kay-Bojesen-Birds-Songbird-TurquoiseYellow-39405-5FPGGCF.png) · 2400 × 1634
+
+### Kay Bojesen — Songbird Ruth
+- ID: `kay-bojesen-songbird-ruth` · [Product](https://www.rosendahl.com/en/intl/products/kay-birds-songbird-redpink-h155-cm-39400) · Variant: Ruth / 39400
+- Main: `img/objects/cutouts/ruth-20261011.webp` · Original: [source](https://imagebank.rosendahl.com/cdn/xZcLVP/Kay-Bojesen-Birds-Songbird-RoseRed-39400.png) · Native: 3508 × 4961
+- Gallery: `img/objects/gallery/ruth-new-1.webp` · [original](https://imagebank.rosendahl.com/cdn/xZcLVP/Kay-Bojesen-Birds-Songbird-RoseRed-39400.png) · 1697 × 2400
+- Gallery: `img/objects/gallery/ruth-new-2.webp` · [original](https://imagebank.rosendahl.com/cdn/2SPdZb/Kay-Bojesen-Birds-Songbird-RoseRed-39400-2SPdZb.png) · 1600 × 2400
+- Gallery: `img/objects/gallery/ruth-new-3.webp` · [original](https://imagebank.rosendahl.com/cdn/5FPGGCF/Kay-Bojesen-Birds-Songbird-RoseRed-39400-5FPGGCF.png) · 2400 × 1634
+
+### Vitra — Night Clock
+- ID: `vitra-nelson-night-clock` · [Product](https://www.vitra.com/en-us/product/details/night-clock) · Variant: Black / brass
+- Main: `img/objects/cutouts/clock-20261011.webp` · Original: [source](https://cdn.shopify.com/s/files/1/0508/7988/9594/files/Luminaire-Night-Clock-George-Nelson-Vitra-2-02.jpg?v=1783090633) · Native: 1200 × 1200
+- Gallery: `img/objects/gallery/clock-new-1.jpg` · [original](https://cdn.shopify.com/s/files/1/0508/7988/9594/files/Luminaire-Night-Clock-George-Nelson-Vitra-2-02.jpg?v=1783090633) · 1200 × 1200
+- Gallery: `img/objects/gallery/clock-new-2.jpg` · [original](https://cdn.shopify.com/s/files/1/0508/7988/9594/files/Luminaire-Night-Clock-George-Nelson-Vitra-4-02.jpg?v=1783090609) · 1200 × 1200
+- Gallery: `img/objects/gallery/clock-new-4.jpg` · [original](https://cdn.shopify.com/s/files/1/0508/7988/9594/files/Luminaire-Night-Clock-George-Nelson-Vitra-3-02.jpg?v=1783090586) · 1200 × 1200
+- Gallery: `img/objects/gallery/clock-new-3.jpg` · [original](https://cdn.shopify.com/s/files/1/0508/7988/9594/files/Luminaire-Night-Clock-George-Nelson-Vitra-1-02.jpg?v=1783090656) · 1200 × 1200
+
+### PALASET × I’M OK — FANTTI Elephant Bank
+- ID: `palaset-im-ok-fantti-elephant-bank` · [Product](https://ronherman.jp/item/detail/1_3156_4095600004_1/021) · Variant: Red
+- Main: `img/objects/cutouts/palaset-20261011.webp` · Original: [source](https://ronherman.jp/photo/2024FW/4095600004/zz-4095600004-2.jpg) · Native: 1950 × 2600
+- Gallery: `img/objects/gallery/palaset-new-4.webp` · [original](https://ronherman.jp/photo/2024FW/4095600004/zz-4095600004-2.jpg) · 1800 × 2400
+- Gallery: `img/objects/gallery/palaset-new-3.webp` · [original](https://ronherman.jp/photo/2024FW/4095600004/zz-4095600004-1.jpg) · 1800 × 2400
+
+### Ichendorf Milano — Desert Plants Cactus Tumbler
+- ID: `ichendorf-desert-plants-cactus-amber` · [Product](https://www.ichendorfmilano.com/en/products/desert-plants/09352101/tumbler-cactus-amber/) · Variant: Amber cactus / 09352101
+- Main: `img/objects/cutouts/ichendorf-20261011.webp` · Original: [source](https://www.ichendorfmilano.com/images/299/2320/1250x917/nocrop/align-4/ichendorfmilano-desert-plants-09352101.jpg) · Native: 1250 × 917
+- Gallery: `img/objects/gallery/ichendorf-new-1.jpg` · [original](https://www.ichendorfmilano.com/images/299/2320/1250x917/nocrop/align-4/ichendorfmilano-desert-plants-09352101.jpg) · 1250 × 917
+
+### CURAPROX — CS Smart Toothbrush
+- ID: `curaprox-cs-smart` · [Product](https://curaprox.co.uk/toothbrushes/manual-toothbrushes/cs-smart-p123) · Variant: Blue; assorted manufacturer colors
+- Main: `img/objects/cutouts/curaprox-20261011.webp` · Original: [source](https://curaprox.co.uk/4659-large_default/cs-smart.jpg) · Native: 960 × 1200
+- Gallery: `img/objects/gallery/curaprox-new-1.jpg` · [original](https://curaprox.co.uk/4659-large_default/cs-smart.jpg) · 960 × 1200
+- Gallery: `img/objects/gallery/curaprox-new-3.jpg` · [original](https://curaprox.co.uk/7085-large_default/cs-smart.jpg) · 960 × 1200
+
+### SØHOLM CAFÉ — Reversible Tote Bag
+- ID: `soholm-cafe-reversible-tote` · [Product](https://online.actus-interior.com/item/2454030/) · Variant: Blue × Pink
+- Main: `img/objects/cutouts/actus-20261011.webp` · Original: [source](https://online.actus-interior.com/contents/images/goods/detail/L/17b/24540308_01.jpg) · Native: 900 × 900
+- Gallery: `img/objects/gallery/actus-blue-1.jpg` · [original](https://online.actus-interior.com/contents/images/goods/detail/L/17b/24540308_01.jpg) · 900 × 900
+- Gallery: `img/objects/gallery/actus-blue-2.jpg` · [original](https://online.actus-interior.com/contents/images/goods/detail/L/5d0/2454030_image01.jpg) · 900 × 900
+- Gallery: `img/objects/gallery/actus-blue-8.jpg` · [original](https://online.actus-interior.com/contents/images/goods/detail/L/b12/24540308_04.jpg) · 900 × 900
+- Gallery: `img/objects/gallery/actus-blue-10.jpg` · [original](https://online.actus-interior.com/contents/images/goods/detail/L/77c/24540308_05.jpg) · 900 × 900
+
+## TECTA Cat — owner addition, 11 October 2026
+
+- ID: `tecta-cat-black`; Dominik Kirgus; owner-selected black lacquer and yellow eyes.
+- [Original brand shop](https://shop.tecta.de/TECTA-Cat/CAT) · [Manufacturer story and image credits](https://www.tecta.de/en/produkt/tecta-cat/)
+- Original transparent alpha retained in native master; source RGB exact. Canvas uses 90% optical framing and shared warm CSS grade; no enlargement.
+- Studio source limitation: original TECTA website files are 1000px; shop copies are smaller at 800px. No artificial resolution claim. The real interior photograph is 2560×1707.
+- `img/objects/gallery/tecta-cat-1-square.webp` — [original](https://www.tecta.de/wp-content/uploads/Unorganisiert/Tecta_Accessoires_TECTA-CAT_Dominik-Kirgus_1.png), 757 × 1000
+- `img/objects/gallery/tecta-cat-2-square.webp` — [original](https://www.tecta.de/wp-content/uploads/Unorganisiert/Tecta_Accessoires_TECTA-CAT_Dominik-Kirgus_2.png), 726 × 1000
+- `img/objects/gallery/tecta-cat-4-square.webp` — [original](https://www.tecta.de/wp-content/uploads/Unorganisiert/Tecta_Accessoires_TECTA-CAT_Dominik-Kirgus_4.png), 197 × 1000
+- `img/objects/gallery/tecta-cat-native-4.webp` — [original](https://www.tecta.de/wp-content/uploads/Unorganisiert/Tecta_Accessoires_TECTA-CAT_Dominik-Kirgus_18.jpg), 2560 × 1707
+
+TECTA’s transparent gallery views are centered on square stages so the native cover frame retains the complete tail and legs. Original native PNGs remain unchanged.
+
+## Inkerie Travel Jewelry Case — 11 October 2026
+
+- Owner source: https://ronherman.jp/item/detail/1_3253_4490100008_1/000
+- Manufacturer: https://kikkerland.com/products/inkerie-jewelry-case ; Goodlines, SKU INK53-A. Assorted colors; representative Ron Herman striped version selected, no iconic color claim.
+- Native originals 1950×2600; alpha-only Vision mask retains exact RGB. No enlargement. Four distinct complementary detail views, square framing without cropping.
+- img/objects/gallery/kikkerland-inkerie-jewelry-case-1.webp — https://ronherman.jp/photo/2026FW/4490100008/zz-4490100008_000-2.jpg
+- img/objects/gallery/kikkerland-inkerie-jewelry-case-2.webp — https://ronherman.jp/photo/2026FW/4490100008/zz-4490100008-3.jpg
+- img/objects/gallery/kikkerland-inkerie-jewelry-case-3.webp — https://ronherman.jp/photo/2026FW/4490100008/zz-4490100008_000-1.jpg
+- img/objects/gallery/kikkerland-inkerie-jewelry-case-4.webp — https://ronherman.jp/photo/2026FW/4490100008/zz-4490100008-1.jpg
+
+## Three owner-linked additions — 11 October 2026
+
+### MUJI — Porcelain Toothbrush Stand
+- ID: `muji-porcelain-toothbrush-stand`; Yellow / 4549738986218
+- Product: https://www.muji.com/my/products/cmdty/detail/4549738986218
+- Source: https://www.muji.com/my/products/cmdty/detail/4549738986218
+- Transparent primary retains native source RGB exactly; square optical framing, shared reversible warm grade, no enlargement.
+- img/objects/gallery/muji-porcelain-toothbrush-stand-1.webp — https://img.muji.net/img/item/4549738986218_1260.jpg
+- img/objects/gallery/muji-porcelain-toothbrush-stand-2.webp — https://img.muji.net/img/item/4549738986218_01_1260.jpg
+- img/objects/gallery/muji-porcelain-toothbrush-stand-3.webp — https://img.muji.net/img/item/4549738986218_02_1260.jpg
+- Source limitation: Native MUJI originals are 1260px; the product occupies only part of the studio frame. Retained without enlargement.
+
+### Best Years — Knitted Triceratops
+- ID: `best-years-knitted-triceratops`; Red
+- Product: https://www.bestyears.co.uk/knitted-red-medium-triceratops-info
+- Source: https://ronherman.jp/item/detail/1_3989_4392100012_1/023
+- Transparent primary retains native source RGB exactly; square optical framing, shared reversible warm grade, no enlargement.
+- img/objects/gallery/best-years-knitted-triceratops-1.webp — https://ronherman.jp/photo/2026SS/4392100012/zz-4392100012_023-1.jpg
+- img/objects/gallery/best-years-knitted-triceratops-2.webp — https://ronherman.jp/photo/2026SS/4392100012/zz-4392100012-1.jpg
+- img/objects/gallery/best-years-knitted-triceratops-3.webp — https://ronherman.jp/photo/2026SS/4392100012/zz-4392100012-2.jpg
+- Source limitation: Three distinct high-resolution studio views available; no additional authentic in-use view found.
+
+### Kay Bojesen — Monkey Mini
+- ID: `kay-bojesen-monkey-mini-vintage-blue`; Vintage Blue / 39361
+- Product: https://www.rosendahl.com/en/intl/kay-bojesen/products/kay-monkey-monkey-vintage-blue-mini-39361
+- Source: https://www.rosendahl.com/en/intl/kay-bojesen/products/kay-monkey-monkey-vintage-blue-mini-39361
+- Transparent primary retains native source RGB exactly; square optical framing, shared reversible warm grade, no enlargement.
+- img/objects/gallery/kay-bojesen-monkey-mini-vintage-blue-1.webp — https://imagebank.rosendahl.com/cdn/xZbMSM/Kay-Bojesen-Monkey-Abe-Vintage-Blaa-mini-39361-xZbMSM.png
+- img/objects/gallery/kay-bojesen-monkey-mini-vintage-blue-2.webp — https://imagebank.rosendahl.com/cdn/xZbMSN/Kay-Bojesen-Monkey-Abe-Vintage-Blaa-mini-39361-xZbMSN.png
+- img/objects/gallery/kay-bojesen-monkey-mini-vintage-blue-3.webp — https://imagebank.rosendahl.com/cdn/xZcTKV/Kay-Bojesen-Monkey-Abe-Vintage-Blaa-mini-39361-xZcTKV.png
+- img/objects/gallery/kay-bojesen-monkey-mini-vintage-blue-4.webp — https://imagebank.rosendahl.com/cdn/xZdLK7/Kay-Bojesen-Monkey-Abe-Vintage-Blaa-mini-39361-xZdLK7.png
+
+## CS Smart color and profile update — 11 October 2026
+
+Stable ID `curaprox-cs-smart` retained. Owner requested multiple colors and side-profile main photo. Gray/lime manufacturer photo replaces the blue front-view canvas image; original RGB retained under an alpha-only mask. Gallery now has profile, assorted color lineup, bathroom use, and blue front view. All previous photos remain recoverable. Manufacturer profile remains 960×1200 with limited resolved subject detail; Ron Herman originals are 1950×2600.
+- img/objects/gallery/curaprox-cs-smart-colors-1.webp — https://curaprox.co.uk/7085-large_default/cs-smart.jpg
+- img/objects/gallery/curaprox-cs-smart-colors-2.webp — https://ronherman.jp/photo/all/3098600032/zz-3098600032_099-2.jpg
+- img/objects/gallery/curaprox-cs-smart-colors-3.webp — https://ronherman.jp/photo/all/3098600032/zz-3098600032_099-1.jpg
+- img/objects/gallery/curaprox-cs-smart-colors-4.webp — https://curaprox.co.uk/4659-large_default/cs-smart.jpg
+
+## Girotondo canvas update — 11 October 2026
+
+Owner-selected second detail photo is now the transparent canvas primary. Source: https://cdn.shopify.com/s/files/1/0337/3603/2392/products/AKKGT-03.jpg?v=1715871252. Native RGB retained exactly; alpha-only removal includes the paper-doll perforations. Gallery order and stable ID retained.
+
+## Eames Elephant additional angles — 11 October 2026
+
+Four authentic Red Orange views: original side, front, face/ear detail and upper construction detail. Main canvas photo and stable ID retained. Native files preserved; 2048px front and 1440px detail originals, no enlargement.
+- img/objects/gallery/eames-elephant-orange-angle-1.webp — https://images.hermanmiller.group/asset/083776d6-a62e-4a0a-a40d-a79afb90b5e5/W/HM_6791_100701844_red_orange_a.png
+- img/objects/gallery/eames-elephant-orange-angle-2.webp — https://cdn.shopify.com/s/files/1/0270/5873/files/vitra-eames-elephant-eames-red-orange-RE-front.jpg?v=1762578603
+- img/objects/gallery/eames-elephant-orange-angle-3.webp — https://cdn.shopify.com/s/files/1/0573/9305/3878/files/9465192_EamesElephant_Eames_Red_Orange_RE.jpg?v=1758098627
+- img/objects/gallery/eames-elephant-orange-angle-4.webp — https://cdn.shopify.com/s/files/1/0573/9305/3878/files/9465193_EamesElephant_ames_Red_Orange_RE.jpg?v=1758098627
+
+## MUJI Smooth Gel Ink Ballpoint Knock Pen — 11 October 2026
+
+Owner link: https://www.muji.com/jp/ja/store/cmdty/detail/4550002794118
+Colorful 0.5 mm series photography selected from official MUJI stores. Canvas uses the authentic 10-color lineup with alpha-only removal and exact source RGB. Native originals 1260px; writing close-up 2000px. Four distinct images, no synthetic colors or enlargement.
+- img/objects/gallery/muji-smooth-gel-knock-pen-1.webp — https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4550344502549_01_1260.jpg?v=1736284926
+- img/objects/gallery/muji-smooth-gel-knock-pen-2.webp — https://img.muji.net/img/item/4550002794095_1260.jpg
+- img/objects/gallery/muji-smooth-gel-knock-pen-3.webp — https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4550344502549_1260.jpg?v=1762444495
+- img/objects/gallery/muji-smooth-gel-knock-pen-4.webp — https://cdn.shopify.com/s/files/1/0556/8066/3742/files/4550002794132_01_org.jpg?v=1735927388
+
+## CS Smart orange primary — 11 October 2026
+
+Owner-selected warm orange/yellow manufacturer version with dark-blue bristles now used on canvas; no recoloring. Source: https://curaprox.co.uk/4656-large_default/cs-smart.jpg. Native RGB retained exactly; no enlargement. Gray/green are the only full side-profile originals available; selected color uses its authentic full-product view. Corrected the retailer color lineup (handles showed CS 5460) to the official CS Smart lineup and orange brush-head close-up. Stable ID and four-image gallery retained.
+
+## FANTTI Elephant Bank photo update — 11 October 2026
+
+Owner-selected Ron Herman photos: group colorways, red I’M OK side profile, front and top. Canvas uses the matching red side profile with an alpha-only mask. All originals retained at 1950×2600; no enlargement.
+- Group colorways: https://ronherman.jp/photo/2024FW/4095600004/zz-4095600004-4.jpg
+- Side profile: https://ronherman.jp/photo/2024FW/4095600004/zz-4095600004_023-1.jpg
+- Front view: https://ronherman.jp/photo/2024FW/4095600004/zz-4095600004-2.jpg
+- Top view: https://ronherman.jp/photo/2024FW/4095600004/zz-4095600004-3.jpg
+
+## CURAPROX CS 5460 replacement — 11 October 2026
+
+Owner clarified orange handle / blue bristles and colorful, real-world gallery. Official Japanese CS 5460 source replaces Smart identity; legacy curaprox-cs-smart ID retained for ownership continuity. Primary alpha-only side-profile selection preserves source RGB; originals retained without enlargement.
+- Main: https://curaprox.itembox.cloud/product/002/000000000207/000000000207-02.jpg
+- Color assortment: https://ronherman.jp/photo/all/3098600032/zz-3098600032_099-2.jpg
+- Bathroom setting: https://ronherman.jp/photo/all/3098600032/zz-3098600032_099-1.jpg
+- Everyday use: https://curaprox.itembox.cloud/product/002/000000000207/000000000207-19.jpg
+- Color pattern: https://curaprox.com.cy/7442-large_default/toothbrush-cs-5460-ultra-soft.jpg
+
+## Full catalog framing and gallery review — 11 October 2026
+
+Color suffixes removed from Dombo Mug, Original and 04 PILLAR in both languages. Detail photography now fits complete originals inside square containers at every viewport, preventing wide handles and portrait objects from being clipped. Native originals are retained without enlargement.
+
+### Boby Trolley, 3/4
+- Retained photo: https://cdn.mohd.it/cache/image/format=webp/media/catalog/product/b/-/b-line-b34-storage-trolley3.jpg
+- Trolley in room: https://www.b-line.it/wp-content/uploads/2019/11/Boby_28.jpg
+- Top and tray detail: https://www.b-line.it/wp-content/uploads/2019/11/Boby_33.jpg
+- Open rotating drawers: https://www.b-line.it/wp-content/uploads/2019/11/Boby_31.jpg
+
+### Magic Bunny
+- Retained photo: https://alessi.com/cdn/shop/products/SG16-01.jpg?v=1680619472
+- Lifted bunny mechanism: https://alessi.com/cdn/shop/products/ASG16-B-SL-frontside-2.jpg?v=1680619472
+- Toothpicks in use: https://alessi.com/cdn/shop/products/SG16.jpg?v=1680619472
+
+### Air-Chair
+- Retained photo: https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_air_chair_product_lateral_SD74_red_01.jpg
+- Retained photo: https://cdn.shopify.com/s/files/1/0659/2646/3734/files/Magis_air_chair_product_front_SD74_red_01_hr.jpg?v=1767423949
+- Outdoor use: https://www.magisdesign.com/wp-content/uploads/2015/01/Magis_air_chair_ambient_multi_SD74_orange_outdoor_01.jpg
+- Dining room use: https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_air_chair_ambient_multi_SD74_white_01.jpg
+
+### Linnut Sulo S
+- Retained photo: https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_front_LI01_off_01.jpg
+- Retained photo: https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_s_product_side_LI01_off_01.jpg
+- Living room setting: https://www.magisdesign.com/wp-content/uploads/2025/09/Magis_motta_low-table_ambient_TV1670_green_natural-oak_costume-lounge_sofa_kvadrat-uniform-melange_793_linnut-sulo_lamp_01.jpg
+- Glowing material detail: https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_linnut_sulo_palturi_ambient_mono_LI01__LI05_01.jpg
+
+### High Speed Jump Rope
+- Full product angle: https://cdn.shopify.com/s/files/1/0003/9371/files/SKU-16_9-4_a14ab0ad-7d35-48c0-9dcb-71be4ab52420.webp?v=1786106604
+- Bearing and handle detail: https://cdn.shopify.com/s/files/1/0003/9371/files/SKU-16_9-2_35400ad7-4aa6-4b0c-a178-0fb92770000d.webp?v=1786106605
+- Parts and colors: https://cdn.shopify.com/s/files/1/0003/9371/files/combined-hsjr.webp?v=1786559918
+- Packed in hand: https://cdn.shopify.com/s/files/1/0003/9371/files/SKU-16_9-8_7c29bd3f-eadc-4a6e-9831-f9c9d23f94b1.webp?v=1786106605
+
+### Original
+- Retained photo: https://www.notabag.com/cdn/shop/files/NB_1_Notabag_Original_Red_Back.jpg?v=1728912100
+- Bag carried by hand: https://www.notabag.com/cdn/shop/files/NB_5_Notabag_bag_Backpack_Red.png?v=1747219165
+- Backpack in use: https://www.notabag.com/cdn/shop/files/NB_6_Notabag_FW2017_f31d4f60-2baf-4b5e-9a20-48d550f46e15.jpg?v=1728912100
+- Folded into pocket: https://www.notabag.com/cdn/shop/files/NB_7_Notabag_Red_Pouch.png?v=1728912100
+
+### Playful Storage Stool Side Table
+- Open storage compartment: https://homeinfun.ca/cdn/shop/files/7b5ddb17-d573-4dc6-95e1-a0097328eac6.jpg?v=1766462145
+- Bedside setting: https://homeinfun.ca/cdn/shop/files/c17923dc-61c3-4bdc-b46b-83c8bb0dd643.jpg?v=1766462145
+- Color and lid detail: https://homeinfun.ca/cdn/shop/files/37b8d5d6-33bc-4faa-8aa2-dbed810c3a3c.jpg?v=1766462145
+- Living room use: https://homeinfun.ca/cdn/shop/files/2cfd2401-5af1-44ff-91a9-70d8d58ac6e7.jpg?v=1766462145
+
+### Table Clock
+- Retained photo: https://www.hay-japan.com/client_info/HAYJAPAN/itemimage/STRY000039/hay_variation/STRY000039-B035.jpg
+- Retained photo: https://www.hay-japan.com/client_info/HAYJAPAN/itemimage/STRY000039/STRY000039_01.jpg
+- Alternate color in room: https://www.hay-japan.com/client_info/HAYJAPAN/itemimage/STRY000039/STRY000039_02.jpg
+- Shelf setting: https://www.hay-japan.com/client_info/HAYJAPAN/itemimage/STRY000039/STRY000039_03.jpg
+
+### !Camera Art Model
+- Retained photo: https://notboring.shop/cdn/shop/files/product-shot-classic.jpg?v=1762371839&width=1946
+- Retained photo: https://notboring.shop/cdn/shop/files/back-classic.jpg?v=1762371839&width=1946
+- Retained photo: https://notboring.shop/cdn/shop/files/hand-classic_1af297fd-da7a-45b9-b018-512d4ebdca05.jpg?v=1762371888&width=1946
+- Box and included materials: https://notboring.shop/cdn/shop/files/P1022133.jpg?v=1766001860
+
+### Dombo Mug
+- Retained photo: https://www.richardhutten.com/media/images/e1a5b54354996557f3c3a987ff1.jpg
+- Color assortment: https://www.mediabank-collection.com/m/7659dbe429ca3da8/landscapexl-Dombo.jpg
+- Angled cup and interior: https://www.mediabank-collection.com/asset/58314cad-6c04-4a4f-a857-6ffb94f78b7b/landscapexl/Dombo.jpg
+- Real setting and multifunctional use: https://www.mediabank-collection.com/asset/0ed97984-73fc-49ff-b162-bd2616648c40/landscapexl/Moodboard-Green-Yellow.jpg
+
+### Additional full-catalog selections
+
+Purple three-drawer Boby photo was excluded from the final selection to avoid mixing models. Paprika room and tray-detail views supplement the retained complete product view.
+
+Yoto Player, 4th Gen
+- Full product: https://www.datocms-assets.com/48136/1788969790-gallery-player-1-welcome-card-eu-fr-1.png
+- Side and controls: https://www.datocms-assets.com/48136/1788864480-player-4-sideview.png
+- Listening at the kitchen table: https://www.datocms-assets.com/48136/1788863034-player-4-lifestyle-1.png
+- Bedtime use: https://www.datocms-assets.com/48136/1788797317-player-4-sleep.png
+
+Hey Bag
+- Retained photograph: https://cdn.shopify.com/s/files/1/1152/7278/files/heybag01.jpg?v=1767958657
+- Full alternate design: https://heyshop.es/cdn/shop/files/heybag01.jpg?v=1767958657
+- Bag in real setting: https://heyshop.es/cdn/shop/files/Hey-Bag_06.jpg?v=1767958657
+
+Classic Cap
+- Retained photograph: https://cdn.shopify.com/s/files/1/1152/7278/products/HeyCap2.png?v=1636470987
+- Embroidery close-up: https://heyshop.es/cdn/shop/products/HeyCap1.png?v=1636470987
+- Side profile: https://heyshop.es/cdn/shop/products/HeyCap2.png?v=1636470987
+
+## KINTO Water Bottle additional details — 11 October 2026
+
+The gallery now contains four authentic views. Refilling/spout and detached lid/seal photographs use original 1600×1200 files from https://kinto-usa.com/products/20121. The existing in-hand source remains native1080×1080; no enlargement. Canvas master is unchanged.
+- https://cdn.shopify.com/s/files/1/0093/4785/8510/files/WB_20aw_w_detail_02.jpg
+- https://cdn.shopify.com/s/files/1/0093/4785/8510/files/WB_20aw_w_detail_05.png
+
+## Owner photo additions — 11 October 2026
+
+ACTUS DECO Dot Photo Frame 5×7: https://online.actus-interior.com/item/2415508/
+
+ACTUS Object Flower Vase: https://online.actus-interior.com/item/2390149/
+
+Iwachu Cat Candle Stand (right object): https://iwachu.co.jp/en/products/29540
+
+Transparent canvas masters preserve native RGB. ACTUS sources are only900px; owner photos only1024px. No enlargement. Cat official gallery is1485×990. The lamp’s identity is pending owner clarification; no speculative brand/model added.
+
+## Aptone Mix & Match — 11 October 2026
+
+Owner selected Clear + Neon Green (variant47253490303222), confirmed by official product JSON. Main native2686×2686 RGB preserved with alpha-only foreground removal; no enlargement. Four complementary native originals retained. Product: https://aptone.global/products/mix-match?variant=47253490303222
+- Clear and neon green full view: https://cdn.shopify.com/s/files/1/0706/4767/7174/files/10_8dc9d8dc-f9b2-44ee-a445-fc4477b4cc94.jpg?v=1744518460
+- Open components and color combinations: https://cdn.shopify.com/s/files/1/0706/4767/7174/files/4_43f267e8-9d5c-4ea8-a0da-c23a9002fa9d.jpg?v=1744518459
+- Tabletop use: https://cdn.shopify.com/s/files/1/0706/4767/7174/files/2_bff7128b-42cb-4bb3-9432-a7b6f7b63f6e.jpg?v=1744518459
+- Alternate angle and material variation: https://cdn.shopify.com/s/files/1/0706/4767/7174/files/16.jpg?v=1744518460
+
+## Desert Plants Cactus Tumbler replacement — 11 October2026
+
+Owner selected Flymee’s green cactus variant: https://flymee.jp/product/121403/. Stable product ID and color-free name retained. Four official1200×900 photos selected; native originals retained. Canvas mask changes alpha only and preserves exact RGB. Isolated subject has approximately500px usable detail; no enlargement. Prior amber metadata archived.
+- Complete product view: https://static2.flymee.jp/product_images/9b7d-121403/20251105203541533.jpg
+- Cactus and glass close-up: https://static2.flymee.jp/product_images/9b7d-121403/202510092045420866.jpg
+- Top angle in tabletop setting: https://static2.flymee.jp/product_images/9b7d-121403/202510092045292006.jpg
+- Side view in tabletop setting: https://static2.flymee.jp/product_images/9b7d-121403/202510092045276179.jpg
+
+## Spun red replacement — 11 October2026
+
+Owner-selected red polyethylene canvas and first detail photo. Alpha-only native mask preserves exact RGB; no enlargement. Supporting gallery upgraded to native originals (1286×1929,4740×3160,1740×1040). Stable name and ownership ID retained.
+- https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_product_SD660_red_01.jpg
+- https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_ambient_mono_SD660_anthracite_outdoor_01.jpg
+- https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_ambient_mono_SD660_purple_anthracite_outdoor_01.jpg
+- https://www.magisdesign.com/wp-content/uploads/2015/02/Magis_spun_product_detail_SD660_black_01.jpg
+
+## Spun red replacement — 11 October2026
+
+Owner-selected red polyethylene canvas and first detail photo. Alpha-only native mask preserves exact RGB; no enlargement. Supporting gallery upgraded to native originals (1286×1929,4740×3160,1740×1040). Stable name and ownership ID retained.
+- https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_product_SD660_red_01.jpg
+- https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_ambient_mono_SD660_anthracite_outdoor_01.jpg
+- https://www.magisdesign.com/wp-content/uploads/2020/03/Magis_spun_ambient_mono_SD660_purple_anthracite_outdoor_01.jpg
+- https://www.magisdesign.com/wp-content/uploads/2015/02/Magis_spun_product_detail_SD660_black_01.jpg

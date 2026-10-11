@@ -1,0 +1,96 @@
+{
+  "id": "kay-bojesen-songbird-ruth",
+  "name": "Songbird Ruth",
+  "brand": "Kay Bojesen",
+  "category": "living",
+  "tags": [
+    "wood",
+    "bird",
+    "design classic",
+    "colorful"
+  ],
+  "description": "A pink wooden songbird with a red head and yellow beak, named Ruth by Kay Bojesen. Its clear shapes and lively color combination make a small shelf feel a little more inhabited.",
+  "productUrl": "https://www.rosendahl.com/en/intl/products/kay-birds-songbird-redpink-h155-cm-39400",
+  "sourceUrl": "https://www.rosendahl.com/en/intl/products/kay-birds-songbird-redpink-h155-cm-39400",
+  "sourceImageUrl": "https://imagebank.rosendahl.com/cdn/xZcLVP/Kay-Bojesen-Birds-Songbird-RoseRed-39400.png",
+  "gallery": [
+    {
+      "image": "img/objects/gallery/ruth-new-1.webp",
+      "width": 1697,
+      "height": 2400,
+      "sourceUrl": "https://www.rosendahl.com/en/intl/products/kay-birds-songbird-redpink-h155-cm-39400",
+      "sourceImageUrl": "https://imagebank.rosendahl.com/cdn/xZcLVP/Kay-Bojesen-Birds-Songbird-RoseRed-39400.png"
+    },
+    {
+      "image": "img/objects/gallery/ruth-new-2.webp",
+      "width": 1600,
+      "height": 2400,
+      "sourceUrl": "https://www.rosendahl.com/en/intl/products/kay-birds-songbird-redpink-h155-cm-39400",
+      "sourceImageUrl": "https://imagebank.rosendahl.com/cdn/2SPdZb/Kay-Bojesen-Birds-Songbird-RoseRed-39400-2SPdZb.png"
+    },
+    {
+      "image": "img/objects/gallery/ruth-new-3.webp",
+      "width": 2400,
+      "height": 1634,
+      "sourceUrl": "https://www.rosendahl.com/en/intl/products/kay-birds-songbird-redpink-h155-cm-39400",
+      "sourceImageUrl": "https://imagebank.rosendahl.com/cdn/5FPGGCF/Kay-Bojesen-Birds-Songbird-RoseRed-39400-5FPGGCF.png"
+    }
+  ],
+  "variantName": "Ruth / 39400",
+  "colorwayEvidence": {
+    "basis": "Owner photograph and verified manufacturer listing",
+    "notes": "Variant checked against owner reference; no unsupported iconic-color claim."
+  },
+  "usageCaveat": "Source-credited original photography for private preview; rights clearance not verified.",
+  "image": "img/objects/cutouts/ruth-20261011.webp",
+  "width": 2657,
+  "height": 2657,
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/ruth-20261011-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/cutouts/ruth-20261011-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/ruth-20261011-1440.webp",
+      "width": 1440
+    },
+    {
+      "image": "img/objects/cutouts/ruth-20261011.webp",
+      "width": 2657
+    }
+  ],
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+    "nativeSourceDimensions": [
+      3508,
+      4961
+    ],
+    "subjectPixels": [
+      2391,
+      2238
+    ],
+    "cropBoundingBox": [
+      501,
+      2230,
+      2892,
+      4468
+    ],
+    "opticalFill": 0.9,
+    "upscaled": false,
+    "sourceSHA256": "57c9c380b3460c16929c2b8fabca348b573e060853b2ce6ca5c4cf0198a9c018",
+    "nativeMaster": "img/objects/cutouts/ruth-20261011-native.png",
+    "rgbExact": true
+  },
+  "catalogAudit": {
+    "reviewed": "2026-10-11",
+    "notes": [
+      "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+    ],
+    "sourceLimitations": []
+  }
+}

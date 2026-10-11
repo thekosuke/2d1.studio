@@ -1,0 +1,100 @@
+{
+  "id": "braun-bc22-white",
+  "name": "BC22 Alarm Clock",
+  "brand": "Braun",
+  "category": "living",
+  "tags": [
+    "clock",
+    "timekeeping"
+  ],
+  "description": "A clear analog face, a yellow second hand, and a compact shape for the bedside.",
+  "productUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+  "sourceUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+  "sourceImageUrl": "https://de.braun-clocks.com/cdn/shop/products/42253a33-ad67-4403-a109-1f2750d314ed.jpg?v=1696328498",
+  "image": "img/objects/cutouts/braun-bc22-white.webp",
+  "width": 1970,
+  "height": 1970,
+  "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
+  "gallery": [
+    {
+      "image": "img/objects/gallery/braun-bc22-white-audit-b0baf2c65c.jpg",
+      "width": 1800,
+      "height": 1800,
+      "sourceUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0268/7654/3030/products/42253a33-ad67-4403-a109-1f2750d314ed.jpg?v=1696328498"
+    },
+    {
+      "image": "img/objects/gallery/braun-bc22-white-audit-0a8e601a88.jpg",
+      "width": 1800,
+      "height": 1800,
+      "sourceUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0268/7654/3030/products/be27ef24-200a-4dc5-9ebb-7a65f04ee1c2.jpg?v=1696328499"
+    },
+    {
+      "image": "img/objects/gallery/braun-bc22-white-audit-48d850f117.jpg",
+      "width": 1800,
+      "height": 1800,
+      "sourceUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0268/7654/3030/products/85974cea-3804-4b54-a3fd-7e9fe15a60ee.jpg?v=1696328499"
+    },
+    {
+      "image": "img/objects/gallery/braun-bc22-white-audit-98d53a2763.jpg",
+      "width": 1800,
+      "height": 1800,
+      "sourceUrl": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0268/7654/3030/products/90fc68eb-f4b1-4b28-be66-3b9082e20428.jpg?v=1696328500"
+    }
+  ],
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/braun-bc22-white-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/cutouts/braun-bc22-white-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/braun-bc22-white-1440.webp",
+      "width": 1440
+    },
+    {
+      "image": "img/objects/cutouts/braun-bc22-white-1920.webp",
+      "width": 1920
+    },
+    {
+      "image": "img/objects/cutouts/braun-bc22-white.webp",
+      "width": 1970
+    }
+  ],
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Original RGB with manually traced silhouette",
+    "subjectPixels": [
+      1357,
+      1523
+    ],
+    "opticalFill": 0.773,
+    "upscaled": false
+  },
+  "variantName": "BC22 Alarm Clock, White",
+  "catalogAudit": {
+    "reviewed": "2026-10-10",
+    "variantConfidence": "high exact variant; launch precedence unresolved",
+    "desiredVariant": "White",
+    "notes": [],
+    "sourceLimitations": [
+      "Photography count/resolution can be completed at five. White launch precedence is not proven."
+    ]
+  },
+  "colorwayEvidence": {
+    "status": "unverified",
+    "findings": [
+      {
+        "url": "https://de.braun-clocks.com/de/collections/analogue-clocks/products/bc22-braun-classic-analogue-alarm-clock-white",
+        "finding": "Official Braun BC22 White feed supplies five native 1800px distinct photographs. Braun describes it as a classic design; the source does not establish White versus Black release precedence."
+      }
+    ],
+    "sources": []
+  }
+}

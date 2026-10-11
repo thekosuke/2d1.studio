@@ -1,0 +1,27 @@
+/* Readiness is set by the controller on every page. Do not depend on the
+   Home/About-only html.js marker: Finds does not use that global marker. */
+.mobile-nav-toggle,.finds-page-nav .mobile-nav-home{display:none}
+@media(max-width:767px),(max-width:1023px) and (max-height:500px) and (pointer:coarse){
+ .mobile-navigation-ready{--mobile-nav-top:max(8px,env(safe-area-inset-top));--mobile-nav-left:max(8px,env(safe-area-inset-left))}
+ .mobile-navigation-ready .mobile-nav-toggle{position:fixed;z-index:31;top:var(--mobile-nav-top);left:var(--mobile-nav-left);display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:10px;border:1px solid var(--ink);border-radius:0;background:var(--white);color:var(--ink);visibility:hidden;pointer-events:none;opacity:0;transition:opacity .26s,visibility 0s .26s}
+ .mobile-navigation-ready .mobile-nav-toggle.is-visible{visibility:visible;pointer-events:auto;opacity:1;transition-delay:0s}
+ .mobile-nav-icon{display:flex;flex-direction:column;justify-content:space-between;width:22px;height:16px}
+ .mobile-nav-icon i{display:block;width:100%;height:2px;background:currentColor;transition:transform .2s,opacity .2s}
+ .mobile-nav-toggle[aria-expanded="true"] .mobile-nav-icon i:first-child{transform:translateY(7px) rotate(45deg)}
+ .mobile-nav-toggle[aria-expanded="true"] .mobile-nav-icon i:nth-child(2){opacity:0}
+ .mobile-nav-toggle[aria-expanded="true"] .mobile-nav-icon i:last-child{transform:translateY(-7px) rotate(-45deg)}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel{position:fixed;z-index:29;top:calc(var(--mobile-nav-top) + 52px);left:var(--mobile-nav-left);right:auto;display:flex;flex-direction:column;align-items:flex-start;gap:4px;width:max-content;min-width:140px;max-width:calc(100vw - var(--mobile-nav-left) - max(8px,env(safe-area-inset-right)));max-height:calc(100dvh - var(--mobile-nav-top) - max(16px,env(safe-area-inset-bottom)) - 60px);margin:0;padding:0 12px 0 0;border:0;background:transparent;overflow-y:auto;overscroll-behavior:contain;visibility:hidden;pointer-events:none;opacity:1;transform:none;transition:none}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel:is(.is-mobile-open,.is-mobile-closing){visibility:visible}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel.is-mobile-open{pointer-events:auto}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel :is(.page-nav-left,.page-nav-pages,.page-nav-contact){display:contents;margin:0;padding:0;border:0}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel :is(a,button){position:relative;display:flex;align-items:center;flex:none;width:fit-content;min-height:44px;margin:0;padding:6px 12px;border:1px solid var(--ink);border-radius:0;background:var(--white);color:var(--ink);font:400 12px/1.4 var(--font);letter-spacing:0;text-transform:none;white-space:normal;text-decoration:none;cursor:pointer}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel :is(a,button)::before{display:none}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel .mobile-nav-language{position:static;display:flex;gap:4px;width:max-content;min-width:0;margin:0;padding:0;border:0;background:transparent;backdrop-filter:none;opacity:1;visibility:visible;transform:none;transition:none}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel .mobile-nav-language a{justify-content:center;min-width:44px}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel :is(a,button)[aria-current]{color:var(--red)}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel .mobile-nav-item{opacity:0;visibility:hidden;pointer-events:none;transform:translateX(-16px);transition:opacity .26s cubic-bezier(.2,.8,.2,1) var(--mobile-nav-exit),transform .26s cubic-bezier(.2,.8,.2,1) var(--mobile-nav-exit),visibility 0s linear calc(.26s + var(--mobile-nav-exit))}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel.is-mobile-open .mobile-nav-item{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition-delay:var(--mobile-nav-enter),var(--mobile-nav-enter),var(--mobile-nav-enter)}
+ :is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel .mobile-nav-item:focus-visible{background-color:var(--red)!important;color:var(--ink)!important}
+ .objects-page.mobile-navigation-ready .finds-home-trigger{display:none}
+}
+@media(prefers-reduced-motion:reduce){.mobile-nav-toggle,.mobile-nav-icon i,.mobile-navigation-ready .mobile-nav-panel .mobile-nav-item{transition:none!important;transform:none}.mobile-nav-toggle[aria-expanded="true"] .mobile-nav-icon i:first-child{transform:translateY(7px) rotate(45deg)}.mobile-nav-toggle[aria-expanded="true"] .mobile-nav-icon i:last-child{transform:translateY(-7px) rotate(-45deg)}}

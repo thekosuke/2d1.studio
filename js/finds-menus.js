@@ -68,10 +68,10 @@
         if(categories.contains(document.activeElement))document.getElementById('objects-zoom')?.focus({preventScroll:true});
         category.reset();
       }
-      categories.inert=mobile.matches;
+      categories.inert=false;
     };
     mobile.addEventListener('change',syncCategory);syncCategory();
-    summary.addEventListener('click',e=>{e.preventDefault();if(!mobile.matches)category.setOpen(!category.open);});
+    summary.addEventListener('click',e=>{e.preventDefault();category.setOpen(!category.open);});
     categories.addEventListener('focusout',e=>{if(!categories.contains(e.relatedTarget))category.setOpen(false);});
   }
   document.addEventListener('pointerdown',e=>{menus.forEach(menu=>{if(!menu.container.contains(e.target))menu.setOpen(false);});});

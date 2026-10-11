@@ -1,0 +1,72 @@
+{
+  "id": "ichendorf-desert-plants-cactus-amber",
+  "name": "Desert Plants Cactus Tumbler",
+  "brand": "Ichendorf Milano",
+  "category": "kitchen",
+  "tags": [
+    "glass",
+    "drinkware",
+    "cactus",
+    "handmade"
+  ],
+  "description": "An amber glass cactus grows inside this handmade tumbler from Alessandra Baldereschi’s Desert Plants collection. Small green dots and a clear glass vessel turn an ordinary drink into a miniature landscape.",
+  "productUrl": "https://www.ichendorfmilano.com/en/products/desert-plants/09352101/tumbler-cactus-amber/",
+  "sourceUrl": "https://www.ichendorfmilano.com/en/products/desert-plants/09352101/tumbler-cactus-amber/",
+  "sourceImageUrl": "https://www.ichendorfmilano.com/images/299/2320/1250x917/nocrop/align-4/ichendorfmilano-desert-plants-09352101.jpg",
+  "gallery": [
+    {
+      "image": "img/objects/gallery/ichendorf-new-1.jpg",
+      "width": 1250,
+      "height": 917,
+      "sourceUrl": "https://www.ichendorfmilano.com/en/products/desert-plants/09352101/tumbler-cactus-amber/",
+      "sourceImageUrl": "https://www.ichendorfmilano.com/images/299/2320/1250x917/nocrop/align-4/ichendorfmilano-desert-plants-09352101.jpg"
+    }
+  ],
+  "variantName": "Amber cactus / 09352101",
+  "colorwayEvidence": {
+    "basis": "Owner photograph and verified manufacturer listing",
+    "notes": "Variant checked against owner reference; no unsupported iconic-color claim."
+  },
+  "usageCaveat": "Source-credited original photography for private preview; rights clearance not verified.",
+  "image": "img/objects/cutouts/ichendorf-20261011.webp",
+  "width": 437,
+  "height": 437,
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/ichendorf-20261011.webp",
+      "width": 437
+    }
+  ],
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Owner-approved alpha-only mask; original RGB retained in native master; shared warm CSS grade; square optical framing without enlargement",
+    "nativeSourceDimensions": [
+      1250,
+      917
+    ],
+    "subjectPixels": [
+      393,
+      372
+    ],
+    "cropBoundingBox": [
+      430,
+      296,
+      823,
+      668
+    ],
+    "opticalFill": 0.9,
+    "upscaled": false,
+    "sourceSHA256": "d627a35bef976bc4e2a6b87c5b9d53de78a834b62e4d5211c13eae4d448cb7a1",
+    "nativeMaster": "img/objects/cutouts/ichendorf-20261011-native.png",
+    "rgbExact": true
+  },
+  "catalogAudit": {
+    "reviewed": "2026-10-11",
+    "notes": [
+      "Original and transparent silhouette inspected on beige/dark brown; RGB exact in native alpha master. Authentic complementary gallery views; no generated product details."
+    ],
+    "sourceLimitations": [
+      "Resolved subject is below 1200px; file dimensions are not treated as usable product detail."
+    ]
+  }
+}

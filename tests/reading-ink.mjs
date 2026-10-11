@@ -5,22 +5,18 @@ import vm from 'node:vm';
 const source=readFileSync(new URL('../js/reading-ink.js',import.meta.url),'utf8');
 const functionSource=source.slice(source.indexOf('  function readingWindow('),source.indexOf('  let inkQueued'));
 const {readingWindow,readingEnd,introCursor}=vm.runInNewContext(functionSource+'\n({readingWindow,readingEnd,introCursor});');
-// 3a9da38 used min(25vh, 70vh - block height); 6862f32 and 6bd7307
-// both finished at 50vh. The new range is exactly halfway between them.
+// Calmer pace extends the previous height-aware range by 15vh.
 for(const viewport of [568,844,900,1080])for(const height of [40,220,520,1200]){
- const start=viewport*.85,fastEnd=viewport*.5,slowEnd=Math.min(viewport*.25,viewport*.7-height);
- const midpoint=readingEnd(viewport,height);
- assert.ok(Math.abs((start-midpoint)-((start-fastEnd)+(start-slowEnd))/2)<1e-9);
- assert.ok(midpoint<fastEnd&&midpoint>slowEnd);
- const top=1500,scroll=top-(fastEnd+midpoint)/2;
- const fast=readingWindow(top-scroll,start,fastEnd,scroll,-Infinity,10000);
- const medium=readingWindow(top-scroll,start,midpoint,scroll,-Infinity,10000);
- const slow=readingWindow(top-scroll,start,slowEnd,scroll,-Infinity,10000);
- assert.equal(fast.progress,1);assert.ok(medium.progress<fast.progress&&medium.progress>slow.progress);
+ const previous=(viewport*.5+Math.min(viewport*.25,viewport*.7-height))/2;
+ assert.ok(Math.abs(readingEnd(viewport,height)-(previous-viewport*.15))<1e-9);
+ const start=viewport*.85,top=1500,scroll=top-previous;
+ const old=readingWindow(top-scroll,start,previous,scroll,-Infinity,10000);
+ const calm=readingWindow(top-scroll,start,readingEnd(viewport,height),scroll,-Infinity,10000);
+ assert.equal(old.progress,1);assert.ok(calm.progress<1);
 }
-assert.equal(readingEnd(1000,100),375);
-assert.equal(readingEnd(1000,800),200);
-console.log('PASS halfway pace: exact midpoint of historical scroll distances, short and tall paragraphs, phone and desktop viewports.');
+assert.equal(readingEnd(1000,100),225);
+assert.equal(readingEnd(1000,800),50);
+console.log('PASS calmer pace: extra 15vh across short/tall paragraphs and phone/desktop.');
 // Adjacent paragraphs and short specification rows have overlapping natural
 // reading ranges. Only one word across that sequence may be mid-reveal.
 for(const viewport of [568,844,900,1080]) {

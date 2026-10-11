@@ -1,19 +1,14 @@
 /* Brand webfonts supplied with the project. Keep replacements local. */
 @font-face{font-family:Rand;src:url('../fonts/Rand/Rand-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Rand Mono';src:url('../fonts/Rand Mono/RandMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 
 @font-face{font-family:Rand;src:url('../fonts/Rand/Rand-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 
 /* SC Walla trial files supplied for this design iteration. */
 @font-face{font-family:'SC Walla';src:url('../fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'SC Walla';src:url('../fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'SC Walla Mono';src:url('../fonts/SC Walla Mono Trial/WOFF2/SCWallaMonoUnlicensedTrial-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'SC Walla Mono';src:url('../fonts/SC Walla Mono Trial/WOFF2/SCWallaMonoUnlicensedTrial-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
 
 /* Exact Figma family name for the introduction’s Medium face. */
 @font-face{font-family:'SC Walla UnlicensedTrial';src:url('../fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
 
 /* Additional weights used in the owner’s typography revision (298:650). */
-@font-face{font-family:'SC Walla';src:url('../fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:'SC Walla';src:url('../fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'SC Walla Mono';src:url('../fonts/SC Walla Mono Trial/WOFF2/SCWallaMonoUnlicensedTrial-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}

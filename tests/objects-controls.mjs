@@ -107,12 +107,11 @@ assert.match(mobileCss,/--finds-mobile-row-top:max\(8px,env\(safe-area-inset-top
 assert.match(mobileCss,/\.objects-ready \.objects-header\{top:var\(--finds-mobile-row-top\);height:var\(--finds-mobile-row-height\)\}/);
 assert.match(mobileCss,/\.objects-ready \.objects-header \.site-logo\{padding:0\}/);
 assert.match(mobileCss,/\.mobile-nav-toggle,\.objects-page\.objects-ready \.objects-info\{top:var\(--finds-mobile-row-top\);width:var\(--finds-mobile-row-height\);height:var\(--finds-mobile-row-height\)/);
-for(const attribute of ['data-close','data-info-close']){
+for(const attribute of ['data-close']){
   const markup=template.match(new RegExp(`<button[^>]*${attribute}[^>]*>[\\s\\S]*?<\\/button>`))[0];
   assert.match(markup,/aria-label="Close"/);assert.match(markup,/><span aria-hidden="true">×<\/span><\/button>$/);assert.doesNotMatch(markup,/>Close/);
 }
 assert.equal(japanese.Close,'閉じる');
 assert.match(css,/\.objects-dialog-close\{display:grid;place-items:center;width:44px;height:44px;min-width:44px;min-height:44px;padding:0\}/);
 assert.match(source,/close\.addEventListener\('click',\(\)=>dialog.close\(\)\)/);
-assert.match(source,/infoDialog.querySelector\('\[data-info-close\]'\).addEventListener\('click',\(\)=>infoDialog.close\(\)\)/);
 console.log('PASS zoom/Close markup and layout constraints: matching phone/landscape breakpoints, bottom-right safe area, narrow-phone Category gap, shared top-row centerline, 44px controls, category-overlay hiding and localized icon-only Close buttons.');
