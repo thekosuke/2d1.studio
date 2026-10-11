@@ -574,5 +574,12 @@ window.TWO_D_ONE_JA = {
   "card case": "カードケース",
   "vinyl": "ビニール",
   "Character is what draws us in, but familiarity is what gives them meaning. Through everyday use and the moments that happen around them, these objects accumulate stories, memories, and a sense of familiarity. Over time, what starts as an object with character becomes a character in our lives—something personal, meaningful, and worth keeping for a long time.": "私たちを惹きつけるのは個性ですが、ものに意味を与えるのは親しみです。日々使うことや、そのまわりで起こる出来事を通じて、ものには物語や記憶、親しみが積み重なっていきます。やがて、個性のあるものは私たちの暮らしの登場人物になっていく。自分だけの意味を持ち、長くそばに置いておきたい存在になるのです。",
-  "I personally wish I owned everything you see here.": "個人的には、ここにあるものを全部持っていたらいいのにと思っています。"
+  "I personally wish I owned everything you see here.": "個人的には、ここにあるものを全部持っていたらいいのにと思っています。",
+  "Know or own a familiar character that belongs here? Feel free to send me a request to add it to the collection.": "ここに加えたい身近なものを知っていたり、持っていたりしますか？コレクションへの追加リクエストを、ぜひ気軽に送ってください。",
+  "My growing collection of everyday companions that go from having character to becoming a character.": "個性のあるものが、暮らしの登場人物になっていく。そんな日々の相棒を、少しずつ集めています。",
+  "I’m": "私は",
+  ". I hand-pick the objects here and update the collection monthly. I’m drawn to everyday things with character—a clear point of view, thoughtful design, and a little wit. I personally wish I owned everything you see here.": "です。ここにあるものは私自身が選び、毎月コレクションを更新しています。明確な視点、丁寧なデザイン、そして少しの遊び心を持つ、個性のある日用品に惹かれます。個人的には、ここにあるものを全部持っていたらいいのにと思っています。",
+  "If you know or own a familiar character I’ve missed, I’d love to hear about it. Feel free to send me a request to add it here.": "私がまだ見つけていない身近なものを知っていたり、持っていたりしたら、ぜひ教えてください。ここへの追加リクエストを、気軽に送ってもらえるとうれしいです。",
+  "Hi, I’m": "こんにちは、私は",
+  ". I hand-pick the objects here and update the collection when I feel like it. I’m drawn to thoughtfully designed everyday things with a clear point of view and a little wit, which I refer to as Familiar Characters. I hope people can visit this page to discover new companions for their routine. I personally wish I owned everything you see here.": "です。ここにあるものは私自身が選び、気が向いたときにコレクションを更新しています。明確な視点と少しの遊び心を持つ、丁寧にデザインされた日用品に惹かれます。私はそれらを「Familiar Characters」と呼んでいます。このページが、日々の暮らしの新しい相棒を見つける場所になればうれしいです。個人的には、ここにあるものを全部持っていたらいいのにと思っています。"
 };

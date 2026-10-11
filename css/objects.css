@@ -481,3 +481,7 @@
 
 /* The info sheet heading keeps only the pixel eyes above it. */
 #objects-info-title::before{content:none}
+
+.objects-info-actions{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+#objects-info-dialog button.objects-info-about{padding:0;border:0;background:transparent;color:inherit;text-align:left}
+#objects-info-dialog button.objects-info-about:hover{color:var(--red)}
