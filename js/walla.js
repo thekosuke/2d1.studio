@@ -28,6 +28,8 @@
       main.style.setProperty('--studio-end', `${studio.offsetTop + studio.offsetHeight}px`);
       const navOnStudio = box.top <= 48 && box.bottom > 48;
       document.documentElement.style.setProperty('--scene-ink', navOnStudio ? '#faf0e6' : '#320505');
+      const language=document.querySelector('.home-page > .language-switch');
+      if(language){const toggle=language.getBoundingClientRect();language.classList.toggle('on-studio',box.top<=toggle.top+toggle.height/2&&box.bottom>toggle.top+toggle.height/2);}
 
     }
   }

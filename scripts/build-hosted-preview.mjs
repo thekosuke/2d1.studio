@@ -4,7 +4,7 @@ import { spawnSync } from 'node:child_process';
 import { mkdirSync, rmSync, cpSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 const root=resolve(import.meta.dirname,'..');
-for(const script of ['build-objects.py','build-japanese.py','build-preview.py']){
+for(const script of ['build-finds-images.py','build-objects.py','build-japanese.py','build-preview.py']){
  const result=spawnSync('python3',[resolve(root,'scripts',script)],{cwd:root,stdio:'inherit'});
  if(result.status!==0)process.exit(result.status||1);
 }

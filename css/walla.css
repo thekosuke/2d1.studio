@@ -349,3 +349,6 @@ html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd{
 }
 
 .home-page .shop-actions :is(.connect-form,.connect-row){width:100%}
+
+.home-page > .language-switch.on-studio{--ink:var(--beige);background:var(--studio-background);color:var(--beige)}
+.home-page > .language-switch.on-studio a[aria-current],.home-page > .language-switch.on-studio a:hover{background:var(--beige);color:var(--studio-background)}

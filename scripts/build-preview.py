@@ -42,6 +42,10 @@ def build():
     for item in catalog:
         object_assets.update(photo['image'] for photo in item.get('gallery', []))
         object_assets.update(photo['image'] for photo in item.get('imageVariants', []))
+    delivery_path = ROOT / 'data/finds-images.json'
+    if delivery_path.exists():
+        for variants in json.loads(delivery_path.read_text()).values():
+            object_assets.update(variant['image'] for variant in variants)
     font_assets = set()
     for stylesheet in (ROOT / 'css').rglob('*.css'):
         for url in re.findall(r"url\(\s*['\"]?([^)'\"]+)", stylesheet.read_text()):
@@ -67,7 +71,7 @@ def build():
             shutil.copy2(source, target)
     assert all((OUTPUT / asset).is_file() for asset in object_assets | font_assets), 'Missing active catalog/font asset'
     (OUTPUT / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
-    (OUTPUT / '_headers').write_text('/*\n  X-Robots-Tag: noindex, nofollow\n  X-Content-Type-Options: nosniff\n')
+    (OUTPUT / '_headers').write_text('/*\n  X-Robots-Tag: noindex, nofollow\n  X-Content-Type-Options: nosniff\n' + (ROOT / '_headers').read_text())
     files = [p for p in OUTPUT.rglob('*') if p.is_file()]
     print(f'Preview package: {OUTPUT}')
     print(f'{len(files)} files, {sum(p.stat().st_size for p in files) / 1024 / 1024:.1f} MiB')

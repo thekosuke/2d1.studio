@@ -401,11 +401,11 @@
 @starting-style{#objects-info-dialog[open]{opacity:0;transform:translateY(-16px)}}
 @media(prefers-reduced-motion:reduce){#objects-info-dialog{opacity:1;transform:none;transition:none}}
 
-.objects-search{box-sizing:border-box;width:300px;max-width:calc(100vw - 24px);min-height:33px;padding:6px 12px;border:var(--floating-border);border-radius:0;background:var(--white);color:var(--ink);font:var(--floating-label);letter-spacing:.04em;outline:none;box-shadow:none;caret-color:var(--ink)}
-.objects-search::placeholder{color:var(--sub-gray)}
+.objects-search{box-sizing:border-box;width:225px;max-width:calc(100vw - 24px);min-height:33px;padding:6px 12px;border:var(--floating-border);border-radius:0;background:var(--white);color:var(--ink);font:var(--floating-label);letter-spacing:.04em;outline:none;box-shadow:none;caret-color:var(--ink)}
+.objects-search::placeholder{color:var(--sub-gray);font-weight:400}
 .objects-search:hover,.objects-search:focus{border-color:var(--red);background:var(--white)}
 .objects-search:focus{border-bottom:2px solid var(--red)}
-@media(max-width:767px){.objects-ready .objects-view-dock{display:block!important;bottom:68px}.objects-search{width:calc(100vw - 24px)}}
+@media(max-width:767px){.objects-ready .objects-view-dock{display:block!important;bottom:68px}.objects-search{width:calc((100vw - 24px) * .75)}}
 
 .objects-search-wrap{position:relative;display:block}
 .objects-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;fill:none;stroke:var(--sub-gray);stroke-width:1.5;pointer-events:none}
@@ -485,3 +485,31 @@
 .objects-info-actions{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
 #objects-info-dialog button.objects-info-about{padding:0;border:0;background:transparent;color:inherit;text-align:left}
 #objects-info-dialog button.objects-info-about:hover{color:var(--red)}
+
+/* Softer canvas grade for the unusually vivid grinder photograph. */
+.objects-tile[data-object="brutto-sally-pepe"] img,.object-card[data-object="brutto-sally-pepe"]>a img{filter:sepia(.055) saturate(.8) brightness(.94) contrast(.985)}
+
+/* A paper sheet opens downward from its own top-right disclosure. */
+#objects-info-dialog{padding-top:72px;transform-origin:top right;opacity:1;transform:perspective(1100px) rotateX(-18deg) scaleY(.04);clip-path:inset(0 0 96% 0);transition:transform 640ms cubic-bezier(.2,.8,.2,1),clip-path 640ms cubic-bezier(.2,.8,.2,1),display 640ms allow-discrete}
+#objects-info-dialog[open]{transform:perspective(1100px) rotateX(0) scaleY(1);clip-path:inset(0)}
+#objects-info-dialog .objects-info{position:absolute;top:8px;right:8px;left:auto;bottom:auto;z-index:2;max-width:none;min-height:33px;text-transform:none!important}
+@starting-style{#objects-info-dialog[open]{opacity:1;transform:perspective(1100px) rotateX(-18deg) scaleY(.04);clip-path:inset(0 0 96% 0)}}
+@media(prefers-reduced-motion:reduce){#objects-info-dialog,#objects-info-dialog[open]{transform:none;clip-path:none;transition:none}}
+
+/* Match Home's compact two-cell language switch. */
+.objects-page.objects-ready .objects-language{padding:0;gap:0;background:var(--beige);border:1px solid var(--ink)}
+.objects-page.objects-ready .objects-language a{padding:0 4px;min-width:var(--language-size);min-height:var(--language-size);border:0;font:500 12px/1 var(--font)!important;text-decoration:none;color:var(--ink)}
+.objects-page.objects-ready .objects-language a+a{border-left:1px solid var(--ink)}
+.objects-page.objects-ready .objects-language a[aria-current],.objects-page.objects-ready .objects-language a:hover{background:var(--ink);color:var(--white)}
+.objects-page.objects-ready .objects-language:has(a:hover){border-color:var(--ink)}
+
+/* Five button stops; square zoom buttons separated from the continuous slider. */
+.objects-page.objects-ready .objects-zoom{height:34px;min-height:34px;padding:0;gap:0}
+.objects-page.objects-ready .objects-zoom button{flex:0 0 32px;width:32px;height:32px;min-width:32px;min-height:32px;padding:0;border:0}
+.objects-page.objects-ready .objects-zoom button:first-of-type{border-right:1px solid var(--ink)}
+.objects-page.objects-ready .objects-zoom button:last-of-type{border-left:1px solid var(--ink)}
+.objects-page.objects-ready .objects-zoom input{margin:0 12px}
+@media(max-width:767px){.objects-page.objects-ready .objects-zoom{height:46px;min-height:46px}.objects-page.objects-ready .objects-zoom button{flex-basis:44px;width:44px;height:44px;min-width:44px;min-height:44px}.objects-page.objects-ready .objects-zoom input{margin:0 8px}}
+
+/* Avoid loading the static fallback grid before the canvas initializes. */
+html.finds-js .objects-collection{display:none}

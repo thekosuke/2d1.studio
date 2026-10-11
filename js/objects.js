@@ -4,6 +4,9 @@
   const canvas = document.getElementById('objects-canvas');
   const collection = document.getElementById('objects-collection');
   if (!page || !canvas || !collection) return;
+  const reportPerformance=new URLSearchParams(location.search).has('finds-perf');
+  const startedAt=performance.now();
+  let firstPhotoAt=null;
   const t = window.SiteLanguage?.t || (text => text);
   const cards = [...collection.querySelectorAll('[data-object]')];
   const catalog = cards.map(card => ({
@@ -138,6 +141,10 @@
   function draw(){
     frame=0;if(list||!active.length)return;
     const width=canvas.clientWidth,height=canvas.clientHeight,center=nearest();
+    // Request the final sharp source once during a zoom, rather than each
+    // intermediate animation size. Never undersize the currently drawn square.
+    const sourceCell=Math.max(cell,motion?.target.cell||cell);
+    const imageSize=`${Math.ceil((sourceCell-(width<=600?32:48))/32)*32}px`;
     canvas.style.setProperty('--object-cell',`${cell}px`);
     const firstColumn=Math.floor(-x/cell)-1,firstRow=Math.floor(-y/row)-1,wanted=new Set();
     for(let line=firstRow;line<=firstRow+Math.ceil(height/row)+2;line++)for(let column=firstColumn;column<=firstColumn+Math.ceil(width/cell)+2;column++){
@@ -145,7 +152,14 @@
       let tile=tiles.get(key);if(!tile){tile=createTile(item);layer.append(tile);tiles.set(key,tile);}
       tile.dataset.column=column;tile.dataset.line=line;
       // Select a sharp source for the rendered square as zoom changes.
-      const image=tile.querySelector('img'), imageSize=`${Math.ceil(cell-48)}px`;
+      const image=tile.querySelector('img');
+      // Keep virtual overscan tiles, but don't fetch photos outside the viewport.
+      const left=column*cell+x,top=line*row+y;
+      if(!image.getAttribute('src')&&left+cell>0&&left<width&&top+cell>0&&top<height){
+        const source=tile._item;image.sizes=imageSize;
+        if(source.imageSrcset)image.srcset=source.imageSrcset;
+        image.src=source.image;
+      }
       if(image.sizes!==imageSize)image.sizes=imageSize;
       tile.classList.toggle('is-focused',focusMode&&column===focusColumn&&line===focusRow);
       tile.classList.toggle('is-keyboard-target',column===(focusMode?focusColumn:center.column)&&line===(focusMode?focusRow:center.line));
@@ -154,8 +168,8 @@
     for(const [key,tile] of tiles)if(!wanted.has(key)){tile.remove();tiles.delete(key);}
   }
   function createTile(item){
-    const tile=document.createElement('figure');tile.className='objects-tile';tile.dataset.object=item.id;
-    const image=document.createElement('img');image.sizes=`${Math.ceil(cell-48)}px`;if(item.imageSrcset)image.srcset=item.imageSrcset;image.src=item.image;image.alt='';image.draggable=false;image.decoding='async';image.className=item.imageClass||'';
+    const tile=document.createElement('figure');tile.className='objects-tile';tile.dataset.object=item.id;tile._item=item;
+    const image=document.createElement('img');image.alt='';image.draggable=false;image.decoding='async';image.className=item.imageClass||'';
     const caption=document.createElement('figcaption'),brand=document.createElement('span');brand.textContent=item.brand;caption.append(document.createTextNode(item.name),brand);
     tile.append(image,caption);
     return tile;
@@ -516,7 +530,7 @@
       if(!neighbor)return;
       button.setAttribute('aria-label',t(step<0?'Previous product':'Next product')+': '+neighbor.name);
       if(footerButton)return;
-      const image=document.createElement('img');image.src=neighbor.image;image.alt='';
+      const image=document.createElement('img');image.sizes='96px';if(neighbor.imageSrcset)image.srcset=neighbor.imageSrcset;image.src=neighbor.image;image.alt='';image.decoding='async';
       const label=document.createElement('span');label.textContent=neighbor.brand+' — '+neighbor.name;
       button.replaceChildren(image,label);
     });
@@ -771,13 +785,23 @@
   zoomButtons.forEach(button=>button.addEventListener('click',()=>{
     const direction=Number(button.dataset.zoomStep);
     if((direction<0&&zoom===0)||(direction>0&&zoom===100))return;
-    setZoom(zoom+(mobileZoom.matches?Math.sign(direction)*25:direction));
+    const stage=direction>0?Math.floor(zoom/25)+1:Math.ceil(zoom/25)-1;
+    setZoom(stage*25);
   }));
   mobileZoom.addEventListener('change',updateZoomLayout);updateZoomLayout();
   const infoButton=document.querySelector('.objects-info'),infoDialog=document.getElementById('objects-info-dialog');
   const infoSeenKey='2d1-finds-info-dismissed-v1';
-  const syncInfo=()=>{infoButton.lastElementChild.textContent=infoDialog.open?'−':'+';infoButton.setAttribute('aria-expanded',String(infoDialog.open));};
-  const positionInfo=()=>{const rect=infoButton.getBoundingClientRect();infoDialog.style.setProperty('--info-top',`${rect.bottom+8}px`);};
+  const infoHome=infoButton.parentNode,infoNext=infoButton.nextSibling;
+  const syncInfo=()=>{
+    infoButton.firstElementChild.textContent=infoDialog.open?t('Collapse'):'Familiar Characters';
+    infoButton.firstElementChild.setAttribute('translate',infoDialog.open?'yes':'no');
+    infoButton.lastElementChild.textContent=infoDialog.open?'−':'+';
+    infoButton.setAttribute('aria-expanded',String(infoDialog.open));
+    infoButton.setAttribute('aria-label',infoDialog.open?t('Collapse'):'About this collection');
+    if(infoDialog.open)infoDialog.prepend(infoButton);
+    else infoHome.insertBefore(infoButton,infoNext);
+  };
+  const positionInfo=()=>{const rect=infoButton.getBoundingClientRect();if(!infoDialog.open)infoDialog.style.setProperty('--info-top',`${Math.max(8,rect.top-8)}px`);};
   const openInfo=()=>{if(dialog.open||infoDialog.open)return;cancelGesture();stopMotion();settleGeometry();positionInfo();infoDialog.show();syncInfo();infoDialog.scrollTop=0;};
   infoButton.addEventListener('click',()=>{if(infoDialog.open)infoDialog.close();else openInfo();});
   document.addEventListener('pointerdown',event=>{if(infoDialog.open&&!infoDialog.contains(event.target)&&!infoButton.contains(event.target))infoDialog.close();});
@@ -818,8 +842,6 @@
     draw();
     requestAnimationFrame(()=>requestAnimationFrame(async ()=>{
       const images=[...layer.querySelectorAll('.objects-tile img')].filter(image=>{const r=image.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth;});
-      // Cold-cache photos must be decoded before their visible entrance begins.
-      await Promise.all(images.map(image=>image.decode().catch(()=>{})));
       if(reduced.matches){
         entranceSettled=true;
         page.classList.remove('finds-entering');
@@ -829,7 +851,13 @@
       const duration=760;
       // A ripple from the center: each object hops into place with a little tilt.
       const ranked=images.map(image=>{const r=image.getBoundingClientRect();return {image,distance:Math.hypot((r.left+r.width/2-innerWidth/2)/cell,(r.top+r.height/2-innerHeight/2)/row)};}).sort((a,b)=>a.distance-b.distance);
-      ranked.forEach(({image},index)=>{
+      // Decode independently: one slow photo must not hide the whole collection.
+      const decoded=ranked.map(async ({image},index)=>{
+        image.style.opacity='0';
+        await image.decode().catch(()=>{});
+        if(!image.isConnected)return;
+        if(firstPhotoAt===null)firstPhotoAt=performance.now()-startedAt;
+        if(reduced.matches){image.style.opacity='1';return;}
         const tilt=index%2?6:-6;
         image.style.opacity='1';
         image.animate([
@@ -839,7 +867,7 @@
           {opacity:1,transform:'translateY(0) rotate(0deg) scale(1)',offset:1}
         ],{duration,delay:Math.min(index*32,640),easing:'cubic-bezier(.2,.8,.2,1)',fill:'backwards'});
       });
-      setTimeout(()=>{page.classList.remove('finds-entering');page.classList.add('finds-controls-enter');setTimeout(()=>{page.classList.remove('finds-controls-enter');entranceSettled=true;if(!infoSeen)openInfo();},480);},duration+Math.min(Math.max(0,images.length-1)*32,640));
+      setTimeout(()=>{page.classList.remove('finds-entering');page.classList.add('finds-controls-enter');setTimeout(()=>{page.classList.remove('finds-controls-enter');Promise.all(decoded).then(()=>{entranceSettled=true;if(reportPerformance){const resources=performance.getEntriesByType('resource').filter(r=>r.initiatorType==='img');console.info('Finds performance',JSON.stringify({firstPhotoMs:Math.round(firstPhotoAt||0),readyMs:Math.round(performance.now()-startedAt),imageRequests:resources.length,imageEncodedBytes:resources.reduce((sum,r)=>sum+r.encodedBodySize,0),imageTransferBytes:resources.reduce((sum,r)=>sum+r.transferSize,0)}));}});if(!infoSeen)openInfo();},480);},duration+Math.min(Math.max(0,images.length-1)*32,640));
     }));
   }
 })();

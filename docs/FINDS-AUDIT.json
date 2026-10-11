@@ -5448,99 +5448,6 @@
       }
     },
     {
-      "id": "olivetti-valentine",
-      "name": "Valentine",
-      "brand": "Olivetti",
-      "selectedVariant": "Valentine",
-      "transparentPrimary": true,
-      "primaryPixels": [
-        1444,
-        1444
-      ],
-      "primaryNativeSubjectPixels": [
-        1299,
-        776
-      ],
-      "subjectBounds": [
-        72,
-        334,
-        1371,
-        1110
-      ],
-      "galleryCount": 4,
-      "possibleSimilarPhotoPairs": [],
-      "distinctnessReview": null,
-      "photos": [
-        {
-          "image": "img/objects/gallery/olivetti-valentine-1.webp",
-          "width": 1772,
-          "height": 1181,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "2019ac509aa70aadf610782f198a5659e3229af6b35e377ff9135bb98d6b4581",
-          "sourceUrl": "https://museoomero.it/en/opere/valentine/",
-          "sourceImageUrl": "https://museoomero.it/wp-content/uploads/2021/12/Opera-Valentine-Sottsass_AAB5715-2.jpg"
-        },
-        {
-          "image": "img/objects/gallery/olivetti-valentine-audit-ca89fdafc3.jpg",
-          "width": 2000,
-          "height": 1990,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "ca89fdafc3ef7cad0bbdbd5f15c9796d05c4221c2903123c41d83011efc9c555",
-          "sourceUrl": "https://www.moma.org/collection/works/4576",
-          "sourceImageUrl": "https://www.moma.org/media/W1siZiIsIjIzMDAwNCJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=078f5af2e154f306"
-        },
-        {
-          "image": "img/objects/gallery/olivetti-valentine-audit-90e88f5635.jpg",
-          "width": 2000,
-          "height": 583,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "90e88f56356aafe6feeb7eb1ac116e6e3ccfc19fa777a1f724834bf6e0d3c2eb",
-          "sourceUrl": "https://www.moma.org/collection/works/4576",
-          "sourceImageUrl": "https://www.moma.org/media/W1siZiIsIjIzMDAwNSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=1cc857d66bb8e0a6"
-        },
-        {
-          "image": "img/objects/gallery/olivetti-valentine-audit-066a491544.jpg",
-          "width": 2000,
-          "height": 1720,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "066a4915447e78802fc3d452e27999b66e462bd2c6f7037a71e755e2825dc2ab",
-          "sourceUrl": "https://www.moma.org/collection/works/4576",
-          "sourceImageUrl": "https://www.moma.org/media/W1siZiIsIjIzMDAwNiJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=4720dd78ca41e97d"
-        }
-      ],
-      "issues": [],
-      "colorwayEvidence": {
-        "status": "verified_iconic",
-        "selectionStatus": "verified_iconic",
-        "claim": "Red is the Valentine design's museum- and contemporary-history-backed identity.",
-        "findings": [
-          {
-            "url": "https://museoomero.it/en/opere/valentine/",
-            "finding": "Confirmed in the parent audit; not duplicated in this pass."
-          },
-          {
-            "url": "https://www.moma.org/collection/works/4576",
-            "finding": "Confirmed in the parent audit; not duplicated in this pass."
-          },
-          {
-            "url": "https://www.domusweb.it/en/from-the-archive/2011/08/25/red-valentine.html",
-            "finding": "Confirmed in the parent audit; not duplicated in this pass."
-          }
-        ],
-        "inference": "No unique-first-color assertion beyond the documented iconic red identity is necessary.",
-        "limitations": [],
-        "recommendedVariant": "Red",
-        "action": "retain"
-      },
-      "editorialReview": {
-        "reviewed": "2026-10-10",
-        "variantConfidence": "high",
-        "desiredVariant": "Red",
-        "notes": [],
-        "sourceLimitations": []
-      }
-    },
-    {
       "id": "qeeboo-rabbit-chair-light-blue",
       "name": "Rabbit Chair",
       "brand": "Qeeboo",
@@ -8953,6 +8860,65 @@
           "sha256": "4bd676584358efb4b0392b8bc06099f5d117eaded1d00c31e10e58c44031d78a",
           "sourceUrl": "https://alessi.com/products/sleek-spoon-for-jars",
           "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0337/3603/2392/products/AAC09-AZ-03.jpg?v=1637257738"
+        }
+      ],
+      "issues": [
+        "Primary native product detail below 1200px long edge",
+        "Original/iconic colorway evidence remains unresolved"
+      ],
+      "colorwayEvidence": {},
+      "editorialReview": {}
+    },
+    {
+      "id": "samira-boon-furoshiki-card-case",
+      "name": "Furoshiki Shiki Card Case",
+      "brand": "Samira Boon",
+      "selectedVariant": "Furoshiki Shiki Card Case",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1171,
+        1171
+      ],
+      "primaryNativeSubjectPixels": [
+        1054,
+        639
+      ],
+      "subjectBounds": [
+        58,
+        266,
+        1112,
+        905
+      ],
+      "galleryCount": 3,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/samira-boon-card-case-yellow-full.jpg",
+          "width": 1334,
+          "height": 1334,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "116e2b703f60acd9ad9a2889a722515deb61a3679f692be1fcdeb99e771f8d7d",
+          "sourceUrl": "https://shop.samiraboon.com/product-page/furoshiki-shiki-card-case-1",
+          "sourceImageUrl": "https://static.wixstatic.com/media/8b5b62_e216459b6a8044bca5bb2c0b30d90f59~mv2.jpg"
+        },
+        {
+          "image": "img/objects/gallery/samira-boon-card-case-1.jpg",
+          "width": 6016,
+          "height": 4016,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "ca0eec3f8bbe35ec296a924c3a8e113b315bb26dda45b54454b481351571b3bb",
+          "sourceUrl": "https://shop.samiraboon.com/product-page/furoshiki-shiki-card-case-1",
+          "sourceImageUrl": "https://static.wixstatic.com/media/8b5b62_768563df810540edb161bc6287dee6a4~mv2.jpg"
+        },
+        {
+          "image": "img/objects/gallery/samira-boon-card-case-2.jpg",
+          "width": 1728,
+          "height": 1728,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "4508c5853707a56566cc3e1a3e5b4c5185c5305a8b0156a22c13305be2b8e020",
+          "sourceUrl": "https://shop.samiraboon.com/product-page/furoshiki-shiki-card-case-1",
+          "sourceImageUrl": "https://static.wixstatic.com/media/8b5b62_fe594d35739849339c8ae0c7b36871e5~mv2.jpg"
         }
       ],
       "issues": [

@@ -1,0 +1,4987 @@
+{
+  "img/objects/alessi-9090.jpg": {
+    "hash": "f412ca9a93cd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/alessi-anna-g-black.jpg": {
+    "hash": "e32ac386f3f1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/alessi-ossidiana-black.jpg": {
+    "hash": "21a98611344d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/arms-flying-robi-persi.jpg": {
+    "hash": "b3451182a175",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/arwenn-cloud-clock.jpg": {
+    "hash": "a1a9dd610cb8",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/atonemo-nts-radio-player.webp": {
+    "hash": "e58841633fa0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/block-design-play-tin.jpg": {
+    "hash": "1726cbe415ea",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/brutto-sally-pepe.jpg": {
+    "hash": "e2fec4d71272",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/craighill-chroma-scissors-primary.jpg": {
+    "hash": "f2d052f02094",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/cutouts/actus-20261011.webp": {
+    "hash": "31d511afa455",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/actus-deco-dot-photo-frame.webp": {
+    "hash": "30d335930081",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/actus-object-flower-vase-owner-main.webp": {
+    "hash": "32db70ee37e7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/alessi-9090.webp": {
+    "hash": "68f729504189",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/alessi-anna-g-black.webp": {
+    "hash": "38183829ffa5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/alessi-dede.webp": {
+    "hash": "1bd5afbaa588",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/alessi-girotondo-top.webp": {
+    "hash": "493e95fbfb2a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/alessi-la-conica.webp": {
+    "hash": "5c6b943f08f8",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/alessi-magic-bunny-black-native-v2.webp": {
+    "hash": "af575d9ef0ed",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/alessi-ossidiana-black.webp": {
+    "hash": "7bef5dea17ef",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/alessi-sleek.webp": {
+    "hash": "3fa306b5f186",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/alessi-twergi-es19-red.webp": {
+    "hash": "bcb2744858c0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/andlight-slab-series.webp": {
+    "hash": "62ff381102d2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/anya-hindmarch-eyes-tote.png": {
+    "hash": "ad3a1e2cc77e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/aptone-mix-match.webp": {
+    "hash": "1529a6692bcc",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/arms-flying-robi-persi.webp": {
+    "hash": "501e082ef5cb",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/arwenn-cloud-clock.webp": {
+    "hash": "20425e2f7ae1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/atonemo-nts-radio-player.webp": {
+    "hash": "75fdce8fb828",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/baggu-standard-pop-pink-happy.webp": {
+    "hash": "da3e1fad1739",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/best-years-knitted-triceratops.webp": {
+    "hash": "f01c864f0058",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/block-design-play-tin.webp": {
+    "hash": "6d1767ae6fa8",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/bobo-choses-bolder-belt-pouch.webp": {
+    "hash": "ee81354d0305",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/boby-b34-red.png": {
+    "hash": "21beda34981e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/bosa-most-illustrious-achille.webp": {
+    "hash": "2990391e6938",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/bruna-bonbon-mini-orange-native-v2.webp": {
+    "hash": "4dd83cf4d034",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/brutto-sally-pepe.webp": {
+    "hash": "d2b2707656e7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/cactus-green-20261011.webp": {
+    "hash": "a9eaee79698c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/carpenter-hamburger-coaster-native-v2.webp": {
+    "hash": "9f4530d459a3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/cliik-press-glass-family-pack.webp": {
+    "hash": "141b98b6554b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/clock-20261011.webp": {
+    "hash": "2502a1722880",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/cotopaxi-20261011.webp": {
+    "hash": "ff6ae7b52dc6",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/craighill-chroma-scissors-primary.webp": {
+    "hash": "1c1f9f331acf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/craighill-swingtop-lighter.webp": {
+    "hash": "b85e04a881e0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/curaprox-cs5460-orange-blue.webp": {
+    "hash": "a31e67cd214d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/cwandt-high-speed-jump-rope.webp": {
+    "hash": "896a4a3dbc54",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/daypa-kun-backpack-blue.webp": {
+    "hash": "42159e997c69",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/detail-nasa-snow-globe-native-v2.webp": {
+    "hash": "dd8aa921189a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/dusen-everybody-wall-clock-native.webp": {
+    "hash": "e085df7c6d2f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/fairphone-gen-6-plus.webp": {
+    "hash": "62a1d06bbaa5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/flos-mayday.webp": {
+    "hash": "d87dceb40d17",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/flos-snoopy-black.webp": {
+    "hash": "e45381227b4e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/flowerpot-vp9-orange.webp": {
+    "hash": "c614183a4732",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/freckle-green-native-v2.webp": {
+    "hash": "7f79c86eabeb",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/gispen-dombo-red-native-v2.webp": {
+    "hash": "b3e0b9ec610b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/groove-x-lovot-3.webp": {
+    "hash": "d67c21231e14",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/hay-miz-dark-green.webp": {
+    "hash": "58fd2651e876",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/hay-regn-umbrella-gray-blue.webp": {
+    "hash": "068eec0990fa",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/hay-table-clock-black.webp": {
+    "hash": "c3d3b9a666e5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/heim-egg-spoon.webp": {
+    "hash": "f35c341e0935",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/heinz-ketchup-front.webp": {
+    "hash": "d7007c6491e2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/cutouts/herman-miller-girard-throw.webp": {
+    "hash": "3f1eb2c4e239",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/hey-bag-green-lines.webp": {
+    "hash": "622f5df316e5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/hey-classic-cap.webp": {
+    "hash": "62488994cf69",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/homeinfun-storage-stool-blue.webp": {
+    "hash": "79c56aeef65c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/hungry-market-initial-c-cap.webp": {
+    "hash": "591e372dece2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/ikea-forlunda-red.webp": {
+    "hash": "5c1f496752b1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/iwachu-cat-candle-stand-front.webp": {
+    "hash": "ebf5f212a59c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/iwate-canning-gift-stock.webp": {
+    "hash": "27da935562d9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/kay-bojesen-monkey-mini-vintage-blue.webp": {
+    "hash": "0d62ee168fe6",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/kikkerland-inkerie-jewelry-case.webp": {
+    "hash": "596116ba10e0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/kinto-water-bottle-300ml-clear.webp": {
+    "hash": "73305ffb0472",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/lego-piranha-plant-71426.webp": {
+    "hash": "fd691326af11",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/loop-cocoon-berry.webp": {
+    "hash": "ca2f342dfdd5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/magis-air-chair-red-accurate.webp": {
+    "hash": "9ffb00a49c88",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/magis-linnut-sulo-s.webp": {
+    "hash": "7f5894edff77",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/magis-spun-red.webp": {
+    "hash": "d88de9664064",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/maul-m8-calculator.webp": {
+    "hash": "2938a9364ac9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/may-bookends.webp": {
+    "hash": "74b8791aebf1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/memphis-first.webp": {
+    "hash": "15511551f47d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/mint-hug-shakers.webp": {
+    "hash": "1c89b45825b5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/mkbhd-color-picker-stickers.webp": {
+    "hash": "2ebb789038ef",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/mkbhd-overlay-deskpad.webp": {
+    "hash": "d1d956e5f564",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/moodulo-pop-culture-act-ii.webp": {
+    "hash": "a87ee22c29d6",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/mr-maria-first-light-snoopy.webp": {
+    "hash": "176905827386",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/muji-porcelain-toothbrush-stand.webp": {
+    "hash": "69a65f5494c9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/muji-smooth-gel-knock-pen.webp": {
+    "hash": "c549a68ea5d7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/muji-wall-mounted-cd-player.webp": {
+    "hash": "9ca8bfd090c4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/nahe-packing-pouch.webp": {
+    "hash": "3e65e22b067b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/nendo-shoe-horn.webp": {
+    "hash": "1a039635cd43",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/nintendo-pikmin-vases-front.webp": {
+    "hash": "5e5591ae0a32",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/not-boring-camera-app.webp": {
+    "hash": "f56695fa0457",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/not-boring-camera-art-model.webp": {
+    "hash": "258b51e91ebb",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/not-boring-weather-app.webp": {
+    "hash": "fb3b4bfacb32",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/notabag-original-red-native-v2.webp": {
+    "hash": "3fc034a65aea",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/nuutajarvi-tumbler-1709.webp": {
+    "hash": "9e5ff25a5879",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/odd-universe-peepers.webp": {
+    "hash": "37421750f50a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/palaset-im-ok-side.webp": {
+    "hash": "2ecf1a4f57b1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/panic-playdate.webp": {
+    "hash": "a05bcd921584",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/cutouts/pedrali-frida-752.webp": {
+    "hash": "43867396ce4f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/playforever-viglietta-jasper.webp": {
+    "hash": "f62bcce02e25",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/qeeboo-rabbit-chair-light-blue.webp": {
+    "hash": "b3034bf96a33",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/running-press-ufo-cow-native-v3.webp": {
+    "hash": "916cb0cf1783",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/samira-boon-card-case-yellow.webp": {
+    "hash": "5c20c8e2fc2c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/seiko-diver-alarm-clock.webp": {
+    "hash": "6d0102673c28",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/seiko-stadium-clock.webp": {
+    "hash": "57a23b9ab9a2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/sharge-discho.webp": {
+    "hash": "2daa9e22c084",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/subu-originals-f-line-black.webp": {
+    "hash": "2fb331d23677",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/super7-beams-charlie-brown-native-v2.webp": {
+    "hash": "c3dd79af57d2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/tecta-cat-black.webp": {
+    "hash": "6f1ac3699f37",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/teenage-engineering-grip-car.webp": {
+    "hash": "2e8f749a008d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/topologie-6mm-navy-orange.webp": {
+    "hash": "fd8d4790194e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/vitra-eames-elephant-orange-native-v2.webp": {
+    "hash": "038069d86bec",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/yoki-pillar-blue-native-v2.webp": {
+    "hash": "cf7a993f6037",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/yoto-player-4.webp": {
+    "hash": "a8ca0e7e4926",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/daypa-kun-backpack-blue.jpg": {
+    "hash": "66696f2517d4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/fairphone-gen-6-plus.webp": {
+    "hash": "7c88232130d3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-blue-1.jpg": {
+    "hash": "9db30d2ffcbd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-blue-10.jpg": {
+    "hash": "03e8ddf09831",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-blue-2.jpg": {
+    "hash": "d3dc0b8a2925",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-blue-8.jpg": {
+    "hash": "6ea90bc43743",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-deco-dot-photo-frame-1.webp": {
+    "hash": "46f45ed34d20",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-deco-dot-photo-frame-2.webp": {
+    "hash": "190ded77ea46",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-deco-dot-photo-frame-3.webp": {
+    "hash": "7e2c74ced70d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-object-flower-vase-1.webp": {
+    "hash": "c23b2a174db1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-object-flower-vase-official-2.jpg": {
+    "hash": "ff4ceca3b2cd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/actus-object-flower-vase-official-3.jpg": {
+    "hash": "ec4b766570ae",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-9090-4.webp": {
+    "hash": "7159e99a0700",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-9090-hq-2.webp": {
+    "hash": "6d2447e4d9da",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-9090-hq-3.webp": {
+    "hash": "e686c4ee927b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-anna-g-black-audit-f7a90e1cb8.jpg": {
+    "hash": "f7a90e1cb83a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-anna-g-black-hq-2.webp": {
+    "hash": "4e77b47f51c2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-anna-g-black-hq-3.webp": {
+    "hash": "6418cdfa6162",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-dede-1.jpg": {
+    "hash": "9dbc843110d3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-dede-2.jpg": {
+    "hash": "19d7df7e7583",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-dede-3.jpg": {
+    "hash": "71d8c2a67932",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-es19-red-2.jpg": {
+    "hash": "b65a6b59296a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-es19-red-3.jpg": {
+    "hash": "cb41d4230ea6",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-es19-red-full-square.jpg": {
+    "hash": "46a002c82675",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-girotondo-round-tray-1.webp": {
+    "hash": "0b1de7af66f2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-girotondo-round-tray-2.webp": {
+    "hash": "4f9eca9fa489",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-girotondo-round-tray-3.webp": {
+    "hash": "a33255c64bc5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-girotondo-round-tray-4.webp": {
+    "hash": "602bda418d5e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-la-conica-1.webp": {
+    "hash": "4bfe1d2eaeb7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-la-conica-2.webp": {
+    "hash": "7e22bf4fdbbf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-la-conica-3.webp": {
+    "hash": "7d4a63473019",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-magic-bunny-black-review-628dd6d4d7.webp": {
+    "hash": "1d07ae5d69bf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-magic-bunny-black-review-e3ecdc9c43.webp": {
+    "hash": "ecdd426a56dc",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-magic-bunny-green-1.jpg": {
+    "hash": "b3bd6922defa",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-ossidiana-black-2.webp": {
+    "hash": "0f934a771eb3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-ossidiana-black-3.webp": {
+    "hash": "8801cd80cf4c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-ossidiana-black-4.webp": {
+    "hash": "94d2c0c87e87",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-sleek-2.jpg": {
+    "hash": "f6c2c977c89d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-sleek-3.jpg": {
+    "hash": "4bd676584358",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/alessi-sleek-full.jpg": {
+    "hash": "b47d00f15d3b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/andlight-slab-series-1.jpg": {
+    "hash": "8485a996056f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/andlight-slab-series-2.jpg": {
+    "hash": "f7cfb6bbd315",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/andlight-slab-series-3.jpg": {
+    "hash": "765d7db36161",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/andlight-slab-series-4.jpg": {
+    "hash": "e45aea371415",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/anya-hindmarch-eyes-tote-1.jpg": {
+    "hash": "1794b109fcdc",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/anya-hindmarch-eyes-tote-3.jpg": {
+    "hash": "50e0371fbbd7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/anya-hindmarch-eyes-tote-4.jpg": {
+    "hash": "89bab5178ec4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/anya-hindmarch-eyes-tote-5.jpg": {
+    "hash": "5de4cbe81b03",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/aptone-mix-match-1.webp": {
+    "hash": "a791db8f353f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/aptone-mix-match-2.webp": {
+    "hash": "cca183783174",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/aptone-mix-match-3.webp": {
+    "hash": "f357db87a0c0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/aptone-mix-match-4.webp": {
+    "hash": "865b041926f3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/arwenn-cloud-clock-hq-2.webp": {
+    "hash": "97474499a0fd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/arwenn-cloud-clock-hq-3.webp": {
+    "hash": "95a53fe00f7c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/arwenn-cloud-clock-hq-4.webp": {
+    "hash": "be05777e6165",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/atonemo-nts-radio-player-2.webp": {
+    "hash": "de35ed11d0db",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/atonemo-nts-radio-player-3.webp": {
+    "hash": "87dbd74f5662",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/atonemo-nts-radio-player-4.webp": {
+    "hash": "1995a0c83045",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/b-line-boby-34-paprika-review-e25c690dc6.webp": {
+    "hash": "d82de845beae",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/b-line-boby-34-paprika-review-f2aac55ca4.webp": {
+    "hash": "82de8ffe99ca",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/baggu-standard-pop-pink-happy-1.jpg": {
+    "hash": "9b1992efa2ec",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/baggu-standard-pop-pink-happy-2.jpg": {
+    "hash": "2855b4b92848",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/baggu-standard-pop-pink-happy-3.jpg": {
+    "hash": "178494186bce",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/baggu-standard-pop-pink-happy-audit-2eab81fa69.jpg": {
+    "hash": "2eab81fa69c9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/best-years-knitted-triceratops-1.webp": {
+    "hash": "bdfdfd783c41",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/best-years-knitted-triceratops-2.webp": {
+    "hash": "8078da88066e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/best-years-knitted-triceratops-3.webp": {
+    "hash": "d5e25e47afe4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/block-design-play-tin-2.webp": {
+    "hash": "85cc4909fafa",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/block-design-play-tin-audit-native-1.jpg": {
+    "hash": "8e82af2bf5e5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/block-design-play-tin-audit-native-2.jpg": {
+    "hash": "4add62faf179",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bobo-choses-bolder-belt-pouch-hq-1.webp": {
+    "hash": "0ce86b069309",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bobo-choses-bolder-belt-pouch-hq-2.webp": {
+    "hash": "3602dc029b17",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bobo-choses-bolder-belt-pouch-hq-3.webp": {
+    "hash": "6b4771c3964d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bobo-choses-bolder-belt-pouch-hq-4.webp": {
+    "hash": "53fe305dfd41",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/boby-b34-red-1.jpg": {
+    "hash": "3b4ea6087989",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bosa-most-illustrious-achille-1.webp": {
+    "hash": "d3d33ec0bac1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bosa-most-illustrious-achille-2.webp": {
+    "hash": "ef9b19ac0d7c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bosa-most-illustrious-achille-3.webp": {
+    "hash": "c1b68b6b7748",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bosa-most-illustrious-achille-4.webp": {
+    "hash": "e206b22d332a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bruna-bonbon-mini-orange-2.webp": {
+    "hash": "fecb01e0e9bb",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bruna-orange-native-10.jpg": {
+    "hash": "426415d8dae3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bruna-orange-native-11.jpg": {
+    "hash": "317cf619fd90",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/bruna-orange-native-9.jpg": {
+    "hash": "322059ca8c75",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/brutto-sally-pepe-hq-2.webp": {
+    "hash": "81af773fcaed",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/brutto-sally-pepe-hq-3.webp": {
+    "hash": "3f03d0cf6196",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/brutto-sally-pepe-hq-4.webp": {
+    "hash": "722f50539747",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cactus-green-1.webp": {
+    "hash": "0fbe5476421a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cactus-green-2.webp": {
+    "hash": "b7bb0e844d50",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cactus-green-3.webp": {
+    "hash": "7f6cb6b2905a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cactus-green-4.webp": {
+    "hash": "e5d8f90b1519",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/carpenter-burger-2.jpg": {
+    "hash": "086137580dc9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/carpenter-burger-native-2.jpg": {
+    "hash": "aad478a2b93a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/carpenter-burger-native-4.jpg": {
+    "hash": "1693cb2572e0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/carpenter-burger-native-5.jpg": {
+    "hash": "eea4b36d6c27",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/charlie-beams-1.jpg": {
+    "hash": "769627721fdf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/charlie-beams-2.jpg": {
+    "hash": "b025c6bd4f18",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cliik-press-glass-family-pack-2.jpg": {
+    "hash": "eae37e2aea0b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cliik-press-glass-family-pack-3.jpg": {
+    "hash": "798a51be2ad1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cliik-press-glass-family-pack-4.jpg": {
+    "hash": "5775d6627f02",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cliik-press-glass-family-pack-hq-1.webp": {
+    "hash": "667431c375da",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/clock-new-1.jpg": {
+    "hash": "e139c7bd72e7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/clock-new-2.jpg": {
+    "hash": "6a88991c0ffa",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/clock-new-3.jpg": {
+    "hash": "6ef193b8f7bb",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/clock-new-4.jpg": {
+    "hash": "9f52e51de658",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cotopaxi-new-1.webp": {
+    "hash": "a16178fd909f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cotopaxi-new-2.webp": {
+    "hash": "dfae1dc25466",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cotopaxi-new-3.webp": {
+    "hash": "d8fd613be47f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/craighill-chroma-scissors-primary-2.webp": {
+    "hash": "97720581413c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/craighill-chroma-scissors-primary-hq-3.webp": {
+    "hash": "90e5f4331dd9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/craighill-chroma-scissors-primary-hq-4.webp": {
+    "hash": "bb24331a131b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/craighill-swingtop-lighter-hq-1.webp": {
+    "hash": "ac08de75596b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/craighill-swingtop-lighter-hq-2.webp": {
+    "hash": "7b42435e3346",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/craighill-swingtop-lighter-hq-3.webp": {
+    "hash": "4834f853f10b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/craighill-swingtop-lighter-hq-4.webp": {
+    "hash": "5111edf172cb",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/curaprox-cs5460-orange-blue-1.webp": {
+    "hash": "e8d6d317c430",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/curaprox-cs5460-orange-blue-2.webp": {
+    "hash": "0362b65e3887",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/curaprox-cs5460-orange-blue-3.webp": {
+    "hash": "062321403aa2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/curaprox-cs5460-orange-blue-4.webp": {
+    "hash": "4fa43cdd6beb",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cwandt-high-speed-jump-rope-review-7086614fed.webp": {
+    "hash": "02d07bc59cce",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cwandt-high-speed-jump-rope-review-852cfa60ad.webp": {
+    "hash": "d45ed8453d5c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cwandt-high-speed-jump-rope-review-a288590c97.webp": {
+    "hash": "4bfce4773831",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/cwandt-high-speed-jump-rope-review-e5cf9f9979.webp": {
+    "hash": "ac13700e3619",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/diffar-11001-main.png": {
+    "hash": "78662a0c709f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/gallery/diffar-11001-scene.jpg": {
+    "hash": "33c8fc0fe5ea",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/diffar-21612-scene.jpg": {
+    "hash": "0e5e045ed6cd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/diffar-31407-scene.jpg": {
+    "hash": "73e359499e0b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/diffar-41504-scene.jpg": {
+    "hash": "7ce4ef971f0e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/dusen-everybody-wall-clock-audit-native-1.jpg": {
+    "hash": "8fdf79a81081",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/dusen-everybody-wall-clock-audit-native-2.jpg": {
+    "hash": "4c645b07b5d2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/dusen-everybody-wall-clock-audit-native-3.jpg": {
+    "hash": "5c6dfb6f95f4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/dusen-everybody-wall-clock-audit-native-4.jpg": {
+    "hash": "2ef2cfcd24b9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/eames-elephant-orange-angle-1.webp": {
+    "hash": "f6ff4b4c6415",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/eames-elephant-orange-angle-2.webp": {
+    "hash": "4904e193ed8a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/eames-elephant-orange-angle-3.webp": {
+    "hash": "fcb1f876e577",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/eames-elephant-orange-angle-4.webp": {
+    "hash": "71a915d3af3b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/fairphone-gen-6-plus-2.webp": {
+    "hash": "800527396605",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/fairphone-gen-6-plus-3.webp": {
+    "hash": "f8f5b68aa36e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/fairphone-gen-6-plus-5.webp": {
+    "hash": "2bfe615152d3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flos-mayday-1.jpg": {
+    "hash": "7b5408856702",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flos-mayday-2.jpg": {
+    "hash": "a2e5a7ce5623",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flos-mayday-3.jpg": {
+    "hash": "1222a7837c63",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flos-mayday-4.jpg": {
+    "hash": "f2f629b26564",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flos-snoopy-black-hq-1.webp": {
+    "hash": "d88389f97c85",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flos-snoopy-black-hq-2.webp": {
+    "hash": "f73631d37a4a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flos-snoopy-black-hq-3.webp": {
+    "hash": "3cf6c8e724cd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flos-snoopy-black-hq-4.webp": {
+    "hash": "053bb45e7649",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flowerpot-vp9-orange-2.jpg": {
+    "hash": "da97fde81486",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flowerpot-vp9-orange-3.jpg": {
+    "hash": "20d2faaae6e6",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flowerpot-vp9-orange-4.jpg": {
+    "hash": "ffdf7d5346be",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/flowerpot-vp9-orange-full-square.jpg": {
+    "hash": "9df5fa68cea8",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/freckle-lifestyle-owner-3.png": {
+    "hash": "4a46b3b4d095",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/freckle-lifestyle-owner-4.png": {
+    "hash": "052755f871cf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/freckle-phone-green.png": {
+    "hash": "fd0f46b9990d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/freckle-phone-orange-audit-d1bd39581b.jpg": {
+    "hash": "d1bd39581b7f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/gispen-dombo-1.jpg": {
+    "hash": "6376a4379205",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/gispen-dombo-red-review-961e0dbaef.webp": {
+    "hash": "e240d3c3a948",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/gispen-dombo-red-review-eac80d5c3f.webp": {
+    "hash": "94410e452db2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/gispen-dombo-red-review-fbe36ab841.webp": {
+    "hash": "eaed5f11b507",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/groove-x-lovot-3-2.webp": {
+    "hash": "a61a4a0d6aea",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/groove-x-lovot-3-3.webp": {
+    "hash": "ba49614f0e40",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/groove-x-lovot-3-audit-ac5e2c4d04.webp": {
+    "hash": "ac5e2c4d042d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/groove-x-lovot-3-hq-1.webp": {
+    "hash": "645a1fec0f1f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hay-miz-dark-green-2.webp": {
+    "hash": "8b5325c6b9bd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hay-miz-dark-green-hq-1.webp": {
+    "hash": "d59603391368",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hay-regn-umbrella-gray-blue-audit-native-1.webp": {
+    "hash": "be0b9d50989c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hay-regn-umbrella-gray-blue-audit-native-2.webp": {
+    "hash": "3cbc1954e354",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hay-regn-umbrella-gray-blue-audit-native-3.jpg": {
+    "hash": "7831c8dcef35",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hay-regn-umbrella-gray-blue-hq-1.webp": {
+    "hash": "993529f371bc",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hay-table-clock-black-2.webp": {
+    "hash": "8f7f3c2c2768",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hay-table-clock-black-review-267423f24b.webp": {
+    "hash": "006040d8c3f0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hay-table-clock-black-review-445abac9c3.webp": {
+    "hash": "8f0f86e8baaa",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/heim-egg-spoon-1.jpg": {
+    "hash": "d15bedcc4e07",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/heim-egg-spoon-2.jpg": {
+    "hash": "ac0a5a7c7c01",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/heim-egg-spoon-3.jpg": {
+    "hash": "9f10d2cf7d92",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/heinz-ketchup-back.jpg": {
+    "hash": "2e6cd480d725",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/herman-miller-girard-throw-audit-188b34eca6.jpg": {
+    "hash": "188b34eca641",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/herman-miller-girard-throw-audit-c2a5708138.jpg": {
+    "hash": "c2a57081387a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hey-bag-green-lines-1.webp": {
+    "hash": "276af6c1e66a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hey-bag-green-lines-review-b927b5929b.webp": {
+    "hash": "4e1b62361731",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hey-bag-green-lines-review-e91ab0017f.webp": {
+    "hash": "f446d42a4543",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hey-classic-cap-1.webp": {
+    "hash": "8c5fb49afc00",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hey-classic-cap-review-16d3404fc7.webp": {
+    "hash": "09b24cd12743",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hey-classic-cap-review-2673239c81.webp": {
+    "hash": "57b233ac91a4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/homeinfun-blue-compartments.jpg": {
+    "hash": "313270a76f7a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/homeinfun-blue-open.jpg": {
+    "hash": "1a99063e3ef5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/homeinfun-color-group.jpg": {
+    "hash": "b0fd481f1926",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/homeinfun-storage-stool-review-80805ade36.webp": {
+    "hash": "c688640dfcfe",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hungry-market-initial-c-cap-2.webp": {
+    "hash": "9ab7f7b6d62a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hungry-market-initial-c-cap-3.webp": {
+    "hash": "cf76ec1cd2c7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/hungry-market-initial-c-cap-4.webp": {
+    "hash": "4a0bbd28e9d6",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/ikea-forlunda-red-2.webp": {
+    "hash": "5350b7646848",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/ikea-forlunda-red-3.webp": {
+    "hash": "5b8a7a57cb17",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/ikea-forlunda-red-4.webp": {
+    "hash": "9b1cf23d44b5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/iwachu-cat-candle-stand-1.webp": {
+    "hash": "6bc89c796634",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/iwachu-cat-candle-stand-2.webp": {
+    "hash": "dd039c886df9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/iwachu-cat-candle-stand-3.webp": {
+    "hash": "b3b02ce04831",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/iwate-canning-gift-stock-4.webp": {
+    "hash": "7812f7b2f662",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/iwate-canning-gift-stock-audit-09fbc842ae.jpg": {
+    "hash": "09fbc842ae8b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/iwate-canning-gift-stock-audit-adad76f622.jpg": {
+    "hash": "adad76f622cf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kay-bojesen-monkey-mini-vintage-blue-1.webp": {
+    "hash": "ffccae971e9e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kay-bojesen-monkey-mini-vintage-blue-2.webp": {
+    "hash": "5eccf2aa1ff0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kay-bojesen-monkey-mini-vintage-blue-3.webp": {
+    "hash": "d5cb1469e041",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kay-bojesen-monkey-mini-vintage-blue-4.webp": {
+    "hash": "388965cf6635",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kikkerland-inkerie-jewelry-case-1.webp": {
+    "hash": "ca9ee011cc7d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kikkerland-inkerie-jewelry-case-2.webp": {
+    "hash": "036c28a35c74",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kikkerland-inkerie-jewelry-case-3.webp": {
+    "hash": "bb7256d58cd2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kikkerland-inkerie-jewelry-case-4.webp": {
+    "hash": "a51058015cc8",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kinto-water-bottle-300ml-clear-in-hand.webp": {
+    "hash": "25b87a183ecf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kinto-water-bottle-300ml-clear-studio.webp": {
+    "hash": "673b25f251e0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kinto-water-bottle-300ml-lid-seal.webp": {
+    "hash": "d505860fe125",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/kinto-water-bottle-300ml-refilling.webp": {
+    "hash": "b6d2a7884d6f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/lego-piranha-plant-71426-2.webp": {
+    "hash": "d94856491fe9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/lego-piranha-plant-71426-3.webp": {
+    "hash": "bb64a7b36ad9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/lego-piranha-plant-71426-4.webp": {
+    "hash": "84668465e401",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/loop-cocoon-berry-1.webp": {
+    "hash": "0857c8491714",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/loop-cocoon-berry-2.webp": {
+    "hash": "6214884f3215",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/loop-cocoon-berry-3.webp": {
+    "hash": "dc507d247207",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/loop-cocoon-berry-audit-9e3269f26c.webp": {
+    "hash": "a9e1fdf214e5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-air-chair-red-front.jpg": {
+    "hash": "4c00e4b0f723",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-air-chair-red-review-181cd08772.webp": {
+    "hash": "b11c1758f7a0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-air-chair-red-review-b284bea20e.webp": {
+    "hash": "f44d8c066c63",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-linnut-sulo-s-1.webp": {
+    "hash": "d667294767c2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-linnut-sulo-s-3.webp": {
+    "hash": "9ce3638eb933",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-linnut-sulo-s-review-5f3d042df7.webp": {
+    "hash": "5e2b6d5bbb04",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-linnut-sulo-s-review-d70e263126.webp": {
+    "hash": "a6786e9ae75c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-spun-updated-1.webp": {
+    "hash": "f44f3441177f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-spun-updated-2.webp": {
+    "hash": "edbe5285e024",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-spun-updated-3.webp": {
+    "hash": "e6df3a2fed0d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/magis-spun-updated-4.webp": {
+    "hash": "5820e172d437",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/maul-m8-calculator-1.jpg": {
+    "hash": "47ade2756a59",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/maul-m8-calculator-2.jpg": {
+    "hash": "2e52d1202765",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/maul-m8-calculator-3.jpg": {
+    "hash": "fa557bf3a96a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/maul-m8-calculator-4.jpg": {
+    "hash": "35dd3616bf6f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/may-bookends-1.png": {
+    "hash": "a67a1256150c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/may-bookends-2.jpg": {
+    "hash": "902d7551cba7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/may-bookends-3.jpg": {
+    "hash": "bbcf13a46d81",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/may-bookends-4.jpg": {
+    "hash": "e9fc0ce5c9bd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/memphis-first-1.webp": {
+    "hash": "0a9a801f4bc1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/memphis-first-2.webp": {
+    "hash": "abf8380eb06d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/memphis-first-audit-6ff85b7ac9.jpg": {
+    "hash": "6ff85b7ac919",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/memphis-first-audit-9939cd0541.jpg": {
+    "hash": "9939cd054141",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mint-hug-shakers-audit-38ca2da94a.jpg": {
+    "hash": "38ca2da94a5d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mint-hug-shakers-audit-b240118ef6.jpg": {
+    "hash": "b240118ef6a1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mint-hug-shakers-audit-cc3d8da67d.jpg": {
+    "hash": "cc3d8da67df5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mkbhd-color-picker-stickers-2.webp": {
+    "hash": "53be8a035175",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mkbhd-color-picker-stickers-3.webp": {
+    "hash": "066173d2a099",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mkbhd-color-picker-stickers-audit-92c7611e28.jpg": {
+    "hash": "92c7611e2864",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mkbhd-overlay-deskpad-2.webp": {
+    "hash": "51b90c91daec",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mkbhd-overlay-deskpad-3.webp": {
+    "hash": "f427237b7b56",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mkbhd-overlay-deskpad-4.webp": {
+    "hash": "9003451851d3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/moodulo-pop-culture-act-ii-2.webp": {
+    "hash": "ef8fa0de3091",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/moodulo-pop-culture-act-ii-3.webp": {
+    "hash": "728214516386",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mr-maria-first-light-snoopy-audit-47bc5c6a0e.jpg": {
+    "hash": "47bc5c6a0e39",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mr-maria-first-light-snoopy-audit-7923c6d381.jpg": {
+    "hash": "7923c6d38100",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mr-maria-first-light-snoopy-audit-8847323a2e.jpg": {
+    "hash": "8847323a2e91",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/mr-maria-first-light-snoopy-audit-da230a4afc.jpg": {
+    "hash": "da230a4afc42",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-porcelain-toothbrush-stand-1.webp": {
+    "hash": "e96b530c83db",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-porcelain-toothbrush-stand-2.webp": {
+    "hash": "ea319149a876",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-porcelain-toothbrush-stand-3.webp": {
+    "hash": "f0a3604c20a7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-smooth-gel-knock-pen-1.webp": {
+    "hash": "1186444a2f10",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-smooth-gel-knock-pen-2.webp": {
+    "hash": "5c996f5f1e1a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-smooth-gel-knock-pen-3.webp": {
+    "hash": "e0f40c31a701",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-smooth-gel-knock-pen-4.webp": {
+    "hash": "e03ed9eda314",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-wall-mounted-cd-player-2.webp": {
+    "hash": "9b4379a0d62f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-wall-mounted-cd-player-audit-1fb260dfec.jpg": {
+    "hash": "1fb260dfecf4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-wall-mounted-cd-player-audit-c7e0d76cbb.jpg": {
+    "hash": "c7e0d76cbbcc",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nahe-packing-back.jpg": {
+    "hash": "0af552e49d79",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nahe-packing-front.jpg": {
+    "hash": "7c522bbd81ea",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nahe-packing-use.jpg": {
+    "hash": "62628bc2b83a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nahe-packing-zipper.jpg": {
+    "hash": "f46cea13d00c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nasa-globe-1.jpg": {
+    "hash": "7b339419e4d4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nasa-globe-2.jpg": {
+    "hash": "047ca2f7fa04",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nendo-shoe-horn-audit-84594ca1d7.jpg": {
+    "hash": "84594ca1d767",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nendo-shoe-horn-audit-8f076f6b46.jpg": {
+    "hash": "8f076f6b4658",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nendo-shoe-horn-audit-94edf767f7.jpg": {
+    "hash": "94edf767f7c0",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nendo-shoe-horn-audit-f9ef14c6eb.jpg": {
+    "hash": "f9ef14c6ebf2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nintendo-pikmin-vases-front.jpg": {
+    "hash": "97191e59ddbd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-camera-app-2.webp": {
+    "hash": "19f371160fb3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-camera-app-3.webp": {
+    "hash": "5a1fbd44a129",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-camera-app-4.webp": {
+    "hash": "a1f8564915f2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-camera-art-model-2.webp": {
+    "hash": "3672863f875f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-camera-art-model-3.webp": {
+    "hash": "b37492b89f77",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-camera-art-model-review-b8d533d21e.webp": {
+    "hash": "3ae4f41096ad",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-weather-app-2.webp": {
+    "hash": "6e6361651405",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-weather-app-3.webp": {
+    "hash": "3ace8ac36be1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-weather-app-4.webp": {
+    "hash": "2efc47204d13",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/not-boring-weather-app-audit-2bff6aa0d9.jpg": {
+    "hash": "2bff6aa0d96b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/notabag-original-red-review-6c5410598c.webp": {
+    "hash": "614841cbf977",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/notabag-original-red-review-af06146cfe.webp": {
+    "hash": "7c3bd24c92dc",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/notabag-original-red-review-e72d6960c1.webp": {
+    "hash": "eb24baa68276",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/notabag-red-1.jpg": {
+    "hash": "dcbb7d9faefd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/nuutajarvi-tumbler-1709-2.webp": {
+    "hash": "ae5ecf9c3551",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/palaset-im-ok-side-1.webp": {
+    "hash": "e3e9d185c528",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/palaset-im-ok-side-2.webp": {
+    "hash": "312977bfd633",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/palaset-im-ok-side-3.webp": {
+    "hash": "c65eca64bd57",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/palaset-im-ok-side-4.webp": {
+    "hash": "0411fa9832cd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/panic-playdate-2.webp": {
+    "hash": "4bbe5870b729",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/panic-playdate-3.webp": {
+    "hash": "88469608c09c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/panic-playdate-4.webp": {
+    "hash": "33aed45684f9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/pedrali-frida-752-1.webp": {
+    "hash": "125c1e9aded8",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/pedrali-frida-752-2.webp": {
+    "hash": "f699bffbbb8c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/pedrali-frida-752-3.webp": {
+    "hash": "64da559998ba",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/pedrali-frida-752-4.webp": {
+    "hash": "b0eb4de08e9b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/playforever-viglietta-jasper-2.webp": {
+    "hash": "db25215f6b98",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/playforever-viglietta-jasper-3.webp": {
+    "hash": "ec6284d562e5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/playforever-viglietta-jasper-4.webp": {
+    "hash": "fc486fa1c598",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/qeeboo-rabbit-chair-light-blue-1.webp": {
+    "hash": "4c889ca99b5b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/qeeboo-rabbit-chair-light-blue-2.webp": {
+    "hash": "3524d66cc8df",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/samira-boon-card-case-1.jpg": {
+    "hash": "ca0eec3f8bbe",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/samira-boon-card-case-2.jpg": {
+    "hash": "4508c5853707",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/samira-boon-card-case-yellow-full.jpg": {
+    "hash": "116e2b703f60",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/seiko-diver-back.jpg": {
+    "hash": "932c61182c9e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/seiko-diver-original.png": {
+    "hash": "f9916c92f184",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/seiko-diver-right.jpg": {
+    "hash": "05a3b6c52a7c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/seiko-diver-setting.jpg": {
+    "hash": "93b8cd9bd124",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/seiko-stadium-light.jpg": {
+    "hash": "a390b4219663",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/seiko-stadium-original.png": {
+    "hash": "23b90764d96a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/seiko-stadium-sizes.jpg": {
+    "hash": "003b276b8275",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/sharge-discho-2.webp": {
+    "hash": "7296470a6680",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/sharge-discho-3.webp": {
+    "hash": "3add1f0b2a25",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/sharge-discho-4.webp": {
+    "hash": "d5c24d3e9da3",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-2a9c585893.webp": {
+    "hash": "8e051afb7d22",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-69ec2cafa5.webp": {
+    "hash": "442d8215d7db",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-c2d808cd05.webp": {
+    "hash": "12f0e07ef2a5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/stokke-tripp-trapp-warm-red-audit-e4793b7f1b.webp": {
+    "hash": "b1d6854fe2f5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/subu-originals-f-line-black-2.webp": {
+    "hash": "c5bdba1f4b30",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/subu-originals-f-line-black-3.webp": {
+    "hash": "d474e955ce74",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/subu-originals-f-line-black-audit-4cd9035aac.jpg": {
+    "hash": "4cd9035aac76",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/sunshine-new-1.webp": {
+    "hash": "512ce0e34dde",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/sunshine-new-2.webp": {
+    "hash": "03488edde0e1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/sunshine-new-3.webp": {
+    "hash": "754cd50d9e11",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/tecta-cat-1-square.webp": {
+    "hash": "bdd68518ff89",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/tecta-cat-2-square.webp": {
+    "hash": "071188af6165",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/tecta-cat-4-square.webp": {
+    "hash": "5ac0ed6104dd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/tecta-cat-native-4.webp": {
+    "hash": "5afc93177b86",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/teenage-engineering-grip-car-2.webp": {
+    "hash": "155e5ecfb250",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/teenage-engineering-grip-car-3.webp": {
+    "hash": "e92bb0b064cb",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/teenage-engineering-grip-car-4.webp": {
+    "hash": "f3684219b6cf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/teenage-engineering-grip-car-audit-50512e60a7.webp": {
+    "hash": "50512e60a7d5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/topologie-6mm-navy-orange-detail-4.jpg": {
+    "hash": "2024a7a9dca9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/topologie-6mm-navy-orange-detail-5.jpg": {
+    "hash": "030e55ad7736",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/topologie-6mm-navy-orange-product.jpg": {
+    "hash": "4ad8cb44f5d4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/topologie-6mm-navy-orange-worn.jpg": {
+    "hash": "9281df56f351",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/tumbler-1709-red-square.jpg": {
+    "hash": "b0d7f865ce0b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/tumbler-1709-top.jpg": {
+    "hash": "332f12135fc9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/ufo-cow-urban-native-b.png": {
+    "hash": "ac4abbb85b6e",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/ufo-cow-urban-native-d.png": {
+    "hash": "ba440b5bc881",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/ufo-cow-urban-native-e.png": {
+    "hash": "c808a645e77d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/yoki-pillar-blue-native.png": {
+    "hash": "1e618924054c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/yoki-pillar-flowers-owner.png": {
+    "hash": "7e7d3a440723",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/yoto-player-4-review-0407762c82.webp": {
+    "hash": "1d73585de022",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/yoto-player-4-review-3b0fc352ce.webp": {
+    "hash": "ba5a8ca4ffe7",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/yoto-player-4-review-8c3b2a384a.webp": {
+    "hash": "5d2ef8710181",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/yoto-player-4-review-fa4d1db850.webp": {
+    "hash": "52ecee820850",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/hay-table-clock-black.jpg": {
+    "hash": "ff36eed77886",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/herman-miller-girard-throw-refined.jpg": {
+    "hash": "bb9104526eef",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/hungry-market-initial-c-cap.jpg": {
+    "hash": "0b8ca0377c98",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/ikea-forlunda-red.jpg": {
+    "hash": "a129692f011f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/iwate-canning-gift-stock.jpg": {
+    "hash": "e5926ac0a042",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/lego-piranha-plant-71426.jpg": {
+    "hash": "ae813e3b898b",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/magis-air-chair-red.jpg": {
+    "hash": "909a7c171cfd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/mint-hug-shakers.jpg": {
+    "hash": "9635ec386f93",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/mkbhd-color-picker-stickers.jpg": {
+    "hash": "04d1ce5d4323",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/mkbhd-overlay-deskpad.jpg": {
+    "hash": "f464fa7463e8",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/moodulo-pop-culture-act-ii.jpg": {
+    "hash": "d2ad96d75100",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/muji-wall-mounted-cd-player.jpg": {
+    "hash": "610ef36e6be6",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/nintendo-pikmin-vases-refined.jpg": {
+    "hash": "8cd7214676bd",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/not-boring-camera-app.png": {
+    "hash": "3831d8fffd44",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/not-boring-camera-art-model.jpg": {
+    "hash": "1ca6b87207d9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/nuutajarvi-tumbler-1709.jpg": {
+    "hash": "ff91e78104ad",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/odd-universe-peepers.jpg": {
+    "hash": "62faa2cff187",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/playforever-viglietta-jasper.jpg": {
+    "hash": "64497ccbf76c",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/sharge-discho.webp": {
+    "hash": "29f5a72b9530",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/subu-originals-f-line-black.jpg": {
+    "hash": "4633712dfa33",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  }
+}

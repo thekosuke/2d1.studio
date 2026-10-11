@@ -15,11 +15,17 @@ def tracked_product_url(url):
 
 ROOT=Path(__file__).resolve().parent.parent
 items=json.loads((ROOT/'data/objects.json').read_text())
+delivery_path=ROOT/'data/finds-images.json'
+delivery=json.loads(delivery_path.read_text()) if delivery_path.exists() else {}
+def image_variants(item):
+    variants={v['width']:v for v in item.get('imageVariants', [])}
+    variants.update({v['width']:v for v in delivery.get(item['image'], [])})
+    return sorted(variants.values(), key=lambda v:v['width'])
 categories=[('all','All objects'),('living','Living'),('kitchen','Kitchen'),('wear','Wear'),('work','Work')]
 cards=[]
 for item in items:
     assert (ROOT/item['image']).is_file(),item['image']
-    variants = item.get('imageVariants', [])
+    variants = image_variants(item)
     for variant in variants:
         assert (ROOT/variant['image']).is_file(), variant['image']
     srcset = ', '.join(f'../{variant["image"]} {variant["width"]}w' for variant in variants)
@@ -35,7 +41,13 @@ for item in items:
         assert (ROOT/photo['image']).is_file(), photo['image']
         assert photo['sourceUrl'].startswith('https://')
         assert photo['width'] > 0 and photo['height'] > 0
-        photos.append(f'<img src="../{e(photo["image"])}" alt="{e(item["name"])} by {e(item["brand"])} ({index}/{len(gallery)})" data-source="{e(photo["sourceUrl"])}" width="{photo["width"]}" height="{photo["height"]}" loading="lazy" decoding="async">')
+        photo_variants=delivery.get(photo['image'], [])
+        photo_srcset=', '.join(f'../{variant["image"]} {variant["width"]}w' for variant in photo_variants)
+        cover_ratio=max(1, photo['width']/photo['height'])
+        phone_vw=100*cover_ratio
+        desktop_vw=60*cover_ratio
+        photo_responsive=f' srcset="{e(photo_srcset)}" sizes="(max-width: 767px) {phone_vw:.2f}vw, {desktop_vw:.2f}vw"' if photo_variants else ''
+        photos.append(f'<img{photo_responsive} src="../{e(photo["image"])}" alt="{e(item["name"])} by {e(item["brand"])} ({index}/{len(gallery)})" data-source="{e(photo["sourceUrl"])}" width="{photo["width"]}" height="{photo["height"]}" loading="lazy" decoding="async">')
     opening = f'<a class="object-open" href="{e(product_url)}" target="_blank" rel="noopener noreferrer">' if for_sale else '<div class="object-open">'
     closing = '</a>' if for_sale else '</div><p class="object-availability">Not for sale</p>'
     cards.append(f'''<article class="object-card" data-object="{e(item['id'])}" data-category="{e(item['category'])}" data-tags="{e(json.dumps(item['tags']))}">
@@ -51,11 +63,12 @@ html=f'''<!doctype html>
 <link rel="alternate" hreflang="en" href="https://2d1.studio/objects/"><link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/objects/"><link rel="alternate" hreflang="x-default" href="https://2d1.studio/objects/">
 <meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Finds — 2D1"><meta property="og:description" content="An open shelf of everyday objects with character. Explore the 2D1 Finds collection."><meta property="og:url" content="https://2d1.studio/objects/"><meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2"><meta property="og:image:alt" content="The red 2D1 logo on a soft beige background.">
 <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml"><link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2">
-<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=75"><link rel="stylesheet" href="../css/objects.css?v=84">
+<script>document.documentElement.classList.add('finds-js');setTimeout(()=>{{if(!document.querySelector('.objects-ready'))document.documentElement.classList.remove('finds-js');}},4000);</script>
+<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=76"><link rel="stylesheet" href="../css/objects.css?v=89">
 <link rel="stylesheet" href="../css/dialogs.css?v=18"><link rel="stylesheet" href="../css/mobile-nav.css?v=3">
 <link rel="stylesheet" href="../css/typography.css?v=10">
 <script src="../js/config.js" defer></script><script src="../js/drawers.js" defer></script><script src="../js/contact.js?v=10" defer></script><script src="../js/mobile-nav.js?v=2" defer></script><script src="../js/finds-menus.js?v=6" defer></script>
-<script src="../js/language.js?v=1" defer></script><script src="../js/objects.js?v=40" defer></script>
+<script src="../js/language.js?v=1" defer></script><script src="../js/objects.js?v=43" defer></script>
 </head>
 <body class="objects-page">
 <a class="skip-link" href="#objects-canvas">Skip to objects</a>
