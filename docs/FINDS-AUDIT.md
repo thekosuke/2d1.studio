@@ -111,3 +111,4 @@ Target: 1–4 distinct authentic photos per product, native long edge ≥1200px 
 | Samira Boon — Furoshiki Shiki Card Case | 3 | Yes | Primary native product detail below 1200px long edge; Original/iconic colorway evidence remains unresolved |
 | Floyd — Cabin Aluminum | 4 | Yes | Primary native product detail below 1200px long edge; Original/iconic colorway evidence remains unresolved |
 | Jellycat — Amuseables Sports Basketball | 4 | Yes | Primary native product detail below 1200px long edge; One or more photographs below 1200px long edge; Original/iconic colorway evidence remains unresolved |
+| Tobeus — Pick-up | 3 | Yes | One or more photographs below 1200px long edge; Original/iconic colorway evidence remains unresolved |

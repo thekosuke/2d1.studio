@@ -1204,6 +1204,17 @@
       1440
     ]
   },
+  "img/objects/cutouts/tobeus-pick-up.webp": {
+    "hash": "1c0637ebc68d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
   "img/objects/cutouts/topologie-6mm-navy-orange.webp": {
     "hash": "fd8d4790194e",
     "recipe": "lossless-lanczos-v1",
@@ -4656,6 +4667,36 @@
   },
   "img/objects/gallery/teenage-engineering-grip-car-audit-50512e60a7.webp": {
     "hash": "50512e60a7d5",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/tobeus-pick-up-1.webp": {
+    "hash": "c023eec0efd4",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/tobeus-pick-up-2.webp": {
+    "hash": "407e9492587f",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/tobeus-pick-up-3.webp": {
+    "hash": "7d32903ef3f7",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       640,

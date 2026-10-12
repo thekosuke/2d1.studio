@@ -12392,5 +12392,73 @@
         724
       ]
     }
+  },
+  {
+    "id": "tobeus-pick-up",
+    "name": "Pick-up",
+    "brand": "Tobeus",
+    "category": "living",
+    "tags": [
+      "Toys"
+    ],
+    "description": "A wooden pickup by Odo Fioravanti, carved from a single block of cedar and made by hand in Italy.",
+    "productUrl": "https://www.fioravanti.eu/project/Pick_up",
+    "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
+    "sourceName": "fioravanti.eu",
+    "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0110.jpg",
+    "image": "img/objects/cutouts/tobeus-pick-up.webp",
+    "width": 1240,
+    "height": 1240,
+    "gallery": [
+      {
+        "image": "img/objects/gallery/tobeus-pick-up-1.webp",
+        "width": 700,
+        "height": 700,
+        "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
+        "sourceName": "fioravanti.eu",
+        "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0210.jpg"
+      },
+      {
+        "image": "img/objects/gallery/tobeus-pick-up-2.webp",
+        "width": 1240,
+        "height": 700,
+        "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
+        "sourceName": "fioravanti.eu",
+        "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0110.jpg"
+      },
+      {
+        "image": "img/objects/gallery/tobeus-pick-up-3.webp",
+        "width": 1240,
+        "height": 700,
+        "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
+        "sourceName": "fioravanti.eu",
+        "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0384.jpg"
+      }
+    ],
+    "colors": [
+      "Brown",
+      "Beige"
+    ],
+    "displayColors": [
+      {
+        "name": "Beige",
+        "hex": "#c7ab83"
+      },
+      {
+        "name": "Brown",
+        "hex": "#805b3d"
+      }
+    ],
+    "variantName": "Natural cedar — designer’s 2008 Pick-up",
+    "variantEvidence": {
+      "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
+      "note": "Owner-selected designer page identifies Tobeus and 2008. Natural cedar in all three official photos; no iconic-color claim."
+    },
+    "qualityNote": "Designer originals are 1240×700; complete overview square crop is native 700×700, below the 1200px target. Three authentic views retained, no enlargement.",
+    "imageTreatment": {
+      "method": "Native foreground polygon alpha mask; original RGB preserved exactly. Shared reversible CSS grade.",
+      "originalImage": "img/objects/originals/tobeus-pick-up/1.jpg",
+      "rgbPreserved": true
+    }
   }
 ]

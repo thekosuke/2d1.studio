@@ -1452,3 +1452,12 @@ Quality exception: the official 2000px overview includes substantial padding; us
 ## Jellycat — Amuseables Sports Basketball
 
 Owner-selected [official product](https://eu.jellycat.com/amuseables-sports-basketball/), AS2BK. Four authentic official photographs: complete seated overview, standing view, side, and back. Original files are 1000px square; native-resolution exception recorded, no upscaling. Canvas uses alpha-only masking with unchanged RGB; original retained. First gallery keeps the complete product with breathing room.
+
+## Pick-up — Tobeus (12 October 2026)
+
+- Designer: Odo Fioravanti, 2008. Owner-selected [designer page](https://www.fioravanti.eu/project/Pick_up).
+- Natural cedar, handmade in Italy from one block; variant shown in the designer’s photographs, with no iconic-color claim.
+- Three official originals, each 1240 × 700: [Photo 1](https://www.fioravanti.eu/images/Pick%20up_0110.jpg), [Photo 2](https://www.fioravanti.eu/images/Pick%20up_0210.jpg), [Photo 3](https://www.fioravanti.eu/images/Pick%20up_0384.jpg).
+- Originals: `img/objects/originals/tobeus-pick-up/`; native alpha-only cutout retains original RGB exactly.
+- First detail image: native 700 × 700 square crop of the three-quarter view, complete toy with breathing room. Resolution exception: overview below 1200px target; no enlargement or invented views. Remaining two photos preserve authentic settings.
+- Designer photography credited to fioravanti.eu; private preview, no unrestricted image license verified.

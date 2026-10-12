@@ -744,3 +744,5 @@ Work gallery indicators: the centered thumbnail shows its project index (1/3–3
 DeepDrip’s detail gallery contains all 17 owner-supplied images, ordered from the wordmark and concept through the identity system, website, and applications. Native-resolution PNG originals live in `img/projects/deepdrip/originals/`; lossless responsive WebP images retain crisp detail and lazy-load. Complete compositions are contained within the existing full-screen image stages in both languages.
 
 Project detail images retain their native proportions. Their visible vertical gaps and page side margins both measure 24px across all projects and both languages.
+
+Finds includes Tobeus Pick-up (Odo Fioravanti, 2008), with a transparent cedar toy master and three official designer photographs. Original sources, square overview crop, and native-resolution limits are documented in `docs/OBJECTS-SOURCES.md`.

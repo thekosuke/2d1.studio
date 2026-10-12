@@ -8897,6 +8897,62 @@
       ],
       "colorwayEvidence": {},
       "editorialReview": {}
+    },
+    {
+      "id": "tobeus-pick-up",
+      "name": "Pick-up",
+      "brand": "Tobeus",
+      "selectedVariant": "Natural cedar — designer’s 2008 Pick-up",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1240,
+        1240
+      ],
+      "primaryNativeSubjectPixels": null,
+      "subjectBounds": [
+        254,
+        442,
+        971,
+        789
+      ],
+      "galleryCount": 3,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/tobeus-pick-up-1.webp",
+          "width": 700,
+          "height": 700,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "c023eec0efd4ef463205521ce0c19226bbf54a4221d793728fba59b46d8fdce7",
+          "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
+          "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0210.jpg"
+        },
+        {
+          "image": "img/objects/gallery/tobeus-pick-up-2.webp",
+          "width": 1240,
+          "height": 700,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "407e9492587f5a5bccbe793c4e3ce7c1b9e1846626516d55a7c721684b97c2a3",
+          "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
+          "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0110.jpg"
+        },
+        {
+          "image": "img/objects/gallery/tobeus-pick-up-3.webp",
+          "width": 1240,
+          "height": 700,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "7d32903ef3f70bb27d58430ad187c183752ef9c113a8dd90e649ef2d237a239e",
+          "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
+          "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0384.jpg"
+        }
+      ],
+      "issues": [
+        "One or more photographs below 1200px long edge",
+        "Original/iconic colorway evidence remains unresolved"
+      ],
+      "colorwayEvidence": {},
+      "editorialReview": {}
     }
   ]
 }

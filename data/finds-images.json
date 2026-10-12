@@ -2287,6 +2287,28 @@
       "width": 1673
     }
   ],
+  "img/objects/cutouts/tobeus-pick-up.webp": [
+    {
+      "image": "img/objects/responsive/tobeus-pick-up-1c0637ebc68d-192.webp",
+      "width": 192
+    },
+    {
+      "image": "img/objects/responsive/tobeus-pick-up-1c0637ebc68d-256.webp",
+      "width": 256
+    },
+    {
+      "image": "img/objects/responsive/tobeus-pick-up-1c0637ebc68d-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/responsive/tobeus-pick-up-1c0637ebc68d-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/tobeus-pick-up.webp",
+      "width": 1240
+    }
+  ],
   "img/objects/cutouts/topologie-6mm-navy-orange.webp": [
     {
       "image": "img/objects/responsive/topologie-6mm-navy-orange-fd8d4790194e-192.webp",
@@ -5587,6 +5609,40 @@
     {
       "image": "img/objects/gallery/teenage-engineering-grip-car-audit-50512e60a7.webp",
       "width": 2048
+    }
+  ],
+  "img/objects/gallery/tobeus-pick-up-1.webp": [
+    {
+      "image": "img/objects/gallery/tobeus-pick-up-1.webp",
+      "width": 700
+    }
+  ],
+  "img/objects/gallery/tobeus-pick-up-2.webp": [
+    {
+      "image": "img/objects/responsive/tobeus-pick-up-2-407e9492587f-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/responsive/tobeus-pick-up-2-407e9492587f-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/gallery/tobeus-pick-up-2.webp",
+      "width": 1240
+    }
+  ],
+  "img/objects/gallery/tobeus-pick-up-3.webp": [
+    {
+      "image": "img/objects/responsive/tobeus-pick-up-3-7d32903ef3f7-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/responsive/tobeus-pick-up-3-7d32903ef3f7-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/gallery/tobeus-pick-up-3.webp",
+      "width": 1240
     }
   ],
   "img/objects/gallery/topologie-6mm-navy-orange-detail-4.jpg": [
