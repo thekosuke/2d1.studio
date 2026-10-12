@@ -746,3 +746,5 @@ DeepDrip’s detail gallery contains all 17 owner-supplied images, ordered from 
 Project detail images retain their native proportions. Their visible vertical gaps and page side margins both measure 24px across all projects and both languages.
 
 Finds includes Tobeus Pick-up (Odo Fioravanti, 2008), with a transparent cedar toy master and three official designer photographs. Original sources, square overview crop, and native-resolution limits are documented in `docs/OBJECTS-SOURCES.md`.
+
+The curated objects page is titled Familiar Characters across navigation, page headings, metadata, and both languages. Its existing `/objects/` routes remain stable.

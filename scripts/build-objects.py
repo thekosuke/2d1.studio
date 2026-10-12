@@ -57,11 +57,11 @@ html=f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2D1 | Finds</title><meta name="description" content="An open shelf of everyday objects with character. Explore the 2D1 Finds collection.">
+<title>2D1 | Familiar Characters</title><meta name="description" content="An open shelf of everyday objects with character. Explore the 2D1 Familiar Characters collection.">
 <meta name="robots" content="index, follow"><meta name="theme-color" content="#FAF0E6">
 <link rel="canonical" href="https://2d1.studio/objects/">
 <link rel="alternate" hreflang="en" href="https://2d1.studio/objects/"><link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/objects/"><link rel="alternate" hreflang="x-default" href="https://2d1.studio/objects/">
-<meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Finds — 2D1"><meta property="og:description" content="An open shelf of everyday objects with character. Explore the 2D1 Finds collection."><meta property="og:url" content="https://2d1.studio/objects/"><meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2"><meta property="og:image:alt" content="The red 2D1 logo on a soft beige background.">
+<meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Familiar Characters — 2D1"><meta property="og:description" content="An open shelf of everyday objects with character. Explore the 2D1 Familiar Characters collection."><meta property="og:url" content="https://2d1.studio/objects/"><meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2"><meta property="og:image:alt" content="The red 2D1 logo on a soft beige background.">
 <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml"><link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2">
 <script>document.documentElement.classList.add('finds-js');setTimeout(()=>{{if(!document.querySelector('.objects-ready'))document.documentElement.classList.remove('finds-js');}},4000);</script>
 <link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=84"><link rel="stylesheet" href="../css/objects.css?v=112">
@@ -74,7 +74,7 @@ html=f'''<!doctype html>
 <a class="skip-link" href="#objects-canvas">Skip to objects</a>
 <header class="objects-header"><div class="finds-home-menu"><a class="finds-home-trigger" href="../"><span class="pixel-home-arrow" aria-hidden="true"></span>Home</a></div><a class="site-logo" href="../" aria-label="2D1, home"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a></header>
 <main class="objects-main" id="main">
-<div class="objects-intro"><h1 translate="no">Finds</h1><p>Familiar characters for everyday life.</p></div>
+<div class="objects-intro"><h1 translate="no">Familiar Characters</h1><p>Familiar characters for everyday life.</p></div>
 <div class="objects-view-dock"><span class="objects-search-wrap"><div class="objects-search-suggestions" id="objects-search-suggestions" aria-label="Search suggestions" hidden></div><svg class="objects-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input class="objects-search" id="objects-search" type="search" disabled aria-label="Search familiar characters" placeholder="Search familiar characters..." autocomplete="off"></span></div>
 <div class="objects-canvas" id="objects-canvas" tabindex="0" role="region" aria-label="Infinite object grid" aria-describedby="objects-instructions">
 <div class="objects-layer" aria-hidden="true"></div><div class="objects-empty" hidden><p>No objects match these filters.</p><button class="objects-reset" type="button" data-reset-filters>Clear filters</button></div></div>
