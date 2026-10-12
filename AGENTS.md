@@ -347,3 +347,9 @@ When changing an element shared across pages, apply the same design and behavior
 ## Finds image workflow — 11 October 2026
 
 For each new product, research its most iconic or well-recognized color, size and variation, with source evidence. Explicit owner-selected variants take precedence. Choose a clear photograph that best showcases the complete product as the main image, remove its background for the canvas, and apply the shared warm, natural photo treatment to match the collection. Preserve original product colors, geometry, detail and native resolution. Include no more than four authentic detail photos, combining different angles and real-use views where strong sources exist. Resolution and usable product detail take priority over reaching four images; never pad the gallery with duplicates or invented views. Follow `docs/FINDS-CATALOG-PROCESS.md` and disclose any unresolved quality or source gap.
+
+## Verification scope — 12 October 2026
+
+For every medium-to-large update, inspect the actual rendered result at desktop and mobile widths and exercise the affected interactions in the running site before reporting completion. Source review, automated checks, or screenshots alone do not replace interaction testing. Test the relevant opening, closing, navigation, selection, hover, touch, and keyboard behavior as applicable, and confirm the resulting UI state. Include affected English and Japanese routes and shared components. Save visual proof and report any verification that could not be completed.
+
+Simple copy, spacing, and styling-only edits may use lighter verification appropriate to their scope; a full desktop/mobile interaction pass is not required for those changes. This scope guidance supersedes the expectation in section 9 to run every viewport and interaction check for every minor edit.

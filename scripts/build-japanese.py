@@ -83,7 +83,7 @@ class JapanesePage(HTMLParser):
             self.output.append('になれることを願って。')
         else: self.output.append(escape(translate(data),quote=False))
 
-for path in ['', 'about/', 'objects/']:
+for path in ['', 'about/', 'objects/', 'contact/', 'work/']:
     source = ROOT / (path + 'index.html')
     destination = ROOT / ('ja/' + path + 'index.html')
     parser = JapanesePage(path)

@@ -1,0 +1,73 @@
+/* Contact is a centered reading column rather than a drawer. */
+.contact-page-main{width:min(680px,calc(100% - 48px));margin-inline:auto;padding:144px 0 96px}
+.contact-page-form{color:var(--ink)}
+.contact-page .contact-sheet{width:100%;height:auto;margin:0;padding:0;overflow:visible;background:transparent;transform:none;transition:none}
+.contact-page .contact-head{margin-bottom:32px}
+.contact-page .contact-form{display:flex;flex-direction:column;gap:28px}
+.contact-page .contact-title{font:700 48px/1.15 var(--font);text-transform:none;letter-spacing:0}
+.contact-page .contact-intro{font:400 22px/1.4 var(--font);text-transform:none;color:var(--sub-gray);margin-top:-16px}
+.contact-page .contact-notice{font:400 13px/1.5 var(--font);color:var(--sub-gray)}
+.contact-page .field{margin:0;width:100%;min-width:0}
+.contact-page .field-input{background:transparent!important;transition:background-color 180ms,border-color 180ms;padding:12px;box-sizing:border-box;width:100%}
+.contact-page .field-input:focus{background:var(--white)!important;outline:none;border-bottom-color:var(--red)}
+.contact-page .field-label{transition:color 180ms}
+.contact-page .field:focus-within .field-label{color:var(--red)}
+.contact-page .chips{display:flex;flex-wrap:wrap;gap:8px}
+.contact-page .chip span{transition:background-color 180ms,color 180ms,transform 180ms cubic-bezier(.3,1.4,.5,1)}
+.contact-page .chip:active span{transform:translateY(2px)}
+.contact-page .contact-foot{margin-top:12px}
+.contact-page .contact-send{align-self:flex-start}
+.contact-page .contact-send:hover .send-arrow{translate:4px 0}
+.contact-page .send-arrow{transition:translate 180ms cubic-bezier(.3,1.4,.5,1)}
+.contact-page .contact-fallback{margin-top:24px}
+@media(max-width:767px){.contact-page-main{width:calc(100% - 48px);padding:112px 0 64px}.contact-page .contact-title{font-size:36px}.contact-page .contact-intro{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.contact-page :is(.field-input,.field-label,.chip span,.send-arrow){transition:none}.contact-page .chip:active span,.contact-page .contact-send:hover .send-arrow{transform:none;translate:none}}
+.contact-page #contact .contact-title{font:700 48px/1.15 var(--font);text-transform:none;letter-spacing:0}
+.contact-page #contact .contact-intro{text-transform:none;letter-spacing:0}
+@media(max-width:767px){.contact-page #contact .contact-title{font-size:36px}}
+.contact-page #contact .contact-sheet{border:0;padding:0;background:transparent;letter-spacing:0}
+.contact-page #contact .contact-head{justify-content:flex-start;margin-bottom:32px}
+.contact-page #contact .contact-eyes{display:flex}
+.contact-page #contact .contact-intro{font:400 22px/1.4 var(--font);color:var(--sub-gray)}
+.contact-page #contact .contact-notice{text-transform:none;letter-spacing:0}
+@media(max-width:767px){.contact-page #contact .contact-intro{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.contact-page #contact .contact-eyes{display:none}}
+.contact-page #contact .chip input:not(:checked)+span{background:transparent}
+.contact-page #contact .contact-foot{display:flex;flex-direction:column;align-items:stretch}
+.contact-page #contact .contact-send{display:flex;width:100%;max-width:none;justify-content:center;align-items:center;gap:8px;min-height:52px;padding:12px 20px;border:1px solid var(--red);background:var(--red);color:var(--white);font:500 var(--type-body)/1.4 var(--font);letter-spacing:0;text-transform:none}
+.contact-page #contact .contact-send:is(:hover,:focus-visible){color:var(--white);background:var(--ink);border-color:var(--ink)}
+/* More room for the opening message. */
+.contact-page #contact .field-area{min-height:200px}
+/* Editorial introduction beside the working form. */
+.contact-page-main{width:min(1040px,calc(100% - 96px));padding-top:144px}
+.contact-page-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);column-gap:80px;align-items:start}
+.contact-page-heading{display:flex;flex-direction:column;gap:24px;min-width:0}
+.contact-page #contact .contact-page-heading .contact-intro{margin:0}
+.contact-page #contact .contact-sheet{min-width:0}
+.contact-page #contact .contact-head{display:none}
+@media(max-width:767px){
+ .contact-page-main{width:calc(100% - 48px);padding-top:112px}
+ .contact-page-form{grid-template-columns:minmax(0,1fr);gap:40px}
+}
+@media(min-width:768px) and (max-width:1099px){.contact-page-form{column-gap:48px}}
+
+@media(min-width:1100px){
+ .contact-page-main{width:calc(100% - min(27.7778vw,400px) - 128px);max-width:var(--column);margin-left:auto;margin-right:128px}
+ .contact-page-form{column-gap:48px}
+}
+@media(min-width:768px) and (max-width:1099px){.contact-page-main{width:calc(100% - 48px);margin-inline:24px}}
+
+/* One reading column: introduction first, then the form. */
+.contact-page-main{width:min(680px,calc(100% - 48px))}
+.contact-page-form{grid-template-columns:minmax(0,1fr);gap:48px}
+@media(min-width:1100px){
+ .contact-page-main{width:min(680px,calc(100% - min(27.7778vw,400px) - 128px));margin-left:calc(100% - min(var(--column),calc(100% - min(27.7778vw,400px) - 128px)) - 128px);margin-right:auto}
+}
+@media(min-width:768px) and (max-width:1099px){.contact-page-main{margin-left:24px;margin-right:auto}}
+@media(max-width:767px){.contact-page-form{gap:40px}}
+
+/* Center the single contact column at every width. */
+.contact-page-main{width:min(680px,calc(100% - 48px));margin-inline:auto}
+
+.contact-page-main{width:calc(100% - 48px);max-width:var(--column);margin-inline:auto}
+@media(min-width:1100px){.contact-page-main{width:calc(100% - min(27.7778vw,400px) - 128px);margin-left:auto;margin-right:128px}}

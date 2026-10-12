@@ -1434,3 +1434,21 @@ Alessi’s blue thermoplastic-resin spoon by Achille and Pier Giacomo Castiglion
 
 ### Furoshiki Shiki Card Case — 11 October 2026
 Owner-selected yellow Samira Boon card case. Four original designer-store photographs: complete yellow case, pink case unfolded with cards, pink case with coins, and lime variation. Yellow original 2032 × 1334; native square overview crop and original-RGB alpha-only canvas cutout, no enlargement. Designer store purchase link: https://shop.samiraboon.com/product-page/furoshiki-shiki-card-case-1 .
+
+### 11 October — Tumbler 1709 removed
+
+Removed from Finds at the owner’s request. The complete record is preserved in `_archive/finds-removed/nuutajarvi-tumbler-1709.json`; original photographs and source evidence remain archived.
+
+### 11 October — Tokyo Balance Fragrance Hair Oil removed
+
+Removed from Finds at the owner’s request. Catalog record preserved in `_archive/finds-removed/diffar-spicy-wood-hair-oil.json`; original photographs remain available.
+
+### Floyd Cabin Aluminum — 11 October
+
+Official source: https://floyd.one/products/floyd-cabin-aluminum . Selected the only listed Silverglider variant with orange wheels. Four distinct official native 2000×2000 photographs: three-quarter overview, front, open interior, TSA lock. CDN original URLs retained in catalog. Overview reframed with a native 1500px square crop; alpha-only edge-connected white mask for the canvas, RGB equality verified. Original retained at `img/objects/floyd-cabin-aluminum-original.webp`. Category tag: Travel accessories.
+
+Quality exception: the official 2000px overview includes substantial padding; usable product height is approximately 1135px, slightly below the 1200px target. No upscaling applied. Full product confirmed in desktop and phone modals.
+
+## Jellycat — Amuseables Sports Basketball
+
+Owner-selected [official product](https://eu.jellycat.com/amuseables-sports-basketball/), AS2BK. Four authentic official photographs: complete seated overview, standing view, side, and back. Original files are 1000px square; native-resolution exception recorded, no upscaling. Canvas uses alpha-only masking with unchanged RGB; original retained. First gallery keeps the complete product with breathing room.

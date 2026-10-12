@@ -9,6 +9,7 @@
  * Notion form itself.
  */
 (() => {
+  if (!document.querySelector('#contact') && !document.querySelector('[data-contact]')) return;
   const t = window.SiteLanguage?.t || (text => text);
   if (!document.querySelector('#contact')) {
     document.body.insertAdjacentHTML('beforeend', `
@@ -65,7 +66,7 @@
   const contact = document.querySelector('#contact');
   window.SiteLanguage?.translate(contact);
   const contactForm = document.querySelector('#contact-form');
-  if (contact && contactForm && typeof contact.showModal === 'function') {
+  if (contact && contactForm && (typeof contact.showModal === 'function' || contact.classList.contains('contact-page-form'))) {
     const eyes = contact.querySelector('.contact-eyes');
     const cStatus = contact.querySelector('#contact-status');
     const send = contactForm.querySelector('.contact-send');
@@ -118,6 +119,18 @@
         contactForm.classList.toggle('is-ready', contactForm.checkValidity());
       });
     });
+    if (contact.classList.contains('contact-page-form')) {
+      contactForm.querySelectorAll('input[type="radio"]').forEach(r => {
+        let wasSelected=false;
+        const remember=()=>{wasSelected=r.checked;};
+        r.closest('label').addEventListener('pointerdown',remember);
+        r.addEventListener('keydown',event=>{if(event.key===' ')remember();});
+        r.addEventListener('click',()=>{
+          if(wasSelected){r.checked=false;r.dispatchEvent(new Event('change',{bubbles:true}));}
+          wasSelected=false;
+        });
+      });
+    }
     contactForm.querySelectorAll('input[type="radio"]').forEach((r) => r.addEventListener('change', () => {
       updateMessagePrompt();
       contactForm.classList.toggle('is-ready', contactForm.checkValidity());

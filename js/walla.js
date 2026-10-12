@@ -40,11 +40,33 @@
   document.fonts.ready.then(queueScene);
   paintScene();
   // Never hold a user on the landing sequence if they start navigating.
-  const finishLanding = () => document.documentElement.classList.remove('is-landing');
+  let openingFrame=0, openingAutomatically=false;
+  const finishLanding = () => {
+    document.documentElement.classList.remove('is-landing');
+    cancelAnimationFrame(openingFrame);openingFrame=0;openingAutomatically=false;
+  };
+  function revealIntroduction() {
+    finishLanding();
+    if(!heroCover || reduced.matches || scrollY>4 || document.hidden)return;
+    const start=performance.now(),duration=1500,target=heroCover.offsetHeight;
+    openingAutomatically=true;
+    function step(now){
+      if(reduced.matches){finishLanding();return;}
+      const progress=Math.min(1,(now-start)/duration);
+      const ease=progress<.5?4*progress**3:1-(-2*progress+2)**3/2;
+      window.scrollTo({top:target*ease,behavior:'instant'});
+      if(progress<1)openingFrame=requestAnimationFrame(step);
+      else{finishLanding();queueScene();}
+    }
+    openingFrame=requestAnimationFrame(step);
+  }
+  // User input always takes over from the automatic opening.
+  ['wheel','touchstart','pointerdown'].forEach(type=>addEventListener(type,()=>{if(openingAutomatically)finishLanding();},{passive:true}));
+  addEventListener('visibilitychange',()=>{if(document.hidden&&openingAutomatically)finishLanding();});
   document.querySelector('.landing-cover')?.addEventListener('animationend', event => {
-    if (event.animationName === 'landing-wipe') finishLanding();
+    if (event.animationName === 'landing-wipe') revealIntroduction();
   });
-  addEventListener('scroll', () => { if (scrollY > 4) finishLanding(); }, {passive:true});
+  addEventListener('scroll', () => { if (scrollY > 4 && !openingAutomatically) finishLanding(); }, {passive:true});
   addEventListener('keydown', event => { if (['Tab','PageDown','End','ArrowDown',' '].includes(event.key)) finishLanding(); });
   addEventListener('pageshow', () => { if (scrollY > 4) finishLanding(); });
   reduced.addEventListener('change', () => { if (reduced.matches) finishLanding(); });
@@ -118,9 +140,11 @@
       const start = box.top - hero.getBoundingClientRect().top;
       // Elastic overscroll can report negative offsets; keep the opening anchored.
       const scrollTop = Math.max(0, scrollY);
-      const progress = Math.max(0, Math.min(1, scrollTop / Math.max(1, start - 16)));
-      const scale = reduced.matches ? (progress === 1 ? 96 / box.width : 1) : 1 - progress * (1 - 96 / box.width);
-      const logoTop = Math.max(16, start - scrollTop);
+      // Logo and Intro settle on the same scroll endpoint: the hero clears.
+      const progress = Math.max(0, Math.min(1, scrollTop / Math.max(1, hero.offsetHeight)));
+      const dockWidth = innerWidth < 768 ? 64 : 96;
+      const scale = reduced.matches ? (progress === 1 ? dockWidth / box.width : 1) : 1 - progress * (1 - dockWidth / box.width);
+      const logoTop = start + (16 - start) * progress;
       if (caption) {
         // Keep the caption attached beneath the shrinking mark; fade only in
         // the final quarter of the docking movement.

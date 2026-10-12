@@ -1,0 +1,70 @@
+{
+  "id": "diffar-spicy-wood-hair-oil",
+  "name": "Tokyo Balance Fragrance Hair Oil",
+  "brand": "Diffar",
+  "category": "living",
+  "tags": [
+    "Personal care"
+  ],
+  "description": "Diffar’s Tokyo Balance fragrance hair oil pairs geranium and rose with hinoki, sandalwood and vetiver. The collection brings six scents together in distinctive, colorful bottles.",
+  "productUrl": "https://diffar.jp/products/11001",
+  "sourceUrl": "https://diffar.jp/products/11001",
+  "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/51823_img01_43ab8ab8-ff39-4f53-a2f0-38ca2cbebeef.png?v=1725535365",
+  "gallery": [
+    {
+      "image": "img/objects/gallery/diffar-11001-scene.jpg",
+      "width": 1500,
+      "height": 1500,
+      "sourceUrl": "https://diffar.jp/products/11001",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/11001_thumb_8eaead2c-941a-4017-989f-4b3ba9b9438d.jpg?v=1726747069"
+    },
+    {
+      "image": "img/objects/gallery/diffar-21612-scene.jpg",
+      "width": 1500,
+      "height": 1500,
+      "sourceUrl": "https://diffar.jp/products/21612",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/21612_thumb_ff109e5d-db25-44cc-b861-2ee83a3cc96e.jpg?v=1726747086"
+    },
+    {
+      "image": "img/objects/gallery/diffar-31407-scene.jpg",
+      "width": 1500,
+      "height": 1500,
+      "sourceUrl": "https://diffar.jp/products/31407",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/31407_thumb_5f138392-8a78-4f98-86e6-59db33a1e242.jpg?v=1726747098"
+    },
+    {
+      "image": "img/objects/gallery/diffar-41504-scene.jpg",
+      "width": 1500,
+      "height": 1500,
+      "sourceUrl": "https://diffar.jp/products/41504",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_thumb_5742cf60-02b8-4821-a75a-0f8151202908.jpg?v=1726747109"
+    }
+  ],
+  "variantName": "11001 Tokyo Balance",
+  "colorwayEvidence": {
+    "basis": "Owner-selected Tokyo Balance product link; printed 11001 checked against official photo",
+    "notes": "Gallery also shows Woody Earthy, Herbal Floral and Japanese Citrus from the official collection."
+  },
+  "usageCaveat": "Source-credited original photography for private preview; rights clearance not verified.",
+  "image": "img/objects/gallery/diffar-11001-main.png",
+  "width": 1000,
+  "height": 2370,
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Official transparent PNG retained at native resolution; CSS contain with optical breathing room and shared warm grade",
+    "nativeSourceDimensions": [
+      1000,
+      2370
+    ],
+    "upscaled": false
+  },
+  "catalogAudit": {
+    "reviewed": "2026-10-11",
+    "notes": [
+      "Complete bottle framed without portrait cover cropping; four native 1500px square official variant scenes."
+    ],
+    "sourceLimitations": []
+  },
+  "imageClass": "diffar-bottle",
+  "hoverImage": "img/objects/gallery/diffar-11001-scene.jpg"
+}

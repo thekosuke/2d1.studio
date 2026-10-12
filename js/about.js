@@ -1,38 +1,6 @@
-/* About: under the short version, the essay waits folded under a fade. A click
- * on the fading lines (or Enter, once they're focused) unfolds it in place.
- * Without JavaScript the whole essay is simply there. */
+/* About: a complete, continuously readable article. */
 (() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const body = document.querySelector('.essay-body');
-  const rest = document.getElementById('essay-rest');
-  const more = document.querySelector('.essay-more');
-
-  if (body && rest && more) {
-    body.classList.add('is-folded');
-    more.hidden = false;
-    const unfold = () => {
-      if (!body.classList.contains('is-folded')) return;
-      const from = rest.offsetHeight;
-      body.classList.replace('is-folded', 'is-open');
-      more.setAttribute('aria-expanded', 'true');
-      more.hidden = true;
-      const to = rest.offsetHeight;
-      const done = () => body.classList.add('is-done');
-      if (reducedMotion.matches) {
-        done();
-      } else {
-        rest.animate([{ height: `${from}px` }, { height: `${to}px` }], {
-          duration: Math.min(1400, 700 + (to - from) / 8),
-          easing: 'cubic-bezier(.2, .8, .2, 1)',
-        }).finished.then(done, done);
-      }
-      rest.setAttribute('tabindex', '-1');
-      rest.focus({ preventScroll: true });
-    };
-    more.addEventListener('click', unfold);
-    rest.addEventListener('focusin', unfold);   // a link inside it, reached with Tab
-  }
-
   /* In-page links (Skip to content) move focus without adding #main to the address. */
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href^="#"]');

@@ -551,6 +551,17 @@
       1440
     ]
   },
+  "img/objects/cutouts/floyd-cabin-aluminum.webp": {
+    "hash": "50c13d4a81f1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
   "img/objects/cutouts/freckle-green-native-v2.webp": {
     "hash": "7f79c86eabeb",
     "recipe": "lossless-lanczos-v1",
@@ -720,6 +731,17 @@
   },
   "img/objects/cutouts/iwate-canning-gift-stock.webp": {
     "hash": "27da935562d9",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/jellycat-amuseables-basketball.webp": {
+    "hash": "406a1e9318cf",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       192,
@@ -1006,17 +1028,6 @@
   },
   "img/objects/cutouts/notabag-original-red-native-v2.webp": {
     "hash": "3fc034a65aea",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      192,
-      256,
-      480,
-      960,
-      1440
-    ]
-  },
-  "img/objects/cutouts/nuutajarvi-tumbler-1709.webp": {
-    "hash": "9e5ff25a5879",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       192,
@@ -2457,57 +2468,6 @@
       1920
     ]
   },
-  "img/objects/gallery/diffar-11001-main.png": {
-    "hash": "78662a0c709f",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      192,
-      256,
-      480,
-      960,
-      1440
-    ]
-  },
-  "img/objects/gallery/diffar-11001-scene.jpg": {
-    "hash": "33c8fc0fe5ea",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
-  "img/objects/gallery/diffar-21612-scene.jpg": {
-    "hash": "0e5e045ed6cd",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
-  "img/objects/gallery/diffar-31407-scene.jpg": {
-    "hash": "73e359499e0b",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
-  "img/objects/gallery/diffar-41504-scene.jpg": {
-    "hash": "7ce4ef971f0e",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
   "img/objects/gallery/dusen-everybody-wall-clock-audit-native-1.jpg": {
     "hash": "8fdf79a81081",
     "recipe": "lossless-lanczos-v1",
@@ -2730,6 +2690,46 @@
   },
   "img/objects/gallery/flowerpot-vp9-orange-full-square.jpg": {
     "hash": "9df5fa68cea8",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/floyd-cabin-aluminum-1.webp": {
+    "hash": "6c28aad2df77",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/floyd-cabin-aluminum-2.webp": {
+    "hash": "adfd972b3aa1",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/floyd-cabin-aluminum-3.webp": {
+    "hash": "8592bc5817dc",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/floyd-cabin-aluminum-4.webp": {
+    "hash": "9a13707f2d7d",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       640,
@@ -3220,6 +3220,46 @@
   },
   "img/objects/gallery/iwate-canning-gift-stock-audit-adad76f622.jpg": {
     "hash": "adad76f622cf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/jellycat-amuseables-basketball-1.webp": {
+    "hash": "a990ad3d5f4a",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/jellycat-amuseables-basketball-2.webp": {
+    "hash": "481c556f0dc8",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/jellycat-amuseables-basketball-3.webp": {
+    "hash": "e251cf6df126",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/jellycat-amuseables-basketball-4.webp": {
+    "hash": "d47edfcb875f",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       640,
@@ -4148,16 +4188,6 @@
       1920
     ]
   },
-  "img/objects/gallery/nuutajarvi-tumbler-1709-2.webp": {
-    "hash": "ae5ecf9c3551",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
   "img/objects/gallery/palaset-im-ok-side-1.webp": {
     "hash": "e3e9d185c528",
     "recipe": "lossless-lanczos-v1",
@@ -4674,26 +4704,6 @@
       1920
     ]
   },
-  "img/objects/gallery/tumbler-1709-red-square.jpg": {
-    "hash": "b0d7f865ce0b",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
-  "img/objects/gallery/tumbler-1709-top.jpg": {
-    "hash": "332f12135fc9",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
   "img/objects/gallery/ufo-cow-urban-native-b.png": {
     "hash": "ac4abbb85b6e",
     "recipe": "lossless-lanczos-v1",
@@ -4926,16 +4936,6 @@
   },
   "img/objects/not-boring-camera-art-model.jpg": {
     "hash": "1ca6b87207d9",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
-  "img/objects/nuutajarvi-tumbler-1709.jpg": {
-    "hash": "ff91e78104ad",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       640,

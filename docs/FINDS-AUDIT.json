@@ -1225,100 +1225,6 @@
       }
     },
     {
-      "id": "nuutajarvi-tumbler-1709",
-      "name": "Tumbler 1709",
-      "brand": "Nuutajärvi",
-      "selectedVariant": "Tumbler 1709",
-      "transparentPrimary": true,
-      "primaryPixels": [
-        1200,
-        1200
-      ],
-      "primaryNativeSubjectPixels": [
-        330,
-        1080
-      ],
-      "subjectBounds": [
-        435,
-        60,
-        765,
-        1140
-      ],
-      "galleryCount": 4,
-      "possibleSimilarPhotoPairs": [],
-      "distinctnessReview": null,
-      "photos": [
-        {
-          "image": "img/objects/gallery/tumbler-1709-red-square.jpg",
-          "width": 1080,
-          "height": 1080,
-          "nativeLongEdgeAtLeast1200": false,
-          "sha256": "b0d7f865ce0b25b38e386bbd42ffe2612c72dae1408d70cb80526a077c45efeb",
-          "sourceUrl": "https://www.ajan-muisto.fi/p/3148-juomalasi-nuutajarvi",
-          "sourceImageUrl": "https://www.ajan-muisto.fi/WebRoot/VilkasStoreFI/Shops/ajan-muisto/61BB/1E70/76A5/9FFA/20D0/0A0C/0616/D976/190219-06.JPG"
-        },
-        {
-          "image": "img/objects/nuutajarvi-tumbler-1709.jpg",
-          "width": 1080,
-          "height": 1351,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "ff91e78104adffe70ffaa15a8ef595bd07ee7fa5ec90bfca5d40ee7b6cbe17e6",
-          "sourceUrl": "https://www.instagram.com/p/Dcije-fksXb/",
-          "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/788550045_18557055925073002_2817358386360260374_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzk3Mjg5MzcxODUyMDM2Njg2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=zCiq9DtD_OcQ7kNvwGIEk3-&_nc_oc=Adpp3h1qXgWyQA2OW5OkugFclQoawHCOFeVQo8C98oPdUAUDUFcF6GEwHxQIzf8wrHTHpbtmR9UHNH003ZRUyl2U&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=jFoXN-l8yzp-0w0nfR0lig&_nc_ss=7b689&oh=00_AQOIHJe833C9C647zX51JX53TQixW2gEeWltfsmcDt0vig&oe=6ACEA6DD"
-        },
-        {
-          "image": "img/objects/gallery/nuutajarvi-tumbler-1709-2.webp",
-          "width": 1080,
-          "height": 1351,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "ae5ecf9c355120832ac702bb706bc58352f522e20b51eaace17ce69caf140a37",
-          "sourceUrl": "https://www.instagram.com/p/Dcije-fksXb/?img_index=1",
-          "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/787178171_18557055934073002_4708606169349439400_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=Mzk3Mjg5MzcxOTc2MTg5MzU5NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_b7tOTKLbKIQ7kNvwGSlsbR&_nc_oc=AdoV-MKu6vgALUIgLYDVj4Bf4Zp8mQ9xc_bP6dSYjCMdlqPOeR3AjkXiGFvfLpAtWAWcyYukvTdCQruz5WLx4xum&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=jFoXN-l8yzp-0w0nfR0lig&_nc_ss=7b689&oh=00_AQP-cmaa6pH6Kk-uug3rVxeISu0ALBCV9aN67LVo3fuwfA&oe=6ACEB54B"
-        },
-        {
-          "image": "img/objects/gallery/tumbler-1709-top.jpg",
-          "width": 660,
-          "height": 660,
-          "nativeLongEdgeAtLeast1200": false,
-          "sha256": "332f12135fc9177fede2be0d7183676df0dafbd5bff743ce79620485d9dc3c40",
-          "sourceUrl": "https://www.primitive-sanchikagu.com/SHOP/2302-001-01.html",
-          "sourceImageUrl": "https://www.primitive-sanchikagu.com/pic-labo/2302-001-01_3.jpg"
-        }
-      ],
-      "issues": [
-        "Primary native product detail below 1200px long edge",
-        "One or more photographs below 1200px long edge",
-        "Original/iconic colorway evidence remains unresolved"
-      ],
-      "colorwayEvidence": {
-        "status": "unverified",
-        "findings": [
-          {
-            "url": "https://www.primitive-sanchikagu.com/SHOP/2302-001-01.html",
-            "finding": "Independent vintage catalog entries confirm1709 production1959–1965 in several colors; no authoritative first-color hierarchy was found. Existing entry is a group, not a single color specimen."
-          },
-          {
-            "url": "https://elephant-life.com/collections/nuutajarvi/products/kfgl1888",
-            "finding": "Independent vintage catalog entries confirm1709 production1959–1965 in several colors; no authoritative first-color hierarchy was found. Existing entry is a group, not a single color specimen."
-          },
-          {
-            "url": "https://laatutavara.com/tuote/6896/",
-            "finding": "Independent vintage catalog entries confirm1709 production1959–1965 in several colors; no authoritative first-color hierarchy was found. Existing entry is a group, not a single color specimen."
-          }
-        ],
-        "sources": []
-      },
-      "editorialReview": {
-        "reviewed": "2026-10-10",
-        "variantConfidence": "high product family; original single-color status unresolved",
-        "desiredVariant": "Existing multicolor1959–1965 Tumbler1709 group",
-        "notes": [],
-        "sourceLimitations": [
-          "Two vintage glass-group photographs; additional identical-specimen/original-color evidence unavailable."
-        ]
-      }
-    },
-    {
       "id": "block-design-play-tin",
       "name": "Tinned Goods — Play",
       "brand": "Block Design",
@@ -6844,79 +6750,6 @@
       }
     },
     {
-      "id": "diffar-spicy-wood-hair-oil",
-      "name": "Tokyo Balance Fragrance Hair Oil",
-      "brand": "Diffar",
-      "selectedVariant": "11001 Tokyo Balance",
-      "transparentPrimary": true,
-      "primaryPixels": [
-        1000,
-        2370
-      ],
-      "primaryNativeSubjectPixels": null,
-      "subjectBounds": [
-        0,
-        0,
-        1000,
-        2369
-      ],
-      "galleryCount": 4,
-      "possibleSimilarPhotoPairs": [],
-      "distinctnessReview": null,
-      "photos": [
-        {
-          "image": "img/objects/gallery/diffar-11001-scene.jpg",
-          "width": 1500,
-          "height": 1500,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "33c8fc0fe5ea6670eca32c69984d0ec7a7712539c058c4cb8fd78c5207cd997c",
-          "sourceUrl": "https://diffar.jp/products/11001",
-          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/11001_thumb_8eaead2c-941a-4017-989f-4b3ba9b9438d.jpg?v=1726747069"
-        },
-        {
-          "image": "img/objects/gallery/diffar-21612-scene.jpg",
-          "width": 1500,
-          "height": 1500,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "0e5e045ed6cd9a0da22f1eacd10bf14ded2d2e005ca9bba42a3fc85098bd840f",
-          "sourceUrl": "https://diffar.jp/products/21612",
-          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/21612_thumb_ff109e5d-db25-44cc-b861-2ee83a3cc96e.jpg?v=1726747086"
-        },
-        {
-          "image": "img/objects/gallery/diffar-31407-scene.jpg",
-          "width": 1500,
-          "height": 1500,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "73e359499e0b295a6e69fce04fcb353aafcfb042fafdf3694ddc20e1cbb3d46c",
-          "sourceUrl": "https://diffar.jp/products/31407",
-          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/31407_thumb_5f138392-8a78-4f98-86e6-59db33a1e242.jpg?v=1726747098"
-        },
-        {
-          "image": "img/objects/gallery/diffar-41504-scene.jpg",
-          "width": 1500,
-          "height": 1500,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "7ce4ef971f0e51160e57d14be6cdca1097e1cd5a5246e7ca0960004c3659d807",
-          "sourceUrl": "https://diffar.jp/products/41504",
-          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_thumb_5742cf60-02b8-4821-a75a-0f8151202908.jpg?v=1726747109"
-        }
-      ],
-      "issues": [
-        "Original/iconic colorway evidence remains unresolved"
-      ],
-      "colorwayEvidence": {
-        "basis": "Owner-selected Tokyo Balance product link; printed 11001 checked against official photo",
-        "notes": "Gallery also shows Woody Earthy, Herbal Floral and Japanese Citrus from the official collection."
-      },
-      "editorialReview": {
-        "reviewed": "2026-10-11",
-        "notes": [
-          "Complete bottle framed without portrait cover cropping; four native 1500px square official variant scenes."
-        ],
-        "sourceLimitations": []
-      }
-    },
-    {
       "id": "kay-bojesen-songbird-sunshine",
       "name": "Songbird Sunshine",
       "brand": "Kay Bojesen",
@@ -8923,6 +8756,143 @@
       ],
       "issues": [
         "Primary native product detail below 1200px long edge",
+        "Original/iconic colorway evidence remains unresolved"
+      ],
+      "colorwayEvidence": {},
+      "editorialReview": {}
+    },
+    {
+      "id": "floyd-cabin-aluminum",
+      "name": "Cabin Aluminum",
+      "brand": "Floyd",
+      "selectedVariant": "Silverglider with orange wheels",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1500,
+        1500
+      ],
+      "primaryNativeSubjectPixels": [
+        735,
+        1135
+      ],
+      "subjectBounds": [
+        389,
+        213,
+        1207,
+        1369
+      ],
+      "galleryCount": 4,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/floyd-cabin-aluminum-1.webp",
+          "width": 1500,
+          "height": 1500,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "6c28aad2df7711be757ccfbcc4e19f40c04949adda1d9341213a3f5d02fb3f86",
+          "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+          "sourceImageUrl": null
+        },
+        {
+          "image": "img/objects/gallery/floyd-cabin-aluminum-2.webp",
+          "width": 2000,
+          "height": 2000,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "adfd972b3aa1f8f5b4993a4fa593a251b1de062959a86d5314dacf7dda2242fa",
+          "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+          "sourceImageUrl": null
+        },
+        {
+          "image": "img/objects/gallery/floyd-cabin-aluminum-3.webp",
+          "width": 2000,
+          "height": 2000,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "8592bc5817dc537ac7168142f4180f7e4c70443afafb4c375bb8e376363ca2e3",
+          "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+          "sourceImageUrl": null
+        },
+        {
+          "image": "img/objects/gallery/floyd-cabin-aluminum-4.webp",
+          "width": 2000,
+          "height": 2000,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "9a13707f2d7dc62c8139c09d3e795ccedca4520771bef1fbe4dcd402aaf37794",
+          "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+          "sourceImageUrl": null
+        }
+      ],
+      "issues": [
+        "Primary native product detail below 1200px long edge",
+        "Original/iconic colorway evidence remains unresolved"
+      ],
+      "colorwayEvidence": {},
+      "editorialReview": {}
+    },
+    {
+      "id": "jellycat-amuseables-basketball",
+      "name": "Amuseables Sports Basketball",
+      "brand": "Jellycat",
+      "selectedVariant": "AS2BK — orange basketball with red sneakers",
+      "transparentPrimary": true,
+      "primaryPixels": [
+        1000,
+        1000
+      ],
+      "primaryNativeSubjectPixels": [
+        816,
+        724
+      ],
+      "subjectBounds": [
+        97,
+        140,
+        913,
+        864
+      ],
+      "galleryCount": 4,
+      "possibleSimilarPhotoPairs": [],
+      "distinctnessReview": null,
+      "photos": [
+        {
+          "image": "img/objects/gallery/jellycat-amuseables-basketball-1.webp",
+          "width": 1000,
+          "height": 1000,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "a990ad3d5f4ad7cd1ac97d101963db6880e8c651f5aa4eb89f4d6c1ba0e2ba18",
+          "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+          "sourceImageUrl": null
+        },
+        {
+          "image": "img/objects/gallery/jellycat-amuseables-basketball-2.webp",
+          "width": 1000,
+          "height": 1000,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "481c556f0dc8253cf2ddf2c10308ff0a5bcfc220684111cf1c383a4589d2f685",
+          "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+          "sourceImageUrl": null
+        },
+        {
+          "image": "img/objects/gallery/jellycat-amuseables-basketball-3.webp",
+          "width": 1000,
+          "height": 1000,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "e251cf6df1260bdd53f948324b5c62cff76ff9c4d9bba7731f61e6fab7ee427a",
+          "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+          "sourceImageUrl": null
+        },
+        {
+          "image": "img/objects/gallery/jellycat-amuseables-basketball-4.webp",
+          "width": 1000,
+          "height": 1000,
+          "nativeLongEdgeAtLeast1200": false,
+          "sha256": "d47edfcb875f84a5694d45739588b163baa91d29d0d5d4371f907bc4452744e3",
+          "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+          "sourceImageUrl": null
+        }
+      ],
+      "issues": [
+        "Primary native product detail below 1200px long edge",
+        "One or more photographs below 1200px long edge",
         "Original/iconic colorway evidence remains unresolved"
       ],
       "colorwayEvidence": {},

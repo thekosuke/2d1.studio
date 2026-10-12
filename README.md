@@ -10,7 +10,7 @@ Run `python3 scripts/preview.py`, then open http://localhost:4173. The preview s
 
 Source: [Website 2026 / updated Home](https://www.figma.com/design/z1J8lyfvwOqtHpQqfNin3x/Website-2026?node-id=298-650).
 
-Home follows the updated single-column frame: a viewport-height, red-bordered hero → introduction and More about us → Studio → Shop → Connect and social links → copyright. Community, Relationship Advice, its page anchor and profile popup are removed from both languages. Their source is preserved in `_archive/pre-cover-2026-10-09/`; `js/profile.js` is dormant.
+Home follows the updated single-column frame: a viewport-height, borderless hero → introduction and More about us → Studio → Shop → Connect and social links → copyright. Community, Relationship Advice, its page anchor and profile popup are removed from both languages. Their source is preserved in `_archive/pre-cover-2026-10-09/`; `js/profile.js` is dormant.
 
 The shared column remains capped at 960px, with a 128px desktop right gutter and left inset scaling toward 400px. Phone/tablet side insets are 24px. Desktop section padding is 128px and content gaps are 96px; Studio’s heading-to-description gap and final text/service/CTA gaps are 64px. Phones use 80px section padding and 64px gaps. English uses local Walla Bold 64px section headings, Medium 40px/48px descriptions, services, subtitles and CTAs. Phone headings are 44px and reading text is 28px/1.2. Subtitles, service details and supporting text share Sub Gray #807573 (`--sub-gray`), including contact helper text and Finds metadata and zoom track. Japanese retains Noto Sans JP at a native 24px/28px reading scale. The previous mono section labels and rules have been replaced by the heading/subtitle pairs shown in Figma; the page anchors retain their previous appearance and animation.
 
@@ -29,7 +29,7 @@ Edit English HTML and `locales/ja.json`, then run `python3 scripts/build-japanes
 ## Interactions
 
 - A fixed top-left section index, with a transparent background, appears after the hero: Studio, Shop, Connect. It fades and slides in from the left over 480ms, then reverses on exit; hidden links are inert, and reduced motion switches instantly. On phones below 768px, Studio and Shop sit inline to the left of the centered logo, with Connect on its right and 44px-high targets. Studio and Shop use a doubled mobile gap of `clamp(12px, 4vw, 32px)` (15.6px at 390px). Tablets keep the horizontal row below the logo. The index highlights the current section and uses clean-hash scrolling with focus transfer. Without JavaScript it is ordinary in-page navigation.
-- The home hero fills the viewport including its 20px Icon Red border. On arrival, a beige logo and blinking supplied pixel eyes appear on red; after 1.1 seconds, the red layer wipes bottom-to-top over 1.1 seconds. The settled hero is beige with the red mark. Scrolling or keyboard navigation dismisses the entrance immediately. There is no scroll lock. The CSS animation can finish independently of the main script.
+- The home hero fills the viewport without a border or rounded corners. On arrival, a beige logo and blinking supplied pixel eyes appear on red; after 1.1 seconds, the red layer wipes bottom-to-top over 1.1 seconds. The settled hero is beige with the red mark. Scrolling or keyboard navigation dismisses the entrance immediately. There is no scroll lock. The CSS animation can finish independently of the main script.
 - Clicking or tapping the hero (including its logo) scrolls to the intro and moves focus there without adding a hash. Swipes retain native scrolling; reduced motion jumps instantly. Once the hero clears, the docked logo retains its back-to-top action.
 - On scroll, the hero moves upward at native scroll speed while the content beneath moves more slowly, settling into normal flow once the cover clears. The parallax offset is capped so the intro’s opening line clears the hero when its bottom edge reaches 70vh, on phones and desktop. The intro begins low enough to reveal its reading-ink effect. Reduced motion and no-JavaScript use ordinary scrolling with no landing sequence.
 - The page background smoothly interpolates from Soft Beige #FAF0E6 to Ash Brown #191416 as Studio enters the reading area, then returns to beige as Studio exits. The interpolation uses scroll position and smoothstep easing, without a continuous idle animation. Reduced motion switches colors discretely; without JavaScript Studio has its own Ash Brown ground. Programmatically focused section destinations stay transparent, so arriving through an anchor cannot override the shared color blend.
@@ -620,3 +620,97 @@ Finds’ info sheet unfolds downward from the top-right collection button. While
 Finds zoom buttons are square, with vertical separators adjoining the slider. Button clicks select the next of five stops (0, 25, 50, 75, 100); dragging the range remains continuous between stops.
 
 Finds now uses lossless, content-hashed responsive delivery copies, requests only viewport-intersecting canvas photos, and preserves full-resolution originals for close viewing. Images enter independently as they decode. Detail galleries and adjacent previews select appropriately sized sources, and zoom avoids intermediate-resolution downloads. The build generates/caches delivery files automatically; `_headers` is ready for Cloudflare browser caching. See `docs/FINDS-PERFORMANCE.md` for measurements, quality verification, diagnostics and hosting notes. Initial canvas photo bytes dropped about 93% in the captured like-for-like desktop comparison; this is not a production network-speed benchmark.
+
+Finds floating controls share equal screen-edge insets: 16px desktop and 12px phone/tablet, enlarged only for device safe areas. Search sits one shared gap above the phone zoom row; the info sheet keeps its equally inset internal Collapse button.
+
+Finds’ info button now unfolds into its sheet over four sequential 250ms paper hinges, opening left then downward in three stages. The real button remains usable during the folds and moves into the top-right of the settled sheet. Temporary visual panels are hidden from assistive technology and removed on completion, close, resize or reduced-motion changes; reduced motion opens instantly.
+
+The open Finds info sheet places Collapse at top/right zero inside its border, with the pixel eyes aligned on the same row. Tumbler 1709 is removed from the active collection; its catalog record remains in `_archive/finds-removed/`.
+
+Finds info now assembles from growing square pixels originating at the disclosure. The button stays fixed, including its width, while open; eyes sit above the title. No decorative title square appears. Temporary pixels clean up on close/resize, and reduced motion opens instantly.
+
+The Finds info entrance uses a shuffled square-pixel mask over the real sheet: scattered pixels multiply over 1.05 seconds until the text, white ground and border become one surface. The disclosure remains stationary; reduced motion skips the mask.
+
+Finds keeps the Familiar Characters disclosure label while open (the indicator still changes to minus). The scattered reveal now uses approximately 12px squares for a denser pixel assembly.
+
+The Finds info sheet starts directly beneath its stationary disclosure button, with aligned right edges.
+
+Finds info sheet uses equal 24px top/bottom insets and a button-to-sheet gap matching the button’s top margin (16px desktop, 12px phone, respecting safe areas). Pixel assembly takes 650ms.
+
+Finds search offers keyboard-accessible category, color and brand suggestions above the focused field. Search matches hidden color metadata and translated color/category names. Visible product badges use broad categories without “accessories”; The Peepers is Furniture. Colors combine native transparent-image coverage with variant metadata and remain absent from product badges.
+
+Finds info now pops downward from its top-right origin with the canvas images’ scale overshoot and settle (720ms). Pixel masking is removed. Button position/label and sheet gap remain fixed; reduced motion opens instantly.
+
+Finds swaps Search to the top-right and Familiar Characters to the bottom-left (above mobile zoom). Info opens vertically upward without scaling or horizontal motion. The search filters pop downward; brands are omitted. Categories and colors support multiple selection, with OR within each group and AND between groups. Selected chips show × for removal. Colors are accessible labeled square swatches. The panel scrollbar is Ash Brown on a transparent track.
+
+The Finds product sheet follows Figma 358:649: photography credits sit on the image, a compact Product Page action follows the description; category tags and up to five actual product-color swatches sit at the bottom of the copy panel, and the ownership tally is hidden. The colors are image-derived display metadata separate from search color labels. Adjacent product previews remain below the desktop sheet; phones retain the stationary navigation footer.
+
+On Finds arrival, the search field enters downward from above and the collection info button enters upward from below, with the existing 480ms control entrance and reduced-motion fallback.
+
+Finds desktop floating controls share top and bottom centerlines; the language switch has a white ground. The product sheet follows the revised 358:649 spacing, with 16px color swatches and tags alongside them. Phones preserve the stacked controls and fixed product-action footer.
+
+About reading copy is fully opaque immediately; the word-by-word ink reveal is limited to Home. The existing essay fold remains unchanged.
+
+Contact now lives at `/contact/` and `/ja/contact/`, with a centered single-column form and real page links across active navigation and CTAs. Focus fills fields white; labels turn red, category squares respond to selection, and the pixel eyes follow field focus. The existing truthful unconnected submission handling is shared with the preserved drawer code.
+
+About is now a flat article: a centered 680px reading column, 20px/1.7 Regular body copy (18px on phones), sentence-case 28px section headings, and a 56px maximum title. No fold, reveal, or Continue reading control. Body copy is preserved; four outline headings cover the studio, its founder (awaiting personal copy), origin, and purpose. Previous article sources are archived in `_archive/about-pre-article-2026-10-12/`.
+
+Finds info uses the shared copy size for its heading and label size for compact body/note text. Two equal-width transparent red-outline actions sit flush against the inner left, right, and bottom edges: Learn more (About) and Reach out (Contact), without arrows.
+
+Home landing adds a 1.5-second laptop-opening phase after the red wipe: the rounded cover rotates away around its bottom edge while native page position advances to reveal Intro and navigation. Wheel, touch, pointer and keyboard input interrupt immediately; reduced motion, restored scroll and hidden tabs skip the phase.
+
+Contact categories have transparent unselected states and can be deselected by clicking the current choice (or pressing Space). Send is a centered, full-width rectangle with sentence-case text. The initial unconnected notice is removed; attempted submissions still explain honestly that nothing was sent.
+
+Finds search is 320px wide on desktop and fills the available second control row on phones.
+
+Contact uses two desktop columns: title/subtitle on the left and the form on the right, stacking in reading order below 768px.
+
+Finds uses matching 33px Home/search frames and a heavier search icon. The info-sheet actions share a single red divider and fill Icon Red with white labels on hover or keyboard focus; the sheet supplies the outside border.
+
+The Finds info sheet has a pixel-cross close button aligned with the eyes; closing returns focus to the info trigger.
+
+UI icon review: square-grid SVG masks in `img/icons/` now unify Finds search/clear, Home and external arrows, product navigation/close, filter removal, plus/minus, and the shared mobile menu close state. Existing pixel eyes, social icons, hero marks and CTA arrows remain. Info-sheet actions reveal a right pixel arrow on hover and keyboard focus, with reduced-motion support. Native browser cursors are preserved.
+
+Finds info-sheet paragraphs and action labels share the 16px body token; paragraph line-height is 1.6 for readability.
+
+The Finds info-sheet title is “A growing collection of everyday companions that go from having character to becoming a character.” Familiar Characters remains the trigger label.
+
+Finds search suggestions enter only vertically downward, without scaling or horizontal movement.
+
+At desktop widths of 1100px and above, the Finds info sheet occupies 50% of the viewport width.
+
+The Finds info-sheet body separates the personal introduction from the invitation to explore in two paragraphs.
+
+Zoom plus/minus icons are positioned at the exact center of their square buttons. Small navigation/search symbols use 12px frames to balance the interface labels; larger CTA and standalone action icons retain their intended scale.
+
+## Work
+
+`/work/` and `/ja/work/` showcase Aviator, Supa Team and Deep Trip in that order, using the existing original project photographs. Desktop/tablet use three columns; phones stack the cards. Each card opens a right-side, single-column project sheet over a 40% brown scrim, retaining the Work URL and grid position. The shared drawer lifecycle supports Escape, backdrop dismissal, native modal focus containment, restored trigger focus, scrolling within the sheet and reduced motion. Desktop sheets cover 60% of the viewport; phones cover the full width. Project sheets touch the top, right and bottom screen edges, with no outer margins. Without JavaScript, native details disclose the same gallery inline. Work is linked from Home, About and Contact navigation and included in the preview/Japanese builds. Each sheet includes a short project description below the title, based on the existing identity and digital design work shown in the gallery.
+
+Finds includes Jellycat’s Amuseables Sports Basketball, with a transparent original-pixel canvas image and four official gallery views. Its native 1000px photographs are recorded as a resolution exception.
+
+Work’s portfolio presentation pairs a typographic studio introduction with three project columns, short project context, supporting application images, and a direct Contact invitation. Its right-side sheets retain their edge-to-edge 60% desktop/full-width phone layout. Home’s Studio strip uses high-resolution square artwork derived from the original masters; Work uses responsive high-quality WebP sources up to 2560px (or native size). See img/projects/WALLA-SOURCES.md for provenance.
+
+Work uses a minimal, image-led three-column project index, inspired by Stockholm Design Lab’s Work page: a Selected work heading and a project name below each cover. Introductory marketing copy, card descriptions, secondary covers, and the inquiry section are removed. The full project descriptions and high-resolution galleries remain in the edge-to-edge right-side sheets. Phone layouts stack the projects.
+
+Home landing now uses a full-bleed red wipe followed by the existing 1.5-second upward scroll to Intro. The red frame, rounded corners, corner animation, and laptop rotation are removed. Input interruption, reduced-motion behavior, and English/Japanese parity remain. This supersedes earlier border/corner/laptop notes.
+
+Work project sheets explicitly override the shared form-dialog inset: fixed to the full viewport, with a 60vw sheet flush to the top, right, and bottom (100% wide on phones). Entrance and exit use a calm 640ms horizontal slide with cubic-bezier(.2,.8,.2,1), without bounce, scale, or rotation. Reduced motion is instant.
+
+The copyright and inline social links share the page navigation’s left edge across Home, About, Work, and Contact in both languages: 24px desktop/phone, 32px tablet. The footer no longer inherits the asymmetric body reading column.
+
+Footer refinement: desktop social links align with Home’s body column, while copyright remains at the navigation edge. About’s article and Contact’s complete two-column layout now begin at that same body/social edge. Tablet and phone content retains 24px insets.
+
+Home’s logo docking now shares the hero-height scroll endpoint with the Intro reveal. Position, scale, and caption fade follow the same progress, so the logo reaches its 16px dock exactly as Intro reaches its initial reading position at the end of the landing scroll.
+
+Contact is a single column: title and subtitle above the form, capped at 680px and aligned with the shared Home/social-links content edge on desktop. Phone layouts retain the 24px inset.
+
+Work’s Selected work heading and three-column project grid now share the Home/body/social-links left edge, with the same 960px maximum and 128px desktop right gutter. The heading is left aligned; mobile stays a single column.
+
+Work now shows a single sequence of large 16:9 project covers, with clear Medium project names and a restrained pixel arrow on hover/focus. The index keeps its shared body/social edge, high-resolution responsive delivery, and project sheets. This supersedes the earlier three-column Work grid.
+
+About and Contact content are centered independently of the footer, with a 680px maximum reading width and 24px minimum side insets. Contact remains single column.
+
+About and Contact retain left alignment with the social links and now use the full shared Home content width (960px maximum, 128px desktop right gutter), rather than a separately centered 680px column. Contact remains single column.
+
+Work project sheets and the index now move together over 640ms: the sheet slides from the right, while the main content and footer shift 64px left (32px on phones). Closing reverses the shift. Navigation stays anchored; reduced motion is instant without the background shift.

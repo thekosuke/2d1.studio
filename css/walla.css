@@ -89,7 +89,7 @@ html[lang="ja"] .intro-cta{font-size:24px;line-height:1.65}
 html{background:var(--page-background,var(--beige))}
 .home-page{background:var(--page-background,var(--beige))}
 .home-page .section-stack,.home-page .section-stack-inner{gap:64px}
-.home-page > .masthead{height:100vh;height:100svh;padding:24px;border:20px solid var(--red);border-radius:0 0 128px 128px;position:relative;z-index:2;justify-content:center}
+.home-page > .masthead{height:100vh;height:100svh;padding:24px;border:0;border-radius:0;position:relative;z-index:2;justify-content:center}
 .home-page > main{position:relative;z-index:1;padding-top:48px;background:var(--page-background,var(--beige))}
 .home-page > .site-footer{position:relative;z-index:1;width:100%;max-width:none;background:var(--page-background,var(--beige))}
 .js .home-page > main{transform:translateY(var(--cover-offset,0px))}
@@ -133,14 +133,12 @@ html[lang="ja"] .section-copy,html[lang="ja"] .services dt,html[lang="ja"] .serv
 /* The initial red sheet recedes upward, revealing the settled hero underneath.
    CSS completes the animation even if the main script cannot load. */
 .landing-cover{display:none}
-.js.is-landing .home-page > .masthead{animation:landing-corners 1.1s cubic-bezier(.7,0,.2,1) 1.1s both}
-.js.is-landing .landing-cover{border-radius:0 0 108px 108px;position:fixed;inset:20px 20px auto;height:calc(100vh - 40px);height:calc(100svh - 40px);z-index:35;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;background:var(--red);color:var(--beige);pointer-events:none;animation:landing-wipe 1.1s cubic-bezier(.7,0,.2,1) 1.1s both}
+.js.is-landing .landing-cover{position:fixed;inset:0;height:100vh;height:100svh;z-index:35;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;background:var(--red);color:var(--beige);pointer-events:none;animation:landing-wipe 1.1s cubic-bezier(.7,0,.2,1) 1.1s both}
 .landing-mark{position:relative;width:var(--logo-width)}
 .landing-mark>img{width:100%;height:auto}
 .landing-eyes{position:absolute;inset:0;width:100%;height:100%}
 .landing-eyes image{transform-box:fill-box;transform-origin:center;animation:landing-blink 1.05s both}
-@keyframes landing-wipe{from{clip-path:inset(0 0 0 0);border-radius:0}to{clip-path:inset(0 0 100% 0);border-radius:0 0 108px 108px;visibility:hidden}}
-@keyframes landing-corners{from{border-radius:0}to{border-radius:0 0 128px 128px}}
+@keyframes landing-wipe{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 100% 0);visibility:hidden}}
 @keyframes landing-blink{0%,12%,46%,58%,100%{transform:scaleY(1)}36%,51%{transform:scaleY(0)}}
 @media(prefers-reduced-motion:reduce){
   .js.is-landing .landing-cover{display:none}
@@ -352,3 +350,55 @@ html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd{
 
 .home-page > .language-switch.on-studio{--ink:var(--beige);background:var(--studio-background);color:var(--beige)}
 .home-page > .language-switch.on-studio a[aria-current],.home-page > .language-switch.on-studio a:hover{background:var(--beige);color:var(--studio-background)}
+
+/* Hover opens the supplied eyes within the D across every logo placement. */
+.site-logo{position:relative}
+.site-logo:not(:has(.logo-eyes))::after{content:'';position:absolute;left:38.238%;top:36.786%;width:13.993%;height:17.143%;background:url('../img/brand/eyes-on-red.svg?v=2') center/100% 100% no-repeat;pointer-events:none;transform:scaleY(0);transform-origin:center;transition:transform 120ms cubic-bezier(.3,1.4,.5,1)}
+.site-logo:is(:hover,:focus-visible)::after{transform:scaleY(1)}
+.site-logo:is(:hover,:focus-visible) .logo-eyes .logo-eye{transform:scaleY(1)!important}
+@media(prefers-reduced-motion:reduce){.site-logo::after{display:none}}
+
+/* Shared square-grid icon vocabulary. Native cursors remain familiar controls. */
+.pixel-home-arrow,.pixel-external{display:inline-block;width:14px;height:14px;flex:none;background:currentColor;mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat}
+.pixel-home-arrow{transform:scaleX(-1);margin-right:8px}
+.pixel-external{mask-image:url('../img/icons/pixel-external.svg');-webkit-mask-image:url('../img/icons/pixel-external.svg');margin-left:8px;vertical-align:-2px}
+.mobile-nav-toggle[aria-expanded="true"] .mobile-nav-icon{background:currentColor;mask:url('../img/icons/pixel-close.svg') center/16px 16px no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/16px 16px no-repeat}
+.mobile-nav-toggle[aria-expanded="true"] .mobile-nav-icon i{visibility:hidden}
+/* Small navigation symbols match 12px interface labels optically. */
+.pixel-home-arrow,.pixel-external{width:12px;height:12px}
+/* The Work destination joins the docked desktop/tablet navigation. */
+@media(min-width:768px) and (max-width:1099px){
+ .js .home-page .page-nav{grid-template-columns:44px 44px 44px 96px 44px 44px 64px;gap:16px}
+ .js .home-page .page-nav>a:nth-child(1){grid-column:2}
+ .js .home-page .page-nav>a:nth-child(2){grid-column:3}
+ .js .home-page .page-nav>a:nth-child(3){grid-column:5}
+ .js .home-page .page-nav>a:nth-child(4){grid-column:6}
+ .js .home-page .page-nav .page-nav-contact{grid-column:7}
+}
+@media(max-width:767px){
+ .js .home-page .page-nav{grid-template-columns:45px 31px 36px 64px 36px 31px 45px;gap:8px}
+ .js .home-page .page-nav>a:nth-child(1){grid-column:2}
+ .js .home-page .page-nav>a:nth-child(2){grid-column:3}
+ .js .home-page .page-nav>a:nth-child(3){grid-column:5}
+ .js .home-page .page-nav>a:nth-child(4){grid-column:6}
+ .js .home-page .page-nav .page-nav-contact{grid-column:7}
+}
+@media(max-width:360px){.js .home-page .page-nav{grid-template-columns:45px 31px 36px 48px 36px 31px 45px;gap:3px}}
+
+@media(max-width:767px){.js .home-page .page-nav{grid-template-columns:36px 40px 40px 64px 36px 52px 28px;gap:8px}.js .home-page .page-nav>a:nth-child(1){grid-column:1}.js .home-page .page-nav>a:nth-child(2){grid-column:2}.js .home-page .page-nav>a:nth-child(3){grid-column:3}.js .home-page .page-nav>a:nth-child(4){grid-column:5}.js .home-page .page-nav .page-nav-contact{grid-column:6}}
+@media(max-width:360px){.js .home-page .page-nav{grid-template-columns:32px 36px 36px 64px 32px 48px 20px;gap:4px}}
+
+/* Footer belongs to the page navigation edge, not the reading column. */
+.site-footer .footer-line.column{width:calc(100% - 48px);max-width:none;margin-inline:24px;justify-content:flex-start}
+@media(min-width:768px) and (max-width:1099px){.site-footer .footer-line.column{width:calc(100% - 64px);margin-inline:32px}}
+
+/* Social links share Home’s reading edge; copyright stays at the nav edge. */
+@media(min-width:1100px){
+ .site-footer .footer-line.column{position:relative;width:100%;margin-inline:0}
+ .site-footer .footer-line>p{position:absolute;left:24px}
+ .site-footer .footer-line .social-links{width:calc(100% - min(27.7778vw,400px) - 128px);max-width:var(--column);margin-left:auto;margin-right:128px}
+}
+@media(max-width:1099px){
+ .site-footer .footer-line.column{width:calc(100% - 48px);margin-inline:24px;flex-wrap:wrap;gap:12px 32px}
+ .site-footer .footer-line>p{flex-basis:100%}
+}

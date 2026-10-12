@@ -26,25 +26,41 @@ html[lang="ja"] .essay-lede,html[lang="ja"] .essay-dek,html[lang="ja"] .essay-re
 html[lang="ja"] .essay-rest h2{line-height:1.5}
 html[lang="ja"] .essay-rest p{line-height:1.85}
 @media(min-width:768px){html[lang="ja"] .about-page{--reading:28px}html[lang="ja"] .essay-page{--essay-copy:24px}}
-/* The fold. The fade is a mask twice the height of the text: folded, its fading
- * half covers what's shown; unfolding slides the opaque half over it. */
-.js .essay-rest { -webkit-mask-image: linear-gradient(#000 0 50%, transparent 100%); mask-image: linear-gradient(#000 0 50%, transparent 100%); -webkit-mask-size: 100% 200%; mask-size: 100% 200%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 0; mask-position: 0 0; transition: -webkit-mask-position .9s cubic-bezier(.2, .8, .2, 1), mask-position .9s cubic-bezier(.2, .8, .2, 1); }
-.essay-body.is-folded .essay-rest { max-height: var(--fold); overflow: hidden; -webkit-mask-position: 0 100%; mask-position: 0 100%; }
-.essay-body.is-folded:has(.essay-more:hover) .essay-rest { -webkit-mask-position: 0 78%; mask-position: 0 78%; }   /* a little more shows when you point at it */
-.essay-body.is-open:not(.is-done) .essay-rest { overflow: hidden; }
-.essay-body.is-done .essay-rest { -webkit-mask-image: none; mask-image: none; }
-/* The button covers the fading lines and ends in its label, below them. */
-.essay-more { position: relative; z-index: 1; display: flex; align-items: flex-end; width: 100%; margin-top: calc(var(--fold) * -1); padding: var(--fold) 0 0; border: 0; background: none; color: var(--ink); text-align: left; cursor: pointer; }
-.essay-more[hidden] { display: none; }
-.essay-more-label { display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; padding-block: 6px; transition: color .15s; }
-.essay-more-label::before { content: ""; width: 6px; height: 6px; background: var(--red); }
-.essay-more-arrow { display: inline-block; font: inherit; transition: transform .3s cubic-bezier(.3, 1.4, .5, 1); }
-.essay-more:hover .essay-more-label { color: var(--red); }
-.essay-more:hover .essay-more-arrow { transform: translateY(3px); }
-/* Focus highlights the label, not the transparent overlay across the essay. */
-.essay-more:focus-visible{background:transparent!important}
-.essay-more:focus-visible .essay-more-label{background:var(--red);color:var(--ink)}
-.essay-rest:focus-visible{background:transparent!important}
 
+/* Article reading rhythm: one column, natural wrapping, no folded content. */
+.about-page:not(.contact-page) .essay-page{width:min(680px,calc(100% - 48px));max-width:680px;margin-inline:auto;padding:160px 0 96px}
+.about-page .essay-head{gap:24px}
+.about-page .essay-title{font:700 clamp(36px,4.5vw,56px)/1.12 var(--font);letter-spacing:-.02em;text-wrap:balance}
+.about-page .essay-dek{font:400 22px/1.5 var(--font);color:var(--sub-gray);letter-spacing:0}
+.about-page .essay-body{margin-top:64px}
+.about-page :is(.essay-lede,.essay-rest p){font:400 20px/1.7 var(--font);letter-spacing:0;text-wrap:pretty}
+.about-page .essay-rest{margin-top:0;mask:none;-webkit-mask:none;max-height:none;overflow:visible}
+.about-page .essay-body h2{font:700 28px/1.25 var(--font);letter-spacing:-.01em;text-transform:none;margin:64px 0 24px;text-wrap:balance}
+.about-page .essay-body>h2:first-child{margin-top:0}
+.about-page .essay-body h2::before{content:none}
+.about-page .essay-rest p+p{margin-top:24px}
+.about-page .essay-pull{margin:48px 0;padding-left:24px;border-left:3px solid var(--red)}
+.about-page .essay-rest .essay-pull p{font:500 28px/1.4 var(--font);letter-spacing:0}
+html[lang="ja"] .about-page :is(.essay-lede,.essay-rest p){font-size:18px;line-height:1.9}
+html[lang="ja"] .about-page .essay-dek{font-size:20px;line-height:1.7}
+@media(max-width:767px){
+ .about-page:not(.contact-page) .essay-page{padding:112px 0 64px}
+ .about-page .essay-dek{font-size:20px}
+ .about-page :is(.essay-lede,.essay-rest p){font-size:18px;line-height:1.7}
+ .about-page .essay-body{margin-top:48px}
+ .about-page .essay-body h2{font-size:24px;margin-top:48px;margin-bottom:20px}
+ .about-page .essay-rest .essay-pull p{font-size:24px}
+}
 
-.essay-more-label::before{display:none}.essay-more-label.intro-cta{display:inline-flex;font:500 var(--reading)/1.2 var(--font)}.essay-more-arrow{font-family:inherit}
+/* Share the left edge of Home’s prose and footer social links. */
+@media(min-width:1100px){
+ .about-page:not(.contact-page) .essay-page{width:min(680px,calc(100% - min(27.7778vw,400px) - 128px));margin-left:calc(100% - min(var(--column),calc(100% - min(27.7778vw,400px) - 128px)) - 128px);margin-right:auto}
+}
+@media(min-width:768px) and (max-width:1099px){.about-page:not(.contact-page) .essay-page{margin-left:24px;margin-right:auto}}
+
+/* Center the article independently of the footer alignment. */
+.about-page:not(.contact-page) .essay-page{width:min(680px,calc(100% - 48px));margin-inline:auto}
+
+/* Use the full shared column while retaining its social-links alignment. */
+.about-page:not(.contact-page) .essay-page{width:calc(100% - 48px);max-width:var(--column);margin-inline:auto}
+@media(min-width:1100px){.about-page:not(.contact-page) .essay-page{width:calc(100% - min(27.7778vw,400px) - 128px);margin-left:auto;margin-right:128px}}

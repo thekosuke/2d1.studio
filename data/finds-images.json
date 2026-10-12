@@ -973,6 +973,28 @@
       "width": 967
     }
   ],
+  "img/objects/cutouts/floyd-cabin-aluminum.webp": [
+    {
+      "image": "img/objects/responsive/floyd-cabin-aluminum-50c13d4a81f1-192.webp",
+      "width": 192
+    },
+    {
+      "image": "img/objects/responsive/floyd-cabin-aluminum-50c13d4a81f1-256.webp",
+      "width": 256
+    },
+    {
+      "image": "img/objects/responsive/floyd-cabin-aluminum-50c13d4a81f1-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/responsive/floyd-cabin-aluminum-50c13d4a81f1-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/floyd-cabin-aluminum.webp",
+      "width": 1500
+    }
+  ],
   "img/objects/cutouts/freckle-green-native-v2.webp": [
     {
       "image": "img/objects/responsive/freckle-green-native-v2-7f79c86eabeb-192.webp",
@@ -1331,6 +1353,28 @@
     {
       "image": "img/objects/cutouts/iwate-canning-gift-stock.webp",
       "width": 575
+    }
+  ],
+  "img/objects/cutouts/jellycat-amuseables-basketball.webp": [
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-406a1e9318cf-192.webp",
+      "width": 192
+    },
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-406a1e9318cf-256.webp",
+      "width": 256
+    },
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-406a1e9318cf-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-406a1e9318cf-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/cutouts/jellycat-amuseables-basketball.webp",
+      "width": 1000
     }
   ],
   "img/objects/cutouts/kay-bojesen-monkey-mini-vintage-blue.webp": [
@@ -1895,28 +1939,6 @@
     {
       "image": "img/objects/cutouts/notabag-original-red-native-v2.webp",
       "width": 1032
-    }
-  ],
-  "img/objects/cutouts/nuutajarvi-tumbler-1709.webp": [
-    {
-      "image": "img/objects/responsive/nuutajarvi-tumbler-1709-9e5ff25a5879-192.webp",
-      "width": 192
-    },
-    {
-      "image": "img/objects/responsive/nuutajarvi-tumbler-1709-9e5ff25a5879-256.webp",
-      "width": 256
-    },
-    {
-      "image": "img/objects/responsive/nuutajarvi-tumbler-1709-9e5ff25a5879-480.webp",
-      "width": 480
-    },
-    {
-      "image": "img/objects/responsive/nuutajarvi-tumbler-1709-9e5ff25a5879-960.webp",
-      "width": 960
-    },
-    {
-      "image": "img/objects/cutouts/nuutajarvi-tumbler-1709.webp",
-      "width": 1200
     }
   ],
   "img/objects/cutouts/odd-universe-peepers.webp": [
@@ -3397,56 +3419,6 @@
       "width": 4320
     }
   ],
-  "img/objects/gallery/diffar-11001-main.png": [
-    {
-      "image": "img/objects/responsive/diffar-11001-main-78662a0c709f-192.webp",
-      "width": 192
-    },
-    {
-      "image": "img/objects/responsive/diffar-11001-main-78662a0c709f-256.webp",
-      "width": 256
-    },
-    {
-      "image": "img/objects/responsive/diffar-11001-main-78662a0c709f-480.webp",
-      "width": 480
-    },
-    {
-      "image": "img/objects/responsive/diffar-11001-main-78662a0c709f-960.webp",
-      "width": 960
-    },
-    {
-      "image": "img/objects/gallery/diffar-11001-main.png",
-      "width": 1000
-    }
-  ],
-  "img/objects/gallery/diffar-11001-scene.jpg": [
-    {
-      "image": "img/objects/gallery/diffar-11001-scene.jpg",
-      "width": 1500
-    }
-  ],
-  "img/objects/gallery/diffar-21612-scene.jpg": [
-    {
-      "image": "img/objects/responsive/diffar-21612-scene-0e5e045ed6cd-640.webp",
-      "width": 640
-    },
-    {
-      "image": "img/objects/gallery/diffar-21612-scene.jpg",
-      "width": 1500
-    }
-  ],
-  "img/objects/gallery/diffar-31407-scene.jpg": [
-    {
-      "image": "img/objects/gallery/diffar-31407-scene.jpg",
-      "width": 1500
-    }
-  ],
-  "img/objects/gallery/diffar-41504-scene.jpg": [
-    {
-      "image": "img/objects/gallery/diffar-41504-scene.jpg",
-      "width": 1500
-    }
-  ],
   "img/objects/gallery/dusen-everybody-wall-clock-audit-native-1.jpg": [
     {
       "image": "img/objects/responsive/dusen-everybody-wall-clock-audit-native-1-8fdf79a81081-640.webp",
@@ -3671,6 +3643,50 @@
     {
       "image": "img/objects/gallery/flowerpot-vp9-orange-full-square.jpg",
       "width": 1200
+    }
+  ],
+  "img/objects/gallery/floyd-cabin-aluminum-1.webp": [
+    {
+      "image": "img/objects/responsive/floyd-cabin-aluminum-1-6c28aad2df77-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/responsive/floyd-cabin-aluminum-1-6c28aad2df77-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/gallery/floyd-cabin-aluminum-1.webp",
+      "width": 1500
+    }
+  ],
+  "img/objects/gallery/floyd-cabin-aluminum-2.webp": [
+    {
+      "image": "img/objects/responsive/floyd-cabin-aluminum-2-adfd972b3aa1-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/gallery/floyd-cabin-aluminum-2.webp",
+      "width": 2000
+    }
+  ],
+  "img/objects/gallery/floyd-cabin-aluminum-3.webp": [
+    {
+      "image": "img/objects/responsive/floyd-cabin-aluminum-3-8592bc5817dc-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/gallery/floyd-cabin-aluminum-3.webp",
+      "width": 2000
+    }
+  ],
+  "img/objects/gallery/floyd-cabin-aluminum-4.webp": [
+    {
+      "image": "img/objects/responsive/floyd-cabin-aluminum-4-9a13707f2d7d-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/gallery/floyd-cabin-aluminum-4.webp",
+      "width": 2000
     }
   ],
   "img/objects/gallery/freckle-lifestyle-owner-3.png": [
@@ -4113,6 +4129,58 @@
     {
       "image": "img/objects/gallery/iwate-canning-gift-stock-audit-adad76f622.jpg",
       "width": 1499
+    }
+  ],
+  "img/objects/gallery/jellycat-amuseables-basketball-1.webp": [
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-1-a990ad3d5f4a-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-1-a990ad3d5f4a-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/gallery/jellycat-amuseables-basketball-1.webp",
+      "width": 1000
+    }
+  ],
+  "img/objects/gallery/jellycat-amuseables-basketball-2.webp": [
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-2-481c556f0dc8-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/gallery/jellycat-amuseables-basketball-2.webp",
+      "width": 1000
+    }
+  ],
+  "img/objects/gallery/jellycat-amuseables-basketball-3.webp": [
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-3-e251cf6df126-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-3-e251cf6df126-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/gallery/jellycat-amuseables-basketball-3.webp",
+      "width": 1000
+    }
+  ],
+  "img/objects/gallery/jellycat-amuseables-basketball-4.webp": [
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-4-d47edfcb875f-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/responsive/jellycat-amuseables-basketball-4-d47edfcb875f-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/gallery/jellycat-amuseables-basketball-4.webp",
+      "width": 1000
     }
   ],
   "img/objects/gallery/kay-bojesen-monkey-mini-vintage-blue-1.webp": [
@@ -4963,12 +5031,6 @@
       "width": 991
     }
   ],
-  "img/objects/gallery/nuutajarvi-tumbler-1709-2.webp": [
-    {
-      "image": "img/objects/gallery/nuutajarvi-tumbler-1709-2.webp",
-      "width": 1080
-    }
-  ],
   "img/objects/gallery/palaset-im-ok-side-1.webp": [
     {
       "image": "img/objects/gallery/palaset-im-ok-side-1.webp",
@@ -5563,18 +5625,6 @@
       "width": 3239
     }
   ],
-  "img/objects/gallery/tumbler-1709-red-square.jpg": [
-    {
-      "image": "img/objects/gallery/tumbler-1709-red-square.jpg",
-      "width": 1080
-    }
-  ],
-  "img/objects/gallery/tumbler-1709-top.jpg": [
-    {
-      "image": "img/objects/gallery/tumbler-1709-top.jpg",
-      "width": 660
-    }
-  ],
   "img/objects/gallery/ufo-cow-urban-native-b.png": [
     {
       "image": "img/objects/responsive/ufo-cow-urban-native-b-ac4abbb85b6e-640.webp",
@@ -5840,12 +5890,6 @@
   "img/objects/not-boring-camera-art-model.jpg": [
     {
       "image": "img/objects/not-boring-camera-art-model.jpg",
-      "width": 1080
-    }
-  ],
-  "img/objects/nuutajarvi-tumbler-1709.jpg": [
-    {
-      "image": "img/objects/nuutajarvi-tumbler-1709.jpg",
       "width": 1080
     }
   ],

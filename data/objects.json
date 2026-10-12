@@ -5,9 +5,7 @@
     "brand": "HAY",
     "category": "kitchen",
     "tags": [
-      "drinkware",
-      "Naoto Fukasawa",
-      "color"
+      "Kitchenware"
     ],
     "description": "A slim water bottle designed by Naoto Fukasawa.",
     "productUrl": "https://www.hay.com/hay/accessories/travel/miz-water-bottle",
@@ -90,7 +88,21 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Blue",
+      "Green"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#188b7b"
+      },
+      {
+        "name": "Brown",
+        "hex": "#07514a"
+      }
+    ]
   },
   {
     "id": "stokke-tripp-trapp-warm-red",
@@ -98,8 +110,7 @@
     "brand": "Stokke",
     "category": "living",
     "tags": [
-      "furniture",
-      "seating"
+      "Furniture"
     ],
     "description": "Peter Opsvik’s adjustable wooden chair, made to grow with its user.",
     "productUrl": "https://www.stokke.com/USA/en-us/high-chairs/tripp-trapp/5289.html",
@@ -174,7 +185,22 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Orange",
+      "White",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Beige",
+        "hex": "#d9c3ab"
+      },
+      {
+        "name": "White",
+        "hex": "#e9d8c6"
+      }
+    ]
   },
   {
     "id": "alessi-anna-g-black",
@@ -182,8 +208,7 @@
     "brand": "Alessi",
     "category": "kitchen",
     "tags": [
-      "design classic",
-      "tableware"
+      "Kitchenware"
     ],
     "description": "Alessandro Mendini’s smiling, figure-shaped corkscrew.",
     "productUrl": "https://alessi.com/products/anna-g-corkscrew-1",
@@ -266,7 +291,30 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Black",
+      "Gray",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Black",
+        "hex": "#242324"
+      },
+      {
+        "name": "Gray",
+        "hex": "#908f8f"
+      },
+      {
+        "name": "White",
+        "hex": "#dedddc"
+      },
+      {
+        "name": "Brown",
+        "hex": "#070709"
+      }
+    ]
   },
   {
     "id": "alessi-ossidiana-black",
@@ -274,8 +322,7 @@
     "brand": "Alessi",
     "category": "kitchen",
     "tags": [
-      "coffee",
-      "kitchen"
+      "Kitchenware"
     ],
     "description": "Mario Trimarchi’s faceted espresso maker, shaped by the idea of carving volcanic stone.",
     "productUrl": "https://alessi.com/products/ossidiana-espresso-coffee-maker",
@@ -358,7 +405,25 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Black",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Black",
+        "hex": "#2b2a29"
+      },
+      {
+        "name": "Gray",
+        "hex": "#454443"
+      },
+      {
+        "name": "Brown",
+        "hex": "#0a0b0a"
+      }
+    ]
   },
   {
     "id": "dusen-everybody-wall-clock",
@@ -366,8 +431,7 @@
     "brand": "Dusen Dusen",
     "category": "living",
     "tags": [
-      "clock",
-      "timekeeping"
+      "Home"
     ],
     "description": "A sun-shaped clock with a face that changes as the hands move.",
     "productUrl": "https://www.momastore.jp/shop/g/g0708389001945/",
@@ -463,7 +527,26 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Blue",
+      "Yellow",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#6b9db6"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#e6c256"
+      },
+      {
+        "name": "Red",
+        "hex": "#a0292c"
+      }
+    ]
   },
   {
     "id": "bruna-bonbon-mini-orange",
@@ -471,8 +554,7 @@
     "brand": "ides × MEDICOM TOY × BEAMS",
     "category": "living",
     "tags": [
-      "rabbit",
-      "play"
+      "Toys"
     ],
     "description": "Dick Bruna’s rabbit in a soft, removable orange cover, made exclusively for BEAMS.",
     "productUrl": "https://www.beams.co.jp/item/bprbeams/hobby/33740250348/",
@@ -564,6 +646,20 @@
         "image": "img/objects/cutouts/bruna-bonbon-mini-orange-native-v2.webp",
         "width": 793
       }
+    ],
+    "colors": [
+      "Orange",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#f74e1f"
+      },
+      {
+        "name": "Blue",
+        "hex": "#0f5fa2"
+      }
     ]
   },
   {
@@ -572,8 +668,7 @@
     "brand": "Playforever",
     "category": "living",
     "tags": [
-      "toy car",
-      "play"
+      "Toys"
     ],
     "description": "A small racing car with a metallic blue body, orange cockpit, and rubber tires.",
     "productUrl": "https://playforever.us/products/vv101-viglietta-jasper",
@@ -659,7 +754,34 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Orange",
+      "Blue",
+      "Yellow"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#e36124"
+      },
+      {
+        "name": "Blue",
+        "hex": "#537391"
+      },
+      {
+        "name": "Brown",
+        "hex": "#24283c"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#e0d3a3"
+      },
+      {
+        "name": "White",
+        "hex": "#e4e6e1"
+      }
+    ]
   },
   {
     "id": "brutto-sally-pepe",
@@ -667,8 +789,7 @@
     "brand": "Brutto",
     "category": "kitchen",
     "tags": [
-      "tableware",
-      "seasoning"
+      "Kitchenware"
     ],
     "description": "Marco Oggian’s graphic salt and pepper grinders bring two characters to the table.",
     "productUrl": "https://www.icantaffordthisbutmaybeshecan.com/products/sally-and-pepe-grinders?variant=52170465739095",
@@ -754,7 +875,35 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Red",
+      "Black",
+      "Green",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#f05271"
+      },
+      {
+        "name": "Brown",
+        "hex": "#242523"
+      },
+      {
+        "name": "Black",
+        "hex": "#272627"
+      },
+      {
+        "name": "Green",
+        "hex": "#12bc69"
+      },
+      {
+        "name": "Orange",
+        "hex": "#e87409"
+      }
+    ]
   },
   {
     "id": "nintendo-pikmin-vases",
@@ -762,8 +911,7 @@
     "brand": "Nintendo",
     "category": "living",
     "tags": [
-      "vase",
-      "flowers"
+      "Home"
     ],
     "description": "Red, yellow, and blue Pikmin become ceramic vases, each holding a single stem.",
     "productUrl": "https://store.nintendo.com/en-gb/pikmin-single-flower-vase-set-redyellowblue-B00397",
@@ -837,7 +985,35 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Yellow",
+      "Red",
+      "Blue",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Yellow",
+        "hex": "#fbcf15"
+      },
+      {
+        "name": "Red",
+        "hex": "#f3281f"
+      },
+      {
+        "name": "Blue",
+        "hex": "#2e92d6"
+      },
+      {
+        "name": "White",
+        "hex": "#f2f1ea"
+      },
+      {
+        "name": "Green",
+        "hex": "#89a946"
+      }
+    ]
   },
   {
     "id": "arms-flying-robi-persi",
@@ -845,8 +1021,7 @@
     "brand": "Arms Flying Everywhere",
     "category": "living",
     "tags": [
-      "lighting",
-      "portable"
+      "Lighting"
     ],
     "description": "A persimmon-orange Robi figure with a cream beanie, yellow-soled boots, and a heart on its chest.",
     "productUrl": "https://armsflyingeverywhere.com/products/robi-persi",
@@ -912,7 +1087,30 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Orange",
+      "White",
+      "Yellow"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#db6025"
+      },
+      {
+        "name": "White",
+        "hex": "#e1d1cb"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#ceb923"
+      },
+      {
+        "name": "Gray",
+        "hex": "#beaea7"
+      }
+    ]
   },
   {
     "id": "alessi-9090",
@@ -920,8 +1118,7 @@
     "brand": "Alessi",
     "category": "kitchen",
     "tags": [
-      "coffee",
-      "kitchen"
+      "Kitchenware"
     ],
     "description": "Richard Sapper’s stainless steel espresso maker, with a handle that locks the body closed.",
     "productUrl": "https://us.alessi.com/products/9090-espresso-coffee-maker",
@@ -1003,7 +1200,31 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "White",
+      "Black",
+      "Gray",
+      "Brown"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#dfdfdf"
+      },
+      {
+        "name": "Black",
+        "hex": "#131313"
+      },
+      {
+        "name": "Gray",
+        "hex": "#8d8c8c"
+      },
+      {
+        "name": "Brown",
+        "hex": "#47332d"
+      }
+    ]
   },
   {
     "id": "arwenn-cloud-clock",
@@ -1011,8 +1232,7 @@
     "brand": "ARWENN",
     "category": "living",
     "tags": [
-      "clock",
-      "timekeeping"
+      "Home"
     ],
     "description": "A softly rounded wall clock that lets the hands do the talking.",
     "productUrl": "https://arwenn.com/products/cloud-clock-2?Title=Default+Title",
@@ -1098,7 +1318,16 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Yellow"
+    ],
+    "displayColors": [
+      {
+        "name": "Yellow",
+        "hex": "#dfd49d"
+      }
+    ]
   },
   {
     "id": "craighill-chroma-scissors-primary",
@@ -1106,8 +1335,7 @@
     "brand": "Craighill",
     "category": "work",
     "tags": [
-      "stationery",
-      "desk"
+      "Stationery"
     ],
     "description": "Red blades and blue and yellow handle loops give this everyday cutting tool a primary-color palette.",
     "productUrl": "https://craighill.co/products/chroma-scissors?variant=42477554368749",
@@ -1198,7 +1426,35 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#b71a2a"
+      },
+      {
+        "name": "Blue",
+        "hex": "#0d56af"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#f3cd0f"
+      },
+      {
+        "name": "White",
+        "hex": "#cececb"
+      },
+      {
+        "name": "Gray",
+        "hex": "#bfbdba"
+      }
+    ]
   },
   {
     "id": "craighill-swingtop-lighter",
@@ -1206,8 +1462,7 @@
     "brand": "Craighill",
     "category": "living",
     "tags": [
-      "lighter",
-      "everyday carry"
+      "Home"
     ],
     "description": "A refillable steel lighter with a hinged lid and a tactile opening mechanism.",
     "productUrl": "https://craighill.co/collections/best-sellers/products/swingtop-lighter",
@@ -1289,7 +1544,21 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "White",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#e5e5e1"
+      },
+      {
+        "name": "Gray",
+        "hex": "#8f8d87"
+      }
+    ]
   },
   {
     "id": "alessi-twergi-es19-yellow",
@@ -1297,8 +1566,7 @@
     "brand": "Alessi",
     "category": "kitchen",
     "tags": [
-      "tableware",
-      "seasoning"
+      "Kitchenware"
     ],
     "description": "Ettore Sottsass’s turned-wood mill, one of the small sculptural objects in the Twergi collection.",
     "productUrl": "https://alessi.com/products/es19-pepper-salt-and-spice-mill?variant=46488901681478",
@@ -1371,107 +1639,16 @@
           "finding": "Owner requested Red; official Alessi variant46488901681478 identifies red ES19 by Ettore Sottsass."
         }
       ]
-    }
-  },
-  {
-    "id": "nuutajarvi-tumbler-1709",
-    "name": "Tumbler 1709",
-    "brand": "Nuutajärvi",
-    "category": "kitchen",
-    "tags": [
-      "drinkware",
-      "glass"
+    },
+    "colors": [
+      "Red"
     ],
-    "description": "Kaj Franck’s 1959 glass tumbler, with a curved profile designed for stacking. A vintage find.",
-    "productUrl": "https://www.ajan-muisto.fi/p/3148-juomalasi-nuutajarvi",
-    "sourceUrl": "https://www.instagram.com/p/Dcije-fksXb/",
-    "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/788550045_18557055925073002_2817358386360260374_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzk3Mjg5MzcxODUyMDM2Njg2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=zCiq9DtD_OcQ7kNvwGIEk3-&_nc_oc=Adpp3h1qXgWyQA2OW5OkugFclQoawHCOFeVQo8C98oPdUAUDUFcF6GEwHxQIzf8wrHTHpbtmR9UHNH003ZRUyl2U&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=jFoXN-l8yzp-0w0nfR0lig&_nc_ss=7b689&oh=00_AQOIHJe833C9C647zX51JX53TQixW2gEeWltfsmcDt0vig&oe=6ACEA6DD",
-    "image": "img/objects/cutouts/nuutajarvi-tumbler-1709.webp",
-    "width": 1200,
-    "height": 1200,
-    "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
-    "gallery": [
+    "displayColors": [
       {
-        "image": "img/objects/gallery/tumbler-1709-red-square.jpg",
-        "width": 1080,
-        "height": 1080,
-        "sourceUrl": "https://www.ajan-muisto.fi/p/3148-juomalasi-nuutajarvi",
-        "sourceImageUrl": "https://www.ajan-muisto.fi/WebRoot/VilkasStoreFI/Shops/ajan-muisto/61BB/1E70/76A5/9FFA/20D0/0A0C/0616/D976/190219-06.JPG"
-      },
-      {
-        "image": "img/objects/nuutajarvi-tumbler-1709.jpg",
-        "width": 1080,
-        "height": 1351,
-        "sourceUrl": "https://www.instagram.com/p/Dcije-fksXb/",
-        "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/788550045_18557055925073002_2817358386360260374_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=Mzk3Mjg5MzcxODUyMDM2Njg2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=zCiq9DtD_OcQ7kNvwGIEk3-&_nc_oc=Adpp3h1qXgWyQA2OW5OkugFclQoawHCOFeVQo8C98oPdUAUDUFcF6GEwHxQIzf8wrHTHpbtmR9UHNH003ZRUyl2U&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=jFoXN-l8yzp-0w0nfR0lig&_nc_ss=7b689&oh=00_AQOIHJe833C9C647zX51JX53TQixW2gEeWltfsmcDt0vig&oe=6ACEA6DD"
-      },
-      {
-        "image": "img/objects/gallery/nuutajarvi-tumbler-1709-2.webp",
-        "width": 1080,
-        "height": 1351,
-        "sourceUrl": "https://www.instagram.com/p/Dcije-fksXb/?img_index=1",
-        "sourceImageUrl": "https://scontent-nrt1-2.cdninstagram.com/v/t51.82787-15/787178171_18557055934073002_4708606169349439400_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=Mzk3Mjg5MzcxOTc2MTg5MzU5NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=_b7tOTKLbKIQ7kNvwGSlsbR&_nc_oc=AdoV-MKu6vgALUIgLYDVj4Bf4Zp8mQ9xc_bP6dSYjCMdlqPOeR3AjkXiGFvfLpAtWAWcyYukvTdCQruz5WLx4xum&_nc_zt=23&_nc_ht=scontent-nrt1-2.cdninstagram.com&_nc_gid=jFoXN-l8yzp-0w0nfR0lig&_nc_ss=7b689&oh=00_AQP-cmaa6pH6Kk-uug3rVxeISu0ALBCV9aN67LVo3fuwfA&oe=6ACEB54B"
-      },
-      {
-        "image": "img/objects/gallery/tumbler-1709-top.jpg",
-        "width": 660,
-        "height": 660,
-        "sourceUrl": "https://www.primitive-sanchikagu.com/SHOP/2302-001-01.html",
-        "sourceImageUrl": "https://www.primitive-sanchikagu.com/pic-labo/2302-001-01_3.jpg"
+        "name": "Red",
+        "hex": "#c5474a"
       }
-    ],
-    "imageVariants": [
-      {
-        "image": "img/objects/cutouts/nuutajarvi-tumbler-1709-480.webp",
-        "width": 480
-      },
-      {
-        "image": "img/objects/cutouts/nuutajarvi-tumbler-1709-960.webp",
-        "width": 960
-      },
-      {
-        "image": "img/objects/cutouts/nuutajarvi-tumbler-1709.webp",
-        "width": 1200
-      }
-    ],
-    "imageTreatment": {
-      "background": "transparent",
-      "method": "Original RGB with locally generated foreground mask",
-      "subjectPixels": [
-        330,
-        1080
-      ],
-      "opticalFill": 0.9,
-      "upscaled": false
-    },
-    "catalogAudit": {
-      "reviewed": "2026-10-10",
-      "variantConfidence": "high product family; original single-color status unresolved",
-      "desiredVariant": "Existing multicolor1959–1965 Tumbler1709 group",
-      "notes": [],
-      "sourceLimitations": [
-        "Two vintage glass-group photographs; additional identical-specimen/original-color evidence unavailable."
-      ]
-    },
-    "colorwayEvidence": {
-      "status": "unverified",
-      "findings": [
-        {
-          "url": "https://www.primitive-sanchikagu.com/SHOP/2302-001-01.html",
-          "finding": "Independent vintage catalog entries confirm1709 production1959–1965 in several colors; no authoritative first-color hierarchy was found. Existing entry is a group, not a single color specimen."
-        },
-        {
-          "url": "https://elephant-life.com/collections/nuutajarvi/products/kfgl1888",
-          "finding": "Independent vintage catalog entries confirm1709 production1959–1965 in several colors; no authoritative first-color hierarchy was found. Existing entry is a group, not a single color specimen."
-        },
-        {
-          "url": "https://laatutavara.com/tuote/6896/",
-          "finding": "Independent vintage catalog entries confirm1709 production1959–1965 in several colors; no authoritative first-color hierarchy was found. Existing entry is a group, not a single color specimen."
-        }
-      ],
-      "sources": []
-    },
-    "forSale": true
+    ]
   },
   {
     "id": "block-design-play-tin",
@@ -1479,8 +1656,7 @@
     "brand": "Block Design",
     "category": "living",
     "tags": [
-      "storage",
-      "play"
+      "Toys"
     ],
     "description": "A colorful pocket tin containing playing cards, ready to take a game with you.",
     "productUrl": "https://blockdesign.co.uk/collections/tinned-goods/products/play",
@@ -1576,7 +1752,35 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Green",
+      "Red",
+      "Black",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "Green",
+        "hex": "#3a965f"
+      },
+      {
+        "name": "Brown",
+        "hex": "#1b3432"
+      },
+      {
+        "name": "Red",
+        "hex": "#e35b45"
+      },
+      {
+        "name": "Orange",
+        "hex": "#d2a373"
+      },
+      {
+        "name": "Pink",
+        "hex": "#edafc9"
+      }
+    ]
   },
   {
     "id": "herman-miller-girard-throw",
@@ -1584,8 +1788,7 @@
     "brand": "Herman Miller × Pendleton",
     "category": "living",
     "tags": [
-      "textiles",
-      "home"
+      "Home"
     ],
     "description": "Alexander Girard’s bold color blocks, woven in virgin wool by Pendleton.",
     "productUrl": "https://store.hermanmiller.com/decor-pillow-throws/girard-throw/100069474.html?lang=en_US",
@@ -1675,7 +1878,21 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Red",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#c53f3f"
+      },
+      {
+        "name": "Orange",
+        "hex": "#f8821e"
+      }
+    ]
   },
   {
     "id": "hay-regn-umbrella-gray-blue",
@@ -1683,8 +1900,7 @@
     "brand": "HAY",
     "category": "wear",
     "tags": [
-      "outdoors",
-      "accessories"
+      "Fashion"
     ],
     "description": "A folding umbrella with a striped canopy and a matching case.",
     "productUrl": "https://www.hay.nl/en/regn-umbrella-grey-grey",
@@ -1789,7 +2005,30 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Blue",
+      "White",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#dcdad9"
+      },
+      {
+        "name": "Blue",
+        "hex": "#435e7a"
+      },
+      {
+        "name": "Brown",
+        "hex": "#263d54"
+      },
+      {
+        "name": "Gray",
+        "hex": "#a4a6aa"
+      }
+    ]
   },
   {
     "id": "moodulo-pop-culture-act-ii",
@@ -1797,8 +2036,7 @@
     "brand": "MOODULO Design",
     "category": "living",
     "tags": [
-      "lighting",
-      "sculptural"
+      "Lighting"
     ],
     "description": "A collection of sculptural lamps with pleated forms and bold colors, inspired by pop culture.",
     "productUrl": "https://www.mdlo.cl/productos/",
@@ -1881,7 +2119,35 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "White",
+      "Blue",
+      "Brown",
+      "Yellow"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#e0dbd8"
+      },
+      {
+        "name": "Blue",
+        "hex": "#0b4e9b"
+      },
+      {
+        "name": "Orange",
+        "hex": "#984013"
+      },
+      {
+        "name": "Brown",
+        "hex": "#201d2d"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#a6a027"
+      }
+    ]
   },
   {
     "id": "homeinfun-storage-stool",
@@ -1889,8 +2155,7 @@
     "brand": "HomeinFun",
     "category": "living",
     "tags": [
-      "furniture",
-      "storage"
+      "Furniture"
     ],
     "description": "A small stool with a lift-off seat that reveals hidden storage. It doubles as a side table.",
     "productUrl": "https://homeinfun.ca/products/cute-storage-stool-side-table?variant=51205325095201",
@@ -1971,7 +2236,16 @@
       "basis": "Owner selected blue; official variant and complete product photograph verified",
       "notes": "Display name keeps its existing color-free wording."
     },
-    "variantName": "Blue"
+    "variantName": "Blue",
+    "colors": [
+      "Blue"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#97bac7"
+      }
+    ]
   },
   {
     "id": "odd-universe-peepers",
@@ -1979,8 +2253,7 @@
     "brand": "Odd Universe",
     "category": "living",
     "tags": [
-      "wearable",
-      "technology"
+      "Furniture"
     ],
     "description": "Jutta Gössl’s aluminum stacking stools, with cutout eyes that peer from beneath the seat.",
     "productUrl": "https://www.odduniverse.xyz/products/the-peepers-locked",
@@ -2060,7 +2333,21 @@
       "limitations": [
         "No uniquely original or most-recognized Peepers color established. Current main-image order is insufficient proof."
       ]
-    }
+    },
+    "colors": [
+      "Orange",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#ee845d"
+      },
+      {
+        "name": "Red",
+        "hex": "#da5a3f"
+      }
+    ]
   },
   {
     "id": "atonemo-nts-radio-player",
@@ -2068,8 +2355,7 @@
     "brand": "Atonemo × NTS",
     "category": "work",
     "tags": [
-      "audio",
-      "music"
+      "Electronics"
     ],
     "description": "A compact Wi-Fi player that brings NTS radio to your speakers, with a physical dial for listening.",
     "productUrl": "https://atonemo.com/products/nts",
@@ -2166,7 +2452,25 @@
       "limitations": [
         "Do not use the single Default Title variant by itself as proof of launch color. No alternative official finish was found; standard-design selection is justified without that historical claim."
       ]
-    }
+    },
+    "colors": [
+      "Black",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Black",
+        "hex": "#262a2b"
+      },
+      {
+        "name": "Gray",
+        "hex": "#696e71"
+      },
+      {
+        "name": "White",
+        "hex": "#d3d8da"
+      }
+    ]
   },
   {
     "id": "not-boring-camera-app",
@@ -2174,8 +2478,7 @@
     "brand": "(Not Boring)",
     "category": "work",
     "tags": [
-      "photography",
-      "design"
+      "Apps"
     ],
     "description": "An iPhone camera app with tactile controls and a playful interface for taking everyday photographs.",
     "productUrl": "https://notbor.ing/product/camera",
@@ -2267,7 +2570,21 @@
       "limitations": [
         "A configurable UI skin is not a physical color variant. The current app icon is not claimed to be the original launch icon."
       ]
-    }
+    },
+    "colors": [
+      "White",
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#eaeaea"
+      },
+      {
+        "name": "Black",
+        "hex": "#222222"
+      }
+    ]
   },
   {
     "id": "not-boring-weather-app",
@@ -2275,8 +2592,7 @@
     "brand": "(Not Boring)",
     "category": "work",
     "tags": [
-      "app",
-      "weather"
+      "Apps"
     ],
     "description": "A weather app that turns the forecast into an interactive world of 3D shapes, color, and motion.",
     "productUrl": "https://notbor.ing/product/weather",
@@ -2366,7 +2682,25 @@
       "limitations": [
         "Current promotional art is suitable to represent the app, but does not prove an original launch skin."
       ]
-    }
+    },
+    "colors": [
+      "White",
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#f3f2f3"
+      },
+      {
+        "name": "Black",
+        "hex": "#2c2b2b"
+      },
+      {
+        "name": "Red",
+        "hex": "#f83a2d"
+      }
+    ]
   },
   {
     "id": "not-boring-camera-art-model",
@@ -2374,8 +2708,7 @@
     "brand": "(Not Boring)",
     "category": "living",
     "tags": [
-      "photography",
-      "design"
+      "Home"
     ],
     "description": "A collectible camera-shaped art model with movable dials, buttons, and a lens. Made to play with; it doesn’t take photos.",
     "productUrl": "https://notboring.shop/products/camera-collectible-art-model",
@@ -2470,7 +2803,21 @@
       "limitations": [
         "No dated first-edition release or recognition ranking was found. Do not upgrade the status to verified original/iconic solely because it uses brand colors."
       ]
-    }
+    },
+    "colors": [
+      "Gray",
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "Gray",
+        "hex": "#4c4a4e"
+      },
+      {
+        "name": "Black",
+        "hex": "#343336"
+      }
+    ]
   },
   {
     "id": "mkbhd-color-picker-stickers",
@@ -2478,8 +2825,7 @@
     "brand": "MKBHD",
     "category": "work",
     "tags": [
-      "stationery",
-      "desk"
+      "Stationery"
     ],
     "description": "Eight color-picker stickers that turn the colors of everyday surfaces into sampled swatches.",
     "productUrl": "https://mkbhd.com/products/color-picker-sticker-pack",
@@ -2563,7 +2909,29 @@
       "limitations": [
         "Single-pack identity is verified; no claim of a historically first graphic revision is needed."
       ]
-    }
+    },
+    "colors": [
+      "White",
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#fdfcfd"
+      },
+      {
+        "name": "Black",
+        "hex": "#0b0b0b"
+      },
+      {
+        "name": "Gray",
+        "hex": "#878787"
+      },
+      {
+        "name": "Brown",
+        "hex": "#0b0a0b"
+      }
+    ]
   },
   {
     "id": "mkbhd-overlay-deskpad",
@@ -2571,8 +2939,7 @@
     "brand": "MKBHD × Omnitype",
     "category": "work",
     "tags": [
-      "desk",
-      "workspace"
+      "Stationery"
     ],
     "description": "A desk mat with overlapping graphic shapes and a broad surface for a keyboard and mouse.",
     "productUrl": "https://mkbhd.com/en-usd/products/overlay-deskpad",
@@ -2665,7 +3032,35 @@
       "limitations": [
         "Do not confuse the separate Production, Deconstructed or Shutter Speed products with color versions of Overlay."
       ]
-    }
+    },
+    "colors": [
+      "Yellow",
+      "Blue",
+      "White",
+      "Pink"
+    ],
+    "displayColors": [
+      {
+        "name": "Yellow",
+        "hex": "#fcbf47"
+      },
+      {
+        "name": "Blue",
+        "hex": "#6fb7f0"
+      },
+      {
+        "name": "White",
+        "hex": "#e2e4ec"
+      },
+      {
+        "name": "Pink",
+        "hex": "#fa7eb0"
+      },
+      {
+        "name": "Purple",
+        "hex": "#8b54a7"
+      }
+    ]
   },
   {
     "id": "bobo-choses-bolder-belt-pouch",
@@ -2673,8 +3068,7 @@
     "brand": "Bobo Choses",
     "category": "wear",
     "tags": [
-      "bag",
-      "carry"
+      "Fashion"
     ],
     "description": "A colorful zippered belt pouch that keeps small daily essentials close at hand.",
     "productUrl": "https://bobochoses.com/products/b226ai081-bobo-choses-bolder-belt-pouch",
@@ -2763,7 +3157,26 @@
       "limitations": [
         "No cross-season claim that this is the first-ever Bobo Choses belt pouch. The exact design identity is the relevant selection."
       ]
-    }
+    },
+    "colors": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#d34952"
+      },
+      {
+        "name": "Blue",
+        "hex": "#2b8ebc"
+      },
+      {
+        "name": "Purple",
+        "hex": "#ac77b5"
+      }
+    ]
   },
   {
     "id": "hungry-market-initial-c-cap",
@@ -2771,8 +3184,7 @@
     "brand": "HUNGRY MARKET",
     "category": "wear",
     "tags": [
-      "headwear",
-      "accessories"
+      "Fashion"
     ],
     "description": "A cotton cap with an embroidered C for Caterpillar and Eric Carle’s signature on the back.",
     "productUrl": "https://hungry-market.playec.jp/products/%E5%88%BA%E7%B9%A1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97-%E3%82%A4%E3%83%8B%E3%82%B7%E3%83%A3%E3%83%ABc-%E3%83%99%E3%83%BC%E3%82%B8%E3%83%A5-%E5%A4%A7%E4%BA%BA%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B5%E3%82%A4%E3%82%BA",
@@ -2868,7 +3280,18 @@
       "limitations": [
         "Japanese オリジナル here describes a proprietary design. It must not be translated into a first-launch color claim. No evidence makes beige more recognized than black."
       ]
-    }
+    },
+    "colors": [
+      "Orange",
+      "Brown",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Beige",
+        "hex": "#a78777"
+      }
+    ]
   },
   {
     "id": "daypa-kun-backpack-blue",
@@ -2876,8 +3299,7 @@
     "brand": "DAYPA",
     "category": "wear",
     "tags": [
-      "bag",
-      "carry"
+      "Fashion"
     ],
     "description": "A blue backpack with a pair of eyes, small arms, and dangling feet. A character that carries your things.",
     "productUrl": "https://daypa.jp/products/dp26215001?variant=49041452466425",
@@ -2957,7 +3379,20 @@
       "limitations": [
         "No sole original or most iconic color identified. Store launch dates and available colors may vary according to the press release."
       ]
-    }
+    },
+    "colors": [
+      "Blue"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#183c8e"
+      },
+      {
+        "name": "Brown",
+        "hex": "#0d204e"
+      }
+    ]
   },
   {
     "id": "lego-piranha-plant-71426",
@@ -2965,8 +3400,7 @@
     "brand": "LEGO × Super Mario",
     "category": "living",
     "tags": [
-      "building set",
-      "play"
+      "Toys"
     ],
     "description": "A 540-piece Piranha Plant with a poseable head, mouth, stem, and leaves, built for display in its green pipe.",
     "productUrl": "https://www.lego.com/ja-jp/product/piranha-plant-71426",
@@ -3069,7 +3503,30 @@
       "limitations": [
         "Do not substitute another Piranha Plant set or a fan recolor; authenticity is the exact set identity."
       ]
-    }
+    },
+    "colors": [
+      "Green",
+      "Red",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Green",
+        "hex": "#2f9f3f"
+      },
+      {
+        "name": "Brown",
+        "hex": "#0f4112"
+      },
+      {
+        "name": "White",
+        "hex": "#e6e4e1"
+      },
+      {
+        "name": "Red",
+        "hex": "#c43b3a"
+      }
+    ]
   },
   {
     "id": "iwate-canning-gift-stock",
@@ -3077,8 +3534,7 @@
     "brand": "Iwate Canning",
     "category": "kitchen",
     "tags": [
-      "food",
-      "pantry"
+      "Food"
     ],
     "description": "A trio of canned risottos made with seafood from Sanriku, designed for giving, keeping, and eating.",
     "productUrl": "https://www.iwa-kan.com/lp/gift-and-stock/",
@@ -3177,7 +3633,25 @@
       "limitations": [
         "There is no reason to select one flavor’s label color as the most iconic entire collection. This establishes the original product collection, not an unchanged printing specification for every later can."
       ]
-    }
+    },
+    "colors": [
+      "Yellow",
+      "Blue"
+    ],
+    "displayColors": [
+      {
+        "name": "Yellow",
+        "hex": "#e0b50f"
+      },
+      {
+        "name": "Blue",
+        "hex": "#78aac0"
+      },
+      {
+        "name": "Brown",
+        "hex": "#4b401a"
+      }
+    ]
   },
   {
     "id": "mint-hug-shakers",
@@ -3185,8 +3659,7 @@
     "brand": "MINT",
     "category": "kitchen",
     "tags": [
-      "tableware",
-      "seasoning"
+      "Kitchenware"
     ],
     "description": "Alberto Mantilla’s black and white porcelain shakers fit together in a hug, with dispensing holes that become faces.",
     "productUrl": "https://store.moma.org/en-jp/products/hug-salt-and-pepper-shakers",
@@ -3289,7 +3762,30 @@
       "limitations": [
         "This supports iconic/canonical black-and-white without needing to invent an exact first retail color chronology."
       ]
-    }
+    },
+    "colors": [
+      "Black",
+      "White",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Black",
+        "hex": "#111112"
+      },
+      {
+        "name": "White",
+        "hex": "#e5e5e5"
+      },
+      {
+        "name": "Gray",
+        "hex": "#858586"
+      },
+      {
+        "name": "Brown",
+        "hex": "#060507"
+      }
+    ]
   },
   {
     "id": "subu-originals-f-line-black",
@@ -3297,8 +3793,7 @@
     "brand": "SUBU",
     "category": "wear",
     "tags": [
-      "footwear",
-      "outdoors"
+      "Fashion"
     ],
     "description": "Padded slip-on sandals for stepping outside, with a quilted upper and a soft lining.",
     "productUrl": "https://subu2016-onlinestore.com/products/subu-black",
@@ -3402,7 +3897,25 @@
       "limitations": [
         "The interview supports one of several recognized permanent colors, not a unique ranking or proof that black alone was the first 2016 launch color."
       ]
-    }
+    },
+    "colors": [
+      "Black",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Black",
+        "hex": "#212123"
+      },
+      {
+        "name": "Gray",
+        "hex": "#504f50"
+      },
+      {
+        "name": "Brown",
+        "hex": "#060608"
+      }
+    ]
   },
   {
     "id": "sharge-discho",
@@ -3410,8 +3923,7 @@
     "brand": "SHARGE",
     "category": "work",
     "tags": [
-      "charging",
-      "portable"
+      "Electronics"
     ],
     "description": "A 10,000mAh power bank, 30W wall charger, and retractable USB-C cable in one, with a dot-matrix display.",
     "productUrl": "https://sharge.com/ja/products/sharge-discho-%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89-%E3%83%91%E3%83%AF%E3%83%BC%E3%83%90%E3%83%B3%E3%82%AF-30w-10k-%E3%83%89%E3%83%83%E3%83%88%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9-%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4-3-in-1",
@@ -3500,7 +4012,21 @@
       "limitations": [
         "Do not equate a single present-day SKU with proven original-release chronology. It resolves current color selection because no alternative finish is documented."
       ]
-    }
+    },
+    "colors": [
+      "Gray",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Gray",
+        "hex": "#abaaab"
+      },
+      {
+        "name": "White",
+        "hex": "#dddddd"
+      }
+    ]
   },
   {
     "id": "fairphone-gen-6-plus",
@@ -3508,8 +4034,7 @@
     "brand": "Fairphone",
     "category": "work",
     "tags": [
-      "phone",
-      "technology"
+      "Electronics"
     ],
     "description": "A smartphone built around replaceable parts, including a battery you can change yourself.",
     "productUrl": "https://www.fairphone.com/the-fairphone-gen-6-plus",
@@ -3606,7 +4131,26 @@
       "limitations": [
         "The cited announcement is the US launch. Other official material dates the model’s earlier launch to August 2026, so do not call October the worldwide first release. No source ranks Forest Green as most iconic."
       ]
-    }
+    },
+    "colors": [
+      "Blue",
+      "Black",
+      "Green"
+    ],
+    "displayColors": [
+      {
+        "name": "Brown",
+        "hex": "#234634"
+      },
+      {
+        "name": "Blue",
+        "hex": "#3e7167"
+      },
+      {
+        "name": "Green",
+        "hex": "#62815c"
+      }
+    ]
   },
   {
     "id": "cwandt-high-speed-jump-rope",
@@ -3614,8 +4158,7 @@
     "brand": "CW&T",
     "category": "living",
     "tags": [
-      "exercise",
-      "outdoors"
+      "Sports"
     ],
     "description": "A jump rope with machined aluminum handles, ball bearings, and a bright orange rope.",
     "productUrl": "https://cwandt.com/en-jp/products/high-speed-jump-rope",
@@ -3743,7 +4286,21 @@
       "limitations": [
         "No primary or credible comparative evidence establishes the later aluminum/orange model as most iconic. Do not use the 2019 date with current aluminum photography without qualification."
       ]
-    }
+    },
+    "colors": [
+      "Red",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#e96045"
+      },
+      {
+        "name": "Gray",
+        "hex": "#7c807e"
+      }
+    ]
   },
   {
     "id": "ikea-forlunda-red",
@@ -3751,8 +4308,7 @@
     "brand": "IKEA",
     "category": "living",
     "tags": [
-      "furniture",
-      "seating"
+      "Furniture"
     ],
     "description": "A compact upholstered stool with storage beneath its seat. Stack a few when they’re not in use.",
     "productUrl": "https://www.ikea.com/jp/en/p/foerlunda-pouffe-with-storage-tonerud-red-40572747/",
@@ -3858,7 +4414,16 @@
       "limitations": [
         "This is a manufacturer-declared model-release date on the Korean exact-color page, not a complete worldwide introduction history. Red is one original-range choice, not proven uniquely first or most popular."
       ]
-    }
+    },
+    "colors": [
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#ac3034"
+      }
+    ]
   },
   {
     "id": "nendo-shoe-horn",
@@ -3866,8 +4431,7 @@
     "brand": "nendo house",
     "category": "living",
     "tags": [
-      "accessories",
-      "home"
+      "Home"
     ],
     "description": "A wooden shoehorn carved from a single conical form, with a weighted magnetic base that lets it stand upright.",
     "productUrl": "https://nendohouse.co.jp/items/60095decbfdf097fbdbe32e7",
@@ -3960,7 +4524,21 @@
       "limitations": [
         "Do not claim whitish was the only 2009 finish, or that current finish chemistry is unchanged. The source establishes original visual treatment rather than an exhaustive launch palette."
       ]
-    }
+    },
+    "colors": [
+      "Orange",
+      "Brown"
+    ],
+    "displayColors": [
+      {
+        "name": "Beige",
+        "hex": "#b99e80"
+      },
+      {
+        "name": "White",
+        "hex": "#ece0cf"
+      }
+    ]
   },
   {
     "id": "mr-maria-first-light-snoopy",
@@ -3968,8 +4546,7 @@
     "brand": "Mr Maria",
     "category": "living",
     "tags": [
-      "lighting",
-      "play"
+      "Lighting"
     ],
     "description": "A rechargeable Snoopy light made from soft silicone, small enough to carry from room to room.",
     "productUrl": "https://www.momastore.jp/shop/g/g4520535216739",
@@ -4070,7 +4647,16 @@
       "limitations": [
         "The iconic character’s 1950 origin is not the lamp’s launch date. No exact first lamp-release chronology is claimed."
       ]
-    }
+    },
+    "colors": [
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#dddcdb"
+      }
+    ]
   },
   {
     "id": "flos-snoopy-black",
@@ -4078,8 +4664,7 @@
     "brand": "Flos",
     "category": "living",
     "tags": [
-      "lighting",
-      "home"
+      "Lighting"
     ],
     "description": "Achille and Pier Giacomo Castiglioni’s table lamp balances an enameled metal shade on a marble base.",
     "productUrl": "https://flos.com/en/cy/snoopy/M-snoopy.html",
@@ -4181,7 +4766,26 @@
       "limitations": [
         "The strongest explicit claim is iconic black. Avoid adding unsupported claims about the precise enamel specification of every 1967 production example."
       ]
-    }
+    },
+    "colors": [
+      "Black",
+      "Gray",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Black",
+        "hex": "#0b0b0b"
+      },
+      {
+        "name": "Gray",
+        "hex": "#909090"
+      },
+      {
+        "name": "White",
+        "hex": "#e0e0e0"
+      }
+    ]
   },
   {
     "id": "magis-spun",
@@ -4189,8 +4793,7 @@
     "brand": "Magis",
     "category": "living",
     "tags": [
-      "furniture",
-      "seating"
+      "Furniture"
     ],
     "description": "Thomas Heatherwick’s molded chair rocks and rotates like a spinning top when you sit in it.",
     "productUrl": "https://www.magisdesign.com/product/spun/",
@@ -4307,7 +4910,16 @@
         }
       ]
     },
-    "variantName": "Red polyethylene"
+    "variantName": "Red polyethylene",
+    "colors": [
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#ba3730"
+      }
+    ]
   },
   {
     "id": "magis-air-chair-red",
@@ -4315,8 +4927,7 @@
     "brand": "Magis",
     "category": "living",
     "tags": [
-      "furniture",
-      "seating"
+      "Furniture"
     ],
     "description": "Jasper Morrison’s lightweight, stackable chair, made with air-molding technology.",
     "productUrl": "https://www.magisdesign.com/product/air-chair/",
@@ -4421,7 +5032,16 @@
       "sourceLimitations": [
         "Only two distinct matching red views currently verified; same-view low-resolution derivative excluded. Four-photo target remains unmet."
       ]
-    }
+    },
+    "colors": [
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#ac3733"
+      }
+    ]
   },
   {
     "id": "hay-table-clock-black",
@@ -4429,8 +5049,7 @@
     "brand": "HAY",
     "category": "living",
     "tags": [
-      "clock",
-      "timekeeping"
+      "Home"
     ],
     "description": "Jasper Morrison’s clear, quiet clock has a removable stand for use on a table or wall.",
     "productUrl": "https://www.hay-japan.com/category/STRY/STRY000039.html",
@@ -4535,7 +5154,26 @@
       "limitations": [],
       "recommendedVariant": "Black",
       "action": "retain"
-    }
+    },
+    "colors": [
+      "Gray",
+      "Black",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Gray",
+        "hex": "#72736f"
+      },
+      {
+        "name": "Black",
+        "hex": "#2f3032"
+      },
+      {
+        "name": "White",
+        "hex": "#dad9d4"
+      }
+    ]
   },
   {
     "id": "muji-wall-mounted-cd-player",
@@ -4543,8 +5181,7 @@
     "brand": "MUJI",
     "category": "living",
     "tags": [
-      "audio",
-      "music"
+      "Electronics"
     ],
     "description": "A wall-mounted CD player with an exposed disc and built-in speakers. Pull the power cord to start or stop it.",
     "productUrl": "https://www.muji.com/jp/ja/store/cmdty/detail/4548076475576",
@@ -4634,7 +5271,20 @@
       "limitations": [],
       "recommendedVariant": "White",
       "action": "retain"
-    }
+    },
+    "colors": [
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#deddd3"
+      },
+      {
+        "name": "Gray",
+        "hex": "#adaca0"
+      }
+    ]
   },
   {
     "id": "groove-x-lovot-3",
@@ -4642,8 +5292,7 @@
     "brand": "GROOVE X",
     "category": "living",
     "tags": [
-      "robot",
-      "companionship"
+      "Electronics"
     ],
     "description": "A warm companion robot that moves around the home and responds to touch and attention.",
     "productUrl": "https://store.lovot.life/buy",
@@ -4746,7 +5395,30 @@
       "limitations": [],
       "recommendedVariant": "Cha / brown",
       "action": "retain_upgrade_evidence"
-    }
+    },
+    "colors": [
+      "White",
+      "Gray",
+      "Brown"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#e0ddd8"
+      },
+      {
+        "name": "Gray",
+        "hex": "#a8a5a2"
+      },
+      {
+        "name": "Orange",
+        "hex": "#9d7861"
+      },
+      {
+        "name": "Brown",
+        "hex": "#3f322b"
+      }
+    ]
   },
   {
     "id": "teenage-engineering-grip-car",
@@ -4754,8 +5426,7 @@
     "brand": "teenage engineering",
     "category": "living",
     "tags": [
-      "toy car",
-      "play"
+      "Toys"
     ],
     "description": "Anders Hermansen’s aluminum toy car, with a sculptural grip and rubber wheels on ball bearings.",
     "productUrl": "https://teenage.engineering/products/grip-car",
@@ -4852,7 +5523,30 @@
       "limitations": [],
       "recommendedVariant": "Glossy Red",
       "action": "retain_upgrade_evidence"
-    }
+    },
+    "colors": [
+      "Gray",
+      "Black",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Gray",
+        "hex": "#848484"
+      },
+      {
+        "name": "Black",
+        "hex": "#2a2a2a"
+      },
+      {
+        "name": "Red",
+        "hex": "#a83230"
+      },
+      {
+        "name": "White",
+        "hex": "#cecece"
+      }
+    ]
   },
   {
     "id": "cliik-press-glass-family-pack",
@@ -4860,8 +5554,7 @@
     "brand": "Cliik",
     "category": "kitchen",
     "tags": [
-      "storage",
-      "kitchen"
+      "Kitchenware"
     ],
     "description": "Three glass pantry jars with press-to-lock lids and magnets that connect them side by side. A little order for the everyday essentials.",
     "productUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
@@ -4964,7 +5657,25 @@
       "limitations": [],
       "recommendedVariant": "Maroon",
       "action": "retain_with_qualification"
-    }
+    },
+    "colors": [
+      "White",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#dadada"
+      },
+      {
+        "name": "Red",
+        "hex": "#834957"
+      },
+      {
+        "name": "Gray",
+        "hex": "#8f8083"
+      }
+    ]
   },
   {
     "id": "yoto-player-4",
@@ -4977,8 +5688,7 @@
     "width": 1232,
     "height": 1232,
     "tags": [
-      "audio",
-      "kids"
+      "Electronics"
     ],
     "sourceUrl": "https://eu.yotoplay.com/players/yoto-player-4",
     "sourceImageUrl": "https://www.datocms-assets.com/48136/1788969790-gallery-player-1-welcome-card-eu-fr-1.png",
@@ -5088,7 +5798,30 @@
       "limitations": [],
       "recommendedVariant": "4th Gen standard body and controls",
       "action": "retain"
-    }
+    },
+    "colors": [
+      "White",
+      "Gray",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#dbd9da"
+      },
+      {
+        "name": "Gray",
+        "hex": "#bbb5ae"
+      },
+      {
+        "name": "Red",
+        "hex": "#ed6546"
+      },
+      {
+        "name": "Green",
+        "hex": "#5e9f62"
+      }
+    ]
   },
   {
     "id": "freckle-phone-orange",
@@ -5101,8 +5834,7 @@
     "width": 1486,
     "height": 1486,
     "tags": [
-      "phone",
-      "kids"
+      "Electronics"
     ],
     "sourceUrl": "https://buy.freckle.tech/products/freckle",
     "sourceImageUrl": "https://buy.freckle.tech/cdn/shop/files/green_freckle.png?v=1786052036",
@@ -5172,7 +5904,31 @@
           "finding": "Official green_freckle.png matches the owner-selected green version."
         }
       ]
-    }
+    },
+    "colors": [
+      "White",
+      "Green",
+      "Black",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#d8e5fb"
+      },
+      {
+        "name": "Green",
+        "hex": "#3ed53f"
+      },
+      {
+        "name": "Brown",
+        "hex": "#0d1810"
+      },
+      {
+        "name": "Orange",
+        "hex": "#e1784e"
+      }
+    ]
   },
   {
     "id": "loop-cocoon-berry",
@@ -5180,8 +5936,7 @@
     "brand": "Loop",
     "category": "wear",
     "tags": [
-      "hearing protection",
-      "kids"
+      "Fashion"
     ],
     "description": "Soft-cushioned earmuffs for little ears, with an adjustable fabric strap and a lavender-and-berry color pairing.",
     "productUrl": "https://www.loopearplugs.com/products/cocoon?variant=57886842257743",
@@ -5284,7 +6039,35 @@
       "limitations": [],
       "recommendedVariant": "Berry",
       "action": "retain_with_qualification"
-    }
+    },
+    "colors": [
+      "Red",
+      "Gray",
+      "Purple",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#9f5150"
+      },
+      {
+        "name": "Gray",
+        "hex": "#aaa1b7"
+      },
+      {
+        "name": "Purple",
+        "hex": "#887b9a"
+      },
+      {
+        "name": "White",
+        "hex": "#c7c0d0"
+      },
+      {
+        "name": "Brown",
+        "hex": "#2f1215"
+      }
+    ]
   },
   {
     "id": "magis-linnut-sulo-s",
@@ -5292,8 +6075,7 @@
     "brand": "Magis × Iittala",
     "category": "living",
     "tags": [
-      "lighting",
-      "sculptural"
+      "Lighting"
     ],
     "description": "A small rechargeable lamp with an owl-like face. Oiva Toikka’s bird forms become a softly glowing companion in molded polycarbonate.",
     "productUrl": "https://www.magisdesign.com/product/linnut-sulo/",
@@ -5403,7 +6185,24 @@
       "limitations": [],
       "recommendedVariant": "Sulo S, White 1729",
       "action": "retain_upgrade_exact_finish"
-    }
+    },
+    "colors": [
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Gray",
+        "hex": "#b0b0ac"
+      },
+      {
+        "name": "Orange",
+        "hex": "#b76a3b"
+      },
+      {
+        "name": "White",
+        "hex": "#cfcfcd"
+      }
+    ]
   },
   {
     "id": "flowerpot-vp9-zesty-orange",
@@ -5411,8 +6210,7 @@
     "brand": "&Tradition",
     "category": "living",
     "tags": [
-      "lighting",
-      "portable"
+      "Lighting"
     ],
     "description": "Verner Panton’s two-domed Flowerpot, made portable. A compact rechargeable table lamp.",
     "productUrl": "https://andtradition.jp/products/flowerpot-vp9?variant=46448475013260",
@@ -5497,7 +6295,16 @@
           "finding": "Owner requested Orange; official Zesty Orange variant46448475013260, available true in product feed on2026-10-11."
         }
       ]
-    }
+    },
+    "colors": [
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#df6932"
+      }
+    ]
   },
   {
     "id": "b-line-boby-34-paprika",
@@ -5505,8 +6312,7 @@
     "brand": "B-Line",
     "category": "living",
     "tags": [
-      "furniture",
-      "storage"
+      "Furniture"
     ],
     "description": "Joe Colombo’s rolling storage trolley, with three levels and four swing-out trays. A compact home for tools and everyday odds and ends.",
     "productUrl": "https://www.b-line.it/en/prodotti/boby/",
@@ -5626,7 +6432,20 @@
           "finding": "The Montreal Museum of Fine Arts collection presents a red 1970 Bieffeplast Boby. The current manufacturer page lists Paprika among modern finishes; a current Japanese retailer explicitly markets Paprika as 2026 NEW COLOR."
         }
       ]
-    }
+    },
+    "colors": [
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#b31c22"
+      },
+      {
+        "name": "Brown",
+        "hex": "#45100f"
+      }
+    ]
   },
   {
     "id": "hey-bag-green-lines",
@@ -5634,8 +6453,7 @@
     "brand": "Hey",
     "category": "wear",
     "tags": [
-      "bag",
-      "carry"
+      "Fashion"
     ],
     "description": "A striped everyday bag designed with Júlia Esqué and made by Nukak. Locally woven awning fabric brings color, structure, and weather resistance to a familiar shape.",
     "productUrl": "https://heyshop.es/products/hey-bag?variant=35440377102500",
@@ -5743,7 +6561,30 @@
       "limitations": [],
       "recommendedVariant": "Green Lines",
       "action": "retain_with_qualification"
-    }
+    },
+    "colors": [
+      "White",
+      "Blue",
+      "Green"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#ececeb"
+      },
+      {
+        "name": "Blue",
+        "hex": "#1d567a"
+      },
+      {
+        "name": "Brown",
+        "hex": "#0d3355"
+      },
+      {
+        "name": "Orange",
+        "hex": "#f2642d"
+      }
+    ]
   },
   {
     "id": "hey-classic-cap",
@@ -5751,8 +6592,7 @@
     "brand": "Hey",
     "category": "wear",
     "tags": [
-      "headwear",
-      "accessories"
+      "Fashion"
     ],
     "description": "A black cotton cap with a curved brim and multicolored Hey embroidery. Made in Barcelona, with a simple shape and one bright detail.",
     "productUrl": "https://heyshop.es/products/classic-cap",
@@ -5849,7 +6689,16 @@
       "limitations": [],
       "recommendedVariant": "Black with multicolor Hey embroidery",
       "action": "retain_with_qualification"
-    }
+    },
+    "colors": [
+      "Brown"
+    ],
+    "displayColors": [
+      {
+        "name": "Brown",
+        "hex": "#190f0e"
+      }
+    ]
   },
   {
     "id": "alessi-la-conica",
@@ -5857,8 +6706,7 @@
     "brand": "Alessi",
     "category": "kitchen",
     "tags": [
-      "coffee",
-      "kitchen"
+      "Kitchenware"
     ],
     "description": "Aldo Rossi’s stovetop espresso maker turns a cylinder and a cone into a small piece of architecture. Polished stainless steel sits on a copper base.",
     "productUrl": "https://alessi.com/products/la-conica-espresso-coffee-maker",
@@ -5939,7 +6787,30 @@
       "limitations": [],
       "recommendedVariant": "Polished stainless steel / copper base",
       "action": "retain"
-    }
+    },
+    "colors": [
+      "White",
+      "Black",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#e1dfde"
+      },
+      {
+        "name": "Gray",
+        "hex": "#8d8c8b"
+      },
+      {
+        "name": "Brown",
+        "hex": "#0b0c0b"
+      },
+      {
+        "name": "Black",
+        "hex": "#1a1a1a"
+      }
+    ]
   },
   {
     "id": "memphis-first",
@@ -5947,8 +6818,7 @@
     "brand": "Memphis Milano",
     "category": "living",
     "tags": [
-      "furniture",
-      "seating"
+      "Furniture"
     ],
     "description": "Michele De Lucchi’s 1983 chair brings a blue disc and two black spheres together on a curved metal frame. A seat with a playful sense of balance.",
     "productUrl": "https://www.italianradical.design/products/first",
@@ -6044,7 +6914,31 @@
       "limitations": [],
       "recommendedVariant": "Blue / black / gray classic composition",
       "action": "retain"
-    }
+    },
+    "colors": [
+      "Gray",
+      "Blue",
+      "White",
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "Gray",
+        "hex": "#8a8e91"
+      },
+      {
+        "name": "Blue",
+        "hex": "#04adde"
+      },
+      {
+        "name": "Black",
+        "hex": "#292929"
+      },
+      {
+        "name": "White",
+        "hex": "#d0d5d8"
+      }
+    ]
   },
   {
     "id": "bosa-most-illustrious-achille",
@@ -6052,8 +6946,7 @@
     "brand": "Bosa",
     "category": "living",
     "tags": [
-      "sculpture",
-      "design classic"
+      "Home"
     ],
     "description": "Elena Salmistraro’s ceramic tribute to Achille Castiglioni. Colorful glazes and stacked forms turn a designer and his work into a small, watchful character.",
     "productUrl": "https://www.bosatrade.com/prodotto/mostillustrious-achille/",
@@ -6151,7 +7044,26 @@
       "limitations": [],
       "recommendedVariant": "MI/01 original multicolor enamels and precious-metal details",
       "action": "retain_upgrade_evidence"
-    }
+    },
+    "colors": [
+      "White",
+      "Gray",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#d5dadf"
+      },
+      {
+        "name": "Gray",
+        "hex": "#a2a5ab"
+      },
+      {
+        "name": "Red",
+        "hex": "#a71e26"
+      }
+    ]
   },
   {
     "id": "pedrali-frida-752",
@@ -6159,8 +7071,7 @@
     "brand": "Pedrali",
     "category": "living",
     "tags": [
-      "furniture",
-      "seating"
+      "Furniture"
     ],
     "description": "Odo Fioravanti’s oak chair pairs a solid wood frame with a thin, curved plywood shell. Light in appearance, with a quietly sculpted seat and back.",
     "productUrl": "https://www.pedrali.com/en-us/products/chairs-design/frida-752",
@@ -6264,7 +7175,16 @@
       "limitations": [],
       "recommendedVariant": "Pale oak; likely RS Bleached Oak, exact asset finish to confirm",
       "action": "retain_correct_finish_terminology"
-    }
+    },
+    "colors": [
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "Beige",
+        "hex": "#c9ab94"
+      }
+    ]
   },
   {
     "id": "qeeboo-rabbit-chair-light-blue",
@@ -6272,8 +7192,7 @@
     "brand": "Qeeboo",
     "category": "living",
     "tags": [
-      "furniture",
-      "seating"
+      "Furniture"
     ],
     "description": "A rabbit-shaped chair by Stefano Giovannoni, for indoors or out. Its long ears work as a backrest, or a place to rest your arms when sitting the other way around.",
     "productUrl": "https://www.qeeboo.com/en/products/rabbit-chair-design-stefano-giovannoni",
@@ -6362,7 +7281,20 @@
       ],
       "recommendedVariant": "Light Blue",
       "action": "retain_with_qualification"
-    }
+    },
+    "colors": [
+      "Blue"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#6374a5"
+      },
+      {
+        "name": "White",
+        "hex": "#bdc4dd"
+      }
+    ]
   },
   {
     "id": "alessi-magic-bunny-black",
@@ -6370,8 +7302,7 @@
     "brand": "Alessi",
     "category": "kitchen",
     "tags": [
-      "tableware",
-      "toothpicks"
+      "Kitchenware"
     ],
     "description": "A rabbit in a top hat, with toothpicks hiding inside. Stefano Giovannoni turns a small table accessory into a familiar magic trick.",
     "productUrl": "https://alessi.com/products/magic-bunny-toothpick-holder?variant=46491229192518",
@@ -6478,6 +7409,21 @@
         "image": "img/objects/cutouts/alessi-magic-bunny-black-native-v2.webp",
         "width": 1159
       }
+    ],
+    "colors": [
+      "Green",
+      "Yellow",
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "Green",
+        "hex": "#53b254"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#e7e76e"
+      }
     ]
   },
   {
@@ -6486,8 +7432,7 @@
     "brand": "Alessi",
     "category": "kitchen",
     "tags": [
-      "tableware",
-      "serving"
+      "Kitchenware"
     ],
     "description": "A stainless steel tray ringed with cutout paper-doll figures. Designed by King-Kong, the duo of Stefano Giovannoni and Guido Venturini.",
     "productUrl": "https://alessi.com/products/girotondo-round-tray",
@@ -6598,7 +7543,21 @@
       "limitations": [],
       "recommendedVariant": "Mirror-polished stainless steel",
       "action": "retain_upgrade_evidence"
-    }
+    },
+    "colors": [
+      "Gray",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Gray",
+        "hex": "#aeaeae"
+      },
+      {
+        "name": "White",
+        "hex": "#d2d2d2"
+      }
+    ]
   },
   {
     "id": "baggu-standard-pop-pink-happy",
@@ -6606,8 +7565,7 @@
     "brand": "BAGGU",
     "category": "wear",
     "tags": [
-      "bag",
-      "reusable"
+      "Fashion"
     ],
     "description": "A reusable bag in Pop Pink Happy, with blue smiley faces on pink recycled ripstop nylon. It folds into its own small pouch, ready for groceries, errands, and everyday extras.",
     "productUrl": "https://baggu.com/products/standard-baggu-pop-pink-happy",
@@ -6694,7 +7652,21 @@
       ],
       "opticalFill": 0.789453,
       "upscaled": false
-    }
+    },
+    "colors": [
+      "Pink",
+      "Purple"
+    ],
+    "displayColors": [
+      {
+        "name": "Pink",
+        "hex": "#dd81c5"
+      },
+      {
+        "name": "Purple",
+        "hex": "#985ebb"
+      }
+    ]
   },
   {
     "id": "anya-hindmarch-eyes-tote",
@@ -6703,8 +7675,7 @@
     "brand": "Anya Hindmarch",
     "category": "wear",
     "tags": [
-      "bag",
-      "carry"
+      "Fashion"
     ],
     "description": "A recycled-nylon tote with a pair of eyes and a zip pocket that opens into a little mouth. Everyday storage with an expressive face.",
     "productUrl": "https://www.anyahindmarch.jp/products/tote-eyes-in-black-econyl-r-regenerated-nylon",
@@ -6793,7 +7764,20 @@
       ],
       "opticalFill": 0.79759,
       "upscaled": false
-    }
+    },
+    "colors": [
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "Black",
+        "hex": "#27272a"
+      },
+      {
+        "name": "Brown",
+        "hex": "#3f1c22"
+      }
+    ]
   },
   {
     "id": "heinz-tomato-ketchup",
@@ -6802,8 +7786,7 @@
     "variantName": "32 oz inverted squeeze bottle",
     "category": "kitchen",
     "tags": [
-      "food",
-      "pantry"
+      "Food"
     ],
     "description": "Tomato ketchup in an upside-down squeeze bottle, with a shield-shaped label and a white flip-top cap.",
     "productUrl": "https://www.heinz.com/products/00013000006057-tomato-ketchup",
@@ -6877,7 +7860,30 @@
         "11 October review: removed repeated front views; two distinct source photos retained pending verified high-resolution usage photography."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "Red",
+      "Gray",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#813231"
+      },
+      {
+        "name": "White",
+        "hex": "#dededd"
+      },
+      {
+        "name": "Gray",
+        "hex": "#9b9998"
+      },
+      {
+        "name": "Green",
+        "hex": "#689854"
+      }
+    ]
   },
   {
     "id": "panic-playdate",
@@ -6885,9 +7891,7 @@
     "brand": "Panic",
     "category": "work",
     "tags": [
-      "gaming",
-      "handheld",
-      "Teenage Engineering"
+      "Electronics"
     ],
     "description": "A pocket-size game system with a monochrome screen and a hand-cranked controller, designed with Teenage Engineering.",
     "productUrl": "https://play.date/",
@@ -6991,7 +7995,25 @@
         }
       ],
       "sources": []
-    }
+    },
+    "colors": [
+      "Yellow",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Yellow",
+        "hex": "#e4ba4c"
+      },
+      {
+        "name": "Gray",
+        "hex": "#8f8f8c"
+      },
+      {
+        "name": "Black",
+        "hex": "#1e1f20"
+      }
+    ]
   },
   {
     "id": "kinto-water-bottle-300ml",
@@ -6999,8 +8021,7 @@
     "brand": "KINTO",
     "category": "kitchen",
     "tags": [
-      "drinkware",
-      "portable"
+      "Kitchenware"
     ],
     "description": "A compact 300ml water bottle with a one-turn lid and a handle for easy carrying.",
     "productUrl": "https://kinto.co.jp/products/20121?variant=45562694303969",
@@ -7111,7 +8132,21 @@
           "finding": "Current official page and product JSON identify Clear300ml as SKU20121. Manufacturer says the material renewal did not change design or capacity."
         }
       ]
-    }
+    },
+    "colors": [
+      "White",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#f7f7f7"
+      },
+      {
+        "name": "Gray",
+        "hex": "#999999"
+      }
+    ]
   },
   {
     "id": "topologie-6mm-rope-strap",
@@ -7119,9 +8154,7 @@
     "brand": "Topologie",
     "category": "wear",
     "tags": [
-      "strap",
-      "carry",
-      "rope"
+      "Fashion"
     ],
     "description": "An adjustable rope strap with a pair of swivel carabiners.",
     "variantName": "6.0mm Rope, Navy Orange",
@@ -7276,7 +8309,23 @@
           "finding": "Official color-specific page supplies matching Navy Orange packshot and two in-use photographs; no launch or iconic ranking is stated."
         }
       ]
-    }
+    },
+    "colors": [
+      "Black",
+      "Brown",
+      "Red",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "Brown",
+        "hex": "#29181c"
+      },
+      {
+        "name": "Red",
+        "hex": "#852d22"
+      }
+    ]
   },
   {
     "id": "yoki-pillar-blue",
@@ -7284,10 +8333,7 @@
     "brand": "YÔKI",
     "category": "living",
     "tags": [
-      "vase",
-      "glass",
-      "handmade",
-      "Egypt"
+      "Home"
     ],
     "description": "A blue Pyrex glass vase handmade by artisans in Egypt. Its stacked silhouette stands 26 cm tall and 10.5 cm wide; subtle variations in shape and color make each piece its own. Hand-wash gently and avoid sudden temperature changes.",
     "productUrl": "https://yokipoetry.stores.jp/items/6a65d000d90e543dbab1830b",
@@ -7357,7 +8403,16 @@
       "sourceLimitations": [
         "Best verified native source retained; usable subject detail remains below 1200px. File size is not treated as proof of product detail."
       ]
-    }
+    },
+    "colors": [
+      "Blue"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#0d88cc"
+      }
+    ]
   },
   {
     "id": "gispen-dombo-red",
@@ -7365,10 +8420,7 @@
     "brand": "Gispen",
     "category": "kitchen",
     "tags": [
-      "Richard Hutten",
-      "mug",
-      "drinkware",
-      "red"
+      "Kitchenware"
     ],
     "description": "Richard Hutten’s two-handled mug for Gispen, designed in 2000. Oversized ear-like handles make it easy to grip and give a familiar drinking vessel a playful character.",
     "productUrl": "https://www.richardhutten.com/objects/dombo-mug-gispen.html",
@@ -7477,7 +8529,16 @@
       ],
       "sourceLimitations": []
     },
-    "variantName": "Red canvas / assorted colorful gallery"
+    "variantName": "Red canvas / assorted colorful gallery",
+    "colors": [
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#c30b0d"
+      }
+    ]
   },
   {
     "id": "vitra-eames-elephant-orange",
@@ -7485,10 +8546,7 @@
     "brand": "Vitra",
     "category": "living",
     "tags": [
-      "Charles and Ray Eames",
-      "elephant",
-      "recycled plastic",
-      "orange"
+      "Home"
     ],
     "description": "Charles and Ray Eames’s elephant, reimagined in Red Orange recycled plastic. Broad ears, a curved trunk, and a sturdy four-legged form bring a little play into everyday spaces.",
     "productUrl": "https://store.hermanmiller.com/decor-objects-sculptures/eames-elephant/6791.html?lang=en_US",
@@ -7595,7 +8653,17 @@
       ],
       "sourceLimitations": []
     },
-    "variantName": "Red Orange"
+    "variantName": "Red Orange",
+    "colors": [
+      "Orange",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#da4e1e"
+      }
+    ]
   },
   {
     "id": "detail-nasa-snow-globe",
@@ -7603,10 +8671,7 @@
     "brand": "DETAIL INC.",
     "category": "living",
     "tags": [
-      "NASA",
-      "Artemis",
-      "astronaut",
-      "snow globe"
+      "Home"
     ],
     "description": "An astronaut waves from a glitter-filled glass dome, carrying an Artemis flag above a white NASA base. A small reminder to keep looking up.",
     "productUrl": "https://www.beams.co.jp/item/bprbeams/hobby/33030235854/",
@@ -7671,7 +8736,21 @@
       "sourceLimitations": [
         "Best verified native source retained; usable subject detail remains below 1200px. File size is not treated as proof of product detail."
       ]
-    }
+    },
+    "colors": [
+      "White",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#e2e5e7"
+      },
+      {
+        "name": "Gray",
+        "hex": "#9ca1a3"
+      }
+    ]
   },
   {
     "id": "carpenter-hamburger-coaster",
@@ -7679,10 +8758,7 @@
     "brand": "carpenter",
     "category": "kitchen",
     "tags": [
-      "coasters",
-      "beech",
-      "wool felt",
-      "hamburger"
+      "Kitchenware"
     ],
     "description": "Five wool-felt ingredients stack between beechwood buns to make a hamburger. Unstack them into coasters; the wooden bun doubles as a cup lid.",
     "productUrl": "https://www.carpenter.com.tw/en/product/detail/193793",
@@ -7761,7 +8837,29 @@
       "sourceLimitations": [
         "Best verified native source retained; usable subject detail remains below 1200px. File size is not treated as proof of product detail."
       ]
-    }
+    },
+    "colors": [
+      "Orange",
+      "Green"
+    ],
+    "displayColors": [
+      {
+        "name": "Beige",
+        "hex": "#e5bb95"
+      },
+      {
+        "name": "Green",
+        "hex": "#619a49"
+      },
+      {
+        "name": "Brown",
+        "hex": "#4f2c1e"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#f7bc41"
+      }
+    ]
   },
   {
     "id": "super7-beams-charlie-brown",
@@ -7769,10 +8867,7 @@
     "brand": "Super7 × BEAMS",
     "category": "living",
     "tags": [
-      "Peanuts",
-      "ReAction",
-      "figure",
-      "orange"
+      "Toys"
     ],
     "description": "Charlie Brown wears BEAMS orange in this articulated ReAction figure, made by Super7 for BEAMS’s 50th anniversary. The familiar zigzag shirt stays unmistakably his.",
     "productUrl": "https://www.beams.co.jp/item/bprbeams/hobby/33030240834/?color=90",
@@ -7839,7 +8934,26 @@
         "Transparent native cutout visually checked on beige and dark brown; no enlargement."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "Orange",
+      "Red",
+      "Brown"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#ce9a6e"
+      },
+      {
+        "name": "Red",
+        "hex": "#c43f22"
+      },
+      {
+        "name": "Brown",
+        "hex": "#3a1f15"
+      }
+    ]
   },
   {
     "id": "running-press-ufo-cow",
@@ -7847,10 +8961,7 @@
     "brand": "Running Press",
     "category": "living",
     "tags": [
-      "RP Minis",
-      "alien",
-      "spaceship",
-      "light and sound"
+      "Toys"
     ],
     "description": "A miniature flying saucer abducts a cow with a magnet, flashing lights, and sound effects. The kit includes a grass-covered base, display stand, and a small illustrated book.",
     "productUrl": "https://www.hachettebookgroup.com/titles/matt-smiriglio/ufo-cow-abduction/9780762493418/?lens=rp-minis",
@@ -7928,7 +9039,35 @@
         "Transparent native cutout visually checked on beige and dark brown; no enlargement."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "White",
+      "Black",
+      "Green",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#e0d6d1"
+      },
+      {
+        "name": "Beige",
+        "hex": "#a88e81"
+      },
+      {
+        "name": "Brown",
+        "hex": "#363e0d"
+      },
+      {
+        "name": "Gray",
+        "hex": "#ad9f9a"
+      },
+      {
+        "name": "Green",
+        "hex": "#7a8729"
+      }
+    ]
   },
   {
     "id": "notabag-original-red",
@@ -7936,10 +9075,7 @@
     "brand": "Notabag",
     "category": "wear",
     "tags": [
-      "bag",
-      "backpack",
-      "red",
-      "reusable"
+      "Fashion"
     ],
     "description": "Pull the straps and this reusable red bag becomes a backpack. Its cotton-nylon fabric folds into an inner pocket, ready to come along for the next errand.",
     "productUrl": "https://www.notabag.com/products/notabag-red-light-backpack-travel",
@@ -8044,7 +9180,16 @@
       "sourceLimitations": [
         "Best verified native source retained; usable subject detail remains below 1200px. File size is not treated as proof of product detail."
       ]
-    }
+    },
+    "colors": [
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#e44238"
+      }
+    ]
   },
   {
     "id": "cotopaxi-kapai-del-dia",
@@ -8052,10 +9197,7 @@
     "brand": "Cotopaxi",
     "category": "wear",
     "tags": [
-      "bag",
-      "outdoors",
-      "colorful",
-      "recycled"
+      "Fashion"
     ],
     "description": "A small hip pack made from repurposed fabric, with a padded back panel and a pocket for everyday essentials. Del Día colors are selected by the makers, so every bag has its own combination.",
     "productUrl": "https://www.cotopaxi.com/products/kapai-1-5l-hip-pack-del-dia",
@@ -8134,79 +9276,35 @@
       "sourceLimitations": [
         "Resolved subject is below 1200px; file dimensions are not treated as usable product detail."
       ]
-    }
-  },
-  {
-    "id": "diffar-spicy-wood-hair-oil",
-    "name": "Tokyo Balance Fragrance Hair Oil",
-    "brand": "Diffar",
-    "category": "living",
-    "tags": [
-      "hair care",
-      "fragrance",
-      "colorful"
+    },
+    "colors": [
+      "Pink",
+      "Blue",
+      "Yellow",
+      "Red"
     ],
-    "description": "Diffar’s Tokyo Balance fragrance hair oil pairs geranium and rose with hinoki, sandalwood and vetiver. The collection brings six scents together in distinctive, colorful bottles.",
-    "productUrl": "https://diffar.jp/products/11001",
-    "sourceUrl": "https://diffar.jp/products/11001",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/51823_img01_43ab8ab8-ff39-4f53-a2f0-38ca2cbebeef.png?v=1725535365",
-    "gallery": [
+    "displayColors": [
       {
-        "image": "img/objects/gallery/diffar-11001-scene.jpg",
-        "width": 1500,
-        "height": 1500,
-        "sourceUrl": "https://diffar.jp/products/11001",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/11001_thumb_8eaead2c-941a-4017-989f-4b3ba9b9438d.jpg?v=1726747069"
+        "name": "Blue",
+        "hex": "#2c86ab"
       },
       {
-        "image": "img/objects/gallery/diffar-21612-scene.jpg",
-        "width": 1500,
-        "height": 1500,
-        "sourceUrl": "https://diffar.jp/products/21612",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/21612_thumb_ff109e5d-db25-44cc-b861-2ee83a3cc96e.jpg?v=1726747086"
+        "name": "Brown",
+        "hex": "#492931"
       },
       {
-        "image": "img/objects/gallery/diffar-31407-scene.jpg",
-        "width": 1500,
-        "height": 1500,
-        "sourceUrl": "https://diffar.jp/products/31407",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/31407_thumb_5f138392-8a78-4f98-86e6-59db33a1e242.jpg?v=1726747098"
+        "name": "Pink",
+        "hex": "#773c53"
       },
       {
-        "image": "img/objects/gallery/diffar-41504-scene.jpg",
-        "width": 1500,
-        "height": 1500,
-        "sourceUrl": "https://diffar.jp/products/41504",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0896/3273/5513/files/41504_thumb_5742cf60-02b8-4821-a75a-0f8151202908.jpg?v=1726747109"
+        "name": "Yellow",
+        "hex": "#b0a03b"
+      },
+      {
+        "name": "Red",
+        "hex": "#af242f"
       }
-    ],
-    "variantName": "11001 Tokyo Balance",
-    "colorwayEvidence": {
-      "basis": "Owner-selected Tokyo Balance product link; printed 11001 checked against official photo",
-      "notes": "Gallery also shows Woody Earthy, Herbal Floral and Japanese Citrus from the official collection."
-    },
-    "usageCaveat": "Source-credited original photography for private preview; rights clearance not verified.",
-    "image": "img/objects/gallery/diffar-11001-main.png",
-    "width": 1000,
-    "height": 2370,
-    "imageTreatment": {
-      "background": "transparent",
-      "method": "Official transparent PNG retained at native resolution; CSS contain with optical breathing room and shared warm grade",
-      "nativeSourceDimensions": [
-        1000,
-        2370
-      ],
-      "upscaled": false
-    },
-    "catalogAudit": {
-      "reviewed": "2026-10-11",
-      "notes": [
-        "Complete bottle framed without portrait cover cropping; four native 1500px square official variant scenes."
-      ],
-      "sourceLimitations": []
-    },
-    "imageClass": "diffar-bottle",
-    "hoverImage": "img/objects/gallery/diffar-11001-scene.jpg"
+    ]
   },
   {
     "id": "kay-bojesen-songbird-sunshine",
@@ -8214,10 +9312,7 @@
     "brand": "Kay Bojesen",
     "category": "living",
     "tags": [
-      "wood",
-      "bird",
-      "design classic",
-      "colorful"
+      "Home"
     ],
     "description": "Kay Bojesen’s wooden songbird in turquoise and yellow. A round head, generous beak and simple painted body give this little companion a bright, unmistakable character.",
     "productUrl": "https://www.rosendahl.com/en/intl/products/kay-birds-songbird-turquoiseyellow-h155-cm-39405",
@@ -8285,7 +9380,26 @@
       ],
       "sourceLimitations": []
     },
-    "hoverImage": "img/objects/cutouts/sunshine-20261011-native.png"
+    "hoverImage": "img/objects/cutouts/sunshine-20261011-native.png",
+    "colors": [
+      "Blue",
+      "Yellow",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#619599"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#ddd56a"
+      },
+      {
+        "name": "White",
+        "hex": "#cee1df"
+      }
+    ]
   },
   {
     "id": "vitra-nelson-night-clock",
@@ -8293,9 +9407,7 @@
     "brand": "Vitra",
     "category": "living",
     "tags": [
-      "clock",
-      "brass",
-      "design classic"
+      "Home"
     ],
     "description": "George Nelson’s bedside clock pairs a black dial with a brass case and pedestal. White markers and sculptural hands make time easy to read through its curved glass face.",
     "productUrl": "https://www.vitra.com/en-us/product/details/night-clock",
@@ -8381,7 +9493,35 @@
       "sourceLimitations": [
         "Resolved subject is below 1200px; file dimensions are not treated as usable product detail."
       ]
-    }
+    },
+    "colors": [
+      "Gray",
+      "Yellow",
+      "White",
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "Gray",
+        "hex": "#5b5a5b"
+      },
+      {
+        "name": "Black",
+        "hex": "#37363a"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#c9b48a"
+      },
+      {
+        "name": "White",
+        "hex": "#ebe9e5"
+      },
+      {
+        "name": "Beige",
+        "hex": "#b29770"
+      }
+    ]
   },
   {
     "id": "palaset-im-ok-fantti-elephant-bank",
@@ -8389,10 +9529,7 @@
     "brand": "PALASET × I’M OK",
     "category": "living",
     "tags": [
-      "piggy bank",
-      "elephant",
-      "red",
-      "gift"
+      "Home"
     ],
     "description": "A red elephant-shaped coin bank with an I’M OK message on its ear. PALASET’s familiar FANTTI form gives spare change a cheerful place to gather.",
     "productUrl": "https://ronherman.jp/item/detail/1_3156_4095600004_1/021",
@@ -8488,7 +9625,20 @@
         "Owner-requested gallery order: group colorways, matching red side profile, front, top. Native 1950×2600 retailer photos; canvas alpha-only mask preserves RGB."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#e35247"
+      },
+      {
+        "name": "White",
+        "hex": "#f9e9e9"
+      }
+    ]
   },
   {
     "id": "ichendorf-desert-plants-cactus-amber",
@@ -8496,10 +9646,7 @@
     "brand": "Ichendorf Milano",
     "category": "kitchen",
     "tags": [
-      "glass",
-      "drinkware",
-      "cactus",
-      "handmade"
+      "Kitchenware"
     ],
     "description": "A green glass cactus grows inside this handmade tumbler from Alessandra Baldereschi’s Desert Plants collection. A clear glass vessel turns an ordinary drink into a miniature landscape.",
     "productUrl": "https://flymee.jp/product/121403/",
@@ -8614,7 +9761,25 @@
       "sourceLimitations": [
         "Official photos have a1200px long edge; the isolated canvas product is approximately500px across. No enlargement."
       ]
-    }
+    },
+    "colors": [
+      "White",
+      "Green"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#f2f2f2"
+      },
+      {
+        "name": "Green",
+        "hex": "#3c9b33"
+      },
+      {
+        "name": "Gray",
+        "hex": "#9da09e"
+      }
+    ]
   },
   {
     "id": "curaprox-cs-smart",
@@ -8622,9 +9787,7 @@
     "brand": "CURAPROX",
     "category": "living",
     "tags": [
-      "toothbrush",
-      "bathroom",
-      "colorful"
+      "Personal care"
     ],
     "description": "A colorful everyday toothbrush with 5,460 fine Curen filaments and an octagonal handle. Soft, densely packed bristles and contrasting color combinations give a daily routine a little character.",
     "productUrl": "https://www.curaprox.shop/c/cat_all/toothbrush_all/cs5460_all/4580585921670",
@@ -8718,7 +9881,21 @@
       "sourceLimitations": [
         "Main source is 1200×1200; isolated brush has roughly 1090px native height. No enlargement. Two gallery originals are 1200px; retailer originals are 1950×2600."
       ]
-    }
+    },
+    "colors": [
+      "Orange",
+      "Blue"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#ed9c29"
+      },
+      {
+        "name": "Blue",
+        "hex": "#294094"
+      }
+    ]
   },
   {
     "id": "soholm-cafe-reversible-tote",
@@ -8726,10 +9903,7 @@
     "brand": "SØHOLM CAFÉ",
     "category": "wear",
     "tags": [
-      "bag",
-      "tote",
-      "reversible",
-      "blue"
+      "Fashion"
     ],
     "description": "A lightweight nylon tote with contrasting pocket and handles. Turn it inside out to switch from blue to pink, cinch the opening into a pouch, or fold the whole bag into its outer pocket.",
     "productUrl": "https://online.actus-interior.com/item/2454030/",
@@ -8816,7 +9990,27 @@
         "Best verified original is 900px; not enlarged. A sharper manufacturer source remains desirable.",
         "Resolved subject is below 1200px; file dimensions are not treated as usable product detail."
       ]
-    }
+    },
+    "colors": [
+      "Blue",
+      "Gray",
+      "Red",
+      "Pink"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#3a4d9a"
+      },
+      {
+        "name": "Gray",
+        "hex": "#b49b9d"
+      },
+      {
+        "name": "Red",
+        "hex": "#a28584"
+      }
+    ]
   },
   {
     "id": "tecta-cat-black",
@@ -8824,10 +10018,7 @@
     "brand": "TECTA",
     "category": "living",
     "tags": [
-      "cat",
-      "wood",
-      "sculpture",
-      "black"
+      "Home"
     ],
     "description": "A black wooden cat with an arched back and bright yellow eyes. Designed by Dominik Kirgus, Karlchen turns TECTA’s much-loved feline companion into a geometric sculpture, 30 cm tall.",
     "variantName": "Black lacquer / yellow eyes",
@@ -8932,7 +10123,21 @@
       "sourceLimitations": [
         "Manufacturer studio originals are 1000px, below the 1200px target; shop copies are only 800px. Originals retained without enlargement. Lifestyle original is 2560×1707."
       ]
-    }
+    },
+    "colors": [
+      "Black",
+      "Yellow"
+    ],
+    "displayColors": [
+      {
+        "name": "Brown",
+        "hex": "#0f1013"
+      },
+      {
+        "name": "Black",
+        "hex": "#1b1c1e"
+      }
+    ]
   },
   {
     "id": "kikkerland-inkerie-jewelry-case",
@@ -8940,10 +10145,7 @@
     "brand": "Kikkerland",
     "category": "wear",
     "tags": [
-      "jewelry",
-      "travel",
-      "storage",
-      "colorful"
+      "Fashion"
     ],
     "description": "A colorful striped jewelry case designed by Goodlines for Kikkerland. A mirror and four compartments keep rings, earrings, and bracelets together at home or on the move.",
     "variantName": "Multicolor stripes / blue base / purple interior",
@@ -9051,7 +10253,36 @@
         "Four complementary native 1950×2600 originals: closed three-quarter, open compartments, jewelry in use and closed front."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "Blue",
+      "Pink",
+      "Orange",
+      "White",
+      "Purple"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#94d9e9"
+      },
+      {
+        "name": "Pink",
+        "hex": "#f7aecc"
+      },
+      {
+        "name": "Orange",
+        "hex": "#f9855b"
+      },
+      {
+        "name": "White",
+        "hex": "#eff0df"
+      },
+      {
+        "name": "Red",
+        "hex": "#f09493"
+      }
+    ]
   },
   {
     "id": "muji-porcelain-toothbrush-stand",
@@ -9059,10 +10290,7 @@
     "brand": "MUJI",
     "category": "living",
     "tags": [
-      "bathroom",
-      "porcelain",
-      "toothbrush",
-      "storage"
+      "Personal care"
     ],
     "description": "A small porcelain stand that holds one toothbrush upright. Its rounded shape keeps the bathroom counter simple, with an open base that is easy to clean.",
     "variantName": "Yellow / 4549738986218",
@@ -9156,7 +10384,21 @@
       "sourceLimitations": [
         "Native MUJI originals are 1260px; the product occupies only part of the studio frame. Retained without enlargement."
       ]
-    }
+    },
+    "colors": [
+      "Orange",
+      "Yellow"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#dbad7a"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#f4dfb1"
+      }
+    ]
   },
   {
     "id": "best-years-knitted-triceratops",
@@ -9164,10 +10406,7 @@
     "brand": "Best Years",
     "category": "living",
     "tags": [
-      "dinosaur",
-      "toy",
-      "knit",
-      "red"
+      "Toys"
     ],
     "description": "A red knitted triceratops with a soft, textured body, three pale horns, and a broad frill. A sturdy little companion for play or a shelf.",
     "variantName": "Red",
@@ -9265,7 +10504,16 @@
       "sourceLimitations": [
         "Three distinct high-resolution studio views available; no additional authentic in-use view found."
       ]
-    }
+    },
+    "colors": [
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#af111a"
+      }
+    ]
   },
   {
     "id": "kay-bojesen-monkey-mini-vintage-blue",
@@ -9273,10 +10521,7 @@
     "brand": "Kay Bojesen",
     "category": "living",
     "tags": [
-      "monkey",
-      "wood",
-      "design classic",
-      "blue"
+      "Toys"
     ],
     "description": "Kay Bojesen’s articulated wooden monkey in miniature, with painted beech and warm natural-wood details. The vintage blue comes from colors in his late-1940s wallpaper designs.",
     "variantName": "Vintage Blue / 39361",
@@ -9388,7 +10633,21 @@
         "Native originals retained; transparent primary checked on beige and dark brown. Shared reversible warm canvas grade."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "Blue",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#648994"
+      },
+      {
+        "name": "Beige",
+        "hex": "#c9a58c"
+      }
+    ]
   },
   {
     "id": "muji-smooth-gel-knock-pen",
@@ -9396,10 +10655,7 @@
     "brand": "MUJI",
     "category": "work",
     "tags": [
-      "stationery",
-      "pen",
-      "writing",
-      "colorful"
+      "Stationery"
     ],
     "description": "A refillable gel ink pen with a translucent barrel and a simple push-button mechanism. The smooth-writing 0.5 mm tip comes in a broad range of ink colors for notes, sketches, and everyday lists.",
     "variantName": "0.5 mm / assorted ink colors; official 10-color lineup on canvas",
@@ -9489,7 +10745,25 @@
       "sourceLimitations": [
         "Official lineup and pack photos are 1260px with less resolved subject detail; writing close-up is 2000px. Originals retained without enlargement."
       ]
-    }
+    },
+    "colors": [
+      "White",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#dcd7d8"
+      },
+      {
+        "name": "Gray",
+        "hex": "#b0acb1"
+      },
+      {
+        "name": "Red",
+        "hex": "#d4969b"
+      }
+    ]
   },
   {
     "id": "actus-deco-dot-photo-frame",
@@ -9497,9 +10771,7 @@
     "brand": "ACTUS",
     "category": "home",
     "tags": [
-      "photo frame",
-      "display",
-      "home"
+      "Home"
     ],
     "description": "A glossy dot-framed picture holder with an easel back for portrait or landscape display.",
     "productUrl": "https://online.actus-interior.com/item/2415508/",
@@ -9585,7 +10857,26 @@
       "sourceLimitations": [
         "ACTUS official originals are 900px; owner shop photograph is 1024px. Retained without enlargement."
       ]
-    }
+    },
+    "colors": [
+      "Green",
+      "White",
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#d9e6d8"
+      },
+      {
+        "name": "Green",
+        "hex": "#548064"
+      },
+      {
+        "name": "Brown",
+        "hex": "#294932"
+      }
+    ]
   },
   {
     "id": "actus-object-flower-vase",
@@ -9593,9 +10884,7 @@
     "brand": "ACTUS",
     "category": "home",
     "tags": [
-      "vase",
-      "glass",
-      "flowers"
+      "Home"
     ],
     "description": "A sculptural glass vase with a rounded body, tall neck, and curling handles.",
     "productUrl": "https://online.actus-interior.com/item/2390149/",
@@ -9673,7 +10962,26 @@
       "sourceLimitations": [
         "Official ACTUS gallery originals are 900 × 900; retained at native resolution."
       ]
-    }
+    },
+    "colors": [
+      "Yellow",
+      "Orange",
+      "Red"
+    ],
+    "displayColors": [
+      {
+        "name": "Yellow",
+        "hex": "#e9d4a7"
+      },
+      {
+        "name": "Orange",
+        "hex": "#ebbe8d"
+      },
+      {
+        "name": "Red",
+        "hex": "#ec5133"
+      }
+    ]
   },
   {
     "id": "iwachu-cat-candle-stand",
@@ -9681,10 +10989,7 @@
     "brand": "Iwachu",
     "category": "home",
     "tags": [
-      "cat",
-      "candle holder",
-      "cast iron",
-      "home"
+      "Home"
     ],
     "description": "A cast-iron cat whose open mouth holds a tealight, letting candlelight shine through its face.",
     "productUrl": "https://iwachu.co.jp/en/products/29540",
@@ -9767,7 +11072,21 @@
       "sourceLimitations": [
         "Official photos1485 × 990; isolated main subject below1200px, retained without enlargement."
       ]
-    }
+    },
+    "colors": [
+      "Gray",
+      "Black"
+    ],
+    "displayColors": [
+      {
+        "name": "Black",
+        "hex": "#2c2a2e"
+      },
+      {
+        "name": "Gray",
+        "hex": "#58565c"
+      }
+    ]
   },
   {
     "id": "aptone-mix-match",
@@ -9775,10 +11094,7 @@
     "brand": "Aptone",
     "category": "home",
     "tags": [
-      "tissue case",
-      "storage",
-      "transparent",
-      "home"
+      "Home"
     ],
     "description": "A two-part tissue case that pairs a transparent body with a contrasting top, making an everyday stack of tissues part of the display.",
     "productUrl": "https://aptone.global/products/mix-match?variant=47253490303222",
@@ -9882,7 +11198,31 @@
         "Four native1959–3627px photographs selected: full variant, open construction, tabletop use, alternate angle. No upscaling; original RGB mask comparison passes."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "White",
+      "Gray",
+      "Green",
+      "Yellow"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#d2d1c3"
+      },
+      {
+        "name": "Gray",
+        "hex": "#c2bcab"
+      },
+      {
+        "name": "Green",
+        "hex": "#c6db7c"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#c7cc43"
+      }
+    ]
   },
   {
     "id": "seiko-diver-alarm-clock",
@@ -9890,8 +11230,7 @@
     "brand": "Seiko",
     "category": "living",
     "tags": [
-      "everyday",
-      "design"
+      "Home"
     ],
     "description": "A diver’s watch translated into a bedside clock, with a rotating bezel and luminous hands.",
     "productUrl": "https://www.seiko-clocks.co.uk/product/seiko-sports-white-diver-inspired-alarm-clock-qhe207s/",
@@ -9946,7 +11285,26 @@
         "Attached reference photographs were not used as website assets.",
         "Native source resolution retained; source exceptions documented."
       ]
-    }
+    },
+    "colors": [
+      "Gray",
+      "White",
+      "Brown"
+    ],
+    "displayColors": [
+      {
+        "name": "Gray",
+        "hex": "#979896"
+      },
+      {
+        "name": "White",
+        "hex": "#dfe2dc"
+      },
+      {
+        "name": "Brown",
+        "hex": "#110d0c"
+      }
+    ]
   },
   {
     "id": "seiko-stadium-clock",
@@ -9954,8 +11312,7 @@
     "brand": "Seiko",
     "category": "living",
     "tags": [
-      "everyday",
-      "design"
+      "Home"
     ],
     "description": "A tabletop version of Seiko’s trackside timer. The detail gallery includes the smaller stadium-style clocks.",
     "productUrl": "https://www.seiko-clocks.co.uk/product/seiko-sports-multi-function-medium-mantel-clock-qhl083y/",
@@ -10003,7 +11360,25 @@
         "Attached reference photographs were not used as website assets.",
         "Native source resolution retained; source exceptions documented."
       ]
-    }
+    },
+    "colors": [
+      "Yellow",
+      "Green"
+    ],
+    "displayColors": [
+      {
+        "name": "Yellow",
+        "hex": "#d5a50d"
+      },
+      {
+        "name": "Green",
+        "hex": "#727a30"
+      },
+      {
+        "name": "Brown",
+        "hex": "#454422"
+      }
+    ]
   },
   {
     "id": "nahe-packing-pouch",
@@ -10011,9 +11386,7 @@
     "brand": "nähe",
     "category": "work",
     "tags": [
-      "travel",
-      "organization",
-      "design"
+      "Travel"
     ],
     "description": "A lightweight packing pouch with a transparent window, zip closure, and pockets inside and out.",
     "productUrl": "https://www.hightide.co.jp/c/feature/clearpouch/item-gb269",
@@ -10068,7 +11441,21 @@
         "Attached reference photographs were not used as website assets.",
         "Native source resolution retained; source exceptions documented."
       ]
-    }
+    },
+    "colors": [
+      "Red",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#f97e71"
+      },
+      {
+        "name": "Orange",
+        "hex": "#fa864a"
+      }
+    ]
   },
   {
     "id": "heim-egg-spoon",
@@ -10076,7 +11463,7 @@
     "brand": "Heim Söhne",
     "category": "kitchen",
     "tags": [
-      "kitchen"
+      "Kitchenware"
     ],
     "description": "A small spoon with a generous palette of colors and patterns, for eggs, pudding, and little treats.",
     "productUrl": "https://www.bostongeneralstore.com/products/egg-spoon",
@@ -10147,7 +11534,21 @@
       "sourceLimitations": [
         "Native single spoon1024px; group3136px and usage4096px."
       ]
-    }
+    },
+    "colors": [
+      "Red",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "Red",
+        "hex": "#d13926"
+      },
+      {
+        "name": "Orange",
+        "hex": "#f3754c"
+      }
+    ]
   },
   {
     "id": "maul-m8-calculator",
@@ -10155,7 +11556,7 @@
     "brand": "MAUL",
     "category": "work",
     "tags": [
-      "work"
+      "Electronics"
     ],
     "description": "An eight-digit pocket calculator with large keys, a solar panel, and a cheerful contrast of colors.",
     "productUrl": "https://www.maul.de/de/taschenrechner-m-8-7261034",
@@ -10231,7 +11632,30 @@
         "Native RGB unchanged; complete geometry inspected on light and dark backgrounds."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "Blue",
+      "White",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#798faf"
+      },
+      {
+        "name": "White",
+        "hex": "#c7d7da"
+      },
+      {
+        "name": "Gray",
+        "hex": "#939da1"
+      },
+      {
+        "name": "Brown",
+        "hex": "#463c39"
+      }
+    ]
   },
   {
     "id": "may-bookends",
@@ -10239,7 +11663,7 @@
     "brand": "may × Offbrand Library",
     "category": "living",
     "tags": [
-      "living"
+      "Home"
     ],
     "description": "A pair of sculptural polyethylene bookends that give your books a little company.",
     "productUrl": "https://offbrandlibrary.com/products/may-bookends",
@@ -10319,7 +11743,16 @@
         "Native RGB unchanged; complete geometry inspected on light and dark backgrounds."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "Green"
+    ],
+    "displayColors": [
+      {
+        "name": "Green",
+        "hex": "#19b620"
+      }
+    ]
   },
   {
     "id": "alessi-dede",
@@ -10327,7 +11760,7 @@
     "brand": "Alessi",
     "category": "living",
     "tags": [
-      "living"
+      "Home"
     ],
     "description": "Philippe Starck’s crouching figure keeps a door open with quiet character.",
     "productUrl": "https://www.alessi-jp.shop/view/item/000000000786",
@@ -10400,7 +11833,21 @@
         "Native RGB unchanged; complete geometry inspected on light and dark backgrounds."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "Black",
+      "Gray"
+    ],
+    "displayColors": [
+      {
+        "name": "Black",
+        "hex": "#232223"
+      },
+      {
+        "name": "Gray",
+        "hex": "#4d4b4c"
+      }
+    ]
   },
   {
     "id": "andlight-slab-series",
@@ -10408,10 +11855,7 @@
     "brand": "ANDlight",
     "category": "living",
     "tags": [
-      "lighting",
-      "Lukas Peet",
-      "felt",
-      "cork"
+      "Lighting"
     ],
     "description": "Lukas Peet’s slender LED lights pair a broad face of wool felt or cork with a narrow illuminated edge.",
     "productUrl": "https://www.lukaspeet.com/Slab-Light-Series-2013",
@@ -10499,7 +11943,24 @@
         "Four distinct designer-published originals: pendant, series variety, felt detail, installation. Original RGB comparison passed."
       ],
       "sourceLimitations": []
-    }
+    },
+    "colors": [
+      "Yellow"
+    ],
+    "displayColors": [
+      {
+        "name": "Yellow",
+        "hex": "#f5b727"
+      },
+      {
+        "name": "Beige",
+        "hex": "#b09270"
+      },
+      {
+        "name": "White",
+        "hex": "#f6eee4"
+      }
+    ]
   },
   {
     "id": "flos-mayday",
@@ -10507,9 +11968,7 @@
     "brand": "Flos",
     "category": "living",
     "tags": [
-      "lighting",
-      "Konstantin Grcic",
-      "utility"
+      "Lighting"
     ],
     "description": "Konstantin Grcic’s adaptable utility lamp has a hook for hanging, a handle for carrying, and a place to wind its long cord.",
     "productUrl": "https://www.amazon.co.jp/dp/B01MQH0OIG",
@@ -10592,7 +12051,21 @@
       "sourceLimitations": [
         "Native product photo2300px square; meaningful isolated subject below1200px, never enlarged."
       ]
-    }
+    },
+    "colors": [
+      "White",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#edeeed"
+      },
+      {
+        "name": "Orange",
+        "hex": "#f24d14"
+      }
+    ]
   },
   {
     "id": "alessi-sleek",
@@ -10600,8 +12073,7 @@
     "brand": "Alessi",
     "category": "kitchen",
     "tags": [
-      "utensil",
-      "spoon"
+      "Kitchenware"
     ],
     "description": "Achille and Pier Giacomo Castiglioni’s spoon for jars, with a curved edge that reaches into corners and a translucent blue body.",
     "productUrl": "https://alessi.com/products/sleek-spoon-for-jars",
@@ -10658,7 +12130,16 @@
       ],
       "opticalFill": 0.9,
       "upscaled": false
-    }
+    },
+    "colors": [
+      "Blue"
+    ],
+    "displayColors": [
+      {
+        "name": "Blue",
+        "hex": "#819cc0"
+      }
+    ]
   },
   {
     "id": "samira-boon-furoshiki-card-case",
@@ -10666,8 +12147,7 @@
     "brand": "Samira Boon",
     "category": "wear",
     "tags": [
-      "card case",
-      "vinyl"
+      "Fashion"
     ],
     "description": "Samira Boon’s card case folds a single sheet of translucent vinyl into a pocket, using the material’s own adhesion instead of buttons or a zipper.",
     "productUrl": "https://shop.samiraboon.com/product-page/furoshiki-shiki-card-case-1",
@@ -10723,6 +12203,194 @@
       ],
       "opticalFill": 0.9,
       "upscaled": false
+    },
+    "colors": [
+      "Yellow",
+      "Green"
+    ],
+    "displayColors": [
+      {
+        "name": "Yellow",
+        "hex": "#eef253"
+      },
+      {
+        "name": "Green",
+        "hex": "#def530"
+      }
+    ]
+  },
+  {
+    "id": "floyd-cabin-aluminum",
+    "name": "Cabin Aluminum",
+    "brand": "Floyd",
+    "category": "wear",
+    "tags": [
+      "Travel"
+    ],
+    "description": "A molded aluminum cabin suitcase with leather handles, bright orange skateboard wheels, and an orange recycled-satin interior.",
+    "image": "img/objects/cutouts/floyd-cabin-aluminum.webp",
+    "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+    "productUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+    "sourceName": "floyd.one",
+    "variantName": "Silverglider with orange wheels",
+    "variantEvidence": {
+      "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+      "note": "Official product page lists Silverglider as its only variant, with orange skateboard wheels. No independent iconic-color claim."
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/floyd-cabin-aluminum-1.webp",
+        "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+        "sourceName": "floyd.one",
+        "originalImageUrl": "https://cdn.shopify.com/s/files/1/0721/0385/4392/files/floyd_cabin-aluminum_silverglider_01_three-quarter-view.webp?v=1789143175",
+        "width": 1500,
+        "height": 1500
+      },
+      {
+        "image": "img/objects/gallery/floyd-cabin-aluminum-2.webp",
+        "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+        "sourceName": "floyd.one",
+        "originalImageUrl": "https://cdn.shopify.com/s/files/1/0721/0385/4392/files/floyd_cabin-aluminum_silverglider_02_front-view.webp?v=1789143177",
+        "width": 2000,
+        "height": 2000
+      },
+      {
+        "image": "img/objects/gallery/floyd-cabin-aluminum-3.webp",
+        "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+        "sourceName": "floyd.one",
+        "originalImageUrl": "https://cdn.shopify.com/s/files/1/0721/0385/4392/files/floyd_cabin-aluminum_silverglider_03_open-interior.webp?v=1789143180",
+        "width": 2000,
+        "height": 2000
+      },
+      {
+        "image": "img/objects/gallery/floyd-cabin-aluminum-4.webp",
+        "sourceUrl": "https://floyd.one/products/floyd-cabin-aluminum",
+        "sourceName": "floyd.one",
+        "originalImageUrl": "https://cdn.shopify.com/s/files/1/0721/0385/4392/files/floyd_cabin-aluminum_silverglider_04_tsa-lock-detail.webp?v=1789143179",
+        "width": 2000,
+        "height": 2000
+      }
+    ],
+    "imageTreatment": {
+      "method": "Alpha-only edge-connected white-background mask; native RGB unchanged. Original retained; first gallery and canvas use a centered 1500px square crop, no enlargement.",
+      "subjectPixels": [
+        735,
+        1135
+      ],
+      "originalImage": "img/objects/floyd-cabin-aluminum-original.webp",
+      "rgbPreserved": true
+    },
+    "width": 1500,
+    "height": 1500,
+    "qualityNote": "Official files are 2000px; usable complete-product detail is approximately 1135px tall. Native detail retained without upscaling.",
+    "colors": [
+      "White",
+      "Gray",
+      "Orange"
+    ],
+    "displayColors": [
+      {
+        "name": "White",
+        "hex": "#dfe2e6"
+      },
+      {
+        "name": "Gray",
+        "hex": "#7b7f84"
+      },
+      {
+        "name": "Orange",
+        "hex": "#d1895d"
+      }
+    ]
+  },
+  {
+    "id": "jellycat-amuseables-basketball",
+    "name": "Amuseables Sports Basketball",
+    "brand": "Jellycat",
+    "category": "living",
+    "tags": [
+      "Toys"
+    ],
+    "description": "A soft basketball with stitched black lines, a smiling face, and little sneaker-clad feet.",
+    "image": "img/objects/cutouts/jellycat-amuseables-basketball.webp",
+    "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+    "productUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+    "sourceName": "jellycat.com",
+    "sourceImageUrl": "https://cdn11.bigcommerce.com/s-fz2bnmwg7y/images/stencil/original/products/2644/119328/AS2BK__06819.1762121971.jpg?c=1",
+    "variantName": "AS2BK — orange basketball with red sneakers",
+    "variantEvidence": {
+      "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+      "note": "Official AS2BK product shown on the owner-selected page; no alternative colorway or iconic-color claim."
+    },
+    "gallery": [
+      {
+        "image": "img/objects/gallery/jellycat-amuseables-basketball-1.webp",
+        "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+        "sourceName": "jellycat.com",
+        "originalImageUrl": "https://cdn11.bigcommerce.com/s-fz2bnmwg7y/images/stencil/original/products/2644/119328/AS2BK__06819.1762121971.jpg?c=1",
+        "width": 1000,
+        "height": 1000
+      },
+      {
+        "image": "img/objects/gallery/jellycat-amuseables-basketball-2.webp",
+        "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+        "sourceName": "jellycat.com",
+        "originalImageUrl": "https://cdn11.bigcommerce.com/s-fz2bnmwg7y/images/stencil/original/products/2644/119329/AS2BK_1__14081.1732743421.jpg?c=1",
+        "width": 1000,
+        "height": 1000
+      },
+      {
+        "image": "img/objects/gallery/jellycat-amuseables-basketball-3.webp",
+        "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+        "sourceName": "jellycat.com",
+        "originalImageUrl": "https://cdn11.bigcommerce.com/s-fz2bnmwg7y/images/stencil/original/products/2644/119330/AS2BK_2__52800.1732743422.jpg?c=1",
+        "width": 1000,
+        "height": 1000
+      },
+      {
+        "image": "img/objects/gallery/jellycat-amuseables-basketball-4.webp",
+        "sourceUrl": "https://eu.jellycat.com/amuseables-sports-basketball/",
+        "sourceName": "jellycat.com",
+        "originalImageUrl": "https://cdn11.bigcommerce.com/s-fz2bnmwg7y/images/stencil/original/products/2644/119331/AS2BK_3__45700.1732743422.jpg?c=1",
+        "width": 1000,
+        "height": 1000
+      }
+    ],
+    "width": 1000,
+    "height": 1000,
+    "colors": [
+      "Orange",
+      "Black",
+      "Red",
+      "White"
+    ],
+    "displayColors": [
+      {
+        "name": "Orange",
+        "hex": "#c96b42"
+      },
+      {
+        "name": "Black",
+        "hex": "#20201e"
+      },
+      {
+        "name": "Red",
+        "hex": "#d52a32"
+      },
+      {
+        "name": "White",
+        "hex": "#eeeae0"
+      }
+    ],
+    "qualityNote": "Official original CDN photographs are 1000 × 1000, below the 1200px catalog target. Native files retained losslessly without enlargement.",
+    "imageTreatment": {
+      "method": "Local foreground alpha mask only; original RGB preserved exactly. Shared reversible CSS grade.",
+      "originalImage": "img/objects/jellycat-amuseables-basketball-original.jpg",
+      "rgbPreserved": true,
+      "subjectPixels": [
+        816,
+        724
+      ]
     }
   }
 ]

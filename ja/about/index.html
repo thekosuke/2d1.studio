@@ -34,8 +34,8 @@
   
   <link rel="stylesheet" href="../../css/fonts.css?v=7">
   <link rel="stylesheet" href="../../css/japanese-font.css?v=1">
-  <link rel="stylesheet" href="../../css/walla.css?v=76">
-  <link rel="stylesheet" href="../../css/about.css?v=12">
+  <link rel="stylesheet" href="../../css/walla.css?v=84">
+  <link rel="stylesheet" href="../../css/about.css?v=16">
   <script src="../../js/ja.js?v=9" defer></script>
   <script src="../../js/language.js?v=1" defer></script>
   <link rel="stylesheet" href="../../css/dialogs.css?v=18">
@@ -43,10 +43,10 @@
 <link rel="stylesheet" href="../../css/typography.css?v=10">
   <script src="../../js/config.js" defer></script>
   <script src="../../js/drawers.js?v=2" defer></script>
-  <script src="../../js/contact.js?v=10" defer></script>
+  <script src="../../js/contact.js?v=12" defer></script>
   <script src="../../js/mobile-nav.js?v=2" defer></script>
   <script src="../../js/site.js?v=4" defer></script>
-  <script src="../../js/about.js" defer></script>
+  <script src="../../js/about.js?v=2" defer></script>
   <script src="../../js/reading-ink.js?v=7" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "name": "2D1について", "url": "https://2d1.studio/ja/about/", "mainEntity": {"@type": "Organization", "name": "2D1", "url": "https://2d1.studio/", "logo": "https://2d1.studio/img/brand/2d1-brand.png?v=2", "slogan": "身近なものに、らしさを。"}}</script>
 </head>
@@ -57,36 +57,33 @@
   </template>
   <a class="site-logo about-docked-logo" href="../" aria-label="2D1、ホームへ"><img src="../../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a>
   <button class="mobile-nav-toggle" type="button" aria-label="ナビゲーションメニュー" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
-  <nav class="page-nav is-visible" id="page-navigation" aria-label="ページ"><a href="../"><span class="nav-label">Home</span></a><a href="./" aria-current="page"><span class="nav-label">2D1について</span></a><a href="../objects/"><span class="nav-label">Finds</span></a><span class="page-nav-contact"><button type="button" data-contact aria-haspopup="dialog" aria-controls="contact"><span class="nav-label">お問い合わせ</span></button></span></nav>
+  <nav class="page-nav is-visible" id="page-navigation" aria-label="ページ"><a href="../"><span class="nav-label">ホーム</span></a><a href="../work/" data-work-nav><span class="nav-label">制作実績</span></a><a href="./" aria-current="page"><span class="nav-label">2D1について</span></a><a href="../objects/"><span class="nav-label">Finds</span></a><span class="page-nav-contact"><a href="../contact/"><span class="nav-label">お問い合わせ</span></a></span></nav>
 
   <main id="main" class="essay-page column">
-    <!-- The essay. Placeholder text throughout: replace the title, the
-         subtitle, and the paragraphs. The first paragraph (.essay-lede) is the
-         short version, always shown; everything in .essay-rest is the essay,
-         folded under a fade until someone clicks it. -->
+
     <article class="essay">
       <header class="essay-head">
-        <p class="essay-kicker">2D1について</p>
         <h1 class="essay-title">身近なものが、大切になる理由</h1>
         <p class="essay-dek">らしさ、親しみ、そして手元に残しておきたい日用品のこと。ショップを持つデザインスタジオからの、ちょっとした考えごと。</p>
       </header>
       <div class="essay-body">
-        <p class="essay-lede" data-ink>2D1は、自分たちのショップも持つ独立系デザインスタジオです。企業のためには、明快なアイデアを見つけ、その企業らしさをかたちにします。最初の戦略から、人々が毎日使うプロダクトやブランドまで。そして、みなさんに向けては、2D1の名前で日用品をつくります。どれも、いつか誰かの<em>お気に入り</em>になれることを願って。</p>
+        <h2 id="what-is-2d1">2D1とは？</h2>
+        <p class="essay-lede">2D1は、自分たちのショップも持つ独立系デザインスタジオです。企業のためには、明快なアイデアを見つけ、その企業らしさをかたちにします。最初の戦略から、人々が毎日使うプロダクトやブランドまで。そして、みなさんに向けては、2D1の名前で日用品をつくります。どれも、いつか誰かの<em>お気に入り</em>になれることを願って。</p>
         <div class="essay-rest" id="essay-rest">
-          <p data-ink>持ちものの大半は、あまり記憶に残りません。役目を果たすと、暮らしの背景に溶け込んでいきます。でも、その中のいくつかは、ずっとそばに残ります。三度の引っ越しをともにしたマグカップ。つい最初に手が伸びるペン。入れてきたもののかたちが、少しずつなじんだバッグ。珍しいからでも、高価だからでもなく、すっかり身近な存在になったから、手放せないのです。</p>
-          <h2>らしさが、つながりを生む</h2>
-          <p data-ink>身近なものは、退屈なものとは違います。愛着を感じるものには、たいてい、そのものだけの何かがあります。手にしっくりくるバランス、思わず笑顔になる細部、必要以上に少しだけ気の利いた使い心地。その「何か」が、らしさです。最初に目を留める理由になり、やがて少しの不完全さも受け入れられる理由になります。</p>
-          <p data-ink>でも、らしさだけでは十分ではありません。個性豊かでも、引き出しの奥にしまわれてしまうものはたくさんあります。らしさが愛着に変わるには、時間が必要です。繰り返し役に立ち、無理なく使い続けられて、暮らしの習慣の一部になること。親しみが、そこに意味を与えてくれます。</p>
-          <p data-ink>私たちを惹きつけるのは個性ですが、ものに意味を与えるのは親しみです。日々使うことや、そのまわりで起こる出来事を通じて、ものには物語や記憶、親しみが積み重なっていきます。やがて、個性のあるものは私たちの暮らしの登場人物になっていく。自分だけの意味を持ち、長くそばに置いておきたい存在になるのです。</p>
-          <blockquote class="essay-pull"><p data-ink>ものに意味が生まれるのは、<em>そのそばで日々が積み重なっていくから</em>.</p></blockquote>
-          <h2>そぎ落として、ひとさじの遊び心を。</h2>
-          <p data-ink>これが、クライアントのためにも、自分たちのためにも大切にしているつくり方です。アイデアが明快になり、日々に無理なくなじむまでそぎ落とす。そして、記憶に残る理由になるひと工夫を残す。遊び心のない引き算は味気なく、引き算のない遊び心は騒がしい。私たちは、その二つがちょうど出会うところを探しています。</p>
-          <p data-ink>だからこそ、ありふれたものを大切に考えます。水筒、トートバッグ、玄関のトレイ。いちばん長い時間をともにするものだからこそ、きちんとつくる価値があります。</p>
-          <h2>身近なものたちの家</h2>
-          <p data-ink>私たちがつくるものは、みんな同じ場所に暮らしている。親しみのある顔ぶれが集まる、一軒の家のように考えています。ほかの企業のためにデザインするもの。2D1の名前でつくるもの。ただ好きで、手元に置いているもの。それらをつなぐのは、スタイルでも、価格でも、カテゴリーでもありません。日用品は、らしさを持つものから、誰かの暮らしの登場人物になっていく。そんな、ものの見方です。</p>
-          <p data-ink>私たちがつくりたいのは、そういうものです。注目を求めるのではなく、少しずつ居場所を得ていくもの。いつの間にか、なくなると寂しいと感じるもの。<span class="essay-end" aria-hidden="true"></span></p>
+          <h2 id="who-is-behind-it">誰がつくっているのか？</h2>
+          <!-- Personal introduction to be written by Kosuke. -->
+          <h2 id="why-i-started-it">始めた理由</h2>
+          <p>持ちものの大半は、あまり記憶に残りません。役目を果たすと、暮らしの背景に溶け込んでいきます。でも、その中のいくつかは、ずっとそばに残ります。三度の引っ越しをともにしたマグカップ。つい最初に手が伸びるペン。入れてきたもののかたちが、少しずつなじんだバッグ。珍しいからでも、高価だからでもなく、すっかり身近な存在になったから、手放せないのです。</p>
+          <p>身近なものは、退屈なものとは違います。愛着を感じるものには、たいてい、そのものだけの何かがあります。手にしっくりくるバランス、思わず笑顔になる細部、必要以上に少しだけ気の利いた使い心地。その「何か」が、らしさです。最初に目を留める理由になり、やがて少しの不完全さも受け入れられる理由になります。</p>
+          <p>でも、らしさだけでは十分ではありません。個性豊かでも、引き出しの奥にしまわれてしまうものはたくさんあります。らしさが愛着に変わるには、時間が必要です。繰り返し役に立ち、無理なく使い続けられて、暮らしの習慣の一部になること。親しみが、そこに意味を与えてくれます。</p>
+          <p>私たちを惹きつけるのは個性ですが、ものに意味を与えるのは親しみです。日々使うことや、そのまわりで起こる出来事を通じて、ものには物語や記憶、親しみが積み重なっていきます。やがて、個性のあるものは私たちの暮らしの登場人物になっていく。自分だけの意味を持ち、長くそばに置いておきたい存在になるのです。</p>
+          <blockquote class="essay-pull"><p>ものに意味が生まれるのは、<em>そのそばで日々が積み重なっていくから</em>.</p></blockquote>
+          <h2 id="why-it-should-exist">2D1が存在する意味</h2>
+          <p>これが、クライアントのためにも、自分たちのためにも大切にしているつくり方です。アイデアが明快になり、日々に無理なくなじむまでそぎ落とす。そして、記憶に残る理由になるひと工夫を残す。遊び心のない引き算は味気なく、引き算のない遊び心は騒がしい。私たちは、その二つがちょうど出会うところを探しています。</p>
+          <p>だからこそ、ありふれたものを大切に考えます。水筒、トートバッグ、玄関のトレイ。いちばん長い時間をともにするものだからこそ、きちんとつくる価値があります。</p>
+          <p>私たちがつくるものは、みんな同じ場所に暮らしている。親しみのある顔ぶれが集まる、一軒の家のように考えています。ほかの企業のためにデザインするもの。2D1の名前でつくるもの。ただ好きで、手元に置いているもの。それらをつなぐのは、スタイルでも、価格でも、カテゴリーでもありません。日用品は、らしさを持つものから、誰かの暮らしの登場人物になっていく。そんな、ものの見方です。</p>
+          <p>私たちがつくりたいのは、そういうものです。注目を求めるのではなく、少しずつ居場所を得ていくもの。いつの間にか、なくなると寂しいと感じるもの。<span class="essay-end" aria-hidden="true"></span></p>
         </div>
-        <button class="essay-more" type="button" aria-controls="essay-rest" aria-expanded="false" hidden><span class="essay-more-label intro-cta">続きを読む<span class="essay-more-arrow" aria-hidden="true">↓</span></span></button>
       </div>
     </article>
   </main>
