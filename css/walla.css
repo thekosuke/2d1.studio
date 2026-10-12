@@ -407,3 +407,6 @@ html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd{
 /* Revisited Home starts at the settled intro without replaying the entrance. */
 .js.landing-seen .home-page > .masthead{visibility:hidden}
 .js.landing-seen .home-page :is(.page-nav,.language-switch,.mobile-nav-toggle){transition:none!important}
+
+/* Halve the Shop spacing around the tote without changing its render size. */
+.home-page #shop .tote-preview-stage{margin-block:calc(var(--section-content-gap) / -2)}

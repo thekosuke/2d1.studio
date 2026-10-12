@@ -69,3 +69,19 @@ html.work-scroll-gallery{scroll-snap-type:y proximity;overflow-anchor:none}
 /* Rebase between identical loop copies without a visible snap or color reveal. */
 html.work-scroll-gallery.work-rebasing{scroll-snap-type:none;scroll-behavior:auto}
 .work-rebasing .work-project>summary>img,.work-rebasing .work-project>summary .work-caption,.work-rebasing .work-view,.work-rebasing .work-index{transition:none!important}
+
+/* Preserve complete DeepDrip brand slides and mockups at every viewport. */
+.work-detail-image--complete img{object-fit:contain}
+@media(max-width:767px){
+  .work-detail-image--complete,
+  .work-detail-image--complete+.work-detail-image--complete{height:auto}
+  .work-detail-image--complete img{height:auto;aspect-ratio:16/9}
+}
+
+/* Let DeepDrip compositions set their height so visible image gaps stay 24px. */
+.work-detail-images--deepdrip .work-detail-image{height:auto}
+.work-detail-images--deepdrip .work-detail-image img{height:auto;aspect-ratio:auto}
+
+/* All project images follow their native proportions with equal 24px gutters. */
+.work-detail-images .work-detail-image{height:auto}
+.work-detail-images .work-detail-image img{height:auto;aspect-ratio:auto;object-fit:contain}
