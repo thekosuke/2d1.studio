@@ -1,0 +1,46 @@
+/* Equivalent controls share one interaction vocabulary across every route. */
+:is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close){display:grid;place-items:center;width:32px;height:32px;min-width:32px;min-height:32px;padding:0;border:0;background:transparent;color:var(--ink);transition:background-color 180ms,color 180ms}
+:is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close):is(:hover,:focus-visible){background:var(--red)!important;color:var(--white)!important;outline:none;box-shadow:none}
+.contact-close .contact-x{width:32px;height:32px;background:transparent;color:var(--ink);transform:none;transition:background-color 180ms,color 180ms}
+.contact-close .contact-x::before{inset:7px;width:18px;height:18px;background:currentColor;transform:none;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
+.contact-close .contact-x::after{display:none}
+.contact-close:is(:hover,:focus-visible) .contact-x{background:var(--red);color:var(--white);transform:none}
+.language-switch a:focus-visible,.objects-page.objects-ready .objects-language a:focus-visible{background:var(--ink);color:var(--white);outline:none;box-shadow:none}
+.home-page > .language-switch.on-studio a:focus-visible{background:var(--beige);color:var(--studio-background)}
+@media(pointer:coarse){:is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close){width:44px;height:44px;min-width:44px;min-height:44px}}
+@media(prefers-reduced-motion:reduce){:is(.objects-info-close,.objects-dialog-close,.work-close,.contact-close .contact-x){transition:none!important}}
+
+/* All visible scrollbars: square dark-brown thumb, transparent track. */
+*{scrollbar-color:var(--ink) transparent}
+*::-webkit-scrollbar{width:8px!important;height:8px!important;background:transparent!important}
+*::-webkit-scrollbar-track,*::-webkit-scrollbar-corner{background:transparent!important;border:0!important;box-shadow:none!important}
+*::-webkit-scrollbar-thumb{background:var(--ink)!important;background-clip:padding-box!important;border:0!important;border-right:2px solid transparent!important;border-radius:0!important;box-shadow:none!important}
+*::-webkit-scrollbar-button{display:none!important}
+/* Use the custom square thumb where WebKit scrollbar styling is available. */
+@supports selector(::-webkit-scrollbar){*{scrollbar-color:auto!important;scrollbar-width:auto!important}}
+
+/* A modest 2px increase over the original footer marks; retain the hit area. */
+.site-footer .social-links a{width:24px;height:24px}
+.site-footer .social-links svg{display:block;width:16px;height:16px}
+@media(max-width:767px){.site-footer .social-links svg{width:14px;height:14px}}
+
+/* Finds is a separate destination at the end of the studio navigation. */
+.page-nav .nav-finds{border-top:1px solid var(--line);margin-top:4px;padding-top:12px}
+@media(min-width:1100px){
+ .page-nav .page-nav-contact a{position:relative;display:block}
+ .page-nav .page-nav-contact a::after{content:'';position:absolute;left:0;bottom:-12px;width:100%;height:1px;background:var(--line);pointer-events:none}
+ .js :is(.home-page,.about-page) .page-nav .nav-finds{border-top:0;margin-top:24px;padding-top:6px}
+}
+@media(min-width:768px) and (max-width:1099px){
+ .js .home-page .page-nav{grid-template-columns:44px 44px 44px 96px 44px 64px 64px}
+ .js .home-page .page-nav .page-nav-contact{grid-column:6}
+ .js .home-page .page-nav .nav-finds{grid-column:7;grid-row:1;border-top:0;border-left:1px solid var(--line);margin-top:0;padding-top:0;padding-left:12px}
+}
+@media(max-width:767px){
+ .js .home-page .page-nav{grid-template-columns:36px 40px 40px 64px 64px 54px}
+ .js .home-page .page-nav .page-nav-contact{grid-column:5}
+ .js .home-page .page-nav .nav-finds{grid-column:6;grid-row:1;border-top:0;border-left:1px solid var(--line);margin-top:0;padding-top:0;padding-left:12px}
+ .about-page.mobile-navigation-ready .mobile-nav-panel .nav-finds{margin-top:24px}
+ .mobile-navigation-ready .mobile-nav-panel .page-nav-contact a::after{content:'';position:absolute;left:12px;bottom:-15px;width:calc(100% - 24px);height:1px;background:var(--line);pointer-events:none}
+}
+@media(max-width:360px){.js .home-page .page-nav{grid-template-columns:38px 46px 44px 48px 64px 54px}}

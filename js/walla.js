@@ -5,6 +5,8 @@
   const heroCover = document.querySelector('.home-page > .masthead');
   const main = document.getElementById('main');
   const intro = main?.querySelector('.intro');
+  const returningHome=document.documentElement.classList.contains('landing-seen');
+  const arrivalHash=location.hash;
   const mobile = matchMedia('(max-width: 767px)');
   const studio = document.getElementById('studio');
   let sceneQueued = false;
@@ -40,10 +42,10 @@
   document.fonts.ready.then(queueScene);
   paintScene();
   // Never hold a user on the landing sequence if they start navigating.
-  let openingFrame=0, openingAutomatically=false;
+  let openingFrame=0, openingAutomatically=false, openingNavReady=false;
   const finishLanding = () => {
     document.documentElement.classList.remove('is-landing');
-    cancelAnimationFrame(openingFrame);openingFrame=0;openingAutomatically=false;
+    cancelAnimationFrame(openingFrame);openingFrame=0;openingAutomatically=false;openingNavReady=false;
   };
   function revealIntroduction() {
     finishLanding();
@@ -55,6 +57,8 @@
       const progress=Math.min(1,(now-start)/duration);
       const ease=progress<.5?4*progress**3:1-(-2*progress+2)**3/2;
       window.scrollTo({top:target*ease,behavior:'instant'});
+      // Finish the controls’ 480ms entrance at the intro’s settling point.
+      if(!openingNavReady && now-start>=duration-480){openingNavReady=true;revealNavigation(true);}
       if(progress<1)openingFrame=requestAnimationFrame(step);
       else{finishLanding();queueScene();}
     }
@@ -69,6 +73,7 @@
   addEventListener('scroll', () => { if (scrollY > 4 && !openingAutomatically) finishLanding(); }, {passive:true});
   addEventListener('keydown', event => { if (['Tab','PageDown','End','ArrowDown',' '].includes(event.key)) finishLanding(); });
   addEventListener('pageshow', () => { if (scrollY > 4) finishLanding(); });
+  addEventListener('pagehide',finishLanding);
   reduced.addEventListener('change', () => { if (reduced.matches) finishLanding(); });
   if (scrollY > 4 || reduced.matches) finishLanding();
   const slot = document.querySelector('.logo-slot');
@@ -101,6 +106,13 @@
   }
   const pageNav = document.querySelector('.page-nav');
   const languageSwitch = document.querySelector('.home-page .language-switch');
+  function revealNavigation(visible) {
+    if(!pageNav)return;
+    pageNav.classList.toggle('is-visible',visible);
+    if(pageNav.mobileNavigation)pageNav.mobileNavigation.setAvailable(visible);
+    else pageNav.inert=!visible;
+    if(languageSwitch){languageSwitch.classList.toggle('is-visible',visible);languageSwitch.inert=!visible;}
+  }
   const sections = [...document.querySelectorAll('main > section[id]')];
   const caption = document.querySelector('.masthead .brand-caption');
   if (logo) {
@@ -121,14 +133,8 @@
     function position() {
       queued = false;
       if (pageNav) {
-        const showNav = hero.getBoundingClientRect().bottom <= 0;
-        pageNav.classList.toggle('is-visible', showNav);
-        if (pageNav.mobileNavigation) pageNav.mobileNavigation.setAvailable(showNav);
-        else pageNav.inert = !showNav;
-        if (languageSwitch) {
-          languageSwitch.classList.toggle('is-visible', showNav);
-          languageSwitch.inert = !showNav;
-        }
+        const showNav = (openingAutomatically && openingNavReady) || hero.getBoundingClientRect().bottom <= 1;
+        revealNavigation(showNav);
         const atEnd = scrollY + innerHeight >= document.documentElement.scrollHeight - 2;
         const active = atEnd ? sections.at(-1) : sections.filter(section => section.getBoundingClientRect().top <= 150).at(-1);
         pageNav.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -196,7 +202,14 @@
     addEventListener('resize', () => { fitCaption(); schedule(); });
     document.fonts.ready.then(() => { fitCaption(); schedule(); });
     reduced.addEventListener('change', schedule);
+    // Revisit Home at the settled intro, without overriding a restored scroll
+    // position or an explicit section link. EN and JA share the session flag.
+    if(returningHome && !arrivalHash && scrollY<=4){
+      window.scrollTo({top:hero.offsetHeight,behavior:'instant'});
+      paintScene();
+    }
     position();
+    if(returningHome)requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.classList.remove('landing-seen')));
   }
   // Direct touch browsing avoids autoplay fighting a native momentum scroll.
   function bindWorkTouch(belt, { setActive, getPeriod, shouldWrap }) {

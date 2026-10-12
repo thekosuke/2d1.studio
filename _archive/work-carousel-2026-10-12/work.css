@@ -1,0 +1,34 @@
+/* Quiet typography; the shifting image deck supplies the character. */
+.work-main{width:calc(100% - 48px);max-width:var(--column);margin-inline:auto;padding:144px 0 64px;min-height:calc(100svh - 72px)}
+.work-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:96px}
+.work-project{min-width:0;--work-peek:24px;--work-gap:24px}
+.work-carousel{position:relative;width:calc(100% + var(--work-peek));overflow:clip;touch-action:pan-y}
+.work-deck{display:flex;gap:var(--work-gap);width:100%;will-change:transform}
+.work-slide{flex:0 0 calc(100% - var(--work-peek));min-width:0;margin:0;overflow:hidden;opacity:0}
+.work-slide.is-current{opacity:1}
+.work-slide.is-next{opacity:.3;cursor:pointer}
+.work-carousel:has(.work-preview:is(:hover,:focus-visible)) .work-slide.is-next{opacity:.65}
+.work-deck.is-moving .work-slide:nth-child(-n+2){opacity:1!important}
+.work-deck.is-moving .work-slide:nth-child(3){opacity:.3}
+.work-slide img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;pointer-events:none;user-select:none}
+.work-preview{position:absolute;inset:0 0 0 auto;width:calc(var(--work-peek) - var(--work-gap));padding:0;border:0;background:transparent!important;cursor:pointer}
+.work-caption{margin-top:20px}
+.work-page .work-caption h2{font:500 var(--type-copy)/1.25 var(--font);text-transform:none;letter-spacing:0;margin:0;max-width:36ch}
+.work-caption h2::before{content:none}
+.work-caption h2 span{transition:color 200ms}
+.work-project:has(.work-preview:is(:hover,:focus-visible)) .work-caption h2 span{color:var(--red)}
+html:not(.js) .work-carousel{display:flex;gap:var(--work-gap);overflow-x:auto;scroll-snap-type:x mandatory}
+html:not(.js) .work-slide{opacity:1;scroll-snap-align:start}
+@media(min-width:1100px){
+ .work-main{width:calc(100% - min(27.7778vw,400px) - 128px);margin-left:auto;margin-right:128px}
+ .work-project{--work-peek:104px}
+}
+@media(max-width:767px){
+ .work-main{padding-top:112px}.work-grid{gap:64px}.work-caption{margin-top:16px}
+ .work-project{--work-gap:16px}
+ .work-preview{width:calc(var(--work-peek) + 40px - var(--work-gap))}
+ .work-slide{flex-basis:calc(100% - var(--work-peek) - 40px)}
+}
+@media(prefers-reduced-motion:reduce){.work-slide,.work-slide img,.work-caption h2 span{transition:none}.work-slide img{transform:none!important}}
+
+.work-category{font:400 var(--type-body)/1.5 var(--font);color:var(--sub-gray);margin:8px 0 0}

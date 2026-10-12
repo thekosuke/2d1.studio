@@ -64,3 +64,8 @@ html[lang="ja"] .about-page .essay-dek{font-size:20px;line-height:1.7}
 /* Use the full shared column while retaining its social-links alignment. */
 .about-page:not(.contact-page) .essay-page{width:calc(100% - 48px);max-width:var(--column);margin-inline:auto}
 @media(min-width:1100px){.about-page:not(.contact-page) .essay-page{width:calc(100% - min(27.7778vw,400px) - 128px);margin-left:auto;margin-right:128px}}
+
+/* Preserve the social-links edge, with the same inset on the right. */
+.about-page{--inner-page-inset:24px}
+@media(min-width:1100px){.about-page{--inner-page-inset:calc(100% - min(var(--column),calc(100% - min(27.7778vw,400px) - 128px)) - 128px)}}
+.about-page:not(.contact-page) .essay-page,.about-page.contact-page .contact-page-main{width:calc(100% - 2 * var(--inner-page-inset));max-width:none;margin-inline:var(--inner-page-inset)}

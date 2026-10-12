@@ -30,13 +30,22 @@
   <link rel="icon" href="../img/brand/2d1-icon.png?v=2" type="image/png" sizes="32x32">
   <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2" sizes="180x180">
-  <script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('is-landing');</script>
+  <script>
+    (() => {
+      const root=document.documentElement;
+      root.classList.add('js');
+      let seen=false;
+      try{seen=sessionStorage.getItem('2d1-home-landing-seen')==='1';sessionStorage.setItem('2d1-home-landing-seen','1');}catch{}
+      if(seen)root.classList.add('landing-seen');
+      else if(!matchMedia('(prefers-reduced-motion: reduce)').matches)root.classList.add('is-landing');
+    })();
+  </script>
   
   <link rel="stylesheet" href="../css/fonts.css?v=7">
   <link rel="stylesheet" href="../css/japanese-font.css?v=1">
-  <link rel="stylesheet" href="../css/walla.css?v=84">
-  <link rel="stylesheet" href="../css/dialogs.css?v=18">
-  <link rel="stylesheet" href="../css/mobile-nav.css?v=3">
+  <link rel="stylesheet" href="../css/walla.css?v=87">
+  <link rel="stylesheet" href="../css/dialogs.css?v=19">
+  <link rel="stylesheet" href="../css/mobile-nav.css?v=4">
 <link rel="stylesheet" href="../css/typography.css?v=10">
   <script src="../js/ja.js?v=9" defer></script>
   <script src="../js/language.js?v=1" defer></script>
@@ -47,9 +56,10 @@
   <script src="../js/tote-preview.js?v=12" defer></script>
   <script src="../js/mobile-nav.js?v=3" defer></script>
   <script src="../js/site.js?v=4" defer></script>
-  <script src="../js/walla.js?v=18" defer></script>
+  <script src="../js/walla.js?v=20" defer></script>
   <script src="../js/reading-ink.js?v=7" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "2D1", "url": "https://2d1.studio/ja/", "logo": "https://2d1.studio/img/brand/2d1-brand.png?v=2", "slogan": "身近なものに、らしさを。", "description": "ブランディングとデジタルプロダクトに取り組み、身近なものの「らしさ」を考える独立系デザインスタジオ。"}</script>
+<link rel="stylesheet" href="../css/shared-controls.css?v=7">
 </head>
 <body id="top" class="home-page">
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -62,7 +72,7 @@
     <p class="brand-caption"><span>デザインハウス</span></p>
   </div>
   <button class="mobile-nav-toggle" type="button" aria-label="ナビゲーションメニュー" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
-  <nav class="page-nav" id="page-navigation" aria-label="ページ"><a href="./"><span class="nav-label">ホーム</span></a><a href="work/" data-work-nav><span class="nav-label">制作実績</span></a><a href="about/"><span class="nav-label">2D1について</span></a><a href="objects/"><span class="nav-label">Finds</span></a><span class="page-nav-contact"><a href="contact/"><span class="nav-label">お問い合わせ</span></a></span></nav>
+  <nav class="page-nav" id="page-navigation" aria-label="ページ"><a href="./"><span class="nav-label">ホーム</span></a><a href="work/" data-work-nav><span class="nav-label">制作実績</span></a><a href="about/"><span class="nav-label">2D1について</span></a><span class="page-nav-contact"><a href="contact/"><span class="nav-label">お問い合わせ</span></a></span><a class="nav-finds" href="objects/"><span class="nav-label">Finds</span></a></nav>
   <main id="main">
     <section class="intro column section-stack" aria-label="はじめに">
       <h1 data-ink>2D1は、ブランド、デジタルプロダクト、アイデアを横断して活動する<em class="copy-emphasis">独立したデザインスタジオ</em>です。初期の構想から、見た目や使い心地、世の中でのあり方まで、一緒にかたちにしていきます。<br><br>クライアントワークと並行して、気の合う人たちと自分たちのものをつくり、ものを選び集めています。私たちはそれらを<a class="familiar-characters copy-emphasis" href="objects/" translate="no">Familiar Characters</a>— 日々の暮らしを静かに重ね、やがて私たちの日常の一部になっていく仲間たちです。</h1>

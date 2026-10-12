@@ -1,28 +1,71 @@
-/* Project galleries share the Home content/social edge. */
+/* An image-led project stack; small context appears alongside the thumbnail. */
 .work-main{width:calc(100% - 48px);max-width:var(--column);margin-inline:auto;padding:144px 0 64px;min-height:calc(100svh - 72px)}
-.work-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:96px}
+.work-grid{display:flex;flex-direction:column;gap:64px}
 .work-project{min-width:0}
-.work-carousel{display:flex;gap:24px;width:calc(100% + 24px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y;cursor:grab}
-.work-carousel::-webkit-scrollbar{display:none}
-.work-carousel::after{content:"";flex:0 0 0px}
-.work-carousel.is-dragging{cursor:grabbing;scroll-snap-type:none;user-select:none}
-.work-slide{flex:0 0 calc(100% - 24px);min-width:0;margin:0;scroll-snap-align:start;opacity:.3;transition:opacity 400ms cubic-bezier(.2,.8,.2,1)}
-.work-slide.is-current{opacity:1}.work-slide.is-past{opacity:0;pointer-events:none}
-.work-slide img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;pointer-events:none;user-select:none}
-.work-caption{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-top:20px}
-.work-page .work-caption h2{font:500 var(--type-copy)/1.25 var(--font);text-transform:none;letter-spacing:0;margin:0;max-width:30ch}
-.work-caption h2::before{content:none}
-.work-controls{display:flex;gap:8px;flex:none}.work-controls button{width:32px;height:32px;display:grid;place-items:center;border:0;background:transparent;color:var(--ink);cursor:pointer;padding:0}
-.work-controls button span{width:16px;height:16px;background:currentColor;mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat}
-.work-previous span{transform:rotate(180deg)}
-.work-controls button:is(:hover,:focus-visible){color:var(--red);background:var(--white)}
-.work-controls button:disabled{opacity:.25;cursor:default;background:transparent;color:var(--ink)}
-html:not(.js) .work-controls{display:none}
-@media(min-width:1100px){
- .work-main{width:calc(100% - min(27.7778vw,400px) - 128px);margin-left:auto;margin-right:128px}
- .work-carousel{width:calc(100% + 104px)}
- .work-slide{flex-basis:calc(100% - 104px)}
- .work-carousel::after{flex-basis:80px}
+.work-project>summary{position:relative;display:block;list-style:none;cursor:pointer;width:72%;background:transparent}
+.work-project>summary::-webkit-details-marker{display:none}
+.work-project>summary::marker{content:''}
+.work-project>summary>img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.work-caption{position:absolute;left:calc(100% + 24px);top:0;width:calc(38.8889% - 24px);opacity:0;transition:opacity 180ms;pointer-events:none}
+.work-title,.work-caption-description,.work-category{display:block;font:500 var(--type-label)/1.5 var(--font);letter-spacing:0;text-transform:none}
+.work-caption-description{font-weight:400;margin-top:8px}
+.work-category{font-weight:400;color:var(--sub-gray);margin-top:8px}
+.work-project>summary:is(:hover,:focus-visible) .work-caption{opacity:1}
+.work-project>summary:focus-visible{outline:none;background:var(--red)}
+.work-project>summary:focus-visible>img{opacity:.9}
+.work-project-content{margin-top:24px}
+.js .work-project>.work-project-content{display:none}
+.work-dialog{position:fixed;inset:0;width:100%;max-width:none;height:100dvh;max-height:none;margin:0;padding:0;border:0;background:var(--beige);color:var(--ink);overflow:hidden;overscroll-behavior:contain}
+.work-dialog::backdrop{background:rgba(50,5,5,.4)}
+.work-detail-content>.work-project-content{margin-top:0}
+.work-detail-content{height:100%;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.work-close{position:absolute;z-index:2;top:24px;right:24px;width:32px;height:32px;display:grid;place-items:center;padding:0;border:0;background:var(--beige);color:var(--ink)}
+.work-close span{display:block;width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
+.work-close:is(:hover,:focus-visible){background:var(--red);color:var(--white)}
+.work-detail-header{min-height:30svh;height:auto;padding:24px;display:flex;flex-direction:column;gap:20px;justify-content:flex-start}
+.work-trail{display:flex;align-items:center;gap:.4em;min-height:32px;padding-right:48px;margin:0;font:500 13px/1.4 var(--font);letter-spacing:.04em;text-transform:uppercase}
+.work-page .work-detail-title{font:700 var(--section-title)/1.2 var(--font);text-transform:none;letter-spacing:0;padding-right:48px;margin:0}
+.work-page .work-detail-title::before{content:none}
+.work-description{max-width:1440px;font:500 var(--reading)/1.2 var(--font);margin:0;text-wrap:pretty}
+.work-meta{display:flex;flex-wrap:wrap;gap:24px 64px;margin:12px 0 0;font:400 16px/1.5 var(--font)}
+.work-meta dt{color:var(--sub-gray);margin-bottom:4px}
+.work-meta dd{margin:0}
+.work-role-list{list-style:none;margin:0;padding:0}
+html[lang="ja"] .work-description{line-height:1.65}
+.work-detail-image{height:100svh;margin:0;padding:24px}
+.work-detail-image+.work-detail-image{padding-top:0;height:calc(100svh - 24px)}
+.work-detail-image img{width:100%;height:100%;object-fit:cover;display:block}
+@media(min-width:1100px){.work-main{width:calc(100% - min(27.7778vw,400px) - 128px);margin-left:auto;margin-right:128px}}
+@media(max-width:767px){.work-main{padding-top:112px}.work-grid{gap:40px}.work-caption{left:calc(100% + 12px);width:calc(38.8889% - 12px)}.work-detail-header{gap:24px;min-height:30svh}.work-meta{gap:24px;font-size:14px}}
+@media(hover:none){.work-caption{opacity:1}}
+@media(prefers-reduced-motion:reduce){.work-caption{transition:none}}
+
+/* Native vertical scrolling settles each thumbnail at the viewport center. */
+html.work-scroll-gallery{scroll-snap-type:y proximity;overflow-anchor:none}
+.js .work-main{padding:0;min-height:0;margin-inline:auto}
+.js .work-grid{padding-block:var(--work-edge,30svh);gap:var(--work-gap,24svh)}
+.js .work-project>summary{margin-inline:auto;scroll-snap-align:center}
+.js .work-project>summary>img{opacity:.3;filter:grayscale(1);transition:opacity 420ms,filter 420ms}
+.js .work-project.is-centered>summary>img{opacity:1;filter:grayscale(0)}
+.js .work-project>summary .work-caption{opacity:0;transition:opacity 240ms}
+.js .work-project.is-centered>summary .work-caption{opacity:1}
+.work-view{position:absolute;left:calc(100% + 24px);top:50%;translate:0 -50%;display:flex;align-items:center;gap:8px;width:calc(38.8889% - 24px);font:500 var(--type-label)/1.5 var(--font);color:var(--red);opacity:0;transform:translateY(4px);transition:opacity 180ms,transform 180ms;pointer-events:none}
+.work-view::after{content:'';width:14px;height:14px;flex:none;background:currentColor;mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat}
+.work-index{position:absolute;right:calc(100% + 24px);top:0;font:500 var(--type-label)/1.5 var(--font);white-space:nowrap;pointer-events:none;transition:opacity 240ms}
+.js .work-project>summary .work-index{opacity:0}
+.js .work-project.is-centered>summary .work-index{opacity:1}
+.js .work-project.is-centered>summary:is(:hover,:focus-visible) .work-view{opacity:1;transform:none}
+@media(max-width:767px){
+ .js .work-project>summary .work-caption{left:0;top:calc(100% + 16px);width:100%}
+ .work-view{left:auto;right:12px;width:auto;padding:4px 8px;background:var(--beige)}
+ .work-index{right:calc(100% + 12px)}
 }
-@media(max-width:767px){.work-main{padding-top:112px}.work-grid{gap:64px}.work-caption{margin-top:16px;gap:16px}.work-carousel{gap:16px}.work-carousel::after{flex-basis:8px}.work-controls{gap:4px}}
-@media(prefers-reduced-motion:reduce){.work-slide{transition:none}}
+@media(prefers-reduced-motion:reduce){
+ html.work-scroll-gallery{scroll-behavior:auto}
+ .js .work-project>summary>img,.js .work-project>summary .work-caption,.work-view{transition:none;transform:none}
+ .work-index{transition:none}
+}
+
+/* Rebase between identical loop copies without a visible snap or color reveal. */
+html.work-scroll-gallery.work-rebasing{scroll-snap-type:none;scroll-behavior:auto}
+.work-rebasing .work-project>summary>img,.work-rebasing .work-project>summary .work-caption,.work-rebasing .work-view,.work-rebasing .work-index{transition:none!important}

@@ -25,3 +25,5 @@
  .objects-page.mobile-navigation-ready .finds-home-trigger{display:none}
 }
 @media(prefers-reduced-motion:reduce){.mobile-nav-toggle,.mobile-nav-icon i,.mobile-navigation-ready .mobile-nav-panel .mobile-nav-item{transition:none!important;transform:none}.mobile-nav-toggle[aria-expanded="true"] .mobile-nav-icon i:first-child{transform:translateY(7px) rotate(45deg)}.mobile-nav-toggle[aria-expanded="true"] .mobile-nav-icon i:last-child{transform:translateY(-7px) rotate(-45deg)}}
+
+@media(max-width:1099px){:is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel:not(.is-mobile-open) .mobile-nav-item{transition-timing-function:cubic-bezier(.8,0,.8,.2),cubic-bezier(.8,0,.8,.2),linear}}

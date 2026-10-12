@@ -116,3 +116,6 @@ html:not(.js) #profile-dialog .contact-sheet{width:100%;max-width:var(--column);
 #contact .field-area::placeholder{color:var(--sub-gray);opacity:1}
 
 #contact .chip input:checked + span::before{border-color:var(--white);background:var(--white)}
+
+/* Reverse of the shared .4,0,.2,1 drawer entrance. */
+.contact.is-closing,.contact.is-closing .contact-sheet{transition-timing-function:cubic-bezier(.8,0,.6,1)}

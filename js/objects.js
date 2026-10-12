@@ -737,8 +737,8 @@
     popupDismissPointer=null;popupDismissClick=false;
     if(!sheet?.open&&(!filters||filters.hidden))return;
     popupDismissPointer=event.pointerId;popupDismissClick=true;
-    if(sheet?.open)sheet.close();
-    if(filters)filters.hidden=true;
+    if(sheet?.open)closeInfo();
+    if(filters)closeSuggestions();
     searchInput?.blur();event.preventDefault();event.stopImmediatePropagation();
   },true);
   const consumePopupPointer=event=>{
@@ -824,31 +824,75 @@
       suggestions.append(row);
     }
   };
-  searchInput?.addEventListener('focus',()=>{const opening=suggestions.hidden;renderSuggestions();suggestions.hidden=false;if(opening&&!reduced.matches)suggestions.animate([{opacity:0,transform:'translateY(-24px)'},{opacity:1,transform:'translateY(5px)',offset:.65},{opacity:1,transform:'translateY(0)'}],{duration:480,easing:'cubic-bezier(.2,.8,.2,1)'});});
-  searchInput?.closest('.objects-search-wrap').addEventListener('focusout',event=>{if(!event.currentTarget.contains(event.relatedTarget))suggestions.hidden=true;});
-  searchInput?.addEventListener('keydown',event=>{if(event.key==='Escape'){suggestions.hidden=true;searchInput.blur();}});
+  let suggestionMotion=null,suggestionsClosing=false;
+  function closeSuggestions(){
+    if(!suggestions||suggestions.hidden||suggestionsClosing)return;
+    if(reduced.matches){suggestionMotion?.cancel();suggestionMotion=null;suggestions.hidden=true;suggestionsClosing=false;return;}
+    suggestionsClosing=true;suggestions.inert=true;
+    const current=getComputedStyle(suggestions);
+    const start={opacity:current.opacity,transform:current.transform};
+    suggestionMotion?.cancel();
+    suggestionMotion=suggestions.animate([start,{opacity:0,transform:'translateY(-24px)'}],{duration:280,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+    suggestionMotion.onfinish=()=>{if(suggestionsClosing){suggestions.hidden=true;suggestionsClosing=false;suggestionMotion.cancel();suggestionMotion=null;}};
+  }
+  searchInput?.addEventListener('focus',()=>{
+    renderSuggestions();suggestions.inert=false;
+    if(suggestionsClosing){
+      const current=getComputedStyle(suggestions);
+      const start={opacity:current.opacity,transform:current.transform};
+      suggestionsClosing=false;suggestionMotion?.cancel();
+      suggestionMotion=reduced.matches?null:suggestions.animate([start,{opacity:1,transform:'translateY(0)'}],{duration:280,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+      return;
+    }
+    if(!suggestions.hidden)return;
+    suggestions.hidden=false;suggestionMotion?.cancel();
+    if(!reduced.matches)suggestionMotion=suggestions.animate([{opacity:0,transform:'translateY(-24px)'},{opacity:1,transform:'translateY(5px)',offset:.65},{opacity:1,transform:'translateY(0)'}],{duration:480,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+  });
+  searchInput?.closest('.objects-search-wrap').addEventListener('focusout',event=>{if(!event.currentTarget.contains(event.relatedTarget))closeSuggestions();});
+  searchInput?.addEventListener('keydown',event=>{if(event.key==='Escape'){closeSuggestions();searchInput.blur();}});
   searchInput?.addEventListener('input',()=>{selectedTag='';searchQuery=normalize(searchInput.value);filter();renderSuggestions();});
   categoryButtons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.categoryFilter;filter();}));
   document.querySelectorAll('[data-reset-filters]').forEach(button=>button.addEventListener('click',()=>{category='all';selectedTag='';selectedCategories.clear();selectedColors.clear();searchQuery='';if(searchInput)searchInput.value='';filter();renderSuggestions();}));
   document.querySelector('[data-reset-view]').addEventListener('click',reset);
-  zoomInput.addEventListener('input',()=>setZoom(Number(zoomInput.value)));
+  let zoomKnobFrame=0;
+  const stopZoomKnob=()=>{cancelAnimationFrame(zoomKnobFrame);zoomKnobFrame=0;};
+  const slideZoomKnob=target=>{
+    const start=Number(zoomInput.value);
+    stopZoomKnob();setZoom(target);
+    if(reduced.matches||start===target)return;
+    zoomInput.value=String(start);
+    let started;
+    const tick=time=>{
+      started??=time;
+      const progress=Math.min(1,(time-started)/280);
+      const eased=1-Math.pow(1-progress,3);
+      zoomInput.value=String(start+(target-start)*eased);
+      if(progress<1)zoomKnobFrame=requestAnimationFrame(tick);
+      else{zoomInput.value=String(target);zoomKnobFrame=0;}
+    };
+    zoomKnobFrame=requestAnimationFrame(tick);
+  };
+  zoomInput.addEventListener('pointerdown',stopZoomKnob);
+  zoomInput.addEventListener('keydown',stopZoomKnob);
+  zoomInput.addEventListener('input',()=>{stopZoomKnob();setZoom(Number(zoomInput.value));});
+  reduced.addEventListener('change',()=>{if(reduced.matches){stopZoomKnob();zoomInput.value=String(zoom);}});
   zoomButtons.forEach(button=>button.addEventListener('click',()=>{
     const direction=Number(button.dataset.zoomStep);
     if((direction<0&&zoom===0)||(direction>0&&zoom===100))return;
     const stage=direction>0?Math.floor(zoom/25)+1:Math.ceil(zoom/25)-1;
-    setZoom(stage*25);
+    slideZoomKnob(stage*25);
   }));
   mobileZoom.addEventListener('change',updateZoomLayout);updateZoomLayout();
   const infoButton=document.querySelector('.objects-info'),infoDialog=document.getElementById('objects-info-dialog');
   const infoSeenKey='2d1-finds-info-dismissed-v1';
-  let infoEntrance=null;
+  let infoEntrance=null,infoClosing=false;
   const clearInfoEntrance=()=>{infoEntrance?.cancel();infoEntrance=null;};
   const syncInfo=()=>{
     infoButton.firstElementChild.textContent='Familiar Characters';
     infoButton.firstElementChild.setAttribute('translate','no');
-    infoButton.lastElementChild.textContent=infoDialog.open?'−':'+';
+    infoButton.lastElementChild.textContent='';
     infoButton.setAttribute('aria-expanded',String(infoDialog.open));
-    infoButton.setAttribute('aria-label','About this collection');
+    infoButton.setAttribute('aria-label',t('About this collection'));
     infoButton.classList.toggle('info-is-open',infoDialog.open);
     if(!infoDialog.open)infoButton.style.removeProperty('width');
   };
@@ -864,9 +908,28 @@
       {opacity:1,transform:'translateY(-8px)',offset:.6},
       {opacity:1,transform:'translateY(3px)',offset:.82},
       {opacity:1,transform:'translateY(0)',offset:1}
-    ],{duration:720,easing:'cubic-bezier(.2,.8,.2,1)'});
+    ],{duration:720,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+  };
+  const closeInfo=()=>{
+    if(!infoDialog.open||infoClosing)return;
+    if(reduced.matches){infoDialog.close();return;}
+    infoClosing=true;infoDialog.inert=true;
+    // Start moving immediately instead of replaying the entrance's settling
+    // frames backward, which made dismissal feel unresponsive.
+    const current=getComputedStyle(infoDialog);
+    const start={opacity:current.opacity,transform:current.transform};
+    clearInfoEntrance();
+    infoEntrance=infoDialog.animate([start,{opacity:0,transform:'translateY(32px)'}],{duration:280,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+    infoEntrance.onfinish=()=>{if(infoClosing)infoDialog.close();};
   };
   const openInfo=()=>{
+    if(infoClosing){
+      const current=getComputedStyle(infoDialog);
+      const start={opacity:current.opacity,transform:current.transform};
+      infoClosing=false;infoDialog.inert=false;clearInfoEntrance();
+      infoEntrance=infoDialog.animate([start,{opacity:1,transform:'translateY(0)'}],{duration:280,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+      return;
+    }
     if(dialog.open||infoDialog.open)return;
     cancelGesture();stopMotion();settleGeometry();clearInfoEntrance();positionInfo();
     const origin=infoButton.getBoundingClientRect();
@@ -875,16 +938,16 @@
     if(!reduced.matches)popInfoSheet();
     infoButton.focus({preventScroll:true});
   };
-  window.addEventListener('resize',()=>{clearInfoEntrance();if(infoDialog.open)positionInfo();},{passive:true});
-  reduced.addEventListener('change',()=>{if(reduced.matches)clearInfoEntrance();});
-  infoButton.addEventListener('click',()=>{if(infoDialog.open)infoDialog.close();else openInfo();});
-  infoDialog.querySelector('.objects-info-close').addEventListener('click',()=>infoDialog.close());
-  document.addEventListener('pointerdown',event=>{if(infoDialog.open&&!infoDialog.contains(event.target)&&!infoButton.contains(event.target))infoDialog.close();});
-  infoDialog.addEventListener('keydown',event=>{if(event.key==='Escape')infoDialog.close();});
-  infoButton.addEventListener('keydown',event=>{if(event.key==='Escape'&&infoDialog.open)infoDialog.close();});
+  window.addEventListener('resize',()=>{if(infoClosing)infoDialog.close();else{clearInfoEntrance();if(infoDialog.open)positionInfo();}},{passive:true});
+  reduced.addEventListener('change',()=>{if(reduced.matches){clearInfoEntrance();if(infoClosing)infoDialog.close();}});
+  infoButton.addEventListener('click',()=>{if(infoClosing)openInfo();else if(infoDialog.open)closeInfo();else openInfo();});
+  infoDialog.querySelector('.objects-info-close').addEventListener('click',()=>closeInfo());
+  document.addEventListener('pointerdown',event=>{if(infoDialog.open&&!infoDialog.contains(event.target)&&!infoButton.contains(event.target))closeInfo();});
+  infoDialog.addEventListener('keydown',event=>{if(event.key==='Escape')closeInfo();});
+  infoButton.addEventListener('keydown',event=>{if(event.key==='Escape'&&infoDialog.open)closeInfo();});
   if(typeof ResizeObserver!=='undefined')new ResizeObserver(()=>{if(infoDialog.open)positionInfo();}).observe(infoButton);
-  infoDialog.addEventListener('close',()=>{if(infoDialog.open)return;clearInfoEntrance();syncInfo();try{localStorage.setItem(infoSeenKey,'1');}catch{}infoButton.focus({preventScroll:true});});
-  infoDialog.addEventListener('click',event=>{if(event.target===infoDialog){const b=infoDialog.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)infoDialog.close();}});
+  infoDialog.addEventListener('close',()=>{if(infoDialog.open)return;infoClosing=false;infoDialog.inert=false;clearInfoEntrance();syncInfo();try{localStorage.setItem(infoSeenKey,'1');}catch{}infoButton.focus({preventScroll:true});});
+  infoDialog.addEventListener('click',event=>{if(event.target===infoDialog){const b=infoDialog.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)closeInfo();}});
   let measuredWidth=0,measuredHeight=0;
   new ResizeObserver(()=>{
     const width=canvas.clientWidth,height=canvas.clientHeight;if(!width||!height)return;

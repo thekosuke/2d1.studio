@@ -1,38 +1,126 @@
-/* Inline project galleries: native touch scrolling, restrained directional slides. */
+/* Native modal semantics, with a bottom-up entrance and its exact reverse. */
 (() => {
+ const dialog=document.getElementById('work-dialog');
+ if(!dialog||typeof dialog.showModal!=='function')return;
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- document.querySelectorAll('.work-project').forEach(project=>{
-  const track=project.querySelector('.work-carousel');
-  const slides=[...track.querySelectorAll('.work-slide')];
-  const previous=project.querySelector('.work-previous');
-  const next=project.querySelector('.work-next');
-  const status=project.querySelector('.work-position');
-  let current=0,frame=0,drag=null;
-  const offset=i=>slides[i].offsetLeft-slides[0].offsetLeft;
-  const update=()=>{
-   frame=0;
-   const nearest=slides.reduce((best,_,i)=>Math.abs(offset(i)-track.scrollLeft)<Math.abs(offset(best)-track.scrollLeft)?i:best,0);
-   current=nearest;
-   slides.forEach((slide,i)=>{slide.classList.toggle('is-current',i===current);slide.classList.toggle('is-past',i<current)});
-   previous.disabled=current===0;next.disabled=current===slides.length-1;
-   status.textContent=`${current+1} / ${slides.length}`;
-  };
-  const go=i=>track.scrollTo({left:offset(Math.max(0,Math.min(slides.length-1,i))),behavior:reduced.matches?'instant':'smooth'});
-  previous.addEventListener('click',()=>go(current-1));
-  next.addEventListener('click',()=>go(current+1));
-  track.addEventListener('scroll',()=>{if(!frame)frame=requestAnimationFrame(update)},{passive:true});
-  track.addEventListener('keydown',e=>{
-   const destinations={ArrowLeft:current-1,ArrowRight:current+1,Home:0,End:slides.length-1};
-   if(e.key in destinations){e.preventDefault();go(destinations[e.key])}
-  });
-  track.addEventListener('pointerdown',e=>{
-   if(e.pointerType!=='mouse'||e.button!==0)return;
-   drag={x:e.clientX,left:track.scrollLeft};track.setPointerCapture(e.pointerId);track.classList.add('is-dragging');
-  });
-  track.addEventListener('pointermove',e=>{if(drag)track.scrollLeft=drag.left+drag.x-e.clientX});
-  const release=()=>{if(!drag)return;drag=null;track.classList.remove('is-dragging');update();go(current)};
-  track.addEventListener('pointerup',release);track.addEventListener('pointercancel',release);
-  new ResizeObserver(()=>{track.scrollTo({left:offset(current),behavior:'instant'});update()}).observe(track);
-  update();
+ const content=dialog.querySelector('.work-detail-content');
+ const close=dialog.querySelector('.work-close');
+ const originals=[...document.querySelectorAll('.work-project')];
+ const grid=document.querySelector('.work-grid');
+ const root=document.documentElement;
+ const projects=[];
+ const middle=2*originals.length;
+ // Keep real detail content only once; repeated rows contain lightweight previews.
+ for(let cycle=0;cycle<5;cycle++)originals.forEach((source,index)=>{
+  const project=cycle===2?source:document.createElement('details');
+  if(cycle!==2){project.className='work-project';project.append(source.querySelector('summary').cloneNode(true))}
+  project.dataset.projectIndex=index;
+  projects.push(project);
  });
+ grid.replaceChildren(...projects);
+ let centered=null,scrollFrame=0,settleTimer=0,rebasing=false,restoreFrame=0;
+ const updateCenter=()=>{
+  scrollFrame=0;
+  const next=projects.reduce((nearest,project)=>{
+   const box=project.querySelector('summary').getBoundingClientRect();
+   const distance=Math.abs(box.top+box.height/2-innerHeight/2);
+   return !nearest||distance<nearest.distance?{project,distance}:nearest;
+  },null)?.project;
+  if(next===centered)return;
+  centered=next;
+  projects.forEach(project=>{
+   const active=project===centered;
+   project.classList.toggle('is-centered',active);
+   project.querySelector('summary').tabIndex=active?0:-1;
+   // Repeated decorative copies stay out of the accessibility tree until current.
+   if(originals.includes(project)||active)project.removeAttribute('aria-hidden');
+   else project.setAttribute('aria-hidden','true');
+  });
+ };
+ const jumpTo=(project,offset=0)=>{
+  rebasing=true;root.classList.add('work-rebasing');
+  cancelAnimationFrame(restoreFrame);
+  const box=project.querySelector('summary').getBoundingClientRect();
+  window.scrollTo({top:scrollY+box.top+box.height/2-innerHeight/2-offset,behavior:'instant'});
+  updateCenter();
+  // Resolve the equivalent copy before transitions/snap are enabled again.
+  void grid.offsetHeight;
+  restoreFrame=requestAnimationFrame(()=>{root.classList.remove('work-rebasing');rebasing=false});
+ };
+ const rebase=()=>{
+  clearTimeout(settleTimer);
+  if(rebasing||dialog.open||!centered)return;
+  const equivalent=projects[middle+Number(centered.dataset.projectIndex)];
+  if(equivalent===centered)return;
+  const box=centered.querySelector('summary').getBoundingClientRect();
+  const hadFocus=centered.contains(document.activeElement);
+  jumpTo(equivalent,box.top+box.height/2-innerHeight/2);
+  if(hadFocus)equivalent.querySelector('summary').focus({preventScroll:true});
+ };
+ const layout=()=>{
+  const current=centered||originals[0];
+  const height=current.querySelector('summary').getBoundingClientRect().height;
+  grid.style.setProperty('--work-edge',`${Math.max(24,(innerHeight-height)/2)}px`);
+  grid.style.setProperty('--work-gap',`${Math.max(24,innerHeight/2-height*.8)}px`);
+  jumpTo(projects[middle+Number(current.dataset.projectIndex)]);
+ };
+ const centerProject=project=>project.querySelector('summary').scrollIntoView({block:'center',behavior:reduced.matches?'instant':'smooth'});
+ addEventListener('scroll',()=>{
+  if(rebasing||dialog.open)return;
+  if(!scrollFrame)scrollFrame=requestAnimationFrame(()=>{
+   updateCenter();
+   const index=projects.indexOf(centered);
+   if(index<originals.length||index>=projects.length-originals.length)rebase();
+  });
+  clearTimeout(settleTimer);settleTimer=setTimeout(rebase,180);
+ },{passive:true});
+ addEventListener('scrollend',rebase);
+ addEventListener('resize',layout);
+ layout();
+ root.classList.add('work-scroll-gallery');
+
+ let opener=null,motion=null,closing=false,timer;
+ const finishClose=()=>{if(dialog.open)dialog.close()};
+ const dismiss=()=>{
+  if(!dialog.open||closing)return;
+  closing=true;
+  if(reduced.matches){finishClose();return}
+  const pose=getComputedStyle(dialog).transform;
+  motion?.cancel();
+  motion=dialog.animate([{transform:pose==='none'?'translateY(0)':pose},{transform:'translateY(100%)'}],{duration:620,easing:'cubic-bezier(.8,0,.8,.2)',fill:'both'});
+  motion.onfinish=finishClose;timer=setTimeout(finishClose,700);
+ };
+ projects.forEach(project=>{
+  const trigger=project.querySelector('summary');
+  trigger.addEventListener('keydown',event=>{
+   const step=event.key==='ArrowDown'?1:event.key==='ArrowUp'?-1:0;
+   if(!step)return;event.preventDefault();
+   const index=projects.indexOf(project);
+   const next=projects[index+step]||projects[middle+(Number(project.dataset.projectIndex)+step+originals.length)%originals.length];
+   next.querySelector('summary').focus({preventScroll:true});centerProject(next);
+  });
+  trigger.setAttribute('aria-haspopup','dialog');trigger.setAttribute('aria-controls','work-dialog');
+  trigger.addEventListener('click',event=>{
+   event.preventDefault();
+   if(dialog.open)return;
+   if(project!==centered){centerProject(project);return}
+   opener=trigger;closing=false;motion?.cancel();
+   content.replaceChildren(originals[Number(project.dataset.projectIndex)].querySelector('.work-project-content').cloneNode(true));
+   const title=content.querySelector('.work-detail-title');title.id='work-dialog-title';title.tabIndex=-1;
+   content.querySelector('img').loading='eager';
+   dialog.showModal();document.documentElement.classList.add('has-dialog');content.scrollTop=0;
+   if(!reduced.matches){
+    motion=dialog.animate([{transform:'translateY(100%)'},{transform:'translateY(0)'}],{duration:620,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+    motion.onfinish=()=>{if(!closing){motion.cancel();motion=null}};
+   }
+   title.focus({preventScroll:true});
+  });
+ });
+ close.addEventListener('click',dismiss);
+ dialog.addEventListener('cancel',event=>{event.preventDefault();dismiss()});
+ dialog.addEventListener('close',()=>{
+  clearTimeout(timer);motion?.cancel();motion=null;closing=false;document.documentElement.classList.remove('has-dialog');
+  opener?.focus({preventScroll:true});opener=null;content.replaceChildren();rebase();
+ });
+ reduced.addEventListener('change',()=>{if(reduced.matches){motion?.cancel();if(closing)finishClose()}});
 })();

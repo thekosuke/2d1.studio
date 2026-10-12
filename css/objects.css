@@ -361,7 +361,7 @@
 
 #object-dialog{inset:0;margin:auto;width:90vw;height:90dvh;max-height:90dvh;background:transparent;row-gap:12px}
 
-#objects-info-dialog{border:8px solid var(--red)}
+#objects-info-dialog{--info-border-weight:2px;border:var(--info-border-weight) solid var(--red)}
 
 /* One label and hover treatment for Finds floating controls. */
 .objects-page.objects-ready :is(.finds-home-trigger,.objects-info,.objects-tools summary,.objects-categories button,.objects-language a,.objects-zoom button){font:var(--floating-label)!important;letter-spacing:.04em;text-transform:uppercase;box-sizing:border-box;padding:6px 12px;min-height:33px;color:var(--ink);transition:color 180ms,border-color 180ms}
@@ -371,7 +371,7 @@
 .objects-page.objects-ready :is(.finds-home-trigger,.objects-info,.objects-categories button):hover,
 .objects-page.objects-ready .objects-tools:has(summary:hover),
 .objects-page.objects-ready .objects-language:has(a:hover),
-.objects-page.objects-ready .objects-zoom:has(button:hover){border-color:var(--red)}
+.objects-page.objects-ready .objects-zoom:has(input:active){border-color:var(--red)}
 .objects-page.objects-ready :is(.finds-home-trigger,.objects-info,.objects-tools summary,.objects-categories button,.objects-language a,.objects-zoom button):hover{color:var(--red);background:var(--white)}
 
 /* Collection disclosure sits beneath its floating trigger. */
@@ -633,7 +633,7 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
  #object-dialog .objects-detail-summary{gap:24px}
 }
 /* Compact collection sheet with an edge-to-edge action row. */
-.objects-page #objects-info-dialog h2{font:500 var(--type-copy)/1.2 var(--font);letter-spacing:0;margin-bottom:10px}
+.objects-page #objects-info-dialog h2{font:500 var(--type-body)/1.6 var(--font);letter-spacing:0;margin-bottom:10px}
 .objects-page #objects-info-dialog :is(p,.objects-info-note){font:400 var(--type-body)/1.6 var(--font);letter-spacing:0}
 #objects-info-dialog .objects-info-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:24px -24px -24px;align-items:stretch}
 .objects-page #objects-info-dialog .objects-info-actions a{display:flex;align-items:center;justify-content:center;margin:0;padding:12px 8px;min-height:44px;border:1px solid var(--red);background:transparent;color:var(--red);font:500 var(--type-body)/1.4 var(--font);letter-spacing:0;text-transform:none;text-decoration:none}
@@ -647,9 +647,9 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 .objects-page.objects-ready :is(.finds-home-trigger,.objects-search){height:33px;min-height:33px;box-sizing:border-box}
 .objects-page .objects-search:focus{border-width:1px}
 .objects-search-icon{stroke-width:2.2}
-.objects-page #objects-info-dialog .objects-info-actions{border-top:1px solid var(--red)}
+.objects-page #objects-info-dialog .objects-info-actions{border-top:var(--info-border-weight) solid var(--red)}
 .objects-page #objects-info-dialog .objects-info-actions a{border:0}
-.objects-page #objects-info-dialog .objects-info-actions a:first-child{border-right:1px solid var(--red)}
+.objects-page #objects-info-dialog .objects-info-actions a:first-child{border-right:var(--info-border-weight) solid var(--red)}
 
 /* A square-pixel cross shares the eye row. */
 .objects-page #objects-info-dialog .objects-info-close{position:absolute;top:24px;right:24px;display:flex;align-items:center;justify-content:center;width:24px;height:24px;padding:0;border:0;background:transparent;color:var(--ink);cursor:pointer}
@@ -675,9 +675,39 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 .objects-page.objects-ready .objects-zoom button{font-size:0!important}
 .objects-page #objects-info-dialog .objects-info-actions a:is(:hover,:focus-visible){color:var(--white)!important}
 
-.objects-page #objects-info-dialog h2{margin-bottom:24px}
+.objects-page #objects-info-dialog h2{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--line)}
 /* Pin zoom glyphs to the square button center, independent of text layout. */
 .objects-page.objects-ready .objects-zoom button{position:relative;display:block;line-height:0!important}
 .objects-page.objects-ready .objects-zoom button::after{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:12px;height:12px;margin:0}
 .objects-page .objects-search-icon{width:12px;height:12px}
 .objects-page .objects-search::-webkit-search-cancel-button{width:12px;height:12px}
+
+/* Match the 12px Medium label's cap height and stroke, above its line-box center. */
+.objects-page .objects-info>span:last-child{width:12px;height:12px;flex:0 0 12px;transform:translateY(-1px);mask-image:url('../img/icons/pixel-info.svg');-webkit-mask-image:url('../img/icons/pixel-info.svg')}
+.objects-page .objects-info[aria-expanded="true"]>span:last-child{mask-image:url('../img/icons/pixel-info.svg');-webkit-mask-image:url('../img/icons/pixel-info.svg')}
+
+/* Closing traces the entrance curve backward; menu order already reverses. */
+#object-dialog:not([open]),#object-dialog:not([open])::backdrop{transition-timing-function:cubic-bezier(.8,0,.8,.2),linear,linear}
+.finds-menu-motion:not(.is-open) .finds-menu-item{transition-timing-function:cubic-bezier(.8,0,.8,.2),cubic-bezier(.8,0,.8,.2),linear}
+
+/* Roomier info sheet, with its action row remaining flush to the frame. */
+.objects-page #objects-info-dialog{padding:48px}
+.objects-page #objects-info-dialog .objects-info-close{top:0;right:0}
+.objects-page #objects-info-dialog .objects-info-actions{margin:48px -48px -48px}
+@media(min-width:768px){.objects-page #objects-info-dialog{width:40vw;max-width:none}}
+
+.objects-page.objects-ready > .objects-info[aria-expanded="true"]{background:var(--red)!important;color:var(--white)!important;border-color:var(--red)!important}
+
+/* Button hover outlines only that square; range interaction outlines the dock. */
+.objects-page.objects-ready .objects-zoom button::before{content:'';position:absolute;inset:-1px;border:1px solid var(--red);opacity:0;pointer-events:none;transition:opacity 180ms}
+.objects-page.objects-ready .objects-zoom button:last-of-type::before{inset:-1px}
+.objects-page.objects-ready .objects-zoom button:not([aria-disabled="true"]):is(:hover,:focus-visible){color:var(--red);background:transparent}
+.objects-page.objects-ready .objects-zoom button:not([aria-disabled="true"]):is(:hover,:focus-visible)::before{opacity:1}
+@media(prefers-reduced-motion:reduce){.objects-page.objects-ready .objects-zoom button::before{transition:none}}
+
+/* Replace the shared divider as well as the hover outline. */
+.objects-page.objects-ready .objects-zoom button:not([aria-disabled="true"]):is(:hover,:focus-visible){border-color:var(--red);transition:none}
+.objects-page.objects-ready .objects-zoom:has(input:active) button{color:var(--red);border-color:var(--red);opacity:1}
+
+.objects-page.objects-ready .objects-zoom input:focus-visible{background:transparent!important;border-color:transparent;color:var(--red)!important}
+.objects-page.objects-ready .objects-zoom button:focus-visible{background:transparent!important;color:var(--red)!important}
