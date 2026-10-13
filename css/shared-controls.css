@@ -44,3 +44,14 @@
  .mobile-navigation-ready .mobile-nav-panel .page-nav-contact a::after{content:'';position:absolute;left:12px;bottom:-15px;width:calc(100% - 24px);height:1px;background:var(--line);pointer-events:none}
 }
 @media(max-width:360px){.js .home-page .page-nav{grid-template-columns:38px 46px 44px 48px 64px 54px}}
+
+/* One nav-link component, shared by page navigation and project footers. */
+.page-nav,.work-studio-nav{font:500 var(--type-label)/1.4 var(--font);letter-spacing:var(--type-label-track);text-transform:uppercase}
+.work-studio-nav a{padding-block:6px;width:fit-content}
+:is(.page-nav,.work-studio-nav) :is(a,button){position:relative;transition:color .2s ease}
+:is(.page-nav,.work-studio-nav) :is(a,button)::before{content:'';position:absolute;left:0;top:50%;width:0;height:6px;transform:translateY(-50%);background:var(--red);transition:width .2s ease;pointer-events:none}
+:is(.page-nav,.work-studio-nav) .nav-label{display:inline-block;transition:transform .2s ease;pointer-events:none}
+.work-studio-nav a:focus-visible::before{width:6px}
+.work-studio-nav a:focus-visible .nav-label{transform:translateX(12px)}
+@media(hover:hover) and (pointer:fine){:is(.page-nav,.work-studio-nav) :is(a,button):hover{transform:none}:is(.page-nav,.work-studio-nav) :is(a,button):hover::before{width:6px}:is(.page-nav,.work-studio-nav) :is(a,button):hover .nav-label{transform:translateX(12px)}}
+@media(prefers-reduced-motion:reduce){:is(.page-nav,.work-studio-nav) :is(a,button),:is(.page-nav,.work-studio-nav) :is(a,button)::before,:is(.page-nav,.work-studio-nav) .nav-label{transition:none}}

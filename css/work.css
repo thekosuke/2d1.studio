@@ -18,7 +18,7 @@
 .work-dialog{position:fixed;inset:0;width:100%;max-width:none;height:100dvh;max-height:none;margin:0;padding:0;border:0;background:var(--beige);color:var(--ink);overflow:hidden;overscroll-behavior:contain}
 .work-dialog::backdrop{background:rgba(50,5,5,.4)}
 .work-detail-content>.work-project-content{margin-top:0}
-.work-detail-content{height:100%;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.work-detail-content{height:100%;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
 .work-close{position:absolute;z-index:2;top:24px;right:24px;width:32px;height:32px;display:grid;place-items:center;padding:0;border:0;background:var(--beige);color:var(--ink)}
 .work-close span{display:block;width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
 .work-close:is(:hover,:focus-visible){background:var(--red);color:var(--white)}
@@ -146,17 +146,8 @@ html:has(> body.work-page)::-webkit-scrollbar{display:none!important;width:0!imp
 
 /* Shared footer typography and language component, without project overrides. */
 .work-studio-footer{padding-bottom:var(--footer-inset)}
-.work-footer-bottom.site-footer{width:100vw}
+.work-footer-bottom.site-footer{width:calc(100% + 2 * var(--project-inset))}
 .work-footer-bottom.site-footer p{font:inherit;line-height:calc(var(--language-size) + 2px);color:var(--ink)}
 .work-studio-footer .language-switch a:is([aria-current],:hover,:focus-visible){background:var(--ink);color:var(--white)}
-@media(min-width:1100px){.work-meta{grid-template-columns:calc(max(min(27.7778vw,400px),100vw - var(--column) - 128px) - 60px) minmax(0,1fr) 30%}}
+@media(min-width:1100px){.work-meta{grid-template-columns:calc(max(min(27.7778vw,400px),100% + 40px - var(--column) - 128px) - 60px) minmax(0,1fr) 30%}}
 .work-studio-footer .work-footer-language{bottom:auto;height:auto;gap:normal}
-
-/* Footer destinations use the same square reveal as the page navigation. */
-.work-studio-nav a{position:relative;width:fit-content}
-.work-studio-nav a::before{content:'';position:absolute;left:0;top:50%;width:0;height:6px;transform:translateY(-50%);background:var(--red);transition:width .2s ease;pointer-events:none}
-.work-studio-nav .nav-label{display:inline-block;transition:transform .2s ease;pointer-events:none}
-.work-studio-nav a:focus-visible::before{width:6px}
-.work-studio-nav a:focus-visible .nav-label{transform:translateX(12px)}
-@media(hover:hover) and (pointer:fine){.work-studio-nav a:hover::before{width:6px}.work-studio-nav a:hover .nav-label{transform:translateX(12px)}}
-@media(prefers-reduced-motion:reduce){.work-studio-nav a::before,.work-studio-nav .nav-label{transition:none}}
