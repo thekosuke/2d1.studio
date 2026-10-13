@@ -710,5 +710,10 @@ window.TWO_D_ONE_JA = {
   "DeepDrip embroidered wordmark on a brown cap": "茶色のキャップに刺繍されたDeepDripワードマーク",
   "Aviator Health social profile": "Aviator Healthのソーシャルプロフィール",
   "Aviator identity on a purple bottle and embroidered cap": "紫のボトルと刺繍入りキャップに展開したAviatorのアイデンティティ",
-  "A wooden pickup by Odo Fioravanti, carved from a single block of cedar and made by hand in Italy.": "オド・フィオラヴァンティがデザインした木製のピックアップ。ひとつの杉のブロックから削り出し、イタリアで手作りされています。"
+  "A wooden pickup by Odo Fioravanti, carved from a single block of cedar and made by hand in Italy.": "オド・フィオラヴァンティがデザインした木製のピックアップ。ひとつの杉のブロックから削り出し、イタリアで手作りされています。",
+  "Client": "クライアント",
+  "Studio and contact": "スタジオとお問い合わせ",
+  "About Us": "私たちについて",
+  "About us": "私たちについて",
+  "View our work": "制作実績を見る"
 };

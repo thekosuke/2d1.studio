@@ -10,7 +10,7 @@
   const isFinds = panel.classList.contains('finds-page-nav');
   const desktopTrigger = document.querySelector('.finds-home-trigger');
   const logo = document.querySelector('.site-logo');
-  const language = document.querySelector('.language-switch, .objects-language');
+  const language = document.querySelector('.language-switch:not(.work-footer-language), .objects-language');
   const languageHome = language?.parentElement, languageNext = language?.nextSibling;
   const duration = 260, step = 44;
   let items = [], total = duration;

@@ -85,3 +85,78 @@ html.work-scroll-gallery.work-rebasing{scroll-snap-type:none;scroll-behavior:aut
 /* All project images follow their native proportions with equal 24px gutters. */
 .work-detail-images .work-detail-image{height:auto}
 .work-detail-images .work-detail-image img{height:auto;aspect-ratio:auto;object-fit:contain}
+
+/* Project editorial layout: measured against PAPA TOM's Wildling page. */
+.work-project-content{--project-inset:20px;--project-image-gap:10px}
+.work-detail-header{min-height:0;padding:150px var(--project-inset) 60px;gap:0}
+.work-trail{display:none}
+.work-page .work-detail-title,.work-page .work-description{font:500 clamp(28px,3.2vw,64px)/1.1 var(--font);letter-spacing:-.025em;max-width:none;margin:0;padding:0;text-wrap:pretty}
+.work-page .work-detail-title::after{content:','}
+.work-meta{display:grid;grid-template-columns:250px 300px 1fr;gap:40px;margin:300px 0 0;padding-right:10vw;font:400 18px/1.15 var(--font)}
+.work-meta dt{font-size:14px;line-height:1.5;margin-bottom:4px}
+.work-role-list{display:flex;flex-wrap:wrap;column-gap:.25em}
+.work-role-list li:not(:last-child)::after{content:','}
+.work-detail-images{display:flex;flex-direction:column;gap:var(--project-image-gap);padding-inline:var(--project-inset)}
+.work-detail-images .work-detail-image,.work-detail-images .work-detail-image+.work-detail-image{height:auto;margin:0;padding:0}
+.work-detail-images .work-detail-image img{display:block;width:100%;height:auto;object-fit:contain}
+.work-studio-footer{margin-inline:var(--project-inset);padding:175px 0 40px;display:flex;flex-direction:column;align-items:flex-start;gap:32px;font:400 18px/1.5 var(--font)}
+.work-studio-mark{display:block;width:140px}
+.work-studio-mark img{display:block;width:100%;height:auto}
+.work-studio-footer nav{display:flex;flex-direction:column}
+.work-studio-footer a{color:inherit;text-decoration:none}
+.work-studio-footer a:is(:hover,:focus-visible){color:var(--red)}
+.work-studio-footer p{margin:0;font-size:12px;color:var(--sub-gray)}
+@media(max-width:1000px){.work-meta{grid-template-columns:1fr 1.4fr 1fr;gap:24px;padding-right:0}}
+@media(max-width:767px){
+ .work-detail-header{padding-top:118px;gap:0}
+ .work-meta{grid-template-columns:1fr;gap:24px;margin-top:150px;padding-right:10vw;font-size:16px}
+ .work-meta dt{font-size:12px}
+ .work-studio-footer{font-size:16px}
+}
+@media(min-width:1001px){.work-meta{grid-template-columns:250px minmax(0,1fr) 30%;padding-right:0}.work-role-list{max-width:300px}}
+.work-close{top:20px;right:20px}
+
+/* Match the site's outer scrollbar and footer alignment in project details. */
+.work-dialog{width:100vw}
+.work-detail-content{scrollbar-gutter:auto}
+.work-studio-footer{padding-bottom:var(--project-inset)}
+.work-footer-bottom.site-footer{display:grid;grid-template-columns:250px minmax(0,1fr) 30%;column-gap:40px;align-items:center;width:100%;margin:0;padding:0;min-height:24px}
+.work-footer-bottom .social-links{display:flex;flex-direction:row;align-items:center;gap:12px}
+.work-footer-bottom.site-footer p{line-height:24px}
+.work-studio-footer .work-footer-language{position:static;justify-self:end;display:flex;flex-direction:row;gap:0;border:1px solid var(--ink);}
+.work-footer-language a{display:flex;align-items:center;justify-content:center;min-width:22px;min-height:22px;padding-inline:4px}
+.work-footer-language a+a{border-left:1px solid var(--ink)}
+.work-footer-language a:is([aria-current],:hover,:focus-visible){background:var(--ink);color:var(--white)}
+@media(max-width:1000px) and (min-width:768px){.work-footer-bottom.site-footer{grid-template-columns:1fr 1.4fr 1fr;gap:24px}}
+@media(max-width:767px){.work-footer-bottom.site-footer{grid-template-columns:1fr auto;gap:24px}.work-footer-bottom .social-links{grid-column:1/-1;grid-row:1}.work-footer-language{grid-column:2;grid-row:2}.work-footer-bottom.site-footer p{grid-column:1;grid-row:2}}
+
+/* Reuse the shared footer line instead of a project-specific column grid. */
+.work-footer-bottom.site-footer{display:block;width:calc(100% + 2 * var(--project-inset));margin-inline:calc(-1 * var(--project-inset))}
+.work-footer-bottom .footer-line.column{position:relative;min-height:24px}
+.work-footer-bottom .work-footer-language{position:absolute;right:24px;top:50%;transform:translateY(-50%)}
+@media(min-width:1100px){
+ .work-meta{grid-template-columns:calc(max(min(27.7778vw,400px),100% + 40px - var(--column) - 128px) - 60px) minmax(0,1fr) 30%}
+}
+@media(max-width:767px){.work-footer-bottom .social-links{grid-column:auto;grid-row:auto}.work-footer-bottom .work-footer-language{grid-column:auto;grid-row:auto}.work-footer-bottom.site-footer p{grid-column:auto;grid-row:auto}}
+@media(max-width:1099px){.work-footer-bottom .work-footer-language{right:0;top:0;transform:none}}
+
+/* The repeating Work overview has no meaningful scrollbar position. */
+html:has(> body.work-page){scrollbar-width:none!important;scrollbar-gutter:auto}
+html:has(> body.work-page)::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+
+/* Shared footer typography and language component, without project overrides. */
+.work-studio-footer{padding-bottom:var(--footer-inset)}
+.work-footer-bottom.site-footer{width:100vw}
+.work-footer-bottom.site-footer p{font:inherit;line-height:calc(var(--language-size) + 2px);color:var(--ink)}
+.work-studio-footer .language-switch a:is([aria-current],:hover,:focus-visible){background:var(--ink);color:var(--white)}
+@media(min-width:1100px){.work-meta{grid-template-columns:calc(max(min(27.7778vw,400px),100vw - var(--column) - 128px) - 60px) minmax(0,1fr) 30%}}
+.work-studio-footer .work-footer-language{bottom:auto;height:auto;gap:normal}
+
+/* Footer destinations use the same square reveal as the page navigation. */
+.work-studio-nav a{position:relative;width:fit-content}
+.work-studio-nav a::before{content:'';position:absolute;left:0;top:50%;width:0;height:6px;transform:translateY(-50%);background:var(--red);transition:width .2s ease;pointer-events:none}
+.work-studio-nav .nav-label{display:inline-block;transition:transform .2s ease;pointer-events:none}
+.work-studio-nav a:focus-visible::before{width:6px}
+.work-studio-nav a:focus-visible .nav-label{transform:translateX(12px)}
+@media(hover:hover) and (pointer:fine){.work-studio-nav a:hover::before{width:6px}.work-studio-nav a:hover .nav-label{transform:translateX(12px)}}
+@media(prefers-reduced-motion:reduce){.work-studio-nav a::before,.work-studio-nav .nav-label{transition:none}}
