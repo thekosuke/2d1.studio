@@ -2,6 +2,7 @@
 from pathlib import Path
 from html import escape as e
 import json
+import re
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 def tracked_product_url(url):
@@ -15,6 +16,9 @@ def tracked_product_url(url):
 
 ROOT=Path(__file__).resolve().parent.parent
 items=json.loads((ROOT/'data/objects.json').read_text())
+family_assignments=json.loads((ROOT/'data/object-families.json').read_text())
+assert set(family_assignments)=={item['id'] for item in items}, 'Family assignments must match the catalog'
+items=[dict(item, family=family_assignments[item['id']]) for item in items]
 delivery_path=ROOT/'data/finds-images.json'
 delivery=json.loads(delivery_path.read_text()) if delivery_path.exists() else {}
 def image_variants(item):
@@ -22,8 +26,19 @@ def image_variants(item):
     variants.update({v['width']:v for v in delivery.get(item['image'], [])})
     return sorted(variants.values(), key=lambda v:v['width'])
 categories=[('all','All objects'),('living','Living'),('kitchen','Kitchen'),('wear','Wear'),('work','Work')]
+families=('Characters','Companions','Classics','Oddities','Rituals')
+assert all(value in families for value in family_assignments.values()), 'Unknown family assignment'
+# Keep curation separate from product/source metadata. The generated runtime
+# lookup needs neither an extra request nor changes to the static catalog HTML.
+script_path=ROOT/'js/objects.js'
+script=script_path.read_text()
+lookup='  const objectFamilies = '+json.dumps(family_assignments, ensure_ascii=False, separators=(',',':'))+';'
+script, count=re.subn(r'^  const objectFamilies = .*;$', lambda match:lookup, script, count=1, flags=re.M)
+assert count==1, 'Missing generated Family lookup'
+script_path.write_text(script)
 cards=[]
 for item in items:
+    assert item.get('family') in families, f"Missing or unknown family: {item['id']}"
     assert (ROOT/item['image']).is_file(),item['image']
     variants = image_variants(item)
     for variant in variants:

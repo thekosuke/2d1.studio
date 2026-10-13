@@ -715,5 +715,13 @@ window.TWO_D_ONE_JA = {
   "Studio and contact": "スタジオとお問い合わせ",
   "About Us": "私たちについて",
   "About us": "私たちについて",
-  "View our work": "制作実績を見る"
+  "View our work": "制作実績を見る",
+  "Family": "ファミリー",
+  "Characters": "キャラクター",
+  "Everyday Perspectives": "日常にひと工夫",
+  "Timeless Essentials": "時代を超える定番",
+  "Companions": "相棒",
+  "Classics": "定番",
+  "Oddities": "変わりもの",
+  "Rituals": "習慣"
 };

@@ -8,9 +8,11 @@
   const startedAt=performance.now();
   let firstPhotoAt=null;
   const t = window.SiteLanguage?.t || (text => text);
+  // Generated from data/object-families.json; edit the assignments there.
+  const objectFamilies = {"hay-miz-dark-green":"Rituals","stokke-tripp-trapp-warm-red":"Classics","alessi-anna-g-black":"Characters","alessi-ossidiana-black":"Rituals","dusen-everybody-wall-clock":"Companions","bruna-bonbon-mini-orange":"Characters","playforever-viglietta-jasper":"Oddities","brutto-sally-pepe":"Rituals","nintendo-pikmin-vases":"Characters","arms-flying-robi-persi":"Oddities","alessi-9090":"Classics","arwenn-cloud-clock":"Oddities","craighill-chroma-scissors-primary":"Companions","craighill-swingtop-lighter":"Rituals","alessi-twergi-es19-yellow":"Rituals","block-design-play-tin":"Oddities","herman-miller-girard-throw":"Companions","hay-regn-umbrella-gray-blue":"Classics","moodulo-pop-culture-act-ii":"Oddities","homeinfun-storage-stool":"Oddities","odd-universe-peepers":"Characters","atonemo-nts-radio-player":"Companions","not-boring-camera-app":"Companions","not-boring-weather-app":"Companions","not-boring-camera-art-model":"Oddities","mkbhd-color-picker-stickers":"Companions","mkbhd-overlay-deskpad":"Companions","bobo-choses-bolder-belt-pouch":"Companions","hungry-market-initial-c-cap":"Companions","daypa-kun-backpack-blue":"Characters","lego-piranha-plant-71426":"Characters","iwate-canning-gift-stock":"Rituals","mint-hug-shakers":"Characters","subu-originals-f-line-black":"Classics","sharge-discho":"Oddities","fairphone-gen-6-plus":"Companions","cwandt-high-speed-jump-rope":"Rituals","ikea-forlunda-red":"Companions","nendo-shoe-horn":"Rituals","mr-maria-first-light-snoopy":"Characters","flos-snoopy-black":"Companions","magis-spun":"Oddities","magis-air-chair-red":"Classics","hay-table-clock-black":"Classics","muji-wall-mounted-cd-player":"Classics","groove-x-lovot-3":"Characters","teenage-engineering-grip-car":"Oddities","cliik-press-glass-family-pack":"Classics","yoto-player-4":"Rituals","freckle-phone-orange":"Oddities","loop-cocoon-berry":"Companions","magis-linnut-sulo-s":"Characters","flowerpot-vp9-zesty-orange":"Companions","b-line-boby-34-paprika":"Classics","hey-bag-green-lines":"Companions","hey-classic-cap":"Classics","alessi-la-conica":"Classics","memphis-first":"Oddities","bosa-most-illustrious-achille":"Characters","pedrali-frida-752":"Classics","qeeboo-rabbit-chair-light-blue":"Characters","alessi-magic-bunny-black":"Characters","alessi-girotondo-round-tray":"Characters","baggu-standard-pop-pink-happy":"Characters","anya-hindmarch-eyes-tote":"Characters","heinz-tomato-ketchup":"Classics","panic-playdate":"Companions","kinto-water-bottle-300ml":"Classics","topologie-6mm-rope-strap":"Classics","yoki-pillar-blue":"Oddities","gispen-dombo-red":"Oddities","vitra-eames-elephant-orange":"Characters","detail-nasa-snow-globe":"Oddities","carpenter-hamburger-coaster":"Oddities","super7-beams-charlie-brown":"Characters","running-press-ufo-cow":"Characters","notabag-original-red":"Classics","cotopaxi-kapai-del-dia":"Companions","kay-bojesen-songbird-sunshine":"Characters","vitra-nelson-night-clock":"Companions","palaset-im-ok-fantti-elephant-bank":"Characters","ichendorf-desert-plants-cactus-amber":"Rituals","curaprox-cs-smart":"Classics","soholm-cafe-reversible-tote":"Classics","tecta-cat-black":"Characters","kikkerland-inkerie-jewelry-case":"Companions","muji-porcelain-toothbrush-stand":"Classics","best-years-knitted-triceratops":"Characters","kay-bojesen-monkey-mini-vintage-blue":"Characters","muji-smooth-gel-knock-pen":"Classics","actus-deco-dot-photo-frame":"Companions","actus-object-flower-vase":"Rituals","iwachu-cat-candle-stand":"Characters","aptone-mix-match":"Oddities","seiko-diver-alarm-clock":"Oddities","seiko-stadium-clock":"Oddities","nahe-packing-pouch":"Classics","heim-egg-spoon":"Rituals","maul-m8-calculator":"Classics","may-bookends":"Companions","alessi-dede":"Characters","andlight-slab-series":"Rituals","flos-mayday":"Classics","alessi-sleek":"Classics","samira-boon-furoshiki-card-case":"Companions","floyd-cabin-aluminum":"Companions","jellycat-amuseables-basketball":"Characters","tobeus-pick-up":"Oddities"};
   const cards = [...collection.querySelectorAll('[data-object]')];
   const catalog = cards.map(card => ({
-    id:card.dataset.object, category:card.dataset.category, tags:JSON.parse(card.dataset.tags), colors:JSON.parse(card.dataset.colors||'[]'),displayColors:JSON.parse(card.dataset.displayColors||'[]'),
+    id:card.dataset.object, family:objectFamilies[card.dataset.object], category:card.dataset.category, tags:JSON.parse(card.dataset.tags), colors:JSON.parse(card.dataset.colors||'[]'),displayColors:JSON.parse(card.dataset.displayColors||'[]'),
     name:card.querySelector('h2').textContent, brand:card.querySelector('.object-brand').textContent,
     imageClass:card.querySelector('img').className, image:card.querySelector('img').getAttribute('src'), alt:card.querySelector('img').alt,
     imageSrcset:card.querySelector('img').getAttribute('srcset') || '',
@@ -26,7 +28,7 @@
   const close = dialog.querySelector('[data-close]');
   let active = [], category = 'all', list = false, searchQuery = '', selectedTag = '';
   const searchInput=document.getElementById('objects-search');
-  const selectedCategories=new Set(),selectedColors=new Set();
+  const selectedFamilies=new Set(),selectedCategories=new Set(),selectedColors=new Set();
   let x = 0, y = 0, cell = 280, row = 324, frame = 0, gesture = null, suppressClick = false, returnFocus = null;
   const zoomInput=document.getElementById('objects-zoom');
   const zoomButtons=[...document.querySelectorAll('[data-zoom-step]')];
@@ -208,7 +210,7 @@
     else{const size=geometry(canvas.clientWidth,zoom);pose({x:cx-worldX*size.cell,y:cy-size.cell/2-worldY*size.row,...size});}
   }
   function filter(){
-    cancelGesture();stopMotion();active=(visitOrders.get(category)||[]).filter(item=>(!selectedTag||item.tags.includes(selectedTag))&&(!selectedCategories.size||item.tags.some(tag=>selectedCategories.has(tag)))&&(!selectedColors.size||item.colors.some(color=>selectedColors.has(color)))&&searchQuery.split(/\s+/).every(word=>[item.name,item.brand,item.description,item.category,...item.tags,...item.tags.map(t),...item.colors,...item.colors.map(t)].join(' ').normalize('NFKC').toLocaleLowerCase().includes(word)));
+    cancelGesture();stopMotion();active=(visitOrders.get(category)||[]).filter(item=>(!selectedFamilies.size||selectedFamilies.has(item.family))&&(!selectedTag||item.tags.includes(selectedTag))&&(!selectedCategories.size||item.tags.some(tag=>selectedCategories.has(tag)))&&(!selectedColors.size||item.colors.some(color=>selectedColors.has(color)))&&searchQuery.split(/\s+/).every(word=>[item.name,item.brand,item.description,item.category,item.family,t(item.family),...item.tags,...item.tags.map(t),...item.colors,...item.colors.map(t)].join(' ').normalize('NFKC').toLocaleLowerCase().includes(word)));
     cards.forEach(card=>card.hidden=!active.some(item=>item.id===card.dataset.object));
     status.textContent=`${active.length} ${t('objects')}`;empty.hidden=active.length>0;
     document.querySelector('.objects-list-empty').hidden=active.length>0||!list;
@@ -804,16 +806,16 @@
   dialog.addEventListener('close',()=>{if(dialog.open)return;cancelDetailTransition();cancelDetailPhotos();purchaseGeneration++;returnFocus?.focus({preventScroll:true});returnFocus=null;});
   if(searchInput)searchInput.disabled=false;
   const suggestions=document.getElementById('objects-search-suggestions');
-  const suggestionGroups=[['Category',[...new Set(catalog.flatMap(item=>item.tags))]],['Color',[...new Set(catalog.flatMap(item=>item.colors))]]];
+  const suggestionGroups=[['Family',['Characters','Companions','Classics','Oddities','Rituals']],['Category',[...new Set(catalog.flatMap(item=>item.tags))]],['Color',[...new Set(catalog.flatMap(item=>item.colors))]]];
   const normalize=value=>value.normalize('NFKC').trim().toLocaleLowerCase();
   const renderSuggestions=()=>{
     if(!suggestions)return;
     suggestions.replaceChildren();
     for(const [label,values] of suggestionGroups){
-      const matches=values.slice().sort((a,b)=>a.localeCompare(b)).slice(0,label==='Brand'?8:24);
+      const matches=label==='Family'?values:values.slice().sort((a,b)=>a.localeCompare(b)).slice(0,24);
       if(!matches.length)continue;
-      const row=document.createElement('div'),heading=document.createElement('p');heading.textContent=t(label);row.append(heading);
-      for(const value of matches){const button=document.createElement('button');button.type='button';const selected=label==='Category'?selectedCategories:selectedColors;
+      const row=document.createElement('div'),heading=document.createElement('p');heading.textContent=t(label);row.setAttribute('role','group');row.setAttribute('aria-label',t(label));row.append(heading);
+      for(const value of matches){const button=document.createElement('button');button.type='button';const selected=label==='Family'?selectedFamilies:label==='Category'?selectedCategories:selectedColors;
         button.setAttribute('aria-pressed',String(selected.has(value)));
         if(label==='Color'){
           button.classList.add('search-color-button');
@@ -852,7 +854,7 @@
   searchInput?.addEventListener('keydown',event=>{if(event.key==='Escape'){closeSuggestions();searchInput.blur();}});
   searchInput?.addEventListener('input',()=>{selectedTag='';searchQuery=normalize(searchInput.value);filter();renderSuggestions();});
   categoryButtons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.categoryFilter;filter();}));
-  document.querySelectorAll('[data-reset-filters]').forEach(button=>button.addEventListener('click',()=>{category='all';selectedTag='';selectedCategories.clear();selectedColors.clear();searchQuery='';if(searchInput)searchInput.value='';filter();renderSuggestions();}));
+  document.querySelectorAll('[data-reset-filters]').forEach(button=>button.addEventListener('click',()=>{category='all';selectedTag='';selectedFamilies.clear();selectedCategories.clear();selectedColors.clear();searchQuery='';if(searchInput)searchInput.value='';filter();renderSuggestions();}));
   document.querySelector('[data-reset-view]').addEventListener('click',reset);
   let zoomKnobFrame=0;
   const stopZoomKnob=()=>{cancelAnimationFrame(zoomKnobFrame);zoomKnobFrame=0;};
