@@ -204,7 +204,8 @@ html:not(.js) .page-nav-contact{display:none}
 /* About shares Home's settled, centered 96px docked logo. */
 .about-page .about-docked-logo{position:fixed;top:16px;left:50%;width:96px;transform:translateX(-50%);z-index:30}
 
-.shop-actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.shop-actions{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:16px;width:100%;margin-top:var(--gap);padding-block:var(--gap)}
+.shop-actions::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:repeating-linear-gradient(to right,var(--ink) 0 4px,transparent 4px 8px)}
 @media(max-width:767px){.shop-actions{gap:12px}}
 /* Owner direction: focus uses a solid fill, never outlines or focus rings. */
 :is(a,button,summary,[role="button"],[role="link"]):focus{outline:none!important;box-shadow:none!important}

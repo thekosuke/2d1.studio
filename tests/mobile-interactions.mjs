@@ -92,7 +92,7 @@ for (const path of ['../index.html','../ja/index.html']) {
  const nav=html.match(/<nav class="page-nav"[\s\S]*?<\/nav>/)[0];
  assert.doesNotMatch(nav, /href="#|page-nav-pages/);
  assert.match(nav, /data-contact/);
- assert.deepEqual([...nav.matchAll(/href="([^"]+)"/g)].map(m=>m[1]),['./','about/','objects/']);
+ assert.deepEqual([...nav.matchAll(/href="([^"]+)"/g)].map(m=>m[1]),['./','about/','finds/']);
  assert.doesNotMatch(html, /class="footer-pages"/);
 }
 const navCss=readFileSync(new URL('../css/walla.css',import.meta.url),'utf8');

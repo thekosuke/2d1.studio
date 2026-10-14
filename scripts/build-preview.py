@@ -11,7 +11,7 @@ import shutil
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / 'dist'
 MARKER = OUTPUT / '.2d1-preview-build'
-PAGES = ('index.html', 'about/index.html', 'ja/index.html', 'ja/about/index.html', 'objects/index.html', 'ja/objects/index.html', 'contact/index.html', 'ja/contact/index.html', 'work/index.html', 'ja/work/index.html')
+PAGES = ('objects/index.html', 'ja/objects/index.html', 'index.html', 'about/index.html', 'ja/index.html', 'ja/about/index.html', 'finds/index.html', 'ja/finds/index.html', 'contact/index.html', 'ja/contact/index.html', 'work/index.html', 'ja/work/index.html')
 ASSETS = ('css', 'js', 'img', 'fonts')
 EXTENSIONS = {'.css', '.js', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif',
               '.ico', '.avif', '.woff', '.woff2', '.eot', '.ttf', '.otf', '.txt', '.md'}

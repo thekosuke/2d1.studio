@@ -37,7 +37,7 @@ f.dialog.showModal();f.open();assert.equal(f.infoDialog.open,false,'Info never i
 f.dialog.close();f.flush();f.open();f.infoButton.emit('click');f.open();f.flush();
 assert.equal(f.infoDialog.open,true);
 
-for(const [path,locale] of [['../objects/index.html','en'],['../ja/objects/index.html','ja']]){
+for(const [path,locale] of [['../finds/index.html','en'],['../ja/finds/index.html','ja']]){
   const html=readFileSync(new URL(path,import.meta.url),'utf8');
   assert.equal((html.match(/class="objects-language"/g)||[]).length,1);
   assert.match(html,/<footer class="objects-footer">[\s\S]*<nav class="objects-language"/);
@@ -46,8 +46,8 @@ for(const [path,locale] of [['../objects/index.html','en'],['../ja/objects/index
   const nav=html.match(/<nav class="objects-language"[^>]*>([\s\S]*?)<\/nav>/)[1];
   const links=[...nav.matchAll(/<a ([^>]+)>(EN|JA)<\/a>/g)];assert.equal(links.length,2);
   for(const [,attrs,label] of links){
-    const href=attrs.match(/href="([^"]+)"/)[1],base=`https://preview.test/${locale==='ja'?'ja/':''}objects/`;
-    assert.equal(new URL(href,base).pathname,label==='EN'?'/objects/':'/ja/objects/');
+    const href=attrs.match(/href="([^"]+)"/)[1],base=`https://preview.test/${locale==='ja'?'ja/':''}finds/`;
+    assert.equal(new URL(href,base).pathname,label==='EN'?'/finds/':'/ja/finds/');
     assert.equal(attrs.includes('aria-current="page"'),label.toLowerCase()===locale);
   }
 }

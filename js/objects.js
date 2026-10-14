@@ -850,8 +850,11 @@
     suggestions.hidden=false;suggestionMotion?.cancel();
     if(!reduced.matches)suggestionMotion=suggestions.animate([{opacity:0,transform:'translateY(-24px)'},{opacity:1,transform:'translateY(5px)',offset:.65},{opacity:1,transform:'translateY(0)'}],{duration:480,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
   });
-  searchInput?.closest('.objects-search-wrap').addEventListener('focusout',event=>{if(!event.currentTarget.contains(event.relatedTarget))closeSuggestions();});
-  searchInput?.addEventListener('keydown',event=>{if(event.key==='Escape'){closeSuggestions();searchInput.blur();}});
+  const searchWrap=searchInput?.closest('.objects-search-wrap');
+  // Rebuilding selected tags temporarily removes the focused button. Dismiss by
+  // an outside pointer gesture instead of treating that focus loss as a close.
+  document.addEventListener('pointerdown',event=>{if(searchWrap&&!searchWrap.contains(event.target))closeSuggestions();});
+  searchWrap?.addEventListener('keydown',event=>{if(event.key==='Escape'){closeSuggestions();searchInput.blur();}});
   searchInput?.addEventListener('input',()=>{selectedTag='';searchQuery=normalize(searchInput.value);filter();renderSuggestions();});
   categoryButtons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.categoryFilter;filter();}));
   document.querySelectorAll('[data-reset-filters]').forEach(button=>button.addEventListener('click',()=>{category='all';selectedTag='';selectedFamilies.clear();selectedCategories.clear();selectedColors.clear();searchQuery='';if(searchInput)searchInput.value='';filter();renderSuggestions();}));

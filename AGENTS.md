@@ -353,3 +353,10 @@ For each new product, research its most iconic or well-recognized color, size an
 For every medium-to-large update, inspect the actual rendered result at desktop and mobile widths and exercise the affected interactions in the running site before reporting completion. Source review, automated checks, or screenshots alone do not replace interaction testing. Test the relevant opening, closing, navigation, selection, hover, touch, and keyboard behavior as applicable, and confirm the resulting UI state. Include affected English and Japanese routes and shared components. Save visual proof and report any verification that could not be completed.
 
 Simple copy, spacing, and styling-only edits may use lighter verification appropriate to their scope; a full desktop/mobile interaction pass is not required for those changes. This scope guidance supersedes the expectation in section 9 to run every viewport and interaction check for every minor edit.
+
+
+## Finds naming and routes — 14 October 2026
+
+Use `/finds/` and `/ja/finds/` for the collection page. Page title and navigation
+label are Finds. Familiar Characters remains the concept in the copy and info
+button. Older route instructions above are superseded; `/objects/` redirects.

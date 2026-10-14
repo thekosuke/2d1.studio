@@ -752,3 +752,23 @@ The curated objects page is titled Familiar Characters across navigation, page h
 Project details use the Wildling reference’s 20px page insets and 10px image gaps. The Walla headline pairs the client name and project description at the same size, with a 300px desktop / 150px mobile pause before client, role, and year metadata. Each gallery ends with the 2D1 mark and links to Studio and Contact. Native image proportions, modal scrolling, keyboard dismissal, and the existing slide transition remain.
 
 Project-detail footers include About Us, Get in touch, shared social icons, and an inline language toggle on the copyright row. The footer reuses the shared footer-line layout on every viewport; the Role column follows its social-link edge on desktop. Bottom padding matches the 20px side insets, and the modal scrollbar sits at the outer viewport edge.
+
+
+## Finds route — 14 October 2026
+
+The collection page uses `/finds/` and `/ja/finds/`, with the page title and
+navigation label “Finds.” Familiar Characters remains the collection concept
+in the copy and info button. The old `/objects/` routes redirect to Finds.
+
+## About essay — Draft 04, 14 October 2026
+
+About now uses Kosuke’s revised Notion Draft 04, defining 2D1 as his independent
+design practice in the form of a design house. Five titled sections connect his
+background, reasons for starting 2D1, Familiar Characters, reduction with wit,
+and making/curation. The closing invitation links to Contact; the red end square
+and existing article alignment remain. Directly below the opening paragraph,
+the owner-supplied `img/about/design-house.png` shows Studio, Shop, and Finds
+under one roof. Both languages use the same artwork at its original 1138 × 813
+proportions, with localized alt text. It is responsive and works without
+JavaScript. Japanese copy, descriptions, and metadata are generated from
+`locales/ja.json`.

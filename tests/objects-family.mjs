@@ -17,7 +17,7 @@ assert.ok(ja.Family);
 const lookup=JSON.parse(source.match(/^  const objectFamilies = (.*);$/m)[1]);
 assert.deepEqual(lookup,assignments,'generated runtime lookup matches curated data exactly');
 assert.ok(source.includes('family:objectFamilies[card.dataset.object]'));
-for(const route of ['../objects/index.html','../ja/objects/index.html']){
+for(const route of ['../finds/index.html','../ja/finds/index.html']){
   const html=read(route);
   for(const item of catalog){
     const card=html.match(new RegExp(`<article[^>]*data-object="${item.id}"[^>]*>`))?.[0];
@@ -55,7 +55,7 @@ function fixture(language){
     searchInput,categoryButtons:[],status:new Element(),empty:new Element(),reduced:{matches:true},
     visitOrders:new Map([['all',catalog]]),cancelGesture(){},stopMotion(){},reset(){},
     t:text=>language==='ja'?(ja[text]||text):text,
-    document:{activeElement:null,getElementById:()=>suggestions,
+    document:{activeElement:null,addEventListener(){},getElementById:()=>suggestions,
       createElement:tag=>new Element(tag),createTextNode:text=>{const node=new Element('#text');node.textContent=text;return node;},
       querySelector:()=>listEmpty,querySelectorAll:()=>[resetButton]}};
   vm.createContext(context);
@@ -104,7 +104,7 @@ for(const language of ['en','ja']){
   }
   f.resetButton.emit('click');f.button('Family',families[0]).emit('click');f.button('Family',families[0]).emit('click');
   f.expectActive(catalog);assert.equal(f.button('Family',families[0]).attrs['aria-pressed'],'false');
-  f.searchInput.emit('keydown',{key:'Escape'});assert.equal(f.suggestions.hidden,true);
+  f.searchInput.closest().emit('keydown',{key:'Escape'});assert.equal(f.suggestions.hidden,true);
   f.searchInput.emit('focus');assert.equal(f.suggestions.hidden,false);assert.equal(f.suggestions.inert,false);
 }
 console.log(`PASS Family controller: ${catalog.length} EN/JA catalog cards, five localized suggestions, independent multi-select OR, Category/Color/text intersection, toggling, focus, empty/reset state and Escape/reopen. Rendered-browser QA is separate.`);

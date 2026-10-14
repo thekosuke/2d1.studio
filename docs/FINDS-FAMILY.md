@@ -21,6 +21,10 @@ network request. Both static HTML catalogs remain unchanged.
 Multiple selected values within one facet match any of those values (OR).
 Family, Category, Color, and typed search words combine to narrow results (AND).
 Selected buttons toggle off; Clear filters resets every facet and the query.
+The panel stays open while selecting filters or moving keyboard focus. An outside
+pointer click or Escape closes it. Selected labels have a right-aligned pixel X;
+selected filters use an Icon Red outline with no fill, and color swatches retain
+their normal dark-brown border.
 Family names are searchable in English and the current interface language.
 The canvas, zoom, product navigation and no-JavaScript collection are preserved.
 
@@ -37,6 +41,7 @@ assertion, an Objects reduced-motion mock missing `addEventListener`, and a
 reading-ink integration-position assertion fail identically on the unchanged
 base commit. These unrelated tests were not rewritten for this feature.
 
-Rendered desktop/mobile interaction testing remains unverified because the
-available browser cannot reach the development server. This is controller and
-source coverage, not a visual QA pass.
+Rendered interaction verification completed on 14 October: English desktop and
+Japanese mobile (390 × 844), including multiple Family selections, selected color
+borders, toggling off, Escape/reopening, and outside dismissal without opening a
+product modal.

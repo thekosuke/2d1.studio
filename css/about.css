@@ -21,7 +21,7 @@
 /* Match Home’s native Japanese reading sizes without inheriting its old
    About-specific display overrides from the shared stylesheet. */
 html[lang="ja"] .about-page{--reading:24px}
-html[lang="ja"] .essay-title{font-size:var(--section-title);line-height:1.3;font-weight:700}
+html[lang="ja"] .essay-title{font-size:40px;line-height:1.3;font-weight:700}
 html[lang="ja"] .essay-lede,html[lang="ja"] .essay-dek,html[lang="ja"] .essay-rest .essay-pull p{font-size:var(--reading);line-height:1.65}
 html[lang="ja"] .essay-rest h2{line-height:1.5}
 html[lang="ja"] .essay-rest p{line-height:1.85}
@@ -30,8 +30,8 @@ html[lang="ja"] .essay-rest p{line-height:1.85}
 /* Article reading rhythm: one column, natural wrapping, no folded content. */
 .about-page:not(.contact-page) .essay-page{width:min(680px,calc(100% - 48px));max-width:680px;margin-inline:auto;padding:160px 0 96px}
 .about-page .essay-head{gap:24px}
-.about-page .essay-title{font:700 clamp(36px,4.5vw,56px)/1.12 var(--font);letter-spacing:-.02em;text-wrap:balance}
-.about-page .essay-dek{font:400 22px/1.5 var(--font);color:var(--sub-gray);letter-spacing:0}
+.about-page .essay-title{font:700 40px/1.12 var(--font);letter-spacing:-.02em;text-wrap:balance}
+.about-page .essay-dek{font:400 20px/1.5 var(--font);color:var(--sub-gray);letter-spacing:0}
 .about-page .essay-body{margin-top:64px}
 .about-page :is(.essay-lede,.essay-rest p){font:400 20px/1.7 var(--font);letter-spacing:0;text-wrap:pretty}
 .about-page .essay-rest{margin-top:0;mask:none;-webkit-mask:none;max-height:none;overflow:visible}
@@ -69,3 +69,11 @@ html[lang="ja"] .about-page .essay-dek{font-size:20px;line-height:1.7}
 .about-page{--inner-page-inset:24px}
 @media(min-width:1100px){.about-page{--inner-page-inset:calc(100% - min(var(--column),calc(100% - min(27.7778vw,400px) - 128px)) - 128px)}}
 .about-page:not(.contact-page) .essay-page,.about-page.contact-page .contact-page-main{width:calc(100% - 2 * var(--inner-page-inset));max-width:none;margin-inline:var(--inner-page-inset)}
+
+/* Owner-supplied design house artwork, shown at its original proportions. */
+.design-house{margin:48px 0 0;background:#fff}
+.design-house img{display:block;width:100%;height:auto}
+.essay-rest strong{font-weight:700}
+.about-page .essay-body a{text-decoration:underline;text-underline-offset:.18em}
+.about-page .essay-body a:hover,.about-page .essay-body a:focus-visible{color:var(--red)}
+@media(max-width:767px){.design-house{margin-top:32px}}

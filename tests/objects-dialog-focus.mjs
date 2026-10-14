@@ -16,7 +16,7 @@ assert.match(shared,/--sand:#d6cec5/);assert.match(shared,/--beige:#faf0e6/);
 assert.match(css,/#objects-canvas:focus-visible \.objects-tile.is-keyboard-target figcaption\{opacity:1;visibility:visible;transform:none;color:var\(--red\)/);
 assert.match(source,/show\(catalog.find\(item=>item.id===tile.dataset.object\),canvas\)/);
 assert.match(source,/if\(active.length\)show\(active\[indexAt\(.*\)\],canvas\)/);
-for(const route of ['../objects/index.html','../ja/objects/index.html']){
+for(const route of ['../finds/index.html','../ja/finds/index.html']){
   const html=readFileSync(new URL(route,import.meta.url),'utf8');
   assert.match(html,/<div class="objects-canvas" id="objects-canvas" tabindex="0"/);
 }
