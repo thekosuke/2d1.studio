@@ -1,0 +1,38 @@
+/* Today Bag / annotated construction study. Static, scalable, and script-free. */
+.bag-blueprint{margin:0;width:100%;color:var(--ink);border-block:1px solid currentColor}
+.bag-blueprint-header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.bag-blueprint-header h3{font-size:28px;font-weight:500;line-height:1.2}
+.bag-blueprint-header>span,.bag-blueprint-view h4{font-size:12px;line-height:1.4;font-weight:400;text-transform:uppercase;letter-spacing:.06em;color:var(--sub-gray)}
+.bag-blueprint-views{display:grid;grid-template-columns:1fr 1fr;background-image:linear-gradient(to right,rgba(50,5,5,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(50,5,5,.035) 1px,transparent 1px);background-size:24px 24px}
+.bag-blueprint-view{min-width:0;padding-top:20px}
+.bag-blueprint-view+.bag-blueprint-view{border-left:1px solid var(--line)}
+.bag-blueprint-view h4{margin:0;padding-inline:20px}
+.bag-draft-art{display:block;width:100%;height:auto;overflow:visible}
+.bag-draft-line{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:butt}
+.bag-draft-seam{stroke:var(--sub-gray);stroke-width:1;stroke-dasharray:3 3}
+.bag-draft-accent{fill:var(--red);stroke:var(--red)}
+.bag-draft-logo{stroke-width:16}
+.bag-draft-guide{stroke:var(--sub-gray);stroke-width:.75;stroke-dasharray:9 4 2 4;opacity:.45}
+.bag-draft-leader,.bag-draft-dimension{stroke:var(--sub-gray);stroke-width:1}
+.bag-draft-dimension text{font:400 15px var(--font);text-anchor:middle;fill:var(--sub-gray);stroke:none}
+.bag-draft-badge rect{fill:var(--beige);stroke:var(--red);stroke-width:1}
+.bag-draft-badge text{font:500 13px var(--font);fill:var(--red);text-anchor:middle;dominant-baseline:middle}
+.bag-draft-ghost{opacity:.22}
+.bag-draft-ghost .bag-draft-accent{fill:none;stroke:var(--sub-gray)}
+.bag-draft-contents{stroke:var(--sub-gray);stroke-width:1;opacity:.65}
+.bag-draft-pocket{fill:none;stroke:var(--ink)}
+.bag-blueprint-key{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 16px;padding:24px 0;border-top:1px solid var(--line)}
+.bag-blueprint-key dt,.bag-blueprint-key dd{font-size:13px;line-height:1.5;letter-spacing:0}
+.bag-blueprint-key dt{font-weight:500}.bag-blueprint-key dt span{color:var(--red);font-size:11px;margin-right:6px;font-variant-numeric:tabular-nums}
+.bag-blueprint-key dd{margin:4px 0 0;color:var(--sub-gray)}
+.bag-blueprint figcaption{font-size:12px;line-height:1.5;color:var(--sub-gray);padding:0 0 20px}
+@media(max-width:767px){
+.bag-blueprint-header{padding-block:16px}.bag-blueprint-header h3{font-size:24px}
+.bag-blueprint-header>span,.bag-blueprint-view h4{font-size:11px}
+.bag-blueprint-views{grid-template-columns:1fr}
+.bag-blueprint-view+.bag-blueprint-view{border-left:0;border-top:1px solid var(--line)}
+.bag-blueprint-view h4{padding-inline:8px}
+.bag-blueprint-key{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}
+.bag-draft-line{stroke-width:1.8}.bag-draft-dimension text{font-size:17px}
+.bag-draft-badge text{font-size:15px}
+}

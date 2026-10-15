@@ -50,8 +50,8 @@
   <script src="js/config.js" defer></script>
   <script src="js/drawers.js?v=2" defer></script>
   <script src="js/contact.js?v=12" defer></script>
-  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
-  <script src="js/tote-preview.js?v=12" defer></script>
+  <link rel="stylesheet" href="css/today-bag.css?v=6">
+  <script src="js/today-bag.js?v=6" defer></script>
   <script src="js/mobile-nav.js?v=3" defer></script>
   <script src="js/site.js?v=4" defer></script>
   <script src="js/walla.js?v=20" defer></script>
@@ -100,25 +100,90 @@
     <section id="shop" class="column section-stack" aria-labelledby="shop-label">
       <div class="section-heading"><h2 id="shop-label">Shop</h2><p>House of familiar things.</p></div>
       <div class="section-copy prose"><p data-ink><em class="copy-emphasis">The joy of making</em> is at the heart of what we do. The things we make for ourselves start the same way as our client work: with a clear idea and a detail that makes them their own.</p></div>
-      <div class="tote-preview-stage" id="tote-preview-stage" role="img" aria-label="Black canvas 2D1 tote with a red strap lining and square tag">
-        <img class="tote-preview-poster" src="img/shop/tote-poster.webp?v=3" width="1200" height="1818" alt="Black canvas tote with subtle charcoal pixel eyes on the front, a small 2D1 logo on the back, red strap lining, and a square red tag." loading="lazy" decoding="async">
-      </div>
-      <div class="section-copy prose shop-support-copy"><p data-ink>The tote bag is our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and <em class="copy-emphasis">a flash of red</em> so you know it’s yours.</p></div>
-      <div class="product-details" aria-label="Product details">
-        <h3 class="table-title" id="specifications-title">Specifications</h3>
-        <dl class="product-specs" aria-labelledby="specifications-title">
-          <div><dt>Material</dt><dd>Tightly woven black canvas.</dd></div>
+      <figure class="bag-study" id="today-bag" aria-labelledby="bag-study-title">
+        <div class="bag-study-stage">
+          <div class="bag-study-image">
+            <img class="bag-study-photo" src="img/shop/today-bag-tag-enlarged.webp" width="1024" height="1536" alt="Photorealistic concept of Today Bag: dark canvas, a long shoulder strap, a compact red hand handle, beige logo, and a red tag at the bottom-left seam." loading="lazy" decoding="async">
+            <svg class="bag-study-anatomy" viewBox="0 0 1024 1536" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <defs><pattern id="bag-section-hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V10" stroke="currentColor" stroke-width="1"/></pattern></defs>
+                <!-- Orthographic construction study: primary edges, seam allowances, centerlines, section hatching. -->
+                <g class="bag-draft-outline">
+                  <path d="M220 848C279 530 361 28 500 23C639 18 696 540 808 848M288 848C344 529 395 46 500 45C605 44 644 529 740 848"/>
+                  <path d="M402 848V799Q402 764 439 764H585Q622 764 622 799V848M444 848V808Q444 803 449 803H575Q580 803 580 808V848"/>
+                  <path d="M151 848H875V1441Q875 1480 837 1480H190Q151 1480 151 1441ZM151 902H875"/>
+                  <path d="M86 1266H171V1351H86Z"/>
+                  <path d="M181 902V1438Q181 1454 198 1454H829Q845 1454 845 1438V902"/>
+                  <path d="M495 871H529V883H495Z"/>
+                </g>
+                <g class="bag-draft-seams"><path d="M162 859H864M162 891H864M169 902V1439Q169 1466 198 1466H829Q857 1466 857 1439V902M411 846V800Q411 774 439 774H585Q613 774 613 800V846"/></g>
+                <g class="bag-draft-section"><path d="M151 902H181V1438H151ZM845 902H875V1438H845ZM198 1454H829V1480H198Z"/></g>
+                <g class="bag-draft-interior">
+                  <path d="M587 1178H840V1448H587ZM587 1193H840"/>
+                  <path d="M199 1199H340V1258H199ZM199 1210H340M199 1247H340"/>
+                  <path class="bag-draft-seams" d="M597 1205V1438H830V1205M207 1217V1240M332 1217V1240"/>
+                </g>
+                <!-- Contents are secondary dashed outlines, entirely contained within the compartments. -->
+                <g class="bag-draft-contents"><path d="M238 1030H299V1069L318 1090V1410Q318 1424 305 1424H231Q218 1424 218 1410V1090L238 1069ZM238 1069H299M241 1040H296"/>
+                  <path transform="translate(0 138)" d="M623 1224H720Q731 1224 731 1235V1289Q731 1300 720 1300H623Q612 1300 612 1289V1235Q612 1224 623 1224ZM612 1249H731"/>
+                  <circle cx="783" cy="1337" r="15"/><path d="M777 1352V1419H790V1401H801V1390H790V1352"/>
+                  <path d="M374 986H558V1441H374ZM385 986V1441M549 995V1432"/>
+                </g>
+                <g class="bag-draft-guides"><path d="M512 12V1490M138 875H888M138 1466H888"/></g>
+                <g class="bag-draft-dimensions"><path d="M151 1490V1520M875 1490V1520M151 1505H875M145 1511L157 1499M869 1511L881 1499M885 848H934M885 1480H934M923 848V1480M917 854L929 842M917 1486L929 1474"/><text x="513" y="1530">400 mm</text><text x="950" y="1164" transform="rotate(-90 950 1164)">360 mm</text></g>
+              </svg>
+              <details class="bag-hotspot" style="--x:66%;--y:27%" data-side="left">
+                <summary aria-label="Shoulder strap" aria-describedby="bag-tip-strap"><span class="bag-hotspot-dot" aria-hidden="true"></span></summary>
+                <div class="bag-hotspot-tip" id="bag-tip-strap"><strong>Shoulder strap</strong><p>Extended drop for hip-level carry</p></div>
+              </details>
+              <details class="bag-hotspot" style="--x:50%;--y:51%" data-side="center">
+                <summary aria-label="Hand handle" aria-describedby="bag-tip-handle"><span class="bag-hotspot-dot" aria-hidden="true"></span></summary>
+                <div class="bag-hotspot-tip" id="bag-tip-handle"><strong>Hand handle</strong><p>Compact, one-hand clearance</p></div>
+              </details>
+              <details class="bag-hotspot" style="--x:50%;--y:57%" data-side="left">
+                <summary aria-label="Magnetic closure" aria-describedby="bag-tip-closure"><span class="bag-hotspot-dot" aria-hidden="true"></span></summary>
+                <div class="bag-hotspot-tip" id="bag-tip-closure"><strong>Magnetic closure</strong><p>Concealed in the top hem</p></div>
+              </details>
+              <details class="bag-hotspot" style="--x:50%;--y:64%" data-side="right">
+                <summary aria-label="Embroidered logo" aria-describedby="bag-tip-logo"><span class="bag-hotspot-dot" aria-hidden="true"></span></summary>
+                <div class="bag-hotspot-tip" id="bag-tip-logo"><strong>Embroidered logo</strong><p>Beige embroidery adds a tactile, premium finish, balancing the red accents against the dark canvas.</p></div>
+              </details>
+              <details class="bag-hotspot" style="--x:40%;--y:73%" data-side="right">
+                <summary aria-label="Canvas" aria-describedby="bag-tip-canvas"><span class="bag-hotspot-dot" aria-hidden="true"></span></summary>
+                <div class="bag-hotspot-tip" id="bag-tip-canvas"><strong>Canvas</strong><p>Armada No. 8 canvas: a substantial cotton weave with a firm, structured feel. Once used for sails, canvas is a practical material chosen here for everyday use, gaining character as it becomes familiar.</p></div>
+              </details>
+              <details class="bag-hotspot" style="--x:12%;--y:85%" data-side="right">
+                <summary aria-label="Woven tag" aria-describedby="bag-tip-tag"><span class="bag-hotspot-dot" aria-hidden="true"></span></summary>
+                <div class="bag-hotspot-tip" id="bag-tip-tag"><strong>Woven tag</strong><p>A small symbol of a pixel and a house. The square woven tag carries the visual language of 2D1’s identity into an everyday object.</p></div>
+              </details>
+              <details class="bag-hotspot" style="--x:27%;--y:79%" data-interior data-side="right">
+                <summary aria-label="Bottle band" aria-describedby="bag-tip-band"><span class="bag-hotspot-dot" aria-hidden="true"></span></summary>
+                <div class="bag-hotspot-tip" id="bag-tip-band"><strong>Bottle band</strong><p>Keeps a bottle, a folding umbrella, or other tall, slim essentials upright.</p></div>
+              </details>
+              <details class="bag-hotspot" style="--x:71%;--y:85%" data-interior data-side="left">
+                <summary aria-label="Inner pocket" aria-describedby="bag-tip-pocket"><span class="bag-hotspot-dot" aria-hidden="true"></span></summary>
+                <div class="bag-hotspot-tip" id="bag-tip-pocket"><strong>Inner pocket</strong><p>A pocket at the base for small items like your keys and AirPods.</p></div>
+              </details>
+          </div>
+        </div>
+        <p class="sr-only">Construction: a long shoulder strap, a compact one-hand handle, a concealed magnetic closure, a woven tag at the lower-left seam, a short bottle band, and a square pocket positioned at the base of the bag.</p>
+        <div class="bag-study-notes">
+          <h3 id="bag-study-title">Today Bag</h3>
+          <dl class="bag-study-specs">
+          <div><dt>Material</dt><dd>Armada No. 8 cotton canvas.</dd></div>
           <div><dt>Origin</dt><dd>Made in Japan</dd></div>
           <div><dt>Dimensions</dt><dd>Approx. W 40 × H 36 × D 10 cm, excluding the strap.</dd></div>
-          <div><dt>Strap</dt><dd>One long strap, black outside and red inside. For shoulder carry.</dd></div>
-          <div><dt>Red tag</dt><dd>A square woven label, folded into the side seam.</dd></div>
-          <div><dt>Pockets</dt><dd>A bottle-holding band and a square pocket for small items.</dd></div>
+          <div><dt>Strap</dt><dd>A long dark shoulder strap and a compact red hand handle.</dd></div>
+          <div><dt>Red tag</dt><dd>A square red woven label at the lower-left side seam.</dd></div>
+          <div><dt>Pockets</dt><dd>A bottle-holding band and a square pocket at the base for small items.</dd></div>
           <div><dt>Opening</dt><dd>Magnetic closure sewn into the top hem.</dd></div>
-          <div><dt>Details</dt><dd>Subtle charcoal pixel eyes on the front; a small embroidered 2D1 logo centered near the top of the back.</dd></div>
+          <div><dt>Details</dt><dd>Subtle charcoal pixel eyes on the front; a small beige embroidered 2D1 logo centered near the top of the back.</dd></div>
         </dl>
-        <p class="product-note">Prototype specifications. Dimensions and details may change before production.</p>
-      </div>
-      <div class="section-copy prose shop-support-copy"><p data-ink>The bag is <em class="copy-emphasis">still in development</em>. If you’d like it to become part of your day, sign up for updates.</p></div>
+          <p class="bag-study-spec-note">Prototype specifications. Dimensions and details may change before production.</p>
+        </div>
+        <figcaption>AI-generated concept image. Approx. 40 × 36 × 10 cm. Design and dimensions subject to refinement.</figcaption>
+      </figure>
+      <div class="section-copy prose shop-support-copy"><p data-ink>Today Bag is our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and <em class="copy-emphasis">a flash of red</em> so you know it’s yours.</p>
+        <p data-ink>Today Bag is <em class="copy-emphasis">still in development</em>. If you’d like it to become part of your day, sign up for updates.</p></div>
       <div class="shop-actions"><h2 class="signup-heading" id="signup-heading">Stay updated</h2><form class="connect-form" aria-describedby="connect-status"><label for="connect-email" class="sr-only">Your email address</label><div class="connect-row"><input type="email" id="connect-email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" aria-describedby="connect-status" required disabled><button class="intro-cta" type="submit" disabled>Notify me when it’s out <span class="pixel-arrow" aria-hidden="true">→</span></button></div><p id="connect-status" role="status" hidden></p></form></div>
     </section>
 

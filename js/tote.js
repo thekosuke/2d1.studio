@@ -1,6 +1,6 @@
 // The 2D1 tote, rendered live. Loaded only when the Shop comes near.
 // Units are centimetres. Based on the prototype drawing: black canvas body,
-// one long strap (black outside, red inside) sewn to the side panels, a red
+// one long strap (dark on both sides) sewn to the side panels, a red
 // square tag in the left seam, a back logo and tonal pixel eyes on the front,
 // and every pocket on the inside. The front is kept visually square.
 import * as THREE from 'three';
@@ -419,7 +419,7 @@ function strapTextures() {
     lines.forEach((y) => { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(S, y); ctx.stroke(); });
     return c;
   };
-  return { black: face('#26262a', '#48484e'), red: face('#ff2b00', 'rgba(0,0,0,0.2)'), normal: heightToNormal(hc, S, S, 2.4) };
+  return { black: face('#191416', '#48484e'), red: face('#ff2b00', 'rgba(0,0,0,0.2)'), normal: heightToNormal(hc, S, S, 2.4) };
 }
 
 // The logo's SVG paths as shapes, in cm with y up and the origin top-left.
@@ -510,7 +510,7 @@ function shadowBlob() {
   return c;
 }
 
-/* Strap: a flat ribbon, black outside, red inside --------------------------------- */
+/* Strap: original flat ribbon, dark on both sides --------------------------------- */
 const STRAP_W = 3.6, STRAP_T = 0.3, STRAP_N = 140;
 const strapX = W / 2 + 0.28;
 function strapCurve(swing) {
@@ -583,6 +583,24 @@ function shapeStrap(geo, swing) {
   geo.computeBoundingSphere();
 }
 
+// Short red handle retained as the only silhouette addition to the old model.
+function buildHandHandle() {
+  const curve=new THREE.CatmullRomCurve3([
+    [-5.2,H-2.2,-.4],[-5.2,H+2,-.7],[-3.9,H+5.2,-1],
+    [0,H+5.7,-1.2],[3.9,H+5.2,-1],[5.2,H+2,-.7],[5.2,H-2.2,-.4]
+  ].map(p=>new THREE.Vector3(...p)),false,'centripetal');
+  const g=buildStrap(), pos=g.attributes.position, nrm=g.attributes.normal;
+  const p=new THREE.Vector3(),t=new THREE.Vector3(),w=new THREE.Vector3(),n=new THREE.Vector3();
+  for(let i=0;i<STRAP_N;i++) {
+    const u=i/(STRAP_N-1);curve.getPointAt(u,p);curve.getTangentAt(u,t);
+    w.set(-t.y*.48,t.x*.48,Math.sqrt(1-.48*.48));w.addScaledVector(t,-w.dot(t)).normalize();n.crossVectors(t,w).normalize();
+    const normals=[n,n,n.clone().negate(),n.clone().negate(),w.clone().negate(),w.clone().negate(),w,w];
+    const corners=[[-3,.15],[3,.15],[3,-.15],[-3,-.15],[-3,-.15],[-3,.15],[3,.15],[3,-.15]];
+    corners.forEach(([a,b],j)=>{const k=i*8+j;pos.setXYZ(k,p.x+w.x*a+n.x*b,p.y+w.y*a+n.y*b,p.z+w.z*a+n.z*b);nrm.setXYZ(k,normals[j].x,normals[j].y,normals[j].z);});
+  }
+  g.computeBoundingSphere(); return g;
+}
+
 /* X-ray: see-through canvas, the pockets, and what's in them ----------------------- */
 // Edges glow, faces stay clear (a fresnel term), written as premultiplied colour
 // so layers stack like light on the dark stage.
@@ -615,6 +633,21 @@ function keyShape() {
   return new THREE.ExtrudeGeometry(sh, { depth: 0.16, bevelEnabled: true, bevelThickness: 0.04, bevelSize: 0.04, bevelSegments: 1, curveSegments: 16 });
 }
 
+// The original square pocket is unchanged. Fit the complete small items,
+// including the case lid and rotated key teeth, behind its front panel.
+const SMALL_POCKET = { x: 6, y: .6, z: -3.2, w: 16, h: 16, d: 2.2 };
+function fitSmallPocket(object) {
+  const clearance=.1, pocket=SMALL_POCKET;
+  object.updateMatrixWorld(true);
+  const size=new THREE.Box3().setFromObject(object).getSize(new THREE.Vector3());
+  object.scale.multiplyScalar(Math.min(1,(pocket.w-2*clearance)/size.x,(pocket.h-2*clearance)/size.y,(pocket.d-2*clearance)/size.z));
+  object.updateMatrixWorld(true);
+  const bounds=new THREE.Box3().setFromObject(object);
+  const lo=[pocket.x-pocket.w/2+clearance,pocket.y+clearance,pocket.z-pocket.d/2+clearance];
+  const hi=[pocket.x+pocket.w/2-clearance,pocket.y+pocket.h-clearance,pocket.z+pocket.d/2-clearance];
+  ['x','y','z'].forEach((axis,i)=>{object.position[axis]+=Math.max(lo[i]-bounds.min[axis],Math.min(0,hi[i]-bounds.max[axis]));});
+}
+
 function buildXray(geometries) {
   const group = new THREE.Group();
   const mats = [];
@@ -630,6 +663,7 @@ function buildXray(geometries) {
 
   geometries.shell.forEach((g) => mesh(g, shell));
   mesh(geometries.strap, shell);
+  mesh(geometries.handle,hot);
   const tag = mesh(geometries.tag.geometry, hot);
   tag.userData.follow = geometries.tag; // placed from the solid tag each frame
 
@@ -690,7 +724,8 @@ function buildXray(geometries) {
   const led = new THREE.Mesh(new THREE.SphereGeometry(0.12, 12, 8), metal); led.position.set(0, -0.1, 1.12); led.renderOrder = 2; pods.add(led);
   pods.position.set(3.2, flat.y0 + 2.9, zBack + 1.3);
   pods.rotation.z = -0.1;
-  pods.scale.setScalar(1.2); // a touch larger than life, so it reads at phone size
+  pods.scale.setScalar(.85);
+  fitSmallPocket(pods);
   group.add(pods);
 
   // Keys on a ring, resting at the bottom of the pocket.
@@ -705,7 +740,8 @@ function buildXray(geometries) {
   });
   keys.position.set(9.6, flat.y0 + 7.4, zBack + 1.1);
   keys.rotation.z = 0.1;
-  keys.scale.setScalar(1.2);
+  keys.scale.setScalar(.85);
+  fitSmallPocket(keys);
   group.add(keys);
 
   dashes.forEach((d) => group.add(d));
@@ -778,9 +814,9 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
   const redStrap = wovenCanvas(new THREE.MeshPhysicalMaterial({ ...red, map: strapTile(strapTex.red, true), normalMap: strapNormal }), weave, [0.5, STRAP_W / 2]);
   const label = labelTexture(); label.anisotropy = aniso;
   const redTag = wovenCanvas(new THREE.MeshPhysicalMaterial({ color: RED, roughness: 0.66, sheen: 0.8, sheenRoughness: 0.4, sheenColor: 0xffb08a, normalMap: flat }), label, [TAG, TAG], { strength: 1.7, cavity: 0.5 });
-  // Embroidery thread: dark grey, a little glossier than the canvas, with the
+  // Embroidery thread: beige, a little glossier than the canvas, with the
   // stretched highlight that runs along stitches.
-  const threadMat = new THREE.MeshPhysicalMaterial({ color: 0x5c5c62, roughness: 0.46, normalMap: stitches, normalScale: new THREE.Vector2(1.3, 1.3), sheen: 0.7, sheenRoughness: 0.35, sheenColor: 0x8e8e96, anisotropy: 0.75 });
+  const threadMat = new THREE.MeshPhysicalMaterial({ color: 0xfaf0e6, roughness: 0.46, normalMap: stitches, normalScale: new THREE.Vector2(1.3, 1.3), sheen: 0.7, sheenRoughness: 0.35, sheenColor: 0xfaf0e6, anisotropy: 0.75 });
 
   const body = buildBody();
   const bag = new THREE.Group();
@@ -846,7 +882,9 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
 
   const strapGeo = buildStrap();
   shapeStrap(strapGeo, 0);
-  add(strapGeo, [webbing, redStrap]);
+  add(strapGeo, [webbing, webbing]);
+  const handleGeo=buildHandHandle();
+  add(handleGeo,[redStrap,redStrap]);
   // The red tag, sewn into the front-left seam and sticking out.
   const tagGroup = new THREE.Group();
   const tag = new THREE.Mesh(new RoundedBoxGeometry(TAG, TAG, 0.3, 4, 0.14), redTag); // folded at the outer edge
@@ -860,7 +898,7 @@ export function mountTote({ stage, scroller = stage, reducedMotion, spots = [], 
   const solidMats = [canvasMat, bottomMat, innerMat, floorMat, hemMat, webbing, redStrap, redTag, threadMat, eyeMat];
   solidMats.forEach((m) => { m.transparent = true; });
 
-  const xray = buildXray({ shell: [body.outer, body.bottom], strap: strapGeo, tag });
+  const xray = buildXray({ shell: [body.outer, body.bottom], strap: strapGeo, handle: handleGeo, tag });
   bag.add(xray.group);
   // Dark X-ray lines stay readable on the transparent, white-ground preview.
   if (contained) {

@@ -1,0 +1,25 @@
+/* A graphic product portrait: native disclosure also works without JavaScript. */
+.today-bag{width:100%;overflow:clip;margin-block:calc(var(--section-content-gap) / -2)}
+.today-bag-toggle{position:relative;display:block;width:100%;padding:0;border:0;list-style:none;cursor:pointer;touch-action:pan-y;color:var(--sub-gray);-webkit-tap-highlight-color:transparent}
+.today-bag-toggle::-webkit-details-marker{display:none}
+.today-bag-toggle::marker{content:""}
+.today-bag-art{display:block;width:100%;height:auto;max-height:740px;overflow:visible}
+.today-bag-exterior,.today-bag-inside{transition:opacity 420ms cubic-bezier(.2,.8,.2,1)}
+.today-bag-inside{opacity:0}
+.today-bag:is([open],.is-peeking) .today-bag-exterior{opacity:0}
+.today-bag:is([open],.is-peeking) .today-bag-inside{opacity:1}
+.today-bag-caption{display:flex;align-items:center;justify-content:center;gap:10px;min-height:44px;font-size:15px;line-height:1.4;font-weight:400;margin-top:-20px}
+.today-bag-caption-open{display:none}
+.today-bag:is([open],.is-peeking) .today-bag-caption-closed{display:none}
+.today-bag:is([open],.is-peeking) .today-bag-caption-open{display:inline}
+.today-bag-symbol{position:relative;width:11px;height:11px;flex:none}
+.today-bag-symbol::before,.today-bag-symbol::after{content:"";position:absolute;inset:5px 0 auto;height:1px;background:currentColor}
+.today-bag-symbol::after{transform:rotate(90deg);transition:transform 420ms cubic-bezier(.2,.8,.2,1)}
+.today-bag:is([open],.is-peeking) .today-bag-symbol::after{transform:rotate(0)}
+.today-bag-toggle:focus-visible{outline:0;color:var(--red)}
+.today-bag-toggle:focus-visible .today-bag-caption{background:var(--white)}
+@media(hover:hover){.today-bag-toggle:hover{color:var(--red)}}
+@media(max-width:767px){.today-bag-art{width:120%;max-width:none;margin-inline:-10%}.today-bag-caption{margin-top:-10px}}
+@media(prefers-reduced-motion:reduce){.today-bag-exterior,.today-bag-inside,.today-bag-symbol::after{transition:none}}
+/* Focus belongs to the caption, not a solid fill behind the product. */
+.today-bag .today-bag-toggle:focus-visible{background:transparent!important;color:var(--red)!important}

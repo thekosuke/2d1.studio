@@ -772,3 +772,99 @@ under one roof. Both languages use the same artwork at its original 1138 × 813
 proportions, with localized alt text. It is responsive and works without
 JavaScript. Japanese copy, descriptions, and metadata are generated from
 `locales/ja.json`.
+
+
+## Today Bag — restored original render, 15 October 2026
+
+At the owner's request the live Shop model is restored from
+`_archive/pre-today-bag-2026-10-15/tote.js`: original body geometry, canvas
+textures, lighting, shoulder-strap geometry and dynamics, front pixel eyes,
+back embroidery, tag, bottle band and square pocket. The rejected redesign
+and fabric-flex experiment are preserved in `_archive/today-bag-refinement-2026-10-15/`.
+
+The limited updates are a dark #191416 shoulder strap on both sides, beige
+#FAF0E6 embroidery, and the short #FF2B00 handle. The Today Bag name stays.
+The earbuds and keys are scaled and positioned inside the original small
+pocket with a full 3D bounds check. The pocket and bottle geometry are unchanged.
+Mouse position still rotates the bag ±135°, touch uses the existing bounded
+drag, and hover/tap/Enter/Space/Escape retain the X-ray controls. Reduced motion
+keeps the original behavior. Both script URLs are versioned to refresh cached previews.
+The lossless 1200 × 1818 poster is exported from this restored model.
+
+
+## Today Bag — graphic presentation trial, 15 October 2026
+
+The active EN/JA Home Shop now uses an inline SVG product portrait instead of
+the procedural renderer. Dark #191416 canvas, a tonal shoulder strap, red
+#FF2B00 short handle/tag and beige #FAF0E6 logo remain. Subtle illustrated
+folds suggest volume; this is a concept illustration, not product photography.
+Hover previews the inside, click/tap pins or closes it, Enter/Space toggles,
+and Escape closes. The exterior and interior crossfade in place over 420ms
+with the same reverse transition; reduced motion changes instantly. A notebook,
+bottle in the short band, and earbuds/keys fully inside the square pocket
+illustrate the interior without annotations or exploded parts.
+
+`css/today-bag.css` and `js/today-bag.js` own this presentation. Native
+`details`/`summary` keeps tap and keyboard disclosure functional without JS.
+The SVG remains sharp at any size and needs no WebGL, CDN, images or animation
+loop. Home no longer loads the Three.js import map or tote preview module.
+The restored interactive render, poster and Home source are preserved in
+`_archive/pre-graphic-tote-2026-10-15/`; the existing tote modules remain dormant.
+
+
+## Today Bag — anatomical drawing, 15 October 2026
+
+Supersedes the graphic portrait trial above. Home now shows a static, annotated
+SVG working drawing: exterior/logo side and interior/pocket layout on a faint
+drafting grid. The two views sit side by side on desktop and stack below 768px.
+Dimension lines show the provisional 40 × 36 cm body; the key includes the
+10 cm depth and seven construction details. A caption makes clear that the
+design is in development and the drawing is not to scale. Brown linework,
+dashed stitching and red handle/tag accents retain the site palette. Interior
+contents are secondary linework, with small items contained in the pocket.
+
+This presentation has no hover state, disclosure, rotation or motion; all
+details remain visible without JavaScript. `css/today-bag.css` styles the
+inline SVG and HTML key. The previous graphic illustration, CSS and interaction
+script are preserved in `_archive/graphic-tote-2026-10-15/`; neither the graphic
+interaction script nor the Three.js renderer loads on Home. EN and JA are
+regenerated together.
+
+
+## Today Bag — photographic exterior and anatomical inspection, 15 October 2026
+
+Home defaults to an AI-generated photographic concept, with real-looking canvas
+weave, longer shoulder drop, a compact red hand handle and a lower-left red tag.
+Hover crossfades into a matching anatomical SVG; leaving reverses it. Click/tap
+pins the view; clicking again, Space/Enter or Escape closes it. Native details
+keeps click/keyboard access working without JavaScript. Reduced motion removes
+transitions. Nothing rotates and inspecting does not move the page.
+
+The square inner pocket now sits at the base of the bag. The earbuds and key
+remain wholly within it. The bottle retains its short band. Both the diagram and
+specifications reflect the new placements. Dimensions remain provisional, and
+hip-level carry is a design intent rather than a verified physical fit.
+
+The presentation uses restrained brown rules, small technical labels and a
+material/dimension summary, replaced in place by six construction notes during
+inspection. A visible concept caption distinguishes the generated image from
+a manufactured sample. The PNG master and lossless 1024 × 1536 WebP live in
+`img/shop/`; prompts and generation provenance are in `docs/TODAY-BAG-IMAGE.md`.
+`css/today-bag.css`, `js/today-bag.js`, and EN/JA Home contain the presentation.
+The prior static blueprint is in `_archive/blueprint-tote-2026-10-15/`.
+
+### Today Bag photo polish — 15 October 2026
+Home and Japanese Home now use `img/shop/today-bag-photo-polished.webp`, a native-resolution lossless export with clean transparency on the page ground. The anatomical illustration follows the revised long strap and enlarged tag; base pocket contents and the hover/native-disclosure interaction remain intact. The source, prompt and transparency verification are documented in `docs/TODAY-BAG-IMAGE.md`.
+
+### Today Bag feature inspection — 15 October 2026
+The exterior photo is unchanged. Six red dots identify the shoulder strap, hand handle, magnetic closure, woven tag, bottle band and inner pocket. Hover previews a note; click/tap pins it, a second activation or outside click closes it, and Escape dismisses it. Keyboard focus previews each feature and Enter/Space toggles it. Only the bottle-band and inner-pocket points reveal the monochrome architectural drawing, with seam allowances, section hatching, centerlines and millimeter dimension lines. Leaving an unpinned point restores the exterior; whole-image hover does nothing. Native details keeps the individual notes and interior reveal available without JavaScript. Reduced motion disables transitions.
+
+The old bag header and Exterior/Anatomy control are removed. The eight existing specification entries and their provisional note are now permanently displayed in `.bag-study-notes`, led by Today Bag. The separate specification table is removed, and the screen-reader construction description remains. English and Japanese share the same behavior. Previous figure/CSS/JS are archived in `_archive/pre-hotspot-tote-2026-10-15/`.
+
+### Today Bag material notes and disclosure — 15 October 2026
+Eight inspection dots now include the embroidered logo and canvas material. On mouse devices the dots appear while the bag study is hovered; keyboard focus also reveals them, and touch devices keep them visible. Notes occupy a separate lane to the right on wide layouts and below the photograph on narrow layouts, without covering the bag or moving the permanent specifications. The narrow lane sizes to the longest translated note. Hover previews, pinned click/tap notes, second-activation dismissal, outside dismissal and Escape remain supported. The concept caption explicitly identifies the image as AI-generated. Earbuds now rest at the inner pocket’s bottom seam. English and Japanese layouts and note interactions were checked at desktop and mobile widths.
+
+### Today Bag inspection refinement — 15 October 2026
+The exterior tag is enlarged, with the updated PNG master and lossless WebP saved as `img/shop/today-bag-tag-enlarged.*`. Inspection points are beige outline circles; when a note opens, other points fade away until dismissal. The magnetic-closure point is centered on the opening. Notes use Icon Red text with a single left rule. Material copy identifies Armada No. 8 cotton canvas; pocket, band and tag notes explain their use and visual meaning. Specifications are aligned label/value rows separated by hairlines. The final two Shop paragraphs share one prose block and the normal paragraph gap.
+
+Material reference: Senda’s [Armada No. 8 product listing](https://www.textile-senda.com/products-info/cotton-414/) and [canvas guide](https://www.textile-senda.com/news/collection_canvas/). The guide supports the substantial weave/structure and historical sailcloth context; no unverified finish, mill or certification is claimed.

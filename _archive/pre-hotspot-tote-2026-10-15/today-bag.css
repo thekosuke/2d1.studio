@@ -1,0 +1,50 @@
+/* Photographic concept / technical construction overlay. */
+.bag-study{margin:0;width:100%;color:var(--ink);border-block:1px solid currentColor}
+.bag-study-header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.bag-study-header h3{font-size:28px;font-weight:500;line-height:1.2}
+.bag-study-header>span{font-size:12px;line-height:1.4;font-weight:400;text-transform:uppercase;letter-spacing:.06em;color:var(--sub-gray)}
+.bag-study-toggle{display:block;list-style:none;cursor:pointer;touch-action:pan-y;outline:0!important}
+.bag-study-toggle::-webkit-details-marker{display:none}.bag-study-toggle::marker{content:""}
+.bag-study-stage{position:relative;display:block;height:760px;max-height:85svh;margin-block:24px;isolation:isolate}
+.bag-study-photo,.bag-study-anatomy{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;transition:opacity 440ms cubic-bezier(.2,.8,.2,1);user-select:none;pointer-events:none}
+.bag-study-anatomy{opacity:0}
+.bag-study-disclosure:is([open],.is-peeking) .bag-study-photo{opacity:0}
+.bag-study-disclosure:is([open],.is-peeking) .bag-study-anatomy{opacity:1}
+.bag-study-lines{fill:none;stroke:var(--ink);stroke-width:3;stroke-linejoin:round}
+.bag-study-ghost{opacity:.3}.bag-study-red{fill:var(--red);stroke:var(--red)}
+.bag-study-seam{stroke:var(--sub-gray);stroke-width:1.6;stroke-dasharray:5 5}
+.bag-study-guide{stroke:var(--sub-gray);stroke-width:1;stroke-dasharray:12 5 2 5;opacity:.3}
+.bag-study-leaders,.bag-study-dimensions{stroke:var(--sub-gray);stroke-width:1.8}
+.bag-study-dimensions text{font:400 25px var(--font);fill:var(--sub-gray);stroke:none;text-anchor:middle}
+.bag-study-marker rect{fill:var(--beige);stroke:var(--red);stroke-width:1.5}
+.bag-study-marker text{fill:var(--red);font:500 22px var(--font);text-anchor:middle;dominant-baseline:middle}
+.bag-study-contents{stroke:var(--sub-gray);stroke-width:2;opacity:.7}
+.bag-study-control{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;border-block:1px solid var(--line);font-size:13px;line-height:1.4}
+.bag-study-action{display:flex;align-items:center;gap:12px;color:var(--sub-gray)}
+.bag-study-action i{width:11px;height:11px;position:relative;flex:none}
+.bag-study-action i::before,.bag-study-action i::after{content:"";position:absolute;top:5px;left:0;width:11px;height:1px;background:currentColor}
+.bag-study-action i::after{transform:rotate(90deg);transition:transform 440ms cubic-bezier(.2,.8,.2,1)}
+.bag-study-anatomy-label{display:none}
+.bag-study-disclosure:is([open],.is-peeking) .bag-study-exterior-label{display:none}
+.bag-study-disclosure:is([open],.is-peeking) .bag-study-anatomy-label{display:inline}
+.bag-study-disclosure:is([open],.is-peeking) .bag-study-action i::after{transform:rotate(0)}
+.bag-study-key{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 24px;padding-block:24px;visibility:hidden;opacity:0;transition:opacity 440ms cubic-bezier(.2,.8,.2,1),visibility 440ms}
+.bag-study-disclosure:is([open],.is-peeking) .bag-study-key{visibility:visible;opacity:1}
+.bag-study-detail{display:flex;flex-direction:column;gap:4px;font-size:13px;line-height:1.5}
+.bag-study-detail strong{font-weight:500}.bag-study-detail b{font-weight:400;color:var(--red);margin-right:8px;font-variant-numeric:tabular-nums}
+.bag-study-detail>span{color:var(--sub-gray)}
+.bag-study figcaption{font-size:12px;line-height:1.5;color:var(--sub-gray);padding:0 0 20px}
+.bag-study .bag-study-toggle:focus-visible{background:transparent!important;color:inherit!important}
+.bag-study-toggle:focus-visible .bag-study-control{background:var(--white);color:var(--red)}
+.bag-study-toggle:hover .bag-study-action{color:var(--red)}
+@media(max-width:767px){.bag-study-header{padding-block:16px}.bag-study-header h3{font-size:24px}.bag-study-stage{height:auto;aspect-ratio:2/3;max-height:none;margin-block:24px}.bag-study-key{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.bag-study-detail{font-size:12px}.bag-study-header>span{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.bag-study-photo,.bag-study-anatomy,.bag-study-key,.bag-study-action i::after{transition:none}}
+
+.bag-study-notes{position:relative;display:block}
+.bag-study-facts{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding-block:24px;opacity:1;visibility:visible;transition:opacity 440ms cubic-bezier(.2,.8,.2,1),visibility 440ms}
+.bag-study-facts>span{display:flex;flex-direction:column;gap:6px;font-size:13px;line-height:1.5}
+.bag-study-facts strong{font-weight:500}.bag-study-facts>span>span{color:var(--sub-gray)}
+.bag-study-disclosure:is([open],.is-peeking) .bag-study-facts{opacity:0;visibility:hidden}
+@media(max-width:767px){.bag-study-facts{grid-template-columns:1fr 1fr;gap:20px 12px;align-content:start}.bag-study-facts>span{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.bag-study-facts{transition:none}}
+@media(max-width:767px){.bag-study-marker text{font-size:30px}.bag-study-dimensions text{font-size:30px}}
