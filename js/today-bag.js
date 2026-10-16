@@ -1,65 +1,109 @@
-/* Discrete inspection points. Specifications never participate in interaction state. */
+/* Native scroll peels the index cards off their stack. Reversing scroll retraces
+   the same transforms. Reduced motion and no JS retain ordinary, flat notes. */
 (() => {
   const study = document.querySelector('.bag-study');
   if (!study) return;
-  const points = [...study.querySelectorAll('.bag-hotspot')];
-  // Reserve one stable note lane below the image on narrow screens, including Japanese copy.
-  const image = study.querySelector('.bag-study-image');
-  const sizeNotes = () => {
-    const height = Math.max(...points.map(point => point.querySelector('.bag-hotspot-tip').getBoundingClientRect().height));
-    study.style.setProperty('--bag-tip-space', `${Math.ceil(height) + 24}px`);
+  const features = [...study.querySelectorAll('[data-bag-feature]')];
+  const points = [...study.querySelectorAll('[data-bag-point]')];
+  const story = study.querySelector('.bag-story');
+  const pin = study.querySelector('.bag-story-pin');
+  const deck = study.querySelector('.bag-features');
+  const stage = study.querySelector('.bag-study-stage');
+  const spread = study.querySelector('.bag-product-spread');
+  const editorial = study.querySelector('.bag-editorial');
+  const specs = study.querySelector('.bag-study-notes');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  const narrow = matchMedia('(max-width: 767px)');
+  let current = null;
+  let scheduled = false;
+  let needsMeasure = true;
+  let stacked = false;
+  let step = 0;
+  let pinTop = 80;
+  let deckHeight = 0;
+  let specHeight = 0;
+  const clamp = (value, min = 0, max = 1) => Math.max(min, Math.min(max, value));
+  const select = key => {
+    if (key === current) return;
+    current = key;
+    study.classList.toggle('is-showing-interior', key === 'pockets');
+    features.forEach(node => node.classList.toggle('is-focused', node.dataset.bagFeature === key));
+    points.forEach(node => node.classList.toggle('is-active', node.dataset.bagPoint === key));
   };
-  new ResizeObserver(sizeNotes).observe(image);
-  document.fonts.ready.then(sizeNotes);
-  let active = null;
-  let pinned = false;
-  let closeTimer;
-  let hoverDismissed = null;
-  const show = (point, pin = false) => {
-    clearTimeout(closeTimer);
-    active = point;
-    pinned = pin;
-    points.forEach(item => {
-      item.open = item === point;
-      item.querySelector('summary').setAttribute('aria-expanded', String(item.open));
-    });
-  };
-  points.forEach(point => {
-    const button = point.querySelector('summary');
-    button.setAttribute('aria-expanded', 'false');
-    point.addEventListener('pointerenter', event => {
-      clearTimeout(closeTimer);
-      if (event.pointerType === 'mouse' && !pinned && hoverDismissed !== point) show(point);
-    });
-    point.addEventListener('pointerleave', event => {
-      if (event.pointerType === 'mouse' && active === point && !pinned) {
-        closeTimer = setTimeout(() => { if (active === point && !pinned) show(null); }, 180);
+  const measure = () => {
+    needsMeasure = false;
+    stacked = !reduce.matches;
+    study.classList.toggle('has-card-stack', stacked);
+    if (stacked && narrow.matches) pin.insertBefore(stage, deck);
+    else if (stage.parentElement !== spread) spread.insertBefore(stage, editorial);
+    if (stacked) {
+      if (specs.parentElement !== pin) pin.append(specs);
+      const height = pin.offsetHeight;
+      pinTop = narrow.matches ? 72 : Math.max(80, (innerHeight - height) / 2);
+      // Short viewports and enlarged text must never trap or clip readable copy.
+      stacked = height <= innerHeight - pinTop - 24;
+      if (stacked) {
+        deckHeight = deck.offsetHeight;
+        specHeight = specs.offsetHeight;
+        editorial.style.setProperty('--spec-reserve', `${Math.max(0, specHeight - deckHeight)}px`);
+        step = Math.max(260, Math.min(520, innerHeight * .55));
+        story.style.setProperty('--pin-height', `${height}px`);
+        story.style.setProperty('--pin-top', `${pinTop}px`);
+        story.style.setProperty('--story-distance', `${step * features.length}px`);
       }
+    }
+    study.classList.toggle('has-card-stack', stacked);
+    if (!stacked) {
+      if (specs.parentElement !== editorial) editorial.append(specs);
+      if (stage.parentElement !== spread) spread.insertBefore(stage, editorial);
+      features.forEach(node => node.removeAttribute('style'));
+    }
+  };
+  const update = () => {
+    scheduled = false;
+    if (needsMeasure) measure();
+    if (document.hidden) { select(null); return; }
+    if (!stacked) {
+      const midpoint = innerHeight / 2;
+      select(features.find(node => {
+        const bounds = node.getBoundingClientRect();
+        return bounds.top <= midpoint && bounds.bottom > midpoint;
+      })?.dataset.bagFeature ?? null);
+      return;
+    }
+    const bounds = story.getBoundingClientRect();
+    const progress = clamp((pinTop - bounds.top) / step, 0, features.length);
+    const index = Math.min(Math.floor(progress), features.length - 1);
+    const flight = clamp((progress - index - .55) / .45);
+    const active = index + (flight > .55 ? 1 : 0);
+    select(bounds.top <= pinTop + 40 && active < features.length && progress < features.length
+      ? features[active].dataset.bagFeature : null);
+    const lastFlight = clamp((progress - (features.length - 1) - .55) / .45);
+    // The complete specifications sit below the deck, then rise into its
+    // vacated space during the final throw. Never crop the table.
+    specs.style.setProperty('--spec-rise', `${-deckHeight * lastFlight}px`);
+    features.forEach((node, i) => {
+      const throwProgress = clamp((progress - i - .55) / .45);
+      const depth = clamp(i - index - flight, 0, 3);
+      node.style.setProperty('--card-order', features.length - i);
+      node.style.setProperty('--card-x', `${throwProgress * deck.clientWidth * .14}px`);
+      node.style.setProperty('--card-y', `${depth * 9 - throwProgress * (deck.offsetHeight + 80)}px`);
+      node.style.setProperty('--card-angle', `${-throwProgress * 12}deg`);
+      node.style.setProperty('--card-scale', 1 - depth * .025);
+      node.style.setProperty('--card-opacity', 1 - clamp((throwProgress - .8) / .2));
+      node.style.setProperty('--card-copy', clamp(1 - depth));
     });
-    button.addEventListener('focus', () => {
-      if (button.matches(':focus-visible')) show(point);
-    });
-    button.addEventListener('click', event => {
-      event.preventDefault();
-      const closing = active === point && pinned;
-      hoverDismissed = closing ? point : null;
-      show(closing ? null : point, !closing);
-    });
-    point.addEventListener('focusout', event => {
-      if (!point.contains(event.relatedTarget) && active === point && !pinned) show(null);
-    });
-  });
-  document.addEventListener('pointermove', event => {
-    if (hoverDismissed && !hoverDismissed.contains(event.target)) hoverDismissed = null;
-  });
-  document.addEventListener('pointerdown', event => {
-    if (active && !event.target.closest('.bag-hotspot')) show(null);
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && active) { hoverDismissed = active; show(null); }
-  });
-  window.addEventListener('blur', () => show(null));
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) show(null);
-  });
+  };
+  const schedule = () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+  };
+  const remeasure = () => { needsMeasure = true; schedule(); };
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', remeasure);
+  document.addEventListener('visibilitychange', schedule);
+  reduce.addEventListener('change', remeasure);
+  new ResizeObserver(remeasure).observe(pin);
+  document.fonts.ready.then(remeasure);
+  study.classList.add('has-story-tracking');
+  schedule();
 })();

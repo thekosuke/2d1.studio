@@ -1,11 +1,15 @@
-/* Today Bag: product photograph with discrete feature inspection. */
-.bag-study{margin:0;width:100%;color:var(--ink);container:bag-study / inline-size}
-.bag-study-stage{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px;margin-block:0 40px}
-.bag-study-image{position:relative;width:100%;max-width:min(506.67px,56.667svh);aspect-ratio:2/3;justify-self:center;isolation:isolate}
-.bag-study-photo,.bag-study-anatomy{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;user-select:none;pointer-events:none;transition:opacity 360ms cubic-bezier(.2,.8,.2,1)}
-.bag-study-anatomy{opacity:0;color:var(--ink);overflow:visible}
-.bag-study-image:has(.bag-hotspot[data-interior][open]) .bag-study-photo{opacity:0}
-.bag-study-image:has(.bag-hotspot[data-interior][open]) .bag-study-anatomy{opacity:1}
+/* Today Bag — full-bleed product photograph and a compact package insert. */
+#shop{width:100%;max-width:none;margin-inline:0}
+.bag-study{overflow-x:clip;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:64px;background:var(--beige);color:var(--ink)}
+.bag-product-spread{--bag-spread-gap:clamp(48px,6vw,112px);--bag-image-share:.53488372;container-type:inline-size;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:var(--bag-spread-gap);align-items:start;max-width:1440px;margin-inline:auto}
+.bag-study-stage{position:sticky;top:80px;min-width:0}
+.bag-study-image{width:100%;max-width:min(540px,calc(66.666svh - 106px));margin-inline:auto}
+.bag-study-photo{display:block;width:100%;height:auto;object-fit:contain;user-select:none}
+/* The construction view shares the photograph's frame and only appears for storage. */
+.bag-study-photo,.bag-study-anatomy{transition:opacity 360ms ease}
+.bag-study-anatomy{position:absolute;inset:0;width:100%;height:100%;opacity:0;color:var(--ink);overflow:visible;pointer-events:none}
+.is-showing-interior .bag-study-photo{opacity:0}
+.is-showing-interior .bag-study-anatomy{opacity:1}
 .bag-study-anatomy g{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter}
 .bag-study-anatomy .bag-draft-outline{stroke-width:2}
 .bag-study-anatomy .bag-draft-seams{stroke-width:1;stroke-dasharray:5 4;opacity:.6}
@@ -15,45 +19,93 @@
 .bag-study-anatomy .bag-draft-guides{stroke-width:1;stroke-dasharray:18 5 3 5;opacity:.25}
 .bag-study-anatomy .bag-draft-dimensions{stroke-width:1;opacity:.65}
 .bag-draft-dimensions text{font:400 20px var(--font);fill:currentColor;stroke:none;text-anchor:middle}
-.bag-hotspot{position:static}
-.bag-hotspot[open] summary{z-index:4}
-.bag-hotspot summary{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);z-index:2;width:44px;height:44px;display:grid;place-items:center;cursor:pointer;list-style:none;touch-action:manipulation;background:transparent!important;outline:0!important;-webkit-tap-highlight-color:transparent}
-.bag-hotspot summary::-webkit-details-marker{display:none}.bag-hotspot summary::marker{content:""}
-/* Circular feature dots are explicitly requested; popup and all other UI remain square. */
-.bag-hotspot-dot{display:block;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--beige);background:transparent;transition:opacity 180ms ease,transform 180ms ease,background 180ms ease}
-.bag-hotspot[open] .bag-hotspot-dot{transform:scale(1.25)}
-.bag-hotspot summary:focus-visible .bag-hotspot-dot{background:transparent;transform:scale(1.5)}
-.bag-hotspot-tip{position:absolute;top:50%;left:calc(100% + 24px);width:220px;padding:16px 18px;background:transparent;border:0;border-left:1px solid var(--red);color:var(--red);font:400 15px/1.5 var(--font);text-align:left;z-index:5;pointer-events:none;opacity:0;visibility:hidden;transform:translateY(calc(-50% + 6px));transition:opacity 180ms ease,transform 180ms ease,visibility 180ms}
-.bag-hotspot-tip strong{display:block;font-weight:500;margin-bottom:4px}.bag-hotspot-tip p{margin:0;color:inherit;font:inherit}
-.bag-hotspot[open] .bag-hotspot-tip{opacity:1;visibility:visible;transform:translateY(-50%);pointer-events:auto}
-/* Allow both entering and leaving notes to animate; native details remains the no-JS fallback. */
-.bag-hotspot::details-content{content-visibility:visible;display:contents}
-.bag-study-notes{padding-block:28px;border-top:1px solid var(--line)}
-.bag-study-notes h3{font-size:28px;line-height:1.2;font-weight:500;margin:0 0 28px}
-.bag-study-specs{display:block;margin:0;border-bottom:1px solid var(--line)}
-.bag-study-specs>div{min-width:0;display:grid;grid-template-columns:minmax(100px,22%) minmax(0,1fr);gap:24px;padding-block:16px;border-top:1px solid var(--line)}.bag-study-specs dt{font:500 16px/1.5 var(--font);margin:0}.bag-study-specs dd{font:400 16px/1.5 var(--font);color:var(--sub-gray);margin:0}
-.bag-study figcaption{font:400 12px/1.5 var(--font);color:var(--sub-gray);padding:0 0 24px;border-bottom:1px solid var(--line)}
-@media(max-width:767px){.bag-study-specs>div{grid-template-columns:100px minmax(0,1fr);gap:16px;padding-block:12px}.bag-study-specs dt,.bag-study-specs dd{font-size:14px}.bag-study-notes h3{font-size:24px}.bag-draft-dimensions text{font-size:26px}}
-@media(prefers-reduced-motion:reduce){.bag-study-photo,.bag-study-anatomy,.bag-hotspot-dot,.bag-hotspot-tip{transition:none}}
-.bag-study-spec-note{margin:24px 0 0;font:400 12px/1.5 var(--font);color:var(--sub-gray)}
-/* Feature notes occupy their own lane, never the product silhouette. */
-@container bag-study (max-width:740px){
-  .bag-study-stage{display:block;padding-bottom:var(--bag-tip-space,230px);margin-bottom:32px}
-  .bag-study-image{max-width:100%;width:100%}
-  .bag-hotspot-tip{top:calc(100% + 24px);left:0;width:100%;padding:16px;font-size:14px;transform:translateY(6px)}
-  .bag-hotspot[open] .bag-hotspot-tip{transform:translateY(0)}
+/* Half the displayed 2:3 photograph height, including column-width constraints. */
+.bag-editorial{min-width:0;width:100%;max-width:400px;padding-top:min(405px,calc(49.9995svh - 79.5px),calc((100cqw - var(--bag-spread-gap)) * var(--bag-image-share) * .75))}
+.bag-story-heading{margin-bottom:32px}
+.bag-status{font:500 var(--type-label)/1.4 var(--font);text-transform:uppercase;letter-spacing:var(--type-label-track);color:var(--sub-gray);margin:0 0 12px}
+.bag-story-heading h3{font:700 32px/1.15 var(--font);letter-spacing:-.025em;margin:0 0 16px}
+.bag-introduction{font:400 var(--type-body)/1.5 var(--font);text-wrap:pretty}
+.bag-feature{padding:20px 0;border-top:.5px solid var(--line)}
+.bag-feature h4{font:500 15px/1.4 var(--font);margin:0 0 8px}
+.bag-feature-copy{font:400 15px/1.6 var(--font);color:var(--sub-gray);text-wrap:pretty;margin:0}
+.bag-study-notes{margin-top:20px;padding-top:24px;border-top:1px solid var(--line)}
+.bag-study-notes h4{font:500 15px/1.4 var(--font);margin:0 0 20px}
+.bag-study-specs{margin:0}
+.bag-study-specs>div{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;padding:8px 0;border-top:.5px solid var(--line)}
+.bag-study-specs>div:first-child{padding-top:0;border-top:0}
+.bag-study-specs dt,.bag-study-specs dd{font:400 14px/1.5 var(--font);margin:0;min-width:0}
+.bag-study-specs dt{font-weight:500}
+.bag-study-specs dd{color:var(--sub-gray);text-wrap:pretty}
+.bag-study-spec-note,.bag-study figcaption{font:400 12px/1.5 var(--font);color:var(--sub-gray)}
+.bag-study-spec-note{margin:20px 0 0}
+.bag-study figcaption{max-width:1440px;margin:48px auto 0}
+.shop-signup .shop-actions{margin-top:32px;padding-block:24px 0;border-top:1px solid var(--line)}
+.shop-signup .shop-actions::before{content:none}
+.shop-signup .signup-heading{margin-bottom:16px}
+html[lang="ja"] .bag-introduction{line-height:1.75}
+html[lang="ja"] .bag-feature-copy{line-height:1.85}
+@media(min-width:1600px){.bag-study{padding:80px}}
+@media(max-width:1099px){
+ .bag-study{padding:40px}
+ .bag-product-spread{--bag-spread-gap:40px;--bag-image-share:.5;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .bag-study-specs>div{grid-template-columns:80px minmax(0,1fr);gap:12px}
 }
-@media(hover:hover) and (pointer:fine){
-  .bag-hotspot-dot{opacity:0}
-  .bag-hotspot summary{pointer-events:none}
-  .bag-study:is(:hover,:has(summary:focus-visible)) .bag-hotspot-dot{opacity:1}
-  .bag-study:is(:hover,:has(summary:focus-visible)) .bag-hotspot summary{pointer-events:auto}
+@media(max-width:767px){
+ .bag-study{padding:40px 24px}
+ .bag-product-spread{display:flex;flex-direction:column;gap:32px}
+ .bag-study-stage{position:static;width:100%;order:1}
+ .bag-study-image{max-width:380px}
+ .bag-editorial{display:contents;padding-top:0}
+ .bag-story-heading{order:0;margin:0}
+ .bag-features{order:2;width:100%}
+ .bag-study-notes{order:3;width:100%;margin-top:0}
+ .bag-study figcaption{margin-top:32px}
 }
-.bag-study .bag-hotspot summary:focus-visible{background:transparent!important;color:inherit!important}
-.bag-study .bag-hotspot summary:focus-visible .bag-hotspot-dot{background:transparent;transform:scale(1.5)}
 
-/* Inspect one feature at a time; hidden controls remain keyboard reachable. */
-.bag-study:has(.bag-hotspot[open]) .bag-hotspot:not([open]) .bag-hotspot-dot{opacity:0}
-.bag-study:has(.bag-hotspot[open]) .bag-hotspot:not([open]) summary{pointer-events:none}
-.bag-hotspot[open] .bag-hotspot-dot{opacity:1}
-.bag-study-image:has([data-interior][open]) .bag-hotspot-dot{filter:drop-shadow(0 0 1px var(--ink))}
+/* Reading position links the text to a marker; markers are not extra controls. */
+.bag-study-image{position:relative}
+.bag-feature h4,.bag-feature-copy{transition:color 180ms ease}
+.bag-story-hotspot{position:absolute;left:var(--x);top:var(--y);box-sizing:border-box;width:16px;height:16px;transform:translate(-50%,-50%);border:2px solid var(--white);border-radius:50%;background:var(--red);opacity:0;visibility:hidden;pointer-events:none;transition:opacity 180ms ease,visibility 180ms}
+.bag-story-hotspot.is-active{opacity:1;visibility:visible}
+/* Keep the product in view above the reading area on phones. Without JS the
+   original full-size, static photograph remains the fallback. */
+@media(max-width:767px){
+ .has-story-tracking .bag-study-stage{position:sticky;top:64px;z-index:2;background:var(--beige);padding-block:12px}
+ .has-story-tracking .bag-study-image{max-width:min(200px,calc(20svh - 16px))}
+}
+@media(prefers-reduced-motion:reduce){
+ .bag-feature h4,.bag-feature-copy,.bag-story-hotspot,.bag-study-photo,.bag-study-anatomy{transition:none}
+}
+@media(max-width:767px){
+ .has-story-tracking .bag-study-stage::before{content:"";position:absolute;bottom:100%;left:0;right:0;height:64px;background:var(--beige);pointer-events:none}
+}
+
+/* A stack of printed notes, driven by ordinary document scrolling. */
+.bag-feature{padding:24px;border:1px solid var(--red);background:var(--white);margin-bottom:12px}
+.bag-feature-number{text-transform:uppercase;font:500 12px/1.4 var(--font);color:var(--red);margin:0 0 12px;letter-spacing:.02em}
+.has-card-stack .bag-story{height:calc(var(--pin-height) + var(--story-distance));position:relative}
+.has-card-stack .bag-story-pin{position:sticky;top:var(--pin-top);isolation:isolate}
+.has-card-stack .bag-story-heading{position:relative;z-index:8;margin-bottom:48px}
+.has-card-stack .bag-features{position:relative;z-index:9;display:grid;isolation:isolate;padding-bottom:28px}
+.has-card-stack .bag-feature{grid-area:1 / 1;min-height:220px;margin:0;transform-origin:15% 90%;transform:translate3d(var(--card-x,0px),var(--card-y,0px),0) rotate(var(--card-angle,0deg)) scale(var(--card-scale,1));opacity:var(--card-opacity,1);z-index:var(--card-order);pointer-events:none;will-change:transform,opacity}
+.has-card-stack .bag-feature-number,.has-card-stack .bag-feature h4,.has-card-stack .bag-feature-copy{opacity:var(--card-copy,1)}
+.has-card-stack .bag-editorial{padding-bottom:var(--spec-reserve,0px)}
+.has-card-stack .bag-study-notes{position:absolute;top:100%;left:0;width:100%;margin:0;padding-top:48px;border-top:0;transform:translateY(var(--spec-rise,0px))}
+@media(max-width:767px){
+ .bag-story,.bag-story-pin{display:contents}
+ .has-card-stack .bag-product-spread{display:block}
+ .has-card-stack .bag-editorial{display:block;max-width:none;padding-top:0}
+ .has-card-stack .bag-story,.has-card-stack .bag-story-pin{display:block}
+ .has-card-stack .bag-story-heading{margin-bottom:24px}
+ .has-card-stack .bag-study-stage{position:relative;top:auto;padding:0;margin:0 0 32px;z-index:0;background:transparent}
+ .has-card-stack .bag-study-stage::before{content:none}
+ .has-card-stack .bag-study-image{max-width:min(120px,14svh)}
+ .has-card-stack .bag-feature{min-height:200px;padding:20px}
+ .has-card-stack .bag-story-heading h3{font-size:28px;margin-bottom:8px}
+ .has-card-stack .bag-status{margin-bottom:8px}
+ .has-card-stack .bag-introduction{font-size:15px;line-height:1.5}
+ .bag-study-notes{margin-top:24px}
+}
+@media(prefers-reduced-motion:reduce){
+ .bag-feature{transform:none!important;opacity:1!important}
+}

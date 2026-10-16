@@ -868,3 +868,71 @@ Eight inspection dots now include the embroidered logo and canvas material. On m
 The exterior tag is enlarged, with the updated PNG master and lossless WebP saved as `img/shop/today-bag-tag-enlarged.*`. Inspection points are beige outline circles; when a note opens, other points fade away until dismissal. The magnetic-closure point is centered on the opening. Notes use Icon Red text with a single left rule. Material copy identifies Armada No. 8 cotton canvas; pocket, band and tag notes explain their use and visual meaning. Specifications are aligned label/value rows separated by hairlines. The final two Shop paragraphs share one prose block and the normal paragraph gap.
 
 Material reference: Senda’s [Armada No. 8 product listing](https://www.textile-senda.com/products-info/cotton-414/) and [canvas guide](https://www.textile-senda.com/news/collection_canvas/). The guide supports the substantial weave/structure and historical sailcloth context; no unverified finish, mill or certification is claimed.
+
+### Today Bag suspended motion — 16 October 2026
+The original exterior asset is unchanged. Mouse movement over the bag stage drives a restrained spring-based sway (up to 2.8 degrees), anchored near the top of the shoulder strap. A smaller delayed shear suggests fabric give on changes of direction. This is a 2D presentation effect, not a cloth simulation or a new view of the product. The photograph, construction overlay and feature targets share the pose; tooltip text and specifications remain stationary. Opening a feature freezes the pose. Dismissal and pointer exit settle it back to rest. No continuous idle animation runs. Touch/pen interaction stays static with native scrolling and feature tapping, and reduced motion disables the sway. Offscreen, hidden-tab and window-blur states reset and stop animation work.
+
+The introductory Today Bag paragraph is now above the figure, and specification rows match Studio: 15px/1.3 type, 8px row padding, fine rules and the shared label/value column widths. English and Japanese remain synchronized. Desktop cursor sway and frozen inspection, mobile-width EN/JA layout, repeated activation, interior reveal and keyboard dismissal were exercised in the preview.
+
+### Today Bag motion removed — 16 October 2026
+Cursor-driven sway was removed at the owner’s request. The photo, construction overlay and dots remain stationary; existing hover/tap feature inspection is retained. The experiment is preserved in `_archive/cursor-sway-2026-10-16/`. The introduction above the figure and compact Studio-style specification rows remain. Further Shop interaction directions are discussion only.
+
+### Today Bag photographic story — 16 October 2026
+Shop uses an image-led vertical presentation within the existing shared column. A left-aligned Today Bag introduction precedes the unchanged exterior; a separate high-angle interior concept follows with concise band/pocket captions. The interior includes a reusable steel bottle, slim wallet and keys to illustrate intended storage. Both photographs are explicitly identified as AI-generated concepts, not physical samples or verified capacity tests. The new 1536 × 1024 image is served losslessly and lazy-loaded without cropping.
+
+The six exterior feature points retain hover, click/tap and keyboard inspection; interior information is now always visible below its own photograph. The anatomical SVG and earlier hover presentation are archived in `_archive/pre-bag-editorial-2026-10-16/`. Compact specifications, the existing section boundaries, signup behavior and native scrolling remain. No cursor motion or scroll-controlled rotation is introduced. Both language routes are regenerated together. Image prompts and source records are in `docs/TODAY-BAG-IMAGE.md`.
+
+Today Bag typography follows the shared left content edge: product introduction and interior heading/copy use the same 740px maximum reading width with no centered text or automatic side margins. Image framing and the vertical section order remain unchanged.
+
+Today Bag is grouped in a white inset panel within the beige Shop section, with 48px desktop and 24px phone padding. Typography remains left-aligned. The interior pocket targets roughly 35% of bag height; its contents sit concealed below the lip. The latest lossless image is `today-bag-interior-low-pocket-v6.webp`.
+
+### Exterior-only preview — 16 October 2026
+The interior image, heading and accompanying feature captions are removed from both Home routes at the owner’s request. The HTML is preserved in `_archive/interior-study-2026-10-16/`, and generated assets remain available for reference but are not loaded. The approved exterior and inset product container remain. Further presentation directions are discussion only.
+
+## Shop as a designer’s product study — 16 October 2026
+
+Shop retains the shared section heading, reading column and signup alignment. Its introduction now describes the owner’s intention: making a personal favorite version of everyday things and sharing it with people who appreciate it. The white Today Bag panel breaks out to a wider, inset product spread. The unchanged exterior photograph sits beside six named, native disclosures covering Armada No. 8 canvas, proportions/carrying, pockets, magnetic opening, the Red Pixel and embroidery. Material is expanded initially; readers can open multiple notes. The image stays within the viewport height and is sticky within the desktop spread; mobile orders the title, image, then notes. No cursor motion or interior image is loaded.
+
+The compact eight-row specification table and provisional/AI-image disclosures remain. Click/tap, Enter/Space and no-JavaScript disclosure behavior use native details; Escape additionally closes the focused note with JavaScript. Supported browsers animate opening and closing with the same height/opacity transition; reduced motion is instant. The unconnected signup still truthfully reports that nothing was sent or saved. English and Japanese share the layout and content. The previous hotspot implementation is preserved in `_archive/pre-shop-design-notes-2026-10-16/`.
+
+Verification for this iteration: EN desktop (1440 × 900) and phone (390 × 844), plus JA at both widths; no horizontal overflow or console errors observed. All six notes were exercised, including click-to-close, Enter/Space and Escape. A script-free preview confirmed native note toggling and disabled signup. The live signup test returned its truthful unconnected message. Visual proof: `/tmp/shop-design-notes/desktop.png` and `/tmp/shop-design-notes/mobile.png`.
+
+### Full-bleed package insert refinement — 16 October
+
+The white Today Bag background now reaches both viewport edges. The right pane is capped at 400px with a 32px title, 16px introduction, 15px design notes and 14px specifications, giving it the scale of a printed package insert. All six notes are flat semantic headings/paragraphs; the accordion controls, icons and active script are removed. Specifications now follow within the same right pane, extending the native page scroll while the exterior remains sticky on desktop. Phones stack the heading, photo, notes and specifications with 24px inner gutters. The previous disclosure variant is archived in `_archive/shop-accordion-2026-10-16/`.
+
+Verified the actual EN/JA desktop and phone layouts, visible note content, full-width background, native scrolling/sticky-image behavior and no horizontal overflow or console errors. Proof: `/tmp/shop-design-notes/full-bleed-desktop.png` and `/tmp/shop-design-notes/full-bleed-mobile.png`.
+
+### Scroll-linked feature markers — 16 October
+
+As each flat design note crosses the viewport’s vertical midpoint, its heading and body turn Icon Red and the corresponding marker appears on the stationary product image. Forward and reverse scrolling use the same viewport intersection rule; no note is active before the first note or after the last. Shape/carrying identifies both handles. The storage note reveals the architectural skeleton with separate pocket and band markers. Feature headings explicitly identify material, shape/carrying, inner pocket/band, magnetic closure, woven tag and embroidered logo in EN/JA.
+
+On phones with JavaScript, a compact sticky photograph remains above the reading area. Without JavaScript, the normal static photograph and all flat notes remain readable. Markers are decorative (not additional controls or live announcements). Reduced motion keeps a steady marker and removes color transitions. The tracking uses one scheduled animation frame per scroll/resize update, with font/content resize updates; it does not change scrolling behavior.
+
+### Steady markers and storage skeleton — 16 October
+
+Feature markers are steady 16px Icon Red dots with a white border. When the inner-pocket and bottle-band note crosses the reading midpoint, the exterior crossfades to the archived architectural construction SVG, with a marker on each compartment. Scrolling to any other note restores the exterior with the same transition; reduced motion switches instantly. Both language routes share this behavior. The photographic interior remains archived.
+
+Verified scroll activation and exterior restoration on desktop and phone, including English and Japanese routes. Markers render at 16px with no animation; no horizontal overflow or console errors observed. Visual proof: `/tmp/shop-design-notes/storage-skeleton-desktop.png` and `/tmp/shop-design-notes/storage-skeleton-mobile.png`.
+
+### Scrollable index-card stack — 16 October
+
+The six Today Bag design notes now form a stack of square beige index cards. Native document scrolling holds the product heading and stack in place while each top card translates upward with a slight rotation, revealing the next. Scrolling upward retraces those exact transforms. A reading pause precedes each throw. The heading releases only after all six cards have passed, followed by the compact specifications table. The active card remains red and controls the existing steady hotspots and storage skeleton.
+
+Desktop keeps the photograph alongside the pinned notes; phones place a compact photograph between the heading and cards inside the same pinned group. Stack dimensions are measured from actual content, including Japanese text and loaded fonts. Reduced motion, no JavaScript, or a viewport too short for the complete group use flat, readable cards instead. There is no wheel interception, snap scrolling, autoplay, or hidden copy in the accessibility tree. The previous flat-note implementation is preserved in `_archive/pre-bag-card-stack-2026-10-16/`.
+
+Verified actual EN/JA desktop (1280 × 720) and phone (400 × 754) renders, forward/reverse scrolling, card-linked skeleton/hotspots, heading retention and release, and Page Down keyboard scrolling. Fixed transform overflow on phones; no console errors observed. Temporary local fixtures verified the reduced-motion code/CSS path and script-free fallback, then were removed. Proof: `/tmp/shop-design-notes/cards-desktop.png` and `/tmp/shop-design-notes/cards-mobile-ja.png`.
+
+### Index-card refinement — 16 October
+
+Cards use white fills, Icon Red borders, and Feature 01–06 labels (特徴 01–06 in Japanese). The deck sits above the story heading in the stacking order and no longer clips thrown cards, so they visibly pass over the title and introduction. The actual specifications table peeks immediately beneath the stack. During the final throw it rises into the vacated deck and becomes fully visible, removing the previous empty gap; reverse scrolling restores the same positions. The table returns to ordinary document flow in the flat fallback.
+
+Verified the overlap during a throw, forward/reverse table reveal, white/red styling and numbering, storage hotspot synchronization, and EN/JA desktop/mobile renders. No horizontal overflow or console errors observed. Proof: `/tmp/shop-design-notes/cards-over-heading.png`, `/tmp/shop-design-notes/cards-refined-desktop.png`, and `/tmp/shop-design-notes/cards-refined-mobile-ja.png`.
+
+### Beige ground and complete specifications — 16 October
+
+The product study returns to soft beige (#FAF0E6); cards remain white with red borders. Only the Feature number stays red: headings retain dark ink and descriptions retain supporting gray, including the active card. Removed the specification table's preview clipping entirely, so every row can appear below the stack and remains readable after the final throw. The table still rises into the deck's vacated space. Verified all eight rows and the final note on desktop EN and phone JA, with no horizontal overflow. Proof: `/tmp/shop-design-notes/full-specifications-desktop.png`.
+
+### Shop opening restored — 16 October
+
+Restored the archived “The joy of making…” Shop opening, including its red opening phrase, reading-ink treatment, shared lead typography, column alignment and section spacing. Removed the smaller shop-intent override. The bag introduction now begins “Our first everyday item: a canvas tote…” in English, with the Japanese translation regenerated. Verified the rendered desktop opening at 40px/56px, weight 500, with the shared 96px heading-to-copy gap.
