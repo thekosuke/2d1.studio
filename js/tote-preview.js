@@ -1,4 +1,4 @@
-/* Today Bag, lazy-loaded into the transparent Shop stage. */
+/* Life Tote, lazy-loaded into the transparent Shop stage. */
 (() => {
   const stage = document.getElementById('tote-preview-stage');
   if (!stage) return;
@@ -13,7 +13,7 @@
       stage.classList.add('is-ready');
       stage.tabIndex = 0;
       stage.setAttribute('role','button');
-      stage.setAttribute('aria-label',(window.SiteLanguage?.t || (text => text))('Today Bag. Drag horizontally anywhere in this area on touch screens to rotate. Hover over the bag to see inside; tap or press Enter to toggle X-ray.'));
+      stage.setAttribute('aria-label',(window.SiteLanguage?.t || (text => text))('Life Tote. Drag horizontally anywhere in this area on touch screens to rotate. Hover over the bag to see inside; tap or press Enter to toggle X-ray.'));
       stage.setAttribute('aria-pressed','false');
       let pinned=false, down;
       function toggle(){pinned=!pinned;tote.setXray(pinned);stage.setAttribute('aria-pressed',String(pinned));}
@@ -23,7 +23,7 @@
       stage.addEventListener('pointerup',e=>{if(!down||e.pointerId!==down.id)return;if(!down.moved&&Math.hypot(e.clientX-down.x,e.clientY-down.y)<8&&tote.hitTest(e.clientX,e.clientY))toggle();down=null;});
       stage.addEventListener('pointercancel',()=>{down=null;});
     } catch (error) {
-      console.warn('Today Bag: using the static preview because the 3D renderer could not start.', error);
+      console.warn('Life Tote: using the static preview because the 3D renderer could not start.', error);
       stage.querySelector('.tote-canvas')?.remove();
       stage.classList.remove('is-ready');
     }

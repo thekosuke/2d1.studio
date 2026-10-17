@@ -60,3 +60,8 @@
 body.home-page>.language-switch.on-studio{--toggle-dark-ground:var(--studio-background)}
 :is(body.home-page>.language-switch.on-studio,body.about-story-page>.language-switch.is-on-diagram){--fill-rest-ground:var(--toggle-dark-ground,var(--cranberry-brown));--fill-rest-ink:var(--beige);--fill-active-ground:var(--beige);--fill-active-ink:var(--toggle-dark-ground,var(--cranberry-brown));background:var(--toggle-dark-ground,var(--cranberry-brown))!important;color:var(--beige)!important}
 :is(body.home-page>.language-switch.on-studio,body.about-story-page>.language-switch.is-on-diagram),:is(body.home-page>.language-switch.on-studio,body.about-story-page>.language-switch.is-on-diagram) a{border-color:var(--beige)!important}
+
+/* The extra destination gets its own compact row around the centered logo. */
+@media(max-width:1099px){
+ .js .home-page .page-nav .nav-red-pixel{grid-column:5/-1;grid-row:2;justify-self:end;white-space:nowrap}
+}

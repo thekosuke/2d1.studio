@@ -131,9 +131,8 @@ html[lang="ja"] .about-page.about-story-page .essay-title{font-size:var(--type-d
 .about-story-page .about-story-lead{padding-top:var(--space)}
 .about-story-page .essay-lede+.essay-lede{margin-top:1em}
 .about-story-page .about-opening{color:var(--cranberry-brown)}
-.about-story-page .about-opening a{text-decoration-line:none}
-.about-story-page .about-opening a .ink{text-decoration-line:underline}
-.about-story-page .about-opening:not(.is-inking) a{text-decoration-line:underline}
+.about-story-page .about-opening a{text-decoration-line:underline;text-decoration-skip-ink:none}
+.about-story-page .about-opening a .ink{display:inline;text-decoration-line:none}
 
 /* A larger opening title and subtitle, retaining the bottom-aligned group. */
 .about-page.about-story-page .essay-head .essay-title{font-size:clamp(52px,6.25vw,96px)}

@@ -227,7 +227,7 @@ html:not(.js) .page-nav-contact{display:none}
 @media(prefers-reduced-motion:reduce){.page-nav :is(a,button),.page-nav :is(a,button)::before{transition:none}}
 
 /* Owner emphasis in the Home intro; this remains plain text. */
-.intro .familiar-characters{text-decoration:underline;text-decoration-thickness:.045em;text-underline-offset:.14em}
+.intro .familiar-characters{text-decoration:underline;text-underline-offset:.18em}
 
 /* Home refinements: text-link hover and a transparent email focus state. */
 .intro .familiar-characters:hover{color:var(--red)}
@@ -259,10 +259,10 @@ html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd,
 .js :is(.home-page,.about-page) .page-nav{display:flex;gap:0}
 @media(max-width:1099px){.js :is(.home-page,.about-page) .page-nav{flex-direction:row;gap:24px;align-items:center}}
 .site-footer .footer-line{flex-wrap:wrap;gap:24px}
-.site-footer .social-links{display:flex;gap:12px;align-items:center}
+.site-footer .social-links{display:flex;gap:18px;align-items:center}
 .site-footer .social-links a{width:24px;height:24px}
 .site-footer .social-links svg{width:14px;height:14px}
-@media(max-width:767px){.site-footer .footer-line{gap:16px}.site-footer .social-links{gap:8px}.site-footer .social-links svg{width:12px;height:12px}}
+@media(max-width:767px){.site-footer .footer-line{gap:16px}.site-footer .social-links{gap:12px}.site-footer .social-links svg{width:12px;height:12px}}
 
 /* Home replaces the compact disclosure with a horizontal page bar. */
 .home-page .mobile-nav-toggle{display:none!important}

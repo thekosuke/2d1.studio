@@ -67,6 +67,7 @@ body.objects-page.objects-ready .objects-zoom button:focus-visible:not([aria-dis
 .objects-page.objects-ready .objects-zoom button::after{
   background:linear-gradient(90deg,var(--beige) calc(var(--button-fill)*var(--button-inner-width,31px) - (var(--button-inner-width,31px) - 12px)/2),var(--ink) 0);
 }
+.objects-page.objects-ready .objects-zoom:has(input:active) button::after{background:var(--red)}
 @media(prefers-reduced-motion:reduce){
   body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language) a:is(:any-link,:focus-visible),
   body :is(.language-switch,.objects-language,.work-footer-language) a,
@@ -76,4 +77,39 @@ body.objects-page.objects-ready .objects-zoom button:focus-visible:not([aria-dis
   body :is(.language-switch,.objects-language,.work-footer-language) a,
   body.objects-page.objects-ready .objects-zoom button:is(:enabled,:disabled){background:none!important;color:ButtonText!important}
   .objects-page.objects-ready .objects-zoom button::after{background:currentColor}
+}
+
+/* One shared fill glides between the two language links. */
+body :is(.language-switch,.objects-language){--language-index:0;--language-fill:var(--fill-active-ground,var(--cranberry-brown));isolation:isolate;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:0!important}
+body :is(.language-switch,.objects-language):has(a:last-child[aria-current]){--language-index:1}
+body :is(.language-switch,.objects-language)::before{content:'';position:absolute;z-index:0;inset:0 auto 0 0;width:50%;background:var(--language-fill);transform:translateX(calc(var(--language-index)*100%));transition:transform 480ms cubic-bezier(.2,.8,.2,1),background-color 240ms;pointer-events:none}
+body :is(.language-switch,.objects-language) a,
+body :is(.language-switch,.objects-language) a[aria-current],
+body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language) a:is(:any-link,:focus-visible){position:relative;z-index:1;flex:1;background:transparent!important;background-image:none!important;color:var(--fill-rest-ink,var(--ink))!important;transition:color 240ms!important}
+body :is(.language-switch,.objects-language) a[aria-current]{color:var(--fill-active-ink,var(--white))!important}
+body :is(.work-footer-language,.objects-language){position:relative}
+body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language){position:relative!important;gap:0}
+@media(hover:hover) and (pointer:fine){
+ body :is(.language-switch,.objects-language):has(a:hover){--language-fill:var(--red)}
+ body :is(.language-switch,.objects-language):has(a:first-child:hover){--language-index:0}
+ body :is(.language-switch,.objects-language):has(a:last-child:hover){--language-index:1}
+ body :is(.language-switch,.objects-language):has(a:hover) a[aria-current]{color:var(--fill-rest-ink,var(--ink))!important}
+ body :is(.language-switch,.objects-language):has(a:hover) a:hover{color:var(--beige)!important}
+}
+body :is(.language-switch,.objects-language):has(a:focus-visible){--language-fill:var(--red)}
+body :is(.language-switch,.objects-language):has(a:first-child:focus-visible){--language-index:0}
+body :is(.language-switch,.objects-language):has(a:last-child:focus-visible){--language-index:1}
+body :is(.language-switch,.objects-language):has(a:focus-visible) a[aria-current]{color:var(--fill-rest-ink,var(--ink))!important}
+body :is(.language-switch,.objects-language):has(a:focus-visible) a:focus-visible,
+body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language):has(a:focus-visible) a:focus-visible{color:var(--beige)!important;background:transparent!important}
+@media(prefers-reduced-motion:reduce){body :is(.language-switch,.objects-language)::before,body :is(.language-switch,.objects-language) a{transition:none!important}}
+@media(forced-colors:active){body :is(.language-switch,.objects-language)::before{background:Highlight}body :is(.language-switch,.objects-language) a{color:LinkText!important}body :is(.language-switch,.objects-language) a[aria-current]{color:HighlightText!important}}
+
+/* Mobile menu link chrome must not override the shared selected-cell ink. */
+body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language) a[aria-current]{color:var(--fill-active-ink,var(--white))!important}
+body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language):has(a:focus-visible) a[aria-current]{color:var(--fill-rest-ink,var(--ink))!important}
+body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language):has(a:focus-visible) a:focus-visible{color:var(--beige)!important}
+@media(hover:hover) and (pointer:fine){
+ body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language):has(a:hover) a[aria-current]{color:var(--fill-rest-ink,var(--ink))!important}
+ body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language):has(a:hover) a:hover{color:var(--beige)!important}
 }

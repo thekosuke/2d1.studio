@@ -1,9 +1,9 @@
-/* Today Bag — full-bleed product photograph and a compact package insert. */
+/* Life Tote — full-bleed product photograph and a compact package insert. */
 #shop{width:100%;max-width:none;margin-inline:0}
 .bag-study{--bag-inset:64px;overflow-x:clip;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:var(--bag-inset);background:var(--white);color:var(--ink)}
 .bag-product-spread{--bag-spread-gap:clamp(48px,6vw,112px);--bag-image-share:.53488372;container-type:inline-size;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:var(--bag-spread-gap);align-items:start;max-width:1440px;margin-inline:auto}
 .bag-study-stage{position:sticky;top:80px;min-width:0}
-.bag-study-image{width:100%;max-width:min(540px,calc(66.666svh - 106px));margin-inline:auto}
+.bag-study-image{width:100%;max-width:min(540px,calc((100svh - 160px) * 1050 / 1498));margin-inline:auto}
 .bag-study-photo{position:relative;z-index:1;display:block;width:100%;height:auto;object-fit:contain;user-select:none}
 /* Half the displayed 2:3 photograph height, including column-width constraints. */
 .bag-editorial{min-width:0;width:100%;max-width:480px;padding-top:min(405px,calc(49.9995svh - 79.5px),calc((100cqw - var(--bag-spread-gap)) * var(--bag-image-share) * .75))}
@@ -47,7 +47,7 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 .bag-study-lead{position:relative;z-index:0;display:flex;flex-direction:column;gap:var(--section-content-gap)}
 .bag-study-scene>.bag-study{position:relative;z-index:1;margin-top:var(--section-content-gap)}
 .has-bag-cover .bag-study-lead{position:sticky;top:var(--bag-lead-top)}
-.has-bag-cover>.bag-study{margin-top:var(--bag-cover-gap)}
+.has-bag-cover>.bag-study{margin-top:var(--section-content-gap)}
 @media(prefers-reduced-motion:reduce){
  .has-bag-cover .bag-study-lead{position:relative;top:auto}
  .has-bag-cover>.bag-study{margin-top:var(--section-content-gap)}
@@ -103,7 +103,7 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 .home-page .shop-signup .connect-form input{border-bottom:1px solid rgba(50,5,5,.4)}
 .home-page .shop-signup .connect-form input:focus,.home-page .shop-signup .connect-form input:focus-visible{border-bottom-color:var(--red)}
 
-.bag-study{padding-block:calc(var(--bag-inset) + var(--section-content-gap))}
+.bag-study{padding-block:var(--space)}
 
 /* Rules continue beyond the reading column to the viewport's clipped edge. */
 .home-page .services>div,.bag-study-specs>div{position:relative;border-top-color:transparent}
@@ -127,3 +127,5 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 .material-tooltip::before{content:"";position:absolute;bottom:100%;left:0;right:0;height:12px}
 
 #shop,.bag-study-lead{background:var(--beige)}
+
+.material-tooltip p+p{margin-top:1em}

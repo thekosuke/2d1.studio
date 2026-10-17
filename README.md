@@ -1242,3 +1242,29 @@ doubled borders and bumps at shared corners. The fixed About logo stays red on
 the dark diagram background and beige over the red header; the diagram’s own
 logo remains white. Checked EN desktop and JA mobile, reverse assembly, header
 color restoration and overflow.
+
+### Product naming — 17 October 2026
+
+The tote is named **Life Tote** throughout the active English and Japanese site, including Home, About, image descriptions and accessibility labels. Existing asset filenames and historical design records retain their original names.
+
+Shop’s product study uses the shared content gap (96px desktop / 64px phone) after the opening copy and shared section padding (128px / 80px). The layered scroll reveal no longer adds viewport-dependent blank space.
+
+While dragging the Finds zoom knob, both plus/minus pixel icons turn Icon Red alongside the dock border and dividers, then return to their resting colors on release.
+
+Text underlines use About’s automatic font-scaled weight across the active site. Home’s Familiar Characters link also shares About’s .18em underline offset, preserving its continuous underline through the reading reveal.
+
+### Life Tote exterior refinement — 17 October 2026
+
+The active exterior is `img/shop/life-tote-studio-v1.webp`, with a shorter shoulder loop, finer canvas texture and revised embroidery. The original images remain available. Both language routes use its native 1122 × 1402 dimensions, with viewport sizing adjusted for the new proportions. It remains disclosed as an AI-generated concept; generation notes are in `docs/LIFE-TOTE-IMAGE.md`.
+
+Life Tote now uses `img/shop/life-tote-studio-v2.webp` (1050 × 1498), with the shoulder loop extended approximately 25% from v1. Both previous assets are retained.
+
+The active exterior is now `img/shop/life-tote-studio-v3.webp`, with a regular woven red handle and a square side tag. The longer shoulder loop is retained.
+
+The active exterior is `img/shop/life-tote-studio-v4.webp`; the square red tag sits one tag-height lower on the left seam.
+
+### RED PIXEL — 17 October 2026
+
+The shared navigation includes RED PIXEL at `/red-pixel/` and `/ja/red-pixel/`. The page intentionally has only one centered 1 × 1 CSS px Icon Red square on soft beige, with no visible navigation, logo, footer or JavaScript. A small light-gray uppercase caption, “ADMIRE THE RED PIXEL”, sits at the bottom center. Its accessible main label describes the pixel. Finds retains its single Home button without an expanded navigation menu.
+
+The language control uses one shared sliding fill. Hover or keyboard focus moves it to the target language and turns it Icon Red; leaving restores the selected language and its contextual resting colors. Reduced motion switches instantly.

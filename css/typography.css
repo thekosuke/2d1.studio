@@ -2,6 +2,8 @@
 :root{--type-label:12px;--type-body:16px;--type-heading:16px;--type-copy:20px;--type-lead:28px;--type-display:44px;--type-track:0;--type-label-track:.04em;--reading:var(--type-lead);--section-title:var(--type-display)}
 @media(min-width:768px){:root{--type-copy:28px;--type-lead:40px;--type-display:64px}}
 body{font:400 var(--type-body)/1.5 var(--font);letter-spacing:var(--type-track)}
+/* Match About's underline weight at each text size throughout the interface. */
+a,button{text-decoration-thickness:auto}
 :is(.home-page,.about-page) :is(.section-copy,.intro h1,.intro-cta),.essay-dek,.essay-lede,.essay-rest .essay-pull p{font:500 var(--type-lead)/1.2 var(--font);letter-spacing:0}
 .section-heading>p{font:500 var(--type-display)/1.2 var(--font);letter-spacing:0}
 .essay-title{font:700 var(--type-display)/1.1 var(--font);letter-spacing:0}
@@ -70,5 +72,6 @@ html[lang="ja"] body.home-page :is(.intro h1,.section-copy){font-weight:600}
 
 /* Inline-block reveal words must carry their link's underline themselves. */
 [data-ink] a .ink{text-decoration-line:inherit;text-decoration-thickness:inherit;text-underline-offset:inherit}
-.home-page .intro .familiar-characters{text-decoration-line:none}
-.home-page .intro .familiar-characters .ink{text-decoration-line:underline}
+/* Keep this two-word link inline so its underline crosses the space. */
+.home-page .intro .familiar-characters{text-decoration-line:underline;text-decoration-skip-ink:none}
+.home-page .intro .familiar-characters .ink{display:inline;text-decoration-line:none}

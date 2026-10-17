@@ -16,9 +16,7 @@
     const words = copy.querySelectorAll('.ink');
     const last = words.length ? words[words.length - 1] : copy;
     const lastLineBottom = last.getBoundingClientRect().bottom - lead.getBoundingClientRect().top;
-    const trailingSpace = lead.offsetHeight - lastLineBottom;
     scene.style.setProperty('--bag-lead-top', `${innerHeight * .6 - lastLineBottom}px`);
-    scene.style.setProperty('--bag-cover-gap', `${Math.max(96, innerHeight * .4 - trailingSpace)}px`);
     scene.classList.add('has-bag-cover');
   };
   const schedule = () => {
