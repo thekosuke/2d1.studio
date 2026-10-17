@@ -21,7 +21,7 @@
 .work-detail-content{height:100%;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
 .work-close{position:absolute;z-index:2;top:24px;right:24px;width:32px;height:32px;display:grid;place-items:center;padding:0;border:0;background:var(--beige);color:var(--ink)}
 .work-close span{display:block;width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
-.work-close:is(:hover,:focus-visible){background:var(--red);color:var(--white)}
+.work-close:is(:hover,:focus-visible){background:var(--red);color:var(--beige)}
 .work-detail-header{min-height:30svh;height:auto;padding:24px;display:flex;flex-direction:column;gap:20px;justify-content:flex-start}
 .work-trail{display:flex;align-items:center;gap:.4em;min-height:32px;padding-right:48px;margin:0;font:500 13px/1.4 var(--font);letter-spacing:.04em;text-transform:uppercase}
 .work-page .work-detail-title{font:700 var(--section-title)/1.2 var(--font);text-transform:none;letter-spacing:0;padding-right:48px;margin:0}
@@ -91,7 +91,7 @@ html.work-scroll-gallery.work-rebasing{scroll-snap-type:none;scroll-behavior:aut
 .work-detail-header{min-height:0;padding:150px var(--project-inset) 60px;gap:0}
 .work-trail{display:none}
 .work-page .work-detail-title,.work-page .work-description{font:500 clamp(28px,3.2vw,64px)/1.1 var(--font);letter-spacing:-.025em;max-width:none;margin:0;padding:0;text-wrap:pretty}
-.work-page .work-detail-title::after{content:','}
+.work-page .work-detail-title::after{content:none}
 .work-meta{display:grid;grid-template-columns:250px 300px 1fr;gap:40px;margin:300px 0 0;padding-right:10vw;font:400 18px/1.15 var(--font)}
 .work-meta dt{font-size:14px;line-height:1.5;margin-bottom:4px}
 .work-role-list{display:flex;flex-wrap:wrap;column-gap:.25em}
@@ -151,3 +151,17 @@ html:has(> body.work-page)::-webkit-scrollbar{display:none!important;width:0!imp
 .work-studio-footer .language-switch a:is([aria-current],:hover,:focus-visible){background:var(--ink);color:var(--white)}
 @media(min-width:1100px){.work-meta{grid-template-columns:calc(max(min(27.7778vw,400px),100% + 40px - var(--column) - 128px) - 60px) minmax(0,1fr) 30%}}
 .work-studio-footer .work-footer-language{bottom:auto;height:auto;gap:normal}
+
+/* Keep the previous cycle out of the opening view until every project is seen. */
+.js .work-project.is-before-first-pass{visibility:hidden;pointer-events:none}
+
+/* One inset keeps the project toolbar and page edges optically balanced. */
+.work-dialog{--project-inset:20px}
+.work-dialog-bar{position:absolute;z-index:2;top:var(--project-inset);left:var(--project-inset);right:var(--project-inset);display:flex;align-items:center;justify-content:space-between;gap:20px;pointer-events:none}
+.work-dialog-bar>*{pointer-events:auto}
+.work-dialog-bar .work-close{position:static;flex:none;margin:0}
+.work-dialog-bar .work-trail{display:flex;align-items:center;gap:0;min-height:32px;margin:0;padding:0;font:500 var(--type-label)/1.4 var(--font);letter-spacing:0;text-transform:none;flex-wrap:wrap}
+.work-trail a:is(:hover,:focus-visible){color:var(--red)}
+.work-detail-header>.work-trail{display:flex;margin-bottom:32px}
+.js .work-detail-header>.work-trail{display:none}
+.work-studio-footer{padding-bottom:var(--project-inset)}

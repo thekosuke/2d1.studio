@@ -77,3 +77,70 @@ html[lang="ja"] .about-page .essay-dek{font-size:20px;line-height:1.7}
 .about-page .essay-body a{text-decoration:underline;text-underline-offset:.18em}
 .about-page .essay-body a:hover,.about-page .essay-body a:focus-visible{color:var(--red)}
 @media(max-width:767px){.design-house{margin-top:32px}}
+
+/* Story opening: a broad introduction, then a diagram that rises over it. */
+.about-page.about-story-page .essay-page{width:100%;max-width:none;margin:0;padding:0 0 96px}
+.about-story-page .essay-head{display:block;padding:160px 0 96px}
+.about-story-page .essay-head>.column{display:flex;flex-direction:column;gap:24px}
+.about-story-page .essay-title{font:700 var(--type-display)/1.1 var(--font);letter-spacing:0;text-align:left;text-wrap:pretty}
+.about-story-page .essay-dek{font:400 20px/1.5 var(--font);text-wrap:pretty}
+.about-story-page .essay-body{margin-top:0}
+.about-story-scene{position:relative;isolation:isolate}
+.about-story-lead{position:relative;z-index:0;padding-bottom:var(--space)}
+.about-page.about-story-page .essay-lede{font:500 var(--type-lead)/1.4 var(--font);letter-spacing:0;text-align:left}
+.about-story-page .design-house{position:relative;z-index:1;display:grid;place-items:center;min-height:100svh;margin:var(--space) 0 0;padding:48px 24px;background:var(--studio-background);color:var(--white)}
+.design-house-diagram{display:block;width:100%;max-width:1440px;height:auto;max-height:calc(100svh - 96px)}
+.design-house-diagram path{stroke-linejoin:round;stroke-linecap:round}
+.house-edge{stroke:currentColor;stroke-width:6;fill:none}
+.house-solid{fill:var(--studio-background)}
+.house-shading{fill:url(#house-section-hatch);opacity:.2}
+.house-bevel{fill:none;stroke:currentColor;stroke-width:1.5;opacity:.35}
+.house-room-label{fill:currentColor;font:700 36px var(--font)}
+.about-story-page .design-house{overflow:clip}
+.design-house-diagram{overflow:visible;transform:translateY(var(--house-entry-offset,0px))}
+.about-story-page .design-house{display:block;padding:0}
+.house-stage{display:grid;place-items:center;width:100%;min-height:100svh;padding:48px 24px}
+.about-story-page .design-house.has-house-assembly{min-height:185svh}
+.has-house-assembly .house-stage{position:sticky;top:0;height:100svh}
+.has-about-cover .about-story-lead{position:sticky;top:var(--about-lead-top)}
+.about-story-page .has-about-cover .design-house{margin-top:var(--about-cover-gap)}
+.about-story-page .essay-rest{width:calc(100% - 2 * var(--inner-page-inset));margin-inline:var(--inner-page-inset);padding-top:var(--space)}
+.about-story-page .essay-rest>section:first-child>h2{margin-top:0}
+html[lang="ja"] .about-page.about-story-page .essay-lede{font-weight:600;font-size:var(--type-lead);line-height:1.75}
+@media(max-width:767px){
+ .about-story-page .essay-head{padding:112px 0 64px}
+ .about-story-page .design-house{min-height:75svh;padding:0}
+ .house-stage{min-height:75svh;padding:32px 0}
+ .design-house-diagram{width:88%;max-height:calc(100svh - 64px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .has-about-cover .about-story-lead{position:relative;top:auto}
+ .about-story-page .has-about-cover .design-house{margin-top:var(--space)}
+}
+.about-story-page .page-nav a.is-on-diagram{color:var(--white)}
+.about-story-page .about-docked-logo.is-on-diagram::after{background-image:url('../img/brand/eyes.svg')}
+
+html[lang="ja"] .about-page.about-story-page .essay-title{font-size:var(--type-display);line-height:1.3}
+
+/* Red opening panel, followed by two separate introductory paragraphs. */
+.about-story-page .essay-head{min-height:60svh;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:stretch;padding:96px 0 48px;background:var(--red);color:var(--beige)}
+.about-story-page .essay-head>.column{gap:12px}
+.about-story-page .essay-head .essay-dek{color:inherit}
+.about-story-page .essay-dek a{color:inherit;text-decoration:underline;text-underline-offset:.18em}
+.about-story-page .essay-dek a:hover,.about-story-page .essay-dek a:focus-visible{color:var(--ink)}
+.about-story-page .about-story-lead{padding-top:var(--space)}
+.about-story-page .essay-lede+.essay-lede{margin-top:1em}
+.about-story-page .about-opening{color:var(--cranberry-brown)}
+.about-story-page .about-opening a{text-decoration-line:none}
+.about-story-page .about-opening a .ink{text-decoration-line:underline}
+.about-story-page .about-opening:not(.is-inking) a{text-decoration-line:underline}
+
+/* A larger opening title and subtitle, retaining the bottom-aligned group. */
+.about-page.about-story-page .essay-head .essay-title{font-size:clamp(52px,6.25vw,96px)}
+.about-page.about-story-page .essay-head .essay-dek{font-size:28px;line-height:1.45}
+html[lang="ja"] .about-page.about-story-page .essay-head .essay-title{font-size:clamp(52px,6.25vw,96px)}
+html[lang="ja"] .about-page.about-story-page .essay-head .essay-dek{font-size:28px;line-height:1.6}
+@media(max-width:767px){
+ .about-page.about-story-page .essay-head .essay-dek,
+ html[lang="ja"] .about-page.about-story-page .essay-head .essay-dek{font-size:24px}
+}

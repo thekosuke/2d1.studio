@@ -1,0 +1,6 @@
+/* A shared viewport reference avoids shifts when routes hide their scrollbar. */
+:root{--dock-logo-width:96px;--dock-logo-top:16px}
+@media(max-width:767px){:root{--dock-logo-width:64px}}
+.about-page .about-docked-logo{top:var(--dock-logo-top);left:50vw;width:var(--dock-logo-width)}
+.js .home-brand{left:50vw}
+.objects-page .objects-header .site-logo{position:fixed;top:var(--dock-logo-top);left:50vw;width:var(--dock-logo-width);height:auto;margin:0;padding:0;transform:translateX(-50%)}

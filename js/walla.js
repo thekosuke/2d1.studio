@@ -9,6 +9,7 @@
   const arrivalHash=location.hash;
   const mobile = matchMedia('(max-width: 767px)');
   const studio = document.getElementById('studio');
+  const whiteStudy = document.querySelector('.bag-study');
   let sceneQueued = false;
   function paintScene() {
     sceneQueued = false;
@@ -31,7 +32,13 @@
       const navOnStudio = box.top <= 48 && box.bottom > 48;
       document.documentElement.style.setProperty('--scene-ink', navOnStudio ? '#faf0e6' : '#320505');
       const language=document.querySelector('.home-page > .language-switch');
-      if(language){const toggle=language.getBoundingClientRect();language.classList.toggle('on-studio',box.top<=toggle.top+toggle.height/2&&box.bottom>toggle.top+toggle.height/2);}
+      if(language){
+        const toggle=language.getBoundingClientRect();
+        const center=toggle.top+toggle.height/2;
+        language.classList.toggle('on-studio',box.top<=center&&box.bottom>center);
+        const whiteGround=whiteStudy?.getBoundingClientRect();
+        language.classList.toggle('on-white',Boolean(whiteGround&&whiteGround.top<=center&&whiteGround.bottom>center));
+      }
 
     }
   }
@@ -117,8 +124,18 @@
   const caption = document.querySelector('.masthead .brand-caption');
   if (logo) {
     const hero = slot.closest('.masthead');
-    // Keep the docked logo above the content sheet, outside the hero’s stacking context.
-    hero.insertAdjacentElement('afterend', logo);
+    // One fixed unit keeps the mark and caption on the same composited transform.
+    // Preserve the caption's layout slot so the hero's initial centering is stable.
+    const brand = document.createElement('div');
+    brand.className = 'home-brand';
+    if (caption) {
+      const spacer = caption.cloneNode(false);
+      spacer.setAttribute('aria-hidden', 'true');
+      caption.replaceWith(spacer);
+    }
+    brand.append(logo);
+    if (caption) brand.append(caption);
+    hero.insertAdjacentElement('afterend', brand);
     function fitCaption() {
       const text = caption?.querySelector('span');
       if (!text) return;
@@ -129,6 +146,8 @@
       if (landingCaption) landingCaption.style.fontSize = caption.style.fontSize;
     }
     fitCaption();
+    const logoMark = logo.querySelector('img');
+    const redLogoUrl = logoMark.src;
     let queued = false;
     function position() {
       queued = false;
@@ -148,23 +167,23 @@
       const scrollTop = Math.max(0, scrollY);
       // Logo and Intro settle on the same scroll endpoint: the hero clears.
       const progress = Math.max(0, Math.min(1, scrollTop / Math.max(1, hero.offsetHeight)));
-      const dockWidth = innerWidth < 768 ? 64 : 96;
+      const dockStyle = getComputedStyle(document.documentElement);
+      const dockWidth = parseFloat(dockStyle.getPropertyValue('--dock-logo-width')) || (innerWidth < 768 ? 64 : 96);
       const scale = reduced.matches ? (progress === 1 ? dockWidth / box.width : 1) : 1 - progress * (1 - dockWidth / box.width);
-      const logoTop = start + (16 - start) * progress;
+      const dockTop = parseFloat(dockStyle.getPropertyValue('--dock-logo-top')) || 16;
+      const logoTop = start + (dockTop - start) * progress;
       if (caption) {
-        // Keep the caption attached beneath the shrinking mark; fade only in
-        // the final quarter of the docking movement.
-        const naturalTop = hero.getBoundingClientRect().top + hero.clientTop + caption.offsetTop;
-        const targetTop = logoTop + (box.height + 12) * scale;
-        caption.style.transform = reduced.matches ? 'none' : `translateY(${targetTop - naturalTop}px) scale(${scale})`;
+        // Only visibility changes independently; all movement belongs to brand.
         const fade = Math.max(0, Math.min(1, (progress - .75) / .25));
         caption.style.opacity = reduced.matches ? (progress === 1 ? '0' : '1') : String(1 - fade);
       }
-      logo.style.width = `${box.width}px`;
-      logo.style.transform = `translate(-50%, ${logoTop}px) scale(${scale})`;
+      brand.style.width = `${box.width}px`;
+      brand.style.setProperty('--home-brand-width', `${box.width}px`);
+      brand.style.transform = `translate(-50%, ${logoTop}px) scale(${scale})`;
+
     }
     // Supplied pixel-eye artwork, reversed to beige with red highlights on the red D.
-    const eyesUrl = new URL('eyes-on-red.svg?v=2', logo.querySelector('img').src).href;
+    const eyesUrl = new URL('eyes-on-red.svg?v=2', redLogoUrl).href;
     logo.insertAdjacentHTML('beforeend', `<svg class="logo-eyes" viewBox="0 0 829 280" aria-hidden="true" focusable="false"><image class="logo-eye" href="${eyesUrl}" x="317" y="103" width="116" height="48"/></svg>`);
     const eyeTimers = new Set();
     const later = (fn, delay) => {

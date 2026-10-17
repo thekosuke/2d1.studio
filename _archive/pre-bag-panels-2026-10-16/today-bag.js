@@ -46,7 +46,7 @@
         deckHeight = deck.offsetHeight;
         specHeight = specs.offsetHeight;
         editorial.style.setProperty('--spec-reserve', `${Math.max(0, specHeight - deckHeight)}px`);
-        step = Math.max(260, Math.min(520, innerHeight * .55));
+        step = Math.max(440, Math.min(900, innerHeight * .95));
         story.style.setProperty('--pin-height', `${height}px`);
         story.style.setProperty('--pin-top', `${pinTop}px`);
         story.style.setProperty('--story-distance', `${step * features.length}px`);
@@ -74,16 +74,16 @@
     const bounds = story.getBoundingClientRect();
     const progress = clamp((pinTop - bounds.top) / step, 0, features.length);
     const index = Math.min(Math.floor(progress), features.length - 1);
-    const flight = clamp((progress - index - .55) / .45);
+    const flight = clamp((progress - index - .7) / .3);
     const active = index + (flight > .55 ? 1 : 0);
     select(bounds.top <= pinTop + 40 && active < features.length && progress < features.length
       ? features[active].dataset.bagFeature : null);
-    const lastFlight = clamp((progress - (features.length - 1) - .55) / .45);
+    const lastFlight = clamp((progress - (features.length - 1) - .7) / .3);
     // The complete specifications sit below the deck, then rise into its
     // vacated space during the final throw. Never crop the table.
     specs.style.setProperty('--spec-rise', `${-deckHeight * lastFlight}px`);
     features.forEach((node, i) => {
-      const throwProgress = clamp((progress - i - .55) / .45);
+      const throwProgress = clamp((progress - i - .7) / .3);
       const depth = clamp(i - index - flight, 0, 3);
       node.style.setProperty('--card-order', features.length - i);
       node.style.setProperty('--card-x', `${throwProgress * deck.clientWidth * .14}px`);

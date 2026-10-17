@@ -36,28 +36,35 @@
       root.classList.add('js');
       let seen=false;
       try{seen=sessionStorage.getItem('2d1-home-landing-seen')==='1';sessionStorage.setItem('2d1-home-landing-seen','1');}catch{}
-      if(seen)root.classList.add('landing-seen');
-      else if(!matchMedia('(prefers-reduced-motion: reduce)').matches)root.classList.add('is-landing');
+      // Refresh/history restores the browser's own position; never skip to intro.
+      const navigationType=performance.getEntriesByType('navigation')[0]?.type;
+      const restoring=navigationType==='reload'||navigationType==='back_forward';
+      if(seen&&!restoring)root.classList.add('landing-seen');
+      else if(!seen&&!restoring&&!matchMedia('(prefers-reduced-motion: reduce)').matches)root.classList.add('is-landing');
     })();
   </script>
   <link rel="preload" href="fonts/SC%20Walla%20Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/fonts.css?v=7">
-  <link rel="stylesheet" href="css/walla.css?v=88">
+  <link rel="stylesheet" href="css/walla.css?v=97">
   <link rel="stylesheet" href="css/dialogs.css?v=19">
   <link rel="stylesheet" href="css/mobile-nav.css?v=4">
-<link rel="stylesheet" href="css/typography.css?v=10">
+<link rel="stylesheet" href="css/typography.css?v=13">
   <script src="js/language.js?v=1" defer></script>
   <script src="js/config.js" defer></script>
   <script src="js/drawers.js?v=2" defer></script>
   <script src="js/contact.js?v=12" defer></script>
-  <link rel="stylesheet" href="css/today-bag.css?v=25">
-  <script src="js/today-bag.js?v=15" defer></script>
+  <link rel="stylesheet" href="css/today-bag.css?v=60">
   <script src="js/mobile-nav.js?v=3" defer></script>
   <script src="js/site.js?v=4" defer></script>
-  <script src="js/walla.js?v=20" defer></script>
-  <script src="js/reading-ink.js?v=7" defer></script>
+  <script src="js/walla.js?v=27" defer></script>
+  <script src="js/reading-ink.js?v=9" defer></script>
+  <script src="js/bag-cover.js?v=1" defer></script>
+  <script src="js/bag-layout.js?v=1" defer></script>
+  <script src="js/bag-material.js?v=1" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/2d1-brand.png?v=2","slogan":"Familiar Characters","description":"An independent design studio working in branding and digital products, and an editorial home for Familiar Characters."}</script>
-<link rel="stylesheet" href="css/shared-controls.css?v=8">
+<link rel="stylesheet" href="css/shared-controls.css?v=10">
+<link rel="stylesheet" href="css/button-fill.css?v=3">
+<link rel="stylesheet" href="css/logo-dock.css?v=1">
 </head>
 <body id="top" class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -73,13 +80,13 @@
   <nav class="page-nav" id="page-navigation" aria-label="Pages"><a href="./"><span class="nav-label">Home</span></a><a href="work/" data-work-nav><span class="nav-label">Work</span></a><a href="about/"><span class="nav-label">About</span></a><span class="page-nav-contact"><a href="contact/"><span class="nav-label">Contact</span></a></span><a class="nav-finds" href="finds/"><span class="nav-label">Finds</span></a></nav>
   <main id="main">
     <section class="intro column section-stack" aria-label="Introduction">
-      <h1 data-ink>2D1 is an <em class="copy-emphasis">independent design practice</em> working across brands, digital products, and ideas. We help shape things from early concept to how they look, work, and live in the world.<br><br>Alongside client work, we make things of our own with people we like and curate objects that we call <a class="familiar-characters copy-emphasis" href="finds/" translate="no">Familiar Characters</a> — companions that quietly collect a life around them to eventually become part of our routine.</h1>
+      <h1 data-ink>2D1 is an independent design practice working across <em class="copy-emphasis">brands, digital products, and ideas</em>. We help shape things from early concept to how they look, work, and live in the world.<br><br>Alongside client work, we make things of our own with people we like and curate objects that we call <a class="familiar-characters copy-emphasis" href="finds/" translate="no">Familiar Characters</a> — companions that quietly collect a life around them to eventually become part of our routine.</h1>
       <div class="button-stack"><a class="intro-cta" href="about/">More about us <span class="pixel-arrow" aria-hidden="true">→</span></a></div>
     </section>
     <section id="studio" class="section-stack studio" aria-labelledby="studio-label">
       <div class="column studio-opening">
         <div class="section-heading"><h2 id="studio-label">Studio</h2><p>Clear ideas,<br>with character.</p></div>
-        <div class="section-copy prose"><p data-ink>At our core, we’re a design studio.</p><p data-ink>We work with small teams and businesses to make their ideas clear and give them character. From strategy and visual identity down to the pixels of an interface, we bring <em class="copy-emphasis">a fresh pair of eyes</em> and a hands-on approach.</p><p data-ink>The aim is to create something that is <em class="copy-emphasis">clear, intuitive, and uniquely you.</em></p></div>
+        <div class="section-copy prose"><p data-ink><em class="copy-emphasis">At our core, we’re a design studio.</em></p><p data-ink><span>We work with small teams and businesses</span> to make their ideas clear and give them character. From <em class="copy-emphasis">strategy and visual identity down to the pixels of an interface</em>, we bring a fresh pair of eyes and a hands-on approach.</p><p data-ink>The aim is to create something that is <em class="copy-emphasis">clear, intuitive, and uniquely you.</em></p></div>
       </div>
       <div class="work-belt" tabindex="0" role="region" aria-label="Selected design work. Scroll to browse; press Space to pause or resume motion." data-carousel><div class="work-track"><ul class="work-set"><li><img src="img/projects/studio-01-560.webp" srcset="img/projects/studio-01-560.webp 560w, img/projects/studio-01-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Aviator identity against a purple sky" loading="lazy" decoding="async"></li>
 <li><img src="img/projects/studio-02-560.webp" srcset="img/projects/studio-02-560.webp 560w, img/projects/studio-02-1120.webp 1081w" sizes="280px" width="280" height="280" alt="Aviator website design" loading="lazy" decoding="async"></li>
@@ -98,81 +105,44 @@
       </div>
     </section>
     <section id="shop" class="section-stack" aria-labelledby="shop-label">
+      <div class="bag-study-scene">
+      <div class="bag-study-lead" data-bag-cover-lead>
       <div class="section-heading column"><h2 id="shop-label">Shop</h2><p>House of familiar things.</p></div>
       <div class="section-copy prose column"><p data-ink><em class="copy-emphasis">The joy of making</em> is at the heart of what we do. The things we make for ourselves start the same way as our client work: with a clear idea and a detail that makes them their own.</p></div>
-      <figure class="bag-study" id="today-bag" aria-labelledby="bag-study-title">
-        <div class="bag-product-spread">
+      </div>
+      <figure class="bag-study" id="today-bag" aria-label="Today Bag">
+        <header class="bag-story-heading bag-study-copy">
+          <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">Today Bag</em> is our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and a <em class="copy-emphasis">flash of red</em> so you know it’s yours.</p>
+        </header>
+        <div class="bag-layout-scroll"><div class="bag-product-spread">
           <div class="bag-study-stage">
-            <div class="bag-study-image"><img class="bag-study-photo" src="img/shop/today-bag-tag-enlarged.webp" width="1024" height="1536" alt="Photorealistic concept of Today Bag: dark canvas, a long shoulder strap, a compact red hand handle, beige logo, and a red tag at the bottom-left seam." loading="lazy" decoding="async"><svg class="bag-study-anatomy" viewBox="0 0 1024 1536" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                <defs><pattern id="bag-section-hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V10" stroke="currentColor" stroke-width="1"/></pattern></defs>
-                <!-- Orthographic construction study: primary edges, seam allowances, centerlines, section hatching. -->
-                <g class="bag-draft-outline">
-                  <path d="M220 848C279 530 361 28 500 23C639 18 696 540 808 848M288 848C344 529 395 46 500 45C605 44 644 529 740 848"/>
-                  <path d="M402 848V799Q402 764 439 764H585Q622 764 622 799V848M444 848V808Q444 803 449 803H575Q580 803 580 808V848"/>
-                  <path d="M151 848H875V1441Q875 1480 837 1480H190Q151 1480 151 1441ZM151 902H875"/>
-                  <path d="M86 1266H171V1351H86Z"/>
-                  <path d="M181 902V1438Q181 1454 198 1454H829Q845 1454 845 1438V902"/>
-                  <path d="M495 871H529V883H495Z"/>
-                </g>
-                <g class="bag-draft-seams"><path d="M162 859H864M162 891H864M169 902V1439Q169 1466 198 1466H829Q857 1466 857 1439V902M411 846V800Q411 774 439 774H585Q613 774 613 800V846"/></g>
-                <g class="bag-draft-section"><path d="M151 902H181V1438H151ZM845 902H875V1438H845ZM198 1454H829V1480H198Z"/></g>
-                <g class="bag-draft-interior">
-                  <path d="M587 1178H840V1448H587ZM587 1193H840"/>
-                  <path d="M199 1199H340V1258H199ZM199 1210H340M199 1247H340"/>
-                  <path class="bag-draft-seams" d="M597 1205V1438H830V1205M207 1217V1240M332 1217V1240"/>
-                </g>
-                <!-- Contents are secondary dashed outlines, entirely contained within the compartments. -->
-                <g class="bag-draft-contents"><path d="M238 1030H299V1069L318 1090V1410Q318 1424 305 1424H231Q218 1424 218 1410V1090L238 1069ZM238 1069H299M241 1040H296"/>
-                  <path transform="translate(0 138)" d="M623 1224H720Q731 1224 731 1235V1289Q731 1300 720 1300H623Q612 1300 612 1289V1235Q612 1224 623 1224ZM612 1249H731"/>
-                  <circle cx="783" cy="1337" r="15"/><path d="M777 1352V1419H790V1401H801V1390H790V1352"/>
-                  <path d="M374 986H558V1441H374ZM385 986V1441M549 995V1432"/>
-                </g>
-                <g class="bag-draft-guides"><path d="M512 12V1490M138 875H888M138 1466H888"/></g>
-                <g class="bag-draft-dimensions"><path d="M151 1490V1520M875 1490V1520M151 1505H875M145 1511L157 1499M869 1511L881 1499M885 848H934M885 1480H934M923 848V1480M917 854L929 842M917 1486L929 1474"/><text x="513" y="1530">400 mm</text><text x="950" y="1164" transform="rotate(-90 950 1164)">360 mm</text></g>
-              </svg><span class="bag-story-hotspot" data-bag-point="material" style="--x:40%;--y:73%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="shape" style="--x:67%;--y:27%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="shape" style="--x:50%;--y:51%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="pockets" style="--x:70%;--y:85%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="pockets" style="--x:26%;--y:80%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="closure" style="--x:50%;--y:57%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="tag" style="--x:12%;--y:85%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="logo" style="--x:50%;--y:64%" aria-hidden="true"></span></div>
+            <div class="bag-study-image"><img class="bag-study-photo" src="img/shop/today-bag-tag-enlarged.webp" width="1024" height="1536" alt="Photorealistic concept of Today Bag: dark canvas, a long shoulder strap, a compact red hand handle, beige logo, and a red tag at the bottom-left seam." loading="lazy" decoding="async"></div>
           </div>
           <div class="bag-editorial">
-            <div class="bag-story"><div class="bag-story-pin">
-            <header class="bag-story-heading">
-              <p class="bag-status">In development</p>
-              <h3 id="bag-study-title">Today Bag</h3>
-              <p class="bag-introduction">Our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and a flash of red so you know it’s yours.</p>
-            </header>
-            <div class="bag-features" aria-label="Design details"><div class="bag-feature" data-bag-feature="material"><p class="bag-feature-number">Feature 01</p><h4>Material: Armada No. 8 canvas</h4><p class="bag-feature-copy">Armada No. 8 cotton canvas. A substantial weave with a firm, structured feel, chosen to gain character through everyday use.</p></div>
-<div class="bag-feature" data-bag-feature="shape"><p class="bag-feature-number">Feature 02</p><h4>Shape and carrying</h4><p class="bag-feature-copy">An almost-square body, approximately 40 × 36 cm, with 10 cm of depth. A long shoulder strap for carrying it at your hip; a compact red handle for carrying it by hand.</p></div>
-<div class="bag-feature" data-bag-feature="pockets"><p class="bag-feature-number">Feature 03</p><h4>Inner pocket and bottle band</h4><p class="bag-feature-copy">A wide inner pocket sits at the base for keys, AirPods, and other small items. A separate band holds a bottle, a folding umbrella, or something tall and slim upright.</p></div>
-<div class="bag-feature" data-bag-feature="closure"><p class="bag-feature-number">Feature 04</p><h4>Magnetic closure</h4><p class="bag-feature-copy">A magnet concealed in the top hem brings the opening together without a visible clasp.</p></div>
-<div class="bag-feature" data-bag-feature="tag"><p class="bag-feature-number">Feature 05</p><h4>Woven tag: The Red Pixel</h4><p class="bag-feature-copy">An iconic 2D1 symbol. A square woven tag at the lower-left seam gives the bag its signature flash of red.</p></div>
-<div class="bag-feature" data-bag-feature="logo"><p class="bag-feature-number">Feature 06</p><h4>Embroidered logo</h4><p class="bag-feature-copy">The beige 2D1 logo is embroidered, giving it texture and a tactile finish against the dark canvas. Subtle charcoal pixel eyes appear on the other side.</p></div></div>
-            </div></div>
+
             <div class="bag-study-notes">
           <h4>Specifications</h4>
           <div><dl class="bag-study-specs">
-          <div><dt>Material</dt><dd>Armada No. 8 cotton canvas.</dd></div>
+          <div><dt>Material</dt><dd class="bag-material"><span>Armada No. 8 cotton canvas</span><details class="material-info"><summary aria-label="About Armada canvas"><span class="material-info-icon" aria-hidden="true"></span></summary><div class="material-tooltip"><p>Armada is Senda’s 100% cotton No. 8 canvas, with a coarse weave and a firm, starched finish. It starts structured and gradually softens with use. We chose it for a bag that holds its shape, then gains character as it becomes part of your day.</p></div></details></dd></div>
           <div><dt>Origin</dt><dd>Made in Japan</dd></div>
-          <div><dt>Dimensions</dt><dd>Approx. W 40 × H 36 × D 10 cm, excluding the strap.</dd></div>
-          <div><dt>Strap</dt><dd>A long dark shoulder strap and a compact red hand handle.</dd></div>
-          <div><dt>Red tag</dt><dd>A square red woven label at the lower-left side seam.</dd></div>
-          <div><dt>Pockets</dt><dd>A bottle-holding band and a wide pocket at the base for small items.</dd></div>
-          <div><dt>Opening</dt><dd>Magnetic closure sewn into the top hem.</dd></div>
-          <div><dt>Details</dt><dd>Subtle charcoal pixel eyes on the front; a small beige embroidered 2D1 logo centered near the top of the back.</dd></div>
-        </dl><p class="bag-study-spec-note">Prototype specifications. Dimensions and details may change before production.</p></div>
+          <div><dt>Dimensions</dt><dd>Approx. W 40 × H 36 × D 10 cm, excluding the strap</dd></div>
+          <div><dt>Straps</dt><dd>A dark shoulder strap and a bright red hand handle</dd></div>
+          <div><dt>Woven tag</dt><dd>A red pixel at the lower-left side seam</dd></div>
+          <div><dt>Pockets</dt><dd>A bottle-holding band and a wide pocket at the base for small items</dd></div>
+          <div><dt>Opening</dt><dd>Magnetic closure concealed in the top hem</dd></div>
+          <div><dt>Logo</dt><dd>Embroidered 2D1 logo</dd></div>
+        </dl><p class="bag-study-spec-note">AI-generated concept image. Prototype specifications: approx. 40 × 36 × 10 cm. Design, dimensions, and details may change before production.</p></div>
         </div>
           </div>
         </div>
-        <figcaption>AI-generated concept image. Approx. 40 × 36 × 10 cm. Design and dimensions subject to refinement.</figcaption>
+        </div>
+        <div class="bag-study-copy bag-closing"><div class="section-copy prose column shop-support-copy"><p data-ink><span>Today Bag</span> is <em class="copy-emphasis">still in development</em>. If you’d like it to become part of your day, sign up for updates.</p></div></div>
       </figure>
-      <div class="shop-signup column">
-        <div class="section-copy prose shop-support-copy"><p>Today Bag is <em class="copy-emphasis">still in development</em>. If you’d like it to become part of your day, sign up for updates.</p></div>
-        <div class="shop-actions"><h2 class="signup-heading" id="signup-heading">Stay updated</h2><form class="connect-form" aria-describedby="connect-status"><label for="connect-email" class="sr-only">Your email address</label><div class="connect-row"><input type="email" id="connect-email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" aria-describedby="connect-status" required disabled><button class="intro-cta" type="submit" disabled>Notify me when it’s out <span class="pixel-arrow" aria-hidden="true">→</span></button></div><p id="connect-status" role="status" hidden></p></form></div>
       </div>
+      <div class="shop-tail"><div class="shop-signup"><div class="column">
+        <h2 class="signup-heading">Sign up</h2>
+        <div class="shop-actions"><form class="connect-form" aria-describedby="connect-status"><label for="connect-email" class="sr-only">Your email address</label><div class="connect-row"><span class="signup-field"><input type="email" id="connect-email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" aria-describedby="connect-status" required disabled></span><button class="intro-cta" type="submit" disabled>Notify me when it’s out <span class="pixel-arrow" aria-hidden="true">→</span></button></div><p id="connect-status" role="status" hidden></p></form></div>
+      </div></div></div>
     </section>
 
   </main>

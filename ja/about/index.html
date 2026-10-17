@@ -34,24 +34,27 @@
   
   <link rel="stylesheet" href="../../css/fonts.css?v=7">
   <link rel="stylesheet" href="../../css/japanese-font.css?v=1">
-  <link rel="stylesheet" href="../../css/walla.css?v=84">
-  <link rel="stylesheet" href="../../css/about.css?v=18">
+  <link rel="stylesheet" href="../../css/walla.css?v=97">
+  <link rel="stylesheet" href="../../css/about.css?v=31">
   <script src="../../js/ja.js?v=9" defer></script>
   <script src="../../js/language.js?v=1" defer></script>
   <link rel="stylesheet" href="../../css/dialogs.css?v=19">
   <link rel="stylesheet" href="../../css/mobile-nav.css?v=4">
-<link rel="stylesheet" href="../../css/typography.css?v=10">
+<link rel="stylesheet" href="../../css/typography.css?v=13">
   <script src="../../js/config.js" defer></script>
   <script src="../../js/drawers.js?v=2" defer></script>
   <script src="../../js/contact.js?v=12" defer></script>
   <script src="../../js/mobile-nav.js?v=3" defer></script>
   <script src="../../js/site.js?v=4" defer></script>
-  <script src="../../js/about.js?v=2" defer></script>
-  <script src="../../js/reading-ink.js?v=7" defer></script>
+  <script src="../../js/about.js?v=7" defer></script>
+  <script src="../../js/house-assembly.js?v=2" defer></script>
+  <script src="../../js/reading-ink.js?v=10" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "name": "2D1について", "url": "https://2d1.studio/ja/about/", "mainEntity": {"@type": "Organization", "name": "2D1", "url": "https://2d1.studio/", "logo": "https://2d1.studio/img/brand/2d1-brand.png?v=2", "slogan": "Familiar Characters"}}</script>
-<link rel="stylesheet" href="../../css/shared-controls.css?v=8">
+<link rel="stylesheet" href="../../css/shared-controls.css?v=10">
+<link rel="stylesheet" href="../../css/button-fill.css?v=3">
+<link rel="stylesheet" href="../../css/logo-dock.css?v=1">
 </head>
-<body class="about-page" id="top">
+<body class="about-page about-story-page" id="top">
   <a class="skip-link" href="#main">本文へ移動</a>
   <template id="about-hero-archive">
   <header class="masthead about-masthead"><a class="site-logo" href="../" aria-label="2D1、ホームへ"><img src="../../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a><p class="brand-caption">身近なものに、らしさを。</p></header>
@@ -60,25 +63,76 @@
   <button class="mobile-nav-toggle" type="button" aria-label="ナビゲーションメニュー" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
   <nav class="page-nav is-visible" id="page-navigation" aria-label="ページ"><a href="../"><span class="nav-label">ホーム</span></a><a href="../work/" data-work-nav><span class="nav-label">制作実績</span></a><a href="./" aria-current="page"><span class="nav-label">2D1について</span></a><span class="page-nav-contact"><a href="../contact/"><span class="nav-label">お問い合わせ</span></a></span><a class="nav-finds" href="../finds/"><span class="nav-label">Finds</span></a></nav>
 
-  <main id="main" class="essay-page column">
+  <main id="main" class="essay-page">
 
     <article class="essay">
-      <header class="essay-head">
-        <h1 class="essay-title">デザインハウス、2D1について</h1>
-        <p class="essay-dek">クライアントワーク、自分でつくるもの、何度も気になってしまうもの。</p>
-      </header>
+      <header class="essay-head"><div class="column">
+        <h1 class="essay-title">2D1<br>デザインハウス</h1>
+        <p class="essay-dek">独立したデザインプラクティス。主宰：<a href="https://kosuke.com/" target="_blank" rel="noopener noreferrer" aria-label="二日一宏祐のポートフォリオ（新しいタブで開きます）">二日一宏祐</a></p>
+      </div></header>
       <div class="essay-body">
-        <p class="essay-lede">2D1は、私、<a href="https://kosuke.com/" target="_blank" rel="noopener noreferrer" aria-label="二日一宏祐のポートフォリオ（新しいタブで開きます）">二日一宏祐</a>による独立したデザインプラクティスです。クライアントと仕事をする、自分のものをつくる、Familiar Charactersだと感じる日用品を集めて紹介する。そのための場所を、デザインハウスと捉えています。スタジオ、ショップ、キュレーションという3つの形をとっていますが、どれも身の回りに置くものにこだわってしまう、同じ習慣から生まれています。</p>
-        <figure class="design-house">
-          <img src="../../img/about/design-house.png" width="1138" height="813" alt="スタジオ、ショップ、Findsの3つの部屋からなる2D1のデザインハウス。" loading="lazy" decoding="async">
-        </figure>
+        <div class="about-story-scene"><div class="about-story-lead"><p class="essay-lede about-opening section-copy column" data-ink>2D1はデザインハウスです。クライアントと仕事をする、自分のものをつくる、<a href="../finds/">Familiar Characters</a>だと感じる日用品を集めて紹介する。そのための場所です。</p>
+          <p class="essay-lede section-copy column" data-ink>スタジオ、ショップ、キュレーションという3つの形をとっていますが、どれも身の回りに置くものにこだわってしまう、同じ習慣から生まれています。</p>
+        </div><figure class="design-house">
+          <div class="house-stage">
+          <svg class="design-house-diagram" viewbox="30 -10 890 760" role="img" aria-labelledby="design-house-description">
+            <title id="design-house-description">スタジオ、ショップ、Findsの3つの部屋からなる2D1のデザインハウス。</title>
+            <defs><pattern id="house-section-hatch" width="8" height="8" patternunits="userSpaceOnUse"><path d="M-1 1L1 -1M0 8L8 0M7 9L9 7" fill="none" stroke="currentColor" stroke-width=".7"></path></pattern></defs>
+            <g aria-hidden="true">
+            <g class="house-piece" data-house-piece="0" data-pivot="279.5 422.5">
+            <defs><clippath id="house-piece-clip-0"><path d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"></path></clippath></defs>
+            <path class="house-solid" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"></path>
+            <g clip-path="url(#house-piece-clip-0)">
+            <path class="house-shading" d="M329.0,603.0 L449.0,507.0 L449.0,267.0 L329.0,363.0 Z"></path>
+            <path class="house-edge" d="M120.0,330.0 L329.0,363.0 L449.0,267.0"></path>
+            <path class="house-edge" d="M329.0,363.0 L329.0,603.0"></path>
+            <path class="house-bevel" d="M129.5,555.5 Q129.5,561.5 135.4,562.4 L313.6,590.6 Q319.5,591.5 319.5,585.5 L319.5,377.5 Q319.5,371.5 313.6,370.6 L135.4,342.4 Q129.5,341.5 129.5,347.5 Z"></path><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 224.5 476.5)">スタジオ</text>
+            </g>
+            <path class="house-edge" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"></path>
+            </g>
+            <g class="house-piece" data-house-piece="1" data-pivot="499.9 457.3">
+            <defs><clippath id="house-piece-clip-1"><path d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"></path></clippath></defs>
+            <path class="house-solid" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"></path>
+            <g clip-path="url(#house-piece-clip-1)">
+            <path class="house-shading" d="M549.4,637.8 L669.4,541.8 L669.4,301.8 L549.4,397.8 Z"></path>
+            <path class="house-edge" d="M340.4,364.8 L549.4,397.8 L669.4,301.8"></path>
+            <path class="house-edge" d="M549.4,397.8 L549.4,637.8"></path>
+            <path class="house-bevel" d="M349.9,590.3 Q349.9,596.3 355.8,597.2 L534.0,625.4 Q539.9,626.3 539.9,620.3 L539.9,412.3 Q539.9,406.3 534.0,405.4 L355.8,377.2 Q349.9,376.3 349.9,382.3 Z"></path><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 444.9 511.3)">ショップ</text>
+            </g>
+            <path class="house-edge" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"></path>
+            </g>
+            <g class="house-piece" data-house-piece="2" data-pivot="720.3 492.1">
+            <defs><clippath id="house-piece-clip-2"><path d="M560.8,415.6 Q560.8,399.6 573.3,389.6 L668.3,313.6 Q680.8,303.6 696.6,306.1 L874.0,334.1 Q889.8,336.6 889.8,352.6 L889.8,560.6 Q889.8,576.6 877.3,586.6 L782.3,662.6 Q769.8,672.6 754.0,670.1 L576.6,642.1 Q560.8,639.6 560.8,623.6 Z"></path></clippath></defs>
+            <path class="house-solid" d="M560.8,415.6 Q560.8,399.6 573.3,389.6 L668.3,313.6 Q680.8,303.6 696.6,306.1 L874.0,334.1 Q889.8,336.6 889.8,352.6 L889.8,560.6 Q889.8,576.6 877.3,586.6 L782.3,662.6 Q769.8,672.6 754.0,670.1 L576.6,642.1 Q560.8,639.6 560.8,623.6 Z"></path>
+            <g clip-path="url(#house-piece-clip-2)">
+            <path class="house-shading" d="M769.8,672.6 L889.8,576.6 L889.8,336.6 L769.8,432.6 Z"></path>
+            <path class="house-edge" d="M560.8,399.6 L769.8,432.6 L889.8,336.6"></path>
+            <path class="house-edge" d="M769.8,432.6 L769.8,672.6"></path>
+            <path class="house-bevel" d="M570.3,625.1 Q570.3,631.1 576.2,632.0 L754.4,660.2 Q760.3,661.1 760.3,655.1 L760.3,447.1 Q760.3,441.1 754.4,440.2 L576.2,412.0 Q570.3,411.1 570.3,417.1 Z"></path><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 665.3 546.1)">Finds</text>
+            </g>
+            <path class="house-edge" d="M560.8,415.6 Q560.8,399.6 573.3,389.6 L668.3,313.6 Q680.8,303.6 696.6,306.1 L874.0,334.1 Q889.8,336.6 889.8,352.6 L889.8,560.6 Q889.8,576.6 877.3,586.6 L782.3,662.6 Q769.8,672.6 754.0,670.1 L576.6,642.1 Q560.8,639.6 560.8,623.6 Z"></path>
+            </g>
+            <g class="house-piece" data-house-piece="3" data-pivot="505 270">
+            <defs><clippath id="house-piece-clip-3"><path d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 241.2,218.9 L556.7,57.8 Q570.9,50.5 583.2,60.7 L902.5,324.6 Q914.8,334.8 902.3,344.8 L795.3,430.4 Q782.8,440.4 767.0,437.9 Z"></path></clippath></defs>
+            <path class="house-solid" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 241.2,218.9 L556.7,57.8 Q570.9,50.5 583.2,60.7 L902.5,324.6 Q914.8,334.8 902.3,344.8 L795.3,430.4 Q782.8,440.4 767.0,437.9 Z"></path>
+            <g clip-path="url(#house-piece-clip-3)">
+            <path class="house-shading" d="M438.9,156.1 L782.8,440.4 L914.8,334.8 L570.9,50.5 Z"></path>
+            <path class="house-edge" d="M95.0,331.8 L438.9,156.1 L782.8,440.4"></path>
+            <path class="house-edge" d="M438.9,156.1 L570.9,50.5"></path>
+            <image href="../../img/brand/logo_white.svg" width="176" height="59.4" transform="matrix(.95 .15 0 1 355.3 261.9)"></image>
+            </g>
+            <path class="house-edge" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 241.2,218.9 L556.7,57.8 Q570.9,50.5 583.2,60.7 L902.5,324.6 Q914.8,334.8 902.3,344.8 L795.3,430.4 Q782.8,440.4 767.0,437.9 Z"></path>
+            </g>
+            </g>
+            </svg></div>
+        </figure></div>
         <div class="essay-rest" id="essay-rest">
           <section aria-labelledby="an-eye-for-things">
             <h2 id="an-eye-for-things">ものを見る目</h2>
             <p>8歳の頃、好きな服のブランドがあって、着るものはほとんどそこで揃えたいと思っていました。母にお店へ連れて行ってもらうと、自分で服を選び、一人で試着して、気に入らなかったものはきちんと畳んで、試着室のカーテンの下から渡していました。小さな「これは違う」の山。<strong>見た目も、触った感じも、自分の空間にどう収まるかも、いつも気になっていました。</strong></p>
-            <p>その関心から、サイモンフレーザー大学のSchool of Interactive Arts &amp; Technologyで、ユーザー体験のデザインを中心に学びました。<a href="https://2018.sfuitaliadesign.com/" target="_blank" rel="noopener noreferrer">2018年に参加したitaliaDesignのフィールドスクール</a>では、デザインに対する見方が広がりました。インタビューしたイタリアのデザイナーたちは、<strong>デザインを姿勢や、ものの見方、生き方として</strong>語っていました。それは、北米で触れてきた、職業としてのデザインを重視する考え方とは違って感じられました。専門外の分野でも、何がそのデザインをよくしているのかを見つけられるようになり、仕事の枠を超えた活動を想像するきっかけにもなりました。</p>
+            <p>その関心から、サイモンフレーザー大学のSchool of Interactive Arts &amp; Technologyで、ユーザー体験のデザインを中心に学びました。<a href="https://2018.sfuitaliadesign.com/" target="_blank" rel="noopener noreferrer">italiaDesignのフィールドスクール</a>では、デザインに対する見方が広がりました。インタビューしたイタリアのデザイナーたちは、<strong>デザインを姿勢や、ものの見方、生き方として</strong>語っていました。それは、北米で触れてきた、職業としてのデザインを重視する考え方とは違って感じられました。専門外の分野でも、何がそのデザインをよくしているのかを見つけられるようになり、仕事の枠を超えた活動を想像するきっかけにもなりました。</p>
             <p>ものを見るのと同じくらい、自分で何かをつくることにも、ずっと興味がありました。子どもの頃は、便利グッズのアイデアを母に話していました。小学6年生の卒業文集に書いた将来の夢は「発明家」。大学卒業後は、創業間もないスタートアップに、最初の社員兼創業デザイナーとして入りました。共同創業者たちが好きで、挑戦にもワクワクしていましたが、いつか自分で会社を始めたくなったときのために、そのつくり方を学びたい気持ちもありました。</p>
-            <p>その後もテック系のスタートアップで働き、2023年にTakram Tokyoに入りました。大きな企業や組織のデジタル体験を手がけながら、画面の外にも活動が広がるデザイナーたちと一緒に働いています。グラフィックデザイナーが印刷物をつくり、インダストリアルデザイナーが実物の試作品をつくる様子を見て、日用品をデザインすることが、自分にも手の届くものに感じられるようになりました。必要なことを学び、自分にない知識を持つ人と組めば、自分も挑戦できるのでは、と思うようになったんです。</p>
+            <p>その後もテック系のスタートアップで働き、Takram Tokyoに入りました。大きな企業や組織のデジタル体験を手がけながら、画面の外にも活動が広がるデザイナーたちと一緒に働いています。グラフィックデザイナーが印刷物をつくり、インダストリアルデザイナーが実物の試作品をつくる様子を見て、日用品をデザインすることが、自分にも手の届くものに感じられるようになりました。必要なことを学び、自分にない知識を持つ人と組めば、自分も挑戦できるのでは、と思うようになったんです。</p>
           </section>
           <section aria-labelledby="room-for-more">
             <h2 id="room-for-more">やりたいことの余地</h2>

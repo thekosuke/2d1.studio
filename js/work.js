@@ -18,16 +18,27 @@
   projects.push(project);
  });
  grid.replaceChildren(...projects);
+ // The opening pass has a beginning. Reveal the wraparound only after all
+ // three real projects have reached the center at least once.
+ let loopReady=false;
+ const visited=new Set();
+ projects.slice(0,middle).forEach(project=>project.classList.add('is-before-first-pass'));
  let centered=null,scrollFrame=0,settleTimer=0,rebasing=false,restoreFrame=0;
  const updateCenter=()=>{
   scrollFrame=0;
-  const next=projects.reduce((nearest,project)=>{
+  const next=projects.reduce((nearest,project,index)=>{
+   if(!loopReady&&index<middle)return nearest;
    const box=project.querySelector('summary').getBoundingClientRect();
    const distance=Math.abs(box.top+box.height/2-innerHeight/2);
    return !nearest||distance<nearest.distance?{project,distance}:nearest;
   },null)?.project;
   if(next===centered)return;
   centered=next;
+  visited.add(Number(centered.dataset.projectIndex));
+  if(!loopReady&&visited.size===originals.length){
+   loopReady=true;
+   projects.forEach(project=>project.classList.remove('is-before-first-pass'));
+  }
   projects.forEach(project=>{
    const active=project===centered;
    project.classList.toggle('is-centered',active);
@@ -67,6 +78,10 @@
  const centerProject=project=>project.querySelector('summary').scrollIntoView({block:'center',behavior:reduced.matches?'instant':'smooth'});
  addEventListener('scroll',()=>{
   if(rebasing||dialog.open)return;
+  if(!loopReady){
+   const first=originals[0].querySelector('summary').getBoundingClientRect();
+   if(first.top+first.height/2>innerHeight/2+1){jumpTo(originals[0]);return}
+  }
   if(!scrollFrame)scrollFrame=requestAnimationFrame(()=>{
    updateCenter();
    const index=projects.indexOf(centered);
@@ -96,6 +111,7 @@
    const step=event.key==='ArrowDown'?1:event.key==='ArrowUp'?-1:0;
    if(!step)return;event.preventDefault();
    const index=projects.indexOf(project);
+   if(!loopReady&&step<0&&index===middle)return;
    const next=projects[index+step]||projects[middle+(Number(project.dataset.projectIndex)+step+originals.length)%originals.length];
    next.querySelector('summary').focus({preventScroll:true});centerProject(next);
   });
@@ -106,6 +122,7 @@
    if(project!==centered){centerProject(project);return}
    opener=trigger;closing=false;motion?.cancel();
    content.replaceChildren(originals[Number(project.dataset.projectIndex)].querySelector('.work-project-content').cloneNode(true));
+   dialog.querySelector('.work-breadcrumb-slot').replaceChildren(content.querySelector('.work-trail').cloneNode(true));
    const title=content.querySelector('.work-detail-title');title.id='work-dialog-title';title.tabIndex=-1;
    content.querySelector('img').loading='eager';
    dialog.showModal();document.documentElement.classList.add('has-dialog');content.scrollTop=0;

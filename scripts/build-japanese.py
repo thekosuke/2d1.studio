@@ -79,6 +79,8 @@ class JapanesePage(HTMLParser):
             self.output.append(data)
         elif any(a.get('translate') == 'no' for _, a in self.stack):
             self.output.append(escape(data, quote=False))
+        elif data.strip() == '.' and any('about-opening' in a.get('class','') for _,a in self.stack):
+            self.output.append('だと感じる日用品を集めて紹介する。そのための場所です。')
         elif data.strip() == '.' and any('essay-lede' in a.get('class','') for _,a in self.stack):
             self.output.append('になれることを願って。')
         else: self.output.append(escape(translate(data),quote=False))

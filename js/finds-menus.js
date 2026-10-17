@@ -1,5 +1,17 @@
 /* Each floating menu steps in from the top and leaves in the reverse order. */
 (() => {
+  // Keep the pixel arrow's inversion aligned to the full button's fill edge,
+  // including translated labels and font/viewport changes.
+  const measureButton = button => {
+    const style = getComputedStyle(button);
+    const width = button.getBoundingClientRect().width - parseFloat(style.borderLeftWidth) - parseFloat(style.borderRightWidth);
+    button.style.setProperty('--button-inner-width', `${width}px`);
+  };
+  const fillObserver = typeof ResizeObserver !== 'undefined'
+    ? new ResizeObserver(entries => entries.forEach(({target}) => measureButton(target))) : null;
+  document.querySelectorAll('.finds-home-trigger,.objects-info,.objects-zoom button').forEach(button => {
+    measureButton(button); fillObserver?.observe(button);
+  });
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const menus=[];
   function staggerMenu(container,trigger,panel,items,details=false){

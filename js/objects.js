@@ -821,8 +821,7 @@
           button.classList.add('search-color-button');
           const swatch=document.createElement('span');swatch.className='search-color-swatch';swatch.style.background={Black:'#16161A',Blue:'#2458A6',Brown:'#765138',Gray:'#929292',Green:'#48834C',Orange:'#E9762C',Pink:'#E38BAE',Purple:'#86609C',Red:'#FF2B00',Silver:'#BFC3C6',White:'#FFFFFF',Yellow:'#EEDC51'}[value];button.append(swatch);button.setAttribute('aria-label',t(value));button.title=t(value);
         }else button.append(document.createTextNode(t(value)));
-        if(selected.has(value)){const remove=document.createElement('span');remove.textContent=' ×';remove.className='pixel-filter-close';remove.setAttribute('aria-hidden','true');button.append(remove);}
-        button.addEventListener('click',()=>{category='all';selectedTag='';if(selected.has(value))selected.delete(value);else selected.add(value);filter();renderSuggestions();suggestions.hidden=false;const replacement=[...suggestions.querySelectorAll('button')].find(b=>b.title===t(value)||b.textContent.replace(' ×','')===t(value));replacement?.focus({preventScroll:true});});row.append(button);}
+        button.addEventListener('click',()=>{category='all';selectedTag='';if(selected.has(value))selected.delete(value);else selected.add(value);filter();renderSuggestions();suggestions.hidden=false;const replacement=[...suggestions.querySelectorAll('button')].find(b=>b.title===t(value)||b.textContent===t(value));replacement?.focus({preventScroll:true});});row.append(button);}
       suggestions.append(row);
     }
   };

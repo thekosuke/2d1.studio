@@ -61,3 +61,14 @@ body.home-page .intro h1,body.home-page .section-copy{font-weight:500}
 .objects-dialog-copy h2{text-transform:none}
 
 .objects-dialog-title::before{content:none}
+
+/* Noto needs a heavier optical match to Walla Medium in large reading copy. */
+html[lang="ja"] body.home-page :is(.intro h1,.section-copy){font-weight:600}
+
+/* Keep each reveal word on a single visual line for consistent line timing. */
+[data-ink] .ink{display:inline-block}
+
+/* Inline-block reveal words must carry their link's underline themselves. */
+[data-ink] a .ink{text-decoration-line:inherit;text-decoration-thickness:inherit;text-underline-offset:inherit}
+.home-page .intro .familiar-characters{text-decoration-line:none}
+.home-page .intro .familiar-characters .ink{text-decoration-line:underline}

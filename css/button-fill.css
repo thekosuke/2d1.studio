@@ -1,0 +1,79 @@
+/* One moving edge paints both the paper and its lettering. No duplicate labels. */
+@property --button-fill {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+:is(.finds-home-trigger,.objects-info) {
+  --button-fill: 0;
+  --button-rest-ink: var(--ink);
+  background-color: var(--white) !important;
+  background-image:
+    linear-gradient(90deg,var(--white) calc(var(--button-fill)*100%),var(--button-rest-ink) 0),
+    linear-gradient(90deg,var(--red) calc(var(--button-fill)*100%),var(--white) 0) !important;
+  background-origin: padding-box !important;
+  background-clip: text,padding-box !important;
+  color: transparent !important;
+  transition: --button-fill 480ms cubic-bezier(.2,.8,.2,1) !important;
+}
+/* The masked arrow uses the same edge in button coordinates. Its transform
+   mirrors the local gradient as well as the arrow, hence the 270deg direction. */
+.finds-home-trigger .pixel-home-arrow {
+  background: linear-gradient(270deg,var(--white) calc(var(--button-fill)*var(--button-inner-width,84px) - 12px),var(--ink) 0);
+}
+@media(hover:hover) and (pointer:fine) {
+  :is(.finds-home-trigger,.objects-info):hover:not(:disabled):not([aria-disabled="true"]) { --button-fill: 1; }
+}
+:is(.finds-home-trigger,.objects-info):focus-visible:not(:disabled):not([aria-disabled="true"]) { --button-fill: 1; }
+@media(prefers-reduced-motion:reduce) {
+  :is(.finds-home-trigger,.objects-info) { transition:none !important; }
+}
+@media(forced-colors:active) {
+  :is(.finds-home-trigger,.objects-info) { background:none !important;color:ButtonText !important; }
+  .finds-home-trigger .pixel-home-arrow { background:currentColor; }
+}
+
+.objects-info[aria-expanded="true"] { --button-fill:1; }
+.objects-info>span:last-child {
+  background:linear-gradient(90deg,var(--white) calc(var(--button-fill)*var(--button-inner-width,194px) - (var(--button-inner-width,194px) - 24px)),var(--ink) 0);
+}
+
+/* Language cells and zoom controls use the same edge without moving geometry. */
+body :is(.language-switch,.objects-language,.work-footer-language) a,
+body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language) a:is(:any-link,:focus-visible),
+body.objects-page.objects-ready .objects-zoom button:is(:enabled,:disabled){
+  --button-fill:0;
+  background-color:var(--fill-rest-ground,var(--white))!important;
+  background-image:
+    linear-gradient(90deg,var(--fill-active-ink,var(--beige)) calc(var(--button-fill)*100%),var(--fill-rest-ink,var(--ink)) 0),
+    linear-gradient(90deg,var(--fill-active-ground,var(--red)) calc(var(--button-fill)*100%),var(--fill-rest-ground,var(--white)) 0)!important;
+  background-origin:padding-box!important;
+  background-clip:text,padding-box!important;
+  color:transparent!important;
+  transition:--button-fill 480ms cubic-bezier(.2,.8,.2,1)!important;
+}
+/* Finds keeps its white inactive cell; other pages retain their beige ground. */
+.objects-language{--fill-rest-ground:var(--white)!important}
+body :is(.language-switch,.objects-language,.work-footer-language) a[aria-current],
+body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language) a[aria-current]{--button-fill:1!important;transition:none!important}
+@media(hover:hover) and (pointer:fine){
+  body :is(.language-switch,.objects-language,.work-footer-language) a:hover,
+  body.objects-page.objects-ready .objects-zoom button:hover:not([aria-disabled="true"]){--button-fill:1!important}
+}
+body :is(.language-switch,.objects-language,.work-footer-language) a:focus-visible,
+body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language) a:focus-visible,
+body.objects-page.objects-ready .objects-zoom button:focus-visible:not([aria-disabled="true"]){--button-fill:1!important}
+.objects-page.objects-ready .objects-zoom button::after{
+  background:linear-gradient(90deg,var(--beige) calc(var(--button-fill)*var(--button-inner-width,31px) - (var(--button-inner-width,31px) - 12px)/2),var(--ink) 0);
+}
+@media(prefers-reduced-motion:reduce){
+  body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language) a:is(:any-link,:focus-visible),
+  body :is(.language-switch,.objects-language,.work-footer-language) a,
+  body.objects-page.objects-ready .objects-zoom button:is(:enabled,:disabled){transition:none!important}
+}
+@media(forced-colors:active){
+  body :is(.language-switch,.objects-language,.work-footer-language) a,
+  body.objects-page.objects-ready .objects-zoom button:is(:enabled,:disabled){background:none!important;color:ButtonText!important}
+  .objects-page.objects-ready .objects-zoom button::after{background:currentColor}
+}

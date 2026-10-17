@@ -33,23 +33,26 @@
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preload" href="../fonts/SC%20Walla%20Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/fonts.css?v=7">
-  <link rel="stylesheet" href="../css/walla.css?v=84">
-  <link rel="stylesheet" href="../css/about.css?v=18">
+  <link rel="stylesheet" href="../css/walla.css?v=97">
+  <link rel="stylesheet" href="../css/about.css?v=31">
   <script src="../js/language.js?v=1" defer></script>
   <link rel="stylesheet" href="../css/dialogs.css?v=19">
   <link rel="stylesheet" href="../css/mobile-nav.css?v=4">
-<link rel="stylesheet" href="../css/typography.css?v=10">
+<link rel="stylesheet" href="../css/typography.css?v=13">
   <script src="../js/config.js" defer></script>
   <script src="../js/drawers.js?v=2" defer></script>
   <script src="../js/contact.js?v=12" defer></script>
   <script src="../js/mobile-nav.js?v=3" defer></script>
   <script src="../js/site.js?v=4" defer></script>
-  <script src="../js/about.js?v=2" defer></script>
-  <script src="../js/reading-ink.js?v=7" defer></script>
+  <script src="../js/about.js?v=7" defer></script>
+  <script src="../js/house-assembly.js?v=2" defer></script>
+  <script src="../js/reading-ink.js?v=10" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About 2D1","url":"https://2d1.studio/about/","mainEntity":{"@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/2d1-brand.png?v=2","slogan":"Familiar Characters"}}</script>
-<link rel="stylesheet" href="../css/shared-controls.css?v=8">
+<link rel="stylesheet" href="../css/shared-controls.css?v=10">
+<link rel="stylesheet" href="../css/button-fill.css?v=3">
+<link rel="stylesheet" href="../css/logo-dock.css?v=1">
 </head>
-<body class="about-page" id="top">
+<body class="about-page about-story-page" id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <template id="about-hero-archive">
   <header class="masthead about-masthead"><a class="site-logo" href="../" aria-label="2D1, home"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a><p class="brand-caption">Familiar characters</p></header>
@@ -58,25 +61,76 @@
   <button class="mobile-nav-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
   <nav class="page-nav is-visible" id="page-navigation" aria-label="Pages"><a href="../"><span class="nav-label">Home</span></a><a href="../work/" data-work-nav><span class="nav-label">Work</span></a><a href="./" aria-current="page"><span class="nav-label">About</span></a><span class="page-nav-contact"><a href="../contact/"><span class="nav-label">Contact</span></a></span><a class="nav-finds" href="../finds/"><span class="nav-label">Finds</span></a></nav>
 
-  <main id="main" class="essay-page column">
+  <main id="main" class="essay-page">
 
     <article class="essay">
-      <header class="essay-head">
-        <h1 class="essay-title">About 2D1, the design house</h1>
-        <p class="essay-dek">On client work, things of my own, and the things I keep coming back to.</p>
-      </header>
+      <header class="essay-head"><div class="column">
+        <h1 class="essay-title">2D1<br>A Design House</h1>
+        <p class="essay-dek">An independent design practice by <a href="https://kosuke.com/" target="_blank" rel="noopener noreferrer" aria-label="Kosuke Futsukaichi’s portfolio (opens in a new tab)">Kosuke Futsukaichi</a></p>
+      </div></header>
       <div class="essay-body">
-        <p class="essay-lede">2D1 is an independent design practice by me, <a href="https://kosuke.com/" target="_blank" rel="noopener noreferrer" aria-label="Kosuke Futsukaichi’s portfolio (opens in a new tab)">Kosuke Futsukaichi</a>. I think of it as a design house: a place to work with clients, make things of my own, and collect and share the everyday objects I think of as Familiar Characters. Those interests take the shape of a studio, a shop, and a curated collection, but they all come from the same habit of being particular about the things I surround myself with.</p>
-        <figure class="design-house">
-          <img src="../img/about/design-house.png" width="1138" height="813" alt="2D1 design house with three rooms: Studio, Shop, and Finds." loading="lazy" decoding="async">
-        </figure>
+        <div class="about-story-scene"><div class="about-story-lead"><p class="essay-lede about-opening section-copy column" data-ink>2D1 is a design house: a place to work with clients, make things of my own, and collect and share the everyday objects I think of as <a href="../finds/">Familiar Characters</a>.</p>
+          <p class="essay-lede section-copy column" data-ink>Those interests take the shape of a studio, a shop, and a curated collection, but they all come from the same habit of being particular about the things I surround myself with.</p>
+        </div><figure class="design-house">
+          <div class="house-stage">
+          <svg class="design-house-diagram" viewBox="30 -10 890 760" role="img" aria-labelledby="design-house-description">
+            <title id="design-house-description">2D1 design house with three rooms: Studio, Shop, and Finds.</title>
+            <defs><pattern id="house-section-hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M-1 1L1 -1M0 8L8 0M7 9L9 7" fill="none" stroke="currentColor" stroke-width=".7"/></pattern></defs>
+            <g aria-hidden="true">
+            <g class="house-piece" data-house-piece="0" data-pivot="279.5 422.5">
+            <defs><clipPath id="house-piece-clip-0"><path d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"/></clipPath></defs>
+            <path class="house-solid" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"/>
+            <g clip-path="url(#house-piece-clip-0)">
+            <path class="house-shading" d="M329.0,603.0 L449.0,507.0 L449.0,267.0 L329.0,363.0 Z"/>
+            <path class="house-edge" d="M120.0,330.0 L329.0,363.0 L449.0,267.0"/>
+            <path class="house-edge" d="M329.0,363.0 L329.0,603.0"/>
+            <path class="house-bevel" d="M129.5,555.5 Q129.5,561.5 135.4,562.4 L313.6,590.6 Q319.5,591.5 319.5,585.5 L319.5,377.5 Q319.5,371.5 313.6,370.6 L135.4,342.4 Q129.5,341.5 129.5,347.5 Z"/><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 224.5 476.5)">Studio</text>
+            </g>
+            <path class="house-edge" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"/>
+            </g>
+            <g class="house-piece" data-house-piece="1" data-pivot="499.9 457.3">
+            <defs><clipPath id="house-piece-clip-1"><path d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"/></clipPath></defs>
+            <path class="house-solid" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"/>
+            <g clip-path="url(#house-piece-clip-1)">
+            <path class="house-shading" d="M549.4,637.8 L669.4,541.8 L669.4,301.8 L549.4,397.8 Z"/>
+            <path class="house-edge" d="M340.4,364.8 L549.4,397.8 L669.4,301.8"/>
+            <path class="house-edge" d="M549.4,397.8 L549.4,637.8"/>
+            <path class="house-bevel" d="M349.9,590.3 Q349.9,596.3 355.8,597.2 L534.0,625.4 Q539.9,626.3 539.9,620.3 L539.9,412.3 Q539.9,406.3 534.0,405.4 L355.8,377.2 Q349.9,376.3 349.9,382.3 Z"/><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 444.9 511.3)">Shop</text>
+            </g>
+            <path class="house-edge" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"/>
+            </g>
+            <g class="house-piece" data-house-piece="2" data-pivot="720.3 492.1">
+            <defs><clipPath id="house-piece-clip-2"><path d="M560.8,415.6 Q560.8,399.6 573.3,389.6 L668.3,313.6 Q680.8,303.6 696.6,306.1 L874.0,334.1 Q889.8,336.6 889.8,352.6 L889.8,560.6 Q889.8,576.6 877.3,586.6 L782.3,662.6 Q769.8,672.6 754.0,670.1 L576.6,642.1 Q560.8,639.6 560.8,623.6 Z"/></clipPath></defs>
+            <path class="house-solid" d="M560.8,415.6 Q560.8,399.6 573.3,389.6 L668.3,313.6 Q680.8,303.6 696.6,306.1 L874.0,334.1 Q889.8,336.6 889.8,352.6 L889.8,560.6 Q889.8,576.6 877.3,586.6 L782.3,662.6 Q769.8,672.6 754.0,670.1 L576.6,642.1 Q560.8,639.6 560.8,623.6 Z"/>
+            <g clip-path="url(#house-piece-clip-2)">
+            <path class="house-shading" d="M769.8,672.6 L889.8,576.6 L889.8,336.6 L769.8,432.6 Z"/>
+            <path class="house-edge" d="M560.8,399.6 L769.8,432.6 L889.8,336.6"/>
+            <path class="house-edge" d="M769.8,432.6 L769.8,672.6"/>
+            <path class="house-bevel" d="M570.3,625.1 Q570.3,631.1 576.2,632.0 L754.4,660.2 Q760.3,661.1 760.3,655.1 L760.3,447.1 Q760.3,441.1 754.4,440.2 L576.2,412.0 Q570.3,411.1 570.3,417.1 Z"/><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 665.3 546.1)">Finds</text>
+            </g>
+            <path class="house-edge" d="M560.8,415.6 Q560.8,399.6 573.3,389.6 L668.3,313.6 Q680.8,303.6 696.6,306.1 L874.0,334.1 Q889.8,336.6 889.8,352.6 L889.8,560.6 Q889.8,576.6 877.3,586.6 L782.3,662.6 Q769.8,672.6 754.0,670.1 L576.6,642.1 Q560.8,639.6 560.8,623.6 Z"/>
+            </g>
+            <g class="house-piece" data-house-piece="3" data-pivot="505 270">
+            <defs><clipPath id="house-piece-clip-3"><path d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 241.2,218.9 L556.7,57.8 Q570.9,50.5 583.2,60.7 L902.5,324.6 Q914.8,334.8 902.3,344.8 L795.3,430.4 Q782.8,440.4 767.0,437.9 Z"/></clipPath></defs>
+            <path class="house-solid" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 241.2,218.9 L556.7,57.8 Q570.9,50.5 583.2,60.7 L902.5,324.6 Q914.8,334.8 902.3,344.8 L795.3,430.4 Q782.8,440.4 767.0,437.9 Z"/>
+            <g clip-path="url(#house-piece-clip-3)">
+            <path class="house-shading" d="M438.9,156.1 L782.8,440.4 L914.8,334.8 L570.9,50.5 Z"/>
+            <path class="house-edge" d="M95.0,331.8 L438.9,156.1 L782.8,440.4"/>
+            <path class="house-edge" d="M438.9,156.1 L570.9,50.5"/>
+            <image href="../img/brand/logo_white.svg" width="176" height="59.4" transform="matrix(.95 .15 0 1 355.3 261.9)"/>
+            </g>
+            <path class="house-edge" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 241.2,218.9 L556.7,57.8 Q570.9,50.5 583.2,60.7 L902.5,324.6 Q914.8,334.8 902.3,344.8 L795.3,430.4 Q782.8,440.4 767.0,437.9 Z"/>
+            </g>
+            </g>
+            </svg></div>
+        </figure></div>
         <div class="essay-rest" id="essay-rest">
           <section aria-labelledby="an-eye-for-things">
             <h2 id="an-eye-for-things">An eye for things</h2>
             <p>At eight, I had a favorite clothing brand and wanted almost everything I wore to come from there. Whenever my mom took me to the store, I’d pick out clothes, try them on by myself, and carefully fold the ones I didn’t like before passing them under the fitting-room curtain. My little pile of “this ain’t it.” <strong>I always cared about how things looked, how they felt, and how they existed in my space.</strong></p>
-            <p>That interest eventually led me to study design at Simon Fraser University’s School of Interactive Arts &amp; Technology, where I focused on user experience design. The <a href="https://2018.sfuitaliadesign.com/" target="_blank" rel="noopener noreferrer">2018 italiaDesign field school</a> widened my view of what design could be. The Italian designers I interviewed spoke of <strong>design as an attitude, a way of seeing and living</strong>. That felt different from the emphasis on design as a job I’d encountered in North America. It helped me recognize what made something good across different kinds of design, and imagine a practice that could extend beyond my occupation.</p>
+            <p>That interest eventually led me to study design at Simon Fraser University’s School of Interactive Arts &amp; Technology, where I focused on user experience design. The <a href="https://2018.sfuitaliadesign.com/" target="_blank" rel="noopener noreferrer">italiaDesign field school</a> widened my view of what design could be. The Italian designers I interviewed spoke of <strong>design as an attitude, a way of seeing and living</strong>. That felt different from the emphasis on design as a job I’d encountered in North America. It helped me recognize what made something good across different kinds of design, and imagine a practice that could extend beyond my occupation.</p>
             <p>Alongside that eye for things, I’d always wanted to make something of my own. As a kid, I pitched ideas for handy inventions to my mom. In my sixth-grade yearbook, I wrote that I wanted to be an “inventor.” After graduating, I joined an early-stage startup as its first employee and founding designer. I liked the co-founders and was excited by the challenge, but I also wanted to learn what it took to build a company in case I wanted to start one someday.</p>
-            <p>My work took me through other tech startups before I joined Takram Tokyo in 2023. There, I’ve worked on digital experiences for larger companies and organizations, alongside designers whose work goes well beyond screens. Watching graphic designers work with print and industrial designers build physical prototypes made designing everyday objects feel more approachable. I began to see how I could explore it too, by learning what I needed to learn and working with people who knew things I didn’t.</p>
+            <p>My work took me through other tech startups before I joined Takram Tokyo. There, I’ve worked on digital experiences for larger companies and organizations, alongside designers whose work goes well beyond screens. Watching graphic designers work with print and industrial designers build physical prototypes made designing everyday objects feel more approachable. I began to see how I could explore it too, by learning what I needed to learn and working with people who knew things I didn’t.</p>
           </section>
           <section aria-labelledby="room-for-more">
             <h2 id="room-for-more">Room for more</h2>

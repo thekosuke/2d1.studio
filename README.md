@@ -725,7 +725,7 @@ Sheets and popups reverse their entrance motion on dismissal. Finds info and sea
 
 Work uses a single column of three thumbnails, with title/category appearing to the right on hover or keyboard focus (visible on touch). Each opens a full-screen native dialog that slides up and reverses on close. The header occupies 30% of the viewport; each high-resolution image has its own viewport-height stage with 24px insets and cover framing. Escape/close restore focus and scrolling. Without JavaScript, native details expand the same content inline. The previous carousels are preserved in _archive/work-carousel-2026-10-12/.
 
-Shared close controls use css/shared-controls.css: a square hit area with an 18px pixel cross, dark-brown idle ink, and Icon Red fill/white ink for both hover and keyboard focus. Finds info/product and Work project dialogs share 32px controls (44px on coarse pointers). The legacy form close icon uses the same behavior without rotation. Language-toggle focus matches hover, including Studio inversion.
+Shared close controls use css/shared-controls.css: a square hit area with an 18px pixel cross, dark-brown idle ink, and Icon Red fill/beige pixel ink for both hover and keyboard focus. Finds info/product and Work project dialogs share 32px controls (44px on coarse pointers). The legacy form close icon uses the same behavior without rotation. Language-toggle focus matches hover, including Studio inversion.
 
 All visible page and panel scrollbars share an 8px square dark-brown thumb and transparent track through css/shared-controls.css. Intentionally hidden gallery/carousel scrollbars remain hidden.
 
@@ -936,3 +936,309 @@ The product study returns to soft beige (#FAF0E6); cards remain white with red b
 ### Shop opening restored — 16 October
 
 Restored the archived “The joy of making…” Shop opening, including its red opening phrase, reading-ink treatment, shared lead typography, column alignment and section spacing. Removed the smaller shop-intent override. The bag introduction now begins “Our first everyday item: a canvas tote…” in English, with the Japanese translation regenerated. Verified the rendered desktop opening at 40px/56px, weight 500, with the shared 96px heading-to-copy gap.
+
+### Feature-led Today Bag presentation — 16 October
+
+The Today Bag introduction now uses the shared section-copy typography and column alignment, beginning “Today Bag is our first everyday item…” with Today Bag in red. The development status and separate product title are removed; the figure retains its accessible Today Bag label. The full-size introduction precedes the photograph/card spread so it remains readable without squeezing the feature stack into short screens. The card stack, rather than the introductory paragraph, stays pinned alongside the product.
+
+Feature cards have 20px headings, 18px descriptions, 32px desktop padding, a 300px desktop minimum height and a wider 480px pane. Phones use 24px padding and a 280px minimum. Native scroll distance is now 95% of viewport height per card, bounded to 440–900px, with a 70% reading hold before the reversible throw. Only the feature number is red. Specifications remain uncropped; storage still activates the skeleton and two markers. Verified EN/JA desktop and phone renders, shared introduction alignment/type, reading hold, forward/reverse throws, storage focus and complete specification reveal. Proof: `/tmp/shop-design-notes/prominent-features-desktop.png` and `/tmp/shop-design-notes/prominent-features-mobile-ja.png`.
+
+The large Today Bag introduction is restored to the right-hand editorial pane above the card stack, aligned with the notes rather than spanning the product study. Phones retain the introduction above the image/card sequence. The section-copy type and red Today Bag emphasis remain.
+
+### Three-panel bag editorial — 16 October
+
+The right pane is now three separate vertical scenes: bag introduction, design features, and specifications. A stationary clipped viewport replaces the card deck. Native scrolling slides the introduction up to the feature panel, advances the six larger feature texts inside a second clip, then slides to the complete specification panel. Upward scrolling retraces the same positions. The white cards, borders, rotation, scaling and layered edges are removed. Feature titles use 28px desktop / 24px phone type; descriptions use 24px / 22px. The red uppercase feature number remains above each title.
+
+A six-step square progress indicator sits below the feature clip and reports the current feature through an accessible progressbar. It disappears with the feature panel. The active text continues to drive the steady hotspots and storage skeleton. The bag remains alongside the right pane on desktop and above the panel viewport on phones. Phone reading space reserves room above the language toggle. Any content taller than the available window, including the specification table, moves through its full height during its own scroll stage so the final line remains reachable. No nested scrolling or scroll interception is used.
+
+Reduced motion, no JavaScript and very short viewports retain the complete static reading layout. The previous card UI is preserved in `_archive/pre-bag-panels-2026-10-16/`. Verified actual EN/JA desktop (1280 × 720) and phone (400 × 754) renders, all six features and indicator values forward/backward, introduction and specification panel transitions, skeleton activation, full table ending, and Page Down navigation. No horizontal overflow or console errors observed. Temporary fixtures verified reduced-motion and script-free fallback paths and were removed. Visual proof: `/tmp/shop-design-notes/panels-introduction-desktop.png`, `/tmp/shop-design-notes/panels-features-desktop.png`, and `/tmp/shop-design-notes/panels-features-mobile-ja.png`.
+
+### Fluid panel scrolling — 16 October
+
+Panel and feature transitions now span the final 44% of a longer reading stage (previously 28%), roughly doubling the scroll distance available to each slide. A frame-rate-independent 85ms response eases the visual scroll position between wheel/trackpad steps while leaving native page scrolling untouched. It schedules frames only while settling, resets on resize/visibility changes, and snaps outside the sequence or for large navigation jumps. All panel positions, feature progress, markers and storage state use that same eased position so they remain coordinated. Reverse scrolling uses the same response.
+
+Overflowing introduction, feature and specification text eases into and out of its reading movement. Indicator transitions are 320ms, hotspot visibility 280ms, and the exterior/skeleton crossfade 480ms. Reduced-motion/static fallbacks remain unchanged. Verified forward/reverse wheel scrolling at panel and feature handoffs on desktop/phone in EN/JA, marker/progress coordination, completed specifications and no overflow or console errors.
+
+### Development preview simplified — 16 October
+
+Removed the six-feature panel, progress indicator, hotspots and interior skeleton from active Home routes. Today Bag now shows only the approved exterior, the large introduction, and the complete specification table. The two editorial panels retain the gentle scroll-driven transition and phone table traversal, with all feature-stage scroll distance removed. Static/no-JavaScript and reduced-motion reading layouts remain available. The complete feature presentation is preserved in `_archive/bag-features-2026-10-16/` for a future product page after the first physical bag is photographed.
+
+Verified EN/JA desktop and phone layouts, direct introduction-to-specifications transition, reverse scrolling, all eight specification rows and the final note, absence of active feature/hotspot/skeleton elements, no horizontal overflow, and no console errors. Proof: `/tmp/shop-design-notes/exterior-and-specifications.png`.
+
+### Native bag editorial flow — 16 October
+
+Removed the pinned editorial viewport, vertical panel transitions, extra scroll stages and visual scroll smoothing. The introduction and specification table now occupy normal document flow beside the exterior image; phones stack introduction, full-size image and specifications. The desktop photograph retains its existing sticky placement while the copy freely scrolls. The panel script is no longer loaded and its source is preserved with the prior markup/styles in `_archive/bag-panel-scroll-2026-10-16/`.
+
+Verified native forward/reverse scrolling in EN/JA desktop and phone renders, no transformed/clipped editorial content, all eight table rows, no horizontal overflow, and no console errors. A half-viewport scroll moves the paragraph by exactly half a viewport.
+
+### White bag sheet over Shop copy — 16 October
+
+The Shop heading and “The joy of making…” copy now form a native sticky underlay inside a scoped scene. The full-width white bag-study occupies the higher layer and scrolls over that copy at native speed. Layout-only measurements place the final ink word’s bottom at exactly 60% of viewport height, with enough trailing space for the white sheet to begin entering at the viewport bottom only after that reading point is reached. The copy then remains held while the product sheet rises over it. Introduction/specification text retains its normal free scroll; the desktop product photograph retains its existing sticky behavior.
+
+`js/bag-cover.js` measures on font load, resize and content resize only; it has no scroll handler. The reading-ink script uses the underlay’s original flow position so words continue revealing and finish before coverage. Reduced motion and no JavaScript retain the regular layout. Verified EN/JA desktop and phone forward/reverse layering, final-line positions at 432/720px and 452.4/754px, full ink before covering, normal table access, and no horizontal overflow. Temporary no-JavaScript/reduced-motion fixtures were checked and removed. Proof: `/tmp/shop-design-notes/bag-layer-desktop.png` and `/tmp/shop-design-notes/bag-layer-mobile-ja.png`.
+
+### Bordered-button fill — 16 October 2026
+
+Finds’ Home link and Familiar Characters disclosure share
+`css/button-fill.css`: a left-to-right Icon Red fill over 480ms, with white
+lettering revealed exactly at the fill edge. Pointer exit reverses the fill;
+keyboard focus uses the same state, and reduced motion switches instantly.
+The pixel arrow and info mark use the same boundary.
+Color swatches and zoom controls retain their existing treatments. The shared
+English/Japanese markup and collection generator load the same stylesheet;
+labels remain a single accessible text source. The animation is CSS-driven;
+`js/finds-menus.js` measures control widths to align masked icons precisely.
+
+Pixel close controls use a Soft Beige (#FAF0E6) cross on Icon Red (#FF2B00)
+for hover and keyboard focus, including Finds info/product sheets, Work
+project dialogs, and the shared contact close control.
+
+### Instant refresh restoration — 16 October
+
+Home now distinguishes refresh/history navigation from ordinary return visits before the first render. Reloads and browser history restores skip both the returning-Home intro jump and landing replay, so refreshing at the hero stays at the very top and refreshing mid-page retains the browser’s native saved position. The page’s default scroll behavior is auto, eliminating animated native restoration; intentional smooth in-page navigation and the first-visit landing sequence still request their own motion explicitly.
+
+Verified desktop refresh at 0px and 5170px, Japanese phone refresh at 0px and 4938.5px, English phone refresh at 0px, and browser Back restoring 5170px. Positions match immediately after reload and after settling; no console errors observed.
+
+### Unified hero logo/caption motion — 16 October
+
+The Home mark and “A DESIGN HOUSE” caption now live in one fixed `.home-brand` wrapper. Translation and scale are applied once to that wrapper, eliminating the caption’s separate native-scroll position and compensating transform. Their width ratio and 12px unscaled gap remain constant throughout forward and reverse docking. An empty aria-hidden caption spacer preserves the hero’s original centered layout; the real caption retains its existing late fade. The logo link, eyes, hero click-to-intro behavior and 96px/64px dock sizes remain.
+
+Verified EN/JA desktop and phone at multiple intermediate scroll positions, reverse scrolling and final docking. Measured the shared widths and constant 12px normalized gap, with no caption transform. Phone docking reaches 64px, the caption fades at the end, refresh retains its saved position, and no horizontal overflow or console errors were observed. Proof: `/tmp/shop-design-notes/unified-brand-desktop.png`.
+
+### White product study, red signup — 16 October
+
+Restored the white bag-study with original dark/gray copy and red Today Bag emphasis. Shop signup now has a full-width Icon Red ground with inverted text, field placeholder/caret, CTA and focus underline; its content retains the shared column alignment. Removed the Stay updated heading and divider. Verified desktop and phone rendering with no overflow.
+
+### Continuous signup/footer ground — 16 October
+Home’s signup spacing and footer now share one continuous Icon Red background,
+with beige footer text and social icons. The red tail fills at least one viewport
+so the page ends entirely on red. The fixed logo switches to its beige asset and
+matching eyes as it passes onto this ground, and returns to red when scrolling
+back up. Verified rendered desktop/mobile English and Japanese routes and reverse
+scrolling; no horizontal overflow or browser errors.
+
+The Today Bag development/signup invitation sits below the complete image and
+editorial spread as a full-width closing paragraph, rather than inside the
+right-hand editorial column. English and Japanese share this structure.
+
+### Centered Today Bag reveal — 16 October
+The Today Bag introduction now precedes the entire image/specification spread.
+On desktop the photograph starts centered. When its center reaches the viewport
+center, native scrolling glides it left and brings the specifications in from the
+right over roughly two-thirds of a viewport, with a short reading hold before
+normal flow resumes. Scrolling upward reverses the same movement. The closing
+signup invitation remains below both columns. Phones retain a centered image and
+stacked specifications; reduced motion and no JavaScript show the static spread.
+`js/bag-layout.js` owns this scoped enhancement. Checked forward/reverse scrolling,
+all eight specification rows, desktop/mobile EN/JA, and browser errors/overflow.
+
+Home copy emphasis now follows the owner’s selected phrases: brands/digital
+products/ideas, small teams/businesses, strategy through interface pixels,
+clear/intuitive/uniquely you, The joy of making, Today Bag, and still in
+development. Other reading copy uses brown, with beige retained in dark Studio
+for contrast. English and Japanese emphasis boundaries match.
+
+Signup restores the Sign up h2 above a beige filled email field (white while
+focused, with brown input text and caret). The heading’s square and CTA pixel
+arrow invert with the white type on red. English/Japanese share these states.
+
+### Red bag study, restored beige signup/footer — 16 October
+Bag study now uses Icon Red with white reading/specification text, beige emphasis,
+and translucent white rules/supporting type. A white disc sits behind the lower
+bag body, including its red handle and tag, and travels with the photograph.
+The centered-to-left scroll reveal is unchanged. On phones the image is sized to
+keep the entire disc within the inset. Signup and footer return to soft beige,
+brown text, and the original red CTA/arrow; the email field retains its white
+fill and Sign up heading. The fixed logo inverts over the red study and returns
+to red over signup/footer. Verified EN/JA desktop/mobile and reverse scrolling.
+
+### Finds filter and language refinement — 16 October
+
+Selected filters retain their labels without an X. Hover, keyboard focus, and
+selection use red text and borders on the unchanged white panel; tags no longer
+use the animated fill. Color swatches retain their full size and original colors.
+Clicking a selected filter still deselects it. Language toggles across Home,
+About, Work, Contact, and Finds use brown borders/text and brown active/hover/focus
+fills with white lettering in English and Japanese.
+
+Home’s fixed language toggle samples its own position over the red bag study.
+On red, it uses beige borders and lettering, with a beige active/hover/focus
+cell and red lettering. Leaving the red sheet restores the regular toggle;
+English/Japanese and reduced-motion views share the same ground detection.
+
+Red-study supporting copy and the prototype note now use 85% white. Today Bag
+in the introduction, flash of red, and still in development remain fully white;
+the closing Today Bag name follows supporting-copy contrast. Both large product
+paragraphs use the shared word-by-word scroll reveal, with reduced-motion/no-JS
+fallbacks. Extra section spacing precedes the introduction and follows the closing
+paragraph. The contrast disc is slightly larger (100% of photo width).
+
+Home’s Services and Specifications row rules and signup field underline now
+continue from their existing left alignment to the right viewport edge, while
+text widths remain unchanged. The rule above Specifications is removed. Signup
+focus changes the full underline to red. Verified desktop/mobile EN/JA, including
+input focus and absence of horizontal overflow.
+
+Finds selected filters now use a solid Icon Red fill with beige lettering;
+unselected hover/focus retains red text and borders. Selected tags stay filled
+when the pointer leaves, have no X, and toggle off on another click.
+
+### Compact bag specifications and material note — 16 October
+Updated the eight specification rows to the owner’s shorter copy; corrected
+“red pixel the…” to “red pixel at…”. Material includes the existing pixel info
+icon with a native disclosure, enhanced for mouse hover, click/tap pinning,
+keyboard Enter/Space, Escape and outside-click dismissal. Without JavaScript,
+the disclosure remains usable. Tooltip copy describes Armada’s cotton weave,
+firm starched finish and softening through use, verified against Senda’s product
+page: https://www.textile-senda.com/products-info/cotton-414/
+Desktop/mobile EN/JA opening, toggling, keyboard dismissal, outside dismissal,
+viewport fit and overflow were checked. No manufacturing history was invented.
+
+Language toggle cells and Finds zoom +/− buttons now share the 480ms horizontal
+fill and synchronized label/pixel inversion. The current language stays filled;
+Home’s red-ground variant fills beige. Disabled zoom endpoints do not animate.
+Keyboard focus uses the same fill, reduced motion is instant, and pointer exit
+reverses the animation. Filter tags retain their separate solid selected state.
+
+### Work gallery first pass — 16 October
+Work opens at Aviator without a previous-cycle project above it. Reverse
+navigation stops at this initial beginning until all three distinct projects
+have reached the center. After that, the existing bidirectional infinite loop
+is available. Resize and modal return preserve the current pass state; fresh
+page loads start a new first pass. Verified desktop EN and mobile JA opening,
+first/second/third sequencing, loop unlock, keyboard navigation and detail opening.
+
+### Shared logo dock — 16 October
+All active routes load `css/logo-dock.css`: fixed marks sit 16px from the top,
+centered on 50vw, at 96px desktop / 64px phone width. Using the viewport rather
+than a scrollbar-adjusted containing block removes the 4px route-to-route shift.
+Finds no longer inherits a lower offset from its header row. Home reads the same
+dock tokens for its existing hero-to-dock movement; the hero remains large.
+Verified logo bounds across Home, About, Contact, Work and Finds in English and
+Japanese desktop/mobile views and checked logo navigation back to Home.
+
+Japanese Home introduction and section copy now use Noto Sans JP 600 as an
+optical match to English Walla Medium (500). This overrides the older Japanese
+400 rule; sizes, leading, emphasis colors and reveal motion remain unchanged.
+Verified actual Noto rendering at desktop/mobile widths without overflow.
+
+### Local bag-ground comparison — 17 October
+On localhost, Cmd–S (Ctrl–S also works) toggles bag-study between red/light text
+and white/dark-brown text. In white mode the existing emphasis phrases—Today Bag,
+flash of red and still in development—turn Icon Red. Layout, scroll position,
+reading reveal, specs and signup stay unchanged. The fixed logo and language
+control update with the ground immediately. Reloading restores default red;
+this comparison shortcut is inactive on production hosts. Verified actual
+Cmd–S round trips, keyword colors, unchanged scroll position and Japanese mobile.
+
+The local comparison now uses a temporary fixed bottom-left button (“Try white
+background” / “Try red background”) instead of Cmd/Ctrl–S. The shortcut handler
+has been removed. The button is translated on Japanese Home, keyboard/touch
+accessible, and local-only. Verified both directions without scroll movement,
+plus mobile placement and keyboard activation.
+
+### Final Shop grounds — 17 October
+The Shop heading/introduction uses white. The bag-study, signup and footer use
+soft beige with dark text and red emphasis. The temporary background comparison
+button/shortcut and theme-specific logo inversion are removed; comparison source
+is preserved in `_archive/bag-background-comparison-2026-10-17/`. Both language
+routes share this structure; rendered colors and absence of the toggle verified.
+
+Latest ground choice: Shop introduction returns to soft beige; bag-study is
+white. Signup/footer remain soft beige. The white contrast circle remains behind
+the tote and blends into the white sheet. EN/JA share these colors.
+The fixed language toggle uses a white inactive cell while over the white bag
+sheet, returning to beige on beige sections. Its brown fill animation is retained.
+
+### Line-based reading reveal — 17 October
+Marked Home copy now reveals per visual line, from 75% down the viewport to
+full opacity at 55%, instead of pacing completion across the whole paragraph.
+Each word stays on one line; line groups are remeasured after fonts/reflow, while
+scroll updates only drive opacity. The sticky Shop lead retains its flow-based
+reading cursor. Reverse scrolling reverses the reveal. Reduced motion remains
+fully visible, and About still has no active reveal markers. Checked desktop
+English and Japanese phone line completion within the 50–60% band and reversal.
+
+### About as a story — 17 October
+About now starts with a full-width header: “2D1, a design house” and “an
+independent design practice by Kosuke Futsukaichi”. Its introduction uses the
+same left alignment, large type and leading as Home section copy (40px desktop,
+28px phone; Japanese 28/24px at weight 600). The existing essay copy is retained.
+A full-bleed dark-brown diagram panel rises over the held introduction using
+native sticky layering, with the final line held at 60vh before coverage. The
+house artwork is reproduced as a sharp white inline SVG using the original
+geometry and brand mark; the original PNG remains in img/about. Subsequent
+sections retain their prior reading column, type and spacing. Fixed logo/nav
+invert as the diagram passes beneath them, restoring on exit. No word reveal
+is applied to About. Reduced motion and no JavaScript use a normal flowing
+introduction/panel. Verified desktop/mobile EN/JA, forward/reverse coverage,
+mobile menu open/Escape, logo contrast, preserved article column, no console
+errors/overflow and a temporary no-JS fixture (removed). Proofs are in
+/tmp/shop-design-notes/about-story-header.png, about-story-diagram.png and
+about-story-mobile.png.
+
+Language toggle inverts on About’s brown diagram and Home’s dark Studio using
+the exact underlying brown for its inactive ground and active lettering. It
+returns to the standard colors on exit; mobile-menu language cells keep their
+white-menu treatment. Reading-reveal link words now carry their own underline,
+fixing Familiar Characters without leaving a full-opacity dash in the word gap.
+Verified dark grounds, reverse restoration, EN/JA and mobile-menu containment.
+
+### About house blueprint — 17 October
+The diagram is now a three-dimensional architectural cutaway: a pitched roof
+lifts above three open rooms, with white outlines, section hatching and dashed
+assembly guides on the existing brown panel. Studio, Shop and Finds retain
+plain, localized labels and the 2D1 mark follows the roof plane. The drawing is
+static inline SVG, so it stays sharp and works without JavaScript; existing
+scroll layering, reduced-motion behavior and essay layout are unchanged.
+`scripts/build-about-diagram.py` maintains the shared projection and regenerates
+the English SVG; run `scripts/build-japanese.py` afterward. The previous flat
+SVG is preserved in `_archive/about-diagram-2026-10-17/`.
+
+### Project detail toolbar — 17 October
+Project details show linked 2D1 / Work breadcrumbs and the current client beside the close control. The descriptive project line is the heading; client names remain in breadcrumbs and metadata. Toolbar top/side insets and footer bottom padding are 20px. Verified English desktop and Japanese mobile renders, close-button hover/click, Work breadcrumb navigation, and zero horizontal overflow.
+
+About diagram refinement: the house is now assembled from three solid toy-like
+blocks under one triangular roof prism. Room labels sit directly on each front
+face; the 2D1 mark sits on the gable. A shallow parallel projection makes the
+house silhouette clear, with restrained hatching on the roof and right side.
+The earlier exploded drawing is archived alongside the flat version. Verified
+EN desktop and JA mobile sizing, labels, and no horizontal overflow.
+
+About opening (17 October): a red panel fills 60% of the viewport with light “A Design House” title and linked founder subtitle. The introduction is two paragraphs; only the first uses the shared scroll-driven word-opacity reveal. Reduced motion and no-JavaScript keep it readable. The diagram covers the lead after both paragraphs. English and Japanese share this layout.
+
+### Playful house assembly — 17 October
+The three room blocks now have heavier white outlines, inset faces, bolder
+labels and taller proportions beneath a slightly shallower triangular roof.
+`js/house-assembly.js` assembles four SVG groups as the diagram enters: the room
+blocks arrive in sequence and the roof settles last. A native sticky stage holds
+the house during this short scroll sequence; scrolling backward reverses it.
+There is no wheel interception, timed autoplay, fading or continuous render loop.
+Phone travel is shortened and the drawing inset to keep the pieces in view.
+Reduced motion immediately shows the assembled house without the extra scroll
+track; no-JS markup is also already assembled. Verified forward/reverse desktop
+scroll, Japanese mobile assembly/labels/overflow, and reduced-motion preference
+changes in a controller harness. The earlier static generator is archived.
+
+About header spacing refinement: the title/dek group sits at the bottom of the
+red panel with 24px below and a 12px internal gap. Toy-block outlines now use
+rounded SVG corner geometry (including the roof and inset faces), retaining
+the heavy borders and scroll assembly. Verified exact header gaps on desktop
+English and Japanese phone layouts, with no horizontal overflow.
+
+Both About opening paragraphs now use the shared word-by-word reading reveal,
+including “Those interests take the shape…”, in English and Japanese. Reading
+progress follows the original flow through the sticky introduction so the last
+line completes before the diagram covers it. Verified partial progression and
+full completion while scrolling; reduced motion retains fully visible copy.
+
+About’s opening paragraph is Icon Red and Familiar Characters links to the
+language-matched Finds route, with its underline following the word reveal.
+Japanese retains the existing sentence order around the inline link.
+
+House corner cleanup: each toy block and the roof now has one continuous rounded
+silhouette. Hatching and face seams are clipped inside that outline, eliminating
+doubled borders and bumps at shared corners. The fixed About logo stays red on
+the dark diagram background and beige over the red header; the diagram’s own
+logo remains white. Checked EN desktop and JA mobile, reverse assembly, header
+color restoration and overflow.

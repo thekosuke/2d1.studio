@@ -1,0 +1,40 @@
+<svg class="design-house-diagram" viewBox="70 30 920 890" role="img" aria-labelledby="design-house-description">
+            <title id="design-house-description">2D1 design house with three rooms: Studio, Shop, and Finds.</title>
+            <defs><pattern id="house-section-hatch" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M-1 1L1 -1M0 7L7 0M6 8L8 6" fill="none" stroke="currentColor" stroke-width=".7"/></pattern></defs>
+            <g aria-hidden="true">
+            <path class="house-floor" d="M150.0,550.0 L744.0,787.6 L906.5,672.6 L312.5,435.0 Z"/>
+            <path class="house-section" d="M150.0,550.0 L744.0,787.6 L744.0,799.6 L150.0,562.0 Z"/>
+            <path class="house-section" d="M744.0,787.6 L906.5,672.6 L906.5,684.6 L744.0,799.6 Z"/>
+            <path class="house-wall" d="M312.5,435.0 L906.5,672.6 L906.5,522.6 L312.5,285.0 Z"/>
+            <path class="house-section" d="M312.5,285.0 L906.5,522.6 L898.7,528.1 L304.7,290.5 Z"/>
+            <path class="house-wall" d="M150.0,550.0 L304.7,440.5 L304.7,290.5 L150.0,480.0 Z"/>
+            <path class="house-section" d="M150.0,480.0 L304.7,290.5 L315.5,294.8 L160.8,484.3 Z"/>
+            <path class="house-section" d="M150.0,550.0 L150.0,480.0 L160.8,484.3 L160.8,554.3 Z"/>
+            <path class="house-wall" d="M348.0,629.2 L502.7,519.7 L502.7,369.7 L348.0,559.2 Z"/>
+            <path class="house-section" d="M348.0,559.2 L502.7,369.7 L513.5,374.0 L358.8,563.5 Z"/>
+            <path class="house-section" d="M348.0,629.2 L348.0,559.2 L358.8,563.5 L358.8,633.5 Z"/>
+            <path class="house-wall" d="M546.0,708.4 L700.7,598.9 L700.7,448.9 L546.0,638.4 Z"/>
+            <path class="house-section" d="M546.0,638.4 L700.7,448.9 L711.5,453.2 L556.8,642.7 Z"/>
+            <path class="house-section" d="M546.0,708.4 L546.0,638.4 L556.8,642.7 L556.8,712.7 Z"/>
+            <path class="house-wall" d="M733.2,783.3 L887.9,673.8 L887.9,523.8 L733.2,713.3 Z"/>
+            <path class="house-section" d="M733.2,713.3 L887.9,523.8 L898.7,528.1 L744.0,717.6 Z"/>
+            <path class="house-section" d="M733.2,783.3 L733.2,713.3 L744.0,717.6 L744.0,787.6 Z"/>
+            <path class="house-wall" d="M150.0,550.0 L744.0,787.6 L744.0,759.6 L150.0,522.0 Z"/>
+            <path class="house-section" d="M150.0,522.0 L744.0,759.6 L751.8,754.1 L157.8,516.5 Z"/>
+            <path class="house-guide" d="M150.0,395.0 L150.0,310.0"/>
+            <path class="house-guide" d="M312.5,280.0 L312.5,195.0"/>
+            <path class="house-guide" d="M744.0,632.6 L744.0,547.6"/>
+            <path class="house-guide" d="M906.5,517.6 L906.5,432.6"/>
+            <path class="house-roof" d="M218.7,107.5 L837.9,355.1 L928.2,421.2 L309.0,173.5 Z"/>
+            <path class="house-roof" d="M128.3,301.4 L747.5,549.1 L837.9,355.1 L218.7,107.5 Z"/>
+            <path class="house-section" d="M128.3,301.4 L747.5,549.1 L747.5,560.1 L128.3,312.4 Z"/>
+            <path class="house-section" d="M747.5,560.1 L837.9,366.1 L928.2,432.2 L928.2,421.2 L837.9,355.1 L747.5,549.1 Z"/>
+            <image href="../img/brand/logo_white.svg" width="164" height="55.4" transform="matrix(.9 .36 -.65 1.395 458 235)"/>
+            <path class="house-leader" d="M249.0,584.6v75h-20"/>
+            <text class="house-room-label" x="229.0" y="699.6">Studio</text>
+            <path class="house-leader" d="M447.0,663.8v75h-20"/>
+            <text class="house-room-label" x="427.0" y="778.8">Shop</text>
+            <path class="house-leader" d="M645.0,743.0v75h-20"/>
+            <text class="house-room-label" x="625.0" y="858.0">Finds</text>
+            </g>
+            </svg>

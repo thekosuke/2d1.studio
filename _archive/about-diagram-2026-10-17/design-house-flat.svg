@@ -1,0 +1,6 @@
+<svg class="design-house-diagram" viewBox="0 0 1138 813" role="img" aria-labelledby="design-house-description">
+            <title id="design-house-description">2D1 design house with three rooms: Studio, Shop, and Finds.</title>
+            <g fill="none" stroke="currentColor" stroke-width="4"><path d="M89 727V406L569 86L1049 406V727Z M89 406H1049 M409 406V727 M729 406V727"/></g>
+            <image href="../img/brand/logo_white.svg" x="473" y="261" width="192" height="65"/>
+            <g fill="currentColor" text-anchor="middle" font-family="var(--font)" font-size="40" font-weight="700"><text x="249" y="580">Studio</text><text x="569" y="580">Shop</text><text x="889" y="580">Finds</text></g>
+          </svg>

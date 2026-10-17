@@ -36,30 +36,37 @@
       root.classList.add('js');
       let seen=false;
       try{seen=sessionStorage.getItem('2d1-home-landing-seen')==='1';sessionStorage.setItem('2d1-home-landing-seen','1');}catch{}
-      if(seen)root.classList.add('landing-seen');
-      else if(!matchMedia('(prefers-reduced-motion: reduce)').matches)root.classList.add('is-landing');
+      // Refresh/history restores the browser's own position; never skip to intro.
+      const navigationType=performance.getEntriesByType('navigation')[0]?.type;
+      const restoring=navigationType==='reload'||navigationType==='back_forward';
+      if(seen&&!restoring)root.classList.add('landing-seen');
+      else if(!seen&&!restoring&&!matchMedia('(prefers-reduced-motion: reduce)').matches)root.classList.add('is-landing');
     })();
   </script>
   
   <link rel="stylesheet" href="../css/fonts.css?v=7">
   <link rel="stylesheet" href="../css/japanese-font.css?v=1">
-  <link rel="stylesheet" href="../css/walla.css?v=88">
+  <link rel="stylesheet" href="../css/walla.css?v=97">
   <link rel="stylesheet" href="../css/dialogs.css?v=19">
   <link rel="stylesheet" href="../css/mobile-nav.css?v=4">
-<link rel="stylesheet" href="../css/typography.css?v=10">
+<link rel="stylesheet" href="../css/typography.css?v=13">
   <script src="../js/ja.js?v=9" defer></script>
   <script src="../js/language.js?v=1" defer></script>
   <script src="../js/config.js" defer></script>
   <script src="../js/drawers.js?v=2" defer></script>
   <script src="../js/contact.js?v=12" defer></script>
-  <link rel="stylesheet" href="../css/today-bag.css?v=25">
-  <script src="../js/today-bag.js?v=15" defer></script>
+  <link rel="stylesheet" href="../css/today-bag.css?v=60">
   <script src="../js/mobile-nav.js?v=3" defer></script>
   <script src="../js/site.js?v=4" defer></script>
-  <script src="../js/walla.js?v=20" defer></script>
-  <script src="../js/reading-ink.js?v=7" defer></script>
+  <script src="../js/walla.js?v=27" defer></script>
+  <script src="../js/reading-ink.js?v=9" defer></script>
+  <script src="../js/bag-cover.js?v=1" defer></script>
+  <script src="../js/bag-layout.js?v=1" defer></script>
+  <script src="../js/bag-material.js?v=1" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "2D1", "url": "https://2d1.studio/ja/", "logo": "https://2d1.studio/img/brand/2d1-brand.png?v=2", "slogan": "Familiar Characters", "description": "ブランディングとデジタルプロダクトに取り組み、身近なものの「らしさ」を考える独立系デザインスタジオ。"}</script>
-<link rel="stylesheet" href="../css/shared-controls.css?v=8">
+<link rel="stylesheet" href="../css/shared-controls.css?v=10">
+<link rel="stylesheet" href="../css/button-fill.css?v=3">
+<link rel="stylesheet" href="../css/logo-dock.css?v=1">
 </head>
 <body id="top" class="home-page">
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -75,13 +82,13 @@
   <nav class="page-nav" id="page-navigation" aria-label="ページ"><a href="./"><span class="nav-label">ホーム</span></a><a href="work/" data-work-nav><span class="nav-label">制作実績</span></a><a href="about/"><span class="nav-label">2D1について</span></a><span class="page-nav-contact"><a href="contact/"><span class="nav-label">お問い合わせ</span></a></span><a class="nav-finds" href="finds/"><span class="nav-label">Finds</span></a></nav>
   <main id="main">
     <section class="intro column section-stack" aria-label="はじめに">
-      <h1 data-ink>2D1は、ブランド、デジタルプロダクト、アイデアを横断して活動する<em class="copy-emphasis">独立したデザインスタジオ</em>です。初期の構想から、見た目や使い心地、世の中でのあり方まで、一緒にかたちにしていきます。<br><br>クライアントワークと並行して、気の合う人たちと自分たちのものをつくり、ものを選び集めています。私たちはそれらを<a class="familiar-characters copy-emphasis" href="finds/" translate="no">Familiar Characters</a>— 日々の暮らしを静かに重ね、やがて私たちの日常の一部になっていく仲間たちです。</h1>
+      <h1 data-ink>2D1は、独立したデザインスタジオとして、<em class="copy-emphasis">ブランド、デジタルプロダクト、アイデアを横断して活動しています</em>。初期の構想から、見た目や使い心地、世の中でのあり方まで、一緒にかたちにしていきます。<br><br>クライアントワークと並行して、気の合う人たちと自分たちのものをつくり、ものを選び集めています。私たちはそれらを<a class="familiar-characters copy-emphasis" href="finds/" translate="no">Familiar Characters</a>— 日々の暮らしを静かに重ね、やがて私たちの日常の一部になっていく仲間たちです。</h1>
       <div class="button-stack"><a class="intro-cta" href="about/">2D1について<span class="pixel-arrow" aria-hidden="true">→</span></a></div>
     </section>
     <section id="studio" class="section-stack studio" aria-labelledby="studio-label">
       <div class="column studio-opening">
         <div class="section-heading"><h2 id="studio-label">スタジオ</h2><p>明確なアイデアに、<br>個性を。</p></div>
-        <div class="section-copy prose"><p data-ink>私たちの中心にあるのは、デザインスタジオとしての仕事です。</p><p data-ink>小さなチームや事業者とともに、アイデアを明確にし、その個性を形にします。戦略やビジュアルアイデンティティから、インターフェースのピクセルひとつまで。<em class="copy-emphasis">新鮮な視点</em>と手を動かす姿勢で向き合います。</p><p data-ink>目指すのは、<em class="copy-emphasis">明確で、直感的に使えて、あなただけの個性があるものをつくることです。</em></p></div>
+        <div class="section-copy prose"><p data-ink><em class="copy-emphasis">私たちの中心にあるのは、デザインスタジオとしての仕事です。</em></p><p data-ink><span>小さなチームや事業者とともに、</span>アイデアを明確にし、その個性を形にします。<em class="copy-emphasis">戦略やビジュアルアイデンティティから、インターフェースのピクセルひとつまで</em>。新鮮な視点と手を動かす姿勢で向き合います。</p><p data-ink>目指すのは、<em class="copy-emphasis">明確で、直感的に使えて、あなただけの個性があるものをつくることです。</em></p></div>
       </div>
       <div class="work-belt" tabindex="0" role="region" aria-label="制作事例。横にスクロールしてご覧ください。スペースキーで動きを一時停止・再開できます。" data-carousel><div class="work-track"><ul class="work-set"><li><img src="../img/projects/studio-01-560.webp" srcset="../img/projects/studio-01-560.webp 560w, ../img/projects/studio-01-1120.webp 1120w" sizes="280px" width="280" height="280" alt="紫の空を背景にしたAviatorのブランドアイデンティティ" loading="lazy" decoding="async"></li>
 <li><img src="../img/projects/studio-02-560.webp" srcset="../img/projects/studio-02-560.webp 560w, ../img/projects/studio-02-1120.webp 1081w" sizes="280px" width="280" height="280" alt="Aviatorのウェブサイト" loading="lazy" decoding="async"></li>
@@ -100,81 +107,44 @@
       </div>
     </section>
     <section id="shop" class="section-stack" aria-labelledby="shop-label">
+      <div class="bag-study-scene">
+      <div class="bag-study-lead" data-bag-cover-lead>
       <div class="section-heading column"><h2 id="shop-label">ショップ</h2><p>身近なものたちの家。</p></div>
       <div class="section-copy prose column"><p data-ink><em class="copy-emphasis">つくる喜び</em>は、私たちの活動の中心にあります。自分たちのためにつくるものも、クライアントのための仕事と同じところから始まります。明確なアイデアと、そのものらしさを生むディテールから。</p></div>
-      <figure class="bag-study" id="today-bag" aria-labelledby="bag-study-title">
-        <div class="bag-product-spread">
+      </div>
+      <figure class="bag-study" id="today-bag" aria-label="Today Bag">
+        <header class="bag-story-heading bag-study-copy">
+          <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">Today Bag</em>は、私たちが初めてつくる日用品。どこへでも連れていける帆布のトートです。シンプルなかたち、便利な内ポケット、そして自分のものだとわかる<em class="copy-emphasis">赤のアクセント</em>。</p>
+        </header>
+        <div class="bag-layout-scroll"><div class="bag-product-spread">
           <div class="bag-study-stage">
-            <div class="bag-study-image"><img class="bag-study-photo" src="../img/shop/today-bag-tag-enlarged.webp" width="1024" height="1536" alt="Today Bagの写実的なコンセプト画像。ダークカラーのキャンバス、長いショルダーストラップ、コンパクトな赤いハンドル、ベージュのロゴ、左下の縫い目に赤いタグ。" loading="lazy" decoding="async"><svg class="bag-study-anatomy" viewbox="0 0 1024 1536" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                <defs><pattern id="bag-section-hatch" width="10" height="10" patternunits="userSpaceOnUse" patterntransform="rotate(45)"><path d="M0 0V10" stroke="currentColor" stroke-width="1"></path></pattern></defs>
-                <!-- Orthographic construction study: primary edges, seam allowances, centerlines, section hatching. -->
-                <g class="bag-draft-outline">
-                  <path d="M220 848C279 530 361 28 500 23C639 18 696 540 808 848M288 848C344 529 395 46 500 45C605 44 644 529 740 848"></path>
-                  <path d="M402 848V799Q402 764 439 764H585Q622 764 622 799V848M444 848V808Q444 803 449 803H575Q580 803 580 808V848"></path>
-                  <path d="M151 848H875V1441Q875 1480 837 1480H190Q151 1480 151 1441ZM151 902H875"></path>
-                  <path d="M86 1266H171V1351H86Z"></path>
-                  <path d="M181 902V1438Q181 1454 198 1454H829Q845 1454 845 1438V902"></path>
-                  <path d="M495 871H529V883H495Z"></path>
-                </g>
-                <g class="bag-draft-seams"><path d="M162 859H864M162 891H864M169 902V1439Q169 1466 198 1466H829Q857 1466 857 1439V902M411 846V800Q411 774 439 774H585Q613 774 613 800V846"></path></g>
-                <g class="bag-draft-section"><path d="M151 902H181V1438H151ZM845 902H875V1438H845ZM198 1454H829V1480H198Z"></path></g>
-                <g class="bag-draft-interior">
-                  <path d="M587 1178H840V1448H587ZM587 1193H840"></path>
-                  <path d="M199 1199H340V1258H199ZM199 1210H340M199 1247H340"></path>
-                  <path class="bag-draft-seams" d="M597 1205V1438H830V1205M207 1217V1240M332 1217V1240"></path>
-                </g>
-                <!-- Contents are secondary dashed outlines, entirely contained within the compartments. -->
-                <g class="bag-draft-contents"><path d="M238 1030H299V1069L318 1090V1410Q318 1424 305 1424H231Q218 1424 218 1410V1090L238 1069ZM238 1069H299M241 1040H296"></path>
-                  <path transform="translate(0 138)" d="M623 1224H720Q731 1224 731 1235V1289Q731 1300 720 1300H623Q612 1300 612 1289V1235Q612 1224 623 1224ZM612 1249H731"></path>
-                  <circle cx="783" cy="1337" r="15"></circle><path d="M777 1352V1419H790V1401H801V1390H790V1352"></path>
-                  <path d="M374 986H558V1441H374ZM385 986V1441M549 995V1432"></path>
-                </g>
-                <g class="bag-draft-guides"><path d="M512 12V1490M138 875H888M138 1466H888"></path></g>
-                <g class="bag-draft-dimensions"><path d="M151 1490V1520M875 1490V1520M151 1505H875M145 1511L157 1499M869 1511L881 1499M885 848H934M885 1480H934M923 848V1480M917 854L929 842M917 1486L929 1474"></path><text x="513" y="1530">400 mm</text><text x="950" y="1164" transform="rotate(-90 950 1164)">360 mm</text></g>
-              </svg><span class="bag-story-hotspot" data-bag-point="material" style="--x:40%;--y:73%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="shape" style="--x:67%;--y:27%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="shape" style="--x:50%;--y:51%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="pockets" style="--x:70%;--y:85%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="pockets" style="--x:26%;--y:80%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="closure" style="--x:50%;--y:57%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="tag" style="--x:12%;--y:85%" aria-hidden="true"></span>
-              <span class="bag-story-hotspot" data-bag-point="logo" style="--x:50%;--y:64%" aria-hidden="true"></span></div>
+            <div class="bag-study-image"><img class="bag-study-photo" src="../img/shop/today-bag-tag-enlarged.webp" width="1024" height="1536" alt="Today Bagの写実的なコンセプト画像。ダークカラーのキャンバス、長いショルダーストラップ、コンパクトな赤いハンドル、ベージュのロゴ、左下の縫い目に赤いタグ。" loading="lazy" decoding="async"></div>
           </div>
           <div class="bag-editorial">
-            <div class="bag-story"><div class="bag-story-pin">
-            <header class="bag-story-heading">
-              <p class="bag-status">開発中</p>
-              <h3 id="bag-study-title">Today Bag</h3>
-              <p class="bag-introduction">私たちが初めてつくる日用品。どこへでも連れていける帆布のトートです。シンプルなかたち、便利な内ポケット、そして自分のものだとわかる赤のアクセント。</p>
-            </header>
-            <div class="bag-features" aria-label="デザインの細部"><div class="bag-feature" data-bag-feature="material"><p class="bag-feature-number">特徴 01</p><h4>素材：アルマダ8号帆布</h4><p class="bag-feature-copy">アルマダ8号帆布。しっかりとした厚みとハリのある綿の生地を選びました。日々使うほどに、その人らしい表情が育っていきます。</p></div>
-<div class="bag-feature" data-bag-feature="shape"><p class="bag-feature-number">特徴 02</p><h4>かたちと持ち方</h4><p class="bag-feature-copy">約40 × 36 cmの、正方形に近い本体。マチは10 cm。腰のあたりまで届く長いショルダーストラップと、手で持つためのコンパクトな赤いハンドルを備えています。</p></div>
-<div class="bag-feature" data-bag-feature="pockets"><p class="bag-feature-number">特徴 03</p><h4>内ポケットとボトルバンド</h4><p class="bag-feature-copy">底の近くにある幅広の内ポケットは、鍵やAirPodsなどの小物のために。別のバンドは、ボトルや折り畳み傘など、細長いものを立てて支えます。</p></div>
-<div class="bag-feature" data-bag-feature="closure"><p class="bag-feature-number">特徴 04</p><h4>マグネットの留め具</h4><p class="bag-feature-copy">開口部の縁にマグネットを内蔵。留め具を表に見せず、バッグの口を閉じられます。</p></div>
-<div class="bag-feature" data-bag-feature="tag"><p class="bag-feature-number">特徴 05</p><h4>織りタグ：The Red Pixel</h4><p class="bag-feature-copy">2D1を象徴するシンボル。左下の縫い目に添えた正方形の織りタグが、このバッグらしい赤のアクセントになります。</p></div>
-<div class="bag-feature" data-bag-feature="logo"><p class="bag-feature-number">特徴 06</p><h4>刺繍のロゴ</h4><p class="bag-feature-copy">ベージュの2D1ロゴは刺繍で表現。濃い色の帆布に、立体感と手触りを添えています。反対側には、チャコールの控えめなピクセルの目があります。</p></div></div>
-            </div></div>
+
             <div class="bag-study-notes">
           <h4>仕様</h4>
           <div><dl class="bag-study-specs">
-          <div><dt>素材</dt><dd>アルマダ8号帆布（綿）。</dd></div>
+          <div><dt>素材</dt><dd class="bag-material"><span>アルマダ8号帆布（綿100%）</span><details class="material-info"><summary aria-label="アルマダ帆布について"><span class="material-info-icon" aria-hidden="true"></span></summary><div class="material-tooltip"><p>アルマダは、仙田が扱う綿100%の8号帆布。ざっくりとした織りと、硬糊仕上げによるハリが特徴です。使い始めはしっかりとしていて、使い込むほど柔らかくなります。形を保ちながら、日々を重ねて表情を増していくバッグにしたくて、この生地を選びました。</p></div></details></dd></div>
           <div><dt>生産国</dt><dd>日本製</dd></div>
-          <div><dt>サイズ</dt><dd>約 幅40 × 高さ36 × マチ10cm。ストラップを除きます。</dd></div>
-          <div><dt>ストラップ</dt><dd>長いダークカラーのショルダーストラップと、コンパクトな赤い手持ちハンドル。</dd></div>
-          <div><dt>赤いタグ</dt><dd>左下のサイドの縫い目に付けた、四角い赤い織りネーム。</dd></div>
-          <div><dt>ポケット</dt><dd>ボトルを支えるバンドと、小物を収納するための底に沿った幅広ポケット。</dd></div>
-          <div><dt>開口部</dt><dd>開口部の折り返しに縫い込んだマグネット留め。</dd></div>
-          <div><dt>ディテール</dt><dd>前面には控えめなチャコール色のピクセルの目。背面の上部中央には、小さなベージュの2D1刺繍ロゴ。</dd></div>
-        </dl><p class="bag-study-spec-note">試作段階の仕様です。サイズやディテールは製品化までに変更になる場合があります。</p></div>
+          <div><dt>サイズ</dt><dd>約 幅40 × 高さ36 × マチ10cm（ストラップを除く）</dd></div>
+          <div><dt>ストラップ</dt><dd>ダークカラーのショルダーストラップと、鮮やかな赤いハンドル</dd></div>
+          <div><dt>織りタグ</dt><dd>左下の脇の縫い目に添えた赤いピクセル</dd></div>
+          <div><dt>ポケット</dt><dd>ボトルを支えるバンドと、小物を収納する底部の幅広ポケット</dd></div>
+          <div><dt>開口部</dt><dd>開口部の折り返しに隠したマグネット留め</dd></div>
+          <div><dt>ロゴ</dt><dd>2D1ロゴの刺繍</dd></div>
+        </dl><p class="bag-study-spec-note">AI生成のコンセプト画像。試作段階の仕様：約40 × 36 × 10cm。デザイン、寸法、細部は製品化までに変更される場合があります。</p></div>
         </div>
           </div>
         </div>
-        <figcaption>AIで生成したコンセプト画像です。約40 × 36 × 10cm。デザインや寸法は今後調整する場合があります。</figcaption>
+        </div>
+        <div class="bag-study-copy bag-closing"><div class="section-copy prose column shop-support-copy"><p data-ink><span>Today Bag</span>は<em class="copy-emphasis">まだ開発中</em>です。あなたの日々に迎えたいと思っていただけたら、ぜひお知らせを受け取るためにご登録ください。</p></div></div>
       </figure>
-      <div class="shop-signup column">
-        <div class="section-copy prose shop-support-copy"><p>Today Bagは<em class="copy-emphasis">まだ開発中</em>です。あなたの日々に迎えたいと思っていただけたら、ぜひお知らせを受け取るためにご登録ください。</p></div>
-        <div class="shop-actions"><h2 class="signup-heading" id="signup-heading">最新情報を受け取る</h2><form class="connect-form" aria-describedby="connect-status"><label for="connect-email" class="sr-only">メールアドレス</label><div class="connect-row"><input type="email" id="connect-email" name="email" placeholder="メールアドレス" autocomplete="email" maxlength="254" aria-describedby="connect-status" required disabled><button class="intro-cta" type="submit" disabled>発売のお知らせを受け取る<span class="pixel-arrow" aria-hidden="true">→</span></button></div><p id="connect-status" role="status" hidden></p></form></div>
       </div>
+      <div class="shop-tail"><div class="shop-signup"><div class="column">
+        <h2 class="signup-heading">登録する</h2>
+        <div class="shop-actions"><form class="connect-form" aria-describedby="connect-status"><label for="connect-email" class="sr-only">メールアドレス</label><div class="connect-row"><span class="signup-field"><input type="email" id="connect-email" name="email" placeholder="メールアドレス" autocomplete="email" maxlength="254" aria-describedby="connect-status" required disabled></span><button class="intro-cta" type="submit" disabled>発売のお知らせを受け取る<span class="pixel-arrow" aria-hidden="true">→</span></button></div><p id="connect-status" role="status" hidden></p></form></div>
+      </div></div></div>
     </section>
 
   </main>

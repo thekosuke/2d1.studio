@@ -1,10 +1,10 @@
 /* Equivalent controls share one interaction vocabulary across every route. */
 :is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close){display:grid;place-items:center;width:32px;height:32px;min-width:32px;min-height:32px;padding:0;border:0;background:transparent;color:var(--ink);transition:background-color 180ms,color 180ms}
-:is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close):is(:hover,:focus-visible){background:var(--red)!important;color:var(--white)!important;outline:none;box-shadow:none}
+:is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close):is(:hover,:focus-visible){background:var(--red)!important;color:var(--beige)!important;outline:none;box-shadow:none}
 .contact-close .contact-x{width:32px;height:32px;background:transparent;color:var(--ink);transform:none;transition:background-color 180ms,color 180ms}
 .contact-close .contact-x::before{inset:7px;width:18px;height:18px;background:currentColor;transform:none;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
 .contact-close .contact-x::after{display:none}
-.contact-close:is(:hover,:focus-visible) .contact-x{background:var(--red);color:var(--white);transform:none}
+.contact-close:is(:hover,:focus-visible) .contact-x{background:var(--red);color:var(--beige);transform:none}
 .language-switch a:focus-visible,.objects-page.objects-ready .objects-language a:focus-visible{background:var(--ink);color:var(--white);outline:none;box-shadow:none}
 .home-page > .language-switch.on-studio a:focus-visible{background:var(--beige);color:var(--studio-background)}
 @media(pointer:coarse){:is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close){width:44px;height:44px;min-width:44px;min-height:44px}}
@@ -55,3 +55,8 @@
 .work-studio-nav a:focus-visible .nav-label{transform:translateX(12px)}
 @media(hover:hover) and (pointer:fine){:is(.page-nav,.work-studio-nav) :is(a,button):hover{transform:none}:is(.page-nav,.work-studio-nav) :is(a,button):hover::before{width:6px}:is(.page-nav,.work-studio-nav) :is(a,button):hover .nav-label{transform:translateX(12px)}}
 @media(prefers-reduced-motion:reduce){:is(.page-nav,.work-studio-nav) :is(a,button),:is(.page-nav,.work-studio-nav) :is(a,button)::before,:is(.page-nav,.work-studio-nav) .nav-label{transition:none}}
+
+/* Inverted language cells use the exact dark ground beneath the control. */
+body.home-page>.language-switch.on-studio{--toggle-dark-ground:var(--studio-background)}
+:is(body.home-page>.language-switch.on-studio,body.about-story-page>.language-switch.is-on-diagram){--fill-rest-ground:var(--toggle-dark-ground,var(--cranberry-brown));--fill-rest-ink:var(--beige);--fill-active-ground:var(--beige);--fill-active-ink:var(--toggle-dark-ground,var(--cranberry-brown));background:var(--toggle-dark-ground,var(--cranberry-brown))!important;color:var(--beige)!important}
+:is(body.home-page>.language-switch.on-studio,body.about-story-page>.language-switch.is-on-diagram),:is(body.home-page>.language-switch.on-studio,body.about-story-page>.language-switch.is-on-diagram) a{border-color:var(--beige)!important}
