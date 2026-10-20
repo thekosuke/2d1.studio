@@ -123,12 +123,13 @@ html[lang="ja"] .about-page.about-story-page .essay-lede{font-weight:600;font-si
 html[lang="ja"] .about-page.about-story-page .essay-title{font-size:var(--type-display);line-height:1.3}
 
 /* Red opening panel, followed by two separate introductory paragraphs. */
-.about-story-page .essay-head{min-height:60svh;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:stretch;padding:96px 0 48px;background:var(--red);color:var(--beige)}
+.about-story-page .essay-head{min-height:60svh;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:stretch;padding:96px 0 0;background:var(--beige);color:var(--cranberry-brown);--text-link-rest:var(--red);--text-link-hover:var(--cranberry-brown)}
 .about-story-page .essay-head>.column{gap:12px}
 .about-story-page .essay-head .essay-dek{color:inherit}
 .about-story-page .essay-dek a{color:inherit;text-decoration:underline;text-underline-offset:.18em}
 .about-story-page .essay-dek a:hover,.about-story-page .essay-dek a:focus-visible{color:var(--ink)}
-.about-story-page .about-story-lead{padding-top:var(--space)}
+.about-story-page .about-story-lead{padding-top:64px}
+@media(max-width:767px){.about-story-page .about-story-lead{padding-top:48px}}
 .about-story-page .essay-lede+.essay-lede{margin-top:1em}
 .about-story-page .about-opening{color:var(--cranberry-brown)}
 .about-story-page .about-opening a{text-decoration-line:underline;text-decoration-skip-ink:none}
@@ -143,3 +144,117 @@ html[lang="ja"] .about-page.about-story-page .essay-head .essay-dek{font-size:28
  .about-page.about-story-page .essay-head .essay-dek,
  html[lang="ja"] .about-page.about-story-page .essay-head .essay-dek{font-size:24px}
 }
+
+/* Invert navigation details alongside the links over the red/dark panels. */
+.about-story-page .page-nav a.is-on-diagram{--line:rgba(255,255,255,.4)}
+.about-story-page .page-nav a.is-on-diagram .nav-label{background-image:linear-gradient(90deg,var(--white) calc(var(--nav-sweep)*100%),currentColor 0)}
+.about-story-page .page-nav a.is-on-diagram:is(:hover,:focus-visible){color:var(--white)}
+.about-story-page .page-nav a.is-on-diagram::before{background:var(--white)}
+.about-story-page .page-nav .page-nav-contact a.is-on-diagram::after{background:rgba(255,255,255,.4)}
+.about-story-page .page-nav .nav-finds:has(a.is-on-diagram){border-color:rgba(255,255,255,.4)}
+
+/* The three rooms, explained in the shared site column. */
+.about-story-page .essay-rest.about-services{width:100%;margin:0;padding:0}
+.about-service{padding-block:var(--space)}
+.about-service+.about-service>.column{border-top:.5px solid var(--line);padding-top:var(--space)}
+.about-service+.about-service{padding-top:0}
+.about-service-grid{display:grid;grid-template-columns:1fr 2fr;gap:40px}
+.about-page .about-services .about-service h2{margin:0;font:700 64px/1.1 var(--font);letter-spacing:0;text-wrap:pretty}
+.about-service-copy{display:flex;flex-direction:column;gap:24px;min-width:0}
+.about-page .about-services .about-service-copy p{margin:0;font:400 20px/1.6 var(--font)}
+.about-page .about-services .about-service-copy .about-service-lead{font:500 40px/1.2 var(--font);margin-bottom:8px}
+.about-service-copy .intro-cta{margin-top:16px;font-size:28px;line-height:1.2}
+html[lang="ja"] .about-page .about-services .about-service-copy p{line-height:1.85}
+html[lang="ja"] .about-page .about-services .about-service-copy .about-service-lead{line-height:1.5}
+@media(max-width:767px){
+ .about-service-grid{grid-template-columns:1fr;gap:32px}
+ .about-page .about-services .about-service h2{font-size:44px}
+ .about-page .about-services .about-service-copy .about-service-lead{font-size:28px}
+ .about-page .about-services .about-service-copy p{font-size:18px}
+}
+
+/* Walk through the two rooms. The unenhanced layout remains a vertical story. */
+.about-story-page .essay-page{padding-bottom:0}
+.house-journey{position:relative;margin-top:var(--about-cover-gap,var(--space));background:var(--studio-background)}
+.about-story-page .house-journey .design-house{margin:0;min-height:100svh}
+.house-journey .house-stage{height:100svh;min-height:0;padding:64px 24px}
+.house-journey .design-house-diagram{width:100%;height:100%;max-height:100%;max-width:1440px;transform-origin:0 0}
+.about-story-page .about-service{padding:96px 48px 80px;min-height:100svh}
+.about-room-studio{background:var(--studio-background);color:var(--beige);--ink:var(--beige)}
+.about-room-shop{background:var(--beige);color:var(--cranberry-brown)}
+.about-story-page .about-service>.column{width:100%;max-width:1120px;margin-inline:auto;padding:0;border:0}
+.about-service-grid{grid-template-columns:1fr}
+.about-page .about-services .about-service h2{font-size:clamp(80px,11vw,168px);line-height:.95;letter-spacing:-.045em}
+.about-service-copy{display:grid;grid-template-columns:1fr 1fr;gap:24px 56px;align-items:start}
+.about-page .about-services .about-service-copy .about-service-lead{grid-column:1/-1;max-width:760px;font-size:clamp(32px,3.6vw,52px);line-height:1.15;margin:0 0 16px}
+.about-page .about-services .about-service-copy p{font-size:20px;line-height:1.55}
+.about-room-studio .about-service-copy>p:not(.about-service-lead){color:rgba(250,240,230,.72)}
+.about-room-studio strong{color:var(--beige)}
+.about-service-copy .intro-cta{grid-column:2;margin:8px 0 0;justify-self:start;font-size:24px}
+.about-room-shop .about-service-copy>p:nth-of-type(4){grid-column:2}
+.about-room-shop .about-service-copy .intro-cta{grid-row:4}
+@media(min-width:1100px){
+ .about-story-page .about-service{padding-left:clamp(240px,22vw,360px);padding-right:64px}
+ .about-room-shop h2{padding-left:25%}
+}
+@media(max-width:767px){
+ .about-story-page .about-service{padding:104px 24px 88px}
+ .about-service-grid{gap:32px}
+ .about-service-copy{grid-template-columns:1fr;gap:24px}
+ .about-page .about-services .about-service-copy p{font-size:18px;line-height:1.6}
+ .about-service-copy .intro-cta,.about-room-shop .about-service-copy>p:nth-of-type(4){grid-column:1}
+ .about-room-shop .about-service-copy .intro-cta{grid-row:auto}
+ .house-journey .house-stage{padding:80px 16px}
+}
+/* Only the viewport clips: the parent must allow native sticky positioning. */
+.has-room-journey .house-viewport{position:sticky;top:0;height:100svh;overflow:clip;isolation:isolate}
+.about-story-page .has-room-journey .design-house{position:absolute;inset:0;height:100%;min-height:0;overflow:visible}
+.has-room-journey .house-stage{height:100%;position:relative}
+.has-room-journey .design-house-diagram{transform:none}
+.about-story-page .has-room-journey .about-services{position:absolute;inset:0;display:flex;width:200%;opacity:var(--rooms-opacity,0);transform:translate3d(var(--rooms-x,0%),0,0);pointer-events:none}
+.has-room-journey .about-service{width:50%;flex:0 0 50%;height:100%;min-height:0;padding:0;overflow:clip}
+.has-room-journey .about-service>.column{max-width:none;padding:96px 48px 80px;transform:translate3d(0,var(--room-y,0px),0)}
+.has-room-journey .about-services.is-entered{pointer-events:auto}
+@media(min-width:1100px){.has-room-journey .about-service>.column{padding-left:clamp(240px,22vw,360px);padding-right:64px}}
+@media(max-width:767px){.has-room-journey .about-service>.column{padding:104px 24px 88px}}
+@media(prefers-reduced-motion:reduce){.house-journey{margin-top:var(--space)}}
+/* Give the SVG a definite camera window rather than its intrinsic aspect height. */
+.house-journey .design-house-diagram{height:calc(100svh - 128px);min-height:0}
+.about-room-studio{--text-link-rest:var(--red);--text-link-hover:var(--beige)}
+@media(max-width:767px){.house-journey .design-house-diagram{height:calc(100svh - 160px)}}
+.about-page.about-story-page .essay-page{padding-bottom:0}
+.about-page .about-services .about-service-copy .intro-cta{font-size:24px;line-height:1.25}
+.has-room-journey .design-house{pointer-events:none}
+
+/* The label stays above both camera layers until it becomes the room heading. */
+.house-title-bridge{position:absolute;inset:0;width:100%;height:100%;z-index:3;overflow:visible;pointer-events:none;display:none}
+.house-title-baseline{display:inline-block;width:0;height:0;padding:0;margin:0;vertical-align:baseline}
+
+/* Each room reads vertically: photograph, heading, then body copy. */
+.about-story-page .about-service{padding:0}
+.about-story-page .about-service>.about-service-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0;padding:0;min-height:100svh;align-items:stretch}
+.about-page .about-services .about-service h2{padding:64px max(32px,22vw) 32px;font-size:clamp(64px,7vw,104px);line-height:1.05;letter-spacing:-.045em;align-self:stretch}
+.about-service .about-service-copy{display:flex;flex-direction:column;gap:24px;padding:0 max(32px,22vw) 80px}
+.about-page .about-services .about-service-copy .about-service-lead{font-size:clamp(26px,2.5vw,40px);line-height:1.2;margin:0}
+.about-page .about-services .about-service-copy p{font-size:18px;line-height:1.6}
+.about-page .about-services .about-service-copy .intro-cta{margin-top:8px;font-size:24px}
+.about-room-media{position:relative;height:60svh;min-height:400px;overflow:hidden;background:var(--studio-background)}
+.about-room-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-project-slideshow img{opacity:0;transition:opacity 900ms ease}
+.about-project-slideshow img.is-active{opacity:1}
+.about-project-slideshow::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(25,20,22,.65),transparent 210px);pointer-events:none}
+.about-slideshow-toggle{position:absolute;z-index:2;left:24px;bottom:24px;width:40px;height:40px;border:0;background:var(--studio-background);color:var(--beige);font-size:18px}
+.about-slideshow-toggle:is(:hover,:focus-visible){background:var(--red)}
+.about-room-shop h2,.about-room-shop .about-service-copy,.about-shop-photo{background:var(--beige)}
+@media(min-width:768px) and (max-width:1099px){
+ .about-page .about-services .about-service h2{padding:48px 48px 32px;font-size:72px}
+ .about-service .about-service-copy{padding:0 48px 64px}
+ .about-page .about-services .about-service-copy p{font-size:16px}
+}
+@media(max-width:767px){
+ .about-story-page .about-service>.about-service-grid{grid-template-columns:1fr}
+ .about-page .about-services .about-service h2{padding:80px 24px 32px;font-size:64px}
+ .about-service .about-service-copy{padding:0 24px 64px}
+ .about-room-media{height:55svh;min-height:0}
+}
+@media(prefers-reduced-motion:reduce){.about-project-slideshow img{transition:none}}

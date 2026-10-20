@@ -360,3 +360,6 @@ Simple copy, spacing, and styling-only edits may use lighter verification approp
 Use `/finds/` and `/ja/finds/` for the collection page. Page title and navigation
 label are Finds. Familiar Characters remains the concept in the copy and info
 button. Older route instructions above are superseded; `/objects/` redirects.
+
+## Familiar Characters naming — 20 October 2026
+The owner renamed Finds to Familiar Characters. Use Familiar Characters for all public-facing names, titles, links and descriptions in both languages. Keep `/finds/` and `/ja/finds/` as the existing routes. This supersedes the 14 October naming instruction above.

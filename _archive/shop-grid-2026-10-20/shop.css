@@ -1,0 +1,29 @@
+/* Image-led product grid, aligned with the shared column and open to the right edge. */
+.shop-main{padding-block:160px var(--space)}
+.shop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;width:calc(100% + var(--content-right) - 24px)}
+.shop-card{min-width:0;outline:none}
+.shop-card-link{display:block;color:var(--ink);text-decoration:none}
+.shop-card-media{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1;background:var(--white);margin:0;overflow:hidden}
+.shop-tote-image{width:100%;height:100%;padding:24px;object-fit:contain}
+.shop-card-caption{position:relative;padding:20px 16px 0 0;min-height:108px}
+.shop-card-details{transition:opacity 180ms ease}
+.shop-card-title{font:500 16px/24px var(--font);margin:0;text-transform:none}
+.shop-card-title::before{content:none}
+.shop-card-description,.shop-card-price{font:400 12px/20px var(--font);margin:0;color:var(--sub-gray);white-space:nowrap}
+.shop-card-action{position:absolute;top:20px;left:0;margin:0;font:500 16px/24px var(--font);color:var(--red);opacity:0;transition:opacity 180ms ease}
+.shop-card:is(:hover,:focus-visible,:focus-within) .shop-card-details{opacity:0}
+.shop-card:is(:hover,:focus-visible,:focus-within) .shop-card-action{opacity:1}
+.menu-note-preview{flex-direction:column;gap:12px;font:500 clamp(20px,2.2vw,32px)/1.1 var(--font)}
+.menu-note-platform{font:500 10px/1.4 var(--font);letter-spacing:.04em;color:var(--sub-gray)}
+.shop-finds-preview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:12px;padding:20px}
+.shop-finds-preview img{width:100%;height:100%;object-fit:contain;min-height:0}
+@media(min-width:768px) and (max-width:1099px){.shop-card-description{font-size:10px}}
+@media(max-width:767px){
+ .js .shop-page:not(.mobile-navigation-ready) .page-nav{visibility:hidden}
+ .shop-main{padding-top:120px}
+ .shop-grid{grid-template-columns:1fr;gap:32px}
+ .menu-note-preview{font-size:32px}
+}
+@media(prefers-reduced-motion:reduce){.shop-card-details,.shop-card-action{transition:none}}
+
+.menu-note-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}

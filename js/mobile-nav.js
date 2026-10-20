@@ -3,8 +3,6 @@
   const trigger = document.querySelector('.mobile-nav-toggle');
   const panel = trigger && document.getElementById(trigger.getAttribute('aria-controls'));
   if (!trigger || !panel) return;
-  // Home keeps its page links in a horizontal bar at compact widths.
-  if (document.body.classList.contains('home-page')) return;
   const mobile = matchMedia('(max-width: 767px), (max-width: 1023px) and (max-height: 500px) and (pointer: coarse)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const isFinds = panel.classList.contains('finds-page-nav');
@@ -12,7 +10,20 @@
   const logo = document.querySelector('.site-logo');
   const language = document.querySelector('.language-switch:not(.work-footer-language), .objects-language');
   const languageHome = language?.parentElement, languageNext = language?.nextSibling;
-  const duration = 260, step = 44;
+  const duration = 480, step = 0;
+  let background = [];
+  function lockBackground(locked) {
+    document.body.classList.toggle('mobile-menu-open', locked);
+    document.documentElement.classList.toggle('mobile-menu-open', locked);
+    if (locked) {
+      background = [...document.body.children].filter(node => !node.contains(panel) && !node.contains(trigger));
+      background = background.map(node => [node, node.inert]);
+      background.forEach(([node]) => { node.inert = true; });
+    } else {
+      background.forEach(([node, inert]) => { node.inert = inert; });
+      background = [];
+    }
+  }
   let items = [], total = duration;
   let available = !document.body.classList.contains('home-page') || panel.classList.contains('is-visible');
   let open = false, closing = 0;
@@ -47,6 +58,7 @@
     }
     const wasOpen = open;
     open = false;
+    lockBackground(false);
     trigger.setAttribute('aria-expanded', 'false');
     panel.classList.remove('is-mobile-open');
     settle();
@@ -62,6 +74,8 @@
     trigger.setAttribute('aria-expanded', 'true');
     panel.inert = false;
     panel.classList.add('is-mobile-open');
+    lockBackground(true);
+    items[0]?.focus({preventScroll: true});
   }
   function setAvailable(next) {
     available = next;
@@ -109,6 +123,12 @@
     if (open && !panel.contains(event.target) && !trigger.contains(event.target)) close(false);
   });
   document.addEventListener('keydown', event => {
+    if (event.key === 'Tab' && open) {
+      const focusable = [trigger, ...items.filter(item => !item.disabled && !item.inert)];
+      const index = focusable.indexOf(document.activeElement);
+      if (event.shiftKey && index <= 0) { event.preventDefault(); focusable.at(-1)?.focus(); }
+      else if (!event.shiftKey && index === focusable.length - 1) { event.preventDefault(); trigger.focus(); }
+    }
     if (event.key !== 'Escape' || !open || document.querySelector('dialog[open]')) return;
     event.preventDefault(); close(true);
   });

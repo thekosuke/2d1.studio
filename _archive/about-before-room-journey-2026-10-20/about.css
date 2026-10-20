@@ -1,0 +1,173 @@
+/* About uses Home’s column, display scale and spacing; the essay has a
+   quieter long-form reading scale beneath the always-visible introduction. */
+.essay-page{--essay-gap:64px;--essay-copy:20px;padding-block:var(--space)}
+.essay-head{display:flex;flex-direction:column;gap:8px}
+.essay-kicker{margin-bottom:24px;font:500 13px/1.4 var(--font);letter-spacing:.04em;color:var(--sub-gray);text-transform:uppercase}
+.essay-kicker::before{display:none}
+.essay-title{font:700 var(--section-title)/1.1 var(--font);letter-spacing:0;text-wrap:pretty}
+.essay-dek{font:500 var(--reading)/1.2 var(--font);color:var(--sub-gray);text-wrap:pretty}
+.essay-body{--fold:180px;position:relative;margin-top:var(--essay-gap)}
+.essay-lede{font:500 var(--reading)/1.2 var(--font);text-wrap:pretty}
+.essay-lede em,.essay-pull em{color:var(--red)}
+.essay-rest{margin-top:var(--essay-gap)}
+.essay-rest p{font:400 var(--essay-copy)/1.5 var(--font);text-wrap:pretty}
+.essay-rest p+p{margin-top:1.25em}
+.essay-rest h2{font:700 var(--essay-copy)/1.2 var(--font);text-wrap:pretty;text-transform:uppercase;margin:var(--essay-gap) 0 24px}
+.essay-pull{margin-block:var(--essay-gap)}
+.essay-rest .essay-pull p{font:500 var(--reading)/1.2 var(--font);text-wrap:pretty}
+.essay-end{display:inline-block;width:.5em;height:.5em;margin-left:.4em;background:var(--red)}
+.about-page .site-footer{padding-block:24px}
+@media(min-width:768px){.essay-page{--essay-gap:96px;--essay-copy:28px}.essay-kicker{margin-bottom:40px}}
+/* Match Home’s native Japanese reading sizes without inheriting its old
+   About-specific display overrides from the shared stylesheet. */
+html[lang="ja"] .about-page{--reading:24px}
+html[lang="ja"] .essay-title{font-size:40px;line-height:1.3;font-weight:700}
+html[lang="ja"] .essay-lede,html[lang="ja"] .essay-dek,html[lang="ja"] .essay-rest .essay-pull p{font-size:var(--reading);line-height:1.65}
+html[lang="ja"] .essay-rest h2{line-height:1.5}
+html[lang="ja"] .essay-rest p{line-height:1.85}
+@media(min-width:768px){html[lang="ja"] .about-page{--reading:28px}html[lang="ja"] .essay-page{--essay-copy:24px}}
+
+/* Article reading rhythm: one column, natural wrapping, no folded content. */
+.about-page:not(.contact-page) .essay-page{width:min(680px,calc(100% - 48px));max-width:680px;margin-inline:auto;padding:160px 0 96px}
+.about-page .essay-head{gap:24px}
+.about-page .essay-title{font:700 40px/1.12 var(--font);letter-spacing:-.02em;text-wrap:balance}
+.about-page .essay-dek{font:400 20px/1.5 var(--font);color:var(--sub-gray);letter-spacing:0}
+.about-page .essay-body{margin-top:64px}
+.about-page :is(.essay-lede,.essay-rest p){font:400 20px/1.7 var(--font);letter-spacing:0;text-wrap:pretty}
+.about-page .essay-rest{margin-top:0;mask:none;-webkit-mask:none;max-height:none;overflow:visible}
+.about-page .essay-body h2{font:700 28px/1.25 var(--font);letter-spacing:-.01em;text-transform:none;margin:64px 0 24px;text-wrap:balance}
+.about-page .essay-body>h2:first-child{margin-top:0}
+.about-page .essay-body h2::before{content:none}
+.about-page .essay-rest p+p{margin-top:24px}
+.about-page .essay-pull{margin:48px 0;padding-left:24px;border-left:3px solid var(--red)}
+.about-page .essay-rest .essay-pull p{font:500 28px/1.4 var(--font);letter-spacing:0}
+html[lang="ja"] .about-page :is(.essay-lede,.essay-rest p){font-size:18px;line-height:1.9}
+html[lang="ja"] .about-page .essay-dek{font-size:20px;line-height:1.7}
+@media(max-width:767px){
+ .about-page:not(.contact-page) .essay-page{padding:112px 0 64px}
+ .about-page .essay-dek{font-size:20px}
+ .about-page :is(.essay-lede,.essay-rest p){font-size:18px;line-height:1.7}
+ .about-page .essay-body{margin-top:48px}
+ .about-page .essay-body h2{font-size:24px;margin-top:48px;margin-bottom:20px}
+ .about-page .essay-rest .essay-pull p{font-size:24px}
+}
+
+/* Share the left edge of Home’s prose and footer social links. */
+@media(min-width:1100px){
+ .about-page:not(.contact-page) .essay-page{width:min(680px,calc(100% - min(27.7778vw,400px) - 128px));margin-left:calc(100% - min(var(--column),calc(100% - min(27.7778vw,400px) - 128px)) - 128px);margin-right:auto}
+}
+@media(min-width:768px) and (max-width:1099px){.about-page:not(.contact-page) .essay-page{margin-left:24px;margin-right:auto}}
+
+/* Center the article independently of the footer alignment. */
+.about-page:not(.contact-page) .essay-page{width:min(680px,calc(100% - 48px));margin-inline:auto}
+
+/* Use the full shared column while retaining its social-links alignment. */
+.about-page:not(.contact-page) .essay-page{width:calc(100% - 48px);max-width:var(--column);margin-inline:auto}
+@media(min-width:1100px){.about-page:not(.contact-page) .essay-page{width:calc(100% - min(27.7778vw,400px) - 128px);margin-left:auto;margin-right:128px}}
+
+/* Preserve the social-links edge, with the same inset on the right. */
+.about-page{--inner-page-inset:24px}
+@media(min-width:1100px){.about-page{--inner-page-inset:calc(100% - min(var(--column),calc(100% - min(27.7778vw,400px) - 128px)) - 128px)}}
+.about-page:not(.contact-page) .essay-page,.about-page.contact-page .contact-page-main{width:calc(100% - 2 * var(--inner-page-inset));max-width:none;margin-inline:var(--inner-page-inset)}
+
+/* Owner-supplied design house artwork, shown at its original proportions. */
+.design-house{margin:48px 0 0;background:#fff}
+.design-house img{display:block;width:100%;height:auto}
+.essay-rest strong{font-weight:700}
+.about-page .essay-body a{text-decoration:underline;text-underline-offset:.18em}
+.about-page .essay-body a:hover,.about-page .essay-body a:focus-visible{color:var(--red)}
+@media(max-width:767px){.design-house{margin-top:32px}}
+
+/* Story opening: a broad introduction, then a diagram that rises over it. */
+.about-page.about-story-page .essay-page{width:100%;max-width:none;margin:0;padding:0 0 96px}
+.about-story-page .essay-head{display:block;padding:160px 0 96px}
+.about-story-page .essay-head>.column{display:flex;flex-direction:column;gap:24px}
+.about-story-page .essay-title{font:700 var(--type-display)/1.1 var(--font);letter-spacing:0;text-align:left;text-wrap:pretty}
+.about-story-page .essay-dek{font:400 20px/1.5 var(--font);text-wrap:pretty}
+.about-story-page .essay-body{margin-top:0}
+.about-story-scene{position:relative;isolation:isolate}
+.about-story-lead{position:relative;z-index:0;padding-bottom:var(--space)}
+.about-page.about-story-page .essay-lede{font:500 var(--type-lead)/1.4 var(--font);letter-spacing:0;text-align:left}
+.about-story-page .design-house{position:relative;z-index:1;display:grid;place-items:center;min-height:100svh;margin:var(--space) 0 0;padding:48px 24px;background:var(--studio-background);color:var(--white)}
+.design-house-diagram{display:block;width:100%;max-width:1440px;height:auto;max-height:calc(100svh - 96px)}
+.design-house-diagram path{stroke-linejoin:round;stroke-linecap:round}
+.house-edge{stroke:currentColor;stroke-width:6;fill:none}
+.house-solid{fill:var(--studio-background)}
+.house-shading{fill:url(#house-section-hatch);opacity:.2}
+.house-bevel{fill:none;stroke:currentColor;stroke-width:1.5;opacity:.35}
+.house-room-label{fill:currentColor;font:700 36px var(--font)}
+.about-story-page .design-house{overflow:clip}
+.design-house-diagram{overflow:visible;transform:translateY(var(--house-entry-offset,0px))}
+.about-story-page .design-house{display:block;padding:0}
+.house-stage{display:grid;place-items:center;width:100%;min-height:100svh;padding:48px 24px}
+.about-story-page .design-house.has-house-assembly{min-height:185svh}
+.has-house-assembly .house-stage{position:sticky;top:0;height:100svh}
+.has-about-cover .about-story-lead{position:sticky;top:var(--about-lead-top)}
+.about-story-page .has-about-cover .design-house{margin-top:var(--about-cover-gap)}
+.about-story-page .essay-rest{width:calc(100% - 2 * var(--inner-page-inset));margin-inline:var(--inner-page-inset);padding-top:var(--space)}
+.about-story-page .essay-rest>section:first-child>h2{margin-top:0}
+html[lang="ja"] .about-page.about-story-page .essay-lede{font-weight:600;font-size:var(--type-lead);line-height:1.75}
+@media(max-width:767px){
+ .about-story-page .essay-head{padding:112px 0 64px}
+ .about-story-page .design-house{min-height:75svh;padding:0}
+ .house-stage{min-height:75svh;padding:32px 0}
+ .design-house-diagram{width:88%;max-height:calc(100svh - 64px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .has-about-cover .about-story-lead{position:relative;top:auto}
+ .about-story-page .has-about-cover .design-house{margin-top:var(--space)}
+}
+.about-story-page .page-nav a.is-on-diagram{color:var(--white)}
+.about-story-page .about-docked-logo.is-on-diagram::after{background-image:url('../img/brand/eyes.svg')}
+
+html[lang="ja"] .about-page.about-story-page .essay-title{font-size:var(--type-display);line-height:1.3}
+
+/* Red opening panel, followed by two separate introductory paragraphs. */
+.about-story-page .essay-head{min-height:60svh;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:stretch;padding:96px 0 48px;background:var(--studio-background);color:var(--beige)}
+.about-story-page .essay-head>.column{gap:12px}
+.about-story-page .essay-head .essay-dek{color:inherit}
+.about-story-page .essay-dek a{color:inherit;text-decoration:underline;text-underline-offset:.18em}
+.about-story-page .essay-dek a:hover,.about-story-page .essay-dek a:focus-visible{color:var(--ink)}
+.about-story-page .about-story-lead{padding-top:var(--space)}
+.about-story-page .essay-lede+.essay-lede{margin-top:1em}
+.about-story-page .about-opening{color:var(--cranberry-brown)}
+.about-story-page .about-opening a{text-decoration-line:underline;text-decoration-skip-ink:none}
+.about-story-page .about-opening a .ink{display:inline;text-decoration-line:none}
+
+/* A larger opening title and subtitle, retaining the bottom-aligned group. */
+.about-page.about-story-page .essay-head .essay-title{font-size:clamp(52px,6.25vw,96px)}
+.about-page.about-story-page .essay-head .essay-dek{font-size:28px;line-height:1.45}
+html[lang="ja"] .about-page.about-story-page .essay-head .essay-title{font-size:clamp(52px,6.25vw,96px)}
+html[lang="ja"] .about-page.about-story-page .essay-head .essay-dek{font-size:28px;line-height:1.6}
+@media(max-width:767px){
+ .about-page.about-story-page .essay-head .essay-dek,
+ html[lang="ja"] .about-page.about-story-page .essay-head .essay-dek{font-size:24px}
+}
+
+/* Invert navigation details alongside the links over the red/dark panels. */
+.about-story-page .page-nav a.is-on-diagram{--line:rgba(255,255,255,.4)}
+.about-story-page .page-nav a.is-on-diagram .nav-label{background-image:linear-gradient(90deg,var(--white) calc(var(--nav-sweep)*100%),currentColor 0)}
+.about-story-page .page-nav a.is-on-diagram:is(:hover,:focus-visible){color:var(--white)}
+.about-story-page .page-nav a.is-on-diagram::before{background:var(--white)}
+.about-story-page .page-nav .page-nav-contact a.is-on-diagram::after{background:rgba(255,255,255,.4)}
+.about-story-page .page-nav .nav-finds:has(a.is-on-diagram){border-color:rgba(255,255,255,.4)}
+
+/* The three rooms, explained in the shared site column. */
+.about-story-page .essay-rest.about-services{width:100%;margin:0;padding:0}
+.about-service{padding-block:var(--space)}
+.about-service+.about-service>.column{border-top:.5px solid var(--line);padding-top:var(--space)}
+.about-service+.about-service{padding-top:0}
+.about-service-grid{display:grid;grid-template-columns:1fr 2fr;gap:40px}
+.about-page .about-services .about-service h2{margin:0;font:700 64px/1.1 var(--font);letter-spacing:0;text-wrap:pretty}
+.about-service-copy{display:flex;flex-direction:column;gap:24px;min-width:0}
+.about-page .about-services .about-service-copy p{margin:0;font:400 20px/1.6 var(--font)}
+.about-page .about-services .about-service-copy .about-service-lead{font:500 40px/1.2 var(--font);margin-bottom:8px}
+.about-service-copy .intro-cta{margin-top:16px;font-size:28px;line-height:1.2}
+html[lang="ja"] .about-page .about-services .about-service-copy p{line-height:1.85}
+html[lang="ja"] .about-page .about-services .about-service-copy .about-service-lead{line-height:1.5}
+@media(max-width:767px){
+ .about-service-grid{grid-template-columns:1fr;gap:32px}
+ .about-page .about-services .about-service h2{font-size:44px}
+ .about-page .about-services .about-service-copy .about-service-lead{font-size:28px}
+ .about-page .about-services .about-service-copy p{font-size:18px}
+}

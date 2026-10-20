@@ -1,3 +1,4 @@
+@import url('./scrollbars.css?v=2');
 /* Equivalent controls share one interaction vocabulary across every route. */
 :is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close){display:grid;place-items:center;width:32px;height:32px;min-width:32px;min-height:32px;padding:0;border:0;background:transparent;color:var(--ink);transition:background-color 180ms,color 180ms}
 :is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close):is(:hover,:focus-visible){background:var(--red)!important;color:var(--beige)!important;outline:none;box-shadow:none}
@@ -10,14 +11,7 @@
 @media(pointer:coarse){:is(.work-page,.objects-page) :is(#objects-info-dialog,#object-dialog,#work-dialog) :is(.objects-info-close,.objects-dialog-close,.work-close){width:44px;height:44px;min-width:44px;min-height:44px}}
 @media(prefers-reduced-motion:reduce){:is(.objects-info-close,.objects-dialog-close,.work-close,.contact-close .contact-x){transition:none!important}}
 
-/* All visible scrollbars: square dark-brown thumb, transparent track. */
-*{scrollbar-color:var(--ink) transparent}
-*::-webkit-scrollbar{width:8px!important;height:8px!important;background:transparent!important}
-*::-webkit-scrollbar-track,*::-webkit-scrollbar-corner{background:transparent!important;border:0!important;box-shadow:none!important}
-*::-webkit-scrollbar-thumb{background:var(--ink)!important;background-clip:padding-box!important;border:0!important;border-right:2px solid transparent!important;border-radius:0!important;box-shadow:none!important}
-*::-webkit-scrollbar-button{display:none!important}
-/* Use the custom square thumb where WebKit scrollbar styling is available. */
-@supports selector(::-webkit-scrollbar){*{scrollbar-color:auto!important;scrollbar-width:auto!important}}
+
 
 /* A modest 2px increase over the original footer marks; retain the hit area. */
 .site-footer .social-links a{width:24px;height:24px}
@@ -65,3 +59,58 @@ body.home-page>.language-switch.on-studio{--toggle-dark-ground:var(--studio-back
 @media(max-width:1099px){
  .js .home-page .page-nav .nav-red-pixel{grid-column:5/-1;grid-row:2;justify-self:end;white-space:nowrap}
 }
+
+/* Square, text shift and red sweep share the same start and finish. */
+@property --nav-sweep{syntax:'<number>';inherits:false;initial-value:0}
+:is(.page-nav,.work-studio-nav) .nav-label{--nav-sweep:0;background-image:linear-gradient(90deg,var(--red) calc(var(--nav-sweep)*100%),currentColor 0);background-clip:text;-webkit-text-fill-color:transparent;transition:transform 200ms ease,--nav-sweep 200ms ease}
+@media(hover:hover) and (pointer:fine){
+ :is(.page-nav,.work-studio-nav) :is(a,button):hover:not([aria-current]):not(.is-on-diagram){color:inherit}
+ :is(.page-nav,.work-studio-nav) :is(a,button):hover .nav-label{--nav-sweep:1;transition:transform 200ms ease,--nav-sweep 200ms ease}
+}
+:is(.page-nav,.work-studio-nav) :is(a,button):focus-visible:not([aria-current]):not(.is-on-diagram){color:inherit}
+:is(.page-nav,.work-studio-nav) :is(a,button):focus-visible::before{width:6px}
+:is(.page-nav,.work-studio-nav) :is(a,button):focus-visible .nav-label{--nav-sweep:1;transform:translateX(12px);transition:transform 200ms ease,--nav-sweep 200ms ease}
+body.mobile-navigation-ready .mobile-nav-panel :is(a,button):focus-visible .nav-label{transform:none;background:none;-webkit-text-fill-color:var(--beige)}
+@media(prefers-reduced-motion:reduce){:is(.page-nav,.work-studio-nav) .nav-label{transition:none!important}}
+@media(forced-colors:active){:is(.page-nav,.work-studio-nav) .nav-label{background:none;-webkit-text-fill-color:currentColor}}
+
+/* Studio/Shop share the left pair around the centered compact logo. */
+@media(min-width:768px) and (max-width:1099px){
+ .js :is(.home-page,.about-page) .page-nav{left:24px;right:24px;top:10px;width:auto;max-width:none;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) 96px repeat(2,minmax(0,1fr));gap:0 24px;align-items:center}
+ .js :is(.home-page,.about-page) .page-nav>a:first-child{grid-column:1;grid-row:1;justify-self:start}
+ .js :is(.home-page,.about-page) .page-nav>[data-work-nav]{grid-column:2;grid-row:1;justify-self:start}
+ .js :is(.home-page,.about-page) .page-nav>a.nav-shop{grid-column:2;grid-row:2;justify-self:start}
+ .js :is(.home-page,.about-page) .page-nav>a:nth-child(4){grid-column:4;grid-row:1;justify-self:start}
+ .js :is(.home-page,.about-page) .page-nav>.page-nav-contact{grid-column:5;grid-row:1;justify-self:start}
+ .js :is(.home-page,.about-page) .page-nav>.nav-finds{grid-column:4;grid-row:2;justify-self:start;margin:0;padding:0;border:0}
+ .js :is(.home-page,.about-page) .page-nav>.nav-red-pixel{grid-column:5;grid-row:2;justify-self:start}
+}
+@media(max-width:767px){
+ .js .home-page .page-nav{left:16px;right:16px;top:10px;width:auto;max-width:none;margin:0;grid-template-columns:repeat(2,minmax(0,1fr)) 64px repeat(2,minmax(0,1fr));gap:0 8px}
+ .js .home-page .page-nav>a:first-child{grid-column:1;grid-row:1;justify-self:start}
+ .js .home-page .page-nav>[data-work-nav]{grid-column:2;grid-row:1;justify-self:start}
+ .js .home-page .page-nav>a.nav-shop{grid-column:2;grid-row:2;justify-self:start}
+ .js .home-page .page-nav>a:nth-child(4){grid-column:4;grid-row:1;justify-self:start}
+ .js .home-page .page-nav>.page-nav-contact{grid-column:5;grid-row:1;justify-self:start}
+ .js .home-page .page-nav>.nav-finds{grid-column:4;grid-row:2;justify-self:start;margin:0;padding:0;border:0}
+ .js .home-page .page-nav>.nav-red-pixel{grid-column:5;grid-row:2;justify-self:start}
+}
+@media(max-width:360px){
+ .js .home-page .page-nav{font-size:10px}
+ .js .home-page .page-nav>.nav-red-pixel{grid-column:4/-1;grid-row:3}
+}
+
+/* The language fill follows the mobile panel's visibility as well as its links. */
+body.mobile-navigation-ready .mobile-nav-panel .mobile-nav-language{visibility:inherit!important}
+
+/* Active destinations retain brand red on every navigation ground. */
+body .page-nav a[aria-current],body .page-nav a[aria-current] .nav-label{color:var(--red)!important}
+body .page-nav a[aria-current] .nav-label{background-image:none!important;-webkit-text-fill-color:var(--red)!important}
+body .page-nav a[aria-current]::before{background:var(--red)!important}
+
+/* Dividers follow the navigation ink on both light and dark surfaces. */
+.page-nav .page-nav-contact a::after{background:color-mix(in srgb,currentColor 40%,transparent)!important}
+.page-nav .nav-finds{border-color:color-mix(in srgb,currentColor 40%,transparent)!important}
+
+/* Studio and Shop now contain all destinations; the main menu has no divider. */
+.page-nav .page-nav-contact a::after,.mobile-navigation-ready .mobile-nav-panel .page-nav-contact a::after{content:none!important;display:none!important}

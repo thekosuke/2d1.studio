@@ -50,7 +50,7 @@
           </div>
           <div class="field-trap" aria-hidden="true"><label for="c-website">Website</label><input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="contact-foot">
-            <button class="contact-send intro-cta" type="submit"><span class="send-label">Send</span><span class="send-arrow pixel-arrow" aria-hidden="true">→</span></button>
+            <button class="contact-send intro-cta" type="submit"><span class="send-label">Send</span><span class="send-arrow pixel-arrow" aria-hidden="true"></span></button>
             <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
           </div>
         </form>

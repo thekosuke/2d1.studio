@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RED PX — 2D1</title>
+  <meta name="theme-color" content="#FAF0E6">
+  <link rel="canonical" href="https://2d1.studio/red-pixel/">
+  <link rel="alternate" hreflang="en" href="https://2d1.studio/red-pixel/">
+  <link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/red-pixel/">
+  <link rel="alternate" hreflang="x-default" href="https://2d1.studio/red-pixel/">
+  <link rel="icon" href="../img/brand/2d1-icon.ico?v=2" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="../img/brand/2d1-icon.png?v=2" type="image/png" sizes="32x32">
+  <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2" sizes="180x180">
+  <link rel="stylesheet" href="../css/fonts.css?v=7">
+  <style>
+    html,body{margin:0;background:#FAF0E6;color:#320505}
+    body{--text-link-rest:#320505;--text-link-hover:#FF2B00}
+    html{overflow:hidden;scrollbar-gutter:auto}
+    main{position:fixed;inset:0;display:grid;place-items:center;min-height:100vh;min-height:100svh}
+    .red-pixel{position:relative;width:1px;height:1px;background:#FF2B00;transition:transform 10s cubic-bezier(.25,.1,.25,1)}
+    .pixel-cube{position:absolute;left:50%;top:50%;width:24px;height:24px;margin:-12px;transform-style:preserve-3d;opacity:0;transform:scale(.04166667) rotateX(-24deg) rotateY(35deg);pointer-events:none}
+    .pixel-face{position:absolute;inset:0;box-sizing:border-box;background:#FF2B00;border:.6px solid #FAF0E6;backface-visibility:hidden}
+    .pixel-front{transform:translateZ(12px)}
+    .pixel-back{transform:rotateY(180deg) translateZ(12px)}
+    .pixel-right{transform:rotateY(90deg) translateZ(12px)}
+    .pixel-left{transform:rotateY(-90deg) translateZ(12px)}
+    .pixel-top{transform:rotateX(90deg) translateZ(12px)}
+    .pixel-bottom{transform:rotateX(-90deg) translateZ(12px)}
+    body:has(.pixel-zoom[open]) .red-pixel{transform:scale(24)}
+    .pixel-caption{position:fixed;left:24px;right:24px;top:max(24px,env(safe-area-inset-top));margin:0;color:inherit;font:500 12px/1.4 'SC Walla',Arial,sans-serif;letter-spacing:.05em;text-align:center;text-transform:uppercase}
+    .pixel-zoom{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom));transform:translateX(-50%);display:block;color:inherit;font:500 12px/1.4 'SC Walla',Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase}
+    .pixel-zoom summary{display:inline-block;list-style:none;cursor:pointer;text-decoration:none;outline:none}
+    .pixel-zoom summary::-webkit-details-marker{display:none}
+    .pixel-zoom summary:is(:hover,:focus-visible){color:#FF2B00}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @keyframes pixel-spin{0%{transform:scale(.04166667) rotateX(-24deg) rotateY(35deg) rotateZ(0deg)}50%{transform:scale(.04166667) rotateX(336deg) rotateY(395deg) rotateZ(45deg)}100%{transform:scale(.04166667) rotateX(696deg) rotateY(755deg) rotateZ(0deg)}}
+    @media(hover:hover) and (pointer:fine){.red-pixel:is(:hover,.is-spinning){background:transparent}.red-pixel:is(:hover,.is-spinning) .pixel-cube{opacity:1}.red-pixel.is-spinning .pixel-cube{animation:pixel-spin 2.4s cubic-bezier(.2,.8,.2,1) both}}
+    @media(prefers-reduced-motion:reduce){.red-pixel{transition:none}.pixel-cube{animation:none!important;opacity:0!important}.red-pixel{background:#FF2B00!important}}
+  </style>
+<link rel="stylesheet" href="../css/text-links.css?v=6">
+</head>
+<body>
+  <main id="main" aria-label="A single red pixel"><div class="red-pixel" aria-hidden="true"><div class="pixel-cube"><span class="pixel-face pixel-front"></span><span class="pixel-face pixel-back"></span><span class="pixel-face pixel-right"></span><span class="pixel-face pixel-left"></span><span class="pixel-face pixel-top"></span><span class="pixel-face pixel-bottom"></span></div></div></main>
+  <p class="pixel-caption" translate="no">THE RED PX</p>
+  <details class="pixel-zoom"><summary translate="no">ZOOM</summary><span class="sr-only">The red pixel is enlarged to 24 × 24 pixels.</span></details>
+  <script>
+    (() => {
+      const pixel=document.querySelector('.red-pixel');
+      const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+      pixel.addEventListener('pointerenter',event=>{
+        if(event.pointerType==='touch'||reduced.matches||pixel.classList.contains('is-spinning'))return;
+        pixel.classList.add('is-spinning');
+      });
+      pixel.querySelector('.pixel-cube').addEventListener('animationend',()=>pixel.classList.remove('is-spinning'));
+      reduced.addEventListener('change',()=>{if(reduced.matches)pixel.classList.remove('is-spinning')});
+    })();
+  </script>
+</body>
+</html>

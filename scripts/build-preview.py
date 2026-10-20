@@ -11,10 +11,12 @@ import shutil
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / 'dist'
 MARKER = OUTPUT / '.2d1-preview-build'
-PAGES = ('objects/index.html', 'ja/objects/index.html', 'index.html', 'about/index.html', 'ja/index.html', 'ja/about/index.html', 'finds/index.html', 'ja/finds/index.html', 'contact/index.html', 'ja/contact/index.html', 'work/index.html', 'ja/work/index.html')
+PAGES = tuple(str(p) for folder in ('about', 'contact', 'finds', 'objects', 'work', 'shop', 'red-pixel', 'ja')
+              for p in sorted((ROOT / folder).rglob('*.html')) if not any(part.startswith('_') for part in p.relative_to(ROOT).parts))
+PAGES = ('index.html',) + tuple(str(Path(p).relative_to(ROOT)) for p in PAGES)
 ASSETS = ('css', 'js', 'img', 'fonts')
 EXTENSIONS = {'.css', '.js', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif',
-              '.ico', '.avif', '.woff', '.woff2', '.eot', '.ttf', '.otf', '.txt', '.md'}
+              '.ico', '.avif', '.mp4', '.webm', '.woff', '.woff2', '.eot', '.ttf', '.otf', '.txt', '.md'}
 
 
 def build():
@@ -29,8 +31,10 @@ def build():
         html = source.read_text()
         html, count = re.subn(r'<meta name="robots" content="[^"]*">',
                              '<meta name="robots" content="noindex, nofollow">', html)
-        if count != 1:
-            raise SystemExit(f'Expected one robots meta tag in {name}')
+        if count == 0:
+            html = html.replace('<head>', '<head>\n  <meta name="robots" content="noindex, nofollow">', 1)
+        elif count != 1:
+            raise SystemExit(f'Expected at most one robots meta tag in {name}')
         target = OUTPUT / name
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html)
@@ -46,8 +50,23 @@ def build():
     if delivery_path.exists():
         for variants in json.loads(delivery_path.read_text()).values():
             object_assets.update(variant['image'] for variant in variants)
+    # Follow only styles/scripts requested by live pages, then their local imports.
+    page_text = '\n'.join((ROOT / name).read_text() for name in PAGES)
+    runtime_assets = set(re.findall(r'(?:css|js)/[\w.-]+\.(?:css|js)', page_text))
+    pending = list(runtime_assets)
+    while pending:
+        name = pending.pop()
+        source = ROOT / name
+        for relative in re.findall(r"['\"](\./[^'\"]+\.js)(?:\?[^'\"]*)?['\"]", source.read_text()):
+            imported = (source.parent / relative).relative_to(ROOT).as_posix()
+            if imported not in runtime_assets:
+                runtime_assets.add(imported)
+                pending.append(imported)
+    runtime_text = page_text + '\n' + '\n'.join((ROOT / name).read_text() for name in runtime_assets)
+    image_assets = set(re.findall(r'img/[\w./%-]+\.(?:svg|png|jpe?g|webp|gif|ico|avif|mp4|webm)', runtime_text))
+    image_assets |= object_assets
     font_assets = set()
-    for stylesheet in (ROOT / 'css').rglob('*.css'):
+    for stylesheet in (ROOT / name for name in runtime_assets if name.endswith('.css')):
         for url in re.findall(r"url\(\s*['\"]?([^)'\"]+)", stylesheet.read_text()):
             decoded = unquote(url.strip()).split('?', 1)[0]
             if 'fonts/' in decoded:
@@ -62,20 +81,22 @@ def build():
             if not source.is_file() or source.suffix.lower() not in EXTENSIONS:
                 continue
             relative_path = relative.as_posix()
-            if relative_path.startswith('img/objects/') and relative_path not in object_assets:
+            if folder in {'css', 'js'} and relative_path not in runtime_assets:
+                continue
+            if folder == 'img' and relative_path not in image_assets:
                 continue
             if folder == 'fonts' and source.suffix.lower() not in {'.txt', '.md'} and relative_path not in font_assets:
                 continue
             target = OUTPUT / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
-    assert all((OUTPUT / asset).is_file() for asset in object_assets | font_assets), 'Missing active catalog/font asset'
+    assert all((OUTPUT / asset).is_file() for asset in image_assets | font_assets | runtime_assets), 'Missing active catalog/font asset'
     (OUTPUT / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
     (OUTPUT / '_headers').write_text('/*\n  X-Robots-Tag: noindex, nofollow\n  X-Content-Type-Options: nosniff\n' + (ROOT / '_headers').read_text())
     files = [p for p in OUTPUT.rglob('*') if p.is_file()]
     print(f'Preview package: {OUTPUT}')
     print(f'{len(files)} files, {sum(p.stat().st_size for p in files) / 1024 / 1024:.1f} MiB')
-    print('Only the eight active pages and site assets are included. No publication performed.')
+    print(f'{len(PAGES)} current pages, referenced runtime files and catalog assets. No publication performed.')
 
 
 if __name__ == '__main__':

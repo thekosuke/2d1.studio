@@ -1,0 +1,9 @@
+/* All visible scrollbars: square dark-brown thumb, transparent track. */
+*{scrollbar-color:var(--ink) transparent}
+*::-webkit-scrollbar{width:8px!important;height:8px!important;background:transparent!important}
+*::-webkit-scrollbar-track,*::-webkit-scrollbar-corner{background:transparent!important;border:0!important;box-shadow:none!important}
+*::-webkit-scrollbar-track{margin:2px!important}
+*::-webkit-scrollbar-thumb{background:var(--ink)!important;background-clip:padding-box!important;border:0!important;border-right:2px solid transparent!important;border-radius:0!important;box-shadow:none!important}
+*::-webkit-scrollbar-button{display:none!important}
+/* Use the custom square thumb where WebKit scrollbar styling is available. */
+@supports selector(::-webkit-scrollbar){*{scrollbar-color:auto!important;scrollbar-width:auto!important}}

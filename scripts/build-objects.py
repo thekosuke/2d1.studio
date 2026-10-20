@@ -15,6 +15,7 @@ def tracked_product_url(url):
     return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
 
 ROOT=Path(__file__).resolve().parent.parent
+about_sheet=(ROOT/'data/finds-about.html').read_text()
 items=json.loads((ROOT/'data/objects.json').read_text())
 family_assignments=json.loads((ROOT/'data/object-families.json').read_text())
 assert set(family_assignments)=={item['id'] for item in items}, 'Family assignments must match the catalog'
@@ -72,25 +73,27 @@ html=f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Finds</title><meta name="description" content="An open shelf of everyday objects with character. Explore the 2D1 Familiar Characters collection.">
+<title>Familiar Characters</title><meta name="description" content="An open shelf of everyday objects with character. Explore the 2D1 Familiar Characters collection.">
 <meta name="robots" content="index, follow"><meta name="theme-color" content="#FAF0E6">
 <link rel="canonical" href="https://2d1.studio/finds/">
 <link rel="alternate" hreflang="en" href="https://2d1.studio/finds/"><link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/finds/"><link rel="alternate" hreflang="x-default" href="https://2d1.studio/finds/">
-<meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Finds — 2D1"><meta property="og:description" content="An open shelf of everyday objects with character. Explore the 2D1 Familiar Characters collection."><meta property="og:url" content="https://2d1.studio/finds/"><meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2"><meta property="og:image:alt" content="The red 2D1 logo on a soft beige background.">
+<meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Familiar Characters — 2D1"><meta property="og:description" content="An open shelf of everyday objects with character. Explore the 2D1 Familiar Characters collection."><meta property="og:url" content="https://2d1.studio/finds/"><meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2"><meta property="og:image:alt" content="The red 2D1 logo on a soft beige background.">
 <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml"><link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2">
 <script>document.documentElement.classList.add('finds-js');setTimeout(()=>{{if(!document.querySelector('.objects-ready'))document.documentElement.classList.remove('finds-js');}},4000);</script>
-<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=99"><link rel="stylesheet" href="../css/objects.css?v=117">
+<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=99"><link rel="stylesheet" href="../css/objects.css?v=124">
 <link rel="stylesheet" href="../css/dialogs.css?v=18"><link rel="stylesheet" href="../css/mobile-nav.css?v=3">
 <link rel="stylesheet" href="../css/typography.css?v=15">
-<script src="../js/config.js" defer></script><script src="../js/drawers.js" defer></script><script src="../js/contact.js?v=12" defer></script><script src="../js/mobile-nav.js?v=2" defer></script><script src="../js/finds-menus.js?v=9" defer></script>
-<script src="../js/language.js?v=1" defer></script><script src="../js/objects.js?v=62" defer></script>
+<script src="../js/config.js" defer></script><script src="../js/mobile-nav.js?v=2" defer></script><script src="../js/finds-menus.js?v=9" defer></script>
+<script src="../js/language.js?v=1" defer></script><script src="../js/objects.js?v=68" defer></script>
+<link rel="stylesheet" href="../css/scrollbars.css?v=2">
 <link rel="stylesheet" href="../css/button-fill.css?v=6">
+<link rel="stylesheet" href="../css/text-links.css?v=4">
 </head>
 <body class="objects-page">
 <a class="skip-link" href="#objects-canvas">Skip to objects</a>
 <header class="objects-header"><div class="finds-home-menu"><a class="finds-home-trigger" href="../"><span class="pixel-home-arrow" aria-hidden="true"></span>Home</a></div><a class="site-logo" href="../" aria-label="2D1, home"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a></header>
 <main class="objects-main" id="main">
-<div class="objects-intro"><h1 translate="no">Finds</h1><p>Familiar characters for everyday life.</p></div>
+<div class="objects-intro"><h1 translate="no">Familiar Characters</h1><p>Familiar characters for everyday life.</p></div>
 <div class="objects-view-dock"><span class="objects-search-wrap"><div class="objects-search-suggestions" id="objects-search-suggestions" aria-label="Search suggestions" hidden></div><svg class="objects-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input class="objects-search" id="objects-search" type="search" disabled aria-label="Search familiar characters" placeholder="Search familiar characters..." autocomplete="off"></span></div>
 <div class="objects-canvas" id="objects-canvas" tabindex="0" role="region" aria-label="Infinite object grid" aria-describedby="objects-instructions">
 <div class="objects-layer" aria-hidden="true"></div><div class="objects-empty" hidden><p>No objects match these filters.</p><button class="objects-reset" type="button" data-reset-filters>Clear filters</button></div></div>
@@ -105,6 +108,7 @@ html=f'''<!doctype html>
 <footer class="objects-footer"><p><span class="objects-status" id="objects-status" role="status">{len(items)} objects</span> <span aria-hidden="true">·</span> <span>Selected by Kosuke</span></p><p class="objects-hint" data-js-only>Drag to explore. Select to discover.</p><button class="objects-reset" data-reset-view data-js-only type="button">Reset view</button><nav class="objects-language" aria-label="Language"><a href="./" hreflang="en" lang="en" aria-current="page">EN</a><a href="../ja/finds/" hreflang="ja" lang="ja">JA</a></nav></footer>
 <dialog class="objects-dialog" id="object-dialog" aria-labelledby="object-title"><button class="objects-dialog-close" type="button" data-close aria-label="Close"><span aria-hidden="true">×</span></button><button type="button" class="objects-product-peek" data-product-step="-1"></button><div class="objects-dialog-scroll"><div class="objects-dialog-layout"><div class="objects-dialog-gallery"><div class="objects-dialog-photo" role="region" tabindex="-1" aria-label="Product photographs"></div><p class="objects-dialog-credit"><span>Photography:</span> <span class="objects-dialog-sources"></span></p><span class="objects-photo-count" aria-hidden="true" hidden></span><p class="objects-photo-status sr-only" role="status" aria-atomic="true"></p></div><div class="objects-dialog-copy"><div class="objects-detail-summary"><p class="objects-dialog-brand" translate="no"></p><h2 class="objects-dialog-title" id="object-title" translate="no"></h2><p class="objects-dialog-description"></p></div><div class="objects-purchased" hidden><button type="button" class="objects-purchased-button" disabled aria-describedby="objects-purchased-status">I have it</button><p id="objects-purchased-status" role="status"></p><p>Anonymous browser-based tally.</p></div><div class="objects-detail-bottom"><div class="objects-dialog-action"><a class="objects-dialog-link" href="#" target="_blank" rel="noopener noreferrer">Product page <span class="pixel-external" aria-hidden="true"></span></a><p class="objects-dialog-availability" hidden>Not for sale</p></div><div class="objects-dialog-tags"></div><div class="objects-detail-colors" role="group" aria-label="Product colors"></div></div></div></div></div><button type="button" class="objects-product-peek" data-product-step="1"></button><div class="objects-dialog-footer" hidden><div class="objects-dialog-footer-action"></div><div class="objects-product-arrows" role="group" aria-label="Product navigation"><button type="button" class="objects-product-arrow" data-product-step="-1" data-product-arrow aria-label="Previous product"><span aria-hidden="true">←</span></button><button type="button" class="objects-product-arrow" data-product-step="1" data-product-arrow aria-label="Next product"><span aria-hidden="true">→</span></button></div></div></dialog>
 <dialog class="objects-info-dialog objects-dialog" id="objects-info-dialog" aria-labelledby="objects-info-title"><button class="objects-info-close" type="button" aria-label="Close info sheet"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false"><path d="M0 0h2v2H0zM2 2h2v2H2zM4 4h1v1H4zM5 5h2v2H5zM7 7h2v2H7zM7 0h2v2H7zM5 2h2v2H5zM2 5h2v2H2zM0 7h2v2H0z"/></svg></button><img class="objects-info-eyes" src="../img/brand/eyes.svg" width="116" height="48" alt="" aria-hidden="true"><h2 id="objects-info-title">A growing collection of everyday companions that go from having character to becoming a character.</h2><p>Hi, I’m <a href="https://kosuke.com/" target="_blank" rel="noopener noreferrer" translate="no">Kosuke Futsukaichi</a>. I hand-pick the objects here and update the collection when I get a chance. I’m drawn to thoughtfully designed everyday things with a clear point of view and a little wit. I started calling these things Familiar Characters.</p><p>Explore the canvas to discover new companions to be part of your routine. I personally wish I owned everything here.</p><div class="objects-info-actions"><a class="objects-info-about" href="../about/">Learn more</a><a class="objects-info-contact" href="../contact/">Reach out</a></div></dialog>
+{about_sheet}
 </body></html>'''
 (ROOT/'objects').mkdir(exist_ok=True)
 (ROOT/'finds/index.html').write_text(html)

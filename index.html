@@ -51,20 +51,22 @@
 <link rel="stylesheet" href="css/typography.css?v=15">
   <script src="js/language.js?v=1" defer></script>
   <script src="js/config.js" defer></script>
-  <script src="js/drawers.js?v=2" defer></script>
-  <script src="js/contact.js?v=12" defer></script>
-  <link rel="stylesheet" href="css/today-bag.css?v=65">
-  <script src="js/mobile-nav.js?v=3" defer></script>
-  <script src="js/site.js?v=4" defer></script>
+      <link rel="stylesheet" href="css/today-bag.css?v=65">
+  <script src="js/mobile-nav.js?v=4" defer></script>
+  <script src="js/site.js?v=5" defer></script>
   <script src="js/walla.js?v=27" defer></script>
   <script src="js/reading-ink.js?v=9" defer></script>
   <script src="js/bag-cover.js?v=2" defer></script>
   <script src="js/bag-layout.js?v=1" defer></script>
   <script src="js/bag-material.js?v=1" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/2d1-brand.png?v=2","slogan":"Familiar Characters","description":"An independent design studio working in branding and digital products, and an editorial home for Familiar Characters."}</script>
-<link rel="stylesheet" href="css/shared-controls.css?v=11">
+<link rel="stylesheet" href="css/shared-controls.css?v=19">
 <link rel="stylesheet" href="css/button-fill.css?v=6">
 <link rel="stylesheet" href="css/logo-dock.css?v=1">
+<link rel="stylesheet" href="css/text-links.css?v=6">
+<link rel="stylesheet" href="css/responsive-nav.css?v=2">
+  <link rel="stylesheet" href="css/home-ending.css?v=2">
+  <script src="js/home-ending.js?v=2" defer></script>
 </head>
 <body id="top" class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -77,11 +79,11 @@
     <p class="brand-caption"><span>A Design House</span></p>
   </div>
   <button class="mobile-nav-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
-  <nav class="page-nav" id="page-navigation" aria-label="Pages"><a href="./"><span class="nav-label">Home</span></a><a href="work/" data-work-nav><span class="nav-label">Work</span></a><a href="about/"><span class="nav-label">About</span></a><span class="page-nav-contact"><a href="contact/"><span class="nav-label">Contact</span></a></span><a class="nav-finds" href="finds/"><span class="nav-label">Finds</span></a><a class="nav-red-pixel" href="red-pixel/"><span class="nav-label" translate="no">RED PIXEL</span></a></nav>
+  <nav class="page-nav" id="page-navigation" aria-label="Pages"><a href="./" aria-current="page"><span class="nav-label">Home</span></a><a href="work/" data-work-nav><span class="nav-label">Studio</span></a><a class="nav-shop" href="shop/"><span class="nav-label">Shop</span></a><a href="about/"><span class="nav-label">About</span></a><span class="page-nav-contact"><a href="contact/"><span class="nav-label">Contact</span></a></span></nav>
   <main id="main">
     <section class="intro column section-stack" aria-label="Introduction">
       <h1 data-ink>2D1 is an independent design practice working across <em class="copy-emphasis">brands, digital products, and ideas</em>. We help shape things from early concept to how they look, work, and live in the world.<br><br>Alongside client work, we make things of our own with people we like and curate objects that we call <a class="familiar-characters copy-emphasis" href="finds/" translate="no">Familiar Characters</a> — companions that quietly collect a life around them to eventually become part of our routine.</h1>
-      <div class="button-stack"><a class="intro-cta" href="about/">More about us <span class="pixel-arrow" aria-hidden="true">→</span></a></div>
+      <div class="button-stack"><a class="intro-cta" href="about/">More about us <span class="pixel-arrow" aria-hidden="true"></span></a></div>
     </section>
     <section id="studio" class="section-stack studio" aria-labelledby="studio-label">
       <div class="column studio-opening">
@@ -101,7 +103,7 @@
 <li><img src="img/projects/studio-11-560.webp" srcset="img/projects/studio-11-560.webp 560w, img/projects/studio-11-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Supateam business cards" loading="lazy" decoding="async"></li></ul></div></div>
       <div class="column section-stack-inner">
         <div class="table-group"><h3 class="table-title" id="services-title">Services</h3><dl class="services" aria-labelledby="services-title"><div><dt>Design Consulting</dt><dd>Advisory, Direction</dd></div><div><dt>Digital Product Design</dt><dd>Websites, UX/UI, Design Systems</dd></div><div><dt>Brand Design</dt><dd>Art Direction, Graphic Design, Visual Identity</dd></div></dl></div>
-        <a class="intro-cta" href="work/">View our work <span class="pixel-arrow" aria-hidden="true">→</span></a>
+        <a class="intro-cta" href="work/">Explore the studio <span class="pixel-arrow" aria-hidden="true"></span></a>
       </div>
     </section>
     <section id="shop" class="section-stack" aria-labelledby="shop-label">
@@ -110,13 +112,13 @@
       <div class="section-heading column"><h2 id="shop-label">Shop</h2><p>House of familiar things.</p></div>
       <div class="section-copy prose column"><p data-ink><em class="copy-emphasis">The joy of making</em> is at the heart of what we do. The things we make for ourselves start the same way as our client work: with a clear idea and a detail that makes them their own.</p></div>
       </div>
-      <figure class="bag-study" id="today-bag" aria-label="Life Tote">
+      <figure class="bag-study" id="today-bag" aria-label="Daily Tote">
         <header class="bag-story-heading bag-study-copy">
-          <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">Life Tote</em> is our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and a <em class="copy-emphasis">flash of red</em> so you know it’s yours.</p>
+          <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">Daily Tote</em> is our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and a <em class="copy-emphasis">flash of red</em> so you know it’s yours.</p>
         </header>
         <div class="bag-layout-scroll"><div class="bag-product-spread">
           <div class="bag-study-stage">
-            <div class="bag-study-image"><img class="bag-study-photo" src="img/shop/life-tote-studio-v4.webp" width="1050" height="1498" alt="Photorealistic concept of Life Tote: dark cotton canvas, a shoulder strap, a compact red hand handle, beige embroidered logo, and a square red tag at the bottom-left seam." loading="lazy" decoding="async"></div>
+            <div class="bag-study-image"><img class="bag-study-photo" src="img/shop/life-tote-studio-v4.webp" width="1050" height="1498" alt="Photorealistic concept of Daily Tote: dark cotton canvas, a shoulder strap, a compact red hand handle, beige embroidered logo, and a square red tag at the bottom-left seam." loading="lazy" decoding="async"></div>
           </div>
           <div class="bag-editorial">
 
@@ -136,17 +138,19 @@
           </div>
         </div>
         </div>
-        <div class="bag-study-copy bag-closing"><div class="section-copy prose column shop-support-copy"><p data-ink><span>Life Tote</span> is <em class="copy-emphasis">still in development</em>. If you’d like it to become part of your day, sign up for updates.</p></div></div>
+        <div class="bag-study-copy bag-closing"><div class="section-copy prose column shop-support-copy"><p data-ink><span>Daily Tote</span> is <em class="copy-emphasis">still in development</em>. If you’d like it to become part of your day, sign up for updates.</p></div></div>
       </figure>
       </div>
-      <div class="shop-tail"><div class="shop-signup"><div class="column">
-        <h2 class="signup-heading">Sign up</h2>
-        <div class="shop-actions"><form class="connect-form" aria-describedby="connect-status"><label for="connect-email" class="sr-only">Your email address</label><div class="connect-row"><span class="signup-field"><input type="email" id="connect-email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" aria-describedby="connect-status" required disabled></span><button class="intro-cta" type="submit" disabled>Notify me when it’s out <span class="pixel-arrow" aria-hidden="true">→</span></button></div><p id="connect-status" role="status" hidden></p></form></div>
-      </div></div></div>
     </section>
 
   </main>
+  <div class="home-ending" data-link-surface="dark">
+      <div class="shop-tail"><div class="shop-signup"><div class="column">
+        <h2 class="signup-heading">Sign up</h2>
+        <div class="shop-actions"><form class="connect-form" aria-describedby="connect-status"><label for="connect-email" class="sr-only">Your email address</label><div class="connect-row"><span class="signup-field"><input type="email" id="connect-email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" aria-describedby="connect-status" required disabled></span><button class="intro-cta" type="submit" disabled>Notify me when it’s out <span class="pixel-arrow" aria-hidden="true"></span></button></div><p id="connect-status" role="status" hidden></p></form></div>
+      </div></div></div>
   <footer class="site-footer"><div class="footer-line column"><p>©<span data-year>2026</span> 2D1</p><nav class="social-links" aria-label="Social media"><a href="https://www.instagram.com/2d1.studio/" target="_blank" rel="noopener noreferrer" aria-label="2D1 on Instagram (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="0" width="7" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="8" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="3" y="3" width="3" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="3" y="6" width="3" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="8" y="7" width="1" height="1"/><rect x="1" y="8" width="7" height="1"/></g></svg><span class="social-platform" aria-hidden="true">Instagram</span></a><a href="https://www.threads.com/@2d1.studio" target="_blank" rel="noopener noreferrer" aria-label="2D1 on Threads (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="2" y="0" width="5" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="3" y="2" width="3" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="5" y="4" width="2" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="3" y="5" width="2" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="2" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="2" y="8" width="6" height="1"/></g></svg><span class="social-platform" aria-hidden="true">Threads</span></a><a href="https://x.com/2d1_studio" target="_blank" rel="noopener noreferrer" aria-label="2D1 on X (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="0.5" y="0.5" width="2" height="1"/><rect x="7.5" y="0.5" width="1" height="1"/><rect x="1.5" y="1.5" width="2" height="1"/><rect x="6.5" y="1.5" width="1" height="1"/><rect x="2.5" y="2.5" width="2" height="1"/><rect x="5.5" y="2.5" width="1" height="1"/><rect x="3.5" y="3.5" width="2" height="1"/><rect x="3.5" y="4.5" width="3" height="1"/><rect x="2.5" y="5.5" width="1" height="1"/><rect x="4.5" y="5.5" width="2" height="1"/><rect x="1.5" y="6.5" width="1" height="1"/><rect x="5.5" y="6.5" width="2" height="1"/><rect x="0.5" y="7.5" width="1" height="1"/><rect x="6.5" y="7.5" width="2" height="1"/></g></svg><span class="social-platform" aria-hidden="true">X</span></a><a href="https://www.linkedin.com/company/newfiction-org/" target="_blank" rel="noopener noreferrer" aria-label="New Fiction on LinkedIn (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="1" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="5" y="3" width="2" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="2" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="3" y="7" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/></g></svg><span class="social-platform" aria-hidden="true">LinkedIn</span></a></nav></div></footer>
+  </div>
 
   <nav class="language-switch" aria-label="Language"><a href="./" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a><a href="ja/" lang="ja" hreflang="ja" aria-label="日本語">JA</a></nav>
 </body>

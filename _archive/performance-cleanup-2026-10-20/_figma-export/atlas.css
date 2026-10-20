@@ -1,0 +1,25 @@
+@font-face{font-family:'SC Walla UnlicensedTrial';src:url('/fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Regular.woff2');font-weight:400}
+@font-face{font-family:'SC Walla UnlicensedTrial';src:url('/fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2');font-weight:500 900}
+@font-face{font-family:'SC Walla Mono UnlicensedTrial';src:url('/fonts/SC Walla Mono Trial/WOFF2/SCWallaMonoUnlicensedTrial-Regular.woff2');font-weight:400}
+@font-face{font-family:'SC Walla Mono UnlicensedTrial';src:url('/fonts/SC Walla Mono Trial/WOFF2/SCWallaMonoUnlicensedTrial-Medium.woff2');font-weight:500 900}
+html[lang=en]{--font:'SC Walla UnlicensedTrial';--mono:'SC Walla Mono UnlicensedTrial'}
+html{scroll-behavior:auto;scrollbar-gutter:auto}body.atlas{overflow:visible;background:#ddd;display:grid;grid-template-columns:repeat(4,var(--screen-width));align-items:start;gap:100px;padding:80px;width:max-content}
+.export-board{width:var(--screen-width);position:relative;transform:translateZ(0);background:var(--beige);overflow:hidden;flex:none}
+.export-label{background:#16161a;color:white;font:16px/1.5 Arial,sans-serif;padding:16px;margin:0}
+.export-content{position:relative;width:100%;overflow:hidden;transform:translateZ(0)}
+.export-content>.masthead{position:relative!important}.export-content .home-logo{position:absolute!important}.export-content .language-switch{position:absolute;bottom:16px}
+.export-content .page-nav{position:absolute;visibility:visible;opacity:1;pointer-events:none}.export-content.full-page .page-nav{display:none}
+.export-content.full-page .ink{opacity:1!important}.export-content .logo-eyes{display:none}
+.export-content .site-logo.is-awake .logo-eyes{display:block;transform:scaleY(1)}
+.export-content .site-logo.is-blinking .logo-eyes{transform:scaleY(.05)}
+.export-content .work-belt{overflow:hidden}.export-content .work-set~.work-set{display:none}
+.export-content .tote-preview-poster{opacity:1!important}.export-content .tote-canvas{display:none}
+.export-content .contact{display:block;position:absolute;inset:0;width:100%;height:100%;max-height:none;max-width:none;margin:0;background:rgba(0,0,0,.4);opacity:1;visibility:visible}
+.export-content .contact-sheet{transform:none!important;opacity:1;overflow:hidden}
+.export-content .export-fullform{position:relative;height:auto;background:transparent;padding:0}
+.export-content .export-fullform .contact-sheet{width:100%;height:auto;max-height:none;overflow:visible;margin:0}
+.export-content .export-focused::after{transform:none!important}.export-content input.export-focused{box-shadow:inset 0 -2px var(--red)}
+.export-content .export-hover{background:var(--ink);color:white}.export-content .button-ink.export-hover{background:var(--red);border-color:var(--red)}
+.export-content .connect-form{width:100%}.export-content .field-trap{display:none!important}
+.export-content .export-invalid{border-bottom-color:var(--red)}
+.export-content *, .export-content *::before,.export-content *::after{animation:none!important;transition:none!important}

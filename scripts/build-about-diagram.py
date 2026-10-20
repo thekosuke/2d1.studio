@@ -69,13 +69,13 @@ def piece(index, pivot, outline, shade, seams, extra=''):
 
 
 parts = [
-    '<svg class="design-house-diagram" viewBox="30 -10 890 760" role="img" aria-labelledby="design-house-description">',
-    '<title id="design-house-description">2D1 design house with three rooms: Studio, Shop, and Finds.</title>',
+    '<svg class="design-house-diagram" viewBox="30 0 730 720" role="img" aria-labelledby="design-house-description">',
+    '<title id="design-house-description">2D1 design house with two rooms: Studio and Shop.</title>',
     '<defs><pattern id="house-section-hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M-1 1L1 -1M0 8L8 0M7 9L9 7" fill="none" stroke="currentColor" stroke-width=".7"/></pattern></defs>',
     '<g aria-hidden="true">',
 ]
 
-for index, (x, label) in enumerate([(0, 'Studio'), (232, 'Shop'), (464, 'Finds')]):
+for index, (x, label) in enumerate([(0, 'Studio'), (232, 'Shop')]):
     right = x + 220
     a, b, c = (x,0,0), (right,0,0), (right,240,0)
     d, e, f, g = (right,240,240), (x,240,240), (x,0,240), (right,0,240)
@@ -86,11 +86,11 @@ for index, (x, label) in enumerate([(0, 'Studio'), (232, 'Shop'), (464, 'Finds')
     parts += piece(index, pivot, [a,b,c,d,e,f], [b,c,d,g], [[f,g,d],[g,b]], extra)
 
 # Triangular roof prism: one outline and one continuous ridge/gable junction.
-a, b, f = (-20,-12,240), (704,-12,240), (342,-12,470)
-c, d, e = (704,252,240), (342,252,470), (-20,252,240)
-px, py = project((254,-12,351))
+a, b, f = (-20,-12,240), (472,-12,240), (226,-12,420)
+c, d, e = (472,252,240), (226,252,420), (-20,252,240)
+px, py = project((138,-12,330))
 logo = f'<image href="../img/brand/logo_white.svg" width="176" height="59.4" transform="matrix(.95 .15 0 1 {px:.1f} {py:.1f})"/>'
-parts += piece(3, '505 270', [a,b,c,d,e,f], [f,b,c,d], [[a,f,b],[f,d]], logo)
+parts += piece(2, '389.7 259.9', [a,b,c,d,e,f], [f,b,c,d], [[a,f,b],[f,d]], logo)
 parts += ['</g>', '</svg>']
 svg = '\n            '.join(parts)
 page = ROOT / 'about/index.html'

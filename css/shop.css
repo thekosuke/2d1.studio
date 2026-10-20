@@ -1,0 +1,61 @@
+/* Shop follows Studio’s image-led, centered vertical gallery. */
+.shop-main{width:calc(100% - 48px);max-width:var(--column);margin-inline:auto;padding:144px 0 64px;min-height:calc(100svh - 72px)}
+.shop-grid{display:flex;flex-direction:column;gap:64px}
+.shop-card{position:relative;width:72%;min-width:0;margin-inline:auto;outline:none}
+.shop-card-link{display:block;color:var(--ink);text-decoration:none}
+.shop-card-media{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;background:var(--white);margin:0;overflow:hidden;transition:opacity 420ms,filter 420ms}
+.shop-tote-image{display:block;width:100%;height:100%;padding:24px;object-fit:contain}
+.menu-note-preview img{display:block;width:100%;height:100%;object-fit:cover}
+.shop-card-caption{position:absolute;left:calc(100% + 24px);top:0;width:calc(38.8889% - 24px);font:500 var(--type-label)/1.5 var(--font)}
+.shop-card-title{font:500 var(--type-label)/1.5 var(--font);margin:0;text-transform:none}
+.shop-card-title::before{content:none}
+.shop-card-description,.shop-card-price{font:400 var(--type-label)/1.5 var(--font);margin:8px 0 0;color:var(--sub-gray)}
+.shop-card-price{display:none}
+.shop-card-action{display:flex;align-items:center;gap:8px;margin:16px 0 0;font:500 var(--type-label)/1.5 var(--font);color:var(--red);opacity:1;transform:none;transition:opacity 180ms,transform 180ms}
+.shop-card-link[target="_blank"] .shop-card-action::after{content:'';width:.65em;height:.65em;flex:none;background:currentColor;transform:translateY(-.03em);mask:url('../img/icons/pixel-arrow-up-right.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-arrow-up-right.svg') center/contain no-repeat}
+.shop-card:is(:hover,:focus-visible,:focus-within) .shop-card-action{opacity:1;transform:none}
+.shop-card-status{opacity:1;transform:none}
+.shop-card:focus-visible .shop-card-media{background:var(--red)}
+.shop-card:focus-visible .shop-card-media>img{opacity:.9}
+.shop-index{position:absolute;right:calc(100% + 24px);top:0;font:500 var(--type-label)/1.5 var(--font);white-space:nowrap;pointer-events:none}
+.shop-finds-preview{padding:0}
+.shop-finds-preview img{display:block;width:100%;height:100%;object-fit:cover}
+html.shop-scroll-gallery{scroll-snap-type:y proximity;overflow-anchor:none}
+.js .shop-main{padding:0;min-height:0;margin-inline:auto}
+.js .shop-grid{padding-block:var(--shop-edge,30svh);gap:var(--shop-gap,24svh)}
+.js .shop-card{scroll-snap-align:center}
+.js .shop-card .shop-card-media{opacity:.3;filter:grayscale(1)}
+.js .shop-card.is-centered .shop-card-media{opacity:1;filter:grayscale(0)}
+.js .shop-card .shop-card-caption,.js .shop-card .shop-index{opacity:0;transition:opacity 240ms}
+.js .shop-card.is-centered .shop-card-caption,.js .shop-card.is-centered .shop-index{opacity:1}
+.js .shop-card.is-before-first-pass{display:none}
+html.shop-scroll-gallery.shop-rebasing{scroll-snap-type:none;scroll-behavior:auto}
+.shop-rebasing :is(.shop-card-media,.shop-card-caption,.shop-card-action,.shop-index){transition:none!important}
+@media(min-width:1100px){.shop-main{width:calc(100% - min(27.7778vw,400px) - 128px);margin-left:auto;margin-right:128px}}
+@media(max-width:767px){
+ .js .shop-page:not(.mobile-navigation-ready) .page-nav{visibility:hidden}
+ .shop-main{padding-top:112px}.shop-grid{gap:40px}
+ .shop-card-caption{left:0;top:calc(100% + 16px);width:100%}
+ .shop-index{right:calc(100% + 12px)}
+}
+@media(prefers-reduced-motion:reduce){.shop-card-media,.shop-card-caption,.shop-card-action,.shop-index{transition:none!important}.shop-card-action{transform:none}}
+/* Shop keeps native scrolling without a visible page scrollbar. */
+html:has(> body.shop-page){scrollbar-width:none!important;scrollbar-gutter:auto}
+html:has(> body.shop-page)::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+
+/* The web experiment, shown in its enlarged-pixel state. */
+.shop-red-pixel-preview,.shop-card:focus-visible .shop-red-pixel-preview{background:var(--white)}
+.shop-red-pixel-preview>span{display:block;width:24px;height:24px;background:var(--red)}
+
+/* Keep the established product width with a square frame. */
+.shop-card-media{aspect-ratio:1}
+
+.shop-tote-image.shop-tote-lifestyle{padding:0;object-fit:cover}
+
+/* Leave more red around the monitor; preview the actual entrance inside its screen. */
+.shop-finds-preview{position:relative;background:var(--red)}
+.shop-finds-stage{position:absolute;inset:0;transform:scale(.88)}
+.shop-finds-stage>img{display:block;width:100%;height:100%;object-fit:contain}
+.shop-finds-live{position:absolute;left:8.53%;top:21.05%;width:82.94%;height:47.05%;overflow:hidden;pointer-events:none}
+.shop-finds-live:has(iframe){background:var(--beige)}
+.shop-finds-live iframe{position:absolute;left:0;top:0;width:1600px;height:900px;border:0;transform-origin:top left;pointer-events:none}

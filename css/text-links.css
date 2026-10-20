@@ -1,0 +1,27 @@
+/* Text-link sweep colors follow their background; navigation and controls keep their
+   dedicated motion. Backgrounds stay clear and inline links keep wrapping. */
+@property --text-link-sweep{syntax:'<number>';inherits:false;initial-value:0}
+:is(
+  a:not(:has(img,svg)):not(:is(.page-nav a,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.object-open,.pixel-home)),
+  button.intro-cta:not(.contact-page .contact-send),
+  button.objects-info-about,
+  .pixel-zoom summary
+){
+  --text-link-sweep:0;
+  color:var(--text-link-rest,var(--red,#FF2B00))!important;
+  background-color:transparent!important;
+  background-image:linear-gradient(90deg,var(--text-link-hover,var(--cranberry-brown,#320505)) calc(var(--text-link-sweep)*100%),var(--text-link-rest,var(--red,#FF2B00)) 0)!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent;
+  transition:--text-link-sweep 480ms cubic-bezier(.2,.8,.2,1);
+}
+/* Light backgrounds: red → brown. Red: light → brown. Brown: red → beige. */
+.work-studio-footer,[data-link-surface="red"]{--text-link-rest:var(--beige);--text-link-hover:var(--cranberry-brown)}
+.essay-head,.studio,.design-house,[data-link-surface="dark"]{--text-link-rest:var(--red);--text-link-hover:var(--beige)}
+[data-link-surface="light"]{--text-link-rest:var(--red);--text-link-hover:var(--cranberry-brown)}
+@media(hover:hover) and (pointer:fine){
+ :is(a,button,summary):hover:not(:disabled):not([aria-disabled="true"]){--text-link-sweep:1}
+}
+:is(a,button,summary):focus-visible:not(:disabled):not([aria-disabled="true"]){--text-link-sweep:1}
+@media(prefers-reduced-motion:reduce){:is(a,button,summary){transition:none!important}}
+@media(forced-colors:active){:is(a,button,summary){background-image:none!important;-webkit-text-fill-color:currentColor}}

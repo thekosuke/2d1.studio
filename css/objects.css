@@ -689,7 +689,8 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 
 /* Roomier info sheet, with its action row remaining flush to the frame. */
 .objects-page #objects-info-dialog{padding:48px}
-.objects-page #objects-info-dialog .objects-info-close{top:0;right:0}
+.objects-page #objects-info-dialog .objects-info-close{top:24px;right:20px;width:32px;height:32px;min-width:32px;min-height:32px}
+@media(pointer:coarse){.objects-page #objects-info-dialog .objects-info-close{top:20px;width:44px;height:44px;min-width:44px;min-height:44px}}
 .objects-page #objects-info-dialog .objects-info-actions{margin:48px -48px -48px}
 @media(min-width:768px){.objects-page #objects-info-dialog{width:40vw;max-width:none}}
 
@@ -710,3 +711,22 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 .objects-page.objects-ready .objects-zoom button:focus-visible{background:transparent!important;color:var(--red)!important}
 
 .objects-search-suggestions .search-color-button{justify-content:flex-start}
+
+/* The collection essay opens beside its original sheet, sharing its paper and grid. */
+.objects-about-dialog{position:fixed;z-index:8;inset:var(--about-top,16px) auto auto var(--about-left,16px);width:var(--about-width,40vw);height:var(--about-height,80dvh);max-width:none;max-height:calc(100dvh - 32px);margin:0;padding:0;box-sizing:border-box;border:2px solid var(--red);background:var(--white);color:var(--ink);overflow:hidden;overscroll-behavior:contain}
+.objects-about-scroll{height:100%;overflow:auto;overscroll-behavior:contain;padding:48px;scrollbar-gutter:stable;font:400 var(--type-body)/1.6 var(--font);letter-spacing:0;text-transform:none}
+.objects-about-dialog h2{font:500 var(--type-body)/1.6 var(--font);text-transform:none;margin:0 0 24px;padding:0 0 24px;border-bottom:1px solid var(--line)}
+.objects-about-dialog h2::before,.objects-about-dialog h3::before{content:none}
+.objects-about-dialog h3{font:500 var(--type-body)/1.6 var(--font);text-transform:none;margin:48px 0 24px}
+.objects-about-dialog p{font:400 var(--type-body)/1.6 var(--font);margin:0}
+.objects-about-dialog p+p{margin-top:24px}
+.objects-about-dialog strong{font-weight:500}
+.objects-about-dialog a{text-decoration:underline;text-underline-offset:.18em}
+.objects-about-dialog .objects-info-close{position:absolute;z-index:2;top:24px;right:20px;display:grid;place-items:center;width:32px;height:32px;padding:0;border:0;background:var(--white);color:var(--ink);cursor:pointer;transition:background-color 180ms,color 180ms}
+.objects-about-dialog .objects-info-close:is(:hover,:focus-visible){background:var(--red);color:var(--beige)}
+.objects-about-dialog h2:focus,.objects-about-scroll:focus{outline:none;background:transparent}
+.objects-about-scroll:focus-visible h2{color:var(--red)}
+@media(pointer:coarse){.objects-about-dialog .objects-info-close{top:20px;width:44px;height:44px}}
+@media(prefers-reduced-motion:reduce){.objects-about-dialog .objects-info-close{transition:none}}
+
+.objects-about-dialog h3[tabindex="-1"]:focus{outline:none;background:transparent;color:var(--red)}

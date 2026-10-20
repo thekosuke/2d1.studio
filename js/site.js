@@ -29,7 +29,7 @@
   if (document.readyState === 'complete') arrival();
   else window.addEventListener('load', arrival, {once:true});
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
-  if (!document.body.classList.contains('about-page') && ['2d1.studio','www.2d1.studio'].includes(location.hostname)) {
+  if (['2d1.studio','www.2d1.studio'].includes(location.hostname)) {
     window.dataLayer = window.dataLayer || [];
     window.gtag = function(){window.dataLayer.push(arguments);};
     gtag('js',new Date()); gtag('config','G-7YBDBXJWCG');

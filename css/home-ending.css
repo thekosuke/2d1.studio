@@ -1,0 +1,24 @@
+/* The story passes over one shared signup/footer layer. */
+.home-ending{position:relative;z-index:0;background:var(--ash-brown);color:var(--beige);--ink:var(--beige);--sub-gray:var(--sand)}
+.js .home-ending{position:sticky;bottom:var(--ending-bottom,0px)}
+.home-page .home-ending .shop-signup,.home-page .home-ending .site-footer{background:var(--ash-brown);color:var(--beige)}
+.home-ending .site-footer .social-platform{color:var(--beige)}
+.home-page .home-ending .connect-form input{color:var(--beige);caret-color:var(--beige)}
+.home-page .home-ending .connect-form input::placeholder{color:rgba(250,240,230,.45)}
+.home-page .home-ending .connect-form input:disabled{-webkit-text-fill-color:var(--beige)}
+.home-page .home-ending .signup-field::after{border-color:rgba(250,240,230,.3)}
+.home-page .home-ending .intro-cta:is(:hover,:focus-visible) .pixel-arrow::before{color:var(--beige)}
+body .language-switch.on-ending{background:var(--ash-brown)!important;border-color:var(--beige)!important;--fill-rest-ground:var(--ash-brown);--fill-rest-ink:var(--beige);--fill-active-ground:var(--beige);--fill-active-ink:var(--ash-brown);--language-fill:var(--beige)}
+body .language-switch.on-ending a{color:var(--beige)!important;border-color:var(--beige)!important}
+body .language-switch.on-ending a[aria-current]{color:var(--ash-brown)!important}
+@media(prefers-reduced-motion:reduce){.js .home-ending{position:relative;bottom:auto}}
+.home-ending .shop-tail{margin:0;padding:0;background:var(--ash-brown)}
+body .page-nav a.on-ending{color:var(--beige)}
+
+.about-story-page > main{position:relative;z-index:1;background:var(--beige)}
+.about-ending .ending-contact{padding-block:var(--space)}
+.about-ending .site-footer{background:var(--ash-brown);color:var(--beige)}
+.about-ending .intro-cta{font:500 var(--reading)/1.2 var(--font)}
+.about-ending .intro-cta .pixel-arrow{display:inline-block;transition:transform 180ms ease}
+.about-ending .intro-cta:is(:hover,:focus-visible) .pixel-arrow{transform:translateX(4px)}
+@media(prefers-reduced-motion:reduce){.about-ending .intro-cta .pixel-arrow{transition:none;transform:none}}

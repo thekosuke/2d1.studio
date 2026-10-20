@@ -1,0 +1,42 @@
+[
+  {
+    "path": "js/bar.js",
+    "bytes": 3652,
+    "reason": "No active HTML, runtime import, build helper or test references."
+  },
+  {
+    "path": "js/script.js",
+    "bytes": 27658,
+    "reason": "No active HTML, runtime import, build helper or test references."
+  },
+  {
+    "path": "js/profile.js",
+    "bytes": 922,
+    "reason": "No active HTML, runtime import, build helper or test references."
+  },
+  {
+    "path": "js/conveyor.js",
+    "bytes": 2608,
+    "reason": "No active HTML, runtime import, build helper or test references."
+  },
+  {
+    "path": "js/waitlist.js",
+    "bytes": 505,
+    "reason": "No active HTML, runtime import, build helper or test references."
+  },
+  {
+    "path": "js/contact-inline.js",
+    "bytes": 3416,
+    "reason": "No active HTML, runtime import, build helper or test references."
+  },
+  {
+    "path": "css/style.css",
+    "bytes": 45497,
+    "reason": "No active HTML, runtime import, build helper or test references."
+  },
+  {
+    "path": "css/editorial.css",
+    "bytes": 12188,
+    "reason": "No active HTML, runtime import, build helper or test references."
+  }
+]
