@@ -1,0 +1,24 @@
+:root{--red:#ff2b00;--beige:#faf0e6;--ash:#191416;--brown:#320505;--copy-left:24px}
+*{box-sizing:border-box}html{background:var(--ash);scrollbar-width:none}html::-webkit-scrollbar{display:none}
+body{margin:0;background:var(--ash);color:var(--beige);font:400 18px/1.55 'SC Walla',Arial,sans-serif}
+a,button{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{font:inherit;border:0;border-radius:0;cursor:pointer}a:focus-visible,button:focus-visible{outline:none;background:var(--red);color:var(--beige)}
+.mark{position:fixed;top:28px;left:50%;transform:translateX(-50%);width:96px;z-index:10}.mark img{display:block;width:100%;height:auto}
+.cube{--surface:var(--ash);--line:var(--beige);--text:var(--beige);background:var(--surface);color:var(--text)}.shop{--surface:var(--beige);--line:var(--brown);--text:var(--brown)}
+.wall-copy{display:grid;grid-template-columns:minmax(120px,1fr) minmax(0,2fr);gap:40px;align-items:start;padding:80px 24px;max-width:960px;margin:auto}
+.wall-copy h1{font-size:40px;font-weight:500;letter-spacing:-.025em;line-height:1.15;margin:0}
+.room-body{min-width:0;max-width:460px}.room-body p{font-size:18px;line-height:1.55;margin:0 0 20px;color:color-mix(in srgb,var(--text) 80%,var(--surface))}.room-body .lead{font-size:24px;line-height:1.3;font-weight:400;margin-bottom:28px;color:var(--text)}
+.cta{display:inline-flex;gap:12px;color:var(--red);font-size:18px;font-weight:500;margin-top:12px}.cta span{transition:transform 200ms}.cta:hover{color:var(--text)}.cta:hover span{transform:translateX(6px)}
+.room-outline,.front-edge,.wall:not(.back){display:none}
+/* Flat elevation: the border and corner lines are a drawing, never a camera. */
+.js .journey{height:570svh}.js .viewport{position:sticky;top:0;height:100svh;overflow:clip}.js .camera,.js .world{height:100%;position:relative}
+.js .cube{position:absolute;inset:0;width:100%;height:100%;will-change:transform}
+.js .back{position:absolute;inset:6% 15%;border:3px solid var(--line);border-radius:12px;display:flex;align-items:center;background:var(--surface)}
+.js .wall-copy{width:100%;max-width:none;margin:0;padding:40px 48px 40px var(--copy-left)}
+.js .room-outline{display:block;position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--line);stroke-width:3px}.room-outline path{vector-effect:non-scaling-stroke}
+.js .right{display:block;position:absolute;inset:0 0 0 85%;clip-path:polygon(0 6%,100% 0,100% 100%,0 94%);background:repeating-linear-gradient(115deg,transparent 0 9px,color-mix(in srgb,var(--line) 9%,transparent) 9px 10px)}
+.js .shop{visibility:hidden}
+.bottom-bar{position:fixed;bottom:24px;left:24px;right:24px;z-index:10;display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:500;letter-spacing:.04em}.bottom-bar a,.scroll-note{background:var(--ash);padding:6px 8px}.scroll-note{margin:0}.bottom-bar nav{display:flex;gap:4px;background:var(--ash)}.bottom-bar button{background:transparent;color:var(--beige);padding:8px 16px;font-size:14px}.bottom-bar button[aria-current]{background:var(--beige);color:var(--brown)}.bottom-bar button:hover{background:var(--red);color:var(--beige)}
+@media(max-width:1099px) and (min-width:768px){.wall-copy{gap:24px;grid-template-columns:120px minmax(0,1fr)}.js .wall-copy{padding-right:24px}.wall-copy h1{font-size:32px}.room-body p,.cta{font-size:16px}.room-body .lead{font-size:22px}}
+@media(max-width:767px){.mark{width:72px;top:20px}.bottom-bar{left:16px;right:16px;bottom:16px}.study-link{display:none}.bottom-bar button{padding:8px 10px}.scroll-note{font-size:10px}.js .back{inset:9% 12px}.js .room-outline,.js .right{display:none}.wall-copy{grid-template-columns:76px minmax(0,1fr);gap:16px}.js .wall-copy{padding:24px 9px 24px var(--copy-left)}.wall-copy h1{font-size:26px}.room-body p,.cta{font-size:16px}.room-body .lead{font-size:20px;margin-bottom:22px}.room-body p{margin-bottom:16px}}
+@media(prefers-reduced-motion:reduce){.js .journey{height:auto}.js .viewport{position:relative;height:auto;overflow:visible}.js .cube{position:relative;height:auto;transform:none!important;visibility:visible!important;will-change:auto}.js .back{position:relative;inset:auto;border:0}.js .wall-copy{padding:96px 24px;max-width:960px;margin:auto}.js .room-outline,.js .right,.scroll-note{display:none}.cta span{transition:none}}
+html:not(.js) .scroll-note{display:none}

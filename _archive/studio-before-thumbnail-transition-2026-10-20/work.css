@@ -1,0 +1,352 @@
+/* An image-led project stack; small context appears alongside the thumbnail. */
+.work-main{width:calc(100% - 48px);max-width:var(--column);margin-inline:auto;padding:144px 0 64px;min-height:calc(100svh - 72px)}
+.work-grid{display:flex;flex-direction:column;gap:64px}
+.work-project{min-width:0}
+.work-project>summary{position:relative;display:block;list-style:none;cursor:pointer;width:72%;background:transparent}
+.work-project>summary::-webkit-details-marker{display:none}
+.work-project>summary::marker{content:''}
+.work-project>summary>img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.work-caption{position:absolute;left:calc(100% + 24px);top:0;width:calc(38.8889% - 24px);font-size:var(--type-label);opacity:0;transition:opacity 180ms;pointer-events:none}
+.work-title,.work-category{display:block;font:500 var(--type-label)/1.5 var(--font);letter-spacing:0;text-transform:none}
+.work-category{font-weight:400;color:var(--sub-gray);margin-top:8px}
+.work-project>summary:is(:hover,:focus-visible) .work-caption{opacity:1}
+.work-project>summary:focus-visible{outline:none;background:var(--red)}
+.work-project>summary:focus-visible>img{opacity:.9}
+.work-project-content{margin-top:24px}
+.js .work-project>.work-project-content{display:none}
+.work-dialog{position:fixed;inset:0;width:100%;max-width:none;height:100dvh;max-height:none;margin:0;padding:0;border:0;background:var(--beige);color:var(--ink);overflow:hidden;overscroll-behavior:contain}
+.work-dialog::backdrop{background:rgba(50,5,5,.4)}
+.work-detail-content>.work-project-content{margin-top:0}
+.work-detail-content{height:100%;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.work-close{position:absolute;z-index:2;top:24px;right:24px;width:32px;height:32px;display:grid;place-items:center;padding:0;border:0;background:var(--beige);color:var(--ink)}
+.work-close span{display:block;width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
+.work-close:is(:hover,:focus-visible){background:var(--red);color:var(--beige)}
+.work-detail-header{min-height:30svh;height:auto;padding:24px;display:flex;flex-direction:column;gap:20px;justify-content:flex-start}
+.work-trail{display:flex;align-items:center;gap:.4em;min-height:32px;padding-right:48px;margin:0;font:500 13px/1.4 var(--font);letter-spacing:.04em;text-transform:uppercase}
+.work-page .work-detail-title{font:700 var(--section-title)/1.2 var(--font);text-transform:none;letter-spacing:0;padding-right:48px;margin:0}
+.work-page .work-detail-title::before{content:none}
+.work-description{max-width:1440px;font:500 var(--reading)/1.2 var(--font);margin:0;text-wrap:pretty}
+.work-meta{display:flex;flex-wrap:wrap;gap:24px 64px;margin:12px 0 0;font:400 16px/1.5 var(--font)}
+.work-meta dt{color:var(--sub-gray);margin-bottom:4px}
+.work-meta dd{margin:0}
+.work-role-list{list-style:none;margin:0;padding:0}
+html[lang="ja"] .work-description{line-height:1.65}
+.work-detail-image{height:100svh;margin:0;padding:24px}
+.work-detail-image+.work-detail-image{padding-top:0;height:calc(100svh - 24px)}
+.work-detail-image img{width:100%;height:100%;object-fit:cover;display:block}
+@media(min-width:1100px){.work-main{width:calc(100% - max(min(27.7778vw,400px),100% - var(--column) - 128px) - 24px);max-width:none;margin-left:max(min(27.7778vw,400px),100% - var(--column) - 128px);margin-right:24px}}
+@media(max-width:767px){.work-main{padding-top:112px}.work-grid{gap:40px}.work-caption{left:calc(100% + 12px);width:calc(38.8889% - 12px)}.work-detail-header{gap:24px;min-height:30svh}.work-meta{gap:24px;font-size:14px}}
+@media(hover:none){.work-caption{opacity:1}}
+@media(prefers-reduced-motion:reduce){.work-caption{transition:none}}
+
+/* Native vertical scrolling settles each thumbnail at the viewport center. */
+html.work-scroll-gallery{scroll-snap-type:y proximity;overflow-anchor:none}
+.js .work-main{padding:0;min-height:0;margin-inline:auto}
+.js .work-grid{padding-block:var(--work-edge,30svh);gap:var(--work-gap,24svh)}
+.js .work-project>summary{margin-inline:auto;scroll-snap-align:center}
+.js .work-project>summary>img{opacity:.3;filter:grayscale(1);transition:opacity 420ms,filter 420ms}
+.js .work-project.is-centered>summary>img{opacity:1;filter:grayscale(0)}
+.js .work-project>summary .work-caption{opacity:0;transition:opacity 240ms}
+.js .work-project.is-centered>summary .work-caption{opacity:1}
+.work-view{position:static;display:flex;align-items:center;gap:8px;width:auto;margin-top:16px;font:500 var(--type-label)/1.5 var(--font);color:var(--red);opacity:1;transform:none;transition:opacity 180ms,transform 180ms;pointer-events:none}
+.work-view::after{content:'';width:14px;height:14px;flex:none;background:currentColor;mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat}
+.work-index{position:absolute;right:calc(100% + 24px);top:0;font:500 var(--type-label)/1.5 var(--font);white-space:nowrap;pointer-events:none;transition:opacity 240ms}
+.js .work-project>summary .work-index{opacity:0}
+.js .work-project.is-centered>summary .work-index{opacity:1}
+.js .work-project.is-centered>summary:is(:hover,:focus-visible) .work-view{opacity:1;transform:none}
+@media(max-width:767px){
+ .work-project>summary .work-caption{left:0;top:calc(100% + 16px);width:100%;transform:none}
+ .work-index{right:calc(100% + 12px)}
+}
+@media(prefers-reduced-motion:reduce){
+ html.work-scroll-gallery{scroll-behavior:auto}
+ .js .work-project>summary>img,.js .work-project>summary .work-caption,.work-view{transition:none}
+ .work-view{transform:none}
+ .work-index{transition:none}
+}
+
+/* Rebase between identical loop copies without a visible snap or color reveal. */
+html.work-scroll-gallery.work-rebasing{scroll-snap-type:none;scroll-behavior:auto}
+.work-rebasing .work-project>summary>img,.work-rebasing .work-project>summary .work-caption,.work-rebasing .work-view,.work-rebasing .work-index{transition:none!important}
+
+/* Project stories: full-width lead image, overview, metadata, and image pairs. */
+.work-project-content{--project-inset:20px;--project-image-gap:40px;background:var(--beige);color:var(--ink)}
+.work-dialog{--project-inset:20px;background:var(--beige);width:100vw}
+.work-detail-content{scrollbar-gutter:auto}
+.work-dialog-bar{position:absolute;z-index:2;inset:0 0 auto;height:80px;padding:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--white);pointer-events:none}
+.work-dialog-bar>*{pointer-events:auto}
+.work-dialog-bar .work-close{position:static;flex:none;margin:0;background:var(--white)}
+.work-dialog-bar .work-close:is(:hover,:focus-visible){background:var(--red)}
+.work-dialog-bar .work-trail{display:flex;align-items:center;gap:0;min-height:32px;margin:0;padding:0;font:500 var(--type-label)/1.4 var(--font);letter-spacing:0;text-transform:uppercase;flex-wrap:wrap}
+.work-trail>span[aria-hidden]{white-space:pre}
+.work-trail a:is(:hover,:focus-visible){color:var(--red)}
+.work-detail-hero{height:auto;margin:0;padding:80px 0 0}
+.work-detail-hero img{display:block;width:100%;height:auto}
+.work-detail-header{display:block;min-height:0;padding:160px var(--project-inset);margin:0}
+.work-detail-header>.work-trail{margin-bottom:48px}
+.js .work-detail-header>.work-trail{display:none}
+.work-overview{display:grid;grid-template-columns:22.5% 1fr;gap:0}
+.work-overview h3{margin:0;font:400 20px/1.45 var(--font);color:var(--sub-gray)}
+.work-page .work-description{max-width:90%;margin:0;padding:0;font:400 32px/1.3 var(--font);letter-spacing:-.02em;text-wrap:pretty}
+html[lang="ja"] .work-description{line-height:1.65;letter-spacing:0}
+.work-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin:96px 0 0;padding:0;font:400 18px/1.45 var(--font)}
+.work-meta dt{margin-bottom:8px;font:400 14px/1.5 var(--font)}
+.work-role-list{display:flex;flex-wrap:wrap;column-gap:.25em}
+.work-role-list li:not(:last-child)::after{content:','}
+.work-detail-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--project-image-gap);column-gap:var(--project-inset);padding:0 var(--project-inset)}
+.work-detail-images .work-detail-image,.work-detail-images .work-detail-image+.work-detail-image{grid-column:1/-1;height:auto;margin:0;padding:0;align-self:start}
+.work-detail-images .work-detail-image.work-detail-image--half{grid-column:auto}
+.work-detail-images .work-detail-image img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.work-related{padding:160px var(--project-inset)}
+.work-related h2{margin:0 0 40px;font:400 60px/1.15 var(--font);letter-spacing:-.025em;text-transform:none}
+.work-related h2::before,.work-related h2::after{content:none}
+.work-related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--project-inset)}
+.work-related-card{display:block;min-width:0;color:inherit;text-decoration:none}
+.work-related-card>img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.work-related-caption{display:flex;justify-content:flex-start;align-items:center;gap:12px;margin-top:16px;font:500 24px/1.3 var(--font)}
+.work-related-arrow{flex:none;width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat}
+.work-related-card:is(:hover,:focus-visible){color:var(--red)}
+.work-studio-footer{--ink:var(--beige);margin:0;padding:175px var(--project-inset) var(--project-inset);display:flex;flex-direction:column;align-items:flex-start;gap:32px;background:var(--red);color:var(--beige);font:400 18px/1.5 var(--font)}
+.work-studio-mark{display:block;width:140px}
+.work-studio-mark img{display:block;width:100%;height:auto}
+.work-studio-footer nav{display:flex;flex-direction:column}
+.work-studio-footer a{color:inherit;text-decoration:none}
+.work-studio-footer a:is(:hover,:focus-visible){color:var(--white)}
+.work-studio-footer .nav-label{background:none;-webkit-text-fill-color:currentColor}
+.work-studio-footer .work-studio-nav a::before{background:var(--white)}
+.work-studio-footer p{margin:0}
+.work-footer-bottom.site-footer{display:block;width:calc(100% + 2 * var(--project-inset));margin:0 calc(-1 * var(--project-inset));padding:0}
+.work-footer-bottom .footer-line.column{position:relative;min-height:24px}
+.work-footer-bottom.site-footer p{font:inherit;color:inherit}
+.work-footer-bottom .social-links{display:flex;flex-direction:row;align-items:center;gap:18px}
+.work-studio-footer .work-footer-language{position:absolute;right:24px;top:50%;bottom:auto;transform:translateY(-50%);display:flex;flex-direction:row;height:auto;gap:0;border:1px solid currentColor}
+.work-footer-language a{display:flex;align-items:center;justify-content:center;min-width:22px;min-height:22px;padding-inline:4px}
+.work-footer-language a+a{border-left:1px solid currentColor}
+.work-studio-footer .language-switch a:is([aria-current],:hover,:focus-visible){background:var(--beige);color:var(--red)}
+@media(max-width:1099px){.work-footer-bottom .work-footer-language{right:0;top:0;transform:none}}
+@media(max-width:767px){
+ .work-project-content{--project-image-gap:20px}
+ .work-dialog-bar{height:72px;padding:14px 20px}
+ .work-detail-hero{padding-top:72px}
+ .work-detail-header{padding-block:80px}
+ .work-overview{grid-template-columns:1fr;gap:24px}
+ .work-overview h3{font-size:16px}
+ .work-page .work-description{max-width:none;font-size:24px;line-height:1.4}
+ .work-meta{gap:16px;margin-top:48px;font-size:14px}
+ .work-meta dt{font-size:12px}
+ .work-detail-images .work-detail-image.work-detail-image--half{grid-column:1/-1}
+ .work-related{padding-block:80px}
+ .work-related h2{font-size:32px;margin-bottom:32px}
+ .work-related-grid{gap:20px}
+ .work-related-caption{font-size:18px;margin-top:12px;gap:8px}
+ .work-related-arrow{width:14px;height:14px}
+ .work-studio-footer{padding-top:80px;font-size:16px}
+}
+.js .work-project.is-before-first-pass{visibility:hidden;pointer-events:none}
+
+/* Shared project grid and the scroll-revealed, inverted toolbar. */
+.work-project-content{position:relative;isolation:isolate;background:transparent}
+.work-story{position:relative;z-index:1;background:var(--beige)}
+.work-detail-hero{padding-top:0}
+.work-dialog-bar{background:transparent;color:var(--ink);transition:transform 260ms cubic-bezier(.2,.8,.2,1)}
+.work-dialog-bar.is-scroll-hidden{transform:translateY(-100%);pointer-events:none}
+.work-dialog-bar.is-scroll-hidden>*{pointer-events:none}
+.work-dialog-bar .work-close{background:transparent;color:inherit!important}
+.work-dialog-bar .work-close:is(:hover,:focus-visible){background:var(--red)!important;color:var(--white)!important}
+.work-dialog-bar .work-trail a:is(:hover,:focus-visible){color:inherit;background:transparent;opacity:.65}
+.work-detail-header,.work-hero-caption,.work-caption{--work-meta-columns:1fr 1.4fr 1fr;--work-meta-gap:var(--project-inset)}
+.work-overview,.work-meta{grid-template-columns:var(--work-meta-columns);column-gap:var(--work-meta-gap)}
+.work-overview h3{grid-column:1}
+.work-overview .work-description{grid-column:2 / -1;max-width:none}
+.work-meta{border-top:.5px solid var(--line);padding-top:40px}
+@media(min-width:1001px){.work-detail-header,.work-hero-caption,.work-caption{--work-meta-columns:250px minmax(0,1fr) 30%;--work-meta-gap:var(--project-inset)}}
+@media(min-width:1100px){.work-detail-header,.work-hero-caption,.work-caption{--work-meta-columns:calc(max(min(27.7778vw,400px),100% + 40px - var(--column) - 128px) - 60px) minmax(0,1fr) 30%}}
+/* The white story slides away to uncover a footer already beneath it. */
+.work-studio-footer{position:sticky;z-index:0;bottom:0;color:var(--white)}
+body.work-page .work-studio-footer .work-studio-nav a,
+body.work-page .work-studio-footer .work-studio-nav .nav-label{color:var(--white)!important;background:none!important;-webkit-text-fill-color:var(--white)!important}
+body.work-page .work-studio-footer .work-studio-nav a::before{background:var(--white)}
+body.work-page .work-studio-footer .language-switch{--fill-rest-ground:var(--red);--fill-rest-ink:var(--white);--fill-active-ground:var(--white);--fill-active-ink:var(--red);--language-fill:var(--white);background:var(--red)!important;color:var(--white)!important;border-color:var(--white)!important}
+body.work-page .work-studio-footer .language-switch a{color:var(--white)!important;border-color:var(--white)!important}
+body.work-page .work-studio-footer .language-switch a[aria-current]{color:var(--red)!important}
+body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)) a[aria-current]{color:var(--white)!important}
+body.work-page .work-studio-footer .language-switch a:is(:hover,:focus-visible){color:var(--red)!important}
+@media(max-width:767px){
+ .work-detail-header,.work-hero-caption,.work-caption{--work-meta-columns:repeat(3,minmax(0,1fr));--work-meta-gap:var(--project-inset)}
+ .work-overview{grid-template-columns:1fr;gap:24px}
+ .work-overview .work-description{grid-column:1}
+ .work-meta{padding-top:32px}
+}
+@media(prefers-reduced-motion:reduce){
+ .work-dialog-bar{transition:none}
+ .work-studio-footer{position:relative;bottom:auto}
+}
+
+.work-dialog-bar.is-over-art{color:var(--white)}
+.work-dialog-bar.is-over-art .work-close span{filter:drop-shadow(0 1px 2px rgba(0,0,0,.6))}
+body.work-page #work-dialog .work-dialog-bar .work-trail a{background:none!important;-webkit-text-fill-color:currentColor}
+
+/* Returned navigation sits on a solid beige ground, independent of the image. */
+.work-dialog-bar.is-returned{background:var(--beige);color:var(--ink);text-shadow:none}
+.work-dialog-bar.is-returned .work-close span{filter:none}
+
+/* Outlined Season specimen: native vector motion, with a static no-JS pose. */
+.work-type-study{position:relative;overflow:hidden;background:#DDB4FA}
+.work-type-study>.av-type{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.work-type-study .type-motion-toggle{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid #230B3D;background:#DDB4FA;color:#230B3D;font:20px/1 sans-serif;cursor:pointer}
+.work-type-study .type-motion-toggle:hover,.work-type-study .type-motion-toggle:focus-visible{background:#230B3D;color:#DDB4FA}
+.work-type-study .type-motion-toggle[hidden]{display:none}
+@media(prefers-reduced-motion:reduce){.work-type-study .type-motion-toggle{display:none}}
+
+/* Caption title occupies column one; its one-liner spans columns two and three. */
+.work-hero-caption{display:grid;grid-template-columns:var(--work-meta-columns);gap:var(--project-inset);padding:20px var(--project-inset);background:var(--beige);color:var(--ink);font:400 16px/1.4 var(--font)}
+.work-hero-caption>span{font-weight:500}
+.work-hero-caption p{grid-column:2 / -1;margin:0;text-align:left}
+@media(max-width:767px){.work-hero-caption{font-size:14px;padding-block:16px}}
+
+/* Studio is a normal one-column list; project dialogs keep their own layout. */
+.work-page .work-main,.js .work-page .work-main{width:calc(100% - 40px);max-width:none;margin:0 20px;padding:112px 0 64px;min-height:0}
+.work-page .work-grid,.js .work-page .work-grid{display:flex;flex-direction:column;padding:0;gap:80px}
+.work-page .work-project>summary,.js .work-page .work-project>summary{width:100%;margin:0;scroll-snap-align:none}
+.work-page .work-project>summary>img,.js .work-page .work-project>summary>img{width:100%;aspect-ratio:16/9;object-fit:cover;opacity:1;filter:none;transition:none}
+.work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{position:static;display:grid;grid-template-columns:var(--work-meta-columns);column-gap:var(--work-meta-gap);width:100%;margin:20px 0 0;opacity:1;transform:none;pointer-events:auto;transition:none}
+.work-page .work-caption :is(.work-title,.work-one-liner,.work-category){margin:0;font:400 16px/1.5 var(--font);text-align:left;color:var(--ink)}
+.work-page .work-caption .work-title{font-weight:500}
+.work-page .work-caption .work-category{color:var(--sub-gray)}
+.work-page .work-project>summary:focus-visible>img{opacity:.9}
+@media(max-width:767px){
+ .work-page .work-main,.js .work-page .work-main{padding-top:88px}
+ .work-page .work-grid,.js .work-page .work-grid{gap:48px}
+ .work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{margin-top:16px}
+ .work-page .work-caption :is(.work-title,.work-one-liner,.work-category){font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+}
+/* Align artwork with the shared social-links column, extending toward the right. */
+.work-page .work-main,.js .work-page .work-main{--project-inset:20px;width:calc(100% - 48px);max-width:var(--column);margin-inline:auto}
+@media(min-width:1100px){.work-page .work-main,.js .work-page .work-main{width:calc(100% - max(min(27.7778vw,400px),100% - var(--column) - 128px) - 24px);max-width:none;margin-left:max(min(27.7778vw,400px),100% - var(--column) - 128px);margin-right:24px}}
+
+/* White caption strips overlay the bottom edge of each overview image. */
+.work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{position:absolute;left:0;top:auto;bottom:0;grid-template-columns:1fr 1fr;margin:0;padding:12px 16px;column-gap:24px;background:var(--white)}
+
+.work-page .work-grid,.js .work-page .work-grid{gap:48px}
+@media(max-width:767px){.work-page .work-grid,.js .work-page .work-grid{gap:32px}.work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{padding:8px 12px;column-gap:12px}}
+
+/* Separate, text-sized labels sit directly on the artwork. */
+.work-page .work-grid,.js .work-page .work-grid{gap:24px}
+.work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:12px;background:transparent}
+.work-page .work-caption :is(.work-title,.work-category){width:fit-content;max-width:75%;padding:8px 12px;background:var(--white)}
+@media(max-width:767px){.work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{padding:8px;gap:8px}.work-page .work-caption :is(.work-title,.work-category){padding:6px 8px}.work-page .work-caption .work-category{max-width:70%}}
+
+/* Captions occupy the left annotation rail, like the Shop indices. */
+@media(min-width:1100px){
+ .work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{left:auto;right:calc(100% + 24px);top:0;bottom:auto;width:224px;padding:0;flex-direction:column;align-items:flex-end;justify-content:flex-start;gap:8px}
+ .work-page .work-caption :is(.work-title,.work-category){max-width:100%;text-align:right}
+}
+@media(max-width:1099px){
+ .work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{position:static;width:100%;padding:8px 0 0;justify-content:flex-end;flex-wrap:wrap}
+ .work-page .work-caption :is(.work-title,.work-category){text-align:right}
+}
+
+/* Match Shop's unboxed caption typography. */
+.work-page .work-caption :is(.work-title,.work-category){padding:0;background:transparent;font-size:var(--type-label);line-height:1.5}
+.work-page .work-caption .work-title{font-weight:500}
+.work-page .work-caption .work-category{font-weight:400;color:var(--sub-gray)}
+
+.work-page .work-caption .work-category>span{display:block}
+
+/* Project breadcrumbs share navigation tracking. */
+.work-trail,.work-dialog-bar .work-trail{letter-spacing:var(--type-label-track)}
+
+/* Balance the overview divider with equal space above and below. */
+.work-meta{margin-top:40px}
+@media(max-width:767px){.work-meta{margin-top:32px}}
+
+/* Compact project toolbar and consistent image gutters. */
+.work-dialog-bar{height:56px;padding:12px 20px}
+.work-project-content{--project-image-gap:var(--project-inset)}
+@media(min-width:768px){
+ .work-detail-images .work-detail-image.work-detail-image--half{aspect-ratio:8/9}
+ .work-detail-images .work-detail-image.work-detail-image--half img{width:100%;height:100%;object-fit:cover}
+}
+
+/* Breadcrumb links sweep from their current ink to brand red. */
+@property --trail-sweep{syntax:'<number>';inherits:false;initial-value:0}
+.work-trail a,body.work-page #work-dialog .work-dialog-bar .work-trail a{--trail-sweep:0;color:inherit!important;opacity:1;background:linear-gradient(90deg,var(--red) calc(var(--trail-sweep)*100%),currentColor 0)!important;background-clip:text!important;-webkit-text-fill-color:transparent;transition:--trail-sweep 480ms cubic-bezier(.2,.8,.2,1)}
+.work-trail a:is(:hover,:focus-visible),body.work-page #work-dialog .work-dialog-bar .work-trail a:is(:hover,:focus-visible){--trail-sweep:1}
+@media(prefers-reduced-motion:reduce){.work-trail a{transition:none}}
+@media(forced-colors:active){.work-trail a,body.work-page #work-dialog .work-dialog-bar .work-trail a{background:none!important;-webkit-text-fill-color:currentColor}}
+
+/* The whole project thumbnail is the target; its CTA reinforces that on hover. */
+.work-page .work-project>summary:is(:hover,:focus-visible) .work-view{opacity:1;transform:none}
+.work-page .work-caption .work-view{justify-content:flex-end;margin-top:8px}
+
+/* Soft beige project sheets, with an Ash Brown footer. */
+.work-dialog{background:var(--beige)}
+.work-dialog .work-story,.work-dialog .work-hero-caption{background:var(--beige);color:var(--ink)}
+.work-studio-footer{background:var(--ash-brown);color:var(--beige)}
+.work-dialog .work-dialog-bar.is-returned{background:var(--beige);color:var(--ink)}
+body.work-page .work-studio-footer .work-studio-nav .nav-label{background:linear-gradient(90deg,var(--red) calc(var(--nav-sweep)*100%),var(--beige) 0)!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+body.work-page .work-studio-footer .work-studio-nav a::before{background:var(--red)}
+.work-studio-mark{position:relative}
+.work-studio-mark::after{content:'';position:absolute;left:38.238%;top:36.786%;width:13.993%;height:17.143%;background:url('../img/brand/eyes.svg') center/100% 100% no-repeat;transform:scaleY(0);transition:transform 120ms cubic-bezier(.3,1.4,.5,1);pointer-events:none}
+.work-studio-mark:is(:hover,:focus-visible)::after{transform:scaleY(1)}
+body.work-page .work-studio-footer .language-switch{--fill-rest-ground:var(--ash-brown);--fill-rest-ink:var(--beige);--fill-active-ground:var(--beige);--fill-active-ink:var(--ash-brown);--language-fill:var(--beige);background:var(--ash-brown)!important;color:var(--beige)!important;border-color:var(--beige)!important}
+body.work-page .work-studio-footer .language-switch a{color:var(--beige)!important}
+body.work-page .work-studio-footer .language-switch a[aria-current]{color:var(--ash-brown)!important}
+body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)){--language-fill:var(--red)}
+body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)) a[aria-current]{color:var(--beige)!important}
+body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)) a:is(:hover,:focus-visible){color:var(--beige)!important}
+@media(prefers-reduced-motion:reduce){.work-studio-mark::after{display:none}}
+
+/* Studio: 4:3 frames, browsed horizontally with neighboring projects. */
+.work-page .work-main,.js .work-page .work-main{width:100%;max-width:none;margin:0;padding:0;--studio-square:calc(min(100vw - 48px,960px) * .72)}
+@media(min-width:1100px){.work-page .work-main,.js .work-page .work-main{--studio-square:calc((100vw - min(27.7778vw,400px) - 128px) * .72)}}
+.work-page .work-grid,.js .work-page .work-grid{display:flex;flex-direction:row;gap:24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding: max(112px,calc((100svh - var(--studio-square) * .75 - 100px)/2)) calc((100% - var(--studio-square))/2) 64px;align-items:flex-start}
+.work-grid::-webkit-scrollbar{display:none}
+.work-page .work-project{width:var(--studio-square);flex:0 0 var(--studio-square);scroll-snap-align:center}
+.work-page .work-project>summary>img,.js .work-page .work-project>summary>img{height:auto;aspect-ratio:4/3;object-fit:cover;transition:opacity 300ms,filter 300ms,transform 300ms cubic-bezier(.2,.8,.2,1)}
+.js .work-page .work-project:not(.is-gallery-current)>summary>img{opacity:.3;filter:grayscale(1)}
+.work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{position:static;display:flex;flex-direction:row;justify-content:space-between;align-items:flex-start;right:auto;left:auto;top:auto;bottom:auto;width:100%;margin:16px 0 0;padding:0;gap:16px;flex-wrap:wrap}
+.work-page .work-caption .work-title{text-align:left}
+.work-page .work-caption .work-category{text-align:right}
+.work-page .work-caption .work-view{flex-basis:100%;margin-top:0}
+.js .work-project:not(.is-gallery-current) .work-caption{opacity:0!important;pointer-events:none}
+.work-grid.is-rebasing{scroll-snap-type:none;scroll-behavior:auto}
+@media(max-width:767px){.work-page .work-grid,.js .work-page .work-grid{padding-top:max(88px,calc((100svh - var(--studio-square) * .75 - 100px)/2))}}
+@media(prefers-reduced-motion:reduce){.work-page .work-project>summary>img{transition:none}}
+
+/* Overview footer shares the fixed language toggle's bottom baseline. */
+body.work-page>.site-footer{position:fixed;z-index:20;left:0;right:0;bottom:var(--footer-inset);margin:0;padding:0}
+body.work-page>.site-footer .footer-line{min-height:calc(var(--language-size) + 2px);align-items:center}
+@media(max-width:1099px){
+ body.work-page>.site-footer .footer-line{flex-wrap:nowrap;gap:24px}
+ body.work-page>.site-footer .footer-line>p{flex-basis:auto;flex-shrink:0}
+}
+
+/* Caption roles start at the image midpoint; the CTA shares the title baseline. */
+.work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;column-gap:0}
+.work-page .work-caption .work-title{grid-column:1;grid-row:1}
+.work-page .work-caption .work-category{grid-column:2;grid-row:1;text-align:left;justify-self:start}
+.work-page .work-caption .work-view{position:absolute;top:0;right:0;margin:0;justify-content:flex-end}
+@media(max-width:767px){.work-page .work-caption .work-category{padding-right:0}.work-page .work-caption .work-view{top:auto;bottom:-28px}}
+
+/* The project idea and its CTA share the caption's right-hand column. */
+.work-page .work-caption .work-caption-copy{grid-column:2;grid-row:1;display:block;text-align:left}
+.work-page .work-caption .work-one-liner{display:block;font:400 var(--type-label)/1.5 var(--font);color:var(--sub-gray);text-align:left}
+.work-page .work-caption .work-view{position:static;justify-content:flex-start;margin-top:16px}
+
+.js .work-grid{touch-action:pan-x pinch-zoom}
+.work-grid.is-gesturing{scroll-snap-type:none;scroll-behavior:auto}
+/* Gesture easing owns the position until it has fully settled. */
+.js .work-page .work-grid:is(.is-gesturing,.is-rebasing){scroll-snap-type:none;scroll-behavior:auto}
+
+
+/* A centered image whose left edge meets the desktop social-links column. */
+@media(min-width:1100px){
+ .work-page .work-main,.js .work-page .work-main{--studio-square:max(1px,calc(100vw - 2 * max(min(27.7778vw,400px),100vw - var(--column) - 128px)))}
+ .work-page .work-grid,.js .work-page .work-grid{width:100vw;padding-inline:calc((100vw - var(--studio-square))/2)}
+}
+
+/* Lift the image without moving the caption or changing the gallery geometry. */
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .work-page .work-project.is-gallery-current>summary:hover>img{transform:translateY(-8px)}
+}

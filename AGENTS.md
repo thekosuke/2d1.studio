@@ -363,3 +363,18 @@ button. Older route instructions above are superseded; `/objects/` redirects.
 
 ## Familiar Characters naming — 20 October 2026
 The owner renamed Finds to Familiar Characters. Use Familiar Characters for all public-facing names, titles, links and descriptions in both languages. Keep `/finds/` and `/ja/finds/` as the existing routes. This supersedes the 14 October naming instruction above.
+
+## Shared reading-edge alignment — 20 October 2026
+The owner requires About’s Studio and Shop headings, paragraphs and CTAs to
+share the exact left edge of the footer social links. Apply this rule to every
+future element positioned in that same reading area, rather than choosing a
+new inset. Desktop uses the shared 960px-capped column with a 128px right gutter;
+phone/tablet uses 24px insets. Preserve full-bleed artwork separately.
+
+## Icon surface treatment — 20 October 2026
+Keep standalone decorative icons transparent, without an added background tile.
+Invert the icon itself to beige/white on dark backgrounds; use cranberry brown
+on light backgrounds. Apply this principle wherever relevant in future work.
+About’s flat house icons explicitly use softly rounded block/roof corners and
+a slightly heavier stroke to echo the playful 3D toy blocks. This is an approved
+exception to the historical square-corner rule, not a change to all UI controls.

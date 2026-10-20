@@ -35,7 +35,8 @@
   <link rel="stylesheet" href="../../css/fonts.css?v=7">
   <link rel="stylesheet" href="../../css/japanese-font.css?v=1">
   <link rel="stylesheet" href="../../css/walla.css?v=99">
-  <link rel="stylesheet" href="../../css/about.css?v=40">
+  <link rel="stylesheet" href="../../css/about.css?v=45">
+  <link rel="stylesheet" href="../../css/about-rooms.css?v=1">
   <script src="../../js/ja.js?v=9" defer></script>
   <script src="../../js/language.js?v=1" defer></script>
   <link rel="stylesheet" href="../../css/dialogs.css?v=19">
@@ -44,9 +45,9 @@
   <script src="../../js/config.js" defer></script>
       <script src="../../js/mobile-nav.js?v=4" defer></script>
   <script src="../../js/site.js?v=5" defer></script>
-  <script src="../../js/about.js?v=12" defer></script>
-  <script src="../../js/house-assembly.js?v=8" defer></script>
-  <script src="../../js/about-slideshow.js?v=2" defer></script>
+  <script src="../../js/about.js?v=13" defer></script>
+  <script src="../../js/house-assembly.js?v=9" defer></script>
+
   <script src="../../js/reading-ink.js?v=10" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "name": "2D1について", "url": "https://2d1.studio/ja/about/", "mainEntity": {"@type": "Organization", "name": "2D1", "url": "https://2d1.studio/", "logo": "https://2d1.studio/img/brand/2d1-brand.png?v=2", "slogan": "Familiar Characters"}}</script>
 <link rel="stylesheet" href="../../css/shared-controls.css?v=19">
@@ -67,7 +68,7 @@
 
     <article class="essay">
       <header class="essay-head"><div class="column">
-        <h1 class="essay-title">2D1について</h1>
+        <h1 class="essay-title"><svg class="about-house-icon" viewbox="0 0 96 88" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M8 38Q4 38 7.2 35.6L45.6 7.7Q48 6 50.4 7.7L88.8 35.6Q92 38 88 38Z" fill="currentColor"></path><rect x="6" y="42" width="40" height="40" rx="3" fill="none"></rect><rect x="50" y="42" width="40" height="40" rx="3" fill="none"></rect></svg>2D1について</h1>
         <p class="essay-dek">独立したデザインプラクティス。主宰：<a href="https://kosuke.com/" target="_blank" rel="noopener noreferrer" aria-label="二日一宏祐のポートフォリオ（新しいタブで開きます）">二日一宏祐</a></p>
       </div></header>
       <div class="essay-body">
@@ -116,14 +117,7 @@
             </svg></div>
         </figure>
         <div class="essay-rest about-services" id="essay-rest">
-          <section class="about-service about-room-studio" aria-labelledby="about-studio"><div class="column about-service-grid">
-            <div class="about-room-media about-project-slideshow" aria-label="スタジオの制作実績">
-              <img class="is-active" src="../../img/projects/aviator/bottle-and-cap-4000.webp" srcset="../../img/projects/aviator/bottle-and-cap-640.webp 640w, ../../img/projects/aviator/bottle-and-cap-1280.webp 1280w, ../../img/projects/aviator/bottle-and-cap-4000.webp 4000w" sizes="100vw" alt="" loading="lazy" decoding="async">
-              <img src="../../img/projects/supa/business-cards-1920.webp" srcset="../../img/projects/supa/business-cards-640.webp 640w, ../../img/projects/supa/business-cards-1280.webp 1280w, ../../img/projects/supa/business-cards-1920.webp 1920w" sizes="100vw" alt="" loading="lazy" decoding="async">
-              <img src="../../img/projects/covers/deepdrip-cover-2560.webp" srcset="../../img/projects/covers/deepdrip-cover-640.webp 640w, ../../img/projects/covers/deepdrip-cover-1280.webp 1280w, ../../img/projects/covers/deepdrip-cover-2560.webp 2560w" sizes="100vw" alt="" loading="lazy" decoding="async">
-              <img src="../../img/projects/supa/symbol-concept-2560.webp" srcset="../../img/projects/supa/symbol-concept-640.webp 640w, ../../img/projects/supa/symbol-concept-1280.webp 1280w, ../../img/projects/supa/symbol-concept-2560.webp 2560w" sizes="100vw" alt="" loading="lazy" decoding="async">
-              <button class="about-slideshow-toggle" type="button" aria-label="スライドショーを一時停止" hidden>Ⅱ</button>
-            </div>
+          <section class="about-service about-room-studio" aria-labelledby="about-studio"><svg class="about-room-outline" viewbox="0 0 1000 1000" preserveaspectratio="none" aria-hidden="true"><path d="M0 0L150 60M1000 0L850 60M0 1000L150 940M1000 1000L850 940"></path></svg><div class="about-room-hatching" aria-hidden="true"></div><div class="about-room-frame"><div class="column about-service-grid">
             <h2 id="about-studio">スタジオ</h2>
             <div class="about-service-copy">
               <p class="about-service-lead">明快なアイデアに、個性を。</p>
@@ -131,9 +125,8 @@
               <p>この姿勢を<strong>引き算とウィット</strong>と呼んでいます。余分なものを取り除き、そのものらしさが残るようにする。最初の相談から完成まで一緒に進めることも、必要な部分だけお手伝いすることもできます。</p>
               <a class="intro-cta" href="../work/">制作実績を見る<span aria-hidden="true">→</span></a>
             </div>
-          </div></section>
-          <section class="about-service about-room-shop" aria-labelledby="about-shop"><div class="column about-service-grid">
-            <div class="about-room-media about-shop-photo"><img src="../../img/shop/daily-tote-lifestyle-2160.webp" srcset="../../img/shop/daily-tote-lifestyle-640.webp 640w, ../../img/shop/daily-tote-lifestyle-1280.webp 1280w, ../../img/shop/daily-tote-lifestyle-2160.webp 2160w" sizes="100vw" alt="赤いハンドルで手に持ったDaily Tote。ダークカラーのショルダーストラップと正方形の赤いタグ。" loading="lazy" decoding="async"></div>
+          </div></div></section>
+          <section class="about-service about-room-shop" aria-labelledby="about-shop"><svg class="about-room-outline" viewbox="0 0 1000 1000" preserveaspectratio="none" aria-hidden="true"><path d="M0 0L150 60M1000 0L850 60M0 1000L150 940M1000 1000L850 940"></path></svg><div class="about-room-hatching" aria-hidden="true"></div><div class="about-room-frame"><div class="column about-service-grid">
             <h2 id="about-shop">ショップ</h2>
             <div class="about-service-copy">
               <p class="about-service-lead">いつものものを、自分なりに。</p>
@@ -142,7 +135,7 @@
               <p>自分でつくるものに加えて、日用品を一つずつ選んで紹介する<a href="../finds/">Familiar Characters</a>もショップの一部です。そのものらしい視点と、少しのウィットがあるものを集めています。<span class="essay-end" aria-hidden="true"></span></p>
               <a class="intro-cta" href="../shop/">商品を見る<span aria-hidden="true">→</span></a>
             </div>
-          </div></section>
+          </div></div></section>
         </div>
         </div></div></div>
       </div>

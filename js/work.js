@@ -1,4 +1,4 @@
-/* Native modal semantics, with a bottom-up entrance and its exact reverse. */
+/* Native project dialog with a shared thumbnail-to-hero image transition. */
 (() => {
  const dialog=document.getElementById('work-dialog');
  if(!dialog||typeof dialog.showModal!=='function')return;
@@ -62,14 +62,50 @@
  const projects=originals;
  addEventListener('resize',()=>{if(dialog.open)updateToolbarContrast()});
 
- let opener=null,motion=null,closing=false,timer;
+ let opener=null,closing=false,flight=null,animations=[],timer,transitionDone=null;
+ const clearMotion=()=>{
+  clearTimeout(timer);animations.forEach(animation=>animation.cancel());animations=[];
+  flight?.remove();flight=null;
+  dialog.querySelector('.work-transition-wash')?.remove();
+  dialog.classList.remove('is-project-transition');
+  content.querySelector('.work-detail-hero img')?.style.removeProperty('visibility');
+  transitionDone=null;
+ };
+ const transitionImage=(from,to,source,returning,done)=>{
+  clearMotion();
+  const hero=content.querySelector('.work-detail-hero img');
+  dialog.classList.add('is-project-transition');
+  hero.style.visibility='hidden';
+  const wash=document.createElement('div');wash.className='work-transition-wash';
+  flight=document.createElement('div');flight.className='work-transition-image';flight.setAttribute('aria-hidden','true');
+  const image=document.createElement('img');image.src=source;image.alt='';flight.append(image);
+  dialog.append(wash,flight);
+  const box=rect=>({left:`${rect.left}px`,top:`${rect.top}px`,width:`${rect.width}px`,height:`${rect.height}px`});
+  Object.assign(flight.style,box(to));
+  const duration=returning?560:720,easing='cubic-bezier(.2,.8,.2,1)';
+  const moving=flight.animate([box(from),box(to)],{duration,easing,fill:'both'});
+  const fading={duration:returning?260:360,delay:returning?0:260,fill:'both'};
+  animations=[moving,wash.animate([{opacity:returning?1:0},{opacity:returning?0:1}],{duration,easing,fill:'both'}),
+   content.animate([{opacity:returning?1:0},{opacity:returning?0:1}],fading),
+   toolbar.animate([{opacity:returning?1:0},{opacity:returning?0:1}],fading)];
+  let finished=false;
+  transitionDone=()=>{if(finished)return;finished=true;clearMotion();done()};
+  moving.onfinish=transitionDone;
+  timer=setTimeout(()=>transitionDone?.(),duration+100);
+ };
  const renderProject=project=>{
   showToolbar();lastDetailScroll=0;detailDirection=0;directionDistance=0;
   toolbar.classList.toggle('is-over-art',project.querySelector('.work-detail-hero')?.dataset.artTone!=='light');toolbar.classList.remove('is-returned');
   content.replaceChildren(project.querySelector('.work-project-content').cloneNode(true));
   dialog.querySelector('.work-breadcrumb-slot').replaceChildren(content.querySelector('.work-trail').cloneNode(true));
   const title=content.querySelector('.work-detail-title');title.id='work-dialog-title';title.tabIndex=-1;
-  content.querySelector('img').loading='eager';
+  const hero=content.querySelector('.work-detail-hero img');
+  const thumbnail=project.querySelector('summary>img');
+  // Use the same artwork on both sides of the handoff, then sharpen in place.
+  hero.src=thumbnail.currentSrc||thumbnail.src;hero.removeAttribute('srcset');
+  hero.width=thumbnail.width;hero.height=thumbnail.height;hero.alt=thumbnail.alt;
+  hero.loading='eager';
+  hero.dataset.heroSrcset=thumbnail.getAttribute('srcset')||'';
   content.scrollTop=0;
   title.focus({preventScroll:true});
   setupTypeStudy();
@@ -80,18 +116,27 @@
   const project=originals.find(project=>project.id===link.dataset.workTarget);
   if(!project)return;
   event.preventDefault();
+  if(closing||flight)return;
   opener=project.querySelector('summary');
   renderProject(project);
+  const hero=content.querySelector('.work-detail-hero img');hero.sizes='100vw';hero.srcset=hero.dataset.heroSrcset;
  });
  const finishClose=()=>{if(dialog.open)dialog.close()};
  const dismiss=()=>{
   if(!dialog.open||closing)return;
   closing=true;
-  if(reduced.matches){finishClose();return}
-  const pose=getComputedStyle(dialog).transform;
-  motion?.cancel();
-  motion=dialog.animate([{transform:pose==='none'?'translateY(0)':pose},{transform:'translateY(100%)'}],{duration:620,easing:'cubic-bezier(.8,0,.8,.2)',fill:'both'});
-  motion.onfinish=finishClose;timer=setTimeout(finishClose,700);
+  if(reduced.matches){clearMotion();finishClose();return}
+  const currentHero=content.querySelector('.work-detail-hero img');
+  const source=flight?.querySelector('img').src||currentHero.currentSrc||currentHero.src;
+  const from=flight?.getBoundingClientRect();
+  clearMotion();
+  // The carousel may have looped, or the user may have followed a related project.
+  dispatchEvent(new CustomEvent('work-gallery-return',{detail:opener.closest('.work-project')}));
+  content.scrollTop=0;showToolbar();
+  const hero=content.querySelector('.work-detail-hero img');
+  const target=opener.querySelector('img').getBoundingClientRect();
+  if(!target.width||!target.height){finishClose();return}
+  transitionImage(from||hero.getBoundingClientRect(),target,source,true,finishClose);
  };
  projects.forEach(project=>{
   const trigger=project.querySelector('summary');
@@ -105,13 +150,16 @@
   trigger.addEventListener('click',event=>{
    event.preventDefault();
    if(dialog.open)return;
-   opener=trigger;closing=false;motion?.cancel();
+   opener=trigger;closing=false;clearMotion();
+   dispatchEvent(new Event('work-gallery-pause'));
+   const thumbnail=grid.querySelector('.is-gallery-current>summary>img')||trigger.querySelector('img');
+   const from=thumbnail.getBoundingClientRect(),source=thumbnail.currentSrc||thumbnail.src;
    renderProject(project);
-   dialog.showModal();document.documentElement.classList.add('has-dialog');content.scrollTop=0;
-   if(!reduced.matches){
-    motion=dialog.animate([{transform:'translateY(100%)'},{transform:'translateY(0)'}],{duration:620,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
-    motion.onfinish=()=>{if(!closing){motion.cancel();motion=null}};
-   }
+   dialog.showModal();root.classList.add('has-dialog');content.scrollTop=0;
+   const hero=content.querySelector('.work-detail-hero img');
+   const sharpen=()=>{hero.sizes='100vw';hero.srcset=hero.dataset.heroSrcset;updateToolbarContrast()};
+   if(!reduced.matches&&from.width&&from.height)transitionImage(from,hero.getBoundingClientRect(),source,false,sharpen);
+   else sharpen();
    content.querySelector('.work-detail-title').focus({preventScroll:true});
   });
  });
@@ -119,8 +167,11 @@
  dialog.addEventListener('cancel',event=>{event.preventDefault();dismiss()});
  dialog.addEventListener('close',()=>{
   stopTypeStudy();
-  clearTimeout(timer);motion?.cancel();motion=null;closing=false;document.documentElement.classList.remove('has-dialog');
+  clearMotion();closing=false;root.classList.remove('has-dialog');
   opener?.focus({preventScroll:true});opener=null;content.replaceChildren();
  });
- reduced.addEventListener('change',()=>{if(reduced.matches){motion?.cancel();if(closing)finishClose()}});
+ // Resize or a preference change settles the current handoff without stale geometry.
+ const settleTransition=()=>transitionDone?.();
+ addEventListener('resize',settleTransition);
+ reduced.addEventListener('change',()=>{if(reduced.matches)settleTransition()});
 })();

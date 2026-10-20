@@ -243,8 +243,6 @@ html[lang="ja"] .about-page .about-services .about-service-copy .about-service-l
 .about-project-slideshow img{opacity:0;transition:opacity 900ms ease}
 .about-project-slideshow img.is-active{opacity:1}
 .about-project-slideshow::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(25,20,22,.65),transparent 210px);pointer-events:none}
-.about-slideshow-toggle{position:absolute;z-index:2;left:24px;bottom:24px;width:40px;height:40px;border:0;background:var(--studio-background);color:var(--beige);font-size:18px}
-.about-slideshow-toggle:is(:hover,:focus-visible){background:var(--red)}
 .about-room-shop h2,.about-room-shop .about-service-copy,.about-shop-photo{background:var(--beige)}
 @media(min-width:768px) and (max-width:1099px){
  .about-page .about-services .about-service h2{padding:48px 48px 32px;font-size:72px}
@@ -258,3 +256,16 @@ html[lang="ja"] .about-page .about-services .about-service-copy .about-service-l
  .about-room-media{height:55svh;min-height:0}
 }
 @media(prefers-reduced-motion:reduce){.about-project-slideshow img{transition:none}}
+
+/* Room headings, prose and CTAs share the footer social-links reading edge. */
+.about-story-page{--room-reading-left:24px;--room-reading-right:24px}
+@media(min-width:1100px){
+ .about-story-page{--room-reading-left:calc(100% - min(var(--column),calc(100% - min(27.7778vw,400px) - 128px)) - 128px);--room-reading-right:128px}
+}
+.about-page .about-services .about-service h2,
+.about-service .about-service-copy{padding-left:var(--room-reading-left);padding-right:var(--room-reading-right)}
+
+/* A flat house marks each chapter; one solid piece identifies the room. */
+.about-house-icon{display:block;width:80px;height:auto;margin-bottom:24px;color:var(--cranberry-brown)}
+.about-room-studio .about-house-icon,[data-link-surface="dark"] .about-house-icon{color:var(--beige)}
+@media(max-width:767px){.about-house-icon{width:64px}}

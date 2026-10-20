@@ -105,5 +105,17 @@
  };
  grid.addEventListener('pointerup',endSwipe);grid.addEventListener('pointercancel',endSwipe);
  addEventListener('resize',()=>{alignThumbnail();cancelAnimationFrame(motionFrame);motionFrame=0;gesturing=false;releasing=false;grid.classList.remove('is-gesturing');center(current,'instant');update()});
+ const pauseForProject=()=>{
+  cancelAnimationFrame(motionFrame);motionFrame=0;lastMotionTime=0;
+  clearTimeout(timer);clearTimeout(gestureTimer);gesturing=false;releasing=false;
+  grid.classList.remove('is-gesturing');
+ };
+ addEventListener('work-gallery-pause',pauseForProject);
+ addEventListener('work-gallery-return',event=>{
+  pauseForProject();const card=event.detail;
+  if(!originals.includes(card))return;
+  grid.classList.add('is-rebasing');center(card,'instant');update();
+  requestAnimationFrame(()=>grid.classList.remove('is-rebasing'));
+ });
  alignThumbnail();center(current,'instant');update();
 })();

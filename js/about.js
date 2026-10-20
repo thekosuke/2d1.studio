@@ -45,6 +45,8 @@
       return grounds.some(ground => ground.top <= center && ground.bottom > center && ground.left <= x && ground.right > x);
     };
     document.querySelectorAll('.page-nav a').forEach(link => link.classList.toggle('is-on-diagram', over(link)));
+    const menu = document.querySelector('.mobile-nav-toggle');
+    if (menu) menu.classList.toggle('is-on-diagram', over(menu));
     const language = document.querySelector('body > .language-switch');
     if (language) {
       language.classList.toggle('is-on-diagram', over(language));
