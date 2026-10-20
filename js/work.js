@@ -94,6 +94,7 @@
   timer=setTimeout(()=>transitionDone?.(),duration+100);
  };
  const renderProject=project=>{
+  dialog.dataset.project=project.id;
   showToolbar();lastDetailScroll=0;detailDirection=0;directionDistance=0;
   toolbar.classList.toggle('is-over-art',project.querySelector('.work-detail-hero')?.dataset.artTone!=='light');toolbar.classList.remove('is-returned');
   content.replaceChildren(project.querySelector('.work-project-content').cloneNode(true));

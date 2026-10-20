@@ -72,7 +72,8 @@ html.work-scroll-gallery.work-rebasing{scroll-snap-type:none;scroll-behavior:aut
 /* Project stories: full-width lead image, overview, metadata, and image pairs. */
 .work-project-content{--project-inset:20px;--project-image-gap:40px;background:var(--beige);color:var(--ink)}
 .work-dialog{--project-inset:20px;background:var(--beige);width:100vw}
-.work-detail-content{scrollbar-gutter:auto}
+/* Keep caption geometry fixed while the opening animation locks scrolling. */
+.work-detail-content{scrollbar-gutter:stable}
 .work-dialog-bar{position:absolute;z-index:2;inset:0 0 auto;height:80px;padding:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--white);pointer-events:none}
 .work-dialog-bar>*{pointer-events:auto}
 .work-dialog-bar .work-close{position:static;flex:none;margin:0;background:var(--white)}
@@ -301,7 +302,7 @@ body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visib
 /* Studio: 4:3 frames, browsed horizontally with neighboring projects. */
 .work-page .work-main,.js .work-page .work-main{width:100%;max-width:none;margin:0;padding:0;--studio-square:calc(min(100vw - 48px,960px) * .72)}
 @media(min-width:1100px){.work-page .work-main,.js .work-page .work-main{--studio-square:calc((100vw - min(27.7778vw,400px) - 128px) * .72)}}
-.work-page .work-grid,.js .work-page .work-grid{display:flex;flex-direction:row;gap:24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding: max(112px,calc((100svh - var(--studio-square) * .75 - 100px)/2)) calc((100% - var(--studio-square))/2) 64px;align-items:flex-start}
+.work-page .work-grid,.js .work-page .work-grid{display:flex;flex-direction:row;gap:24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:none;scrollbar-width:none;padding: max(112px,calc((100svh - var(--studio-square) * .75 - 100px)/2)) calc((100% - var(--studio-square))/2) 64px;align-items:flex-start}
 .work-grid::-webkit-scrollbar{display:none}
 .work-page .work-project{width:var(--studio-square);flex:0 0 var(--studio-square);scroll-snap-align:center}
 .work-page .work-project>summary>img,.js .work-page .work-project>summary>img{height:auto;aspect-ratio:4/3;object-fit:cover;transition:opacity 300ms,filter 300ms,transform 300ms cubic-bezier(.2,.8,.2,1)}
@@ -368,3 +369,6 @@ body.work-page>.site-footer .footer-line{min-height:calc(var(--language-size) + 
  .work-related-card:is(:hover,:focus-visible)>img{transform:translateY(-8px) rotate(2deg)}
 }
 @media(prefers-reduced-motion:reduce){.work-related-card>img{transition:none;transform:none}}
+
+/* Keep breadcrumb hover legible against DeepDrip’s red artwork. */
+.work-dialog[data-project="deepdrip"] .work-trail{--trail-hover:var(--cranberry-brown)}

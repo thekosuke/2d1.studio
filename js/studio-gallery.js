@@ -29,7 +29,12 @@
  const settle=()=>{
   if(gesturing)return;
   update();const real=originals[Number(current.dataset.galleryIndex)];
-  if(current!==real){grid.classList.add('is-rebasing');center(real,'instant');update();requestAnimationFrame(()=>grid.classList.remove('is-rebasing'))}
+  if(current!==real){
+   // Move to the equivalent loop copy without changing the free-scroll offset.
+   const offset=real.offsetLeft-current.offsetLeft;
+   grid.classList.add('is-rebasing');grid.scrollLeft+=offset;update();
+   requestAnimationFrame(()=>grid.classList.remove('is-rebasing'));
+  }
  };
  grid.addEventListener('scroll',()=>{if(!frame)frame=requestAnimationFrame(update);clearTimeout(timer);timer=setTimeout(settle,180)},{passive:true});
  grid.addEventListener('click',event=>{
@@ -42,8 +47,7 @@
   const step=['ArrowRight','ArrowDown'].includes(event.key)?1:['ArrowLeft','ArrowUp'].includes(event.key)?-1:0;if(!step)return;
   event.preventDefault();event.stopPropagation();const next=cards[cards.indexOf(current)+step];if(next)center(next);
  },true);
- let motionFrame=0,lastMotionTime=0,gestureOrigin=0,gestureCard=null,targetLeft=0,easedLeft=0,releasing=false;
- const cardLeft=card=>card.offsetLeft+card.offsetWidth/2-grid.clientWidth/2;
+ let motionFrame=0,lastMotionTime=0,targetLeft=0,easedLeft=0,releasing=false;
  const animateInput=time=>{
   const dt=Math.min(40,lastMotionTime?time-lastMotionTime:16);lastMotionTime=time;
   const difference=targetLeft-easedLeft;
@@ -60,21 +64,16 @@
   if(!motionFrame)motionFrame=requestAnimationFrame(animateInput);
  };
  const beginGesture=()=>{
-  if(!gesturing){update();gestureCard=current;gestureOrigin=cardLeft(current);targetLeft=grid.scrollLeft;easedLeft=grid.scrollLeft}
+  if(!gesturing){update();targetLeft=grid.scrollLeft;easedLeft=grid.scrollLeft}
   gesturing=true;releasing=false;clearTimeout(timer);clearTimeout(gestureTimer);grid.classList.add('is-gesturing');
  };
  const moveGesture=left=>{
-  const index=cards.indexOf(gestureCard);
-  const minimum=cardLeft(cards[Math.max(0,index-1)]),maximum=cardLeft(cards[Math.min(cards.length-1,index+1)]);
-  targetLeft=Math.max(minimum,Math.min(maximum,left));runMotion();
+  targetLeft=Math.max(0,Math.min(grid.scrollWidth-grid.clientWidth,left));runMotion();
  };
  const finishGesture=()=>{
   if(!gesturing)return;
-  const distance=targetLeft-gestureOrigin,index=cards.indexOf(gestureCard);
-  const stride=gestureCard.offsetWidth+24;
-  const step=Math.abs(distance)>stride*.18?Math.sign(distance):0;
-  const destination=cards[Math.max(0,Math.min(cards.length-1,index+step))];
-  targetLeft=cardLeft(destination);releasing=true;runMotion();
+  // Let the gesture settle where it stopped; only explicit clicks/keys center.
+  releasing=true;runMotion();
  };
  document.addEventListener('wheel',event=>{
   if(document.body.classList.contains('mobile-menu-open')||document.querySelector('#work-dialog[open]')||event.ctrlKey||Math.abs(event.deltaX)>=Math.abs(event.deltaY)||!event.deltaY)return;

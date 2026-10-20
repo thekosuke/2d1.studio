@@ -1,8 +1,8 @@
 :root{--red:#FF2B00;--beige:#FAF0E6;--ash:#191416;--brown:#320505}
 html,body{margin:0;background:var(--beige);color:var(--brown)}
 html{overflow:hidden;scrollbar-gutter:auto}
-body{min-height:100svh;font:500 12px/1.4 'SC Walla','Noto Sans JP',Arial,sans-serif;letter-spacing:.04em;transition:background 480ms,color 480ms}
-body.is-playing{background:var(--ash);color:var(--beige)}
+body{--text-link-rest:var(--brown);--text-link-hover:var(--red);min-height:100svh;font:500 12px/1.4 'SC Walla','Noto Sans JP',Arial,sans-serif;letter-spacing:.04em;transition:background 480ms,color 480ms}
+body.is-playing{--text-link-rest:var(--beige);background:var(--ash);color:var(--beige)}
 body.is-playing main{touch-action:none}
 [hidden]{display:none!important}
 main{position:fixed;inset:0;display:grid;place-items:center;min-height:100svh;outline:none}
@@ -20,7 +20,6 @@ noscript .pixel-prompt{bottom:64px;text-transform:none}
 .pong-court{position:absolute;left:0;top:max(80px,env(safe-area-inset-top));width:100%;height:calc(100svh - 220px - env(safe-area-inset-bottom));touch-action:none;cursor:ns-resize}
 .pong-controls{position:fixed;inset:max(12px,env(safe-area-inset-top)) 12px auto;display:flex;justify-content:space-between;pointer-events:none}
 .pong-controls button,.pong-message button{pointer-events:auto;min-height:44px;padding:10px 12px;background:transparent;color:inherit;border:0;border-radius:0;font:inherit;text-transform:uppercase;letter-spacing:inherit;cursor:pointer;outline:none}
-.pong-controls button:is(:hover,:focus-visible),.pong-message button:is(:hover,:focus-visible){color:var(--ash);background:var(--beige)}
 .pong-scoreboard{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom));transform:translateX(-50%);display:grid;grid-template-columns:1fr 1fr;gap:12px 48px;width:min(320px,calc(100% - 48px));text-align:center;text-transform:uppercase}
 .pong-score{display:grid;grid-template-columns:1fr auto;align-items:center;text-align:left;gap:12px}
 .pong-score + .pong-score{grid-template-columns:auto 1fr;text-align:right}

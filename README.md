@@ -32,7 +32,7 @@ python3 scripts/audit-site.py dist   # verify packaged references
 - `css/walla.css`, `css/fonts.css`, shared navigation/control styles: common layout and brand typography.
 - `js/site.js`: shared clean-hash links, viewport measurement, year and production-only analytics. `js/mobile-nav.js`: mobile menu.
 - `js/walla.js`, `js/bag-*.js`, `css/today-bag.css`: Home and current photographic tote presentation.
-- `about/index.html`, `css/about.css`, `css/about-rooms.css`, `js/about.js`, `js/house-assembly.js`: native-scroll house assembly followed by flat-on, two-column rooms. Shop slides in from the left. Studio is Ash Brown; Shop is Soft Beige. Longer copy receives vertical reading travel; reduced motion uses normal document flow.
+- `about/index.html`, `css/about.css`, `css/about-rooms.css`, `js/about.js`, `js/house-assembly.js`: native-scroll house assembly and a zoom into Studio, followed by flat-on, two-column rooms. Shop slides in from the right. Studio is Ash Brown; Shop is Soft Beige. Longer copy receives vertical reading travel; reduced motion uses normal document flow.
 - `work/index.html`, `css/work.css`, `js/work.js`, `js/studio-gallery.js`: Studio gallery and project dialog. The centered thumbnail and caption lift together by 8px on hover, with the image tilting 2° clockwise. Hover motion is disabled for reduced motion and touch. Opening expands the thumbnail into its matching hero; closing contracts it back to the centered project, preserving gallery position. Interrupted transitions, resize and reduced motion settle cleanly; no-JavaScript retains inline project details.
 - `shop/index.html`, `css/shop.css`, `js/shop.js`, `js/shop-finds-preview.js`: product gallery; the centered image tilts 2° clockwise and lifts 8px toward the top-right when its image or caption is hovered, with reduced motion respected. FC preview mounts on mouse or keyboard interaction, stops on leave, and is disposed offscreen.
 - `data/objects.json`, `scripts/build-objects.py`, `css/objects.css`, `js/objects.js`, `js/finds-menus.js`: collection catalog, virtual canvas, filters and details. Current public name is Familiar Characters; URL remains `/finds/`.
@@ -53,7 +53,7 @@ Use local fonts, Icon Red `#FF2B00`, Soft Beige `#FAF0E6`, Ash Brown `#191416`, 
 
 Latest performance findings, verification and remaining risks: `docs/PERFORMANCE-REVIEW-2026-10-20.md`.
 
-About shares Home’s ash-brown ending reveal, using a Contact heading and
+About shares Home’s ash-brown ending reveal, using a Contact label, “Let’s work together” headline and
 “Get in touch” link to the localized Contact page instead of the signup form.
 The shared ending script handles both routes, including language-control contrast,
 keyboard uncovering and reduced-motion fallback.
@@ -76,8 +76,10 @@ the standalone English study remains available for reference.
 ### About flat rooms — implemented 20 October
 
 The English and Japanese About pages now use the approved flat-on room layout
-from the cube study. The toy-block diagram still assembles, then dissolves into
-Studio. Native scrolling brings Shop in from the left while Studio slides right.
+from the cube study. The toy-block diagram assembles, then zooms into its Studio block on scroll
+before revealing the flat-on Studio room. Its Studio label stays visible, straightens
+and settles into the actual section heading through a decorative SVG overlay;
+the handoff reverses on scrolling back. Native scrolling brings Shop in from the right while Studio slides left.
 Rooms never tilt or zoom. Bare side walls, rounded frames and subtle hatching
 surround a two-column layout: title left, existing copy, emphasis and CTA right.
 The title edge is measured against the footer social links on desktop; mobile
@@ -98,3 +100,9 @@ were source-reviewed but not browser-emulated in this pass.
 
 ### Related-project thumbnails — 20 October
 “See more work” thumbnails share a 16:9 frame with automatic height, overriding native image height attributes. They use the Studio gallery’s 8px lift and 2-degree clockwise tilt on fine-pointer hover and keyboard focus; reduced motion disables the transition. Equal image dimensions, hover transforms, project navigation, and zero horizontal overflow were verified in English desktop and Japanese mobile previews.
+
+### Stable project-opening captions — 20 October
+The detail scroller keeps a stable scrollbar gutter while the shared-image handoff temporarily locks scrolling. This prevents its width from changing when the transition finishes, so the hero caption and one-liner do not jump. Frame-by-frame English desktop and Japanese mobile checks showed one unchanged caption geometry throughout opening; close behavior and zero horizontal overflow were also verified.
+
+### Free Studio scrolling — 20 October
+Studio retains its horizontal layout but follows Shop’s free-browsing behavior: gestures are no longer limited to adjacent cards, and releasing a gesture does not force a centered stop. Native horizontal input remains available; vertical wheel/touch input moves continuously through the gallery. Loop rebasing preserves the exact scroll offset. Explicit preview clicks and arrow keys still center projects. English desktop wheel/trackpad input, Japanese mobile swipes, free resting offsets, and project opening/closing were verified.

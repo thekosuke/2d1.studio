@@ -12,7 +12,7 @@
 .about-page .about-services .about-service-copy .intro-cta{margin:12px 0 0;font-size:18px;line-height:1.4;align-self:flex-start}
 .about-story-page .has-room-journey .about-services{width:100%;display:block;transform:none}
 .has-room-journey .about-service{position:absolute;inset:0;width:100%;height:100%;min-height:0;overflow:clip;transform:translateX(var(--flat-room-x,0%))}
-.has-room-journey .about-room-shop{--flat-room-x:-100%}
+.has-room-journey .about-room-shop{--flat-room-x:100%}
 .has-room-journey .about-room-frame{position:absolute;inset:6% 15%;border:3px solid var(--room-line);border-radius:12px;overflow:clip;display:flex;align-items:safe center}
 .has-room-journey .about-room-frame>.about-service-grid{padding-block:40px;transform:translateY(var(--room-y,0px));flex:none}
 .has-room-journey .about-room-outline{display:block;position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--room-line);stroke-width:3px;pointer-events:none}
@@ -27,3 +27,7 @@ body.about-story-page .mobile-nav-toggle.is-on-diagram:focus-visible{background:
 html[lang="ja"] .about-page .about-services .about-service-copy p{font-size:18px;line-height:1.75}
 html[lang="ja"] .about-page .about-services .about-service-copy .about-service-lead{font-size:24px;line-height:1.5}
 @media(max-width:767px){html[lang="ja"] .about-page .about-services .about-service h2{font-size:18px;line-height:1.6}html[lang="ja"] .about-page .about-services .about-service-copy p{font-size:16px;line-height:1.75}html[lang="ja"] .about-page .about-services .about-service-copy .about-service-lead{font-size:20px;line-height:1.5}}
+
+/* Room CTAs use the shared un-underlined label and pixel arrow. */
+.about-page .essay-body .about-services .intro-cta{text-decoration:none}
+.about-page .about-services .intro-cta:is(:hover,:focus-visible) .pixel-arrow::before{color:var(--text-link-hover,var(--cranberry-brown))}

@@ -5,7 +5,9 @@
   a:not(:has(img,svg)):not(:is(.page-nav a,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.object-open,.pixel-home)),
   button.intro-cta:not(.contact-page .contact-send),
   button.objects-info-about,
-  .pixel-zoom summary
+  .pixel-zoom summary,
+  .pong-controls button,
+  .pong-message button
 ){
   --text-link-sweep:0;
   color:var(--text-link-rest,var(--red,#FF2B00))!important;

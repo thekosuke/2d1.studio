@@ -22,3 +22,7 @@ body .page-nav a.on-ending{color:var(--beige)}
 .about-ending .intro-cta .pixel-arrow{display:inline-block;transition:transform 180ms ease}
 .about-ending .intro-cta:is(:hover,:focus-visible) .pixel-arrow{transform:translateX(4px)}
 @media(prefers-reduced-motion:reduce){.about-ending .intro-cta .pixel-arrow{transition:none;transform:none}}
+
+.about-ending .ending-contact-label::before{content:"";display:inline-block;width:8px;height:8px;margin-right:6px;background:var(--red);vertical-align:middle}
+.about-ending .ending-contact-headline{text-transform:none;margin:0 0 32px;font:500 clamp(32px,4.45vw,64px)/1.15 var(--font);letter-spacing:-.025em;color:var(--beige)}
+.about-ending .ending-contact-headline::before{content:none}
