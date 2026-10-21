@@ -11,7 +11,7 @@ import shutil
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / 'dist'
 MARKER = OUTPUT / '.2d1-preview-build'
-PAGES = tuple(str(p) for folder in ('about', 'contact', 'finds', 'objects', 'work', 'shop', 'red-pixel', 'ja')
+PAGES = tuple(str(p) for folder in ('about', 'contact', 'familiarcharacters', 'finds', 'objects', 'work', 'shop', 'red-pixel', 'ja')
               for p in sorted((ROOT / folder).rglob('*.html')) if not any(part.startswith('_') for part in p.relative_to(ROOT).parts))
 PAGES = ('index.html',) + tuple(str(Path(p).relative_to(ROOT)) for p in PAGES)
 ASSETS = ('css', 'js', 'img', 'fonts')

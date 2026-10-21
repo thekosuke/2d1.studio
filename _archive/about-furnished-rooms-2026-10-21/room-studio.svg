@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none" stroke="#FAF0E6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><defs><pattern id="hatch" width="14" height="14" patternTransform="rotate(22)" patternUnits="userSpaceOnUse"><path d="M0 0V14" stroke="#FAF0E6" stroke-opacity=".055" stroke-width="1"/></pattern><linearGradient id="screen" x2="1" y2="1"><stop stop-color="#191416"/><stop offset="1" stop-color="#FAF0E6" stop-opacity=".12"/></linearGradient></defs><path fill="#191416" stroke="none" d="M0 0H1200V800H0Z"/><path d="M-20-20L480 145L1220 65M480 145V535M-20 815L480 535L1220 600"/>
+<path d="M480 535L130 800M480 535L470 800M480 535L800 800M480 535L1170 800M235 675L1200 720M100 750L1200 790" opacity=".13"/>
+<path d="M0 0L480 145V535L0 800Z" fill="url(#hatch)" stroke="none"/>
+<path d="M520 186L1160 130M520 205L1160 150" opacity=".15"/>
+<!-- Wall shelf, books and a framed proof. -->
+<g fill="#191416"><path d="M75 200L305 272V292L75 220Z"/><path d="M94 123L116 130V205L94 198Z"/><path d="M124 139L146 146V214L124 207Z"/><path d="M157 136L180 143V225L157 218Z"/><path d="M191 164L216 172V236L191 228Z"/><path d="M228 177L260 187L270 254L238 244Z"/></g>
+<path d="M94 151L116 158M157 154L180 161M191 190L216 198" opacity=".4"/>
+<path d="M342 215L429 241V349L342 323Z" fill="#191416"/><path d="M357 261L412 278M357 274L399 287"/><path d="M357 235L375 240V258L357 253Z" fill="#FF2B00" stroke="none"/>
+<!-- Desk: visible top, apron and four legs in the room's perspective. -->
+<g fill="#191416"><path d="M108 486L416 414L685 486L358 595Z"/><path d="M108 486V502L358 612L685 503V486L358 595Z"/><path d="M125 510L144 518V724L125 716Z"/><path d="M342 606L362 613V787L342 780Z"/><path d="M656 512L673 506V670L656 676Z"/></g>
+<path d="M358 595V612M144 518L342 606" opacity=".4"/>
+<!-- Display and stand. -->
+<g fill="#191416"><path d="M252 308L441 278V415L252 458Z"/><path d="M265 320L428 294V402L265 438Z" fill="url(#screen)"/><path d="M332 440V475L308 484L359 500L387 490L355 479V435Z"/><path d="M263 505L402 465L474 486L335 532Z"/><path d="M285 505L403 473M300 514L425 481M320 520L442 489" opacity=".4"/></g>
+<path d="M290 383L331 332L354 364L391 321" stroke="#FF2B00" stroke-width="6"/>
+<!-- Hinged task lamp and drawing tools. -->
+<path d="M513 484L544 473L573 483L544 494Z" fill="#191416"/><path d="M543 478V395L592 343L570 294"/><path d="M541 395L583 345M568 290L603 308L587 335L550 315Z" fill="#191416"/>
+<path d="M166 478L190 472L215 484L190 493Z" fill="#191416"/><path d="M177 475V435L201 442V481M182 440L176 406M194 443L200 416"/>
+<!-- A swivel chair, slightly pulled away from the desk. -->
+<g fill="#191416"><path d="M611 594L733 558Q752 553 750 577L742 654L617 701L601 620Q597 600 611 594Z"/><path d="M615 703L742 655L787 682L663 735Z"/><path d="M615 703V714L663 747L787 695V682M663 735V747M691 737V784M691 784L636 799M691 784L755 799"/></g>
+<!-- Pinboard on the back wall; the red square is the one accent. -->
+<path d="M808 188L1094 165V365L808 379Z" fill="#191416"/><path d="M836 216L895 211V280L836 284Z"/><path d="M917 209L973 205V272L917 276Z" fill="#FF2B00" stroke="none"/><path d="M995 201L1064 196V263L995 268Z"/><path d="M836 306L900 302M918 300L984 296M1002 294L1064 290M836 326L944 320" opacity=".45"/>
+<!-- Plant in the foreground, made from simple cut-paper leaves. -->
+<path d="M1018 690L1115 704L1101 794H1030Z" fill="#191416"/><path d="M1064 692V535M1064 628L1003 581M1064 594L1116 544M1064 657L1125 618"/>
+<g fill="#191416"><path d="M1064 565Q1010 536 1028 492Q1071 513 1064 565Z"/><path d="M1003 581Q956 591 944 544Q985 539 1003 581Z"/><path d="M1116 544Q1108 495 1155 482Q1160 526 1116 544Z"/><path d="M1125 618Q1125 575 1170 570Q1171 614 1125 618Z"/></g>
+</svg>

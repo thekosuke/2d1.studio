@@ -1,0 +1,21 @@
+/* Art-directed square frames: photographs cover; UI mockups get matching grounds. */
+.work-set .work-artwork{position:relative;background:var(--artwork-ground,#191416);overflow:hidden}
+.work-set .work-artwork img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--artwork-position,center)}
+/* The centered social card and brand marks survive a square crop intact. */
+.work-artwork-aviator-social{--artwork-ground:#dfb3ff}
+.work-artwork-deepdrip-mark{--artwork-ground:#fff}
+.work-artwork-supa-symbol{--artwork-ground:#E0FE66}
+/* Portrait photographs fill the width without white gutters. */
+.work-artwork-aviator-cap{--artwork-position:50% 56%}
+.work-artwork-aviator-bottle{--artwork-position:50% 50%}
+.work-artwork-supa-cards{--artwork-position:50% 50%;--artwork-ground:#222929}
+.work-artwork-supa-badge{--artwork-position:50% 48%;--artwork-ground:#1e2523}
+.work-artwork-supa-app{--artwork-position:52% 50%}
+/* Keep complete browser mockups, extending their own ground to the square. */
+.work-artwork-aviator-web{--artwork-ground:#deb5fe}
+.work-set .work-artwork-aviator-web img{object-fit:contain}
+.work-artwork-deepdrip-web{--artwork-ground:#101010;background-image:url('../img/projects/deepdrip/work-track-background.png');background-size:cover;background-position:center}
+.work-set .work-artwork-deepdrip-web img{object-fit:contain}
+/* Fill the height with the laptop itself, keeping all three stickers on the left. */
+.work-artwork-deepdrip-stickers{--artwork-ground:#291a13}
+.work-set .work-artwork-deepdrip-stickers img{width:212%;height:119%;max-width:none;object-fit:cover;object-position:left top}

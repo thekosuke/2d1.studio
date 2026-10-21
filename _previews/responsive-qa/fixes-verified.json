@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Shop 320",
+    "pass": true
+  },
+  {
+    "name": "Shop 390",
+    "pass": true
+  },
+  {
+    "name": "Shop 768",
+    "pass": true
+  },
+  {
+    "name": "Shop 1024",
+    "pass": true
+  },
+  {
+    "name": "Shop 1440",
+    "pass": true
+  },
+  {
+    "name": "Product opens",
+    "pass": true
+  },
+  {
+    "name": "Product fits",
+    "pass": true
+  },
+  {
+    "name": "Product closes",
+    "pass": true
+  },
+  {
+    "name": "No JS Contact",
+    "pass": true
+  },
+  {
+    "name": "ja/Shop 320",
+    "pass": true
+  },
+  {
+    "name": "ja/Shop 390",
+    "pass": true
+  },
+  {
+    "name": "ja/Shop 768",
+    "pass": true
+  },
+  {
+    "name": "ja/Shop 1024",
+    "pass": true
+  },
+  {
+    "name": "ja/Shop 1440",
+    "pass": true
+  },
+  {
+    "name": "ja/Product opens",
+    "pass": true
+  },
+  {
+    "name": "ja/Product fits",
+    "pass": true
+  },
+  {
+    "name": "ja/Product closes",
+    "pass": true
+  },
+  {
+    "name": "ja/No JS Contact",
+    "pass": true
+  }
+]

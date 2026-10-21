@@ -1,0 +1,466 @@
+[
+  {
+    "name": "FC zoom",
+    "pass": false,
+    "detail": "0"
+  },
+  {
+    "name": "form",
+    "pass": true,
+    "detail": {
+      "values": [
+        [
+          "c-name",
+          "QA Test",
+          true
+        ],
+        [
+          "c-email",
+          "qa@example.invalid",
+          true
+        ],
+        [
+          "c-company",
+          "",
+          true
+        ],
+        [
+          "c-message",
+          "Local QA validation only.",
+          true
+        ]
+      ],
+      "category": "New Business",
+      "status": "",
+      "fallback": true
+    }
+  },
+  {
+    "name": "Pong starts",
+    "pass": "is-playing"
+  },
+  {
+    "name": "Pong exits",
+    "pass": ""
+  },
+  {
+    "name": "ja/FC zoom",
+    "pass": false,
+    "detail": "0"
+  },
+  {
+    "name": "ja/form",
+    "pass": true,
+    "detail": {
+      "values": [
+        [
+          "c-name",
+          "QA Test",
+          true
+        ],
+        [
+          "c-email",
+          "qa@example.invalid",
+          true
+        ],
+        [
+          "c-company",
+          "",
+          true
+        ],
+        [
+          "c-message",
+          "Local QA validation only.",
+          true
+        ]
+      ],
+      "category": "New Business",
+      "status": "",
+      "fallback": true
+    }
+  },
+  {
+    "name": "ja/Pong starts",
+    "pass": "is-playing"
+  },
+  {
+    "name": "ja/Pong exits",
+    "pass": ""
+  },
+  {
+    "name": " end 390",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 735.953125,
+        "width": 382,
+        "height": 108,
+        "top": 735.953125,
+        "right": 382,
+        "bottom": 843.953125,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "about/ end 390",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 680,
+        "width": 382,
+        "height": 164,
+        "top": 680,
+        "right": 382,
+        "bottom": 844,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "shop/ end 390",
+    "pass": true,
+    "detail": {
+      "overflow": 0,
+      "errors": []
+    }
+  },
+  {
+    "name": "ja/ end 390",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 735.96875,
+        "width": 382,
+        "height": 108,
+        "top": 735.96875,
+        "right": 382,
+        "bottom": 843.96875,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "ja/about/ end 390",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 679.625,
+        "width": 382,
+        "height": 164,
+        "top": 679.625,
+        "right": 382,
+        "bottom": 843.625,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "ja/shop/ end 390",
+    "pass": true,
+    "detail": {
+      "overflow": 0,
+      "errors": []
+    }
+  },
+  {
+    "name": " end 844",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 281.5,
+        "width": 836,
+        "height": 108,
+        "top": 281.5,
+        "right": 836,
+        "bottom": 389.5,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "about/ end 844",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 178.140625,
+        "width": 836,
+        "height": 212,
+        "top": 178.140625,
+        "right": 836,
+        "bottom": 390.140625,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "shop/ end 844",
+    "pass": true,
+    "detail": {
+      "overflow": 0,
+      "errors": []
+    }
+  },
+  {
+    "name": "ja/ end 844",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 281.65625,
+        "width": 836,
+        "height": 108,
+        "top": 281.65625,
+        "right": 836,
+        "bottom": 389.65625,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "ja/about/ end 844",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 178.390625,
+        "width": 836,
+        "height": 212,
+        "top": 178.390625,
+        "right": 836,
+        "bottom": 390.390625,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "ja/shop/ end 844",
+    "pass": true,
+    "detail": {
+      "overflow": 0,
+      "errors": []
+    }
+  },
+  {
+    "name": " end 1440",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 828,
+        "width": 1432,
+        "height": 72,
+        "top": 828,
+        "right": 1432,
+        "bottom": 900,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "about/ end 1440",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 723.6875,
+        "width": 1432,
+        "height": 176,
+        "top": 723.6875,
+        "right": 1432,
+        "bottom": 899.6875,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "shop/ end 1440",
+    "pass": true,
+    "detail": {
+      "overflow": 0,
+      "errors": []
+    }
+  },
+  {
+    "name": "ja/ end 1440",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 827.671875,
+        "width": 1432,
+        "height": 72,
+        "top": 827.671875,
+        "right": 1432,
+        "bottom": 899.671875,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "ja/about/ end 1440",
+    "pass": true,
+    "detail": {
+      "overflow": -8,
+      "footer": {
+        "x": 0,
+        "y": 724,
+        "width": 1432,
+        "height": 176,
+        "top": 724,
+        "right": 1432,
+        "bottom": 900,
+        "left": 0
+      },
+      "errors": []
+    }
+  },
+  {
+    "name": "ja/shop/ end 1440",
+    "pass": true,
+    "detail": {
+      "overflow": 0,
+      "errors": []
+    }
+  },
+  {
+    "name": " no JS",
+    "pass": true,
+    "detail": {
+      "text": 1979,
+      "nav": 10
+    }
+  },
+  {
+    "name": "about/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 5965,
+      "nav": 10
+    }
+  },
+  {
+    "name": "work/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 188,
+      "nav": 49
+    }
+  },
+  {
+    "name": "shop/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 259,
+      "nav": 6
+    }
+  },
+  {
+    "name": "contact/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 189,
+      "nav": 10
+    }
+  },
+  {
+    "name": "familiarcharacters/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 3223,
+      "nav": 2
+    }
+  },
+  {
+    "name": "red-pixel/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 0,
+      "nav": 0
+    }
+  },
+  {
+    "name": "ja/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 1065,
+      "nav": 10
+    }
+  },
+  {
+    "name": "ja/about/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 2802,
+      "nav": 10
+    }
+  },
+  {
+    "name": "ja/work/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 122,
+      "nav": 49
+    }
+  },
+  {
+    "name": "ja/shop/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 170,
+      "nav": 6
+    }
+  },
+  {
+    "name": "ja/contact/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 120,
+      "nav": 10
+    }
+  },
+  {
+    "name": "ja/familiarcharacters/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 3092,
+      "nav": 2
+    }
+  },
+  {
+    "name": "ja/red-pixel/ no JS",
+    "pass": true,
+    "detail": {
+      "text": 0,
+      "nav": 0
+    }
+  }
+]

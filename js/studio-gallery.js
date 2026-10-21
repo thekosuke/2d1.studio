@@ -27,7 +27,7 @@
   cards.forEach(card=>{const active=card===current;card.classList.toggle('is-gallery-current',active);card.querySelector('summary').tabIndex=active?0:-1;card.style.visibility=''});
  };
  const settle=()=>{
-  if(gesturing)return;
+  if(gesturing||document.querySelector('#work-dialog[open]'))return;
   update();const real=originals[Number(current.dataset.galleryIndex)];
   if(current!==real){
    // Move to the equivalent loop copy without changing the free-scroll offset.
@@ -35,6 +35,8 @@
    grid.classList.add('is-rebasing');grid.scrollLeft+=offset;update();
    requestAnimationFrame(()=>grid.classList.remove('is-rebasing'));
   }
+  const destination=real.offsetLeft+real.offsetWidth/2-grid.clientWidth/2;
+  if(Math.abs(grid.scrollLeft-destination)>1)center(real);
  };
  grid.addEventListener('scroll',()=>{if(!frame)frame=requestAnimationFrame(update);clearTimeout(timer);timer=setTimeout(settle,180)},{passive:true});
  grid.addEventListener('click',event=>{
@@ -72,7 +74,10 @@
  };
  const finishGesture=()=>{
   if(!gesturing)return;
-  // Let the gesture settle where it stopped; only explicit clicks/keys center.
+  // Keep multi-project travel, then settle at the nearest centered frame.
+  const middle=targetLeft+grid.clientWidth/2;
+  const nearest=cards.reduce((best,card)=>Math.abs(card.offsetLeft+card.offsetWidth/2-middle)<Math.abs(best.offsetLeft+best.offsetWidth/2-middle)?card:best,current);
+  targetLeft=nearest.offsetLeft+nearest.offsetWidth/2-grid.clientWidth/2;
   releasing=true;runMotion();
  };
  document.addEventListener('wheel',event=>{

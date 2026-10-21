@@ -14,7 +14,7 @@
 .bag-study-specs{margin:0}
 .bag-study-specs>div{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;padding:8px 0;border-top:.5px solid var(--line)}
 .bag-study-specs>div:first-child{padding-top:0;border-top:0}
-.bag-study-specs dt,.bag-study-specs dd{font:400 14px/1.5 var(--font);margin:0;min-width:0}
+.bag-study-specs dt,.bag-study-specs dd{font:400 var(--type-spec)/1.5 var(--font);margin:0;min-width:0}
 .bag-study-specs dt{font-weight:500}
 .bag-study-specs dd{color:var(--sub-gray);text-wrap:pretty}
 .bag-study-spec-note,.bag-study figcaption{font:400 12px/1.5 var(--font);color:var(--sub-gray)}
@@ -45,12 +45,12 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 /* The white product sheet travels over the slower, held Shop introduction. */
 .bag-study-scene{position:relative;isolation:isolate;width:100%}
 .bag-study-lead{position:relative;z-index:0;display:flex;flex-direction:column;gap:var(--section-content-gap)}
-.bag-study-scene>.bag-study{position:relative;z-index:1;margin-top:var(--section-content-gap)}
+.bag-study-scene>.bag-study{position:relative;z-index:1;margin-top:max(var(--section-content-gap),45svh)}
 .has-bag-cover .bag-study-lead{position:sticky;top:var(--bag-lead-top)}
-.has-bag-cover>.bag-study{margin-top:var(--section-content-gap)}
+.has-bag-cover>.bag-study{margin-top:max(var(--section-content-gap),45svh)}
 @media(prefers-reduced-motion:reduce){
  .has-bag-cover .bag-study-lead{position:relative;top:auto}
- .has-bag-cover>.bag-study{margin-top:var(--section-content-gap)}
+ .has-bag-cover>.bag-study{margin-top:max(var(--section-content-gap),45svh)}
 }
 
 
@@ -129,3 +129,14 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 #shop,.bag-study-lead{background:var(--beige)}
 
 .material-tooltip p+p{margin-top:1em}
+
+/* Armada notes use the Familiar Characters sheet’s paper, type and controls. */
+.material-tooltip{width:40vw;max-width:calc(100vw - 48px);padding:64px 48px 48px;background:var(--white);border:2px solid var(--red);font:400 var(--type-body)/1.6 var(--font);letter-spacing:0;text-transform:none;box-sizing:border-box;max-height:70dvh;overflow:auto;scrollbar-gutter:stable}
+.material-tooltip p+p{margin-top:24px}
+.material-info-close{position:absolute;top:20px;right:20px;width:32px;height:32px;display:grid;place-items:center;padding:0;border:0;background:var(--white);color:var(--cranberry-brown);cursor:pointer;transition:background-color 180ms,color 180ms}
+.material-info-close span{width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
+.material-info-close:is(:hover,:focus-visible){background:var(--red);color:var(--beige)}
+.material-info[open] summary{background:var(--red);color:var(--white)}
+@media(max-width:767px){.material-tooltip{width:calc(100vw - 48px);padding:64px 24px 48px}}
+@media(pointer:coarse){.material-info-close{width:44px;height:44px;top:12px;right:12px}}
+@media(prefers-reduced-motion:reduce){.material-info-close{transition:none}}

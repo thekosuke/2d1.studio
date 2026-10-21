@@ -148,5 +148,5 @@ console.log('PASS pinch interruptions: third-finger pause/rebase, either-finger 
 }
 assert.match(css,/\.objects-canvas\{[^}]*touch-action:none/);
 assert.match(css,/touch-action:pan-x pan-y pinch-zoom/);
-for(const route of ['../finds/index.html','../ja/finds/index.html'])assert.doesNotMatch(readFileSync(new URL(route,import.meta.url),'utf8'),/user-scalable=no|maximum-scale=1/);
+for(const route of ['../familiarcharacters/index.html','../ja/familiarcharacters/index.html'])assert.doesNotMatch(readFileSync(new URL(route,import.meta.url),'utf8'),/user-scalable=no|maximum-scale=1/);
 console.log('PASS pinch integration: in-flight zoom handoff uses rendered scale, desktop slider/buttons synchronize, wheel/key ownership, mixed-pointer/control exclusion, zero-distance/capture-failure recovery and native photo/browser zoom scope. Browser/device rendering remains unverified.');

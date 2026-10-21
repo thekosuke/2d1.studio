@@ -17,7 +17,7 @@ assert.ok(ja.Family);
 const lookup=JSON.parse(source.match(/^  const objectFamilies = (.*);$/m)[1]);
 assert.deepEqual(lookup,assignments,'generated runtime lookup matches curated data exactly');
 assert.ok(source.includes('family:objectFamilies[card.dataset.object]'));
-for(const route of ['../finds/index.html','../ja/finds/index.html']){
+for(const route of ['../familiarcharacters/index.html','../ja/familiarcharacters/index.html']){
   const html=read(route);
   for(const item of catalog){
     const card=html.match(new RegExp(`<article[^>]*data-object="${item.id}"[^>]*>`))?.[0];

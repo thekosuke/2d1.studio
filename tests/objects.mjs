@@ -132,7 +132,7 @@ let first=api.loadPurchased({id:'a'}),a=pendingRequests.shift();let second=api.l
 loading=api.loadPurchased({id:'c'});respond(pendingRequests.shift(),{count:-1,purchased:false});await loading;assert.equal(purchaseButton.disabled,true);assert.equal(purchaseStatus.textContent,'');
 console.log('PASS count UI: authoritative GET, duplicate-click guard, reversible desired state, failed mutation truthful feedback, stale-response isolation, invalid-data rejection.');
 
-for(const route of ['../finds/index.html','../ja/finds/index.html']){
+for(const route of ['../familiarcharacters/index.html','../ja/familiarcharacters/index.html']){
  const html=readFileSync(new URL(route,import.meta.url),'utf8');
  assert.doesNotMatch(html,/<nav class="finds-page-nav"/);
  assert.match(html,/class="finds-home-trigger" href="\.\.\/"/);
@@ -163,7 +163,7 @@ for(const category of ['all','wear','kitchen','missing','wear','all','kitchen','
  if(visitOrders.has(category)){assert.deepEqual(ids(filterContext.active),visitSnapshot.get(category));}
  for(const card of filterContext.cards)assert.equal(card.hidden,!filterContext.active.some(item=>item.id===card.dataset.object));
 }
-for(const route of ['../finds/index.html','../ja/finds/index.html']){const html=readFileSync(new URL(route,import.meta.url),'utf8');assert.doesNotMatch(html,/id="objects-tag"|data-view=|objects-slide-controls/);assert.match(html,/id="objects-search"/);}
+for(const route of ['../familiarcharacters/index.html','../ja/familiarcharacters/index.html']){const html=readFileSync(new URL(route,import.meta.url),'utf8');assert.doesNotMatch(html,/id="objects-tag"|data-view=|objects-slide-controls/);assert.match(html,/id="objects-search"/);}
 assert.doesNotMatch(source,/objects-tag|tags.addEventListener|setView/);
 console.log('PASS canvas-only categories: repeated filters, empty states, no tag/toggle/carousel UI.');
 // First visit is immediate; dismissal persists across languages, manual reopen remains.

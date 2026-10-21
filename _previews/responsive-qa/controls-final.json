@@ -1,0 +1,90 @@
+[
+  {
+    "name": "FC zoom",
+    "pass": true,
+    "detail": "25"
+  },
+  {
+    "name": "form",
+    "pass": true,
+    "detail": {
+      "values": [
+        [
+          "c-name",
+          "QA Test",
+          true
+        ],
+        [
+          "c-email",
+          "qa@example.invalid",
+          true
+        ],
+        [
+          "c-company",
+          "",
+          true
+        ],
+        [
+          "c-message",
+          "Local QA validation only.",
+          true
+        ]
+      ],
+      "category": "New Business",
+      "status": "",
+      "fallback": false
+    }
+  },
+  {
+    "name": "Pong starts",
+    "pass": "is-playing"
+  },
+  {
+    "name": "Pong exits",
+    "pass": ""
+  },
+  {
+    "name": "ja/FC zoom",
+    "pass": true,
+    "detail": "25"
+  },
+  {
+    "name": "ja/form",
+    "pass": true,
+    "detail": {
+      "values": [
+        [
+          "c-name",
+          "QA Test",
+          true
+        ],
+        [
+          "c-email",
+          "qa@example.invalid",
+          true
+        ],
+        [
+          "c-company",
+          "",
+          true
+        ],
+        [
+          "c-message",
+          "Local QA validation only.",
+          true
+        ]
+      ],
+      "category": "New Business",
+      "status": "",
+      "fallback": false
+    }
+  },
+  {
+    "name": "ja/Pong starts",
+    "pass": "is-playing"
+  },
+  {
+    "name": "ja/Pong exits",
+    "pass": ""
+  }
+]

@@ -281,28 +281,28 @@ body.work-page #work-dialog .work-dialog-bar .work-trail a{background:none!impor
 .work-page .work-project>summary:is(:hover,:focus-visible) .work-view{opacity:1;transform:none}
 .work-page .work-caption .work-view{justify-content:flex-end;margin-top:8px}
 
-/* Soft beige project sheets, with an Ash Brown footer. */
+/* Soft beige project sheets, with an Icon Red footer. */
 .work-dialog{background:var(--beige)}
 .work-dialog .work-story,.work-dialog .work-hero-caption{background:var(--beige);color:var(--ink)}
-.work-studio-footer{background:var(--ash-brown);color:var(--beige)}
+.work-studio-footer{background:var(--red);color:var(--white)}
 .work-dialog .work-dialog-bar.is-returned{background:var(--beige);color:var(--ink)}
-body.work-page .work-studio-footer .work-studio-nav .nav-label{background:linear-gradient(90deg,var(--red) calc(var(--nav-sweep)*100%),var(--beige) 0)!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
-body.work-page .work-studio-footer .work-studio-nav a::before{background:var(--red)}
+body.work-page .work-studio-footer .work-studio-nav .nav-label{background:linear-gradient(90deg,var(--white) calc(var(--nav-sweep)*100%),var(--white) 0)!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+body.work-page .work-studio-footer .work-studio-nav a::before{background:var(--white)}
 .work-studio-mark{position:relative}
 .work-studio-mark::after{content:'';position:absolute;left:38.238%;top:36.786%;width:13.993%;height:17.143%;background:url('../img/brand/eyes.svg') center/100% 100% no-repeat;transform:scaleY(0);transition:transform 120ms cubic-bezier(.3,1.4,.5,1);pointer-events:none}
 .work-studio-mark:is(:hover,:focus-visible)::after{transform:scaleY(1)}
-body.work-page .work-studio-footer .language-switch{--fill-rest-ground:var(--ash-brown);--fill-rest-ink:var(--beige);--fill-active-ground:var(--beige);--fill-active-ink:var(--ash-brown);--language-fill:var(--beige);background:var(--ash-brown)!important;color:var(--beige)!important;border-color:var(--beige)!important}
-body.work-page .work-studio-footer .language-switch a{color:var(--beige)!important}
-body.work-page .work-studio-footer .language-switch a[aria-current]{color:var(--ash-brown)!important}
-body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)){--language-fill:var(--red)}
-body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)) a[aria-current]{color:var(--beige)!important}
-body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)) a:is(:hover,:focus-visible){color:var(--beige)!important}
+body.work-page .work-studio-footer .language-switch{--fill-rest-ground:var(--red);--fill-rest-ink:var(--white);--fill-active-ground:var(--white);--fill-active-ink:var(--red);--language-fill:var(--white);background:var(--red)!important;color:var(--white)!important;border-color:var(--white)!important}
+body.work-page .work-studio-footer .language-switch a{color:var(--white)!important}
+body.work-page .work-studio-footer .language-switch a[aria-current]{color:var(--red)!important}
+body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)){--language-fill:var(--white)}
+body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)) a[aria-current]{color:var(--white)!important}
+body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visible)) a:is(:hover,:focus-visible){color:var(--red)!important}
 @media(prefers-reduced-motion:reduce){.work-studio-mark::after{display:none}}
 
 /* Studio: 4:3 frames, browsed horizontally with neighboring projects. */
 .work-page .work-main,.js .work-page .work-main{width:100%;max-width:none;margin:0;padding:0;--studio-square:calc(min(100vw - 48px,960px) * .72)}
 @media(min-width:1100px){.work-page .work-main,.js .work-page .work-main{--studio-square:calc((100vw - min(27.7778vw,400px) - 128px) * .72)}}
-.work-page .work-grid,.js .work-page .work-grid{display:flex;flex-direction:row;gap:24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:none;scrollbar-width:none;padding: max(112px,calc((100svh - var(--studio-square) * .75 - 100px)/2)) calc((100% - var(--studio-square))/2) 64px;align-items:flex-start}
+.work-page .work-grid,.js .work-page .work-grid{display:flex;flex-direction:row;gap:24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding: max(112px,calc((100svh - var(--studio-square) * .75 - 100px)/2)) calc((100% - var(--studio-square))/2) 64px;align-items:flex-start}
 .work-grid::-webkit-scrollbar{display:none}
 .work-page .work-project{width:var(--studio-square);flex:0 0 var(--studio-square);scroll-snap-align:center}
 .work-page .work-project>summary>img,.js .work-page .work-project>summary>img{height:auto;aspect-ratio:4/3;object-fit:cover;transition:opacity 300ms,filter 300ms,transform 300ms cubic-bezier(.2,.8,.2,1)}
@@ -350,9 +350,7 @@ body.work-page>.site-footer .footer-line{min-height:calc(var(--language-size) + 
 
 /* A slight clockwise tilt adds to the centered project's hover lift. */
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
- .work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{transition:transform 300ms cubic-bezier(.2,.8,.2,1)}
  .work-page .work-project.is-gallery-current>summary:hover>img{transform:translateY(-8px) rotate(2deg)}
- .work-page .work-project.is-gallery-current>summary:hover .work-caption{transform:translateY(-8px)}
 }
 
 /* One image bridges the gallery and modal; the native dialog retains focus trapping. */
@@ -372,3 +370,6 @@ body.work-page>.site-footer .footer-line{min-height:calc(var(--language-size) + 
 
 /* Keep breadcrumb hover legible against DeepDrip’s red artwork. */
 .work-dialog[data-project="deepdrip"] .work-trail{--trail-hover:var(--cranberry-brown)}
+
+/* Gallery captions share the bag specification reading size. */
+.work-page .work-caption,.work-page .work-caption :is(.work-title,.work-one-liner,.work-category,.work-view){font-size:var(--type-spec)}

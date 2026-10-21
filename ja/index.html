@@ -49,28 +49,32 @@
   <link rel="stylesheet" href="../css/walla.css?v=99">
   <link rel="stylesheet" href="../css/dialogs.css?v=19">
   <link rel="stylesheet" href="../css/mobile-nav.css?v=4">
-<link rel="stylesheet" href="../css/typography.css?v=15">
+<link rel="stylesheet" href="../css/typography.css?v=19">
   <script src="../js/ja.js?v=9" defer></script>
   <script src="../js/language.js?v=1" defer></script>
   <script src="../js/config.js" defer></script>
-      <link rel="stylesheet" href="../css/today-bag.css?v=65">
+      <link rel="stylesheet" href="../css/today-bag.css?v=68">
   <script src="../js/mobile-nav.js?v=4" defer></script>
   <script src="../js/site.js?v=5" defer></script>
-  <script src="../js/walla.js?v=27" defer></script>
-  <script src="../js/reading-ink.js?v=9" defer></script>
+  <script src="../js/walla.js?v=29" defer></script>
+  <script src="../js/reading-ink.js?v=13" defer></script>
   <script src="../js/bag-cover.js?v=2" defer></script>
   <script src="../js/bag-layout.js?v=1" defer></script>
-  <script src="../js/bag-material.js?v=1" defer></script>
+  <script src="../js/bag-material.js?v=2" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "2D1", "url": "https://2d1.studio/ja/", "logo": "https://2d1.studio/img/brand/2d1-brand.png?v=2", "slogan": "Familiar Characters", "description": "ブランディングとデジタルプロダクトに取り組み、身近なものの「らしさ」を考える独立系デザインスタジオ。"}</script>
 <link rel="stylesheet" href="../css/shared-controls.css?v=19">
 <link rel="stylesheet" href="../css/button-fill.css?v=6">
 <link rel="stylesheet" href="../css/logo-dock.css?v=1">
-<link rel="stylesheet" href="../css/text-links.css?v=7">
+<link rel="stylesheet" href="../css/text-links.css?v=10">
 <link rel="stylesheet" href="../css/responsive-nav.css?v=2">
-  <link rel="stylesheet" href="../css/home-ending.css?v=3">
+  <link rel="stylesheet" href="../css/home-ending.css?v=6">
   <script src="../js/home-ending.js?v=2" defer></script>
+  <link rel="stylesheet" href="../css/work-track.css?v=3">
+  <script src="../js/type-tuner.js?v=3" defer></script>
+  <link rel="stylesheet" href="../css/house-journey.css?v=3">
+  <script src="../js/house-assembly.js?v=21" defer></script>
 </head>
-<body id="top" class="home-page">
+<body id="top" class="home-page home-house-page">
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="masthead">
     <div class="logo-slot"><a class="site-logo" href="#top" aria-label="2D1、ページの先頭へ"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a></div>
@@ -83,51 +87,99 @@
   <button class="mobile-nav-toggle" type="button" aria-label="ナビゲーションメニュー" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
   <nav class="page-nav" id="page-navigation" aria-label="ページ"><a href="./" aria-current="page"><span class="nav-label">ホーム</span></a><a href="work/" data-work-nav><span class="nav-label">スタジオ</span></a><a class="nav-shop" href="shop/"><span class="nav-label">ショップ</span></a><a href="about/"><span class="nav-label">2D1について</span></a><span class="page-nav-contact"><a href="contact/"><span class="nav-label">お問い合わせ</span></a></span></nav>
   <main id="main">
-    <section class="intro column section-stack" aria-label="はじめに">
-      <h1 data-ink>2D1は、独立したデザインスタジオとして、<em class="copy-emphasis">ブランド、デジタルプロダクト、アイデアを横断して活動しています</em>。初期の構想から、見た目や使い心地、世の中でのあり方まで、一緒にかたちにしていきます。<br><br>クライアントワークと並行して、気の合う人たちと自分たちのものをつくり、ものを選び集めています。私たちはそれらを<a class="familiar-characters copy-emphasis" href="finds/" translate="no">Familiar Characters</a>— 日々の暮らしを静かに重ね、やがて私たちの日常の一部になっていく仲間たちです。</h1>
+    <div class="home-house-scene">
+    <section class="intro column section-stack home-house-lead" aria-label="はじめに">
+      <h1 data-ink>2D1は、独立したデザインスタジオとして、<em class="copy-emphasis">ブランド、デジタルプロダクト、アイデアを横断して活動しています</em>。初期の構想から、見た目や使い心地、世の中でのあり方まで、一緒にかたちにしていきます。<br><br>クライアントワークと並行して、気の合う人たちと自分たちのものをつくり、ものを選び集めています。私たちはそれらを<a class="familiar-characters copy-emphasis" href="familiarcharacters/" translate="no">Familiar Characters</a>— 日々の暮らしを静かに重ね、やがて私たちの日常の一部になっていく仲間たちです。</h1>
       <div class="button-stack"><a class="intro-cta" href="about/">2D1について<span class="pixel-arrow" aria-hidden="true"></span></a></div>
     </section>
+    <div class="house-journey">
+      <div class="house-animation"><div class="house-viewport"><figure class="design-house">
+          <div class="house-stage">
+          <svg class="design-house-diagram" viewbox="30 0 730 720" role="img" aria-labelledby="design-house-description">
+            <title id="design-house-description">スタジオとショップの2つの部屋からなる2D1のデザインハウス。</title>
+            <defs><pattern id="house-section-hatch" width="8" height="8" patternunits="userSpaceOnUse"><path d="M-1 1L1 -1M0 8L8 0M7 9L9 7" fill="none" stroke="currentColor" stroke-width=".7"></path></pattern></defs>
+            <g aria-hidden="true">
+            <g class="house-piece" data-house-piece="0" data-pivot="279.5 422.5">
+            <defs><clippath id="house-piece-clip-0"><path d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"></path></clippath></defs>
+            <path class="house-solid" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"></path>
+            <g clip-path="url(#house-piece-clip-0)">
+            <path class="house-shading" d="M329.0,603.0 L449.0,507.0 L449.0,267.0 L329.0,363.0 Z"></path>
+            <path class="house-edge" d="M120.0,330.0 L329.0,363.0 L449.0,267.0"></path>
+            <path class="house-edge" d="M329.0,363.0 L329.0,603.0"></path>
+            <path class="house-bevel" d="M129.5,555.5 Q129.5,561.5 135.4,562.4 L313.6,590.6 Q319.5,591.5 319.5,585.5 L319.5,377.5 Q319.5,371.5 313.6,370.6 L135.4,342.4 Q129.5,341.5 129.5,347.5 Z"></path><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 224.5 476.5)">スタジオ</text>
+            </g>
+            <path class="house-edge" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"></path>
+            </g>
+            <g class="house-piece" data-house-piece="1" data-pivot="499.9 457.3">
+            <defs><clippath id="house-piece-clip-1"><path d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"></path></clippath></defs>
+            <path class="house-solid" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"></path>
+            <g clip-path="url(#house-piece-clip-1)">
+            <path class="house-shading" d="M549.4,637.8 L669.4,541.8 L669.4,301.8 L549.4,397.8 Z"></path>
+            <path class="house-edge" d="M340.4,364.8 L549.4,397.8 L669.4,301.8"></path>
+            <path class="house-edge" d="M549.4,397.8 L549.4,637.8"></path>
+            <path class="house-bevel" d="M349.9,590.3 Q349.9,596.3 355.8,597.2 L534.0,625.4 Q539.9,626.3 539.9,620.3 L539.9,412.3 Q539.9,406.3 534.0,405.4 L355.8,377.2 Q349.9,376.3 349.9,382.3 Z"></path><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 444.9 511.3)">ショップ</text>
+            </g>
+            <path class="house-edge" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"></path>
+            </g>
+            <g class="house-piece" data-house-piece="2" data-pivot="389.7 259.9">
+            <defs><clippath id="house-piece-clip-2"><path d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"></path></clippath></defs>
+            <path class="house-solid" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"></path>
+            <g clip-path="url(#house-piece-clip-2)">
+            <path class="house-shading" d="M328.7,188.7 L562.4,405.6 L694.4,300.0 L460.7,83.1 Z"></path>
+            <path class="house-edge" d="M95.0,331.8 L328.7,188.7 L562.4,405.6"></path>
+            <path class="house-edge" d="M328.7,188.7 L460.7,83.1"></path>
+            <image href="../img/brand/logo_white.svg" width="176" height="59.4" transform="matrix(.95 .15 0 1 245.1 265.5)"></image>
+            </g>
+            <path class="house-edge" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"></path>
+            </g>
+            </g>
+            </svg></div>
+        </figure></div></div>
+      <div class="house-destination">
     <section id="studio" class="section-stack studio" aria-labelledby="studio-label">
       <div class="column studio-opening">
         <div class="section-heading"><h2 id="studio-label">スタジオ</h2><p>明確なアイデアに、<br>個性を。</p></div>
         <div class="section-copy prose"><p data-ink><em class="copy-emphasis">私たちの中心にあるのは、デザインスタジオとしての仕事です。</em></p><p data-ink><span>小さなチームや事業者とともに、</span>アイデアを明確にし、その個性を形にします。<em class="copy-emphasis">戦略やビジュアルアイデンティティから、インターフェースのピクセルひとつまで</em>。新鮮な視点と手を動かす姿勢で向き合います。</p><p data-ink>目指すのは、<em class="copy-emphasis">明確で、直感的に使えて、あなただけの個性があるものをつくることです。</em></p></div>
       </div>
-      <div class="work-belt" tabindex="0" role="region" aria-label="制作事例。横にスクロールしてご覧ください。スペースキーで動きを一時停止・再開できます。" data-carousel><div class="work-track"><ul class="work-set"><li><img src="../img/projects/studio-01-560.webp" srcset="../img/projects/studio-01-560.webp 560w, ../img/projects/studio-01-1120.webp 1120w" sizes="280px" width="280" height="280" alt="紫の空を背景にしたAviatorのブランドアイデンティティ" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-02-560.webp" srcset="../img/projects/studio-02-560.webp 560w, ../img/projects/studio-02-1120.webp 1081w" sizes="280px" width="280" height="280" alt="Aviatorのウェブサイト" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-03-560.webp" srcset="../img/projects/studio-03-560.webp 560w, ../img/projects/studio-03-1120.webp 1120w" sizes="280px" width="280" height="280" alt="ボトルに展開したAviatorのロゴ" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-04-560.webp" srcset="../img/projects/studio-04-560.webp 560w, ../img/projects/studio-04-1120.webp 1184w" sizes="280px" width="280" height="280" alt="Aviatorの刺繍入りキャップ" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-05-560.webp" srcset="../img/projects/studio-05-560.webp 560w, ../img/projects/studio-05-1120.webp 1120w" sizes="280px" width="280" height="280" alt="DeepDripのワードマーク" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-06-560.webp" srcset="../img/projects/studio-06-560.webp 560w, ../img/projects/studio-06-1120.webp 1120w" sizes="280px" width="280" height="280" alt="DeepDripのウェブサイト" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-07-560.webp" srcset="../img/projects/studio-07-560.webp 560w, ../img/projects/studio-07-1120.webp 1120w" sizes="280px" width="280" height="280" alt="ノートパソコンのDeepDripステッカー" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-08-560.webp" srcset="../img/projects/studio-08-560.webp 560w, ../img/projects/studio-08-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Supateamのイベントアイデンティティ" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-09-560.webp" srcset="../img/projects/studio-09-560.webp 560w, ../img/projects/studio-09-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Supateamのデジタルプロダクト" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-10-560.webp" srcset="../img/projects/studio-10-560.webp 560w, ../img/projects/studio-10-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Supateamのイベントバッジ" loading="lazy" decoding="async"></li>
-<li><img src="../img/projects/studio-11-560.webp" srcset="../img/projects/studio-11-560.webp 560w, ../img/projects/studio-11-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Supateamの名刺" loading="lazy" decoding="async"></li></ul></div></div>
+      <div class="work-belt" tabindex="0" role="region" aria-label="制作事例。横にスクロールしてご覧ください。スペースキーで動きを一時停止・再開できます。" data-carousel><div class="work-track"><ul class="work-set"><li class="work-artwork work-artwork-deepdrip-mark"><img src="../img/projects/deepdrip/logo-mark-1280.webp" srcset="../img/projects/deepdrip/logo-mark-640.webp 640w, ../img/projects/deepdrip/logo-mark-1280.webp 1280w, ../img/projects/deepdrip/logo-mark-3840.webp 3840w" sizes="280px" width="280" height="280" alt="DeepDripのDロゴマーク" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-aviator-social"><img src="../img/projects/aviator/social-profile-1280.webp" srcset="../img/projects/aviator/social-profile-640.webp 640w, ../img/projects/aviator/social-profile-1280.webp 1280w, ../img/projects/aviator/social-profile-4000.webp 4000w" sizes="280px" width="280" height="280" alt="Aviator Healthのソーシャルプロフィール" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-aviator-web"><img src="../img/projects/04-960.webp" srcset="../img/projects/04-hq-640.webp 640w, ../img/projects/04-hq-1280.webp 1280w, ../img/projects/04-hq-1920.webp 1920w" sizes="280px" alt="Aviatorの医療物流ウェブサイト" loading="lazy" decoding="async" width="280" height="280"></li>
+<li class="work-artwork work-artwork-aviator-cap"><img src="../img/projects/aviator/embroidered-cap-960.webp" srcset="../img/projects/aviator/embroidered-cap-640.webp 640w, ../img/projects/aviator/embroidered-cap-960.webp 960w, ../img/projects/aviator/embroidered-cap-1279.webp 1279w" sizes="280px" width="280" height="280" alt="木製の棚に置かれたAviatorの刺繍入りキャップ" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-deepdrip-stickers"><img src="../img/projects/deepdrip/laptop-stickers-1280.webp" srcset="../img/projects/deepdrip/laptop-stickers-640.webp 640w, ../img/projects/deepdrip/laptop-stickers-1280.webp 1280w, ../img/projects/deepdrip/laptop-stickers-3200.webp 3200w" sizes="280px" width="280" height="280" alt="ノートパソコンのDeepDripステッカー" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-supa-symbol"><img src="../img/projects/supa/symbol-1280.webp" srcset="../img/projects/supa/symbol-640.webp 640w, ../img/projects/supa/symbol-1280.webp 1280w, ../img/projects/supa/symbol-2560.webp 2560w" sizes="280px" width="280" height="280" alt="ライム色のグラデーション上のSupaシンボル" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-supa-cards"><img src="../img/projects/supa/business-cards-portrait-1280.webp" srcset="../img/projects/supa/business-cards-portrait-640.webp 640w, ../img/projects/supa/business-cards-portrait-1280.webp 1280w" sizes="280px" width="280" height="280" alt="暗い背景に置かれたSupaの名刺" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-aviator-bottle"><img src="../img/projects/aviator/bottle-960.webp" srcset="../img/projects/aviator/bottle-640.webp 640w, ../img/projects/aviator/bottle-960.webp 960w, ../img/projects/aviator/bottle-1279.webp 1279w" sizes="280px" width="280" height="280" alt="紫のウォーターボトルに展開したAviatorのロゴ" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-supa-app"><img src="../img/projects/12-960.webp" srcset="../img/projects/12-hq-640.webp 640w, ../img/projects/12-hq-1280.webp 1280w, ../img/projects/12-hq-2560.webp 2560w" sizes="280px" alt="ドックにあるSupaのアプリアイコン" loading="lazy" decoding="async" width="280" height="280"></li>
+<li class="work-artwork work-artwork-supa-badge"><img src="../img/projects/supa/badge-1280.webp" srcset="../img/projects/supa/badge-640.webp 640w, ../img/projects/supa/badge-1280.webp 1280w" sizes="280px" width="280" height="280" alt="Supaのスタッフ用バッジ" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-deepdrip-web"><img src="../img/projects/deepdrip/website-1280.webp" srcset="../img/projects/deepdrip/website-640.webp 640w, ../img/projects/deepdrip/website-1280.webp 1280w, ../img/projects/deepdrip/website-2816.webp 2816w" sizes="280px" width="280" height="280" alt="DeepDripのエディトリアルサイト" loading="lazy" decoding="async"></li></ul></div></div>
       <div class="column section-stack-inner">
         <div class="table-group"><h3 class="table-title" id="services-title">サービス</h3><dl class="services" aria-labelledby="services-title"><div><dt>デザインコンサルティング</dt><dd>アドバイザリー、ディレクション</dd></div><div><dt>デジタルプロダクトデザイン</dt><dd>ウェブサイト、UX/UI、デザインシステム</dd></div><div><dt>ブランドデザイン</dt><dd>アートディレクション、グラフィックデザイン、ビジュアルアイデンティティ</dd></div></dl></div>
-        <a class="intro-cta" href="work/">スタジオを見る<span class="pixel-arrow" aria-hidden="true"></span></a>
+        <a class="intro-cta" href="work/">制作実績を見る<span class="pixel-arrow" aria-hidden="true"></span></a>
       </div>
     </section>
+      </div>
+    </div>
+    </div>
     <section id="shop" class="section-stack" aria-labelledby="shop-label">
       <div class="bag-study-scene">
       <div class="bag-study-lead" data-bag-cover-lead>
       <div class="section-heading column"><h2 id="shop-label">ショップ</h2><p>身近なものたちの家。</p></div>
       <div class="section-copy prose column"><p data-ink><em class="copy-emphasis">つくる喜び</em>は、私たちの活動の中心にあります。自分たちのためにつくるものも、クライアントのための仕事と同じところから始まります。明確なアイデアと、そのものらしさを生むディテールから。</p></div>
       </div>
-      <figure class="bag-study" id="today-bag" aria-label="Daily Tote">
+      <figure class="bag-study" id="today-bag" aria-label="2D Tote">
         <header class="bag-story-heading bag-study-copy">
-          <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">Daily Tote</em>は、私たちが初めてつくる日用品。どこへでも連れていける帆布のトートです。シンプルなかたち、便利な内ポケット、そして自分のものだとわかる<em class="copy-emphasis">赤のアクセント</em>。</p>
+          <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">2D Tote</em>は、私たちが初めてつくる日用品。どこへでも連れていける帆布のトートです。シンプルなかたち、便利な内ポケット、そして自分のものだとわかる<em class="copy-emphasis">赤のアクセント</em>。</p>
         </header>
         <div class="bag-layout-scroll"><div class="bag-product-spread">
           <div class="bag-study-stage">
-            <div class="bag-study-image"><img class="bag-study-photo" src="../img/shop/life-tote-studio-v4.webp" width="1050" height="1498" alt="Daily Toteの写実的なコンセプト画像。ダークカラーの綿帆布、ショルダーストラップ、コンパクトな赤いハンドル、ベージュの刺繍ロゴ、左下の縫い目に四角い赤いタグ。" loading="lazy" decoding="async"></div>
+            <div class="bag-study-image"><img class="bag-study-photo" src="../img/shop/life-tote-studio-v4.webp" width="1050" height="1498" alt="2D Toteの写実的なコンセプト画像。ダークカラーの綿帆布、ショルダーストラップ、コンパクトな赤いハンドル、ベージュの刺繍ロゴ、左下の縫い目に四角い赤いタグ。" loading="lazy" decoding="async"></div>
           </div>
           <div class="bag-editorial">
 
             <div class="bag-study-notes">
           <h4>仕様</h4>
           <div><dl class="bag-study-specs">
-          <div><dt>素材</dt><dd class="bag-material"><span>アルマダ8号帆布（綿100%）</span><details class="material-info"><summary aria-label="アルマダ帆布について"><span class="material-info-icon" aria-hidden="true"></span></summary><div class="material-tooltip"><p>アルマダは、日本で織られた仙田の綿100%の8号帆布。ざっくりとした織りと硬糊仕上げのハリがバッグの形を支え、使い込むほどに柔らかくなります。形を保ちながら、日々を重ねて表情を増していくバッグにしたくて、この生地を選びました。</p><p>どこでつくられているかも、同じくらい大切でした。アメリカの歴史ある生地を日本でよみがえらせるAlbertonも検討しました。私たちが伝えたい、日本の帆布で日々の道具をつくるという話には、アルマダのほうがしっくりきました。日本でものをつくることは、2D1にとって大切な軸。その選択は、生地から始まっています。</p></div></details></dd></div>
+          <div><dt>素材</dt><dd class="bag-material"><span>アルマダ8号帆布（綿100%）</span><details class="material-info"><summary aria-label="アルマダ帆布について"><span class="material-info-icon" aria-hidden="true"></span></summary><div class="material-tooltip"><button class="material-info-close" type="button" aria-label="情報シートを閉じる" hidden><span aria-hidden="true"></span></button><p>アルマダは、日本で織られた仙田の綿100%の8号帆布。ざっくりとした織りと硬糊仕上げのハリがバッグの形を支え、使い込むほどに柔らかくなります。形を保ちながら、日々を重ねて表情を増していくバッグにしたくて、この生地を選びました。</p><p>どこでつくられているかも、同じくらい大切でした。アメリカの歴史ある生地を日本でよみがえらせるAlbertonも検討しました。私たちが伝えたい、日本の帆布で日々の道具をつくるという話には、アルマダのほうがしっくりきました。日本でものをつくることは、2D1にとって大切な軸。その選択は、生地から始まっています。</p></div></details></dd></div>
           <div><dt>生産国</dt><dd>日本製</dd></div>
           <div><dt>サイズ</dt><dd>約 幅40 × 高さ36 × マチ10cm（ストラップを除く）</dd></div>
           <div><dt>ストラップ</dt><dd>ダークカラーのショルダーストラップと、鮮やかな赤いハンドル</dd></div>
@@ -140,13 +192,13 @@
           </div>
         </div>
         </div>
-        <div class="bag-study-copy bag-closing"><div class="section-copy prose column shop-support-copy"><p data-ink><span>Daily Tote</span>は<em class="copy-emphasis">まだ開発中</em>です。あなたの日々に迎えたいと思っていただけたら、ぜひお知らせを受け取るためにご登録ください。</p></div></div>
+        <div class="bag-study-copy bag-closing"><div class="section-copy prose column shop-support-copy"><p data-ink><span>2D Tote</span>は<em class="copy-emphasis">まだ開発中</em>です。あなたの日々に迎えたいと思っていただけたら、ぜひお知らせを受け取るためにご登録ください。</p></div></div>
       </figure>
       </div>
     </section>
 
   </main>
-  <div class="home-ending" data-link-surface="dark">
+  <div class="home-ending">
       <div class="shop-tail"><div class="shop-signup"><div class="column">
         <h2 class="signup-heading">登録する</h2>
         <div class="shop-actions"><form class="connect-form" aria-describedby="connect-status"><label for="connect-email" class="sr-only">メールアドレス</label><div class="connect-row"><span class="signup-field"><input type="email" id="connect-email" name="email" placeholder="メールアドレス" autocomplete="email" maxlength="254" aria-describedby="connect-status" required disabled></span><button class="intro-cta" type="submit" disabled>発売のお知らせを受け取る<span class="pixel-arrow" aria-hidden="true"></span></button></div><p id="connect-status" role="status" hidden></p></form></div>

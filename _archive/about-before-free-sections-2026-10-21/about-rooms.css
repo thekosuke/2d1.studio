@@ -1,0 +1,51 @@
+/* Editorial About: project-overview typography, a quiet label and a wide reading column. */
+.about-page.about-story-page .essay-page{width:100%;max-width:none;margin:0;padding:0}
+.about-page.about-story-page .essay-body{margin-top:0}
+.about-page.about-story-page .about-story-lead{padding:160px 24px 96px;background:var(--beige)}
+.about-intro-grid,.about-story-page .about-room-frame>.about-service-grid{display:grid;grid-template-columns:calc(var(--editorial-copy-left,min(27.7778vw,400px)) - 64px) minmax(0,1fr);gap:40px;align-items:start;width:100%;max-width:none;margin:0}
+.about-page.about-story-page .about-editorial-label,.about-page .about-services .about-service h2{margin:0;padding:0;font:400 20px/1.45 var(--font);letter-spacing:0;color:var(--sub-gray);text-transform:none;background:none;text-wrap:pretty}
+.about-page.about-story-page .about-intro-copy .essay-lede,.about-page .about-services .about-service-copy p,.about-page .about-services .about-service-copy .about-service-lead{width:auto;max-width:none;margin:0;padding:0;font:400 32px/1.3 var(--font);letter-spacing:-.02em;color:var(--cranberry-brown);text-align:left;text-wrap:pretty}
+.about-page.about-story-page .about-intro-copy .essay-lede+.essay-lede{margin-top:32px}
+.about-service{--room-surface:var(--beige);--room-text:var(--cranberry-brown);--ink:var(--cranberry-brown);--text-link-rest:var(--red);--text-link-hover:var(--cranberry-brown)}
+.about-story-page .about-service{position:relative;padding:0;min-height:0;background:var(--room-surface);color:var(--room-text)}
+.about-room-frame{position:relative;background:var(--room-surface)}
+.about-story-page .about-room-frame>.about-service-grid{padding:160px 24px 96px}
+.about-service-title{min-width:0}
+.about-service .about-service-copy{display:flex;flex-direction:column;gap:32px;max-width:none;min-width:0;padding:0;background:none}
+.about-page .about-services .about-service-copy strong{color:inherit}
+.about-page .essay-body .about-services .about-service-copy .intro-cta{margin:8px 0 0;align-self:flex-start;font:500 24px/1.4 var(--font);text-decoration:none}
+.about-page .about-services .intro-cta:is(:hover,:focus-visible) .pixel-arrow::before{color:var(--cranberry-brown)}
+.about-story-page .has-room-journey .about-services{width:100%;display:block;transform:none}
+.has-room-journey .about-service{position:absolute;inset:0;width:100%;height:100%;min-height:0;overflow:clip;transform:translateY(var(--section-y,0%))}
+.has-room-journey .about-room-shop{--section-y:100%}
+.has-room-journey .about-room-frame{position:absolute;inset:0;overflow:clip}
+.has-room-journey .about-room-frame>.about-service-grid{transform:translateY(var(--room-y,0px))}
+@media(max-width:1099px) and (min-width:768px){.about-intro-grid,.about-story-page .about-room-frame>.about-service-grid{grid-template-columns:160px minmax(0,1fr);gap:32px}}
+@media(max-width:767px){
+ .about-page.about-story-page .about-story-lead{padding:112px 24px 64px}
+ .about-intro-grid,.about-story-page .about-room-frame>.about-service-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+ .about-story-page .about-room-frame>.about-service-grid{padding:112px 24px 64px}
+ .about-page.about-story-page .about-editorial-label,.about-page .about-services .about-service h2{font-size:16px}
+ .about-page.about-story-page .about-intro-copy .essay-lede,.about-page .about-services .about-service-copy p,.about-page .about-services .about-service-copy .about-service-lead{font-size:24px;line-height:1.4}
+ .about-service .about-service-copy{gap:24px}
+ .about-page .essay-body .about-services .about-service-copy .intro-cta{font-size:20px}
+}
+html[lang="ja"] .about-page.about-story-page .about-intro-copy .essay-lede,html[lang="ja"] .about-page .about-services .about-service-copy p,html[lang="ja"] .about-page .about-services .about-service-copy .about-service-lead{font-size:28px;line-height:1.65;letter-spacing:0}
+@media(max-width:767px){html[lang="ja"] .about-page.about-story-page .about-intro-copy .essay-lede,html[lang="ja"] .about-page .about-services .about-service-copy p,html[lang="ja"] .about-page .about-services .about-service-copy .about-service-lead{font-size:22px;line-height:1.65}}
+@media(prefers-reduced-motion:reduce){.about-service{transform:none}}
+
+/* The opening has no visible label; retain the shared reading edge. */
+.about-intro-copy{grid-column:2}
+@media(max-width:767px){.about-intro-copy{grid-column:1}}
+
+.about-page.about-story-page .about-intro-copy .about-editorial-label{margin-bottom:24px}
+
+/* Home's services table, aligned with Studio's reading column. */
+.about-room-studio .services{display:block;margin:0;padding:0;border:0}
+.about-room-studio .services>div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:0;padding-block:8px;border-top:.5px solid var(--line)}
+.about-room-studio .services dt{font:500 var(--type-body)/1.4 var(--font);letter-spacing:0;color:var(--ink)}
+.about-room-studio .services dd{min-width:0;margin:0;font:400 var(--type-body)/1.4 var(--font);letter-spacing:0;color:var(--ink);text-align:left;text-wrap:pretty}
+@media(max-width:767px){.about-room-studio .services>div{grid-template-columns:100px minmax(0,1fr);gap:16px}}
+html[lang="ja"] .about-room-studio .services :is(dt,dd){font-size:var(--type-body);line-height:1.4}
+.about-room-studio .table-group{width:100%;align-self:stretch}
+@media(min-width:768px){.has-room-journey .about-service-title{transform:translateY(calc(0px - var(--room-y,0px)))}}

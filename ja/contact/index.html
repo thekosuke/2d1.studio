@@ -40,22 +40,23 @@
   <script src="../../js/language.js?v=1" defer></script>
   <link rel="stylesheet" href="../../css/dialogs.css?v=19">
   <link rel="stylesheet" href="../../css/mobile-nav.css?v=4">
-<link rel="stylesheet" href="../../css/typography.css?v=15">
+<link rel="stylesheet" href="../../css/typography.css?v=16">
   <script src="../../js/config.js" defer></script>
   <script src="../../js/drawers.js?v=2" defer></script>
-  <script src="../../js/contact.js?v=13" defer></script>
+  <script src="../../js/contact.js?v=14" defer></script>
   <script src="../../js/mobile-nav.js?v=4" defer></script>
   <script src="../../js/site.js?v=5" defer></script>
   
   
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact 2D1", "url": "https://2d1.studio/ja/contact/", "mainEntity": {"@type": "Organization", "name": "2D1", "url": "https://2d1.studio/", "logo": "https://2d1.studio/img/brand/2d1-brand.png?v=2", "slogan": "Familiar Characters"}}</script>
 
-<link rel="stylesheet" href="../../css/contact-page.css?v=8">
+<link rel="stylesheet" href="../../css/contact-page.css?v=12">
 <link rel="stylesheet" href="../../css/shared-controls.css?v=19">
 <link rel="stylesheet" href="../../css/button-fill.css?v=6">
 <link rel="stylesheet" href="../../css/logo-dock.css?v=1">
-<link rel="stylesheet" href="../../css/text-links.css?v=7">
+<link rel="stylesheet" href="../../css/text-links.css?v=9">
 <link rel="stylesheet" href="../../css/responsive-nav.css?v=2">
+  <script src="../../js/type-tuner.js?v=3" defer></script>
 </head>
 <body class="about-page contact-page" id="top"><a class="skip-link" href="#main">本文へ移動</a>
   <a class="site-logo about-docked-logo" href="../" aria-label="2D1、ホームへ"><img src="../../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a>
@@ -101,10 +102,11 @@
           </div>
           <div class="field-trap" aria-hidden="true"><label for="c-website">ウェブサイト</label><input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="contact-foot">
-            <button class="contact-send intro-cta" type="submit"><span class="send-label">送信する</span><span class="send-arrow pixel-arrow" aria-hidden="true"></span></button>
+            <button class="contact-send intro-cta" type="submit" disabled><span class="send-label">送信する</span><span class="send-arrow pixel-arrow" aria-hidden="true"></span></button>
             <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
           </div>
         </form>
+        <noscript><p class="contact-fallback">このフォームはまだ準備中のため、送信されていません。お問い合わせは<a href="https://temporal-sight-127.notion.site/966aab52301b4588a1c875bf81ac421a?pvs=105" target="_blank" rel="noopener noreferrer">Notionのお問い合わせフォーム<span class="sr-only">（新しいタブで開きます）</span></a>をご利用ください。</p></noscript>
         <div class="contact-done" hidden>
           <p class="contact-title contact-done-title" tabindex="-1">ありがとうございます<span class="done-name"></span>.</p>
           <p class="contact-intro">メッセージを受け取りました。5営業日以内にお返事します。</p>

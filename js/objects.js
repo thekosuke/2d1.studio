@@ -975,7 +975,7 @@
   const positionInfo=()=>{
     const rect=infoButton.getBoundingClientRect();
     const gap=parseFloat(getComputedStyle(page).getPropertyValue('--finds-edge'))||16;
-    infoDialog.style.setProperty('--info-bottom',`${innerHeight-rect.top+gap}px`);
+    infoDialog.style.setProperty('--info-top',`${rect.bottom+gap}px`);
     infoDialog.style.setProperty('--info-left',`${rect.left}px`);
     positionAbout();
   };

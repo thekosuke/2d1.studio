@@ -378,3 +378,17 @@ on light backgrounds. Apply this principle wherever relevant in future work.
 About’s flat house icons explicitly use softly rounded block/roof corners and
 a slightly heavier stroke to echo the playful 3D toy blocks. This is an approved
 exception to the historical square-corner rule, not a change to all UI controls.
+
+## Familiar Characters route — 21 October 2026
+
+The collection now lives at `/familiarcharacters/` and `/ja/familiarcharacters/`.
+Update active links and generators accordingly. `/finds/` and `/objects/` remain
+redirects in both languages. Internal asset names beginning with finds stay unchanged.
+
+## Square image framing — 21 October 2026
+
+Project mockups in the work track need intentional square compositions. Never
+leave white gutters or letterboxing as a generic fit fallback. Crop photographs
+to fill the frame with per-image focal positions. For complete UI mockups,
+extend the matching original background color or texture across the square.
+Preserve authentic artwork and keep foreground images from current galleries.

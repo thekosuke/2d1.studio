@@ -3,6 +3,13 @@
   const info = document.querySelector('.material-info');
   if (!info) return;
   let pinned = false;
+  const closeButton = info.querySelector('.material-info-close');
+  closeButton.hidden = false;
+  closeButton.addEventListener('click', () => {
+    pinned = false;
+    info.open = false;
+    info.querySelector('summary').focus({preventScroll:true});
+  });
   info.querySelector('summary').addEventListener('click', event => {
     event.preventDefault();
     pinned = !pinned;

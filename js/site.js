@@ -37,3 +37,13 @@
     script.src='https://www.googletagmanager.com/gtag/js?id=G-7YBDBXJWCG'; document.head.append(script);
   }
 })();
+
+// Measure the essay heading for its viewport-relative arrival position.
+(() => {
+  const heading = document.querySelector('.about-essay-page .essay-head');
+  if (!heading) return;
+  const measure = () => document.body.style.setProperty('--essay-head-half-height', `${heading.getBoundingClientRect().height / 2}px`);
+  new ResizeObserver(measure).observe(heading);
+  measure();
+  document.fonts.ready.then(measure);
+})();

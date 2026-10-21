@@ -5,7 +5,7 @@ const listeners={};let observer,created=0,removed=0;const messages=[];
 const reduced={matches:false,addEventListener(){}};
 const screen={clientWidth:800,append(){}};
 const card={addEventListener(name,fn){listeners[name]=fn}};
-const preview={closest(selector){return selector==='.shop-card'?card:{href:'http://localhost/finds/'}},querySelector(){return screen}};
+const preview={closest(selector){return selector==='.shop-card'?card:{href:'http://localhost/familiarcharacters/'}},querySelector(){return screen}};
 const context={matchMedia:()=>reduced,location:{origin:'http://localhost'},URL,
  document:{querySelectorAll:()=>[preview],createElement(){created++;return {style:{},setAttribute(){},addEventListener(){},contentWindow:{postMessage:msg=>messages.push(msg)},remove(){removed++}}}},
  ResizeObserver:class{observe(){}},IntersectionObserver:class{constructor(fn){observer=fn}observe(){}}};

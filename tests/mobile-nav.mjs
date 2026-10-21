@@ -161,9 +161,9 @@ assert.doesNotMatch(css,/translateX\(12px\)|width:6px/,'mobile hover does not re
 const homeSource=readFileSync(new URL('../js/walla.js',import.meta.url),'utf8');
 assert.match(homeSource,/querySelector\('\.home-page \.language-switch'\)/);
 assert.match(homeSource,/pageNav\.querySelectorAll\('a\[href\^="#"\]'\)/);
-for(const route of ['index.html','about/index.html','finds/index.html','ja/index.html','ja/about/index.html','ja/finds/index.html']){
+for(const route of ['index.html','about/index.html','familiarcharacters/index.html','ja/index.html','ja/about/index.html','ja/familiarcharacters/index.html']){
   const html=readFileSync(new URL(`../${route}`,import.meta.url),'utf8').replace(/<template\b[\s\S]*?<\/template>/g,'');
-  if(route.includes('finds/')){assert.doesNotMatch(html,/<nav class="finds-page-nav"/);assert.match(html,/class="finds-home-trigger" href="\.\.\/"/);continue;}
+  if(route.includes('familiarcharacters/')){assert.doesNotMatch(html,/<nav class="finds-page-nav"/);assert.match(html,/class="finds-home-trigger" href="\.\.\/"/);continue;}
   const button=html.match(/<button class="mobile-nav-toggle"[^>]*>/)?.[0];assert.ok(button,`${route}: hamburger`);
   assert.match(button,/type="button"/);assert.match(button,/aria-expanded="false"/);assert.match(button,new RegExp(`aria-label="${route.startsWith('ja/')?'ナビゲーションメニュー':'Navigation menu'}"`));
   const id=button.match(/aria-controls="([^"]+)"/)[1];const nav=html.match(new RegExp(`<nav[^>]*id="${id}"[^>]*>[\\s\\S]*?<\\/nav>`))?.[0];assert.ok(nav,`${route}: controlled nav`);
@@ -171,9 +171,9 @@ for(const route of ['index.html','about/index.html','finds/index.html','ja/index
   assert.match(html,/css\/mobile-nav.css\?v=3/);assert.match(html,/js\/mobile-nav.js\?v=2/);
   const language=html.match(/<nav class="(?:language-switch|objects-language)"[^>]*>[\s\S]*?<\/nav>/g);assert.equal(language?.length,1,`${route}: one original language landmark`);
   assert.equal((language[0].match(/hreflang="(?:en|ja)"/g)||[]).length,2);
-  const page=route.includes('finds/')?'finds/':route.includes('about/')?'about/':'';
+  const page=route.includes('familiarcharacters/')?'familiarcharacters/':route.includes('about/')?'about/':'';
   const base=`https://preview.test/${route.replace(/index\.html$/,'')}`;
   for(const [,href,lang] of language[0].matchAll(/<a href="([^"]+)"[^>]*hreflang="(en|ja)"/g))assert.equal(new URL(href,base).pathname,`/${lang==='ja'?'ja/':''}${page}`);
-  if(route.includes('finds/'))assert.match(nav,/class="mobile-nav-home" href="\.\.\/"/);
+  if(route.includes('familiarcharacters/'))assert.match(nav,/class="mobile-nav-home" href="\.\.\/"/);
 }
 console.log('PASS shared mobile navigation: all six routes, one live EN/JA landmark, native clicks, stagger refresh, responsive/modal focus, Home reveal/current-language preservation, and consistent label/panel styling.');

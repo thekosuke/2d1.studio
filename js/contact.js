@@ -70,6 +70,7 @@
     const eyes = contact.querySelector('.contact-eyes');
     const cStatus = contact.querySelector('#contact-status');
     const send = contactForm.querySelector('.contact-send');
+    send.disabled = false; // Static contact pages keep submission disabled without JavaScript.
     const sendLabel = send.querySelector('.send-label');
     const done = contact.querySelector('.contact-done');
     const fallback = contact.querySelector('.contact-fallback');

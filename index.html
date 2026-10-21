@@ -48,27 +48,31 @@
   <link rel="stylesheet" href="css/walla.css?v=99">
   <link rel="stylesheet" href="css/dialogs.css?v=19">
   <link rel="stylesheet" href="css/mobile-nav.css?v=4">
-<link rel="stylesheet" href="css/typography.css?v=15">
+<link rel="stylesheet" href="css/typography.css?v=19">
   <script src="js/language.js?v=1" defer></script>
   <script src="js/config.js" defer></script>
-      <link rel="stylesheet" href="css/today-bag.css?v=65">
+      <link rel="stylesheet" href="css/today-bag.css?v=68">
   <script src="js/mobile-nav.js?v=4" defer></script>
   <script src="js/site.js?v=5" defer></script>
-  <script src="js/walla.js?v=27" defer></script>
-  <script src="js/reading-ink.js?v=9" defer></script>
+  <script src="js/walla.js?v=29" defer></script>
+  <script src="js/reading-ink.js?v=13" defer></script>
   <script src="js/bag-cover.js?v=2" defer></script>
   <script src="js/bag-layout.js?v=1" defer></script>
-  <script src="js/bag-material.js?v=1" defer></script>
+  <script src="js/bag-material.js?v=2" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/2d1-brand.png?v=2","slogan":"Familiar Characters","description":"An independent design studio working in branding and digital products, and an editorial home for Familiar Characters."}</script>
 <link rel="stylesheet" href="css/shared-controls.css?v=19">
 <link rel="stylesheet" href="css/button-fill.css?v=6">
 <link rel="stylesheet" href="css/logo-dock.css?v=1">
-<link rel="stylesheet" href="css/text-links.css?v=7">
+<link rel="stylesheet" href="css/text-links.css?v=10">
 <link rel="stylesheet" href="css/responsive-nav.css?v=2">
-  <link rel="stylesheet" href="css/home-ending.css?v=3">
+  <link rel="stylesheet" href="css/home-ending.css?v=6">
   <script src="js/home-ending.js?v=2" defer></script>
+  <link rel="stylesheet" href="css/work-track.css?v=3">
+  <script src="js/type-tuner.js?v=3" defer></script>
+  <link rel="stylesheet" href="css/house-journey.css?v=3">
+  <script src="js/house-assembly.js?v=21" defer></script>
 </head>
-<body id="top" class="home-page">
+<body id="top" class="home-page home-house-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="masthead">
     <div class="logo-slot"><a class="site-logo" href="#top" aria-label="2D1, back to top"><img src="img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a></div>
@@ -81,51 +85,99 @@
   <button class="mobile-nav-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
   <nav class="page-nav" id="page-navigation" aria-label="Pages"><a href="./" aria-current="page"><span class="nav-label">Home</span></a><a href="work/" data-work-nav><span class="nav-label">Studio</span></a><a class="nav-shop" href="shop/"><span class="nav-label">Shop</span></a><a href="about/"><span class="nav-label">About</span></a><span class="page-nav-contact"><a href="contact/"><span class="nav-label">Contact</span></a></span></nav>
   <main id="main">
-    <section class="intro column section-stack" aria-label="Introduction">
-      <h1 data-ink>2D1 is an independent design practice working across <em class="copy-emphasis">brands, digital products, and ideas</em>. We help shape things from early concept to how they look, work, and live in the world.<br><br>Alongside client work, we make things of our own with people we like and curate objects that we call <a class="familiar-characters copy-emphasis" href="finds/" translate="no">Familiar Characters</a> — companions that quietly collect a life around them to eventually become part of our routine.</h1>
+    <div class="home-house-scene">
+    <section class="intro column section-stack home-house-lead" aria-label="Introduction">
+      <h1 data-ink>2D1 is an independent design practice working across <em class="copy-emphasis">brands, digital products, and ideas</em>. We help shape things from early concept to how they look, work, and live in the world.<br><br>Alongside client work, we make things of our own with people we like and curate objects that we call <a class="familiar-characters copy-emphasis" href="familiarcharacters/" translate="no">Familiar Characters</a> — companions that quietly collect a life around them to eventually become part of our routine.</h1>
       <div class="button-stack"><a class="intro-cta" href="about/">More about us <span class="pixel-arrow" aria-hidden="true"></span></a></div>
     </section>
+    <div class="house-journey">
+      <div class="house-animation"><div class="house-viewport"><figure class="design-house">
+          <div class="house-stage">
+          <svg class="design-house-diagram" viewBox="30 0 730 720" role="img" aria-labelledby="design-house-description">
+            <title id="design-house-description">2D1 design house with two rooms: Studio and Shop.</title>
+            <defs><pattern id="house-section-hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M-1 1L1 -1M0 8L8 0M7 9L9 7" fill="none" stroke="currentColor" stroke-width=".7"/></pattern></defs>
+            <g aria-hidden="true">
+            <g class="house-piece" data-house-piece="0" data-pivot="279.5 422.5">
+            <defs><clipPath id="house-piece-clip-0"><path d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"/></clipPath></defs>
+            <path class="house-solid" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"/>
+            <g clip-path="url(#house-piece-clip-0)">
+            <path class="house-shading" d="M329.0,603.0 L449.0,507.0 L449.0,267.0 L329.0,363.0 Z"/>
+            <path class="house-edge" d="M120.0,330.0 L329.0,363.0 L449.0,267.0"/>
+            <path class="house-edge" d="M329.0,363.0 L329.0,603.0"/>
+            <path class="house-bevel" d="M129.5,555.5 Q129.5,561.5 135.4,562.4 L313.6,590.6 Q319.5,591.5 319.5,585.5 L319.5,377.5 Q319.5,371.5 313.6,370.6 L135.4,342.4 Q129.5,341.5 129.5,347.5 Z"/><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 224.5 476.5)">Studio</text>
+            </g>
+            <path class="house-edge" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"/>
+            </g>
+            <g class="house-piece" data-house-piece="1" data-pivot="499.9 457.3">
+            <defs><clipPath id="house-piece-clip-1"><path d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"/></clipPath></defs>
+            <path class="house-solid" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"/>
+            <g clip-path="url(#house-piece-clip-1)">
+            <path class="house-shading" d="M549.4,637.8 L669.4,541.8 L669.4,301.8 L549.4,397.8 Z"/>
+            <path class="house-edge" d="M340.4,364.8 L549.4,397.8 L669.4,301.8"/>
+            <path class="house-edge" d="M549.4,397.8 L549.4,637.8"/>
+            <path class="house-bevel" d="M349.9,590.3 Q349.9,596.3 355.8,597.2 L534.0,625.4 Q539.9,626.3 539.9,620.3 L539.9,412.3 Q539.9,406.3 534.0,405.4 L355.8,377.2 Q349.9,376.3 349.9,382.3 Z"/><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 444.9 511.3)">Shop</text>
+            </g>
+            <path class="house-edge" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"/>
+            </g>
+            <g class="house-piece" data-house-piece="2" data-pivot="389.7 259.9">
+            <defs><clipPath id="house-piece-clip-2"><path d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"/></clipPath></defs>
+            <path class="house-solid" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"/>
+            <g clip-path="url(#house-piece-clip-2)">
+            <path class="house-shading" d="M328.7,188.7 L562.4,405.6 L694.4,300.0 L460.7,83.1 Z"/>
+            <path class="house-edge" d="M95.0,331.8 L328.7,188.7 L562.4,405.6"/>
+            <path class="house-edge" d="M328.7,188.7 L460.7,83.1"/>
+            <image href="img/brand/logo_white.svg" width="176" height="59.4" transform="matrix(.95 .15 0 1 245.1 265.5)"/>
+            </g>
+            <path class="house-edge" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"/>
+            </g>
+            </g>
+            </svg></div>
+        </figure></div></div>
+      <div class="house-destination">
     <section id="studio" class="section-stack studio" aria-labelledby="studio-label">
       <div class="column studio-opening">
         <div class="section-heading"><h2 id="studio-label">Studio</h2><p>Clear ideas,<br>with character.</p></div>
         <div class="section-copy prose"><p data-ink><em class="copy-emphasis">At our core, we’re a design studio.</em></p><p data-ink><span>We work with small teams and businesses</span> to make their ideas clear and give them character. From <em class="copy-emphasis">strategy and visual identity down to the pixels of an interface</em>, we bring a fresh pair of eyes and a hands-on approach.</p><p data-ink>The aim is to create something that is <em class="copy-emphasis">clear, intuitive, and uniquely you.</em></p></div>
       </div>
-      <div class="work-belt" tabindex="0" role="region" aria-label="Selected design work. Scroll to browse; press Space to pause or resume motion." data-carousel><div class="work-track"><ul class="work-set"><li><img src="img/projects/studio-01-560.webp" srcset="img/projects/studio-01-560.webp 560w, img/projects/studio-01-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Aviator identity against a purple sky" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-02-560.webp" srcset="img/projects/studio-02-560.webp 560w, img/projects/studio-02-1120.webp 1081w" sizes="280px" width="280" height="280" alt="Aviator website design" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-03-560.webp" srcset="img/projects/studio-03-560.webp 560w, img/projects/studio-03-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Aviator identity on a water bottle" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-04-560.webp" srcset="img/projects/studio-04-560.webp 560w, img/projects/studio-04-1120.webp 1184w" sizes="280px" width="280" height="280" alt="Aviator embroidered cap" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-05-560.webp" srcset="img/projects/studio-05-560.webp 560w, img/projects/studio-05-1120.webp 1120w" sizes="280px" width="280" height="280" alt="DeepDrip wordmark" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-06-560.webp" srcset="img/projects/studio-06-560.webp 560w, img/projects/studio-06-1120.webp 1120w" sizes="280px" width="280" height="280" alt="DeepDrip website design" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-07-560.webp" srcset="img/projects/studio-07-560.webp 560w, img/projects/studio-07-1120.webp 1120w" sizes="280px" width="280" height="280" alt="DeepDrip stickers on a laptop" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-08-560.webp" srcset="img/projects/studio-08-560.webp 560w, img/projects/studio-08-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Supateam event identity" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-09-560.webp" srcset="img/projects/studio-09-560.webp 560w, img/projects/studio-09-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Supateam digital product" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-10-560.webp" srcset="img/projects/studio-10-560.webp 560w, img/projects/studio-10-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Supateam event badge" loading="lazy" decoding="async"></li>
-<li><img src="img/projects/studio-11-560.webp" srcset="img/projects/studio-11-560.webp 560w, img/projects/studio-11-1120.webp 1120w" sizes="280px" width="280" height="280" alt="Supateam business cards" loading="lazy" decoding="async"></li></ul></div></div>
+      <div class="work-belt" tabindex="0" role="region" aria-label="Selected design work. Scroll to browse; press Space to pause or resume motion." data-carousel><div class="work-track"><ul class="work-set"><li class="work-artwork work-artwork-deepdrip-mark"><img src="img/projects/deepdrip/logo-mark-1280.webp" srcset="img/projects/deepdrip/logo-mark-640.webp 640w, img/projects/deepdrip/logo-mark-1280.webp 1280w, img/projects/deepdrip/logo-mark-3840.webp 3840w" sizes="280px" width="280" height="280" alt="DeepDrip D logo mark" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-aviator-social"><img src="img/projects/aviator/social-profile-1280.webp" srcset="img/projects/aviator/social-profile-640.webp 640w, img/projects/aviator/social-profile-1280.webp 1280w, img/projects/aviator/social-profile-4000.webp 4000w" sizes="280px" width="280" height="280" alt="Aviator Health social profile" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-aviator-web"><img src="img/projects/04-960.webp" srcset="img/projects/04-hq-640.webp 640w, img/projects/04-hq-1280.webp 1280w, img/projects/04-hq-1920.webp 1920w" sizes="280px" alt="Aviator healthcare logistics website" loading="lazy" decoding="async" width="280" height="280"></li>
+<li class="work-artwork work-artwork-aviator-cap"><img src="img/projects/aviator/embroidered-cap-960.webp" srcset="img/projects/aviator/embroidered-cap-640.webp 640w, img/projects/aviator/embroidered-cap-960.webp 960w, img/projects/aviator/embroidered-cap-1279.webp 1279w" sizes="280px" width="280" height="280" alt="Aviator embroidered cap on a wooden shelf" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-deepdrip-stickers"><img src="img/projects/deepdrip/laptop-stickers-1280.webp" srcset="img/projects/deepdrip/laptop-stickers-640.webp 640w, img/projects/deepdrip/laptop-stickers-1280.webp 1280w, img/projects/deepdrip/laptop-stickers-3200.webp 3200w" sizes="280px" width="280" height="280" alt="DeepDrip stickers on a laptop" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-supa-symbol"><img src="img/projects/supa/symbol-1280.webp" srcset="img/projects/supa/symbol-640.webp 640w, img/projects/supa/symbol-1280.webp 1280w, img/projects/supa/symbol-2560.webp 2560w" sizes="280px" width="280" height="280" alt="Supa symbol on a lime gradient" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-supa-cards"><img src="img/projects/supa/business-cards-portrait-1280.webp" srcset="img/projects/supa/business-cards-portrait-640.webp 640w, img/projects/supa/business-cards-portrait-1280.webp 1280w" sizes="280px" width="280" height="280" alt="Supa business cards on a dark surface" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-aviator-bottle"><img src="img/projects/aviator/bottle-960.webp" srcset="img/projects/aviator/bottle-640.webp 640w, img/projects/aviator/bottle-960.webp 960w, img/projects/aviator/bottle-1279.webp 1279w" sizes="280px" width="280" height="280" alt="Aviator identity on a purple water bottle" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-supa-app"><img src="img/projects/12-960.webp" srcset="img/projects/12-hq-640.webp 640w, img/projects/12-hq-1280.webp 1280w, img/projects/12-hq-2560.webp 2560w" sizes="280px" alt="Supa app icon in a dock" loading="lazy" decoding="async" width="280" height="280"></li>
+<li class="work-artwork work-artwork-supa-badge"><img src="img/projects/supa/badge-1280.webp" srcset="img/projects/supa/badge-640.webp 640w, img/projects/supa/badge-1280.webp 1280w" sizes="280px" width="280" height="280" alt="Supa identity on a staff badge" loading="lazy" decoding="async"></li>
+<li class="work-artwork work-artwork-deepdrip-web"><img src="img/projects/deepdrip/website-1280.webp" srcset="img/projects/deepdrip/website-640.webp 640w, img/projects/deepdrip/website-1280.webp 1280w, img/projects/deepdrip/website-2816.webp 2816w" sizes="280px" width="280" height="280" alt="DeepDrip editorial website" loading="lazy" decoding="async"></li></ul></div></div>
       <div class="column section-stack-inner">
         <div class="table-group"><h3 class="table-title" id="services-title">Services</h3><dl class="services" aria-labelledby="services-title"><div><dt>Design Consulting</dt><dd>Advisory, Direction</dd></div><div><dt>Digital Product Design</dt><dd>Websites, UX/UI, Design Systems</dd></div><div><dt>Brand Design</dt><dd>Art Direction, Graphic Design, Visual Identity</dd></div></dl></div>
-        <a class="intro-cta" href="work/">Explore the studio <span class="pixel-arrow" aria-hidden="true"></span></a>
+        <a class="intro-cta" href="work/">See the Work <span class="pixel-arrow" aria-hidden="true"></span></a>
       </div>
     </section>
+      </div>
+    </div>
+    </div>
     <section id="shop" class="section-stack" aria-labelledby="shop-label">
       <div class="bag-study-scene">
       <div class="bag-study-lead" data-bag-cover-lead>
       <div class="section-heading column"><h2 id="shop-label">Shop</h2><p>House of familiar things.</p></div>
       <div class="section-copy prose column"><p data-ink><em class="copy-emphasis">The joy of making</em> is at the heart of what we do. The things we make for ourselves start the same way as our client work: with a clear idea and a detail that makes them their own.</p></div>
       </div>
-      <figure class="bag-study" id="today-bag" aria-label="Daily Tote">
+      <figure class="bag-study" id="today-bag" aria-label="2D Tote">
         <header class="bag-story-heading bag-study-copy">
-          <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">Daily Tote</em> is our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and a <em class="copy-emphasis">flash of red</em> so you know it’s yours.</p>
+          <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">2D Tote</em> is our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and a <em class="copy-emphasis">flash of red</em> so you know it’s yours.</p>
         </header>
         <div class="bag-layout-scroll"><div class="bag-product-spread">
           <div class="bag-study-stage">
-            <div class="bag-study-image"><img class="bag-study-photo" src="img/shop/life-tote-studio-v4.webp" width="1050" height="1498" alt="Photorealistic concept of Daily Tote: dark cotton canvas, a shoulder strap, a compact red hand handle, beige embroidered logo, and a square red tag at the bottom-left seam." loading="lazy" decoding="async"></div>
+            <div class="bag-study-image"><img class="bag-study-photo" src="img/shop/life-tote-studio-v4.webp" width="1050" height="1498" alt="Photorealistic concept of 2D Tote: dark cotton canvas, a shoulder strap, a compact red hand handle, beige embroidered logo, and a square red tag at the bottom-left seam." loading="lazy" decoding="async"></div>
           </div>
           <div class="bag-editorial">
 
             <div class="bag-study-notes">
           <h4>Specifications</h4>
           <div><dl class="bag-study-specs">
-          <div><dt>Material</dt><dd class="bag-material"><span>Armada No. 8 cotton canvas</span><details class="material-info"><summary aria-label="About Armada canvas"><span class="material-info-icon" aria-hidden="true"></span></summary><div class="material-tooltip"><p>Armada is Senda’s 100% cotton No. 8 canvas, woven in Japan. Its coarse weave and firm, starched finish give the bag structure, then gradually soften with use. We wanted a bag that holds its shape and gains character as it becomes part of your day.</p><p>Where it comes from mattered just as much. We also considered Alberton, which brings historic American textiles back to life in Japan. Armada felt closer to the story we wanted to tell: an everyday object made with Japanese canvas. Making things in Japan is an important part of 2D1, and that choice starts with the fabric.</p></div></details></dd></div>
+          <div><dt>Material</dt><dd class="bag-material"><span>Armada No. 8 cotton canvas</span><details class="material-info"><summary aria-label="About Armada canvas"><span class="material-info-icon" aria-hidden="true"></span></summary><div class="material-tooltip"><button class="material-info-close" type="button" aria-label="Close info sheet" hidden><span aria-hidden="true"></span></button><p>Armada is Senda’s 100% cotton No. 8 canvas, woven in Japan. Its coarse weave and firm, starched finish give the bag structure, then gradually soften with use. We wanted a bag that holds its shape and gains character as it becomes part of your day.</p><p>Where it comes from mattered just as much. We also considered Alberton, which brings historic American textiles back to life in Japan. Armada felt closer to the story we wanted to tell: an everyday object made with Japanese canvas. Making things in Japan is an important part of 2D1, and that choice starts with the fabric.</p></div></details></dd></div>
           <div><dt>Origin</dt><dd>Made in Japan</dd></div>
           <div><dt>Dimensions</dt><dd>Approx. W 40 × H 36 × D 10 cm, excluding the strap</dd></div>
           <div><dt>Straps</dt><dd>A dark shoulder strap and a bright red hand handle</dd></div>
@@ -138,13 +190,13 @@
           </div>
         </div>
         </div>
-        <div class="bag-study-copy bag-closing"><div class="section-copy prose column shop-support-copy"><p data-ink><span>Daily Tote</span> is <em class="copy-emphasis">still in development</em>. If you’d like it to become part of your day, sign up for updates.</p></div></div>
+        <div class="bag-study-copy bag-closing"><div class="section-copy prose column shop-support-copy"><p data-ink><span>2D Tote</span> is <em class="copy-emphasis">still in development</em>. If you’d like it to become part of your day, sign up for updates.</p></div></div>
       </figure>
       </div>
     </section>
 
   </main>
-  <div class="home-ending" data-link-surface="dark">
+  <div class="home-ending">
       <div class="shop-tail"><div class="shop-signup"><div class="column">
         <h2 class="signup-heading">Sign up</h2>
         <div class="shop-actions"><form class="connect-form" aria-describedby="connect-status"><label for="connect-email" class="sr-only">Your email address</label><div class="connect-row"><span class="signup-field"><input type="email" id="connect-email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" aria-describedby="connect-status" required disabled></span><button class="intro-cta" type="submit" disabled>Notify me when it’s out <span class="pixel-arrow" aria-hidden="true"></span></button></div><p id="connect-status" role="status" hidden></p></form></div>

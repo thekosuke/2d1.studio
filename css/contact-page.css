@@ -71,3 +71,6 @@
 
 .contact-page-main{width:calc(100% - 48px);max-width:var(--column);margin-inline:auto}
 @media(min-width:1100px){.contact-page-main{width:calc(100% - min(27.7778vw,400px) - 128px);margin-left:auto;margin-right:128px}}
+
+/* Comfortable touch targets without changing the desktop chip rhythm. */
+@media(pointer:coarse){.contact-page #contact .chip span{min-height:44px;display:flex;align-items:center}}

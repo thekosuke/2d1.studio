@@ -34,9 +34,8 @@
   function paint() {
     queued = false;
     const roomsVisible = document.querySelector('.about-services.is-entered');
-    const studioRoom = document.querySelector('.about-room-studio');
-    const surfaces = [roomsVisible ? studioRoom : panel];
-    if (!document.querySelector('.has-room-journey')) surfaces.push(studioRoom);
+    // The diagram is dark; both editorial sections settle onto beige.
+    const surfaces = roomsVisible ? [] : [panel];
     const grounds = surfaces.filter(Boolean).map(el => el.getBoundingClientRect());
     const over = element => {
       const rect = element.getBoundingClientRect();

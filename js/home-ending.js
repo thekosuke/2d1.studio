@@ -9,6 +9,7 @@
   function paint(){
     const edge=main.getBoundingClientRect().bottom;
     if(language){const box=language.getBoundingClientRect();language.classList.toggle('on-ending',edge<=box.top+box.height/2);}
+    document.querySelectorAll('.site-logo,.mobile-nav-toggle').forEach(control=>{const box=control.getBoundingClientRect();control.classList.toggle('on-ending',edge<box.bottom);});
     document.querySelectorAll('.page-nav a').forEach(link=>{const box=link.getBoundingClientRect();link.classList.toggle('on-ending',edge<=box.top+box.height/2);});
   }
   ending.addEventListener('focusin',()=>{

@@ -23,7 +23,7 @@
       }
       main.style.setProperty('--cover-offset', `${reduced.matches ? 0 : -remaining * coverFactor}px`);
     }
-    if (studio) {
+    if (studio && !document.body.classList.contains('home-house-page')) {
       const box = studio.getBoundingClientRect();
       // Carry the two grounds through the space between sections instead of
       // blending the entire viewport into a third color.
@@ -106,7 +106,7 @@
       heroPress=null;
       finishLanding();
       // Use layout offsets, not the temporary cover-parallax transform.
-      window.scrollTo({top:main.offsetTop + intro.offsetTop, behavior:reduced.matches?'instant':'smooth'});
+      window.scrollTo({top:main.offsetTop + (intro.closest('.home-house-scene')?.offsetTop ?? intro.offsetTop), behavior:reduced.matches?'instant':'smooth'});
       intro.setAttribute('tabindex','-1');
       intro.focus({preventScroll:true});
     }, true);
@@ -120,7 +120,7 @@
     else pageNav.inert=!visible;
     if(languageSwitch){languageSwitch.classList.toggle('is-visible',visible);languageSwitch.inert=!visible;}
   }
-  const sections = [...document.querySelectorAll('main > section[id]')];
+  const sections = [...document.querySelectorAll('main section[id]')];
   const caption = document.querySelector('.masthead .brand-caption');
   if (logo) {
     const hero = slot.closest('.masthead');

@@ -1,11 +1,13 @@
 /* Shared type system. Page styles own layout; this file owns text hierarchy. */
-:root{--type-label:12px;--type-body:16px;--type-heading:16px;--type-copy:20px;--type-lead:28px;--type-display:44px;--type-track:0;--type-label-track:.04em;--reading:var(--type-lead);--section-title:var(--type-display)}
+:root{--overview-size:32px;--overview-leading:1.3}
+@media(max-width:767px){:root{--overview-size:24px;--overview-leading:1.4}}
+:root{--type-spec:14px;--type-label:12px;--type-body:16px;--type-heading:16px;--type-copy:20px;--type-lead:28px;--type-display:44px;--type-track:0;--type-label-track:.04em;--reading:var(--type-lead);--section-title:var(--type-display)}
 @media(min-width:768px){:root{--type-copy:28px;--type-lead:40px;--type-display:64px}}
 body{font:400 var(--type-body)/1.5 var(--font);letter-spacing:var(--type-track)}
 /* Match About's underline weight at each text size throughout the interface. */
 a,button{text-decoration-thickness:auto}
 :is(.home-page,.about-page) :is(.section-copy,.intro h1,.intro-cta),.essay-dek,.essay-lede,.essay-rest .essay-pull p{font:500 var(--type-lead)/1.2 var(--font);letter-spacing:0}
-.section-heading>p{font:500 var(--type-display)/1.2 var(--font);letter-spacing:0}
+.section-heading>p{font:500 var(--type-display)/1.2 var(--font);letter-spacing:-.02em}
 .essay-title{font:700 var(--type-display)/1.1 var(--font);letter-spacing:0}
 .home-page .shop-support-copy,.essay-rest p{font:400 var(--type-copy)/1.5 var(--font);letter-spacing:0}
 .essay-rest h2{font:700 var(--type-copy)/1.2 var(--font);letter-spacing:0}
@@ -75,3 +77,12 @@ html[lang="ja"] body.home-page :is(.intro h1,.section-copy){font-weight:600}
 /* Keep this two-word link inline so its underline crosses the space. */
 .home-page .intro .familiar-characters{text-decoration-line:underline;text-decoration-skip-ink:none}
 .home-page .intro .familiar-characters .ink{display:inline;text-decoration-line:none}
+
+/* Shared section copy and intro typesetting; retain the phone reading scale. */
+@media(min-width:768px){
+ html[lang] body:is(.home-page,.about-page) :is(.intro h1,.section-copy,.section-copy>p){font-size:40px;font-weight:500;letter-spacing:-.01em;line-height:1.35}
+}
+
+/* Project descriptions and the About opening share one reading style. */
+html[lang] :is(.work-page .work-description,.about-essay-page .essay-introduction>.essay-lede){font:400 var(--overview-size)/var(--overview-leading) var(--font);letter-spacing:-.02em;color:var(--cranberry-brown);text-wrap:pretty}
+html[lang="ja"] :is(.work-page .work-description,.about-essay-page .essay-introduction>.essay-lede){line-height:1.65;letter-spacing:0}

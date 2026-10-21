@@ -1,0 +1,57 @@
+/* Furnished rooms: a broad side wall, angled back wall and visible floor. */
+.about-service{--room-surface:var(--studio-background);--room-line:var(--beige);--room-text:var(--beige)}
+.about-room-shop{--room-surface:var(--beige);--room-line:var(--cranberry-brown);--room-text:var(--cranberry-brown)}
+.about-story-page .about-service{position:relative;padding:0;background:var(--room-surface);color:var(--room-text)}
+.about-room-interior{display:block;width:100%;height:auto}
+.about-room-frame{position:relative}
+.about-story-page .about-room-frame>.about-service-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;width:100%;max-width:1040px;margin:auto;padding:64px 24px;align-items:start}
+.about-service-title{min-width:0}
+.about-page .about-services .about-service h2{padding:0;margin:0;font:500 clamp(40px,4.5vw,72px)/1.1 var(--font);letter-spacing:-.035em;background:none}
+/* FC's info sheet: white paper, 2px red rule, dark copy, divided header and CTA. */
+.about-service .room-bubble{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:0;max-width:none;min-width:0;padding:32px;background:var(--white);border:2px solid var(--red);color:var(--cranberry-brown);--text-link-rest:var(--red);--text-link-hover:var(--cranberry-brown)}
+.room-bubble::after{content:"";position:absolute;bottom:-11px;left:38px;width:18px;height:18px;background:var(--white);border-left:2px solid var(--red);border-bottom:2px solid var(--red);transform:rotate(-45deg)}
+.about-page .about-services .room-bubble p{margin:0;font:400 18px/1.6 var(--font);color:var(--cranberry-brown)}
+.about-page .about-services .room-bubble .about-service-lead{margin:0 0 24px;padding-bottom:24px;border-bottom:1px solid var(--line);font:500 22px/1.4 var(--font);color:var(--cranberry-brown)}
+.room-bubble-body{display:flex;flex-direction:column;gap:24px}
+.about-page .essay-body .about-services .room-bubble .intro-cta{display:flex;align-items:center;justify-content:center;gap:8px;align-self:stretch;width:calc(100% + 64px);max-width:none;margin:32px -32px -32px;padding:16px 24px;border-top:2px solid var(--red);font:500 18px/1.4 var(--font);text-decoration:none}
+.about-page .about-services .room-bubble .intro-cta:is(:hover,:focus-visible){background:var(--red)!important;background-clip:border-box!important;-webkit-text-fill-color:var(--white);color:var(--white)!important}
+.about-page .about-services .room-bubble .intro-cta:is(:hover,:focus-visible) .pixel-arrow::before{color:var(--white)}
+.about-story-page .has-room-journey .about-services{width:100%;display:block;transform:none}
+.has-room-journey .about-service{position:absolute;inset:0;width:100%;height:100%;min-height:0;overflow:clip;transform:translateX(var(--flat-room-x,0%))}
+.has-room-journey .about-room-shop{--flat-room-x:100%}
+.has-room-journey .about-room-interior{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.has-room-journey .about-room-frame{position:absolute;inset:0}
+.about-story-page .has-room-journey .about-room-frame>.about-service-grid{display:contents}
+.has-room-journey .about-service-title{position:absolute;top:19%;left:calc(var(--room-title-left,28%) - 12px);z-index:1;padding:8px 12px;background:var(--room-surface)}
+.has-room-journey .room-bubble{position:absolute;z-index:2;top:29%;right:6%;width:min(40vw,560px);opacity:var(--bubble-opacity,0);transform:translateY(calc((1 - var(--bubble-opacity,0))*24px));pointer-events:none}
+.has-room-journey .room-bubble.is-visible{pointer-events:auto}
+.has-room-journey .room-bubble-body{display:grid;gap:0;align-items:start}
+.has-room-journey .room-bubble-body>p{grid-area:1/1;visibility:hidden;opacity:0;transform:translateY(12px)}
+.has-room-journey .room-bubble-body>p.is-current{visibility:visible;opacity:1;transform:none;animation:room-copy-arrive 360ms cubic-bezier(.2,.8,.2,1) both}
+@keyframes room-copy-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+body.about-story-page .mobile-nav-toggle.is-on-diagram{color:var(--beige)}
+body.about-story-page .mobile-nav-toggle.is-on-diagram:focus-visible{background:rgba(250,240,230,.2)}
+@media(max-width:1099px){.has-room-journey .room-bubble{width:44vw;right:4%;padding:24px}.about-page .about-services .room-bubble p{font-size:16px}.about-page .about-services .room-bubble .about-service-lead{font-size:20px;margin-bottom:20px;padding-bottom:20px}.about-page .essay-body .about-services .room-bubble .intro-cta{width:calc(100% + 48px);margin:24px -24px -24px;padding:14px 20px;font-size:16px}}
+@media(max-width:767px){
+ .about-story-page .about-room-frame>.about-service-grid{display:flex;flex-direction:column;gap:32px;padding:40px 24px 64px}
+ .has-room-journey .about-room-interior{top:auto;bottom:0;left:-15%;width:150%;max-width:none;height:auto;object-fit:contain;opacity:.72}
+ .has-room-journey .about-service-title{top:12%;left:12px}
+ .about-page .about-services .about-service h2{font-size:44px}
+ .has-room-journey .room-bubble{top:24%;left:24px;right:24px;width:auto;padding:24px}
+ .about-page .about-services .room-bubble p{font-size:16px;line-height:1.55}
+ .about-page .about-services .room-bubble .about-service-lead{font-size:20px}
+ .room-bubble::after{left:30px}
+}
+html[lang="ja"] .about-page .about-services .room-bubble p{font-size:16px;line-height:1.75}
+html[lang="ja"] .about-page .about-services .room-bubble .about-service-lead{font-size:20px;line-height:1.5}
+@media(max-width:767px){html[lang="ja"] .about-page .about-services .room-bubble p{font-size:15px;line-height:1.7}html[lang="ja"] .about-page .about-services .room-bubble .about-service-lead{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.room-bubble,.room-bubble-body>p{transition:none;transform:none;animation:none!important}}
+
+.about-page .about-services .room-bubble strong{color:inherit}
+@media(max-height:600px) and (min-width:768px){
+ .has-room-journey .room-bubble{top:80px;max-height:calc(100% - 104px);padding:20px}
+ .about-page .about-services .room-bubble .about-service-lead{font-size:18px;margin-bottom:16px;padding-bottom:16px;flex:none}
+ .has-room-journey .room-bubble-body{min-height:0;overflow-y:auto;overscroll-behavior:contain}
+ .about-page .about-services .room-bubble p{font-size:15px}
+ .about-page .essay-body .about-services .room-bubble .intro-cta{flex:none;width:calc(100% + 40px);margin:20px -20px -20px;padding:12px 20px}
+}

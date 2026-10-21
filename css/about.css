@@ -265,7 +265,17 @@ html[lang="ja"] .about-page .about-services .about-service-copy .about-service-l
 .about-page .about-services .about-service h2,
 .about-service .about-service-copy{padding-left:var(--room-reading-left);padding-right:var(--room-reading-right)}
 
-/* A flat house marks each chapter; one solid piece identifies the room. */
+/* Mini house: separated, rounded blocks and translucent depth. */
 .about-house-icon{display:block;width:80px;height:auto;margin-bottom:24px;color:var(--cranberry-brown)}
 .about-room-studio .about-house-icon,[data-link-surface="dark"] .about-house-icon{color:var(--beige)}
 @media(max-width:767px){.about-house-icon{width:64px}}
+
+/* Three toy pieces spread from a stable hover target, then settle back. */
+.about-house-icon{overflow:visible}
+.mini-house-piece{transform-box:fill-box;transform-origin:center;transition:transform 520ms cubic-bezier(.3,1.4,.5,1)}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .about-house-icon:hover .mini-house-roof{transform:translate(0,-90px) rotate(-8deg)}
+ .about-house-icon:hover .mini-house-left{transform:translate(-95px,45px) rotate(-10deg)}
+ .about-house-icon:hover .mini-house-right{transform:translate(95px,45px) rotate(10deg)}
+}
+@media(prefers-reduced-motion:reduce){.mini-house-piece{transition:none}}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none" stroke="#320505" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><defs><pattern id="hatch" width="14" height="14" patternTransform="rotate(22)" patternUnits="userSpaceOnUse"><path d="M0 0V14" stroke="#320505" stroke-opacity=".055" stroke-width="1"/></pattern><linearGradient id="screen" x2="1" y2="1"><stop stop-color="#FAF0E6"/><stop offset="1" stop-color="#320505" stop-opacity=".12"/></linearGradient></defs><path fill="#FAF0E6" stroke="none" d="M0 0H1200V800H0Z"/><path d="M-20-20L480 145L1220 65M480 145V535M-20 815L480 535L1220 600"/>
+<path d="M480 535L130 800M480 535L470 800M480 535L800 800M480 535L1170 800M235 675L1200 720M100 750L1200 790" opacity=".13"/>
+<path d="M0 0L480 145V535L0 800Z" fill="url(#hatch)" stroke="none"/>
+<path d="M520 186L1160 130M520 205L1160 150" opacity=".15"/>
+<!-- A display rail along the side wall. -->
+<path d="M74 193L366 278V466M74 193V386M85 202L85 386"/>
+<path d="M123 214V255M117 255L130 259L145 273L113 264Z"/><path d="M102 265L156 281L164 404L98 385Z" fill="#FAF0E6"/><path d="M113 280V298M143 290V307"/>
+<path d="M218 243V294M211 294L229 300L240 313L201 301Z"/><path d="M190 305L249 322L257 438L185 418Z" fill="#FAF0E6"/><path d="M204 319V337M235 329V347"/>
+<!-- Tote on a plinth. -->
+<g fill="#FAF0E6"><path d="M118 581L357 511L530 575L285 664Z"/><path d="M118 581V731L285 800V664Z"/><path d="M285 664L530 575V732L343 800H285Z"/></g>
+<path d="M185 402L351 371L367 548L196 590Z" fill="#FAF0E6"/><path d="M211 405L225 392L246 555M327 384L312 392L302 568"/>
+<path d="M233 393L230 335Q229 286 273 282Q316 278 319 329L323 378" fill="none" stroke-width="10"/>
+<path d="M244 390V363Q246 341 272 337Q294 333 298 357L301 380" stroke="#FF2B00" stroke-width="10"/>
+<path d="M186 535L171 539L173 562L188 559Z" fill="#FF2B00" stroke="none"/>
+<path d="M243 435L286 427L287 441L244 450Z" fill="#320505" stroke="none"/>
+<!-- Back-wall shelves and familiar everyday objects. -->
+<g fill="#FAF0E6"><path d="M605 240L1086 205V223L605 260Z"/><path d="M605 407L1086 385V402L605 425Z"/><path d="M635 192L677 189L685 237L629 242Z"/><path d="M647 192V167L665 165V190"/>
+<path d="M744 224V153L759 150V223M764 222V165L779 163V221M784 220V143L802 141V219"/>
+<path d="M906 220V180M879 181L906 146L939 177Z"/><path d="M893 222L922 220"/>
+<path d="M1013 211V155L1058 151V207Z"/><path d="M1024 166L1047 164V184L1024 187Z"/>
+<path d="M634 400V349L685 345V398Z"/><path d="M646 349V331L671 329V347"/><path d="M751 399L738 381V351L782 349V379L770 398Z"/><path d="M824 393V324L847 323V393M853 393V340L875 339V392"/>
+<path d="M956 388L945 355L965 331L991 352L981 387Z"/></g>
+<path d="M1018 383V338L1065 336V381Z" fill="#FF2B00" stroke="none"/>
+<!-- Packing table with boxes, wrapping paper and a roll of tape. -->
+<g fill="#FAF0E6"><path d="M637 584L932 540L1146 624L841 692Z"/><path d="M637 584V600L841 709L1146 640V624M841 692V709"/><path d="M653 611V775M859 709V800M1123 645V787"/>
+<path d="M712 524L816 508L873 530L766 551Z"/><path d="M712 524V579L766 601V551M766 601L873 580V530"/><path d="M754 518L807 541V593" opacity=".5"/>
+<path d="M905 586L1013 563L1081 590L971 617Z"/><path d="M922 589L1010 572M940 597L1026 579" opacity=".35"/>
+<path d="M928 529Q930 511 949 512Q968 512 968 530V553Q964 568 946 567Q928 566 928 551Z"/><path d="M928 529Q948 544 968 530"/></g>
+</svg>

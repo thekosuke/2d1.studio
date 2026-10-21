@@ -9,7 +9,21 @@
     const words = [];
     const segmenter = document.documentElement.lang === 'ja' && typeof Intl.Segmenter === 'function'
       ? new Intl.Segmenter('ja', {granularity: 'word'}) : null;
+    const linkedUnits = new Set();
     nodes.forEach(node => {
+      // A named collection link reveals and sweeps as one phrase.
+      const link = node.parentElement.closest('a.familiar-characters');
+      if (link) {
+        if (!linkedUnits.has(link)) {
+          linkedUnits.add(link);
+          const unit = document.createElement('span');
+          unit.className = 'ink';
+          link.replaceWith(unit);
+          unit.append(link);
+          words.push(unit);
+        }
+        return;
+      }
       const parts = segmenter ? [...segmenter.segment(node.textContent)].map(part => part.segment)
         : node.textContent.split(/(\s+)/);
       const fragment = document.createDocumentFragment();
@@ -49,10 +63,10 @@
     inkQueued = false;
     inkBlocks.forEach(ink => {
       const box = ink.block.getBoundingClientRect();
-      // Continue the reading cursor through sticky Shop and About underlays.
-      const lead = ink.block.closest('[data-bag-cover-lead], .about-story-lead');
+      // Continue the reading cursor through sticky Shop and house-intro underlays.
+      const lead = ink.block.closest('[data-bag-cover-lead], .about-story-lead, .home-house-lead');
       const flowTop = lead
-        ? lead.parentElement.getBoundingClientRect().top + box.top - lead.getBoundingClientRect().top
+        ? lead.parentElement.getBoundingClientRect().top + box.top - lead.getBoundingClientRect().top + (parseFloat(lead.style.getPropertyValue('--reading-reveal-offset')) || 0)
         : box.top;
       ink.lines.forEach(line => {
         // Each line reads from 75vh to 55vh, finishing inside the 50–60% band.

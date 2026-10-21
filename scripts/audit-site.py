@@ -12,7 +12,7 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 root = (ROOT / sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT
 pages = [root / 'index.html']
-for folder in ('about', 'contact', 'finds', 'objects', 'work', 'shop', 'red-pixel', 'ja'):
+for folder in ('about', 'contact', 'familiarcharacters', 'finds', 'objects', 'work', 'shop', 'red-pixel', 'ja'):
     pages += sorted((root / folder).rglob('*.html'))
 errors = []
 assets = set()

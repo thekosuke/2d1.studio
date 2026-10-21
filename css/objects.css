@@ -730,3 +730,12 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 @media(prefers-reduced-motion:reduce){.objects-about-dialog .objects-info-close{transition:none}}
 
 .objects-about-dialog h3[tabindex="-1"]:focus{outline:none;background:transparent;color:var(--red)}
+
+/* Collection disclosure leads the top row; zoom anchors the bottom-left. */
+.objects-page.objects-ready > .objects-info{top:var(--finds-edge-top);left:var(--finds-edge-left);right:auto;bottom:auto;max-width:none}
+.objects-page.objects-ready .objects-zoom{left:var(--finds-edge-left);right:auto;bottom:var(--finds-edge-bottom);transform:none}
+.objects-page #objects-info-dialog{top:var(--info-top,72px);bottom:auto;max-height:calc(100dvh - var(--info-top,72px) - var(--finds-edge-bottom));transform-origin:top left}
+@media(max-width:767px){
+ .objects-page.objects-ready .objects-header .site-logo{left:auto;right:var(--finds-edge-right);transform:none}
+ .objects-page.objects-ready > .objects-info{max-width:calc(100vw - 112px)}
+}
