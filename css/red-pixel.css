@@ -10,11 +10,14 @@ main{position:fixed;inset:0;display:grid;place-items:center;min-height:100svh;ou
 .pixel-grab.is-grabbed{cursor:grabbing}
 .pixel-grab:focus-visible{background:rgba(50,5,5,.08)}
 .red-pixel{display:block;pointer-events:none;width:1px;height:1px;background:var(--red);transition:transform 720ms cubic-bezier(.3,1.4,.5,1)}
-body:has(.pixel-zoom[open]) .red-pixel,body.is-armed .red-pixel{transform:scale(24)}
+body:has(.pixel-zoom[open]) .red-pixel,body.is-armed .red-pixel{transform:scale(24);transition:none}
+.pong-controls button:is(:hover,:focus-visible){color:var(--red)}
 .pixel-caption{position:fixed;left:50%;top:max(24px,env(safe-area-inset-top));transform:translateX(-50%);margin:0;white-space:nowrap;font:inherit;text-transform:uppercase;pointer-events:none}
 .pixel-zoom,.pixel-prompt{position:fixed;left:24px;right:24px;bottom:max(24px,env(safe-area-inset-bottom));margin:0;text-align:center;text-transform:uppercase}
 .pixel-zoom summary{display:inline-block;list-style:none;cursor:pointer;outline:none}
 .pixel-zoom summary::-webkit-details-marker{display:none}
+.pixel-zoom .pixel-smaller,.pixel-zoom[open] .pixel-bigger{display:none}
+.pixel-zoom[open] .pixel-smaller{display:inline}
 .pixel-zoom summary:is(:hover,:focus-visible){color:var(--red)}
 noscript .pixel-prompt{bottom:64px;text-transform:none}
 .pong-court{position:absolute;left:0;top:max(80px,env(safe-area-inset-top));width:100%;height:calc(100svh - 220px - env(safe-area-inset-bottom));touch-action:none;cursor:ns-resize}
@@ -34,3 +37,6 @@ noscript .pixel-prompt{bottom:64px;text-transform:none}
 @media(prefers-reduced-motion:reduce){body,.red-pixel{transition:none;animation:none}}
 
 @media(max-width:600px){.pong-court{top:96px;height:calc(100svh - 236px - env(safe-area-inset-bottom))}}
+
+/* The exit handoff owns the pixel size until it settles back at one pixel. */
+body.is-returning .red-pixel{transition:none}

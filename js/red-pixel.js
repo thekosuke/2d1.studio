@@ -27,25 +27,86 @@
   function updateScore(){
     $('[data-score="0"]').textContent=game.scores[0];$('[data-score="1"]').textContent=game.scores[1];
   }
-  function start(vx=1,vy=.35){
+  let launch=null,returning=null;
+  function cancelLaunch(){
+    const current=launch;launch=null;
+    current?.animations.forEach(animation=>animation.cancel());
+  }
+  function finishLaunch(){
+    if(!launch)return;
+    cancelLaunch();grab.hidden=true;mode='playing';
+    draw(0);last=performance.now();accumulator=0;wake();
+  }
+  function start(vx=1,vy=.35,fromPixel=false){
+    cancelLaunch();
     hoverTurn?.cancel();mode='playing';document.body.classList.remove('is-armed');document.body.classList.add('is-playing');
     grab.hidden=zoom.hidden=prompt.hidden=true;
     court.hidden=controls.hidden=board.hidden=help.hidden=false;message.hidden=true;
     const rect=size();game=new PixelPong(rect.width,rect.height);
     // The opening throw serves toward the computer, preserving its vertical aim.
     game.serve(1,clamp(vy/Math.max(Math.abs(vx),1),-.8,.8));
+    if(fromPixel){
+      // The released pixel lands inside the court, then continues as the same puck.
+      const edge=game.pad+game.pw+game.r+8;
+      game.x=clamp(x-rect.left+Math.sign(vx||1)*48,edge,game.w-edge);
+      game.y=clamp(y-rect.top,game.r,game.h-game.r);
+      game.delay=0;
+    }
     particles=[];impacts=[];keys.clear();updateScore();status.textContent=copy.start;
     main.focus({preventScroll:true});last=performance.now();accumulator=0;wake();
     $('meta[name="theme-color"]').content='#191416';
+    if(fromPixel&&!reduced.matches){
+      mode='launching';grab.hidden=false;
+      const movement=grab.animate([
+        {transform:'translate(0,0)'},
+        {transform:`translate(${rect.left+game.x-x}px,${rect.top+game.y-y}px)`}
+      ],{duration:240,easing:'linear',fill:'forwards'});
+      const shape=pixel.animate([{transform:'scale(24)'},{transform:`scale(${game.r*2})`}],{duration:240,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'});
+      launch={animations:[movement,shape]};
+      const current=launch;
+      movement.finished.then(()=>{if(launch===current)finishLaunch()}).catch(()=>{});
+    }
+    draw(0);
+  }
+  function finishExit(){
+    const current=returning;returning=null;
+    current?.animations.forEach(animation=>animation.cancel());
+    mode='idle';document.body.classList.remove('is-returning');
+    x=innerWidth/2;y=innerHeight/2;paintPixel();
+    grab.hidden=zoom.hidden=false;grab.focus({preventScroll:true});
   }
   function exit(){
-    mode='idle';game=null;cancelAnimationFrame(frame);frame=0;keys.clear();particles=[];impacts=[];
+    if(returning)return;
+    const rect=court.getBoundingClientRect();
+    const visiblePixel=pixel.getBoundingClientRect();
+    const from=launch?{x:visiblePixel.x+visiblePixel.width/2,y:visiblePixel.y+visiblePixel.height/2,size:visiblePixel.width}:
+      game?{x:rect.left+game.x,y:rect.top+game.y,size:game.r*2}:null;
+    cancelLaunch();hoverTurn?.cancel();
+    mode='exiting';game=null;cancelAnimationFrame(frame);frame=0;keys.clear();particles=[];impacts=[];
+    if(courtGesture){
+      const id=courtGesture.id;courtGesture=null;
+      if(main.hasPointerCapture(id))main.releasePointerCapture(id);
+    }
     document.body.classList.remove('is-armed','is-playing');
     court.hidden=controls.hidden=board.hidden=help.hidden=message.hidden=prompt.hidden=true;
-    grab.hidden=zoom.hidden=false;zoom.open=false;x=innerWidth/2;y=innerHeight/2;paintPixel();
-    $('meta[name="theme-color"]').content='#FAF0E6';grab.focus({preventScroll:true});status.textContent='';
+    zoom.hidden=true;zoom.open=false;grab.hidden=false;
+    $('meta[name="theme-color"]').content='#FAF0E6';status.textContent='';
+    if(!from||reduced.matches){finishExit();return}
+    document.body.classList.add('is-returning');
+    x=from.x;y=from.y;paintPixel();main.focus({preventScroll:true});
+    const movement=grab.animate([
+      {transform:'translate(0,0)'},
+      {transform:`translate(${innerWidth/2-x}px,${innerHeight/2-y}px)`}
+    ],{duration:240,easing:'linear',fill:'forwards'});
+    const shape=pixel.animate([{transform:`scale(${from.size})`},{transform:'scale(1)'}],{
+      duration:240,easing:'cubic-bezier(.8,0,.8,.2)',fill:'forwards'
+    });
+    returning={animations:[movement,shape]};
+    const current=returning;
+    movement.finished.then(()=>{if(returning===current)finishExit()}).catch(()=>{});
   }
   function pause(){
+    if(mode==='launching')finishLaunch();
     if(mode!=='playing')return;
     mode='paused';keys.clear();cancelAnimationFrame(frame);frame=0;
     message.querySelector('p').textContent=copy.paused;message.querySelector('button').hidden=true;
@@ -71,7 +132,7 @@
       if(event.side===0)burst(game.w/2,game.h/2,52,Math.min(game.w*.6,350));
       const score=$(`[data-score="${event.side}"]`);
       if(!reduced.matches)score.animate([{color:color.red,transform:'translateY(-4px)'},{color:color.paper,transform:'translateY(0)'}],{duration:420,easing:'cubic-bezier(.2,.8,.2,1)'});
-      if(game.scores[event.side]>=5){
+      if(game.scores[event.side]>=3){
         mode='over';message.hidden=false;message.querySelector('button').hidden=false;
         message.querySelector('p').textContent=event.side===0?copy.win:copy.lose;
         message.querySelector('button').textContent=copy.again;
@@ -92,7 +153,7 @@
       const nudge=hit?Math.sin(hit.life/.18*Math.PI)*3*(side?-1:1):0;
       ctx.fillRect(Math.round(side?game.w-game.pad-game.pw+nudge:game.pad+nudge),Math.round(py-game.ph/2),game.pw,game.ph);
     });
-    if(mode!=='over'){
+    if(mode!=='over'&&mode!=='launching'){
       ctx.globalAlpha=1;ctx.fillStyle=color.red;
       ctx.fillRect(Math.round(game.x-game.r),Math.round(game.y-game.r),game.r*2,game.r*2);ctx.globalAlpha=1;
     }
@@ -119,11 +180,11 @@
   }
   function wake(){if(!frame&&!document.hidden)frame=requestAnimationFrame(tick)}
   grab.addEventListener('pointerenter',event=>{
-    if(event.pointerType==='touch'||pointer!==null||reduced.matches)return;
+    if(event.pointerType==='touch'||pointer!==null||reduced.matches||launch||returning)return;
     hoverTurn?.cancel();hoverTurn=pixel.animate([{rotate:'0deg'},{rotate:'180deg'}],{duration:480,easing:'cubic-bezier(.2,.8,.2,1)'});
   });
   grab.addEventListener('pointerdown',event=>{
-    if(event.button!==0||pointer!==null)return;
+    if(event.button!==0||pointer!==null||launch||returning)return;
     event.preventDefault();grab.focus({preventScroll:true});arm();hoverTurn?.cancel();
     pointer=event.pointerId;offsetX=event.clientX-x;offsetY=event.clientY-y;
     samples=[{x:event.clientX,y:event.clientY,t:performance.now()}];
@@ -140,14 +201,16 @@
     if(grab.hasPointerCapture(id))grab.releasePointerCapture(id);
     const first=samples[0],end=samples.at(-1);samples=[];
     if(!cancelled&&end&&Math.hypot(end.x-first.x,end.y-first.y)>6){
-      start(end.x-first.x,end.y-first.y);
+      start(end.x-first.x,end.y-first.y,true);
+    }else{
+      mode='idle';document.body.classList.remove('is-armed');zoom.hidden=false;prompt.hidden=true;
     }
   }
   grab.addEventListener('pointerup',event=>release(event));
   grab.addEventListener('pointercancel',event=>release(event,true));
   grab.addEventListener('lostpointercapture',event=>release(event,true));
   grab.addEventListener('keydown',event=>{
-    if(event.key==='Enter'||event.key===' '){event.preventDefault();if(mode==='armed'){start()}else arm()}
+    if(event.key==='Enter'||event.key===' '){event.preventDefault();if(event.repeat||launch||returning)return;if(mode==='armed'){start(1,.35,true)}else arm()}
     else if(event.key==='Escape'||event.key==='Home'){event.preventDefault();exit()}
   });
   function aim(event){
@@ -186,10 +249,12 @@
   $('[data-pong-exit]').addEventListener('click',exit);
   message.querySelector('button').addEventListener('click',()=>{resume()});
   addEventListener('blur',pause);
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){if(returning)finishExit();pause()}});
   addEventListener('resize',()=>{
+    if(returning)finishExit();
+    if(launch)finishLaunch();
     if(game){size();pause();draw(0)}else{x=clamp(x,22,innerWidth-22);y=clamp(y,22,innerHeight-22);paintPixel()}
   });
-  reduced.addEventListener('change',()=>{particles=[];impacts=[];hoverTurn?.cancel();draw(0)});
+  reduced.addEventListener('change',()=>{particles=[];impacts=[];hoverTurn?.cancel();if(returning)finishExit();if(launch)finishLaunch();draw(0)});
   paintPixel();
 })();

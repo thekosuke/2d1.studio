@@ -1,0 +1,186 @@
+{
+  "fileKey": "z1J8lyfvwOqtHpQqfNin3x",
+  "nodeId": "413:5755",
+  "exported": "2026-10-21",
+  "assets": [
+    {
+      "name": "wordmark-mockup",
+      "nodeId": "413:5793",
+      "source": "originals/gallery-2026-10-21/wordmark-mockup.png",
+      "width": 1280,
+      "height": 856,
+      "variants": [
+        {
+          "src": "gallery-wordmark-mockup-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-wordmark-mockup-1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    {
+      "name": "symbol",
+      "nodeId": "413:5756",
+      "source": "originals/gallery-2026-10-21/symbol.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-symbol-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-symbol-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-symbol-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "symbol-concept",
+      "nodeId": "461:6664",
+      "source": "originals/gallery-2026-10-21/symbol-equation-owner.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-symbol-concept-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-symbol-concept-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-symbol-concept-2560.webp",
+          "width": 2560
+        }
+      ],
+      "ownerSource": "supa01.png (2026-10-21)"
+    },
+    {
+      "name": "badge",
+      "nodeId": "494:15375",
+      "source": "originals/gallery-2026-10-21/badge.png",
+      "width": 1256,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-badge-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-badge-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "business-cards",
+      "nodeId": "494:15414",
+      "source": "originals/gallery-2026-10-21/business-cards.png",
+      "width": 1256,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-business-cards-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-business-cards-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "color-palette",
+      "source": "originals/gallery-2026-10-21/color-palette-owner.png",
+      "ownerSource": "1517.png (2026-10-21)",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-color-palette-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-color-palette-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-color-palette-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "wordmark",
+      "nodeId": "494:14805",
+      "source": "originals/gallery-2026-10-21/wordmark.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-wordmark-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-wordmark-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-wordmark-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "website",
+      "nodeId": "413:5872",
+      "source": "originals/gallery-2026-10-21/website.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-website-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-website-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-website-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "app-dock",
+      "nodeId": "413:5892",
+      "source": "originals/gallery-2026-10-21/app-dock-owner.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-app-dock-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-app-dock-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-app-dock-2560.webp",
+          "width": 2560
+        }
+      ],
+      "ownerSource": "macOS app dock.png (2026-10-21)"
+    }
+  ]
+}

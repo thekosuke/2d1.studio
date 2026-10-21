@@ -37,7 +37,7 @@ python3 scripts/audit-site.py dist   # verify packaged references
 - `shop/index.html`, `css/shop.css`, `js/shop.js`, `js/shop-finds-preview.js`: product gallery; the centered image tilts 2° clockwise and shifts 8px to the left; its caption and index stay stationary when its image or caption is hovered, with reduced motion respected. FC preview mounts on mouse or keyboard interaction, stops on leave, and is disposed offscreen.
 - `data/objects.json`, `scripts/build-objects.py`, `css/objects.css`, `js/objects.js`, `js/finds-menus.js`: collection catalog, virtual canvas, filters and details. Current public name is Familiar Characters; URL is `/familiarcharacters/`.
 - `data/finds-images.json`, `scripts/build-finds-images.py`: device-sized lossless catalog derivatives; native originals and provenance remain intact. Existing derivatives are content-hashed and cached immutably.
-- `red-pixel/index.html`, `css/red-pixel.css`, `js/red-pixel.js`, `js/pong-physics.js`: grab then throw to start Pong on Ash Brown. Player is left, level-five 2D1 BOT right; first to five. Mouse/touch and Up/Down or W/S control the paddle; Click/tap or Space pauses/resumes, and Escape exits; dragging never toggles pause. The red puck plays on a court without lines, with Home-navigation labels, enlarged scores, and Soft Beige “First to 5” directly above the scoreboard. Enter grabs/throws for keyboard users. The opponent reads the ball every 220–360ms, accelerates and brakes smoothly, repositions between returns, and makes consistent aiming errors with occasional larger misreads. Square impact particles and a center burst on player scores respect reduced motion; visibility loss and resizing pause play. No-JavaScript retains native ZOOM.
+- `red-pixel/index.html`, `css/red-pixel.css`, `js/red-pixel.js`, `js/pong-physics.js`: grab then throw to start Pong on Ash Brown. Player is left, level-five 2D1 BOT right; first to three. Mouse/touch and Up/Down or W/S control the paddle; Click/tap or Space pauses/resumes, and Escape exits; dragging never toggles pause. The red puck plays on a court without lines, with Home-navigation labels, enlarged scores, and Soft Beige “First to 3” directly above the scoreboard. Enter grabs/throws for keyboard users. The opponent reads the ball every 220–360ms, accelerates and brakes smoothly, repositions between returns, and makes consistent aiming errors with occasional larger misreads. Square impact particles and a center burst on player scores respect reduced motion; visibility loss and resizing pause play. No-JavaScript retains the native BIGGER/SMALLER size control.
 - `contact/index.html`, `js/contact.js`, `css/contact-page.css`: contact page. Contact code loads only on that route; legacy drawer support remains available there.
 - `locales/ja.json`, `scripts/build-japanese.py`, `js/language.js`, `js/ja.js`: English source plus generated Japanese HTML and dynamic translation dictionary.
 
@@ -295,3 +295,85 @@ Things of my own and things worth sharing. The title and introduction retain a
 680px reading cap. Smaller screens use a single column in source order. English
 and Japanese desktop placement and Japanese mobile reading/overflow were checked
 in the running preview.
+
+About refinement: the alternating section layout is reverted. All essay sections
+now share one 680px reading column at the footer social-links edge; the wider
+opening remains above it. The named about-overview style is 32px / 1.3, weight
+500, with −0.01em tracking on desktop, retaining the responsive 24px phone size.
+Both language routes share these rules. Verified desktop section alignment,
+English/Japanese overview styles and mobile width without horizontal overflow.
+
+Red Pixel’s native size control reads BIGGER at 1px and SMALLER at 24px. Growing
+is immediate; shrinking retains the 720ms overshoot transition. The labels also
+work without JavaScript through the details element. Verified both states and
+transition durations on English and Japanese routes using keyboard activation.
+
+Releasing or cancelling a pixel grab without throwing now restores the size
+selected before the grab: a small pixel shrinks back, while an enlarged pixel
+stays at 24px. Throwing still starts Pong. Verified small and large pointer
+releases in preview, including the Japanese route.
+
+Red Pixel returns to the flat pixel and Pong. Throwing carries the red pixel
+from its release position into the court over 240ms, shrinking it into the puck
+before play continues. Exit reverses the handoff: the current puck moves back to
+the center and shrinks to the original red pixel over 240ms while the page returns
+to beige. Enter twice provides the same entrance handoff. Reduced motion
+starts immediately; Exit, resize, hidden tabs and interruption clean up the handoff.
+The superseded cube sequence is preserved in `_archive/red-pixel-cube-2026-10-21/`.
+
+### Aviator gallery — 21 October 2026
+
+The Studio project gallery follows Figma frame `413:4414`: looping website
+walkthrough, paired color/Season type studies, the family message, social and
+care UI, mobile website and app icon, photography collage, bottle/cap pair, and
+website-footer mockup. The existing cover/hero handoff remains in place.
+`img/projects/aviator/gallery.json` records the Figma nodes and source exports;
+`python3 scripts/assets/build-project-gallery.py aviator` regenerates responsive WebP
+versions without upscaling. Original PNG exports are preserved in
+`img/projects/aviator/originals/gallery-2026-10-21/`; the previous gallery markup
+is in `_archive/aviator-gallery-2026-10-21/`.
+
+The website movie uses the owner’s `img/projects/aviator/aviator-website.mp4` export, delivered as
+an optimized 1080p MP4. It autoplays muted, inline, and loops when at least 25%
+visible; it pauses offscreen, in hidden tabs, and when the project closes.
+Controls stay hidden; clicking the video or pressing Space/Enter while focused pauses/resumes it. Reduced motion and no-JavaScript show the static
+poster. English and Japanese use the same gallery, with translated image text.
+
+The owner’s updated `Frame 1000008025.png` and `1484.png` replace the color/type
+and photography studies. Transparent gaps/corners are preserved. The color/type
+export is split at its existing transparent gutter for responsive stacking, with
+no change to the artwork. Superseded exports are preserved alongside the old
+gallery in `_archive/aviator-gallery-2026-10-21/superseded-exports/`.
+
+Verified the updated gallery in the running English desktop and Japanese mobile
+project views: all 12 artwork slots load, image pairs have equal heights, the
+new collage retains transparency, and the 5.2 MB video autoplays/loops muted
+without controls, pauses offscreen, and can be paused/resumed with click or
+keyboard. Gallery-local reference and dimension checks pass. The broader site
+audit currently reports two missing legacy Rand font files in `css/fonts.css`,
+following unrelated font-directory deletions; those changes were left intact.
+
+### DeepDrip gallery — 21 October 2026
+
+The project gallery follows Figma frame `413:5289`: laptop stickers, cap, hoodie,
+color palette, D monogram, browser tab, editorial website,
+paired category tags/article cards, category illustrations, website footer, and
+the owner-supplied eye movie. Responsive artwork preserves the exported aspect
+ratios and transparency, with paired panels stacked on phones. The cover/hero
+and existing project transition are retained.
+
+`img/projects/deepdrip/gallery.json` records Figma node identities and original
+exports. Run `python3 scripts/assets/build-project-gallery.py deepdrip` to
+regenerate WebP delivery files without upscaling. Source PNGs are retained under
+`img/projects/deepdrip/originals/gallery-2026-10-21/`; previous gallery markup is
+preserved in `_archive/deepdrip-gallery-2026-10-21/`. The 77 KB eye video is
+already efficient and is copied without re-encoding. It shares Aviator’s muted,
+inline autoplay/looping behavior, hidden controls, offscreen/hidden-tab pause,
+click/keyboard pause, and static reduced-motion/no-JavaScript poster. Both
+language routes use the new gallery with translated descriptions.
+
+The DeepDrip social-profile mockup was subsequently removed at the owner’s
+request. Its original and responsive exports are preserved in
+`_archive/deepdrip-gallery-2026-10-21/removed-social-profile/`.
+
+SUPA’s project gallery follows Figma frame `413:5755`: stage wordmark, symbol, symbol concept, paired badge and business cards, owner-supplied color palette, Supa.ai wordmark, website and app dock. Native exports and node provenance are in `img/projects/supa/gallery.json`; regenerate responsive WebPs with `python3 scripts/assets/build-project-gallery.py supa`. The previous gallery markup is archived in `_archive/supa-gallery-2026-10-21/`. The separately supplied header banner is retained.

@@ -98,6 +98,17 @@ html[lang="ja"] .work-description{line-height:1.65;letter-spacing:0}
 .work-detail-images .work-detail-image,.work-detail-images .work-detail-image+.work-detail-image{grid-column:1/-1;height:auto;margin:0;padding:0;align-self:start}
 .work-detail-images .work-detail-image.work-detail-image--half{grid-column:auto}
 .work-detail-images .work-detail-image img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+/* Preserve supplied project artwork proportions, including paired panels. */
+.work-detail-images[data-project-gallery] .work-detail-image.work-detail-image--half{aspect-ratio:auto}
+.work-detail-images[data-project-gallery] .work-detail-image img{height:auto;object-fit:contain}
+.work-detail-images[data-deepdrip-gallery]{--project-video-ground:#291a13}
+.work-project-video{position:relative;aspect-ratio:16/9;background:var(--project-video-ground,#dfb3ff)}
+.work-project-video video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+.work-project-video video::-webkit-media-controls{display:none!important}
+.work-project-video video:focus-visible{outline:none;filter:brightness(.9)}
+.work-detail-images .work-project-video .work-video-poster{width:100%;height:auto}
+.work-project-video.is-video-active .work-video-poster{visibility:hidden}
+@media(prefers-reduced-motion:reduce){.work-project-video video{display:none}.work-project-video.is-video-active .work-video-poster{visibility:visible}}
 .work-related{padding:160px var(--project-inset)}
 .work-related h2{margin:0 0 40px;font:400 60px/1.15 var(--font);letter-spacing:-.025em;text-transform:none}
 .work-related h2::before,.work-related h2::after{content:none}
@@ -190,14 +201,6 @@ body.work-page #work-dialog .work-dialog-bar .work-trail a{background:none!impor
 /* Returned navigation sits on a solid beige ground, independent of the image. */
 .work-dialog-bar.is-returned{background:var(--beige);color:var(--ink);text-shadow:none}
 .work-dialog-bar.is-returned .work-close span{filter:none}
-
-/* Outlined Season specimen: native vector motion, with a static no-JS pose. */
-.work-type-study{position:relative;overflow:hidden;background:#DDB4FA}
-.work-type-study>.av-type{display:block;width:100%;height:auto;aspect-ratio:16/9}
-.work-type-study .type-motion-toggle{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid #230B3D;background:#DDB4FA;color:#230B3D;font:20px/1 sans-serif;cursor:pointer}
-.work-type-study .type-motion-toggle:hover,.work-type-study .type-motion-toggle:focus-visible{background:#230B3D;color:#DDB4FA}
-.work-type-study .type-motion-toggle[hidden]{display:none}
-@media(prefers-reduced-motion:reduce){.work-type-study .type-motion-toggle{display:none}}
 
 /* Caption title occupies column one; its one-liner spans columns two and three. */
 .work-hero-caption{display:grid;grid-template-columns:var(--work-meta-columns);gap:var(--project-inset);padding:20px var(--project-inset);background:var(--beige);color:var(--ink);font:400 16px/1.4 var(--font)}

@@ -14,7 +14,7 @@
   <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2" sizes="180x180">
   <link rel="stylesheet" href="../css/fonts.css?v=7">
-  <link rel="stylesheet" href="../css/red-pixel.css?v=4">
+  <link rel="stylesheet" href="../css/red-pixel.css?v=8">
   <link rel="stylesheet" href="../css/text-links.css?v=9">
   <script src="../js/type-tuner.js?v=3" defer></script>
 </head>
@@ -24,19 +24,19 @@
     <canvas class="pong-court" hidden aria-hidden="true"></canvas>
   </main>
   <p class="pixel-caption" translate="no">RED PIXEL</p>
-  <p class="sr-only" id="pixel-instructions">Drag and throw the pixel to play Pong. Or press Enter to grab, then Enter again to throw. Move your paddle with the mouse, touch, or Up and Down arrow keys. Click or tap to pause or play. Space pauses; Escape exits. First to five wins.</p>
-  <details class="pixel-zoom"><summary translate="no">ZOOM</summary><span class="sr-only">The red pixel is enlarged to 24 × 24 pixels.</span></details>
+  <p class="sr-only" id="pixel-instructions">Drag and throw the pixel to play Pong. Or press Enter to grab, then Enter again to throw. Move your paddle with the mouse, touch, or Up and Down arrow keys. Click or tap to pause or play. Space pauses; Escape exits. First to three wins.</p>
+  <details class="pixel-zoom"><summary translate="no"><span class="pixel-bigger">BIGGER</span><span class="pixel-smaller">SMALLER</span></summary><span class="sr-only">The red pixel is enlarged to 24 × 24 pixels.</span></details>
   <p class="pixel-prompt" hidden>Throw the pixel to play Pong</p>
   <div class="pong-controls" hidden><button type="button" data-pong-exit>Exit</button></div>
   <div class="pong-scoreboard" hidden aria-label="Pong scoreboard">
-    <p class="pong-help" hidden>First to 5</p>
+    <p class="pong-help" hidden>First to 3</p>
     <div class="pong-score"><span>You</span><strong data-score="0">0</strong></div>
     <div class="pong-score"><strong data-score="1">0</strong><span translate="no">2D1 BOT</span></div>
   </div>
   <div class="pong-message" hidden><p></p><button type="button">Resume</button></div>
   <p class="sr-only" role="status" aria-live="polite" data-pong-status></p>
-  <noscript><p class="pixel-prompt">Enable JavaScript to play Pong. ZOOM still works.</p></noscript>
+  <noscript><p class="pixel-prompt">Enable JavaScript to play Pong. BIGGER still works.</p></noscript>
   <script src="../js/pong-physics.js?v=2" defer></script>
-  <script src="../js/red-pixel.js?v=7" defer></script>
+  <script src="../js/red-pixel.js?v=12" defer></script>
 </body>
 </html>

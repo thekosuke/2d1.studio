@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red Pixel by 2D1</title>
+  <meta name="theme-color" content="#FAF0E6">
+  <link rel="canonical" href="https://2d1.studio/red-pixel/">
+  <link rel="alternate" hreflang="en" href="https://2d1.studio/red-pixel/">
+  <link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/red-pixel/">
+  <link rel="alternate" hreflang="x-default" href="https://2d1.studio/red-pixel/">
+  <link rel="icon" href="../img/brand/2d1-icon.ico?v=2" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="../img/brand/2d1-icon.png?v=2" type="image/png" sizes="32x32">
+  <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2" sizes="180x180">
+  <link rel="stylesheet" href="../css/fonts.css?v=7">
+  <link rel="stylesheet" href="../css/red-pixel.css?v=6">
+  <link rel="stylesheet" href="../css/text-links.css?v=9">
+  <script src="../js/type-tuner.js?v=3" defer></script>
+</head>
+<body>
+  <main id="main" aria-label="Red Pixel Pong" tabindex="-1" aria-describedby="pixel-instructions">
+    <button class="pixel-grab" type="button" aria-label="Grab and throw the red pixel" aria-describedby="pixel-instructions"><span class="red-pixel" aria-hidden="true"></span></button>
+    <canvas class="pong-court" hidden aria-hidden="true"></canvas>
+  </main>
+  <p class="pixel-caption" translate="no">RED PIXEL</p>
+  <p class="sr-only" id="pixel-instructions">Grab and release the pixel to reveal the red cube. Drag and throw it to play Pong. Press Space for the cube animation, or Enter to grab, then Enter again to throw. Move your paddle with the mouse, touch, or Up and Down arrow keys. Click or tap to pause or play. Space pauses; Escape exits. First to five wins.</p>
+  <details class="pixel-zoom"><summary translate="no"><span class="pixel-bigger">BIGGER</span><span class="pixel-smaller">SMALLER</span></summary><span class="sr-only">The red pixel is enlarged to 24 × 24 pixels.</span></details>
+  <p class="pixel-prompt" hidden>Throw the pixel to play Pong</p>
+  <div class="pong-controls" hidden><button type="button" data-pong-exit>Exit</button></div>
+  <div class="pong-scoreboard" hidden aria-label="Pong scoreboard">
+    <p class="pong-help" hidden>First to 5</p>
+    <div class="pong-score"><span>You</span><strong data-score="0">0</strong></div>
+    <div class="pong-score"><strong data-score="1">0</strong><span translate="no">2D1 BOT</span></div>
+  </div>
+  <div class="pong-message" hidden><p></p><button type="button">Resume</button></div>
+  <p class="sr-only" role="status" aria-live="polite" data-pong-status></p>
+  <noscript><p class="pixel-prompt">Enable JavaScript to play Pong. BIGGER still works.</p></noscript>
+  <script src="../js/pong-physics.js?v=2" defer></script>
+  <script src="../js/red-pixel.js?v=9" defer></script>
+</body>
+</html>

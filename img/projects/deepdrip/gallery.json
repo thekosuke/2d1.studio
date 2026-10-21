@@ -1,0 +1,260 @@
+{
+  "fileKey": "z1J8lyfvwOqtHpQqfNin3x",
+  "nodeId": "413:5289",
+  "exported": "2026-10-21",
+  "assets": [
+    {
+      "name": "laptop-stickers",
+      "nodeId": "413:5424",
+      "source": "originals/gallery-2026-10-21/laptop-stickers.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-laptop-stickers-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-laptop-stickers-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-laptop-stickers-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "cap",
+      "nodeId": "413:5388",
+      "source": "originals/gallery-2026-10-21/cap.png",
+      "width": 2560,
+      "height": 1429,
+      "variants": [
+        {
+          "src": "gallery-cap-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-cap-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-cap-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "hoodie",
+      "nodeId": "413:5389",
+      "source": "originals/gallery-2026-10-21/hoodie.png",
+      "width": 1280,
+      "height": 715,
+      "variants": [
+        {
+          "src": "gallery-hoodie-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-hoodie-1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    {
+      "name": "color-palette",
+      "nodeId": "413:5350",
+      "source": "originals/gallery-2026-10-21/color-palette-owner-06.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-color-palette-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-color-palette-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-color-palette-2560.webp",
+          "width": 2560
+        }
+      ],
+      "ownerSource": "06.png (2026-10-21)"
+    },
+    {
+      "name": "logo-mark",
+      "nodeId": "483:9744",
+      "source": "originals/gallery-2026-10-21/logo-mark.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-logo-mark-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-logo-mark-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-logo-mark-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "browser-tab",
+      "nodeId": "413:5435",
+      "source": "originals/gallery-2026-10-21/browser-tab.png",
+      "width": 1280,
+      "height": 720,
+      "variants": [
+        {
+          "src": "gallery-browser-tab-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-browser-tab-1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    {
+      "name": "website",
+      "nodeId": "413:5457",
+      "source": "originals/gallery-2026-10-21/website.png",
+      "width": 1280,
+      "height": 720,
+      "variants": [
+        {
+          "src": "gallery-website-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-website-1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    {
+      "name": "category-tags",
+      "nodeId": "491:14497",
+      "source": "originals/gallery-2026-10-21/category-tags.png",
+      "width": 1256,
+      "height": 1420,
+      "variants": [
+        {
+          "src": "gallery-category-tags-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-category-tags-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "article-cards",
+      "nodeId": "491:14500",
+      "source": "originals/gallery-2026-10-21/article-cards.png",
+      "width": 1256,
+      "height": 1420,
+      "variants": [
+        {
+          "src": "gallery-article-cards-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-article-cards-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "category-graphics",
+      "nodeId": "413:5645",
+      "source": "originals/gallery-2026-10-21/category-graphics.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-category-graphics-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-category-graphics-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-category-graphics-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "website-footer",
+      "nodeId": "413:5693",
+      "source": "originals/gallery-2026-10-21/website-footer.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-website-footer-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-website-footer-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-website-footer-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "eye-poster",
+      "nodeId": "413:5725",
+      "source": "originals/gallery-2026-10-21/eye-poster.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-eye-poster-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-eye-poster-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-eye-poster-2560.webp",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": {
+    "src": "deepdrip-eye.mp4",
+    "source": "Owner-supplied deepdrip-eye.mp4; original bytes preserved",
+    "nodeId": "413:5725",
+    "bytes": 76724,
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "width": 2560,
+    "height": 1440,
+    "duration": 3.516667
+  },
+  "removedAssets": [
+    {
+      "name": "social-profile",
+      "nodeId": "491:14722",
+      "reason": "Removed at owner request",
+      "archive": "_archive/deepdrip-gallery-2026-10-21/removed-social-profile/"
+    }
+  ]
+}

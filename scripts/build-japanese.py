@@ -36,7 +36,7 @@ class JapanesePage(HTMLParser):
         if tag == 'html': a['lang'] = 'ja'
         for key in ATTRS & a.keys():
             if a[key]: a[key] = translate(a[key])
-        for key in ['href','src']:
+        for key in ['href','src','poster','data-src']:
             val = a.get(key, '')
             if val.startswith(('css/','js/','fonts/','img/','../css/','../js/','../fonts/','../img/')):
                 a[key] = '../' + val

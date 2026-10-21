@@ -46,15 +46,10 @@ html[lang] .about-essay-page .essay-title{font-size:clamp(23px,5.5vw,64px);white
  html[lang] .about-essay-page .essay-rest p{font-size:var(--essay-body-size);font-weight:var(--essay-body-weight);letter-spacing:var(--essay-body-tracking);line-height:var(--essay-body-leading)}
 }
 
-/* Share the footer social-links edge, then alternate complete essay sections. */
+/* Share the footer social-links edge with a single, comfortable essay column. */
+.about-essay-page .essay-rest{max-width:680px}
 @media(min-width:1100px){
  .about-essay-page > main{padding-inline:0}
  .about-essay-page .essay{--essay-left:calc(100% - min(var(--column),calc(100% - min(27.7778vw,400px) - 128px)) - 128px);width:calc(100% - var(--essay-left) - 128px);max-width:none;margin-left:var(--essay-left);margin-right:128px}
  .about-essay-page .essay-head{max-width:680px}
-}
-@media(min-width:1280px){
- .about-essay-page .essay-rest{display:flex;flex-direction:column;gap:96px}
- .about-essay-page .essay-rest>section{width:calc((100% - 64px) / 2);min-width:0}
- .about-essay-page .essay-rest>section:nth-child(even){align-self:flex-end}
- .about-essay-page .essay-rest>section>h2{margin-top:0}
 }

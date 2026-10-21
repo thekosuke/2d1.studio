@@ -1,0 +1,256 @@
+{
+  "fileKey": "z1J8lyfvwOqtHpQqfNin3x",
+  "nodeId": "413:4414",
+  "exported": "2026-10-21",
+  "assets": [
+    {
+      "name": "website-poster",
+      "nodeId": "483:4296",
+      "source": "originals/gallery-2026-10-21/website-poster.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-website-poster-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-website-poster-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-website-poster-2560.webp",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "name": "color-palette-updated",
+      "nodeId": "485:9829",
+      "source": "originals/gallery-2026-10-21/color-type-updated.png",
+      "width": 1256,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-color-palette-updated-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-color-palette-updated-1256.webp",
+          "width": 1256
+        }
+      ],
+      "ownerUpdated": "2026-10-21",
+      "crop": [
+        0,
+        0,
+        1256,
+        1440
+      ],
+      "ownerSource": "avi.png (2026-10-21 re-export)"
+    },
+    {
+      "name": "season-type-updated",
+      "nodeId": "485:9904",
+      "source": "originals/gallery-2026-10-21/color-type-updated.png",
+      "width": 1256,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-season-type-updated-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-season-type-updated-1256.webp",
+          "width": 1256
+        }
+      ],
+      "ownerUpdated": "2026-10-21",
+      "crop": [
+        1304,
+        0,
+        2560,
+        1440
+      ],
+      "ownerSource": "avi.png (2026-10-21 re-export)"
+    },
+    {
+      "name": "peace-of-mind",
+      "nodeId": "485:9966",
+      "source": "originals/gallery-2026-10-21/peace-of-mind.png",
+      "width": 2558,
+      "height": 1439,
+      "variants": [
+        {
+          "src": "gallery-peace-of-mind-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-peace-of-mind-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-peace-of-mind-2558.webp",
+          "width": 2558
+        }
+      ]
+    },
+    {
+      "name": "social-profile",
+      "nodeId": "487:14267",
+      "source": "originals/gallery-2026-10-21/social-profile.png",
+      "width": 1256,
+      "height": 1420,
+      "variants": [
+        {
+          "src": "gallery-social-profile-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-social-profile-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "care-ui",
+      "nodeId": "485:13957",
+      "source": "originals/gallery-2026-10-21/care-ui.png",
+      "width": 1256,
+      "height": 1420,
+      "variants": [
+        {
+          "src": "gallery-care-ui-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-care-ui-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "mobile-website",
+      "nodeId": "487:14263",
+      "source": "originals/gallery-2026-10-21/mobile-website.png",
+      "width": 1256,
+      "height": 1420,
+      "variants": [
+        {
+          "src": "gallery-mobile-website-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-mobile-website-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "app-icon",
+      "nodeId": "485:13786",
+      "source": "originals/gallery-2026-10-21/app-icon.png",
+      "width": 1256,
+      "height": 1420,
+      "variants": [
+        {
+          "src": "gallery-app-icon-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-app-icon-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "photography-updated",
+      "nodeId": "483:9685",
+      "source": "originals/gallery-2026-10-21/photography-updated.png",
+      "width": 2560,
+      "height": 1353,
+      "variants": [
+        {
+          "src": "gallery-photography-updated-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-photography-updated-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-photography-updated-2560.webp",
+          "width": 2560
+        }
+      ],
+      "ownerUpdated": "2026-10-21"
+    },
+    {
+      "name": "bottle",
+      "nodeId": "413:5279",
+      "source": "originals/gallery-2026-10-21/bottle.png",
+      "width": 1256,
+      "height": 1420,
+      "variants": [
+        {
+          "src": "gallery-bottle-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-bottle-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "cap",
+      "nodeId": "413:5282",
+      "source": "originals/gallery-2026-10-21/cap.png",
+      "width": 1256,
+      "height": 1420,
+      "variants": [
+        {
+          "src": "gallery-cap-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-cap-1256.webp",
+          "width": 1256
+        }
+      ]
+    },
+    {
+      "name": "website-footer",
+      "nodeId": "483:7476",
+      "source": "originals/gallery-2026-10-21/website-footer.png",
+      "width": 2560,
+      "height": 1440,
+      "variants": [
+        {
+          "src": "gallery-website-footer-640.webp",
+          "width": 640
+        },
+        {
+          "src": "gallery-website-footer-1280.webp",
+          "width": 1280
+        },
+        {
+          "src": "gallery-website-footer-2560.webp",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": {
+    "source": "aviator-website.mp4",
+    "src": "gallery-website-1920.mp4",
+    "duration": 16.833333,
+    "nodeId": "483:4296",
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "bytes": 5173052,
+    "width": 1920,
+    "height": 1080
+  }
+}

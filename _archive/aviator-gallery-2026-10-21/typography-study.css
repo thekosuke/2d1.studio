@@ -1,0 +1,8 @@
+/* Outlined Season specimen: native vector motion, with a static no-JS pose. */
+.work-type-study{position:relative;overflow:hidden;background:#DDB4FA}
+.work-type-study>.av-type{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.work-type-study .type-motion-toggle{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid #230B3D;background:#DDB4FA;color:#230B3D;font:20px/1 sans-serif;cursor:pointer}
+.work-type-study .type-motion-toggle:hover,.work-type-study .type-motion-toggle:focus-visible{background:#230B3D;color:#DDB4FA}
+.work-type-study .type-motion-toggle[hidden]{display:none}
+@media(prefers-reduced-motion:reduce){.work-type-study .type-motion-toggle{display:none}}
+

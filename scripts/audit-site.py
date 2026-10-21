@@ -38,7 +38,7 @@ def check(value, source):
 class Refs(HTMLParser):
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        for name in ('src', 'href', 'poster'):
+        for name in ('src', 'href', 'poster', 'data-src'):
             if name in attrs:
                 check(attrs[name], self.source)
         for entry in attrs.get('srcset', '').split(','):

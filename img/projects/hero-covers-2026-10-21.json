@@ -1,0 +1,35 @@
+[
+  {
+    "project": "aviator",
+    "source": "img/projects/aviator/originals/hero-cover-2026-10-21.png",
+    "width": 2560,
+    "height": 1440,
+    "variants": [
+      "img/projects/aviator/hero-cover-2026-10-21-640.webp",
+      "img/projects/aviator/hero-cover-2026-10-21-1280.webp",
+      "img/projects/aviator/hero-cover-2026-10-21-2560.webp"
+    ]
+  },
+  {
+    "project": "supa",
+    "source": "img/projects/supa/originals/hero-cover-2026-10-21.png",
+    "width": 2560,
+    "height": 1440,
+    "variants": [
+      "img/projects/supa/hero-cover-2026-10-21-640.webp",
+      "img/projects/supa/hero-cover-2026-10-21-1280.webp",
+      "img/projects/supa/hero-cover-2026-10-21-2560.webp"
+    ]
+  },
+  {
+    "project": "deepdrip",
+    "source": "img/projects/deepdrip/originals/hero-cover-2026-10-21.png",
+    "width": 2560,
+    "height": 1440,
+    "variants": [
+      "img/projects/deepdrip/hero-cover-2026-10-21-640.webp",
+      "img/projects/deepdrip/hero-cover-2026-10-21-1280.webp",
+      "img/projects/deepdrip/hero-cover-2026-10-21-2560.webp"
+    ]
+  }
+]

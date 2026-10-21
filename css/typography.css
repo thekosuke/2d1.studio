@@ -86,3 +86,5 @@ html[lang="ja"] body.home-page :is(.intro h1,.section-copy){font-weight:600}
 /* Project descriptions and the About opening share one reading style. */
 html[lang] :is(.work-page .work-description,.about-essay-page .essay-introduction>.essay-lede){font:400 var(--overview-size)/var(--overview-leading) var(--font);letter-spacing:-.02em;color:var(--cranberry-brown);text-wrap:pretty}
 html[lang="ja"] :is(.work-page .work-description,.about-essay-page .essay-introduction>.essay-lede){line-height:1.65;letter-spacing:0}
+/* Saved About overview style; retain the shared responsive size. */
+html[lang] .about-essay-page .essay-introduction>[data-type-style="about-overview"]{font-weight:500;letter-spacing:-.01em;line-height:1.3}

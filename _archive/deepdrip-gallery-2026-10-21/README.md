@@ -1,0 +1,1 @@
+DeepDrip gallery markup preserved before adopting Figma frame 413:5289 on 21 October 2026. Previous artwork sources and derivatives remain in img/projects/deepdrip; shared artwork references are retained.
