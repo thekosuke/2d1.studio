@@ -377,3 +377,63 @@ request. Its original and responsive exports are preserved in
 `_archive/deepdrip-gallery-2026-10-21/removed-social-profile/`.
 
 SUPA’s project gallery follows Figma frame `413:5755`: stage wordmark, symbol, symbol concept, paired badge and business cards, owner-supplied color palette, Supa.ai wordmark, website and app dock. Native exports and node provenance are in `img/projects/supa/gallery.json`; regenerate responsive WebPs with `python3 scripts/assets/build-project-gallery.py supa`. The previous gallery markup is archived in `_archive/supa-gallery-2026-10-21/`. The separately supplied header banner is retained.
+
+Project detail endings now reuse About’s dark-brown Contact invitation and shared footer
+markup/styles: “Let’s work together”, Get in touch, copyright and social links.
+The language toggle stays inside the project footer. The ending uses the same
+sticky reveal, with its height measured inside the project’s own scroll container.
+All three projects were checked on English desktop and Japanese mobile, including
+opening, scrolling to the ending, keyboard focus, and closing. No horizontal
+overflow was found.
+
+Studio’s centered loop copies forward project-opening clicks directly to their canonical project without recentering the carousel. Click selection measures the current visible center synchronously, including while settling.
+
+About and project ending sections use Ash Brown (#191416), with a red Contact
+label square, white text
+and social icons, red link hover, and inverted white/brown language controls.
+
+Project details automatically reveal the top bar at the bottom of the scroll,
+keeping breadcrumbs and Close available without needing to scroll upward.
+
+About copy refinement — 22 October: the opening remains unchanged. The essay body
+is condensed to four sections: Background, Familiar Characters, Reduction with
+wit, and Studio and Shop. Childhood and business-origin anecdotes are removed;
+the copy focuses on education/career, design principles, and the exchange between
+client work, original products, and curation. English and Japanese are updated.
+
+About copy/typesetting — 22 October: applies the owner's revised text, including
+the Japan/Arizona background. All essay copy uses the shared `--type-spec` caption
+and Home specification size at 1.5 leading with zero tracking; headings use Medium
+and paragraphs Regular. Both language routes are updated.
+
+About reading width — 22 October: the title, opening and essay share a centered
+680px maximum column, with 24px side insets on smaller screens. This supersedes
+the previous desktop social-links offset for About's essay.
+
+About reading refinement — 22 October: essay text and headings use 16px type
+with 1.5 leading; paragraph gaps are 24px on desktop and mobile in both languages.
+
+Shared alignment correction — 22 October: About's reading column starts at the
+footer social-links edge again, while retaining a 680px line-length cap. Home,
+About, Contact and footer use shared `--reading-left` / `--reading-width` geometry;
+tablet footers now follow the same capped reading edge. This supersedes the
+previous independently centered About column. The rule is recorded in AGENTS.md.
+
+About copy revision — 22 October: the owner's latest text is organized as About
+me, Studio & Shop, and Familiar Characters. Reduction with Wit is introduced in
+About me. The opening, 16px typography, 24px paragraph spacing and shared footer
+social-links alignment are retained. English and Japanese are updated.
+
+About centered alignment — 22 October: About scopes the shared reading tokens to
+a centered 680px maximum column. Its essay, Contact CTA and footer social links
+move together, satisfying both screen centering and same-page left alignment.
+
+About desktop columns — 22 October: from 1100px, each section uses a title column
+and body column, aligned at the top. Titles stick 96px below the viewport top and
+release at the end of their own section. The opening uses the same arrangement.
+About returns to the shared desktop social-links reading edge and uses its full
+available width; the earlier centered-column iteration is superseded on desktop.
+Phone/tablet retain the single-column 680px-capped layout. No scroll scripting is
+needed for sticky headings, and both languages share the layout.
+
+The shared mobile menu now follows the red project footer: white logo, route navigation, copyright, pixel social links and an EN/JA segmented language toggle. Extra footer content is hidden in desktop navigation; the existing mobile focus trap, Escape, page scroll locking and reduced-motion behavior remain shared across routes.

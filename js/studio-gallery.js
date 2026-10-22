@@ -39,11 +39,21 @@
   if(Math.abs(grid.scrollLeft-destination)>1)center(real);
  };
  grid.addEventListener('scroll',()=>{if(!frame)frame=requestAnimationFrame(update);clearTimeout(timer);timer=setTimeout(settle,180)},{passive:true});
+ let forwardingProjectClick=false;
  grid.addEventListener('click',event=>{
+  // A loop copy forwards to its source only to open the dialog. Do not
+  // interpret that synthetic click as a request to recenter the carousel.
+  if(forwardingProjectClick)return;
   if(suppressClick){event.preventDefault();event.stopImmediatePropagation();return}
   const card=event.target.closest('.work-project');if(!card)return;
+  update();
   if(card!==current){event.preventDefault();event.stopImmediatePropagation();center(card);return}
-  if(!originals.includes(card)){event.preventDefault();event.stopImmediatePropagation();originals[Number(card.dataset.galleryIndex)].querySelector('summary').click()}
+  if(!originals.includes(card)){
+   event.preventDefault();event.stopImmediatePropagation();
+   forwardingProjectClick=true;
+   try{originals[Number(card.dataset.galleryIndex)].querySelector('summary').click()}
+   finally{forwardingProjectClick=false}
+  }
  },true);
  grid.addEventListener('keydown',event=>{
   const step=['ArrowRight','ArrowDown'].includes(event.key)?1:['ArrowLeft','ArrowUp'].includes(event.key)?-1:0;if(!step)return;

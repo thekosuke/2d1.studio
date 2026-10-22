@@ -20,7 +20,7 @@
           <button class="contact-close" type="button" data-close><span>Close</span><span class="contact-x" aria-hidden="true"></span></button>
         </div>
         <form class="contact-form" id="contact-form" novalidate>
-          <h2 class="contact-title" id="contact-title">Say hello.</h2>
+          <h2 class="contact-title" id="contact-title">Book an intro</h2>
           <p class="contact-intro">Tell us a little about you and what you have in mind.</p>
           <p class="contact-notice">This form isn’t connected yet. Nothing you enter is sent or saved.</p>
           <div class="field">
@@ -40,7 +40,7 @@
             <div class="chips">
               <label class="chip"><input type="radio" name="category" value="New Business" required><span>New Business</span></label>
               <label class="chip"><input type="radio" name="category" value="Media Inquiry"><span>Media Inquiry</span></label>
-              <label class="chip"><input type="radio" name="category" value="Relationship advice"><span>Relationship advice</span></label>
+              <label class="chip"><input type="radio" name="category" value="Collaboration"><span>Collaboration</span></label>
               <label class="chip"><input type="radio" name="category" value="Other"><span>Other</span></label>
             </div>
           </fieldset>
@@ -79,7 +79,7 @@
     const messagePrompts = {
       'New Business': 'Tell us about your project, what you need, and your timeline.',
       'Media Inquiry': 'Tell us about your publication, inquiry, and deadline.',
-      'Relationship advice': 'What’s happening, and what would you like a fresh perspective on?',
+      'Collaboration': 'Tell us about the collaboration you have in mind.',
       'Other': 'What’s on your mind?'
     };
     const updateMessagePrompt = () => {

@@ -1,6 +1,6 @@
 /* Life Tote — full-bleed product photograph and a compact package insert. */
 #shop{width:100%;max-width:none;margin-inline:0}
-.bag-study{--bag-inset:64px;overflow-x:clip;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:var(--bag-inset);background:var(--white);color:var(--ink)}
+.bag-study{--bag-inset:64px;overflow-x:clip;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:var(--bag-inset);background:var(--beige);color:var(--ink)}
 .bag-product-spread{--bag-spread-gap:clamp(48px,6vw,112px);--bag-image-share:.53488372;container-type:inline-size;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:var(--bag-spread-gap);align-items:start;max-width:1440px;margin-inline:auto}
 .bag-study-stage{position:sticky;top:80px;min-width:0}
 .bag-study-image{width:100%;max-width:min(540px,calc((100svh - 160px) * 1050 / 1498));margin-inline:auto}
@@ -89,14 +89,14 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 /* Let shared copy columns use the page width rather than the image inset. */
 .bag-study>.bag-study-copy{width:calc(100% + 2 * var(--bag-inset));margin-inline:calc(-1 * var(--bag-inset))}
 
-/* White product sheet within the soft beige Shop section. */
-.bag-study{--ink:var(--cranberry-brown);--sub-gray:#807573;--line:rgba(50,5,5,.18);background:var(--white);color:var(--cranberry-brown)}
+/* Product study shares the Shop section’s Soft Beige ground. */
+.bag-study{--ink:var(--cranberry-brown);--sub-gray:#807573;--line:rgba(50,5,5,.18);background:var(--beige);color:var(--cranberry-brown)}
 .home-page .bag-study .section-copy{color:rgba(50,5,5,.85)}
 .home-page .bag-study .copy-emphasis{color:var(--red)}
 .bag-study .bag-study-specs dd{color:var(--cranberry-brown)}
 .bag-study .bag-study-spec-note{color:rgba(50,5,5,.6)}
 .bag-study-image{isolation:isolate}
-.bag-study-image::before{content:"";position:absolute;z-index:0;left:50%;top:76%;width:100%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:var(--white);pointer-events:none}
+.bag-study-image::before{content:"";position:absolute;z-index:0;left:50%;top:76%;width:100%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:var(--beige);pointer-events:none}
 @media(max-width:767px){.bag-study-image{width:86.9565%}}
 @media(max-width:767px){.bag-editorial{margin-top:40px}}
 

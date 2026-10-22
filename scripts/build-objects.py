@@ -80,15 +80,16 @@ html=f'''<!doctype html>
 <meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Familiar Characters — 2D1"><meta property="og:description" content="An open shelf of everyday objects with character. Explore the 2D1 Familiar Characters collection."><meta property="og:url" content="https://2d1.studio/familiarcharacters/"><meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2"><meta property="og:image:alt" content="The red 2D1 logo on a soft beige background.">
 <link rel="icon" href="../img/brand/2d1-icon.svg?v=2" type="image/svg+xml"><link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=2">
 <script>document.documentElement.classList.add('finds-js');setTimeout(()=>{{if(!document.querySelector('.objects-ready'))document.documentElement.classList.remove('finds-js');}},4000);</script>
-<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=99"><link rel="stylesheet" href="../css/objects.css?v=125">
+<link rel="stylesheet" href="../css/fonts.css?v=7"><link rel="stylesheet" href="../css/walla.css?v=100"><link rel="stylesheet" href="../css/objects.css?v=125">
 <link rel="stylesheet" href="../css/dialogs.css?v=18"><link rel="stylesheet" href="../css/mobile-nav.css?v=3">
 <link rel="stylesheet" href="../css/typography.css?v=15">
-<script src="../js/config.js" defer></script><script src="../js/mobile-nav.js?v=2" defer></script><script src="../js/finds-menus.js?v=9" defer></script>
+<script src="../js/config.js" defer></script><script src="../js/mobile-nav.js?v=5" defer></script><script src="../js/finds-menus.js?v=9" defer></script>
 <script src="../js/language.js?v=1" defer></script><script src="../js/objects.js?v=69" defer></script>
 <link rel="stylesheet" href="../css/scrollbars.css?v=2">
 <link rel="stylesheet" href="../css/button-fill.css?v=6">
 <link rel="stylesheet" href="../css/text-links.css?v=4">
-<script src="../js/type-tuner.js?v=3" defer></script></head>
+<script src="../js/type-tuner.js?v=3" defer></script><link rel="stylesheet" href="../css/responsive-nav.css?v=2"><link rel="stylesheet" href="../css/mobile-menu-footer.css?v=1">
+</head>
 <body class="objects-page">
 <a class="skip-link" href="#objects-canvas">Skip to objects</a>
 <header class="objects-header"><a class="site-logo" href="../" aria-label="2D1, home"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a></header>

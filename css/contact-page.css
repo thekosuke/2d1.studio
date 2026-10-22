@@ -1,10 +1,11 @@
 /* Contact is a centered reading column rather than a drawer. */
+.contact-page{--contact-heading-size:64px;--contact-heading-tracking:-.02em}
 .contact-page-main{width:min(680px,calc(100% - 48px));margin-inline:auto;padding:144px 0 96px}
 .contact-page-form{color:var(--ink)}
 .contact-page .contact-sheet{width:100%;height:auto;margin:0;padding:0;overflow:visible;background:transparent;transform:none;transition:none}
 .contact-page .contact-head{margin-bottom:32px}
 .contact-page .contact-form{display:flex;flex-direction:column;gap:28px}
-.contact-page .contact-title{font:700 48px/1.15 var(--font);text-transform:none;letter-spacing:0}
+.contact-page .contact-title{font:700 var(--contact-heading-size)/1.15 var(--font);text-transform:none;letter-spacing:var(--contact-heading-tracking)}
 .contact-page .contact-intro{font:400 22px/1.4 var(--font);text-transform:none;color:var(--sub-gray);margin-top:-16px}
 .contact-page .contact-notice{font:400 13px/1.5 var(--font);color:var(--sub-gray)}
 .contact-page .field{margin:0;width:100%;min-width:0}
@@ -22,7 +23,7 @@
 .contact-page .contact-fallback{margin-top:24px}
 @media(max-width:767px){.contact-page-main{width:calc(100% - 48px);padding:112px 0 64px}.contact-page .contact-title{font-size:36px}.contact-page .contact-intro{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.contact-page :is(.field-input,.field-label,.chip span,.send-arrow){transition:none}.contact-page .chip:active span,.contact-page .contact-send:hover .send-arrow{transform:none;translate:none}}
-.contact-page #contact .contact-title{font:700 48px/1.15 var(--font);text-transform:none;letter-spacing:0}
+.contact-page #contact .contact-title{font:700 var(--contact-heading-size)/1.15 var(--font);text-transform:none;letter-spacing:var(--contact-heading-tracking)}
 .contact-page #contact .contact-intro{text-transform:none;letter-spacing:0}
 @media(max-width:767px){.contact-page #contact .contact-title{font-size:36px}}
 .contact-page #contact .contact-sheet{border:0;padding:0;background:transparent;letter-spacing:0}
@@ -74,3 +75,6 @@
 
 /* Comfortable touch targets without changing the desktop chip rhythm. */
 @media(pointer:coarse){.contact-page #contact .chip span{min-height:44px;display:flex;align-items:center}}
+
+/* Contact uses the same reading edge as About, Home and footer social links. */
+.about-page.contact-page .contact-page-main{width:var(--reading-width);max-width:var(--column);margin-left:var(--reading-left);margin-right:auto}

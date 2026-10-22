@@ -261,8 +261,8 @@ body.work-page #work-dialog .work-dialog-bar .work-trail a{background:none!impor
 .work-trail,.work-dialog-bar .work-trail{letter-spacing:var(--type-label-track)}
 
 /* Balance the overview divider with equal space above and below. */
-.work-meta{margin-top:40px}
-@media(max-width:767px){.work-meta{margin-top:32px}}
+.work-meta{margin-top:24px;padding-top:24px}
+@media(max-width:767px){.work-meta{margin-top:20px;padding-top:20px}}
 
 /* Compact project toolbar and consistent image gutters. */
 .work-dialog-bar{height:56px;padding:12px 20px}
@@ -376,3 +376,16 @@ body.work-page>.site-footer .footer-line{min-height:calc(var(--language-size) + 
 
 /* Gallery captions share the bag specification reading size. */
 .work-page .work-caption,.work-page .work-caption :is(.work-title,.work-one-liner,.work-category,.work-view){font-size:var(--type-spec)}
+
+/* Project endings share About’s Contact section and footer without legacy nav. */
+.work-project-ending{--ending-ground:var(--ash-brown);--ending-ink:var(--white);--ending-muted:var(--white)}
+.work-project-ending .site-footer{padding-block:24px}
+.work-project-ending .footer-line{position:relative}
+.work-project-ending .work-footer-language{position:absolute;right:24px;top:50%;bottom:auto;transform:translateY(-50%)}
+@media(max-width:1099px){.work-project-ending .work-footer-language{right:0}}
+
+/* Keep the Studio footer's social links on the shared reading edge on tablets/phones. */
+@media(max-width:1099px){
+ body.work-page>.site-footer .footer-line.column{flex-wrap:wrap}
+ body.work-page>.site-footer .footer-line>p{flex-basis:100%}
+}

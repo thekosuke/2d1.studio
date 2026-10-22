@@ -57,7 +57,7 @@
  };
  const updateToolbarContrast=()=>{
   const center=toolbar.offsetHeight/2;
-  const onArt=[...content.querySelectorAll('.work-detail-hero,.work-detail-image,.work-related-card>img,.work-studio-footer')].some(element=>{
+  const onArt=[...content.querySelectorAll('.work-detail-hero,.work-detail-image,.work-related-card>img,.work-project-ending')].some(element=>{
    const box=element.getBoundingClientRect();
    return box.top<=center&&box.bottom>center&&element.dataset.artTone!=='light';
   });
@@ -69,7 +69,8 @@
   updateToolbarContrast();
   const top=Math.max(0,content.scrollTop),delta=top-lastDetailScroll;
   lastDetailScroll=top;
-  if(top<=4){showToolbar();return}
+  const atBottom=content.scrollHeight-content.clientHeight-top<=4;
+  if(top<=4||atBottom){showToolbar();return}
   if(!delta)return;
   const direction=Math.sign(delta);
   if(direction!==detailDirection){detailDirection=direction;directionDistance=0}
@@ -81,10 +82,15 @@
  dialog.addEventListener('keydown',event=>{if(event.key==='Tab')showToolbar()});
  content.addEventListener('focusin',event=>{
   // Sticky footer controls must be uncovered when reached by keyboard.
-  if(event.target.closest('.work-studio-footer'))content.scrollTo({top:content.scrollHeight,behavior:'instant'});
+  if(event.target.closest('.work-project-ending'))content.scrollTo({top:content.scrollHeight,behavior:'instant'});
  });
+ const measureEnding=()=>{
+  const ending=content.querySelector('.work-project-ending');
+  if(ending)ending.style.setProperty('--ending-bottom',`${Math.min(0,content.clientHeight-ending.offsetHeight)}px`);
+ };
+ const endingObserver=new ResizeObserver(measureEnding);
  const projects=originals;
- addEventListener('resize',()=>{if(dialog.open)updateToolbarContrast()});
+ addEventListener('resize',()=>{if(dialog.open){measureEnding();updateToolbarContrast()}});
 
  let opener=null,closing=false,flight=null,animations=[],timer,transitionDone=null;
  const clearMotion=()=>{
@@ -134,6 +140,10 @@
   content.scrollTop=0;
   title.focus({preventScroll:true});
   setupProjectMedia();
+  endingObserver.disconnect();
+  const ending=content.querySelector('.work-project-ending');
+  if(ending)endingObserver.observe(ending);
+  requestAnimationFrame(measureEnding);
  };
  content.addEventListener('click',event=>{
   const link=event.target.closest('a[data-work-target]');

@@ -392,3 +392,30 @@ leave white gutters or letterboxing as a generic fit fallback. Crop photographs
 to fill the frame with per-image focal positions. For complete UI mockups,
 extend the matching original background color or texture across the square.
 Preserve authentic artwork and keep foreground images from current galleries.
+
+
+## Shared reading-edge rule — 22 October 2026
+On every page, text/form containers occupying the reading area must start at
+the footer social-links edge. Use `--reading-left` and `--reading-width` from
+`css/walla.css`; retain a narrower maximum line length when useful, with spare
+space on the right. A request for a centered/comfortable column does not override
+this alignment rule unless the owner explicitly asks to break it. About's earlier
+independently centered essay is superseded. Check actual element edges in EN/JA
+at desktop, tablet and phone sizes after changes. Full-bleed artwork and immersive
+canvases retain their own framing.
+
+About's centered-column clarification — 22 October: center the 680px reading
+column and its Contact/footer social column together. The essay must have equal
+left/right space in the viewport while sharing its left edge with its own footer
+social links. Do not fix one requirement by breaking the other. About uses scoped
+`--reading-width` / `--reading-left` values; other routes retain their own geometry.
+
+About layout override — 22 October: the current desktop iteration (1100px+) uses
+two columns, heading left and copy right, top aligned. Each heading sticks within
+its own section. Preserve the social-links left edge; independent screen centering
+is explicitly dropped for this iteration. Phone/tablet stay single-column.
+
+
+Docked logo color — 22 October: keep the docked 2D1 logo Icon Red when crossing
+into dark/footer backgrounds. Navigation may invert for contrast; do not turn
+the docked logo white.
