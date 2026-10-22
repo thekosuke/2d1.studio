@@ -437,3 +437,41 @@ Phone/tablet retain the single-column 680px-capped layout. No scroll scripting i
 needed for sticky headings, and both languages share the layout.
 
 The shared mobile menu now follows the red project footer: white logo, route navigation, copyright, pixel social links and an EN/JA segmented language toggle. Extra footer content is hidden in desktop navigation; the existing mobile focus trap, Escape, page scroll locking and reduced-motion behavior remain shared across routes.
+
+The Shop Familiar Characters hover preview warms its live canvas while the card is visible, retains decoded tiles and stable image sources, and keeps the static monitor until a same-origin ready handshake. Its full zoom-in/out loop lasts six seconds (three each way), resets on leave, and stays static with reduced motion.
+
+Contact centered column — 22 October: the heading and form share a centered
+680px maximum column with 24px minimum side insets. The Contact footer social
+links use the same scoped reading edge, preserving left alignment in both languages.
+
+Familiar Characters’ info sheet now enters downward from its top-mounted FC control and dismisses upward. Its About 2D1 action navigates to the language-matched About page; the former nested-sheet opener is archived under `_archive/fc-info-about-2026-10-22/`.
+
+Home bag/signup refinement — 22 October: the Shop introduction and bag study now
+scroll in normal document flow, separated by a top divider. The former cover and
+pinned image/specification scripts remain in source but are no longer loaded.
+Signup and footer retain the reveal below the main content, now on Ash Brown
+with light text and controls. Signup reads “Sign up for updates” / “Sign up”;
+the email placeholder uses a lighter weight. Both languages share this behavior.
+
+Home ending/bag follow-up — 22 October: the bag image-to-specification scroll
+animation is restored via bag-layout.js; the outer Shop-to-bag cover remains off.
+Home now uses About’s “Don’t Be a Stranger” Contact invitation, blinking eyes,
+Get in touch link, and compact footer on Ash Brown, retaining the reveal below
+main content. The superseded signup markup is preserved in
+`_archive/home-signup-2026-10-22/ending.html`. The tote closing now invites visitors
+to follow for activity updates. English and Japanese are updated together.
+
+Shop order — 22 October: after “The joy of making”, the animated bag/specification
+spread now comes before the “2D Tote is our first everyday item” paragraph.
+The divider above the bag study is removed. The closing development note follows.
+
+Shop order follow-up — 22 October: the “2D Tote is our first everyday item”
+paragraph is back above the animated bag/specification spread. The divider remains removed.
+
+Home’s Studio artwork track sits immediately after “At our core, we’re a design studio.” The remaining two description paragraphs follow the full-width track, ahead of Services, in both languages.
+
+Bag study photograph — 22 October: Home now uses the cooler hanging bicolor
+concept, `img/shop/bag-study-2026-10-22/2d-tote-bicolor-daylight-hanging-neutral.webp`,
+in both languages. Intrinsic dimensions and viewport-height sizing follow its
+1086 × 1448 aspect ratio. The previous `img/shop/life-tote-studio-v4.webp`
+remains available; the existing bag/specification scroll animation is preserved.

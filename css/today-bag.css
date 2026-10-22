@@ -3,7 +3,7 @@
 .bag-study{--bag-inset:64px;overflow-x:clip;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:var(--bag-inset);background:var(--beige);color:var(--ink)}
 .bag-product-spread{--bag-spread-gap:clamp(48px,6vw,112px);--bag-image-share:.53488372;container-type:inline-size;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:var(--bag-spread-gap);align-items:start;max-width:1440px;margin-inline:auto}
 .bag-study-stage{position:sticky;top:80px;min-width:0}
-.bag-study-image{width:100%;max-width:min(540px,calc((100svh - 160px) * 1050 / 1498));margin-inline:auto}
+.bag-study-image{width:100%;max-width:min(540px,calc((100svh - 160px) * 1086 / 1448));margin-inline:auto}
 .bag-study-photo{position:relative;z-index:1;display:block;width:100%;height:auto;object-fit:contain;user-select:none}
 /* Half the displayed 2:3 photograph height, including column-width constraints. */
 .bag-editorial{min-width:0;width:100%;max-width:480px;padding-top:min(405px,calc(49.9995svh - 79.5px),calc((100cqw - var(--bag-spread-gap)) * var(--bag-image-share) * .75))}
@@ -42,16 +42,10 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 
 .bag-study-image{position:relative}
 
-/* The white product sheet travels over the slower, held Shop introduction. */
-.bag-study-scene{position:relative;isolation:isolate;width:100%}
-.bag-study-lead{position:relative;z-index:0;display:flex;flex-direction:column;gap:var(--section-content-gap)}
-.bag-study-scene>.bag-study{position:relative;z-index:1;margin-top:max(var(--section-content-gap),45svh)}
-.has-bag-cover .bag-study-lead{position:sticky;top:var(--bag-lead-top)}
-.has-bag-cover>.bag-study{margin-top:max(var(--section-content-gap),45svh)}
-@media(prefers-reduced-motion:reduce){
- .has-bag-cover .bag-study-lead{position:relative;top:auto}
- .has-bag-cover>.bag-study{margin-top:max(var(--section-content-gap),45svh)}
-}
+/* Shop introduction and product study follow the native document flow. */
+.bag-study-scene{position:relative;width:100%}
+.bag-study-lead{display:flex;flex-direction:column;gap:var(--section-content-gap)}
+.bag-study-scene>.bag-study{position:relative;margin-top:0;padding-top:calc(var(--reading) * 1.18)}
 
 
 .shop-signup{width:100%;padding-block:var(--space);background:var(--beige);color:var(--cranberry-brown)}

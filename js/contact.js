@@ -20,7 +20,7 @@
           <button class="contact-close" type="button" data-close><span>Close</span><span class="contact-x" aria-hidden="true"></span></button>
         </div>
         <form class="contact-form" id="contact-form" novalidate>
-          <h2 class="contact-title" id="contact-title">Book an intro</h2>
+          <h2 class="contact-title" id="contact-title">Hello.</h2>
           <p class="contact-intro">Tell us a little about you and what you have in mind.</p>
           <p class="contact-notice">This form isn’t connected yet. Nothing you enter is sent or saved.</p>
           <div class="field">

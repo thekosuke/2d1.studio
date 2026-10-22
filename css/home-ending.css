@@ -1,12 +1,12 @@
-/* Home ends on Soft Beige; other pages retain their existing dark ending. */
-body.home-page{--ending-ground:var(--beige);--ending-ink:var(--cranberry-brown);--ending-muted:var(--sub-gray)}
+/* Home signup and footer share the dark reveal used by other pages. */
+body.home-page{--ending-ground:var(--ash-brown);--ending-ink:var(--white);--ending-muted:var(--white)}
 /* The story passes over one shared signup/footer layer. */
 .home-ending{position:relative;z-index:0;background:var(--ending-ground,var(--ash-brown));color:var(--ending-ink,var(--beige));--ink:var(--ending-ink,var(--beige));--sub-gray:var(--ending-muted,var(--sand))}
 .js .home-ending{position:sticky;bottom:var(--ending-bottom,0px)}
 .home-page .home-ending .shop-signup,.home-page .home-ending .site-footer{background:var(--ending-ground,var(--ash-brown));color:var(--ending-ink,var(--beige))}
 .home-ending .site-footer .social-platform{color:var(--ending-ink,var(--beige))}
 .home-page .home-ending .connect-form input{color:var(--ending-ink,var(--beige));caret-color:var(--ending-ink,var(--beige))}
-.home-page .home-ending .connect-form input::placeholder{color:color-mix(in srgb,var(--ending-ink,var(--beige)) 45%,transparent)}
+.home-page .home-ending .connect-form input::placeholder{color:color-mix(in srgb,var(--ending-ink,var(--beige)) 65%,transparent);font-weight:400;-webkit-text-fill-color:currentColor}
 .home-page .home-ending .connect-form input:disabled{-webkit-text-fill-color:var(--ending-ink,var(--beige))}
 .home-page .home-ending .signup-field::after{border-color:color-mix(in srgb,var(--ending-ink,var(--beige)) 30%,transparent)}
 .home-page .home-ending .intro-cta:is(:hover,:focus-visible) .pixel-arrow::before{color:var(--ending-ink,var(--beige))}
@@ -31,7 +31,7 @@ body .page-nav a.on-ending{color:var(--ending-ink,var(--beige))}
 /* Give signup and Contact the same generous, viewport-sized pause. */
 .home-ending :is(.shop-signup,.ending-contact){box-sizing:border-box;min-height:70vh;display:flex;flex-direction:column;justify-content:center;padding-block:var(--space)}
 
-.home-page .home-ending{--text-link-hover:var(--cranberry-brown)}
+.home-page .home-ending{--text-link-rest:var(--red);--text-link-hover:var(--beige)}
 
 /* About and project endings invert on Ash Brown. */
 body.about-page{--ending-ground:var(--ash-brown);--ending-ink:var(--white);--ending-muted:var(--white)}
@@ -45,7 +45,7 @@ body.about-page .mobile-nav-toggle.on-ending{color:var(--white)}
 
 body.about-page .page-nav a.on-ending,body.about-page .page-nav a.on-ending .nav-label{color:var(--white)!important;-webkit-text-fill-color:var(--white)!important}
 .about-ending .intro-cta .pixel-arrow::before{color:var(--white)}
-.about-ending .intro-cta:is(:hover,:focus-visible) .pixel-arrow::before{color:var(--red)}
+.home-ending.about-ending .ending-contact .intro-cta:is(:hover,:focus-visible) .pixel-arrow::before{color:var(--red)}
 .about-ending .social-links a{color:var(--white)}
 .about-ending .social-links a:is(:hover,:focus-visible){color:var(--red)}
 
@@ -59,3 +59,13 @@ body.about-page .page-nav a.on-ending,body.about-page .page-nav a.on-ending .nav
 /* The eyes are a separate beat; heading and CTA form one invitation. */
 .about-ending .ending-contact-label{margin-bottom:16px}
 @media(max-width:767px){.ending-eyes-hover{margin-bottom:48px}}
+
+/* Fixed navigation and footer controls stay readable over Home’s dark ending. */
+body.home-page .page-nav a.on-ending .nav-label{color:var(--beige);background-image:linear-gradient(90deg,var(--red) calc(var(--nav-sweep)*100%),var(--beige) 0)}
+body.home-page .mobile-nav-toggle.on-ending{color:var(--beige)}
+.home-page .home-ending .social-links a{color:var(--ending-ink)}
+.home-page .home-ending .social-links a:is(:hover,:focus-visible){color:var(--red)}
+.home-page .home-ending .signup-field:focus-within::after{border-color:var(--red)}
+
+/* Home and About share the same Contact invitation and compact footer. */
+.home-ending.about-ending .site-footer{padding-block:24px}

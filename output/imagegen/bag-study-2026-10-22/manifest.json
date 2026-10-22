@@ -1,0 +1,74 @@
+[
+  {
+    "name": "2d-tote-bicolor-studio",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-studio.webp",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 202368,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-studio.png"
+  },
+  {
+    "name": "2d-tote-bicolor-daylight",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-daylight.webp",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 268762,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-daylight.png"
+  },
+  {
+    "name": "2d-tote-original-studio",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-original-studio.webp",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 204536,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-original-studio.png"
+  },
+  {
+    "name": "2d-tote-original-daylight",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-original-daylight.webp",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 300602,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-original-daylight.png"
+  },
+  {
+    "name": "2d-tote-bicolor-daylight-hanging",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-daylight-hanging.webp",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 172712,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-daylight-hanging.png"
+  },
+  {
+    "name": "2d-tote-bicolor-daylight-hanging-neutral",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-daylight-hanging-neutral.webp",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 156942,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-daylight-hanging-neutral.png"
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 263620,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor.png"
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v2",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v2.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 241242,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v2.png"
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v4",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v4.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 110554,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v4.png"
+  }
+]

@@ -150,12 +150,13 @@
     // Request the final sharp source once during a zoom, rather than each
     // intermediate animation size. Never undersize the currently drawn square.
     const sourceCell=Math.max(cell,motion?.target.cell||cell);
-    const imageSize=`${Math.ceil((sourceCell-(width<=600?32:48))/32)*32}px`;
+    const imageSize=shopPreview?'320px':`${Math.ceil((sourceCell-(width<=600?32:48))/32)*32}px`;
     canvas.style.setProperty('--object-cell',`${cell}px`);
     const firstColumn=Math.floor(-x/cell)-1,firstRow=Math.floor(-y/row)-1,wanted=new Set();
     for(let line=firstRow;line<=firstRow+Math.ceil(height/row)+2;line++)for(let column=firstColumn;column<=firstColumn+Math.ceil(width/cell)+2;column++){
       const key=tileKey(column,line),item=active[indexAt(column,line,active.length)];wanted.add(key);
       let tile=tiles.get(key);if(!tile){tile=createTile(item);layer.append(tile);tiles.set(key,tile);}
+      if(shopPreview)tile.style.removeProperty('display');
       tile.dataset.column=column;tile.dataset.line=line;
       // Select a sharp source for the rendered square as zoom changes.
       const image=tile.querySelector('img');
@@ -171,7 +172,12 @@
       tile.classList.toggle('is-keyboard-target',column===(focusMode?focusColumn:center.column)&&line===(focusMode?focusRow:center.line));
       tile.style.transform=`translate(${column*cell+x}px,${line*row+y}px)`;
     }
-    for(const [key,tile] of tiles)if(!wanted.has(key)){tile.remove();tiles.delete(key);}
+    // The preview always retraces the same centered zoom. Retain its decoded
+    // tiles instead of rebuilding them when the view widens again.
+    for(const [key,tile] of tiles)if(!wanted.has(key)){
+      if(shopPreview)tile.style.display='none';
+      else{tile.remove();tiles.delete(key);}
+    }
   }
   function createTile(item){
     const tile=document.createElement('figure');tile.className='objects-tile';tile.dataset.object=item.id;tile._item=item;
@@ -895,15 +901,12 @@
   const learnMore=infoDialog.querySelector('.objects-info-about');
   const stackedSheets=matchMedia('(max-width: 899px)');
   const animateInfoEntrance=sheet=>sheet.animate([
-    {opacity:0,transform:'translateY(32px)',offset:0},
-    {opacity:1,transform:'translateY(-8px)',offset:.6},
-    {opacity:1,transform:'translateY(3px)',offset:.82},
+    {opacity:0,transform:'translateY(-32px)',offset:0},
+    {opacity:1,transform:'translateY(8px)',offset:.6},
+    {opacity:1,transform:'translateY(-3px)',offset:.82},
     {opacity:1,transform:'translateY(0)',offset:1}
   ],{duration:720,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
   let aboutMotion=null,aboutClosing=false;
-  learnMore.setAttribute('aria-haspopup','dialog');
-  learnMore.setAttribute('aria-controls','objects-about-dialog');
-  learnMore.setAttribute('aria-expanded','false');
   const positionAbout=()=>{
     if(!aboutDialog.open)return;
     const rect=infoDialog.getBoundingClientRect();
@@ -929,16 +932,6 @@
     aboutMotion=aboutDialog.animate([{opacity:1,transform:'translateX(0)'},{opacity:0,transform:'translateX(24px)'}],{duration:280,easing:'cubic-bezier(.2,.8,.2,1)'});
     aboutMotion.onfinish=()=>{aboutMotion=null;finish();};
   };
-  learnMore.addEventListener('click',event=>{
-    event.preventDefault();
-    if(aboutDialog.open&&!aboutClosing){aboutDialog.querySelector('h2').focus({preventScroll:true});return;}
-    aboutMotion?.cancel();aboutMotion=null;aboutClosing=false;aboutDialog.inert=false;
-    clearInfoEntrance();
-    if(!aboutDialog.open){aboutDialog.show();aboutDialog.querySelector('.objects-about-scroll').scrollTop=0;}
-    positionAbout();learnMore.setAttribute('aria-expanded','true');
-    if(!reduced.matches)aboutMotion=animateInfoEntrance(aboutDialog);
-    aboutDialog.querySelector('h2').focus({preventScroll:true});
-  });
   aboutDialog.querySelector('.objects-info-close').addEventListener('click',()=>closeAbout());
   aboutDialog.addEventListener('click',event=>{
     const link=event.target.closest('a[href^="#"]');
@@ -992,7 +985,7 @@
     const current=getComputedStyle(infoDialog);
     const start={opacity:current.opacity,transform:current.transform};
     clearInfoEntrance();
-    infoEntrance=infoDialog.animate([start,{opacity:0,transform:'translateY(32px)'}],{duration:280,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+    infoEntrance=infoDialog.animate([start,{opacity:0,transform:'translateY(-32px)'}],{duration:280,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
     infoEntrance.onfinish=()=>{if(infoClosing)infoDialog.close();};
   };
   const openInfo=()=>{
@@ -1053,7 +1046,7 @@
     };
     const stopPreview=()=>{cancelAnimationFrame(previewFrame);previewFrame=0;previewPose(0)};
     const tickPreview=time=>{
-      const phase=(time-previewStarted)%12000/12000;
+      const phase=(time-previewStarted)%6000/6000;
       previewPose((1-Math.cos(phase*Math.PI*2))*50);
       previewFrame=requestAnimationFrame(tickPreview);
     };
@@ -1063,6 +1056,12 @@
       if(event.data==='fc-preview-stop')stopPreview();
     });
     reduced.addEventListener('change',()=>{if(reduced.matches)stopPreview()});
+    // The initial ResizeObserver delivery must not discard the decoded tiles.
+    measuredWidth=canvas.clientWidth;measuredHeight=canvas.clientHeight;
+    previewPose(0);draw();
+    // Keep the parent's static monitor visible until the first canvas is decoded.
+    Promise.all([...layer.querySelectorAll('img[src]')].map(image=>image.decode().catch(()=>{})))
+      .then(()=>requestAnimationFrame(()=>parent.postMessage('fc-preview-ready',location.origin)));
   }
   else if(reduced.matches){if(!infoSeen)openInfo();}
   else{

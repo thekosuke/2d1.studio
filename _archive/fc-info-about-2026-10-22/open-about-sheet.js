@@ -1,0 +1,10 @@
+  learnMore.addEventListener('click',event=>{
+    event.preventDefault();
+    if(aboutDialog.open&&!aboutClosing){aboutDialog.querySelector('h2').focus({preventScroll:true});return;}
+    aboutMotion?.cancel();aboutMotion=null;aboutClosing=false;aboutDialog.inert=false;
+    clearInfoEntrance();
+    if(!aboutDialog.open){aboutDialog.show();aboutDialog.querySelector('.objects-about-scroll').scrollTop=0;}
+    positionAbout();learnMore.setAttribute('aria-expanded','true');
+    if(!reduced.matches)aboutMotion=animateInfoEntrance(aboutDialog);
+    aboutDialog.querySelector('h2').focus({preventScroll:true});
+  });

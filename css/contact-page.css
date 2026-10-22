@@ -42,7 +42,7 @@
 /* Editorial introduction beside the working form. */
 .contact-page-main{width:min(1040px,calc(100% - 96px));padding-top:144px}
 .contact-page-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);column-gap:80px;align-items:start}
-.contact-page-heading{display:flex;flex-direction:column;gap:24px;min-width:0}
+.contact-page-heading{display:flex;flex-direction:column;gap:12px;min-width:0}
 .contact-page #contact .contact-page-heading .contact-intro{margin:0}
 .contact-page #contact .contact-sheet{min-width:0}
 .contact-page #contact .contact-head{display:none}
@@ -76,5 +76,9 @@
 /* Comfortable touch targets without changing the desktop chip rhythm. */
 @media(pointer:coarse){.contact-page #contact .chip span{min-height:44px;display:flex;align-items:center}}
 
-/* Contact uses the same reading edge as About, Home and footer social links. */
-.about-page.contact-page .contact-page-main{width:var(--reading-width);max-width:var(--column);margin-left:var(--reading-left);margin-right:auto}
+/* Center Contact’s reading column and its footer social links together. */
+.about-page.contact-page{--reading-width:min(680px,calc(100% - 48px));--reading-left:calc((100% - var(--reading-width))/2)}
+.about-page.contact-page .contact-page-main{width:var(--reading-width);max-width:680px;margin-left:var(--reading-left);margin-right:auto}
+@media(min-width:1100px){.contact-page .site-footer .footer-line .social-links{margin-right:var(--reading-left)}}
+
+.contact-page .contact-page-heading .contact-title{margin:0}

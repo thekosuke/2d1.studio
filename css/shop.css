@@ -57,8 +57,9 @@ html:has(> body.shop-page)::-webkit-scrollbar{display:none!important;width:0!imp
 .shop-finds-stage{position:absolute;inset:6%;background:var(--red);overflow:hidden;clip-path:inset(2px);isolation:isolate}
 .shop-finds-stage>img{display:block;width:100%;height:100%;object-fit:contain}
 .shop-finds-live{position:absolute;left:8.53%;top:21.05%;width:82.94%;height:47.05%;overflow:hidden;pointer-events:none}
-.shop-finds-live:has(iframe){background:var(--beige)}
-.shop-finds-live iframe{position:absolute;left:0;top:0;width:1600px;height:900px;border:0;transform-origin:top left;pointer-events:none}
+.shop-finds-live.is-ready{background:var(--beige)}
+.shop-finds-live iframe{position:absolute;left:0;top:0;width:1600px;height:900px;border:0;transform-origin:top left;pointer-events:none;visibility:hidden}
+.shop-finds-live.is-ready iframe{visibility:visible}
 
 /* Shift the image left with a slight clockwise tilt. */
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
