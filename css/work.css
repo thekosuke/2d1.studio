@@ -389,3 +389,8 @@ body.work-page>.site-footer .footer-line{min-height:calc(var(--language-size) + 
  body.work-page>.site-footer .footer-line.column{flex-wrap:wrap}
  body.work-page>.site-footer .footer-line>p{flex-basis:100%}
 }
+
+/* Client websites share the CTA's single label-and-icon color sweep. */
+.work-client-link{display:inline-flex;align-items:center;gap:.35em}
+.work-client-link .pixel-arrow{display:inline-block;position:relative;width:.65em;height:.65em;flex:none}
+.work-client-link .pixel-arrow::before{content:'';position:absolute;inset:0;background:currentColor;mask:url('../img/icons/pixel-arrow-up-right.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-arrow-up-right.svg') center/contain no-repeat}

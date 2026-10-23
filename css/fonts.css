@@ -1,14 +1,4 @@
-/* Brand webfonts supplied with the project. Keep replacements local. */
-@font-face{font-family:Rand;src:url('../fonts/Rand/Rand-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-
-@font-face{font-family:Rand;src:url('../fonts/Rand/Rand-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-
-/* SC Walla trial files supplied for this design iteration. */
-@font-face{font-family:'SC Walla';src:url('../fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'SC Walla';src:url('../fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-
-/* Exact Figma family name for the introduction’s Medium face. */
-@font-face{font-family:'SC Walla UnlicensedTrial';src:url('../fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-
-/* Additional weights used in the owner’s typography revision (298:650). */
-@font-face{font-family:'SC Walla';src:url('../fonts/SC Walla Trial/WOFF2/SCWallaUnlicensedTrial-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+/* Purchased SC Walla webfonts: native Regular, Medium and Bold weights. */
+@font-face{font-family:'SC Walla';src:url('../fonts/SC Walla/SCWalla-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'SC Walla';src:url('../fonts/SC Walla/SCWalla-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'SC Walla';src:url('../fonts/SC Walla/SCWalla-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}

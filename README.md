@@ -350,8 +350,9 @@ project views: all 12 artwork slots load, image pairs have equal heights, the
 new collage retains transparency, and the 5.2 MB video autoplays/loops muted
 without controls, pauses offscreen, and can be paused/resumed with click or
 keyboard. Gallery-local reference and dimension checks pass. The broader site
-audit currently reports two missing legacy Rand font files in `css/fonts.css`,
-following unrelated font-directory deletions; those changes were left intact.
+audit reported two missing legacy Rand font files in `css/fonts.css` at that
+checkpoint. Those unused declarations were removed during the purchased Walla
+font replacement on 23 October; preview packaging now passes.
 
 ### DeepDrip gallery — 21 October 2026
 
@@ -608,3 +609,9 @@ small supporting text 1.65. These unitless leading tokens apply at every
 breakpoint, keeping existing sizes, weights and English metrics. This follows
 the Digital Agency’s minimum 1.5 reading-text guidance with extra room for
 Japanese paragraphs: https://design.digital.go.jp/dads/foundations/typography/
+
+Purchased Walla fonts — 23 October: active pages now load the purchased Regular
+(400), Medium (500), and Bold (700) WOFF2 files from `fonts/SC Walla/`.
+Font preloads and the icon-sheet generator use the purchased files as well;
+the trial family alias is removed from active styling. Japanese keeps its
+existing Japanese glyph font and uses purchased Walla for Latin characters.

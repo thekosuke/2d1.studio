@@ -76,7 +76,7 @@ def raster(rows, size, color=RED):
 
 
 def font(size):
-    return ImageFont.truetype(str(ROOT / "fonts/SC Walla Trial/OTF/SCWallaUnlicensedTrial-Regular.otf"), size)
+    return ImageFont.truetype(str(ROOT / "fonts/SC Walla/SCWalla-Regular.woff2"), size)
 
 
 def main():
