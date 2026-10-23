@@ -90,7 +90,7 @@
    movingLabel.setAttribute('transform',`matrix(${mix(matrix.a,size)} ${mix(matrix.b,0)} ${mix(matrix.c,0)} ${mix(matrix.d,size)} ${mix(sourceX,textLeft-frame.left)} ${mix(sourceY,baseline.getBoundingClientRect().top-frame.top)})`);
    movingLabel.style.fontWeight=`${Math.round(mix(700,parseFloat(type.fontWeight)))}`;
    movingLabel.style.letterSpacing=`${(parseFloat(type.letterSpacing)||0)/size*morph}px`;
-   movingLabel.style.fill=`rgb(${255+(250-255)*appear},${255+(240-255)*appear},${255+(230-255)*appear})`;
+   movingLabel.style.fill='var(--beige)';
   }
   paintChrome();
  }

@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>2D Tote photo review</title>
+<style>html,body{margin:0;width:100%;height:100%;background:#191416}img{width:100%;height:100%;object-fit:cover;object-position:43% center;display:block}nav{position:fixed;bottom:24px;left:24px;display:flex;gap:1px;background:#faf0e6;padding:1px}button{border:0;padding:12px 18px;font:14px Arial,sans-serif;background:#191416;color:#faf0e6;cursor:pointer}button[aria-pressed=true],button:focus-visible{background:#faf0e6;color:#320505;outline:0}</style>
+<img id="photo" src="../img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v15.webp" alt="2D Tote outdoor photograph being reviewed at full-screen size">
+<nav aria-label="Compare photo versions"><button data-version="13" aria-pressed="false">Preferred photo</button><button data-version="15" aria-pressed="true">Square tag</button></nav>
+<script>document.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.querySelector('img').src='../img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v'+button.dataset.version+'.webp'}));</script></html>

@@ -2,7 +2,7 @@
 .objects-page{--object-cell:280px;background:var(--beige);line-height:1.4}
 .objects-header{display:grid;grid-template-columns:1fr 96px 1fr;align-items:center;gap:24px;padding:16px 32px}
 .objects-header .site-logo{width:96px}
-.objects-header>a:not(.site-logo){font:500 12px/1.4 var(--font);letter-spacing:.04em;min-height:44px;display:flex;align-items:center;text-transform:uppercase}
+.objects-header>a:not(.site-logo){font:var(--font-small-label) var(--font);letter-spacing:.04em;min-height:44px;display:flex;align-items:center;text-transform:uppercase}
 .objects-header>a:last-child{justify-self:end}.objects-header>a:hover{color:var(--red)}
 .objects-main{padding:32px 0 0}
 .objects-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;padding:0 32px 28px}
@@ -199,7 +199,7 @@
 .objects-dialog-close span{font:400 28px/1 var(--font)}
 
 /* Floating navigation: backgrounds belong to labels, never the menu panel. */
-.finds-home-menu{position:relative;justify-self:start;pointer-events:auto;font:500 12px/1.4 var(--font);letter-spacing:.04em;;text-transform:uppercase}
+.finds-home-menu{position:relative;justify-self:start;pointer-events:auto;font:var(--font-small-label) var(--font);letter-spacing:.04em;;text-transform:uppercase}
 .finds-home-trigger{display:block;width:fit-content;padding:8px 12px;background:var(--white);border:1px solid var(--ink)}
 .finds-page-nav{position:absolute;left:0;top:100%;padding-top:8px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:140px;background:transparent;visibility:hidden;pointer-events:none}
 .finds-home-menu:is(.is-open,.is-closing) .finds-page-nav{visibility:visible}
@@ -209,7 +209,7 @@
 .finds-nav-divider{width:64px;height:1px;background:var(--ink);margin:8px 0}
 .objects-ready .objects-view-dock .objects-tools-panel{width:max-content;min-width:140px;padding:0;left:0;background:transparent;border:0;overflow:visible}
 .objects-categories{align-items:flex-start;gap:4px}
-.objects-categories button{width:fit-content;background:var(--white);padding:6px 12px;font:500 12px/1.4 var(--font);letter-spacing:.04em;;text-transform:uppercase}
+.objects-categories button{width:fit-content;background:var(--white);padding:6px 12px;font:var(--font-small-label) var(--font);letter-spacing:.04em;;text-transform:uppercase}
 .objects-categories button:hover:not([aria-pressed="true"]){background:var(--white);color:var(--red)}
 .objects-ready .objects-view-dock .objects-tools-panel{position:absolute;left:0;bottom:calc(100% + 8px)}
 .objects-page:not(.objects-ready) .finds-home-menu:is(:hover,:focus-within) .finds-page-nav{opacity:1;transform:none;visibility:visible;pointer-events:auto}
@@ -222,7 +222,7 @@
 @media(prefers-reduced-motion:reduce){.finds-menu-motion .finds-menu-item{transition:none;transform:none}}
 
 /* One shared label style and border weight for every floating control. */
-.objects-page{--floating-label:500 12px/1.4 var(--font);--floating-border:1px solid var(--ink)}
+.objects-page{--floating-label:var(--font-small-label) var(--font);--floating-border:1px solid var(--ink)}
 .objects-page :is(.finds-home-trigger,.finds-page-nav a,.objects-tools summary,.objects-categories button,.objects-language a,.objects-info,.objects-zoom button){font:var(--floating-label);letter-spacing:.04em;text-transform:uppercase}
 .objects-page :is(.finds-home-trigger,.finds-page-nav a,.objects-categories button){padding:6px 12px;min-height:33px;border:var(--floating-border)}
 .objects-ready :is(.objects-tools,.objects-language,.objects-zoom),.objects-page .objects-info{border:var(--floating-border)}
@@ -274,7 +274,7 @@
 #object-dialog .objects-dialog-image{flex:0 0 100%;width:100%;min-width:0;height:100%!important;object-fit:cover;scroll-snap-align:start;scroll-snap-stop:always}
 #object-dialog .objects-dialog-copy{position:static;max-height:none;overflow:visible;padding:32px clamp(24px,5vw,56px) 40px;gap:20px}
 #object-dialog .objects-dialog-close{top:84px;right:16px;z-index:3}
-.objects-product-peek{display:flex;align-items:center;justify-content:center;gap:16px;width:96%;margin:0 auto;padding:0 20px;border:0;background:var(--beige);color:var(--ink);font:400 12px/1.4 var(--font);overflow:hidden;cursor:pointer}
+.objects-product-peek{display:flex;align-items:center;justify-content:center;gap:16px;width:96%;margin:0 auto;padding:0 20px;border:0;background:var(--beige);color:var(--ink);font:var(--font-small) var(--font);overflow:hidden;cursor:pointer}
 .objects-product-peek img{width:64px;height:64px;object-fit:contain;flex:none}
 .objects-product-peek span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .objects-product-peek:hover,.objects-product-peek:focus-visible{background:var(--red)}
@@ -318,7 +318,7 @@
  #object-dialog .objects-dialog-image{flex:0 0 100%;width:100%;min-width:0;min-height:0;height:auto!important;aspect-ratio:1 / 1;object-fit:cover;object-position:center;scroll-snap-align:start;scroll-snap-stop:always;pointer-events:none;-webkit-user-drag:none}
  #object-dialog .objects-dialog-photo.is-interactive{cursor:pointer}
  #object-dialog .objects-dialog-photo:focus-visible{background-color:transparent!important}
- #object-dialog .objects-photo-count:not([hidden]){position:absolute;z-index:1;right:12px;bottom:12px;display:block;margin:0;padding:0;border:0;background:transparent;box-shadow:none;color:var(--ink);font:400 12px/1.4 var(--font);font-variant-numeric:tabular-nums;pointer-events:none;text-transform:uppercase}
+ #object-dialog .objects-photo-count:not([hidden]){position:absolute;z-index:1;right:12px;bottom:12px;display:block;margin:0;padding:0;border:0;background:transparent;box-shadow:none;color:var(--ink);font:var(--font-small) var(--font);font-variant-numeric:tabular-nums;pointer-events:none;text-transform:uppercase}
  #object-dialog .objects-dialog-photo:focus-visible + .objects-photo-count{color:var(--red);text-decoration:underline;text-underline-offset:4px}
  #object-dialog .objects-dialog-copy{grid-column:1;grid-row:2;position:static;max-height:none;overflow:visible;padding:16px 20px 20px;gap:12px;overflow-wrap:anywhere}
  #object-dialog .objects-dialog-description{font-size:17px}
@@ -414,7 +414,7 @@
 
 .objects-page .objects-search:focus,.objects-page .objects-search:focus-visible{background:var(--white)!important}
 
-@media(min-width:768px){#object-dialog .objects-photo-count:not([hidden]){display:block;position:absolute;z-index:3;top:auto;left:auto;right:calc(40% + 12px);bottom:calc(64px + 12px + 12px + env(safe-area-inset-bottom));margin:0;padding:0;border:0;background:transparent;box-shadow:none;color:var(--ink);font:400 12px/1.4 var(--font);font-variant-numeric:tabular-nums;pointer-events:none;text-transform:uppercase}}
+@media(min-width:768px){#object-dialog .objects-photo-count:not([hidden]){display:block;position:absolute;z-index:3;top:auto;left:auto;right:calc(40% + 12px);bottom:calc(64px + 12px + 12px + env(safe-area-inset-bottom));margin:0;padding:0;border:0;background:transparent;box-shadow:none;color:var(--ink);font:var(--font-small) var(--font);font-variant-numeric:tabular-nums;pointer-events:none;text-transform:uppercase}}
 
 .objects-tile img.dombo-wide,.object-card img.dombo-wide{object-fit:contain!important}
 
@@ -424,7 +424,7 @@
 .objects-tile img.freckle-green,.object-card img.freckle-green{scale:1.72;transform-origin:center}
 
 .objects-dialog-copy .objects-purchased{border:0}
-.objects-dialog-tags button{padding:5px 8px;border:1px solid var(--line);background:transparent;color:var(--sub-gray);font:400 12px/1.4 var(--font);text-transform:uppercase;cursor:pointer}
+.objects-dialog-tags button{padding:5px 8px;border:1px solid var(--line);background:transparent;color:var(--sub-gray);font:var(--font-small) var(--font);text-transform:uppercase;cursor:pointer}
 .objects-dialog-tags button:hover,.objects-dialog-tags button:focus-visible{color:var(--red);border-color:var(--red)}
 
 /* Owner direction: fill every detail frame edge to edge. */
@@ -546,8 +546,8 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 .objects-search-suggestions{position:absolute;bottom:calc(100% + 12px);left:0;width:min(420px,calc(100vw - 32px));max-height:min(380px,50dvh);overflow:auto;padding:16px;background:var(--white);border:1px solid var(--ink);box-sizing:border-box;text-align:left}
 .objects-search-suggestions[hidden]{display:none}
 .objects-search-suggestions>div+div{margin-top:16px}
-.objects-search-suggestions p{font:500 12px/1.4 var(--font);text-transform:uppercase;margin:0 0 8px;color:var(--sub-gray)}
-.objects-search-suggestions button{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;font:500 12px/1.4 var(--font);padding:6px 8px;margin:0 6px 6px 0;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.objects-search-suggestions p{font:var(--font-small-label) var(--font);text-transform:uppercase;margin:0 0 8px;color:var(--sub-gray)}
+.objects-search-suggestions button{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;font:var(--font-small-label) var(--font);padding:6px 8px;margin:0 6px 6px 0;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
 .objects-search-suggestions button:is(:hover,:focus-visible,[aria-pressed="true"]),#object-dialog .objects-dialog-tags button:is(:hover,:focus-visible){color:var(--red)!important;border-color:var(--red)!important;background:transparent!important}
 
 #objects-info-dialog{transform-origin:top right}
@@ -574,10 +574,10 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 /* Revised product sheet, Figma 358:649. */
 #object-dialog .objects-dialog-copy{padding:48px 32px 32px;gap:20px;justify-content:flex-start}
 #object-dialog .objects-detail-summary{display:flex;flex-direction:column;gap:20px;flex:1;min-width:0}
-#object-dialog .objects-dialog-brand{font:400 13px/24px var(--font);color:var(--sub-gray);margin:0}
+#object-dialog .objects-dialog-brand{font:var(--font-caption) var(--font);color:var(--sub-gray);margin:0}
 #object-dialog .objects-dialog-title{font:700 40px/1.2 var(--font);margin:0}
-#object-dialog .objects-dialog-description{font:400 16px/24px var(--font);color:var(--sub-gray);margin:-8px 0 0}
-#object-dialog .objects-dialog-tags button{font:400 11px/16.8px var(--font);padding:4px 6px;border-color:var(--ink);letter-spacing:.3px}
+#object-dialog .objects-dialog-description{font:var(--font-ui-body) var(--font);color:var(--sub-gray);margin:-8px 0 0}
+#object-dialog .objects-dialog-tags button{font:var(--font-small) var(--font);padding:4px 6px;border-color:var(--ink);letter-spacing:var(--type-track)}
 #object-dialog .objects-purchased[hidden]{display:none}
 #object-dialog .objects-detail-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;min-width:0}
 #object-dialog .objects-detail-colors{display:flex;flex:none;align-items:center;margin-left:auto}
@@ -588,7 +588,7 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 #object-dialog .objects-dialog-close span{font-size:28px}
 #object-dialog .objects-dialog-close:hover,#object-dialog .objects-dialog-close:focus-visible{color:var(--beige)!important;background:var(--red)!important}
 #object-dialog .objects-dialog-gallery{position:relative}
-#object-dialog .objects-dialog-credit{position:sticky;bottom:16px;margin:0 48px 0 16px;height:0;transform:translateY(-16px);z-index:2;font:400 11px/16.8px var(--font);letter-spacing:.3px;color:var(--sub-gray);pointer-events:auto}
+#object-dialog .objects-dialog-credit{position:sticky;bottom:16px;margin:0 48px 0 16px;height:0;transform:translateY(-16px);z-index:2;font:var(--font-small) var(--font);letter-spacing:var(--type-track);color:var(--sub-gray);pointer-events:auto}
 #object-dialog>.objects-product-peek{position:relative;padding-inline:44px}
 #object-dialog .objects-peek-arrow{position:absolute;top:50%;transform:translateY(-50%);font-size:20px}
 #object-dialog [data-product-step="-1"] .objects-peek-arrow{left:16px}
@@ -631,10 +631,10 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
  #object-dialog .objects-detail-summary{gap:24px}
 }
 /* Compact collection sheet with an edge-to-edge action row. */
-.objects-page #objects-info-dialog h2{font:500 var(--type-body)/1.6 var(--font);letter-spacing:0;margin-bottom:10px}
-.objects-page #objects-info-dialog :is(p,.objects-info-note){font:400 var(--type-body)/1.6 var(--font);letter-spacing:0}
+.objects-page #objects-info-dialog h2{font:var(--font-ui) var(--font);letter-spacing:0;margin-bottom:10px}
+.objects-page #objects-info-dialog :is(p,.objects-info-note){font:var(--font-ui-body) var(--font);letter-spacing:0}
 #objects-info-dialog .objects-info-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:24px -24px -24px;align-items:stretch}
-.objects-page #objects-info-dialog .objects-info-actions a{display:flex;align-items:center;justify-content:center;margin:0;padding:12px 8px;min-height:44px;border:1px solid var(--red);background:transparent;color:var(--red);font:500 var(--type-body)/1.4 var(--font);letter-spacing:0;text-transform:none;text-decoration:none}
+.objects-page #objects-info-dialog .objects-info-actions a{display:flex;align-items:center;justify-content:center;margin:0;padding:12px 8px;min-height:44px;border:1px solid var(--red);background:transparent;color:var(--red);font:var(--font-ui) var(--font);letter-spacing:0;text-transform:none;text-decoration:none}
 .objects-page #objects-info-dialog .objects-info-actions a+a{border-left:0}
 .objects-page #objects-info-dialog .objects-info-actions a:is(:hover,:focus-visible){background:var(--red)!important;color:var(--white);text-decoration:none}
 /* Give search more room for product names. */
@@ -714,11 +714,11 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 
 /* The collection essay opens beside its original sheet, sharing its paper and grid. */
 .objects-about-dialog{position:fixed;z-index:8;inset:var(--about-top,16px) auto auto var(--about-left,16px);width:var(--about-width,40vw);height:var(--about-height,80dvh);max-width:none;max-height:calc(100dvh - 32px);margin:0;padding:0;box-sizing:border-box;border:2px solid var(--red);background:var(--white);color:var(--ink);overflow:hidden;overscroll-behavior:contain}
-.objects-about-scroll{height:100%;overflow:auto;overscroll-behavior:contain;padding:48px;scrollbar-gutter:stable;font:400 var(--type-body)/1.6 var(--font);letter-spacing:0;text-transform:none}
-.objects-about-dialog h2{font:500 var(--type-body)/1.6 var(--font);text-transform:none;margin:0 0 24px;padding:0 0 24px;border-bottom:1px solid var(--line)}
+.objects-about-scroll{height:100%;overflow:auto;overscroll-behavior:contain;padding:48px;scrollbar-gutter:stable;font:var(--font-ui-body) var(--font);letter-spacing:0;text-transform:none}
+.objects-about-dialog h2{font:var(--font-ui) var(--font);text-transform:none;margin:0 0 24px;padding:0 0 24px;border-bottom:1px solid var(--line)}
 .objects-about-dialog h2::before,.objects-about-dialog h3::before{content:none}
-.objects-about-dialog h3{font:500 var(--type-body)/1.6 var(--font);text-transform:none;margin:48px 0 24px}
-.objects-about-dialog p{font:400 var(--type-body)/1.6 var(--font);margin:0}
+.objects-about-dialog h3{font:var(--font-ui) var(--font);text-transform:none;margin:48px 0 24px}
+.objects-about-dialog p{font:var(--font-ui-body) var(--font);margin:0}
 .objects-about-dialog p+p{margin-top:24px}
 .objects-about-dialog strong{font-weight:500}
 .objects-about-dialog a{text-decoration:underline;text-underline-offset:.18em}

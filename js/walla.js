@@ -23,14 +23,16 @@
       }
       main.style.setProperty('--cover-offset', `${reduced.matches ? 0 : -remaining * coverFactor}px`);
     }
-    if (studio && !document.body.classList.contains('home-house-page')) {
+    if (studio) {
       const box = studio.getBoundingClientRect();
+      if (!document.body.classList.contains('home-house-page')) {
       // Carry the two grounds through the space between sections instead of
       // blending the entire viewport into a third color.
       main.style.setProperty('--studio-start', `${studio.offsetTop}px`);
       main.style.setProperty('--studio-end', `${studio.offsetTop + studio.offsetHeight}px`);
       const navOnStudio = box.top <= 48 && box.bottom > 48;
       document.documentElement.style.setProperty('--scene-ink', navOnStudio ? '#faf0e6' : '#320505');
+      }
       const language=document.querySelector('.home-page > .language-switch');
       if(language){
         const toggle=language.getBoundingClientRect();

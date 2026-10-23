@@ -419,3 +419,15 @@ is explicitly dropped for this iteration. Phone/tablet stay single-column.
 Docked logo color — 22 October: keep the docked 2D1 logo Icon Red when crossing
 into dark/footer backgrounds. Navigation may invert for contrast; do not turn
 the docked logo white.
+
+## Shared typography rule — 22 October 2026
+
+All future typography changes must use the shared system in
+`css/typography.css` and apply to every use of the affected style across every
+active page in both English and Japanese. Update shared tokens, role recipes
+and canonical mappings rather than individual elements or page-specific
+typographic overrides. Reuse existing roles and variants; preserve responsive
+sizing and language font selection. Follow `docs/TYPOGRAPHY.md`, regenerate
+Japanese routes when needed, and verify affected styles across routes and both
+languages at desktop and mobile widths. A request referring to one example
+changes the shared style everywhere unless the owner explicitly limits its scope.

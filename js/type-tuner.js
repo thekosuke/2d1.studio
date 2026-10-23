@@ -1,5 +1,7 @@
 /* Temporary, local-preview typography controls. Remove this script to retire. */
 (() => {
+  // Embedded Shop previews show the collection, without authoring controls.
+  if (new URLSearchParams(location.search).has('shop-preview')) return;
   if (!['localhost','127.0.0.1','::1'].includes(location.hostname)) return;
   const host=document.createElement('div');host.id='type-tuner';host.setAttribute('translate','no');
   host.style.cssText='position:fixed!important;left:12px!important;bottom:max(12px,env(safe-area-inset-bottom))!important;z-index:2147483647!important;';

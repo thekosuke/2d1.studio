@@ -1,10 +1,10 @@
 /* Home signup and footer share the dark reveal used by other pages. */
-body.home-page{--ending-ground:var(--ash-brown);--ending-ink:var(--white);--ending-muted:var(--white)}
+body.home-page{--ending-ground:var(--ash-brown);--ending-ink:var(--beige);--ending-muted:var(--beige)}
 /* The story passes over one shared signup/footer layer. */
 .home-ending{position:relative;z-index:0;background:var(--ending-ground,var(--ash-brown));color:var(--ending-ink,var(--beige));--ink:var(--ending-ink,var(--beige));--sub-gray:var(--ending-muted,var(--sand))}
 .js .home-ending{position:sticky;bottom:var(--ending-bottom,0px)}
 .home-page .home-ending .shop-signup,.home-page .home-ending .site-footer{background:var(--ending-ground,var(--ash-brown));color:var(--ending-ink,var(--beige))}
-.home-ending .site-footer .social-platform{color:var(--ending-ink,var(--beige))}
+.home-ending .site-footer .social-platform{color:var(--red)}
 .home-page .home-ending .connect-form input{color:var(--ending-ink,var(--beige));caret-color:var(--ending-ink,var(--beige))}
 .home-page .home-ending .connect-form input::placeholder{color:color-mix(in srgb,var(--ending-ink,var(--beige)) 65%,transparent);font-weight:400;-webkit-text-fill-color:currentColor}
 .home-page .home-ending .connect-form input:disabled{-webkit-text-fill-color:var(--ending-ink,var(--beige))}
@@ -24,7 +24,6 @@ body .page-nav a.on-ending{color:var(--ending-ink,var(--beige))}
 .about-ending .intro-cta:is(:hover,:focus-visible) .pixel-arrow{transform:translateX(4px)}
 @media(prefers-reduced-motion:reduce){.about-ending .intro-cta .pixel-arrow{transition:none;transform:none}}
 
-.about-ending .ending-contact-label::before{content:"";display:inline-block;width:8px;height:8px;margin-right:6px;background:var(--red);vertical-align:middle}
 .about-ending .ending-contact-headline{text-transform:none;margin:0 0 32px;font:500 clamp(32px,4.45vw,64px)/1.15 var(--font);letter-spacing:-.025em;color:var(--ending-ink,var(--beige))}
 .about-ending .ending-contact-headline::before{content:none}
 
@@ -34,19 +33,18 @@ body .page-nav a.on-ending{color:var(--ending-ink,var(--beige))}
 .home-page .home-ending{--text-link-rest:var(--red);--text-link-hover:var(--beige)}
 
 /* About and project endings invert on Ash Brown. */
-body.about-page{--ending-ground:var(--ash-brown);--ending-ink:var(--white);--ending-muted:var(--white)}
-.home-ending.about-ending{--text-link-rest:var(--white);--text-link-hover:var(--red)}
-.about-ending .ending-contact-label::before{background:var(--red)}
-body.about-page .page-nav a.on-ending .nav-label{background:none;-webkit-text-fill-color:var(--white)}
-body.about-page .page-nav a.on-ending::before{background:var(--white)}
+body.about-page{--ending-ground:var(--ash-brown);--ending-ink:var(--beige);--ending-muted:var(--beige)}
+.home-ending.about-ending{--text-link-rest:var(--beige);--text-link-hover:var(--red)}
+body.about-page .page-nav a.on-ending .nav-label{background:none;-webkit-text-fill-color:var(--beige)}
+body.about-page .page-nav a.on-ending::before{background:var(--beige)}
 /* The docked brand mark stays Icon Red across light and dark surfaces. */
 body.about-page .site-logo.on-ending img{filter:none}
-body.about-page .mobile-nav-toggle.on-ending{color:var(--white)}
+body.about-page .mobile-nav-toggle.on-ending{color:var(--beige)}
 
-body.about-page .page-nav a.on-ending,body.about-page .page-nav a.on-ending .nav-label{color:var(--white)!important;-webkit-text-fill-color:var(--white)!important}
-.about-ending .intro-cta .pixel-arrow::before{color:var(--white)}
+body.about-page .page-nav a.on-ending,body.about-page .page-nav a.on-ending .nav-label{color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important}
+.about-ending .intro-cta .pixel-arrow::before{color:var(--beige)}
 .home-ending.about-ending .ending-contact .intro-cta:is(:hover,:focus-visible) .pixel-arrow::before{color:var(--red)}
-.about-ending .social-links a{color:var(--white)}
+.about-ending .social-links a{color:var(--beige)}
 .about-ending .social-links a:is(:hover,:focus-visible){color:var(--red)}
 
 /* Footer eyes blink on hover rather than on a repeating timer. */
@@ -69,3 +67,7 @@ body.home-page .mobile-nav-toggle.on-ending{color:var(--beige)}
 
 /* Home and About share the same Contact invitation and compact footer. */
 .home-ending.about-ending .site-footer{padding-block:24px}
+
+.home-ending .ending-contact .ending-follow-note{margin:12px 0 0;font:var(--font-small) var(--font);letter-spacing:0;color:var(--beige)}
+
+.home-ending.about-ending{--ending-ink:var(--beige);--ending-muted:var(--beige);--text-link-rest:var(--beige)}

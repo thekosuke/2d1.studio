@@ -1,76 +1,94 @@
+/* Typography roles. Change these metrics once, not at individual text elements.
+   Each font token contains weight size/leading; append var(--font) at use sites.
+   Responsive/language size aliases below remain compatible with older components. */
+:root{
+ --leading-display:1.2;--leading-statement:1.2;--leading-section:1.1;--leading-reading:1.5;--leading-ui:1.5;--leading-ui-body:1.5;--leading-caption:1.5;--leading-caption-medium:1.5;--leading-small:1.5;--leading-small-label:1.5;--leading-copy:1.5;
+ --type-reading-size:20px;--type-section-size:32px;
+ --font-display:600 var(--type-display)/var(--leading-display);
+ --font-statement:500 var(--type-lead)/var(--leading-statement);
+ --font-section:700 var(--type-section-size)/var(--leading-section);
+ --font-overview:400 var(--overview-size)/var(--overview-leading);
+ --font-reading:400 var(--type-reading-size)/var(--leading-reading);
+ --font-ui:500 var(--type-body)/var(--leading-ui);
+ --font-ui-uppercase:var(--font-caption-medium);
+ --type-ui-uppercase-track:.03em;
+ --font-ui-body:400 var(--type-body)/var(--leading-ui-body);
+ --font-ui-reading:var(--font-ui-body);
+ --font-caption:400 var(--type-spec)/var(--leading-caption);
+ --font-caption-medium:500 var(--type-spec)/var(--leading-caption-medium);
+ --font-small:400 var(--type-label)/var(--leading-small);
+ --type-small-track:.01em;
+ --font-small-label:500 var(--type-label)/var(--leading-small-label);
+ --font-small-caption:var(--font-small-label);
+ --font-copy:400 var(--type-copy)/var(--leading-copy);
+ --type-track:0;--type-label-track:.04em;
+}
 /* Shared type system. Page styles own layout; this file owns text hierarchy. */
 :root{--overview-size:32px;--overview-leading:1.3}
 @media(max-width:767px){:root{--overview-size:24px;--overview-leading:1.4}}
-:root{--type-spec:14px;--type-label:12px;--type-body:16px;--type-heading:16px;--type-copy:20px;--type-lead:28px;--type-display:44px;--type-track:0;--type-label-track:.04em;--reading:var(--type-lead);--section-title:var(--type-display)}
+:root{--type-spec:14px;--type-label:12px;--type-body:16px;--type-heading:var(--type-body);--type-copy:20px;--type-lead:28px;--type-display:44px;--type-track:0;--type-label-track:.04em;--reading:var(--type-lead);--section-title:var(--type-display)}
 @media(min-width:768px){:root{--type-copy:28px;--type-lead:40px;--type-display:64px}}
-body{font:400 var(--type-body)/1.5 var(--font);letter-spacing:var(--type-track)}
+body{font:var(--font-ui-reading) var(--font);letter-spacing:var(--type-track)}
 /* Match About's underline weight at each text size throughout the interface. */
 a,button{text-decoration-thickness:auto}
-:is(.home-page,.about-page) :is(.section-copy,.intro h1,.intro-cta),.essay-dek,.essay-lede,.essay-rest .essay-pull p{font:500 var(--type-lead)/1.2 var(--font);letter-spacing:0}
-.section-heading>p{font:500 var(--type-display)/1.2 var(--font);letter-spacing:-.02em}
+:is(.home-page,.about-page) :is(.section-copy,.intro h1,.intro-cta),.essay-dek,.essay-lede,.essay-rest .essay-pull p{font:var(--font-statement) var(--font);letter-spacing:0}
+.section-heading>p{font:var(--font-display) var(--font);letter-spacing:-.02em}
 .essay-title{font:700 var(--type-display)/1.1 var(--font);letter-spacing:0}
-.home-page .shop-support-copy,.essay-rest p{font:400 var(--type-copy)/1.5 var(--font);letter-spacing:0}
+.home-page .shop-support-copy,.essay-rest p{font:var(--font-copy) var(--font);letter-spacing:0}
 .essay-rest h2{font:700 var(--type-copy)/1.2 var(--font);letter-spacing:0}
-.section-heading h2,.essay-kicker,#contact .contact-title,#objects-info-dialog h2{font:500 var(--type-heading)/1.4 var(--font);letter-spacing:var(--type-label-track)}
-.home-page .services dt,.product-specs dt{font:500 var(--type-body)/1.4 var(--font);letter-spacing:0}
-.home-page .services dd,.product-specs dd,.product-note{font:400 var(--type-body)/1.4 var(--font);letter-spacing:0}
-.home-page .connect-form input{font:500 var(--type-lead)/1.2 var(--font);letter-spacing:0}
+.section-heading h2,.essay-kicker,#contact .contact-title,#objects-info-dialog h2{font:var(--font-ui) var(--font);letter-spacing:var(--type-label-track)}
+.home-page .services dt,.product-specs dt{font:var(--font-ui) var(--font);letter-spacing:0}
+.home-page .services dd,.product-specs dd,.product-note{font:var(--font-ui-body) var(--font);letter-spacing:0}
+.home-page .connect-form input{font:var(--font-statement) var(--font);letter-spacing:0}
 .page-nav,.js :is(.home-page,.about-page) .page-nav,.language-switch,.site-footer,.site-footer .social-platform,.button,.section-label,.footer-pages,
 #contact :is(.contact-intro,.contact-notice,.field-label,.contact-status,.contact-fallback,.chip span,.contact-send),
-.objects-dialog-tags button,.objects-photo-count{font:500 var(--type-label)/1.4 var(--font);letter-spacing:var(--type-label-track)}
+.objects-dialog-tags button,.objects-photo-count{font:var(--font-small-label) var(--font);letter-spacing:var(--type-label-track)}
 /* Caption stays a quiet uppercase label even when the logo is enlarged. */
 
-#contact .field-input{font:400 var(--type-body)/1.5 var(--font);letter-spacing:0}
-.objects-page{--floating-label:500 var(--type-label)/1.4 var(--font)}
+#contact .field-input{font:var(--font-ui-reading) var(--font);letter-spacing:0}
+.objects-page{--floating-label:var(--font-small-label) var(--font)}
 #objects-info-dialog :is(p,.objects-info-note,.objects-info-about),.objects-dialog-description,.objects-dialog-brand,.objects-dialog-credit,
-#object-dialog .objects-dialog-description,#object-dialog .objects-dialog-footer :is(.objects-dialog-link,.objects-dialog-availability){font:400 var(--type-body)/1.5 var(--font);letter-spacing:0}
+#object-dialog .objects-dialog-description,#object-dialog .objects-dialog-footer :is(.objects-dialog-link,.objects-dialog-availability){font:var(--font-ui-reading) var(--font);letter-spacing:0}
 .objects-dialog-copy h2{font:700 28px/1.2 var(--font);letter-spacing:0}
-#objects-info-dialog .objects-dialog-close{font:500 var(--type-label)/1.4 var(--font)}
-:is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel :is(a,button){font:500 var(--type-label)/1.4 var(--font);letter-spacing:var(--type-label-track);text-transform:uppercase}
+#objects-info-dialog .objects-dialog-close{font:var(--font-small-label) var(--font)}
+:is(.home-page,.about-page,.objects-page).mobile-navigation-ready .mobile-nav-panel :is(a,button){font:var(--font-small-label) var(--font);letter-spacing:var(--type-label-track);text-transform:uppercase}
 /* Japanese uses its own reading rhythm, within the same hierarchy. */
-html[lang="ja"]{--type-lead:24px;--type-copy:20px}
+html[lang="ja"]{
+ --type-lead:24px;--type-copy:20px;--overview-leading:1.7;
+ --leading-display:1.5;--leading-statement:1.7;--leading-section:1.5;--leading-reading:1.8;--leading-ui:1.6;--leading-ui-body:1.75;--leading-caption:1.65;--leading-caption-medium:1.65;--leading-small:1.65;--leading-small-label:1.6;--leading-copy:1.8;
+}
 @media(min-width:768px){html[lang="ja"]{--type-lead:28px;--type-copy:24px}}
 html[lang="ja"] :is(.home-page,.about-page){--reading:var(--type-lead)}
-html[lang="ja"] :is(.section-copy,.intro h1,.intro-cta,.essay-dek,.essay-lede,.essay-rest .essay-pull p){font-size:var(--type-lead);line-height:1.65}
-html[lang="ja"] .section-heading>p{font-size:var(--type-display);line-height:1.3}
-html[lang="ja"] .home-page .shop-support-copy,html[lang="ja"] .essay-rest p{font-size:var(--type-copy);line-height:1.85}
-html[lang="ja"] .home-page .services :is(dt,dd){font-size:var(--type-body);line-height:1.4}
-
-/* The docking script formerly sized the caption inline. */
-
+html[lang="ja"] .home-page .services :is(dt,dd){font-size:var(--type-body);line-height:1.5}
 
 /* Owner refinements: the hero caption keeps its original fitted display style. */
 .home-page .brand-caption{font-weight:700;letter-spacing:-1px}
-h2::before{content:"";display:inline-block;width:8px;height:8px;margin-right:6px;background:var(--red);vertical-align:middle}
-#objects-info-dialog h2{font:500 var(--type-lead)/1.2 var(--font);letter-spacing:0;text-transform:none}
+/* Heading markers share one scale and align to the center of the capitals. */
+h2::before{content:"";display:inline-block;width:.525em;height:.525em;width:.75cap;height:.75cap;margin-right:.4em;background:var(--red);vertical-align:.0875em;vertical-align:.125cap}
+#objects-info-dialog h2{font:var(--font-statement) var(--font);letter-spacing:0;text-transform:none}
 #objects-info-dialog .objects-info-about{text-transform:none}
 
-/* Home reading copy: lighter weight, open leading, selective red anchors. */
-.home-page .intro h1,.home-page .section-copy{font-weight:400;line-height:1.4}
-.home-page .shop-support-copy{line-height:1.55}
+/* Home reading copy: open leading and selective red anchors. */
 .home-page .copy-emphasis,.home-page .intro h1 em.copy-emphasis{color:var(--red);font-style:normal}
-html[lang="ja"] .home-page .intro h1,html[lang="ja"] .home-page .section-copy{font-weight:400;line-height:1.75}
-body.home-page .intro h1,body.home-page .section-copy{font-weight:400;line-height:1.4}
-body.home-page .shop-support-copy{line-height:1.55}
-html[lang="ja"] body.home-page .intro h1,html[lang="ja"] body.home-page .section-copy{line-height:1.75}
+body.home-page .shop-support-copy{line-height:1.5}
 
-.table-title{font:500 var(--type-body)/1.4 var(--font);letter-spacing:0;text-transform:none}
+.table-title{font:var(--font-ui) var(--font);letter-spacing:0;text-transform:none}
 .table-group .table-title{margin-bottom:16px}
 
-/* Home body copy uses Medium, retaining the open reading rhythm. */
-body.home-page .intro h1,body.home-page .section-copy{font-weight:500}
 
-.signup-heading{font:500 var(--type-heading)/1.4 var(--font);letter-spacing:var(--type-label-track);margin-bottom:24px;text-transform:uppercase}
+.signup-heading{font:var(--font-ui) var(--font);letter-spacing:var(--type-label-track);margin-bottom:24px;text-transform:uppercase}
 
 .objects-dialog-copy h2{text-transform:none}
 
 .objects-dialog-title::before{content:none}
 
-/* Noto needs a heavier optical match to Walla Medium in large reading copy. */
-html[lang="ja"] body.home-page :is(.intro h1,.section-copy){font-weight:600}
 
 /* Keep each reveal word on a single visual line for consistent line timing. */
 [data-ink] .ink{display:inline-block}
+/* Inline Japanese spans preserve kinsoku across reveal and emphasis boundaries.
+   Atomic inline-block punctuation can otherwise start a line by itself. */
+html[lang="ja"] [data-ink]{line-break:strict;word-break:normal;overflow-wrap:normal}
+html[lang="ja"] [data-ink] .ink{display:inline}
 
 /* Inline-block reveal words must carry their link's underline themselves. */
 [data-ink] a .ink{text-decoration-line:inherit;text-decoration-thickness:inherit;text-underline-offset:inherit}
@@ -79,12 +97,52 @@ html[lang="ja"] body.home-page :is(.intro h1,.section-copy){font-weight:600}
 .home-page .intro .familiar-characters .ink{display:inline;text-decoration-line:none}
 
 /* Shared section copy and intro typesetting; retain the phone reading scale. */
-@media(min-width:768px){
- html[lang] body:is(.home-page,.about-page) :is(.intro h1,.section-copy,.section-copy>p){font-size:40px;font-weight:500;letter-spacing:-.01em;line-height:1.35}
-}
+
 
 /* Project descriptions and the About opening share one reading style. */
-html[lang] :is(.work-page .work-description,.about-essay-page .essay-introduction>.essay-lede){font:400 var(--overview-size)/var(--overview-leading) var(--font);letter-spacing:-.02em;color:var(--cranberry-brown);text-wrap:pretty}
-html[lang="ja"] :is(.work-page .work-description,.about-essay-page .essay-introduction>.essay-lede){line-height:1.65;letter-spacing:0}
-/* Saved About overview style; retain the shared responsive size. */
-html[lang] .about-essay-page .essay-introduction>[data-type-style="about-overview"]{font-weight:500;letter-spacing:-.01em;line-height:1.35}
+html[lang] :is(.work-page .work-description,.about-essay-page .essay-introduction>.essay-lede){font:var(--font-overview) var(--font);letter-spacing:-.02em;color:var(--cranberry-brown);text-wrap:pretty}
+
+/* About uses the same section and reading roles in both languages and all widths.
+   Layout, color, sticky positioning and paragraph spacing stay in about-essay.css. */
+html[lang] .about-essay-page :is(.essay-title,.essay-rest h2){font:var(--font-section) var(--font);letter-spacing:var(--type-track);text-transform:none}
+html[lang] .about-essay-page .essay-introduction>.essay-lede[data-type-style],
+html[lang] .about-essay-page .essay-body p,
+.about-essay-page .essay-dek{font:var(--font-reading) var(--font);letter-spacing:var(--type-track)}
+.about-essay-page .essay strong{font-weight:500}
+
+/* Canonical normal-text assignments. This stylesheet loads after page CSS.
+   Fitted brand captions, SVG/house lettering and graphical icon glyphs are excluded. */
+html[lang] body :is(.section-heading>p, .contact-page .contact-title, .work-detail-title, .work-related h2, .objects-intro h1){font:var(--font-display) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.intro h1, .section-copy, .section-copy>p, .intro-cta, .connect-form input, .ending-contact-headline, .essay-pull p){font:var(--font-statement) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.essay-title, .essay-rest h2, .objects-dialog-copy h2, .pong-score strong){font:var(--font-section) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.work-description){font:var(--font-overview) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.essay-dek, .essay-lede, .essay-body p, .contact-intro, .work-related-caption, .objects-intro p){font:var(--font-reading) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.table-title, .services dt, .product-specs dt, .tote-spec-sheet .contact-title, .objects-info-actions a, .contact-send, .objects-info-about){font:var(--font-ui) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.services dd, .product-specs dd, .product-note, .field-input, .work-meta, .work-meta dd, .work-hero-caption, .objects-dialog-description, .objects-info-note, #objects-info-dialog p, .objects-about-scroll, .objects-about-dialog p){font:var(--font-ui-body) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.work-meta dt, .work-category, .work-one-liner, .shop-card-description, .shop-card-price, .objects-dialog-brand, .material-tooltip, .mobile-menu-footer>p){font:var(--font-caption) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.work-title, .work-view, .shop-card-title, .shop-card-action, .tote-spec-trigger){font:var(--font-caption-medium) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.home-ending .ending-contact .ending-follow-note, .objects-product-peek, .site-footer p, .objects-footer p, .bag-study-spec-note, .bag-study figcaption, .objects-dialog-credit, .objects-dialog-tags button, .objects-photo-count, .contact-notice, .contact-status, .contact-fallback){font:var(--font-small) var(--font);letter-spacing:var(--type-small-track)}
+html[lang] body :is(.page-nav, .page-nav a, .language-switch, .language-switch a, .section-label, .footer-pages, .work-trail, .field-label, .chip, .chip span, .objects-zoom label, .objects-search, .objects-search-suggestions, .objects-search-suggestions button, .objects-tools summary, .objects-categories button, .objects-info, .objects-language a, .pixel-caption, .pong-controls, .pong-message){font:var(--font-small-label) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.shop-support-copy){font:var(--font-copy) var(--font);letter-spacing:var(--type-track)}
+
+/* These headings belong to UI sheets rather than the reading-page hierarchy. */
+html[lang] body #objects-info-dialog h2,
+html[lang] body .objects-about-dialog :is(h2,h3){font:var(--font-ui) var(--font);letter-spacing:var(--type-track)}
+html[lang] body .work-overview h3{font:var(--font-ui-body) var(--font);letter-spacing:var(--type-track)}
+html[lang] body .contact-page-heading .contact-title{font:var(--font-display) var(--font);letter-spacing:var(--type-track)}
+html[lang] body #object-dialog .objects-dialog-footer :is(.objects-dialog-link,.objects-dialog-availability){font:var(--font-ui) var(--font);letter-spacing:var(--type-track)}
+html[lang] body #object-dialog :is(.objects-dialog-credit,.objects-dialog-tags button){font:var(--font-small) var(--font);letter-spacing:var(--type-small-track)}
+html[lang] body .tote-spec-sheet .bag-study-specs :is(dt,dd){font:var(--font-small) var(--font);letter-spacing:var(--type-track)}
+/* Short uppercase labels share their tracking; case is still owned by components. */
+html[lang] body :is(.page-nav a,.section-label,.field-label,.chip span,.work-trail){letter-spacing:var(--type-label-track)}
+@media(max-width:1099px){
+ html[lang] body.mobile-navigation-ready .mobile-nav-panel :is(a,button){font:var(--font-statement) var(--font)!important;letter-spacing:var(--type-track)!important}
+ html[lang] body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-footer :is(a,button){font:var(--font-caption-medium) var(--font)!important;letter-spacing:var(--type-track)!important}
+}
+/* Keep compact language controls consistent with the rest of the small labels. */
+html[lang] body.objects-page.objects-ready .objects-language a{font:var(--font-small-label) var(--font)!important;letter-spacing:var(--type-track)}
+html[lang] body.objects-page{font:var(--font-ui-body) var(--font)}
+html[lang] body .objects-zoom output{font:var(--font-small) var(--font)}
+html[lang] body #object-dialog .objects-dialog-copy h2{font:var(--font-section) var(--font);letter-spacing:var(--type-track)}
+/* Matching uppercase headings and product links share size and tracking. */
+html[lang] body :is(.section-heading h2,.signup-heading,#object-dialog .objects-dialog-link,#object-dialog .objects-dialog-footer .objects-dialog-link){font:var(--font-ui-uppercase) var(--font);letter-spacing:var(--type-ui-uppercase-track)}

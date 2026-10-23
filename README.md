@@ -33,8 +33,8 @@ python3 scripts/audit-site.py dist   # verify packaged references
 - `js/site.js`: shared clean-hash links, viewport measurement, year and production-only analytics. `js/mobile-nav.js`: mobile menu.
 - `js/walla.js`, `js/bag-*.js`, `css/today-bag.css`: Home and current photographic tote presentation.
 - `about/index.html`, `css/about.css`, `css/about-rooms.css`, `js/about.js`, `js/house-assembly.js`: project-Overview-style labels and large body copy. The combined opening retains reading ink, followed by the house assembly and Studio zoom/title handoff. Studio settles onto Soft Beige; Studio and Shop then follow normal document scrolling. Interior drawings are archived. Reduced motion uses normal document flow.
-- `work/index.html`, `css/work.css`, `js/work.js`, `js/studio-gallery.js`: Studio gallery and project dialog. The centered thumbnail lifts by 8px and tilts 2° clockwise on hover; its caption and index stay stationary. Hover motion is disabled for reduced motion and touch. Opening expands the thumbnail into its matching hero; closing contracts it back to the centered project, preserving gallery position. Interrupted transitions, resize and reduced motion settle cleanly; no-JavaScript retains inline project details.
-- `shop/index.html`, `css/shop.css`, `js/shop.js`, `js/shop-finds-preview.js`: product gallery; the centered image tilts 2° clockwise and shifts 8px to the left; its caption and index stay stationary when its image or caption is hovered, with reduced motion respected. FC preview mounts on mouse or keyboard interaction, stops on leave, and is disposed offscreen.
+- `work/index.html`, `css/work.css`, `js/work.js`, `js/studio-gallery.js`: Studio gallery and project dialog. The centered thumbnail lifts by 8px and tilts 2° counterclockwise on hover; its caption and index stay stationary. Hover motion is disabled for reduced motion and touch. Opening expands the thumbnail into its matching hero; closing contracts it back to the centered project, preserving gallery position. Interrupted transitions, resize and reduced motion settle cleanly; no-JavaScript retains inline project details.
+- `shop/index.html`, `css/shop.css`, `js/shop.js`, `js/shop-finds-preview.js`: product gallery; the centered image tilts 2° counterclockwise and shifts 8px to the left; its caption and index stay stationary when its image or caption is hovered, with reduced motion respected. FC preview mounts on mouse or keyboard interaction, stops on leave, and is disposed offscreen.
 - `data/objects.json`, `scripts/build-objects.py`, `css/objects.css`, `js/objects.js`, `js/finds-menus.js`: collection catalog, virtual canvas, filters and details. Current public name is Familiar Characters; URL is `/familiarcharacters/`.
 - `data/finds-images.json`, `scripts/build-finds-images.py`: device-sized lossless catalog derivatives; native originals and provenance remain intact. Existing derivatives are content-hashed and cached immutably.
 - `red-pixel/index.html`, `css/red-pixel.css`, `js/red-pixel.js`, `js/pong-physics.js`: grab then throw to start Pong on Ash Brown. Player is left, level-five 2D1 BOT right; first to three. Mouse/touch and Up/Down or W/S control the paddle; Click/tap or Space pauses/resumes, and Escape exits; dragging never toggles pause. The red puck plays on a court without lines, with Home-navigation labels, enlarged scores, and Soft Beige “First to 3” directly above the scoreboard. Enter grabs/throws for keyboard users. The opponent reads the ball every 220–360ms, accelerates and brakes smoothly, repositions between returns, and makes consistent aiming errors with occasional larger misreads. Square impact particles and a center burst on player scores respect reduced motion; visibility loss and resizing pause play. No-JavaScript retains the native BIGGER/SMALLER size control.
@@ -455,7 +455,7 @@ the email placeholder uses a lighter weight. Both languages share this behavior.
 
 Home ending/bag follow-up — 22 October: the bag image-to-specification scroll
 animation is restored via bag-layout.js; the outer Shop-to-bag cover remains off.
-Home now uses About’s “Don’t Be a Stranger” Contact invitation, blinking eyes,
+Home now uses About’s “CONTACT” invitation, blinking eyes,
 Get in touch link, and compact footer on Ash Brown, retaining the reveal below
 main content. The superseded signup markup is preserved in
 `_archive/home-signup-2026-10-22/ending.html`. The tote closing now invites visitors
@@ -475,3 +475,136 @@ concept, `img/shop/bag-study-2026-10-22/2d-tote-bicolor-daylight-hanging-neutral
 in both languages. Intrinsic dimensions and viewport-height sizing follow its
 1086 × 1448 aspect ratio. The previous `img/shop/life-tote-studio-v4.webp`
 remains available; the existing bag/specification scroll animation is preserved.
+
+Shop’s Familiar Characters hover preview scales a predecoded grid as one layer to avoid missing image layers inside the rotated monitor. Its six-second zoom cycle resets on leave; the card tilts counterclockwise.
+
+The Shop FC monitor shows a language-specific still captured from the live preview’s initial 1600×900 view while it loads. The still stays visible after loading; only hover or keyboard focus reveals the decoded live canvas. Both use the exact same screen bounds to prevent a size shift at the handoff. Reduced-motion and no-JavaScript visitors retain the still.
+
+
+Home tote lifestyle story — 22 October: the approved v15 lifestyle photograph
+now follows “The joy of making” as full-bleed artwork. Native sticky positioning
+holds it beneath the introduction and the following Soft Beige product copy;
+there is no scroll interception. Desktop/tablet use viewport height; very tall
+phone crops cap at twice the viewport width to keep the square tag and logo
+visible. Reduced motion and no-JS use normal flow. The earlier hanging photo
+and image/specification spread are retained in assets and
+`_archive/bag-spread-2026-10-22/bag-study.html`; bag-layout.js is no longer loaded.
+
+“View specifications” sits halfway down the lifestyle photo, right-aligned with
+24px safe-area-aware inset, in Soft Beige at the shared 14px action size. It
+opens a borderless, flush-right sheet, 50dvh tall and vertically centered,
+with a Soft Beige ground and dark brown type. The compact 15px heading / 14px
+specifications are shared across English and Japanese. The sheet is nonmodal:
+no scrim, page dimming, or page scroll lock. Close, Escape, and clicking outside
+dismiss it; keyboard dismissal returns focus to the trigger. Specifications
+scroll independently beneath the fixed close control. Without JavaScript the
+photo button remains a native details disclosure. Armada notes expand inline.
+The development note follows the product paragraph. The concept disclaimer and
+provisional dimensions remain in the specifications.
+
+Tote colorway comparison — 22 October: a small Bicolor strap / Red handles
+selector below the photo’s specifications action switches between the approved
+v15 image and the new v16 concept with a solid dark shoulder strap and Icon Red
+short handles. The original remains the default; selection is temporary and is
+not stored. Both images share the same dimensions and crop. The alternate is
+decoded before switching, and the strap description follows the selected view.
+English and Japanese include translated controls and alt text. No-JS keeps the
+original photo and working native specification disclosure. The alternate is a
+generative edit, so it is not a pixel-identical recolor outside the straps.
+
+Specifications sheet refinement — 22 October: the sheet fills 70% of the dynamic
+viewport height, capped at the viewport height minus 48px, with internal
+scrolling only when needed. Its fixed header aligns the title and close button on the same center
+line. Entrance is 320ms with a soft ease-out; exit is 240ms. Reduced motion
+remains instant, and the page remains undimmed and scrollable.
+
+The tote specification trigger travels with the copy wipe, flush to its top and right edges, on a soft beige background with 12px padding. Two accessible, unlabeled circle selectors on the photo’s left switch strap concepts; the selected circle is filled.
+
+The tote specification sheet opens upward from the viewport bottom with a gentle 640ms ease-out and closes downward over 480ms. Reduced motion remains instant.
+
+Footer eyes and the Contact marker stay Icon Red. Pixel-arrow CTAs use one shared sweep coordinate space across label and arrow, so the color reaches the arrow after crossing the label.
+
+Active page navigation keeps its 6px square visible, with the same 12px label offset as hover. The marker is Icon Red on desktop and Cranberry Brown to match the active link on the red mobile menu. Language and social controls are excluded.
+
+Third tote colorway — 22 October: the photo comparison now includes Red logo,
+with an Icon Red logo and dark shoulder strap and short handles (v17). The
+three circle selectors form a compact vertical stack at the photo’s left edge,
+with 32px row spacing and 44px-wide click targets. Switching is instantaneous
+after decoding, preserves scroll position, and updates the strap description.
+All three choices have translated accessible labels in Japanese. The original
+remains the default. Like v16, v17 is a generative edit with minor texture
+variation outside the requested color changes. Originals and prompts are saved.
+
+### Shared typography roles — 22 October 2026
+
+`css/typography.css` defines eight core roles and named weight/leading variants.
+Repeated font recipes across active stylesheets use these tokens; About’s
+previous heading/body override chain is consolidated there, and Shop captions
+use their caption recipes directly. Responsive sizes, Japanese font selection,
+and intentional display exceptions are preserved. See [Typography](docs/TYPOGRAPHY.md)
+for the role table and rules for adding or changing text styles.
+
+Near-duplicate typography was subsequently merged: ordinary UI text uses 1.5
+leading, Contact uses the shared 20px reading style, and small FC metadata uses
+the 12px/14px roles. See the typography guide for the deliberate visual changes.
+
+Red heading markers share a single typography rule: square sides are 75% of the font’s capital height, centered against the capitals, with a 0.4em label gap. This applies to section, signup and Contact headings in both languages.
+
+Unified CTA sweep — 22 October: text links with pixel arrows now measure one
+sweep from the first label glyph to the far edge of the arrow. The label and
+masked icon sample that same moving edge in pixels, including Studio project
+and Shop external-link actions. Resize, font loading, and dynamically added
+controls refresh the shared measurements. Hover and keyboard focus use the same
+480ms timing; reduced motion is instant. Both language routes share the fix.
+
+Normal text now uses the canonical shared-role mapping at the end of
+`css/typography.css`, loaded last on every active route. Home statements,
+Contact titles, project headings/metadata and FC dialogs no longer retain
+separate typographic recipes. Only fitted logo/artwork lettering and icon
+glyphs are exempt. Language sizing is defined at the shared-token level.
+
+
+### Foldable touch navigation — 22 October 2026
+
+The shared compact navigation now applies to coarse-pointer viewports below
+1100px, as well as all viewports below 768px. This prevents the Japanese inline
+navigation from overlapping the docked logo on wider foldable screens. CSS and
+`js/mobile-nav.js` use the same query; desktop pointer layouts remain unchanged.
+Representative folded/unfolded, portrait/landscape and split-window sizes were
+checked in Chromium emulation. Apple publishes physical display resolutions,
+not Safari CSS viewport sizes, so these are layout probes rather than certified
+iPhone Duo emulation. Actual-device Safari, safe areas and keyboard behavior
+still require verification.
+
+### Japanese font trial — 22 October 2026
+
+Japanese now uses self-hosted Zen Kaku Gothic New, paired with SC Walla first
+in the font stack for Latin letters and numbers. Regular/Medium/Bold weights
+match the shared hierarchy; 600–700 uses the real Bold face. English is
+unchanged. `css/japanese-font.css` and `scripts/build-japanese.py` apply the
+pairing across Japanese routes. The previous Noto font assets remain dormant
+for reversibility. See `fonts/Zen Kaku Gothic New/README.md` for provenance.
+
+Japanese optical-weight correction: Zen now maps CSS 400 to Medium, 500 to
+Bold, and 600–700 to Black, bringing Japanese strokes closer to SC Walla.
+Latin letters/numerals and the shared type sizes remain unchanged.
+
+### Japanese translation checks — 22 October 2026
+
+Translation keys are trimmed consistently in the static generator and dynamic
+lookup, including text split by inline emphasis. After regenerating Japanese
+pages, run `python3 scripts/check-japanese.py` to flag untranslated English UI
+in every Japanese route (including templates and accessibility labels) and
+missing literal dynamic translation keys. Approved brand and product names
+remain original. The check is a heuristic; review mixed-language copy visually.
+
+Japanese reading-reveal spans stay inline so strict Japanese line breaking keeps
+closing punctuation such as 。 and 、 with the preceding text, including across
+emphasis boundaries. Latin reveal words retain their existing block treatment.
+
+Japanese shared line-height settings: display/section headings 1.5; statements
+and overviews 1.7; reading/copy 1.8; UI labels 1.6; UI body 1.75; captions and
+small supporting text 1.65. These unitless leading tokens apply at every
+breakpoint, keeping existing sizes, weights and English metrics. This follows
+the Digital Agency’s minimum 1.5 reading-text guidance with extra room for
+Japanese paragraphs: https://design.digital.go.jp/dads/foundations/typography/

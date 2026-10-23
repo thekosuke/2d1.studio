@@ -70,5 +70,102 @@
     "height": 941,
     "bytes": 110554,
     "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v4.png"
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v5",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v5.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 90662,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v5.png"
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v6",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v6.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 95982,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v6.png"
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v8",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v8.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 90434,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v8.png"
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v10",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v10.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 115570,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v10.png"
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v11",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v11.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 127142,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v11.png",
+    "review": "Experimental material refinement; weave still differs from supplier reference. Not selected for website."
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v12",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v12.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 141076,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v12.png",
+    "review": "Experimental material refinement; weave still differs from supplier reference. Not selected for website."
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v13",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v13.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 136454,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v13.png",
+    "base": "User-selected v5",
+    "review": "Logo restored using official SVG; some generated surface detail remains. Full-screen review candidate, not yet selected for site."
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v14",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v14.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 116518,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v14.png"
+  },
+  {
+    "name": "2d-tote-bicolor-everyday-outdoor-v15",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v15.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1366610,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-bicolor-everyday-outdoor-v15.png",
+    "edit_method": "User-authorized feathered local composite; no generation"
+  },
+  {
+    "name": "2d-tote-red-handles-v16",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-red-handles-v16.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1277438,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-red-handles-v16.png",
+    "edit_method": "Built-in image_gen localized colorway edit; lossless WebP encoding",
+    "prompt": "output/imagegen/bag-study-2026-10-22/red-handles-v16-prompt.txt"
+  },
+  {
+    "name": "2d-tote-red-logo-v17",
+    "path": "img/shop/bag-study-2026-10-22/2d-tote-red-logo-v17.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1302026,
+    "source": "output/imagegen/bag-study-2026-10-22/originals/2d-tote-red-logo-v17.png",
+    "edit_method": "Built-in image_gen colorway edit; lossless WebP encoding",
+    "prompt": "output/imagegen/bag-study-2026-10-22/red-logo-v17-prompt.txt"
   }
 ]

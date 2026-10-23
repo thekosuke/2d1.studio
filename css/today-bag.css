@@ -10,14 +10,14 @@
 .bag-story-heading{margin-bottom:48px}
 .bag-introduction{text-wrap:pretty}
 .bag-study-notes{margin-top:20px;padding-top:24px;border-top:1px solid var(--line)}
-.bag-study-notes h4{font:500 15px/1.4 var(--font);margin:0 0 20px}
+.bag-study-notes h4{font:var(--font-ui) var(--font);margin:0 0 20px}
 .bag-study-specs{margin:0}
 .bag-study-specs>div{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;padding:8px 0;border-top:.5px solid var(--line)}
 .bag-study-specs>div:first-child{padding-top:0;border-top:0}
-.bag-study-specs dt,.bag-study-specs dd{font:400 var(--type-spec)/1.5 var(--font);margin:0;min-width:0}
+.bag-study-specs dt,.bag-study-specs dd{font:var(--font-caption) var(--font);margin:0;min-width:0}
 .bag-study-specs dt{font-weight:500}
 .bag-study-specs dd{color:var(--sub-gray);text-wrap:pretty}
-.bag-study-spec-note,.bag-study figcaption{font:400 12px/1.5 var(--font);color:var(--sub-gray)}
+.bag-study-spec-note,.bag-study figcaption{font:var(--font-small) var(--font);color:var(--sub-gray)}
 .bag-study-spec-note{margin:20px 0 0}
 .bag-study figcaption{max-width:1440px;margin:48px auto 0}
 .shop-signup .shop-actions{margin-top:0;padding:0;border:0}
@@ -117,7 +117,7 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 .material-info summary::-webkit-details-marker{display:none}
 .material-info-icon{display:block;width:16px;height:16px;background:currentColor;mask:url('../img/icons/pixel-info.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-info.svg') center/contain no-repeat}
 .material-info summary:hover,.material-info summary:focus-visible,.material-info[open] summary{background:var(--beige);color:var(--red);outline:none}
-.material-tooltip{position:absolute;z-index:5;top:calc(100% + 8px);right:0;width:320px;max-width:100%;padding:20px;background:var(--beige);border-left:2px solid var(--cranberry-brown);color:var(--cranberry-brown);font:400 14px/1.5 var(--font)}
+.material-tooltip{position:absolute;z-index:5;top:calc(100% + 8px);right:0;width:320px;max-width:100%;padding:20px;background:var(--beige);border-left:2px solid var(--cranberry-brown);color:var(--cranberry-brown);font:var(--font-caption) var(--font)}
 .material-tooltip::before{content:"";position:absolute;bottom:100%;left:0;right:0;height:12px}
 
 #shop,.bag-study-lead{background:var(--beige)}
@@ -125,7 +125,7 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 .material-tooltip p+p{margin-top:1em}
 
 /* Armada notes use the Familiar Characters sheet’s paper, type and controls. */
-.material-tooltip{width:40vw;max-width:calc(100vw - 48px);padding:64px 48px 48px;background:var(--white);border:2px solid var(--red);font:400 var(--type-body)/1.6 var(--font);letter-spacing:0;text-transform:none;box-sizing:border-box;max-height:70dvh;overflow:auto;scrollbar-gutter:stable}
+.material-tooltip{width:40vw;max-width:calc(100vw - 48px);padding:64px 48px 48px;background:var(--white);border:2px solid var(--red);font:var(--font-ui-body) var(--font);letter-spacing:0;text-transform:none;box-sizing:border-box;max-height:70dvh;overflow:auto;scrollbar-gutter:stable}
 .material-tooltip p+p{margin-top:24px}
 .material-info-close{position:absolute;top:20px;right:20px;width:32px;height:32px;display:grid;place-items:center;padding:0;border:0;background:var(--white);color:var(--cranberry-brown);cursor:pointer;transition:background-color 180ms,color 180ms}
 .material-info-close span{width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
@@ -134,3 +134,100 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 @media(max-width:767px){.material-tooltip{width:calc(100vw - 48px);padding:64px 24px 48px}}
 @media(pointer:coarse){.material-info-close{width:44px;height:44px;top:12px;right:12px}}
 @media(prefers-reduced-motion:reduce){.material-info-close{transition:none}}
+
+/* Lifestyle story: the copy passes over a full-screen photograph below it. */
+.bag-study-scene{isolation:isolate}
+.bag-study-lead{position:relative;z-index:2;padding-bottom:var(--space)}
+.bag-lifestyle{position:relative;z-index:0;width:100%;height:100svh;margin:0;overflow:clip;background:var(--ash-brown)}
+.bag-lifestyle .bag-study-photo{width:100%;height:100%;object-fit:cover;object-position:43% center}
+.bag-lifestyle .bag-study-photo[hidden]{display:none}
+.bag-lifestyle .bag-color-alternate{position:absolute;inset:0}
+/* Circle selectors are an owner-requested exception to the square controls. */
+.bag-color-options{position:absolute;z-index:2;left:max(24px,env(safe-area-inset-left));top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:0}
+.bag-color-options[hidden]{display:none}
+.bag-color-options button{display:grid;place-items:center;width:44px;height:32px;padding:0;border:0;background:transparent;color:var(--beige);cursor:pointer}
+.bag-color-options button::before{content:'';width:16px;height:16px;border:1px solid currentColor;border-radius:50%;background:transparent}
+.bag-color-options button[aria-pressed="true"]::before{background:currentColor}
+.bag-color-options button:is(:hover,:focus-visible){color:var(--red);outline:0;box-shadow:none}
+.js .bag-lifestyle{position:sticky;top:0;bottom:0}
+.bag-product-copy{position:relative;z-index:2;padding-block:var(--space);background:var(--beige);color:var(--cranberry-brown)}
+.bag-product-copy>.bag-spec-action{position:absolute;z-index:2;bottom:100%;right:0;margin:0;text-align:right;display:flex;flex-direction:column;align-items:flex-end}
+.tote-spec-trigger{display:flex;align-items:center;width:fit-content;max-width:100%;min-height:44px;margin:0;padding:0;border:0;background:transparent;color:var(--beige);font:var(--font-caption-medium) var(--font);letter-spacing:0;text-transform:none;text-align:right;justify-content:flex-end;cursor:pointer}
+.tote-spec-trigger:is(:hover,:focus-visible){color:var(--beige);text-decoration:underline;text-underline-offset:.2em;outline:0;box-shadow:none}
+.bag-product-copy .shop-support-copy{margin-top:1.18em}
+.tote-specifications>summary{list-style:none}
+.tote-specifications>summary::-webkit-details-marker{display:none}
+.tote-specifications>summary:focus-visible{outline:0;color:var(--beige)}
+
+/* Content-sized nonmodal sheet, capped to the viewport for smaller screens. */
+.tote-spec-dialog{position:fixed;z-index:80;inset:auto 0 0 auto;width:clamp(480px,40vw,760px);max-width:100%;height:70dvh;max-height:calc(100dvh - 48px);margin:0;padding:0;border:0;background:var(--beige);color:var(--cranberry-brown);overflow:hidden;transform:translateY(100%);transition:transform 640ms cubic-bezier(.16,1,.3,1)}
+.tote-spec-dialog.is-visible{transform:translateY(0)}
+.tote-spec-dialog.is-closing{transition-duration:480ms;transition-timing-function:cubic-bezier(.4,0,.2,1)}
+.tote-spec-sheet.contact-sheet{display:flex;flex-direction:column;width:100%;max-width:100%;height:auto;max-height:calc(100dvh - 48px);margin:0;padding:0;border:0;--line:rgba(50,5,5,.18);color:var(--cranberry-brown);background:var(--beige);overflow:hidden;transform:none;transition:none}
+.tote-spec-dialog .tote-spec-sheet.contact-sheet{height:100%}
+.tote-spec-dialog .tote-spec-content{flex:1}
+.tote-spec-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex:none;padding:20px 20px 0 32px}
+.tote-spec-content{min-height:0;padding:16px 32px 32px;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:var(--cranberry-brown) transparent;scrollbar-width:thin;scrollbar-gutter:stable}
+.tote-spec-sheet .contact-title,html[lang="ja"] .tote-spec-sheet .contact-title{margin:0;padding:0;border:0;font:var(--font-ui) var(--font);letter-spacing:0;text-transform:none;color:var(--cranberry-brown)}
+.tote-spec-sheet .contact-title::before{content:none}
+.tote-spec-close{position:static;flex:none;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;background:var(--beige);color:var(--cranberry-brown);cursor:pointer}
+.tote-spec-close span{display:block;width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
+.tote-spec-close[hidden]{display:none}
+.tote-spec-close:is(:hover,:focus-visible){background:var(--red);color:var(--beige);outline:0;box-shadow:none}
+.tote-spec-sheet .bag-study-specs>div{grid-template-columns:88px minmax(0,1fr);gap:16px;padding-block:8px;border-top:.5px solid var(--line)}
+.tote-spec-sheet .bag-study-specs>div:first-child{padding-top:0;border-top:0}
+.tote-spec-sheet .bag-study-specs>div::before{content:none}
+.tote-spec-sheet .bag-study-specs :is(dt,dd){font-size:var(--type-spec);line-height:1.5;color:var(--cranberry-brown)}
+.tote-spec-sheet .bag-study-spec-note{margin-top:20px;font-size:12px;color:rgba(50,5,5,.65)}
+.tote-spec-sheet .bag-material{display:grid;grid-template-columns:minmax(0,max-content) auto;align-items:start;justify-content:start;column-gap:4px}
+.tote-spec-sheet .material-info{display:contents;margin:0}
+.tote-spec-sheet .material-tooltip{position:static;width:100%;max-width:none;max-height:none;overflow:visible;padding:16px 0 0;border:0;font:var(--font-caption) var(--font);scrollbar-gutter:auto;background:var(--beige);color:var(--cranberry-brown)}
+.tote-spec-sheet .material-tooltip::before{content:none}
+.tote-spec-sheet .material-info summary{width:1.5em;height:1.5em;margin:0;color:var(--cranberry-brown)}
+.tote-spec-sheet .material-info-icon{width:.85em;height:.85em}
+.tote-spec-sheet .material-tooltip{grid-column:1 / -1}
+.tote-spec-sheet .material-info summary:is(:hover,:focus-visible),.tote-spec-sheet .material-info[open] summary{background:var(--cranberry-brown);color:var(--beige)}
+.tote-specifications .tote-spec-sheet{position:absolute;right:0;top:44px;width:min(480px,calc(100vw - 48px));height:auto;max-height:calc(50svh - 24px);text-align:left}
+.tote-specifications .tote-spec-content{padding:24px}
+@media(max-width:1099px){.bag-lifestyle .bag-study-photo{object-position:30% center}}
+@media(max-width:767px){
+ /* Cap very tall portrait crops so the tag and complete logo stay in frame. */
+ .bag-lifestyle{height:min(100svh,200vw)}
+ .bag-lifestyle .bag-study-photo{object-position:27% center}
+ .tote-spec-dialog{width:100%}
+ .tote-spec-sheet.contact-sheet{width:100%}
+ .tote-spec-header{padding:16px 16px 0 24px}
+ .tote-spec-content{padding:16px 24px 24px}
+ .tote-spec-sheet .bag-study-specs>div{grid-template-columns:88px minmax(0,1fr);gap:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ .js .bag-lifestyle{position:relative;top:auto;bottom:auto}
+ .tote-spec-dialog,.tote-spec-dialog .contact-sheet{transition:none}
+}
+
+/* Beige navigation ink while the tote photograph passes beneath it. */
+body.home-page:not(.mobile-menu-open) .page-nav a.on-bag-photo:not([aria-current]),
+body.home-page:not(.mobile-menu-open) .page-nav a.on-bag-photo:not([aria-current]) .nav-label,
+body.home-page:not(.mobile-menu-open) .mobile-nav-toggle.on-bag-photo{color:var(--beige)!important}
+body.home-page:not(.mobile-menu-open) .page-nav a.on-bag-photo:not([aria-current]) .nav-label{background-image:none!important;-webkit-text-fill-color:var(--beige)!important}
+
+/* Inverted, compact tote specifications. */
+.tote-spec-dialog,.tote-spec-sheet.contact-sheet{background:var(--ash-brown);color:var(--beige);--line:rgba(250,240,230,.24)}
+.tote-spec-sheet .contact-title,html[lang="ja"] .tote-spec-sheet .contact-title{color:var(--beige)}
+.tote-spec-sheet .bag-study-specs :is(dt,dd),
+.tote-spec-sheet .bag-study-spec-note,
+.tote-spec-sheet .material-tooltip,
+.tote-spec-sheet .material-info summary{font-size:12px;color:var(--beige)}
+.tote-spec-sheet .material-tooltip{background:var(--ash-brown)}
+.tote-spec-close{background:var(--ash-brown);color:var(--beige)}
+.tote-spec-sheet .material-info summary:is(:hover,:focus-visible),
+.tote-spec-sheet .material-info[open] summary{background:var(--beige);color:var(--ash-brown)}
+
+.bag-product-copy>.bag-spec-action .tote-spec-trigger{padding:12px;background:var(--beige);color:var(--cranberry-brown)}
+.bag-product-copy>.bag-spec-action .tote-spec-trigger:is(:hover,:focus-visible){color:var(--red)}
+
+.tote-spec-trigger:is(:hover,:focus-visible){text-decoration:none}
+.tote-spec-label{--nav-sweep:0;color:var(--cranberry-brown);background-image:linear-gradient(90deg,var(--red) calc(var(--nav-sweep)*100%),var(--cranberry-brown) 0);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;transition:--nav-sweep 200ms ease}
+.tote-spec-trigger:is(:hover,:focus-visible) .tote-spec-label{--nav-sweep:1}
+@media(prefers-reduced-motion:reduce){.tote-spec-label{transition:none}}
+@media(forced-colors:active){.tote-spec-label{background:none;-webkit-text-fill-color:currentColor}}

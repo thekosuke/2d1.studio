@@ -1,0 +1,6 @@
+Use case: precise-object-edit.
+Edit this approved photograph with ONLY two localized color changes.
+1. Correct BOTH the woven red side tag and visible red underside of the shoulder strap to the brand's Icon Red, sRGB #FF2B00 (255,43,0): a vivid warm vermilion red, not the current muted pink/crimson. This is the fabric's base dye color; preserve realistic light/shadow and woven texture so it still belongs naturally in this soft daylight photograph. Tag and strap share exactly the same base red. No flat painted patches or glow.
+2. Darken the bag body, short handle, and dark outer shoulder strap slightly, approximately half a stop: near-black charcoal with a very subtle deep brown undertone, ash brown #191416 as material reference. Preserve visible cotton weave, soft highlights, seams and shadow detail; do not crush everything to black.
+
+STRICT INVARIANTS: keep every other aspect exactly unchanged: composition and crop, bag size/proportions/position, strap shape, folds, small beige geometric 2D1 embroidery, tag dimensions, woman's pose, loose sweatshirt and trousers, blurred moving hands, background, gentle grain, optical softness, depth of field, exposure and neutral color grading outside edited areas. Do not sharpen or beautify. This is a precise localized photographic color correction, not a new scene. Same 16:9 landscape resolution.

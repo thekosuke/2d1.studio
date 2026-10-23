@@ -1,0 +1,6 @@
+Built-in image_gen; edit of approved v15.
+
+Use case: precise-object-edit.
+Input is the edit target: approved full-bleed lifestyle tote photograph.
+Make a third colorway, changing ONLY these two colors: recolor the cream/beige embroidered 2D1 logo to Icon Red #FF2B00, maintaining EXACT geometric logo shapes, stitches, size and placement; recolor the narrow red inner face of the long shoulder strap to the same near-black dark brown as the strap's existing outer face, so the entire shoulder strap is solid dark. Keep both short carry handles dark, exactly as in the input.
+Preserve everything else: exact framing and dimensions/aspect ratio, bag-body dark brown color, silhouette, fabric texture, seams, wrinkles, all handle geometry, red square side tag, person, sweatshirt, hands, motion blur, trousers, concrete wall, background, focus, grain, daylight and exposure. Do not redesign the logo, do not change any shapes, do not repaint or sharpen the photograph. Localized color changes ONLY. Keep the red side tag unchanged. Landscape same composition.

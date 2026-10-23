@@ -1,7 +1,7 @@
 /* Readiness is set by the controller on every page. Do not depend on the
    Home/About-only html.js marker: Finds does not use that global marker. */
 .mobile-nav-toggle,.finds-page-nav .mobile-nav-home{display:none}
-@media(max-width:767px),(max-width:1023px) and (max-height:500px) and (pointer:coarse){
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){
  .mobile-navigation-ready{--mobile-nav-top:max(8px,env(safe-area-inset-top));--mobile-nav-left:max(8px,env(safe-area-inset-left))}
  .mobile-navigation-ready .mobile-nav-toggle{position:fixed;z-index:31;top:var(--mobile-nav-top);left:var(--mobile-nav-left);display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:10px;border:1px solid var(--ink);border-radius:0;background:var(--white);color:var(--ink);visibility:hidden;pointer-events:none;opacity:0;transition:opacity .26s,visibility 0s .26s}
  .mobile-navigation-ready .mobile-nav-toggle.is-visible{visibility:visible;pointer-events:auto;opacity:1;transition-delay:0s}

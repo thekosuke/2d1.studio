@@ -1,6 +1,6 @@
 /* Text-link sweep colors follow their background; navigation and controls keep their
    dedicated motion. Backgrounds stay clear and inline links keep wrapping. */
-@property --text-link-sweep{syntax:'<number>';inherits:false;initial-value:0}
+@property --text-link-sweep{syntax:'<number>';inherits:true;initial-value:0}
 :is(
   a:not(:has(img,svg)):not(:is(.page-nav a,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.object-open,.pixel-home)),
   button.intro-cta:not(.contact-page .contact-send),
@@ -12,7 +12,7 @@
   --text-link-sweep:0;
   color:var(--text-link-rest,var(--red,#FF2B00))!important;
   background-color:transparent!important;
-  background-image:linear-gradient(90deg,var(--text-link-hover,var(--cranberry-brown,#320505)) calc(var(--text-link-sweep)*100%),var(--text-link-rest,var(--red,#FF2B00)) 0)!important;
+  background-image:linear-gradient(90deg,var(--text-link-hover,var(--cranberry-brown,#320505)) calc(var(--text-sweep-start,0px) + var(--text-link-sweep)*var(--text-sweep-width,100%)),var(--text-link-rest,var(--red,#FF2B00)) 0)!important;
   background-clip:text!important;
   -webkit-text-fill-color:transparent;
   transition:--text-link-sweep 480ms cubic-bezier(.2,.8,.2,1);
@@ -43,3 +43,28 @@
 
 /* Keep FC’s underline and color sweep continuous across its full name. */
 .familiar-characters{white-space:nowrap;text-decoration:underline;text-decoration-skip-ink:none;text-underline-offset:.18em}
+
+/* Every label and icon samples one edge measured in the complete unit's pixels.
+   The icon's local stop stays outside its bounds until that edge reaches it. */
+body :is(a,button) .pixel-arrow::before{
+  background:linear-gradient(90deg,var(--text-link-hover,var(--cranberry-brown)) calc(var(--text-link-sweep)*var(--text-sweep-width,0px) - var(--text-sweep-icon-offset,100000px)),var(--text-link-rest,var(--red)) 0)!important;
+}
+:is(.shop-card-action,.work-view){
+  --text-link-sweep:0;
+  color:var(--text-link-rest,var(--red));
+  background:linear-gradient(90deg,var(--text-link-hover,var(--cranberry-brown)) calc(var(--text-sweep-start,0px) + var(--text-link-sweep)*var(--text-sweep-width,100%)),var(--text-link-rest,var(--red)) 0);
+  background-clip:text;-webkit-text-fill-color:transparent;
+  transition:--text-link-sweep 480ms cubic-bezier(.2,.8,.2,1);
+}
+body :is(.shop-card-action,.work-view)::after{
+  background:linear-gradient(90deg,var(--text-link-hover,var(--cranberry-brown)) calc(var(--text-link-sweep)*var(--text-sweep-width,0px) - var(--text-sweep-icon-offset,100000px)),var(--text-link-rest,var(--red)) 0);
+}
+@media(hover:hover) and (pointer:fine){
+  :is(a,button,summary):hover :is(.shop-card-action,.work-view){--text-link-sweep:1}
+}
+:is(a,button,summary):focus-visible :is(.shop-card-action,.work-view){--text-link-sweep:1}
+@media(prefers-reduced-motion:reduce){:is(.shop-card-action,.work-view){transition:none}}
+@media(forced-colors:active){
+  body :is(a,button) .pixel-arrow::before,body :is(.shop-card-action,.work-view)::after{background:currentColor!important}
+  :is(.shop-card-action,.work-view){background:none;-webkit-text-fill-color:currentColor}
+}

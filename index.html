@@ -45,32 +45,32 @@
   </script>
   <link rel="preload" href="fonts/SC%20Walla%20Trial/WOFF2/SCWallaUnlicensedTrial-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/fonts.css?v=7">
-  <link rel="stylesheet" href="css/walla.css?v=100">
+  <link rel="stylesheet" href="css/walla.css?v=102">
   <link rel="stylesheet" href="css/dialogs.css?v=19">
   <link rel="stylesheet" href="css/mobile-nav.css?v=4">
-<link rel="stylesheet" href="css/typography.css?v=20">
   <script src="js/language.js?v=1" defer></script>
   <script src="js/config.js" defer></script>
-      <link rel="stylesheet" href="css/today-bag.css?v=74">
+      <link rel="stylesheet" href="css/today-bag.css?v=87">
   <script src="js/mobile-nav.js?v=5" defer></script>
-  <script src="js/site.js?v=5" defer></script>
-  <script src="js/walla.js?v=29" defer></script>
+  <script src="js/site.js?v=8" defer></script>
+  <script src="js/walla.js?v=30" defer></script>
   <script src="js/reading-ink.js?v=13" defer></script>
-  <script src="js/bag-layout.js?v=1" defer></script>
-  <script src="js/bag-material.js?v=2" defer></script>
+  <script src="js/drawers.js?v=1" defer></script>
+  <script src="js/bag-story.js?v=5" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/2d1-brand.png?v=2","slogan":"Familiar Characters","description":"An independent design studio working in branding and digital products, and an editorial home for Familiar Characters."}</script>
-<link rel="stylesheet" href="css/shared-controls.css?v=19">
+<link rel="stylesheet" href="css/shared-controls.css?v=21">
 <link rel="stylesheet" href="css/button-fill.css?v=6">
 <link rel="stylesheet" href="css/logo-dock.css?v=1">
-<link rel="stylesheet" href="css/text-links.css?v=10">
+<link rel="stylesheet" href="css/text-links.css?v=12">
 <link rel="stylesheet" href="css/responsive-nav.css?v=2">
-  <link rel="stylesheet" href="css/home-ending.css?v=16">
+  <link rel="stylesheet" href="css/home-ending.css?v=21">
   <script src="js/home-ending.js?v=3" defer></script>
   <link rel="stylesheet" href="css/work-track.css?v=3">
   <script src="js/type-tuner.js?v=4" defer></script>
-  <link rel="stylesheet" href="css/house-journey.css?v=3">
-  <script src="js/house-assembly.js?v=21" defer></script>
-<link rel="stylesheet" href="css/mobile-menu-footer.css?v=1">
+  <link rel="stylesheet" href="css/house-journey.css?v=5">
+  <script src="js/house-assembly.js?v=22" defer></script>
+<link rel="stylesheet" href="css/mobile-menu-footer.css?v=2">
+<link rel="stylesheet" href="css/typography.css?v=29">
 </head>
 <body id="top" class="home-page home-house-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -126,7 +126,7 @@
             <path class="house-shading" d="M328.7,188.7 L562.4,405.6 L694.4,300.0 L460.7,83.1 Z"/>
             <path class="house-edge" d="M95.0,331.8 L328.7,188.7 L562.4,405.6"/>
             <path class="house-edge" d="M328.7,188.7 L460.7,83.1"/>
-            <image href="img/brand/logo_white.svg" width="176" height="59.4" transform="matrix(.95 .15 0 1 245.1 265.5)"/>
+            <image href="img/brand/logo_beige.svg" width="176" height="59.4" transform="matrix(.95 .15 0 1 245.1 265.5)"/>
             </g>
             <path class="house-edge" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"/>
             </g>
@@ -164,34 +164,45 @@
       <div class="section-heading column"><h2 id="shop-label">Shop</h2><p>House of familiar things.</p></div>
       <div class="section-copy prose column"><p data-ink><em class="copy-emphasis">The joy of making</em> is at the heart of what we do. The things we make for ourselves start the same way as our client work: with a clear idea and a detail that makes them their own.</p></div>
       </div>
-      <figure class="bag-study" id="today-bag" aria-label="2D Tote">
-        <header class="bag-story-heading bag-study-copy">
-          <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">2D Tote</em> is our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and a <em class="copy-emphasis">flash of red</em> so you know it’s yours.</p>
-        </header>
-        <div class="bag-layout-scroll"><div class="bag-product-spread">
-          <div class="bag-study-stage">
-            <div class="bag-study-image"><img class="bag-study-photo" src="img/shop/bag-study-2026-10-22/2d-tote-bicolor-daylight-hanging-neutral.webp" width="1086" height="1448" alt="Photorealistic concept of a hanging 2D Tote: ash-brown cotton canvas, a shoulder strap with a red inner face, an ash-brown short handle, beige embroidered logo, and a red side tag." loading="lazy" decoding="async"></div>
+      <figure class="bag-lifestyle" id="today-bag" aria-label="2D Tote">
+        <img class="bag-study-photo" data-bag-image="original" src="img/shop/bag-study-2026-10-22/2d-tote-bicolor-everyday-outdoor-v15.webp" width="1672" height="941" alt="AI-generated concept of the dark brown 2D Tote carried outdoors, with a red inner shoulder strap, a projecting square red tag, and a beige 2D1 logo." loading="lazy" decoding="async">
+        <img class="bag-study-photo bag-color-alternate" data-bag-image="alternate" src="img/shop/bag-study-2026-10-22/2d-tote-red-handles-v16.webp" width="1672" height="941" alt="AI-generated concept of the dark brown 2D Tote carried outdoors, with a solid dark shoulder strap, red short handles, a projecting square red tag, and a beige 2D1 logo." loading="lazy" decoding="async" hidden>
+        <img class="bag-study-photo bag-color-alternate" data-bag-image="red-logo" src="img/shop/bag-study-2026-10-22/2d-tote-red-logo-v17.webp" width="1672" height="941" alt="AI-generated concept of the dark brown 2D Tote carried outdoors, with a red 2D1 logo, solid dark shoulder strap and short handles, and a projecting square red tag." loading="lazy" decoding="async" hidden>
+          <div class="bag-color-options" role="group" aria-label="Compare bag designs" hidden>
+            <button type="button" data-bag-color="original" aria-pressed="true" aria-label="Bicolor strap"></button>
+            <button type="button" data-bag-color="alternate" aria-pressed="false" aria-label="Red handles"></button>
+            <button type="button" data-bag-color="red-logo" aria-pressed="false" aria-label="Red logo"></button>
           </div>
-          <div class="bag-editorial">
-
-            <div class="bag-study-notes">
-          <h4>Specifications</h4>
-          <div><dl class="bag-study-specs">
-          <div><dt>Material</dt><dd class="bag-material"><span>Armada No. 8 cotton canvas</span><details class="material-info"><summary aria-label="About Armada canvas"><span class="material-info-icon" aria-hidden="true"></span></summary><div class="material-tooltip"><button class="material-info-close" type="button" aria-label="Close info sheet" hidden><span aria-hidden="true"></span></button><p>Armada is Senda’s 100% cotton No. 8 canvas, woven in Japan. Its coarse weave and firm, starched finish give the bag structure, then gradually soften with use. We wanted a bag that holds its shape and gains character as it becomes part of your day.</p><p>Where it comes from mattered just as much. We also considered Alberton, which brings historic American textiles back to life in Japan. Armada felt closer to the story we wanted to tell: an everyday object made with Japanese canvas. Making things in Japan is an important part of 2D1, and that choice starts with the fabric.</p></div></details></dd></div>
+      </figure>
+      <div class="bag-product-copy">
+        <div class="bag-spec-action">
+          <details class="tote-specifications">
+            <summary class="tote-spec-trigger"><span class="tote-spec-label">View specifications</span></summary>
+            <section class="tote-spec-sheet contact-sheet" aria-labelledby="tote-spec-title">
+              <header class="tote-spec-header">
+                <h2 class="contact-title" id="tote-spec-title">Specifications</h2>
+                <button class="tote-spec-close" type="button" data-close aria-label="Close specifications" hidden><span aria-hidden="true"></span></button>
+              </header>
+              <div class="tote-spec-content">
+              <dl class="bag-study-specs">
+          <div><dt>Material</dt><dd class="bag-material"><span>Armada No. 8 cotton canvas</span><details class="material-info"><summary aria-label="About Armada canvas"><span class="material-info-icon" aria-hidden="true"></span></summary><div class="material-tooltip"><p>Armada is Senda’s 100% cotton No. 8 canvas, woven in Japan. Its coarse weave and firm, starched finish give the bag structure, then gradually soften with use. We wanted a bag that holds its shape and gains character as it becomes part of your day.</p><p>Where it comes from mattered just as much. We also considered Alberton, which brings historic American textiles back to life in Japan. Armada felt closer to the story we wanted to tell: an everyday object made with Japanese canvas. Making things in Japan is an important part of 2D1, and that choice starts with the fabric.</p></div></details></dd></div>
           <div><dt>Origin</dt><dd>Made in Japan</dd></div>
           <div><dt>Dimensions</dt><dd>Approx. W 40 × H 36 × D 10 cm, excluding the strap</dd></div>
-          <div><dt>Straps</dt><dd>A dark shoulder strap and a bright red hand handle</dd></div>
-          <div><dt>Woven tag</dt><dd>A red pixel at the lower-left side seam</dd></div>
+          <div><dt>Straps</dt><dd data-bag-strap-copy><span data-bag-color-copy="original">A dark shoulder strap with a red inner face, and dark short handles</span><span data-bag-color-copy="alternate" hidden>A solid dark shoulder strap and red short handles</span><span data-bag-color-copy="red-logo" hidden>A solid dark shoulder strap and dark short handles</span></dd></div>
+          <div><dt>Woven tag</dt><dd>A square red woven tag projecting from the left side seam</dd></div>
           <div><dt>Pockets</dt><dd>A bottle-holding band and a wide pocket at the base for small items</dd></div>
           <div><dt>Opening</dt><dd>Magnetic closure concealed in the top hem</dd></div>
           <div><dt>Logo</dt><dd>Embroidered 2D1 logo</dd></div>
-        </dl><p class="bag-study-spec-note">AI-generated concept image. Prototype specifications: approx. 40 × 36 × 10 cm. Design, dimensions, and details may change before production.</p></div>
+        </dl>
+              <p class="bag-study-spec-note">AI-generated concept image. Details may change before production.</p>
+              </div>
+            </section>
+          </details>
+
         </div>
-          </div>
-        </div>
-        </div>
-        <div class="bag-study-copy bag-closing"><div class="section-copy prose column shop-support-copy"><p data-ink><span>2D Tote</span> is <em class="copy-emphasis">still in development</em>. Follow us for updates on our activities.</p></div></div>
-      </figure>
+        <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">2D Tote</em> is our first everyday item: a canvas tote made to tag along wherever you go. A simple shape, handy inner pockets, and a <em class="copy-emphasis">flash of red</em> so you know it’s yours.</p>
+        <div class="section-copy prose column shop-support-copy"><p data-ink><span>2D Tote</span> is <em class="copy-emphasis">still in development</em>. Follow us for updates on our activities.</p></div>
+      </div>
       </div>
     </section>
 
@@ -199,8 +210,9 @@
   <div class="home-ending about-ending" data-link-surface="red">
     <section class="ending-contact" aria-labelledby="ending-contact-title"><div class="column">
       <span class="ending-eyes-hover"><img class="ending-contact-eyes" src="img/brand/eyes.svg" width="116" height="48" alt="" aria-hidden="true"></span>
-      <h2 class="signup-heading ending-contact-label" id="ending-contact-title">Don’t Be a Stranger</h2>
+      <h2 class="signup-heading ending-contact-label" id="ending-contact-title">CONTACT</h2>
       <a class="intro-cta" href="contact/">Get in touch <span class="pixel-arrow" aria-hidden="true"></span></a>
+      <p class="ending-follow-note">or follow us below</p>
     </div></section>
   <footer class="site-footer"><div class="footer-line column"><p>©<span data-year>2026</span> 2D1</p><nav class="social-links" aria-label="Social media"><a href="https://www.instagram.com/2d1.studio/" target="_blank" rel="noopener noreferrer" aria-label="2D1 on Instagram (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="0" width="7" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="8" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="3" y="3" width="3" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="3" y="6" width="3" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="8" y="7" width="1" height="1"/><rect x="1" y="8" width="7" height="1"/></g></svg><span class="social-platform" aria-hidden="true">Instagram</span></a><a href="https://www.threads.com/@2d1.studio" target="_blank" rel="noopener noreferrer" aria-label="2D1 on Threads (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="2" y="0" width="5" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="3" y="2" width="3" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="5" y="4" width="2" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="3" y="5" width="2" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="2" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="2" y="8" width="6" height="1"/></g></svg><span class="social-platform" aria-hidden="true">Threads</span></a><a href="https://x.com/2d1_studio" target="_blank" rel="noopener noreferrer" aria-label="2D1 on X (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="0.5" y="0.5" width="2" height="1"/><rect x="7.5" y="0.5" width="1" height="1"/><rect x="1.5" y="1.5" width="2" height="1"/><rect x="6.5" y="1.5" width="1" height="1"/><rect x="2.5" y="2.5" width="2" height="1"/><rect x="5.5" y="2.5" width="1" height="1"/><rect x="3.5" y="3.5" width="2" height="1"/><rect x="3.5" y="4.5" width="3" height="1"/><rect x="2.5" y="5.5" width="1" height="1"/><rect x="4.5" y="5.5" width="2" height="1"/><rect x="1.5" y="6.5" width="1" height="1"/><rect x="5.5" y="6.5" width="2" height="1"/><rect x="0.5" y="7.5" width="1" height="1"/><rect x="6.5" y="7.5" width="2" height="1"/></g></svg><span class="social-platform" aria-hidden="true">X</span></a><a href="https://www.linkedin.com/company/newfiction-org/" target="_blank" rel="noopener noreferrer" aria-label="New Fiction on LinkedIn (opens in a new tab)"><svg viewBox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="1" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="5" y="3" width="2" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="2" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="3" y="7" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/></g></svg><span class="social-platform" aria-hidden="true">LinkedIn</span></a></nav></div></footer>
   </div>

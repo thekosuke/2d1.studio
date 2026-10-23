@@ -31,7 +31,7 @@ html[lang="ja"] .essay-rest p{line-height:1.85}
 .about-page:not(.contact-page) .essay-page{width:min(680px,calc(100% - 48px));max-width:680px;margin-inline:auto;padding:160px 0 96px}
 .about-page .essay-head{gap:24px}
 .about-page .essay-title{font:700 40px/1.12 var(--font);letter-spacing:-.02em;text-wrap:balance}
-.about-page .essay-dek{font:400 20px/1.5 var(--font);color:var(--sub-gray);letter-spacing:0}
+.about-page .essay-dek{font:var(--font-reading) var(--font);color:var(--sub-gray);letter-spacing:0}
 .about-page .essay-body{margin-top:64px}
 .about-page :is(.essay-lede,.essay-rest p){font:400 20px/1.7 var(--font);letter-spacing:0;text-wrap:pretty}
 .about-page .essay-rest{margin-top:0;mask:none;-webkit-mask:none;max-height:none;overflow:visible}
@@ -83,7 +83,7 @@ html[lang="ja"] .about-page .essay-dek{font-size:20px;line-height:1.7}
 .about-story-page .essay-head{display:block;padding:160px 0 96px}
 .about-story-page .essay-head>.column{display:flex;flex-direction:column;gap:24px}
 .about-story-page .essay-title{font:700 var(--type-display)/1.1 var(--font);letter-spacing:0;text-align:left;text-wrap:pretty}
-.about-story-page .essay-dek{font:400 20px/1.5 var(--font);text-wrap:pretty}
+.about-story-page .essay-dek{font:var(--font-reading) var(--font);text-wrap:pretty}
 .about-story-page .essay-body{margin-top:0}
 .about-story-scene{position:relative;isolation:isolate}
 .about-story-lead{position:relative;z-index:0;padding-bottom:var(--space)}

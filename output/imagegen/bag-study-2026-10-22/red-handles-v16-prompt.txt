@@ -1,0 +1,6 @@
+Built-in image_gen; edit of approved v15. Lossless WebP delivery.
+
+Use case: precise-object-edit.
+Edit target: the supplied approved full-bleed tote photograph.
+Create an EXACTLY registered color-only alternate version of this photograph. Change only two fabric colors: (1) make the entire long shoulder strap a single near-black dark brown matching its existing dark outer face and the bag body; recolor the narrow orange-red inner face to that same dark brown, preserving its fold, edge, texture and lighting. (2) recolor the short carry handles at the bag opening to Icon Red #FF2B00, matching the existing square red side tag with realistic shadows, cloth texture and lighting.
+ABSOLUTE INVARIANTS: same exact image framing, dimensions/aspect ratio, camera, bag silhouette, bag-body color, canvas weave, all wrinkles, seams, strap/handle geometry and positions, cream 2D1 logo geometry and color, square red protruding side tag, person, sweatshirt, hands and their motion blur, trousers, concrete background, grain, focus, daylight, exposure and grading. Leave every pixel outside the two affected strap/handle fabric regions unchanged. No new handle loops, no altered logo, no smoothing, no restyling, no extra texture. This is a localized fabric color edit, not a new photograph. Landscape output matching input.

@@ -5,15 +5,19 @@ from html.parser import HTMLParser
 from html import escape
 from pathlib import Path
 import json
+import re
 
 ROOT = Path(__file__).resolve().parent.parent
-TRANSLATIONS = json.loads((ROOT / 'locales/ja.json').read_text())
+TRANSLATIONS = {key.strip(): value for key, value in json.loads((ROOT / 'locales/ja.json').read_text()).items()}
 ATTRS = {'alt', 'aria-label', 'placeholder', 'title', 'content'}
 VOID = {'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
 
 def translate(value):
     key = value.strip()
-    return TRANSLATIONS[key] if key in TRANSLATIONS else value
+    if key in TRANSLATIONS: return TRANSLATIONS[key]
+    count = re.fullmatch(r'(\d+) objects', key)
+    if count: return count[1] + '点'
+    return value
 
 class JapanesePage(HTMLParser):
     def __init__(self, path):
@@ -35,11 +39,16 @@ class JapanesePage(HTMLParser):
         if tag == 'link' and a.get('rel') == 'preload' and a.get('as') == 'font': return
         if tag == 'html': a['lang'] = 'ja'
         for key in ATTRS & a.keys():
-            if a[key]: a[key] = translate(a[key])
+            if a[key]:
+                a[key] = translate(a[key])
+                if key == 'alt' and ' by ' in a[key]:
+                    product, brand = a[key].rsplit(' by ', 1)
+                    photo = re.fullmatch(r'(.+?)( \(\d+/\d+\))?', brand)
+                    a[key] = f'{photo[1]}の{product}{photo[2] or ""}'
         for key in ['href','src','poster','data-src']:
             val = a.get(key, '')
             if val.startswith(('css/','js/','fonts/','img/','../css/','../js/','../fonts/','../img/')):
-                a[key] = '../' + val
+                a[key] = '../' + val.replace('canvas-start-en.jpg', 'canvas-start-ja.jpg')
         if a.get('srcset'):
             a['srcset'] = ', '.join(
                 '../' + candidate.strip() if candidate.strip().startswith(('img/', '../img/')) else candidate.strip()
@@ -56,11 +65,11 @@ class JapanesePage(HTMLParser):
             else: a['href'] = './'; a['aria-current'] = 'page'
         if tag == 'script' and 'js/language.js' in a.get('src',''):
             prefix = '../../' if self.about else '../'
-            self.output.append(f'<script src="{prefix}js/ja.js?v=9" defer></script>\n  ')
+            self.output.append(f'<script src="{prefix}js/ja.js?v=10" defer></script>\n  ')
         self.output.append('<' + tag + ''.join(' '+k if v is None else ' '+k+'="'+escape(v,quote=True)+'"' for k,v in a.items()) + '>')
         if tag == 'link' and 'css/fonts.css' in a.get('href',''):
             prefix = '../../' if self.about else '../'
-            self.output.append(f'\n  <link rel="stylesheet" href="{prefix}css/japanese-font.css?v=1">')
+            self.output.append(f'\n  <link rel="stylesheet" href="{prefix}css/japanese-font.css?v=3">')
         if tag not in VOID: self.stack.append((tag,a))
         if tag in ('script','style'): self.raw = (tag,a)
     def handle_endtag(self, tag):

@@ -6,18 +6,18 @@
 .shop-card-media{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;background:var(--white);margin:0;overflow:hidden;transition:opacity 420ms,filter 420ms,transform 300ms cubic-bezier(.2,.8,.2,1)}
 .shop-tote-image{display:block;width:100%;height:100%;padding:24px;object-fit:contain}
 .menu-note-preview img{display:block;width:100%;height:100%;object-fit:cover}
-.shop-card-caption{position:absolute;left:calc(100% + 24px);top:0;width:calc(38.8889% - 24px);font:500 var(--type-label)/1.5 var(--font)}
-.shop-card-title{font:500 var(--type-label)/1.5 var(--font);margin:0;text-transform:none}
+.shop-card-caption{position:absolute;left:calc(100% + 24px);top:0;width:calc(38.8889% - 24px);font:var(--font-caption-medium) var(--font)}
+.shop-card-title{font:var(--font-caption-medium) var(--font);margin:0;text-transform:none}
 .shop-card-title::before{content:none}
-.shop-card-description,.shop-card-price{font:400 var(--type-label)/1.5 var(--font);margin:8px 0 0;color:var(--sub-gray)}
+.shop-card-description,.shop-card-price{font:var(--font-caption) var(--font);margin:8px 0 0;color:var(--sub-gray)}
 .shop-card-price{display:none}
-.shop-card-action{display:flex;align-items:center;gap:8px;margin:16px 0 0;font:500 var(--type-label)/1.5 var(--font);color:var(--red);opacity:1;transform:none;transition:opacity 180ms,transform 180ms}
+.shop-card-action{display:flex;align-items:center;gap:8px;margin:16px 0 0;font:var(--font-caption-medium) var(--font);color:var(--red);opacity:1;transform:none;transition:opacity 180ms,transform 180ms}
 .shop-card-link[target="_blank"] .shop-card-action::after{content:'';width:.65em;height:.65em;flex:none;background:currentColor;transform:translateY(-.03em);mask:url('../img/icons/pixel-arrow-up-right.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-arrow-up-right.svg') center/contain no-repeat}
 .shop-card:is(:hover,:focus-visible,:focus-within) .shop-card-action{opacity:1;transform:none}
 .shop-card-status{opacity:1;transform:none}
 .shop-card:focus-visible .shop-card-media{background:var(--red)}
 .shop-card:focus-visible .shop-card-media>img{opacity:.9}
-.shop-index{position:absolute;right:calc(100% + 24px);top:0;font:500 var(--type-label)/1.5 var(--font);white-space:nowrap;pointer-events:none}
+.shop-index{position:absolute;right:calc(100% + 24px);top:0;font:var(--font-caption-medium) var(--font);white-space:nowrap;pointer-events:none}
 .shop-finds-preview{padding:0}
 .shop-finds-preview img{display:block;width:100%;height:100%;object-fit:cover}
 html.shop-scroll-gallery{scroll-snap-type:y proximity;overflow-anchor:none}
@@ -57,17 +57,19 @@ html:has(> body.shop-page)::-webkit-scrollbar{display:none!important;width:0!imp
 .shop-finds-stage{position:absolute;inset:6%;background:var(--red);overflow:hidden;clip-path:inset(2px);isolation:isolate}
 .shop-finds-stage>img{display:block;width:100%;height:100%;object-fit:contain}
 .shop-finds-live{position:absolute;left:8.53%;top:21.05%;width:82.94%;height:47.05%;overflow:hidden;pointer-events:none}
-.shop-finds-live.is-ready{background:var(--beige)}
+.shop-finds-live{background:var(--beige)}
+.shop-finds-live>.shop-finds-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}
+.shop-finds-live.is-ready.is-active>.shop-finds-poster{visibility:hidden}
 .shop-finds-live iframe{position:absolute;left:0;top:0;width:1600px;height:900px;border:0;transform-origin:top left;pointer-events:none;visibility:hidden}
-.shop-finds-live.is-ready iframe{visibility:visible}
+.shop-finds-live.is-ready.is-active iframe{visibility:visible}
 
-/* Shift the image left with a slight clockwise tilt. */
+/* Shift the image left with a slight counterclockwise tilt. */
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
- .shop-card.is-centered:hover .shop-card-media{transform:translateX(-8px) rotate(2deg)}
+ .shop-card.is-centered:hover .shop-card-media{transform:translateX(-8px) rotate(-2deg)}
 }
 
 /* Gallery captions share the bag specification reading size. */
-.shop-index,.shop-card-caption,.shop-card-caption :is(.shop-card-title,.shop-card-description,.shop-card-price,.shop-card-action){font-size:var(--type-spec)}
+
 
 /* Below the desktop reading grid, captions belong beneath their image.
    Include them in card height so long translations never overlap the next item. */

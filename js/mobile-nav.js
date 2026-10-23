@@ -3,7 +3,7 @@
   const trigger = document.querySelector('.mobile-nav-toggle');
   const panel = trigger && document.getElementById(trigger.getAttribute('aria-controls'));
   if (!trigger || !panel) return;
-  const mobile = matchMedia('(max-width: 767px), (max-width: 1023px) and (max-height: 500px) and (pointer: coarse)');
+  const mobile = matchMedia('(max-width: 767px), (max-width: 1099px) and (pointer: coarse)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const isFinds = panel.classList.contains('finds-page-nav');
   const desktopTrigger = document.querySelector('.finds-home-trigger');

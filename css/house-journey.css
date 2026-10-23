@@ -8,7 +8,7 @@
 @media(prefers-reduced-motion:reduce){.has-house-cover .home-house-lead{position:relative;top:auto}.has-house-cover .house-journey{margin-top:0}}
 .home-house-page .house-journey{position:relative;background:var(--ash-brown)}
 .house-animation{position:relative;background:var(--ash-brown)}
-.house-journey .design-house{margin:0;min-height:100svh;background:var(--ash-brown);color:var(--white)}
+.house-journey .design-house{margin:0;min-height:100svh;background:var(--ash-brown);color:var(--beige)}
 .house-journey .house-stage{display:grid;place-items:center;height:100svh;padding:64px 24px}
 .house-journey .design-house-diagram{display:block;width:100%;height:calc(100svh - 128px);max-width:1440px;overflow:visible;transform-origin:0 0}
 .design-house-diagram path{stroke-linejoin:round;stroke-linecap:round}
@@ -28,7 +28,8 @@
 body.home-house-page .page-nav a.is-on-house{color:var(--beige)}
 body.home-house-page .page-nav a[aria-current="page"]{color:var(--red)}
 body.home-house-page .mobile-nav-toggle.is-on-house{color:var(--beige)}
-body.home-house-page .language-switch.is-on-house{--fill-rest-ground:var(--ash-brown);--fill-rest-ink:var(--beige);--fill-active-ground:var(--beige);--fill-active-ink:var(--ash-brown);--language-fill:var(--beige);background:var(--ash-brown);border-color:var(--beige)}
+body.home-house-page .language-switch.is-on-house{--fill-rest-ground:var(--ash-brown);--fill-rest-ink:var(--beige);--fill-active-ground:var(--beige);--fill-active-ink:var(--ash-brown);--language-fill:var(--beige);background:var(--ash-brown)!important;color:var(--beige)!important;border-color:var(--beige)!important}
+body.home-house-page .language-switch.is-on-house a{border-color:var(--beige)!important}
 @media(max-width:767px){
  .house-journey .house-stage{padding:80px 16px}
  .house-journey .design-house-diagram{height:calc(100svh - 160px)}

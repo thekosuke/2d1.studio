@@ -47,3 +47,60 @@
   measure();
   document.fonts.ready.then(measure);
 })();
+
+/* Measure one sweep from the first label glyph through the icon's far edge. */
+(() => {
+  const units = new Map();
+  function measure(unit, icon) {
+    const box = unit.getBoundingClientRect();
+    if (!box.width) return;
+    const walker = document.createTreeWalker(unit, NodeFilter.SHOW_TEXT);
+    const textRects = [];
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      if (!node.textContent.trim() || node.parentElement.closest('.pixel-arrow,[hidden],[aria-hidden="true"]')) continue;
+      const range = document.createRange();
+      range.selectNodeContents(node);
+      textRects.push(...range.getClientRects());
+    }
+    if (!textRects.length) return;
+    const start = Math.min(...textRects.map(rect => rect.left));
+    const textEnd = Math.max(...textRects.map(rect => rect.right));
+    let iconLeft, end;
+    if (icon) {
+      const rect = icon.getBoundingClientRect();
+      iconLeft = rect.left;
+      end = Math.max(textEnd, rect.right);
+    } else {
+      const pseudo = getComputedStyle(unit, '::after');
+      iconLeft = textEnd + (parseFloat(getComputedStyle(unit).columnGap) || 0) + (parseFloat(pseudo.marginLeft) || 0);
+      end = iconLeft + (parseFloat(pseudo.width) || 0);
+    }
+    unit.style.setProperty('--text-sweep-start', `${start - box.left}px`);
+    unit.style.setProperty('--text-sweep-width', `${end - start}px`);
+    (icon || unit).style.setProperty('--text-sweep-icon-offset', `${iconLeft - start}px`);
+  }
+  const observer = new ResizeObserver(entries => entries.forEach(entry => measure(entry.target, units.get(entry.target))));
+  function register() {
+    document.querySelectorAll('a .pixel-arrow,button .pixel-arrow').forEach(icon => {
+      const unit = icon.closest('a,button');
+      if (!units.has(unit)) { units.set(unit, icon); observer.observe(unit); }
+    });
+    document.querySelectorAll('.shop-card-action,.work-view').forEach(unit => {
+      if (!units.has(unit)) { units.set(unit, null); observer.observe(unit); }
+    });
+    units.forEach((icon, unit) => measure(unit, icon));
+  }
+  register();
+  document.fonts?.ready.then(register);
+  // Drawers and project views can add controls after the initial page load.
+  new MutationObserver(records => {
+    if (records.some(record => [...record.addedNodes].some(node => node.nodeType === 1))) register();
+  }).observe(document.body, {childList:true, subtree:true});
+  document.addEventListener('pointerover', event => {
+    const unit = event.target.closest('a,button,summary');
+    if (!unit) return;
+    if (units.has(unit)) measure(unit, units.get(unit));
+    unit.querySelectorAll('.shop-card-action,.work-view').forEach(item => measure(item, null));
+  }, {passive:true});
+})();

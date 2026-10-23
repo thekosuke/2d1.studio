@@ -181,8 +181,10 @@
   }
   function createTile(item){
     const tile=document.createElement('figure');tile.className='objects-tile';tile.dataset.object=item.id;tile._item=item;
+    if(shopPreview)tile.style.willChange='auto';
     const image=document.createElement('img');image.alt='';image.draggable=false;image.decoding='async';image.className=item.imageClass||'';
     const caption=document.createElement('figcaption'),brand=document.createElement('span');brand.textContent=item.brand;caption.append(document.createTextNode(item.name),brand);
+    if(shopPreview){caption.style.fontSize='calc(14px / var(--preview-scale, 1))';brand.style.fontSize='calc(11px / var(--preview-scale, 1))';}
     tile.append(image,caption);
     return tile;
   }
@@ -1041,8 +1043,13 @@
     infoSeen=true;entranceSettled=true;
     let previewFrame=0,previewStarted=0;
     const previewPose=value=>{
-      updateCanvasZoom(value);const size=geometry(canvas.clientWidth,zoom);
-      pose({x:(canvas.clientWidth-size.cell)/2,y:(canvas.clientHeight-size.cell)/2,...size},false);
+      updateCanvasZoom(value);
+      const base=geometry(canvas.clientWidth,0),size=geometry(canvas.clientWidth,zoom);
+      // Zoom a single decoded grid. Resizing every image inside a transformed
+      // iframe can leave blank composited tiles in WebKit on the first loop.
+      layer.style.transformOrigin=`${canvas.clientWidth/2}px ${canvas.clientHeight/2}px`;
+      layer.style.setProperty('--preview-scale',size.cell/base.cell);
+      layer.style.transform=`scale(${size.cell/base.cell})`;
     };
     const stopPreview=()=>{cancelAnimationFrame(previewFrame);previewFrame=0;previewPose(0)};
     const tickPreview=time=>{
@@ -1058,7 +1065,7 @@
     reduced.addEventListener('change',()=>{if(reduced.matches)stopPreview()});
     // The initial ResizeObserver delivery must not discard the decoded tiles.
     measuredWidth=canvas.clientWidth;measuredHeight=canvas.clientHeight;
-    previewPose(0);draw();
+    reset();previewPose(0);draw();
     // Keep the parent's static monitor visible until the first canvas is decoded.
     Promise.all([...layer.querySelectorAll('img[src]')].map(image=>image.decode().catch(()=>{})))
       .then(()=>requestAnimationFrame(()=>parent.postMessage('fc-preview-ready',location.origin)));

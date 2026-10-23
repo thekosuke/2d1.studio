@@ -5,9 +5,9 @@
 .contact-page .contact-sheet{width:100%;height:auto;margin:0;padding:0;overflow:visible;background:transparent;transform:none;transition:none}
 .contact-page .contact-head{margin-bottom:32px}
 .contact-page .contact-form{display:flex;flex-direction:column;gap:28px}
-.contact-page .contact-title{font:700 var(--contact-heading-size)/1.15 var(--font);text-transform:none;letter-spacing:var(--contact-heading-tracking)}
-.contact-page .contact-intro{font:400 22px/1.4 var(--font);text-transform:none;color:var(--sub-gray);margin-top:-16px}
-.contact-page .contact-notice{font:400 13px/1.5 var(--font);color:var(--sub-gray)}
+.contact-page .contact-title{font:var(--font-display) var(--font);text-transform:none;letter-spacing:var(--type-track)}
+.contact-page .contact-intro{font:var(--font-reading) var(--font);text-transform:none;color:var(--sub-gray);margin-top:-16px}
+.contact-page .contact-notice{font:var(--font-caption) var(--font);color:var(--sub-gray)}
 .contact-page .field{margin:0;width:100%;min-width:0}
 .contact-page .field-input{background:transparent!important;transition:background-color 180ms,border-color 180ms;padding:12px;box-sizing:border-box;width:100%}
 .contact-page .field-input:focus{background:var(--white)!important;outline:none;border-bottom-color:var(--red)}
@@ -21,21 +21,21 @@
 .contact-page .contact-send:hover .send-arrow{translate:4px 0}
 .contact-page .send-arrow{transition:translate 180ms cubic-bezier(.3,1.4,.5,1)}
 .contact-page .contact-fallback{margin-top:24px}
-@media(max-width:767px){.contact-page-main{width:calc(100% - 48px);padding:112px 0 64px}.contact-page .contact-title{font-size:36px}.contact-page .contact-intro{font-size:20px}}
+@media(max-width:767px){.contact-page-main{width:calc(100% - 48px);padding:112px 0 64px}.contact-page .contact-title{font:var(--font-display) var(--font)}.contact-page .contact-intro{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.contact-page :is(.field-input,.field-label,.chip span,.send-arrow){transition:none}.contact-page .chip:active span,.contact-page .contact-send:hover .send-arrow{transform:none;translate:none}}
-.contact-page #contact .contact-title{font:700 var(--contact-heading-size)/1.15 var(--font);text-transform:none;letter-spacing:var(--contact-heading-tracking)}
+.contact-page #contact .contact-title{font:var(--font-display) var(--font);text-transform:none;letter-spacing:var(--type-track)}
 .contact-page #contact .contact-intro{text-transform:none;letter-spacing:0}
-@media(max-width:767px){.contact-page #contact .contact-title{font-size:36px}}
+@media(max-width:767px){.contact-page #contact .contact-title{font:var(--font-display) var(--font)}}
 .contact-page #contact .contact-sheet{border:0;padding:0;background:transparent;letter-spacing:0}
 .contact-page #contact .contact-head{justify-content:flex-start;margin-bottom:32px}
 .contact-page #contact .contact-eyes{display:flex}
-.contact-page #contact .contact-intro{font:400 22px/1.4 var(--font);color:var(--sub-gray)}
+.contact-page #contact .contact-intro{font:var(--font-reading) var(--font);color:var(--sub-gray)}
 .contact-page #contact .contact-notice{text-transform:none;letter-spacing:0}
 @media(max-width:767px){.contact-page #contact .contact-intro{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.contact-page #contact .contact-eyes{display:none}}
 .contact-page #contact .chip input:not(:checked)+span{background:transparent}
 .contact-page #contact .contact-foot{display:flex;flex-direction:column;align-items:stretch}
-.contact-page #contact .contact-send{display:flex;width:100%;max-width:none;justify-content:center;align-items:center;gap:8px;min-height:52px;padding:12px 20px;border:1px solid var(--red);background:var(--red);color:var(--white);font:500 var(--type-body)/1.4 var(--font);letter-spacing:0;text-transform:none}
+.contact-page #contact .contact-send{display:flex;width:100%;max-width:none;justify-content:center;align-items:center;gap:8px;min-height:52px;padding:12px 20px;border:1px solid var(--red);background:var(--red);color:var(--white);font:var(--font-ui) var(--font);letter-spacing:0;text-transform:none}
 .contact-page #contact .contact-send:is(:hover,:focus-visible){color:var(--white);background:var(--ink);border-color:var(--ink)}
 /* More room for the opening message. */
 .contact-page #contact .field-area{min-height:200px}

@@ -1,7 +1,7 @@
 :root{--red:#FF2B00;--beige:#FAF0E6;--ash:#191416;--brown:#320505}
 html,body{margin:0;background:var(--beige);color:var(--brown)}
 html{overflow:hidden;scrollbar-gutter:auto}
-body{--text-link-rest:var(--brown);--text-link-hover:var(--red);min-height:100svh;font:500 12px/1.4 'SC Walla','Noto Sans JP',Arial,sans-serif;letter-spacing:.04em;transition:background 480ms,color 480ms}
+body{--text-link-rest:var(--brown);--text-link-hover:var(--red);min-height:100svh;font:500 12px/1.4 'SC Walla','Zen Kaku Gothic New',Arial,sans-serif;letter-spacing:.04em;transition:background 480ms,color 480ms}
 body.is-playing{--text-link-rest:var(--beige);background:var(--ash);color:var(--beige)}
 body.is-playing main{touch-action:none}
 [hidden]{display:none!important}
@@ -40,3 +40,6 @@ noscript .pixel-prompt{bottom:64px;text-transform:none}
 
 /* The exit handoff owns the pixel size until it settles back at one pixel. */
 body.is-returning .red-pixel{transition:none}
+
+:root{--font:"SC Walla",Arial,sans-serif}
+html[lang="ja"]{--font:"SC Walla","Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif}

@@ -2,7 +2,7 @@
 (() => {
   const japanese = document.documentElement.lang === 'ja';
   const dictionary = japanese ? window.TWO_D_ONE_JA || {} : {};
-  const t = text => dictionary[text] || text;
+  const t = text => dictionary[text.trim()] || text;
   function translate(root) {
     if (!japanese || !root) return;
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);

@@ -2,30 +2,23 @@
 .about-essay-page > main{position:relative;z-index:1;background:var(--beige);padding:calc(40svh - var(--essay-head-half-height,35px)) 24px 128px}
 .about-essay-page .essay{width:100%;max-width:680px;margin-inline:auto}
 .about-essay-page .essay-head{--text-link-hover:var(--cranberry-brown)}
-.about-essay-page .essay-title{font:600 var(--type-display)/1.1 var(--font);letter-spacing:-.02em;text-wrap:balance}
-.about-essay-page .essay-dek{margin-top:24px;font:400 20px/1.5 var(--font);color:var(--sub-gray)}
+.about-essay-page .essay-title{text-wrap:balance}
+.about-essay-page .essay-dek{margin-top:24px;color:var(--sub-gray)}
 .about-essay-page .essay-body{margin-top:24px}
-.about-essay-page .essay-lede{font:400 var(--type-copy)/1.5 var(--font);letter-spacing:0;text-wrap:pretty}
+.about-essay-page .essay-lede{text-wrap:pretty}
 .about-essay-page .essay-lede+p{margin-top:var(--essay-paragraph-gap)}
-.about-essay-page .essay-rest p{font:400 20px/1.65 var(--font);text-wrap:pretty}
+.about-essay-page .essay-rest p{text-wrap:pretty}
 .about-essay-page .essay-rest p+p{margin-top:var(--essay-paragraph-gap)}
-.about-essay-page .essay-rest h2{margin:64px 0 24px;font:600 var(--type-copy)/1.25 var(--font);text-transform:none;letter-spacing:-.015em;text-wrap:pretty}
+.about-essay-page .essay-rest h2{margin:64px 0 24px;text-transform:none;text-wrap:pretty}
 .about-essay-page .essay-rest h2::before{content:none}
-.about-essay-page .essay strong{font-weight:500}
+
 .about-essay-page .essay a{text-decoration:underline;text-underline-offset:.18em}
 .about-essay-page .essay-end{display:inline-block;width:.5em;height:.5em;margin-left:.4em;background:var(--red)}
-html[lang="ja"] .about-essay-page .essay-title{font-size:var(--type-display);line-height:1.3}
-html[lang="ja"] .about-essay-page .essay-lede{font-size:var(--type-copy);line-height:1.8}
-html[lang="ja"] .about-essay-page .essay-rest p{font-size:18px;line-height:1.9}
+
 @media(max-width:767px){
  .about-essay-page > main{padding-bottom:80px}
  .about-essay-page .essay-rest h2{margin-top:48px}
- .about-essay-page .essay-rest p{font-size:18px}
-}
 
-/* Owner-saved opening paragraph typography, 21 October. */
-@media(min-width:768px){
- html[lang] .about-essay-page .essay-rest h2{font-size:36px}
 }
 
 /* The lower divider sits halfway between overview and first essay heading. */
@@ -35,25 +28,19 @@ html[lang="ja"] .about-essay-page .essay-rest p{font-size:18px;line-height:1.9}
 .about-essay-page .essay-rest>section:first-child>h2{margin-top:0}
 @media(max-width:767px){.about-essay-page{--essay-divider-gap:32px}}
 
-/* Scale the shared title down on phones and allow longer translations to wrap. */
-html[lang] .about-essay-page .essay-title{font-size:clamp(23px,5.5vw,64px);white-space:normal;text-wrap:balance}
+/* Allow longer translated headings to wrap. */
+html[lang] .about-essay-page .essay-title{white-space:normal;text-wrap:balance}
 
-/* Shared essay body style saved through the typography controls. */
-.about-essay-page{--essay-body-size:20px;--essay-body-weight:400;--essay-body-tracking:.01em;--essay-body-leading:1.5;--essay-paragraph-gap:24px;--essay-body-ink:color-mix(in srgb,var(--cranberry-brown) 90%,var(--beige))}
+/* Essay spacing and color; typography is shared in typography.css. */
+.about-essay-page{--essay-paragraph-gap:24px;--essay-body-ink:color-mix(in srgb,var(--cranberry-brown) 90%,var(--beige))}
 .about-essay-page .essay-body p{color:var(--essay-body-ink)}
 @media(max-width:767px){.about-essay-page{--essay-paragraph-gap:24px}}
-@media(min-width:768px){
- html[lang] .about-essay-page .essay-rest p{font-size:var(--essay-body-size);font-weight:var(--essay-body-weight);letter-spacing:var(--essay-body-tracking);line-height:var(--essay-body-leading)}
-}
 
 /* A centered reading column, with matching title, opening and essay widths. */
 .about-essay-page .essay{width:100%;max-width:680px;margin-inline:auto}
 .about-essay-page .essay-rest{max-width:none}
 
-/* Caption-style hierarchy, with the owner’s 20px About reading size. */
-html[lang] .about-essay-page :is(.essay-title,.essay-rest h2){font:500 var(--essay-body-size)/1.5 var(--font);letter-spacing:var(--type-track);text-transform:none}
-html[lang] .about-essay-page .essay-introduction>.essay-lede[data-type-style],
-html[lang] .about-essay-page .essay-body p{font:400 var(--essay-body-size)/1.5 var(--font);letter-spacing:var(--type-track)}
+html[lang] .about-essay-page :is(.essay-title,.essay-rest h2){text-transform:none}
 
 /* Center About’s shared reading column; essay, Contact and socials use one edge. */
 .about-essay-page > main{padding-inline:0}

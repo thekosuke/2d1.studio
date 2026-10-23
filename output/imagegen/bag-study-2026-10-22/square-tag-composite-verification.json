@@ -1,0 +1,16 @@
+{
+  "base": "v13 original PNG",
+  "tag_donor": "v14 original PNG",
+  "method": "User-authorized feathered local composite; no generation",
+  "changed_bounds": [
+    331,
+    556,
+    408,
+    631
+  ],
+  "changed_pixels": 4568,
+  "changed_percent": 0.2903,
+  "outside_region_identical": true,
+  "webp_decodes_identically": true,
+  "bytes": 1366610
+}
