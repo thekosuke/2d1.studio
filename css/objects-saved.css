@@ -1,0 +1,222 @@
+/* Equal-height top controls, using the shared type roles. */
+.objects-page{--fc-control-height:34px}
+.objects-page.objects-ready > .objects-info,.objects-page.objects-ready .objects-view-dock{top:var(--finds-edge-top);bottom:auto;height:var(--fc-control-height)}
+.objects-page.objects-ready .objects-view-dock{display:flex;align-items:center;gap:8px;max-width:calc(50vw - 100px)}
+.objects-page.objects-ready .objects-search-wrap{display:flex;align-items:center;flex:1;min-width:0;height:100%;width:clamp(180px,22vw,320px)}
+.objects-page.objects-ready .objects-search{height:100%;width:100%;min-width:0;box-sizing:border-box}
+.objects-page.objects-ready > .objects-info{display:flex;align-items:center;box-sizing:border-box;min-height:var(--fc-control-height)}
+.objects-saved-trigger,.objects-save,.objects-saved-close,.objects-saved-remove{font:var(--font-small-label) var(--font);border:1px solid var(--ink);background:var(--beige);color:var(--ink);padding:10px 12px;cursor:pointer}
+.objects-saved-trigger{height:100%;min-height:0;padding-block:0;flex:none;white-space:nowrap}
+.objects-save[aria-pressed="true"]{background:var(--beige);border-color:var(--red);color:var(--red)}
+:is(.objects-saved-trigger,.objects-save,.objects-saved-close,.objects-saved-remove):is(:hover,:focus-visible){background:var(--red);color:var(--beige);border-color:var(--red)}
+#object-dialog .objects-dialog-action{display:flex;flex-direction:row;align-items:stretch;gap:8px}
+#object-dialog .objects-save{flex:none}
+.objects-saved-dialog{position:fixed;inset:0 0 0 auto;margin:0;width:min(560px,100%);height:100dvh;max-width:100%;max-height:100dvh;padding:24px;border:0;background:var(--beige);color:var(--ink);overflow:auto;overscroll-behavior:contain}
+.objects-saved-dialog::backdrop{background:rgba(50,5,5,.4)}
+.objects-saved-dialog[open]{animation:saved-enter 480ms cubic-bezier(.2,.8,.2,1)}
+.objects-saved-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+.objects-saved-header h2{font:var(--font-section) var(--font);text-transform:none;margin:0}
+.objects-saved-header h2::before{content:none}
+.objects-saved-note,.objects-saved-empty{font:var(--font-caption) var(--font);margin:0 0 24px}
+.objects-saved-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+.objects-saved-card{min-width:0}
+.objects-saved-open{display:flex;flex-direction:column;gap:8px;width:100%;text-align:left;padding:0;border:0;background:transparent;color:inherit;font:var(--font-ui) var(--font);cursor:pointer}
+.objects-saved-open img{width:100%;aspect-ratio:1;object-fit:contain;background:var(--white)}
+.objects-saved-open:is(:hover,:focus-visible){color:var(--red)}
+.objects-saved-brand{font:var(--font-caption) var(--font)}
+.objects-saved-remove{margin-top:12px}
+@keyframes saved-enter{from{transform:translateX(100%)}to{transform:translateX(0)}}
+@media(max-width:767px){
+ .objects-page.objects-ready > .objects-info,.objects-page.objects-ready .objects-view-dock{top:calc(var(--finds-edge-top) + 56px)}
+ .objects-page.objects-ready > .objects-info{width:64px;justify-content:center;padding:8px;gap:4px}
+ .objects-page.objects-ready > .objects-info>span:first-child{font-size:0}
+ .objects-page.objects-ready > .objects-info>span:first-child::after{content:'FC';font:var(--font-small-label) var(--font)}
+ .objects-page.objects-ready .objects-view-dock{left:calc(var(--finds-edge-left) + 72px);max-width:none;width:auto}
+ .objects-page.objects-ready .objects-search-wrap{width:0}
+ .objects-page.objects-ready .objects-search{padding-left:26px;font:var(--font-small) var(--font)}
+ .objects-saved-trigger{padding-inline:8px}
+ .objects-saved-dialog{padding:20px}
+}
+@media(prefers-reduced-motion:reduce){.objects-saved-dialog[open]{animation:none}}
+
+/* Saved collection: a coordinated page push, with no dimming layer. */
+.objects-page{--saved-width:min(720px,100vw)}
+.objects-saved-dialog{width:var(--saved-width);transform:translateX(100%);transition:transform 600ms cubic-bezier(.2,.8,.2,1);padding:32px}
+.objects-saved-dialog[open]{animation:none}
+.objects-saved-dialog::backdrop{background:transparent}
+.objects-saved-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.objects-saved-note,.objects-saved-empty{font:var(--font-ui-body) var(--font);color:var(--sub-gray);margin-bottom:32px}
+.objects-saved-card{position:relative}
+.objects-saved-open{display:block}
+.objects-saved-overflow{position:absolute;right:8px;bottom:8px;width:32px;height:32px;padding:8px;border:0;background:var(--beige);cursor:pointer}
+.objects-saved-menu{position:absolute;right:8px;bottom:44px;z-index:2;min-width:150px;padding:8px;background:var(--beige);border:1px solid var(--ink)}
+.objects-saved-menu :is(button,a){display:flex;align-items:center;gap:8px;width:100%;font:var(--font-small-label) var(--font);margin:0;padding:10px 8px;border:0;text-align:left;white-space:nowrap}
+.objects-saved-close{display:grid;place-items:center;width:32px;height:32px;min-width:32px;padding:6px;border:0}
+.objects-saved-trigger{display:flex;align-items:center;justify-content:center;gap:8px}
+.objects-save{display:grid;place-items:center;width:44px;height:44px;padding:10px}
+.pixel-heart,.saved-cross,.saved-dots{display:block;flex:none;width:20px;height:20px;background:currentColor}
+.pixel-heart{mask:url('../img/icons/pixel-heart.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-heart.svg') center/contain no-repeat}
+.objects-save[aria-pressed="false"] .pixel-heart{mask-image:url('../img/icons/pixel-heart-outline.svg');-webkit-mask-image:url('../img/icons/pixel-heart-outline.svg')}
+.saved-cross{mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
+.saved-dots{width:16px;height:4px;background:linear-gradient(90deg,currentColor 0 25%,transparent 25% 37.5%,currentColor 37.5% 62.5%,transparent 62.5% 75%,currentColor 75%)}
+#object-dialog .objects-dialog-action{position:relative;overflow:visible}
+.objects-save-popup{position:absolute;z-index:10;left:0;top:calc(100% + 8px);padding:8px;background:var(--beige);border:1px solid var(--ink);white-space:nowrap}
+.objects-save-shortcut{font:var(--font-small-label) var(--font);border:0;padding:8px;cursor:pointer}
+
+#object-dialog .objects-dialog-link{text-transform:none!important;font:var(--font-ui) var(--font)!important;letter-spacing:0!important}
+@media(max-width:767px){.objects-saved-dialog{padding:20px}.objects-saved-list{gap:10px}.objects-saved-overflow{right:4px;bottom:4px}.objects-saved-header h2{font:var(--font-section) var(--font)}}
+@media(prefers-reduced-motion:reduce){.objects-page > :not(dialog,script,style,.objects-header),.objects-saved-dialog{transition:none}}
+/* One continuous red ink sweep across labels and pixel icons. */
+.objects-page :is(button:not(.objects-color-copy,.objects-saved-open,.objects-saved-close,.objects-info-close,.objects-dialog-close),.objects-dialog-link,.objects-saved-product){--fc-sweep:0;color:var(--ink)!important;background-color:var(--beige)!important;background-image:linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--ink) 0),linear-gradient(var(--beige),var(--beige))!important;background-clip:text,padding-box!important;-webkit-text-fill-color:transparent;transition:--fc-sweep 480ms cubic-bezier(.2,.8,.2,1);text-decoration:none!important}
+@property --fc-sweep{syntax:'<number>';inherits:true;initial-value:0}
+.objects-page :is(button:not(.objects-color-copy,.objects-saved-open,.objects-saved-close,.objects-info-close,.objects-dialog-close),.objects-dialog-link,.objects-saved-product):is(:hover,:focus-visible){--fc-sweep:1}
+.objects-page :is(button,a) :is(.pixel-heart,.pixel-external,.saved-dots,.objects-product-arrow span,.objects-peek-arrow){background:linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*var(--fc-width,20px) - var(--fc-offset,0px)),var(--ink) 0)!important}
+.objects-page .objects-save[aria-pressed="true"]{border-color:var(--red)}
+.objects-page .objects-save[aria-pressed="true"] .pixel-heart{background:var(--red)!important}
+.objects-page .objects-saved-overflow{position:absolute}
+.objects-page .saved-dots{color:var(--ink);-webkit-text-fill-color:currentColor}
+.objects-page button:is(:hover,:focus-visible) .saved-dots{color:var(--red)}
+@media(prefers-reduced-motion:reduce){.objects-page :is(button,a){transition:none!important}}
+
+.objects-saved-menu[hidden],.objects-save-popup[hidden]{display:none}
+@media(max-width:767px){.objects-saved-card:nth-child(3n + 1) .objects-saved-menu{left:4px;right:auto}}
+
+.saved-dots{mask:linear-gradient(90deg,#000 0 25%,transparent 25% 37.5%,#000 37.5% 62.5%,transparent 62.5% 75%,#000 75%);-webkit-mask:linear-gradient(90deg,#000 0 25%,transparent 25% 37.5%,#000 37.5% 62.5%,transparent 62.5% 75%,#000 75%)}
+
+/* Keep the viewport-fixed logo in the same push coordinate system as the canvas. */
+.objects-saved-dialog{background:var(--ash-brown);color:var(--beige);padding:48px}
+.objects-saved-note,.objects-saved-empty{color:var(--sand-gray)}
+.objects-page.objects-ready > .objects-info[aria-expanded="true"]{background:var(--red)!important;background-clip:padding-box!important;color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important}
+@media(max-width:767px){.objects-saved-dialog{padding:48px 24px}}
+@media(prefers-reduced-motion:reduce){.objects-page .objects-header .site-logo{transition:none}}
+
+/* Brief viewport-level save confirmation, above the product modal. */
+.objects-save-popup{position:fixed;inset:24px auto auto 50%;transform:translateX(-50%);margin:0;max-width:calc(100vw - 48px);padding:8px;border:1px solid var(--ink);background:var(--beige);color:var(--ink)}
+.objects-save-popup:not(:popover-open){display:none}
+.objects-save-popup::backdrop{background:transparent;pointer-events:none}
+#object-dialog .objects-dialog-link{background:var(--red)!important;background-image:none!important;background-clip:padding-box!important;color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important}
+#object-dialog .objects-dialog-link .pixel-external{background:var(--beige)!important}
+#object-dialog .objects-dialog-link:is(:hover,:focus-visible){background:var(--ink)!important}
+.objects-saved-product .pixel-external{width:12px;height:12px;flex:0 0 12px}
+@media(hover:hover) and (pointer:fine){.objects-saved-overflow{opacity:0;pointer-events:none}.objects-saved-card:is(:hover,:focus-within) .objects-saved-overflow{opacity:1;pointer-events:auto}}
+
+/* A framed companion to Info; the canvas and its controls remain stationary. */
+.objects-saved-dialog{inset:var(--favorites-top,76px) var(--favorites-right,16px) auto auto;width:min(467.2px,calc(100vw - 2 * var(--finds-edge,16px)));height:auto;min-height:240px;max-height:calc(100dvh - var(--favorites-top,76px) - var(--finds-edge-bottom,16px));border:2px solid var(--red);background:var(--white);color:var(--ink);transform:none;transition:none;overflow:auto}
+.objects-saved-note,.objects-saved-empty{color:var(--sub-gray)}
+.objects-page .objects-saved-trigger{background-color:var(--white)!important;background-image:linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--ink) 0),linear-gradient(var(--white),var(--white))!important}
+.objects-page.objects-ready > .objects-info{--fc-sweep:0;background:linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--white) 0)!important;background-clip:padding-box!important;-webkit-text-fill-color:currentColor;color:var(--ink)!important;transition:--fc-sweep 480ms cubic-bezier(.2,.8,.2,1),color 180ms}
+.objects-page.objects-ready > .objects-info:is(:hover,:focus-visible),.objects-page.objects-ready > .objects-info[aria-expanded="true"]{--fc-sweep:1;color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important}
+@media(prefers-reduced-motion:reduce){.objects-page.objects-ready > .objects-info{transition:none}}
+.objects-page.objects-ready .objects-saved-trigger{background-color:var(--white)!important;background-image:linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--ink) 0),linear-gradient(var(--white),var(--white))!important}
+.objects-page.objects-ready > .objects-info{transition:--fc-sweep 480ms cubic-bezier(.2,.8,.2,1),color 180ms!important}
+@media(prefers-reduced-motion:reduce){.objects-page.objects-ready > .objects-info{transition:none!important}}
+
+/* Compact UI scale and a stable frame anchored to the language controls. */
+.objects-saved-dialog{bottom:var(--favorites-bottom,16px);height:auto;min-height:0;max-height:none;padding:24px;display:none;flex-direction:column}
+.objects-saved-dialog[open]{display:flex}
+.objects-saved-header{flex:none;margin-bottom:16px}
+.objects-saved-header h2{font:var(--font-ui) var(--font);letter-spacing:var(--type-track)}
+.objects-saved-note,.objects-saved-empty{flex:none;font:var(--font-ui-body) var(--font);letter-spacing:var(--type-track);margin-bottom:24px}
+.objects-saved-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-content:start;min-height:0;overflow:auto;flex:1}
+@media(max-width:600px){.objects-saved-dialog{padding:20px}.objects-saved-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.objects-saved-header h2{font:var(--font-ui) var(--font)}}
+/* Let item menus extend over neighboring tiles without clipping their actions. */
+.objects-saved-list{overflow:visible;flex:none}
+
+/* The same moving edge paints the fill and inverts the lettering. */
+.objects-page.objects-ready > .objects-info,
+html[lang] body #object-dialog .objects-dialog-tags button{
+ --fc-sweep:0;
+ background-image:linear-gradient(90deg,var(--beige) calc(var(--fc-sweep)*100%),var(--ink) 0),linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--white) 0)!important;
+ background-color:var(--white)!important;background-clip:text,padding-box!important;
+ color:var(--ink)!important;-webkit-text-fill-color:transparent!important;
+ transition:--fc-sweep 480ms cubic-bezier(.2,.8,.2,1)!important;
+}
+.objects-page.objects-ready > .objects-info:is(:hover,:focus-visible,[aria-expanded="true"]),
+html[lang] body #object-dialog .objects-dialog-tags button:is(:hover,:focus-visible){--fc-sweep:1}
+.objects-page.objects-ready > .objects-info>span:last-child{background:linear-gradient(90deg,var(--beige) calc(var(--fc-sweep)*var(--fc-width,194px) - var(--fc-offset,168px)),var(--ink) 0)!important}
+#object-dialog .objects-color-copy{position:relative;display:block;flex:none;width:16px;height:16px;padding:0;border:0;background:var(--swatch-color)!important;cursor:pointer;overflow:visible}
+#object-dialog .objects-color-copy:focus-visible{outline:none;box-shadow:none;border:1px solid var(--ink)}
+#object-dialog .objects-color-copy .objects-color-tooltip{position:absolute;bottom:calc(100% + 8px);left:50%;right:auto;transform:translateX(-50%);z-index:12;display:none;width:max-content;height:auto;max-width:260px;padding:0;background:transparent;color:var(--red);font:var(--font-small-label) var(--font);letter-spacing:var(--type-label-track);text-transform:uppercase;text-align:center;-webkit-text-fill-color:var(--red);white-space:nowrap;pointer-events:none}
+#object-dialog .objects-color-copy:is(:hover,:focus-visible,.has-feedback) .objects-color-tooltip{display:block}
+@media(prefers-reduced-motion:reduce){.objects-page.objects-ready > .objects-info,html[lang] body #object-dialog .objects-dialog-tags button{transition:none!important}}
+
+/* Shared inset keeps Favorites aligned with the Info sheet at every width. */
+.objects-page .objects-saved-dialog{padding:var(--collection-sheet-padding,48px)}
+/* Detail actions share a left-to-right fill sweep. */
+.objects-page #object-dialog .objects-save{
+ background:linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--beige) 0)!important;
+ background-clip:padding-box!important;
+}
+.objects-page #object-dialog .objects-save .pixel-heart{
+ background:linear-gradient(90deg,var(--beige) calc(var(--fc-sweep)*var(--fc-width,44px) - var(--fc-offset,11px)),var(--red) 0)!important;
+}
+.objects-page #object-dialog .objects-save:is(:hover,:focus-visible) .pixel-heart{
+ mask-image:url('../img/icons/pixel-heart.svg');-webkit-mask-image:url('../img/icons/pixel-heart.svg');
+}
+.objects-page #object-dialog .objects-dialog-link,
+.objects-page #object-dialog .objects-dialog-link:is(:hover,:focus-visible){
+ background:linear-gradient(90deg,var(--ink) calc(var(--fc-sweep)*100%),var(--red) 0)!important;
+ background-clip:padding-box!important;
+ transition:--fc-sweep 480ms cubic-bezier(.2,.8,.2,1)!important;
+}
+@media(prefers-reduced-motion:reduce){.objects-page #object-dialog :is(.objects-save,.objects-dialog-link){transition:none!important}}
+
+/* Search tags use the same synchronized fill/inversion as detail tags. */
+html[lang] body .objects-search-suggestions button{
+ --fc-sweep:0;background-image:linear-gradient(90deg,var(--beige) calc(var(--fc-sweep)*100%),var(--ink) 0),linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--white) 0)!important;
+ background-color:var(--white)!important;background-clip:text,padding-box!important;color:var(--ink)!important;-webkit-text-fill-color:transparent!important;
+ transition:--fc-sweep 480ms cubic-bezier(.2,.8,.2,1)!important;
+}
+html[lang] body .objects-search-suggestions button:is(:hover,:focus-visible){--fc-sweep:1}
+html[lang] body .objects-search-suggestions button[aria-pressed="true"]{background-image:linear-gradient(90deg,var(--beige) calc(var(--fc-sweep)*100%),var(--red) 0),linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--white) 0)!important;border-color:var(--red)!important}
+.objects-page .objects-search-field:is(:hover,:focus-within){border-color:var(--red)}
+.objects-search-field{display:flex;align-items:center;gap:6px;width:100%;height:100%;min-width:0;border:1px solid var(--ink);background:var(--white);padding-left:28px}
+.objects-page.objects-ready .objects-search-field .objects-search{border:0;min-height:0;background:transparent;width:100%;flex:1;min-width:40px;padding-left:4px}
+.objects-search-chips{display:flex;gap:4px;min-width:0;max-width:calc(100% - 44px);overflow-x:auto;scrollbar-width:none;flex:none}
+.objects-search-chips:empty{display:none}
+.objects-search-chip{display:inline-flex;align-items:center;gap:6px;flex:none;padding:4px 6px 4px 10px;border:1px solid var(--red);border-radius:999px;background:var(--white);color:var(--red);font:var(--font-small) var(--font);white-space:nowrap}
+.objects-page .objects-search-chip .objects-search-chip-remove{display:grid;place-items:center;width:20px;height:20px;padding:4px;border:0;background:transparent!important;color:var(--red)!important}
+.objects-search-chip-remove span{display:block;width:10px;height:10px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
+.objects-page .objects-search-chip .objects-search-chip-remove:is(:hover,:focus-visible){background:var(--red)!important;color:var(--beige)!important;border-radius:50%}
+@media(prefers-reduced-motion:reduce){html[lang] body .objects-search-suggestions button{transition:none!important}}
+
+html[lang] body #object-dialog .objects-dialog-tags button[aria-pressed="true"]{background-image:linear-gradient(90deg,var(--beige) calc(var(--fc-sweep)*100%),var(--red) 0),linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--white) 0)!important;border-color:var(--red)}
+@media(max-width:767px){.objects-page .objects-search-suggestions{position:fixed;left:var(--finds-edge-left,12px);right:var(--finds-edge-right,12px);top:calc(var(--finds-edge-top,12px) + 112px);width:auto;min-width:0;max-width:none}}
+
+/* Favorites overflow opens beneath its trigger, on white paper. */
+.objects-saved-menu{top:calc(100% + 4px);bottom:auto;background:var(--white);border-color:var(--ink)}
+.objects-page .objects-saved-overflow{border:1px solid var(--ink);background:var(--white)!important}
+.objects-page .objects-saved-menu :is(button,a){color:var(--ink)!important;background-color:var(--white)!important;background-image:linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--ink) 0),linear-gradient(var(--white),var(--white))!important;background-clip:text,padding-box!important;-webkit-text-fill-color:transparent}
+.objects-page .objects-saved-menu .pixel-external{background:linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*var(--fc-width) - var(--fc-offset)),var(--ink) 0)!important}
+.objects-saved-note{max-width:calc(100% - 48px)}
+@media(min-width:601px){.objects-saved-card:nth-child(3n + 1) .objects-saved-menu{left:8px;right:auto}}
+
+/* Open sheet triggers share the same settled active fill and inverted ink. */
+.objects-page.objects-ready :is(.objects-info,.objects-saved-trigger)[aria-expanded="true"]{--fc-sweep:1;background:var(--red)!important;background-clip:padding-box!important;color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important;border-color:var(--red)!important}
+.objects-page.objects-ready :is(.objects-info,.objects-saved-trigger)[aria-expanded="true"] :is(.pixel-heart,span:last-child){color:var(--beige);-webkit-text-fill-color:var(--beige)}
+.objects-page.objects-ready .objects-saved-trigger[aria-expanded="true"] .pixel-heart{background:var(--beige)!important}
+
+/* Selected filters remain solid and square; keep the same DOM during a sweep. */
+html[lang] body .objects-search-suggestions button[aria-pressed="true"],html[lang] body #object-dialog .objects-dialog-tags button[aria-pressed="true"]{--fc-sweep:1}
+.objects-search-chip{border-radius:0;background:var(--red);color:var(--beige)}
+.objects-page .objects-search-chip .objects-search-chip-remove{border-radius:0;color:var(--beige)!important}
+.objects-page .objects-search-chip .objects-search-chip-remove:is(:hover,:focus-visible){border-radius:0;background:var(--ink)!important;color:var(--beige)!important}
+.objects-page .objects-search-chips{overflow-y:hidden;scrollbar-width:none!important;-ms-overflow-style:none}
+.objects-page .objects-search-chips::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+.objects-search-chips.has-overflow-right{mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent);-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent)}
+
+/* 467.2px preserves the former five-column 114.4px tiles, with three columns,
+   two 12px gaps, 48px shared padding, and the 2px frame. */
+/* Collection triggers sweep their background and invert ink at the same edge. */
+.objects-page.objects-ready .objects-saved-trigger{
+ background-image:linear-gradient(90deg,var(--beige) calc(var(--fc-sweep)*100%),var(--ink) 0),linear-gradient(90deg,var(--red) calc(var(--fc-sweep)*100%),var(--white) 0)!important;
+ background-color:var(--white)!important;background-clip:text,padding-box!important;
+ color:var(--ink)!important;-webkit-text-fill-color:transparent!important;
+ transition:--fc-sweep 480ms cubic-bezier(.2,.8,.2,1)!important;
+}
+.objects-page.objects-ready .objects-saved-trigger .pixel-heart{
+ background:linear-gradient(90deg,var(--beige) calc(var(--fc-sweep)*var(--fc-width,64px) - var(--fc-offset,12px)),var(--ink) 0)!important;
+}
+.objects-page.objects-ready .objects-saved-trigger[aria-expanded="true"]{--fc-sweep:1;background:var(--red)!important;background-clip:padding-box!important;color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important}
+.objects-page.objects-ready .objects-saved-trigger[aria-expanded="true"] .pixel-heart{background:var(--beige)!important}
+@media(prefers-reduced-motion:reduce){.objects-page.objects-ready .objects-saved-trigger{transition:none!important}}

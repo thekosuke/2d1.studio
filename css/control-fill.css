@@ -1,0 +1,44 @@
+/* Only controls explicitly registered in control-fill.js participate.
+   The ID arm supplies specificity over legacy per-page important rules;
+   it never selects an element outside the data-attribute allowlist. */
+@property --control-progress { syntax:'<number>'; inherits:true; initial-value:0; }
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill] {
+ --control-progress:0; --control-ground:transparent; --control-ink:var(--ink); --control-fill:var(--red); --control-inverse:var(--beige);
+ background-color:var(--control-ground)!important;
+ background-image:linear-gradient(90deg,var(--control-inverse) calc(var(--control-progress)*100%),var(--control-ink) 0),linear-gradient(90deg,var(--control-fill) calc(var(--control-progress)*100%),var(--control-ground) 0)!important;
+ background-origin:border-box!important; background-clip:text,padding-box!important;
+ color:var(--control-ink)!important; -webkit-text-fill-color:transparent!important;
+ transition:--control-progress 480ms cubic-bezier(.2,.8,.2,1)!important; text-decoration:none!important;
+}
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="white"] { --control-ground:var(--white); }
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="beige"] { --control-ground:var(--beige); }
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="save"] { --control-ground:var(--beige); --control-ink:var(--red); }
+/* Red resting surfaces retain their approved brown sweep. */
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="red"] { --control-ground:var(--red); --control-ink:var(--beige); --control-fill:var(--cranberry-brown,var(--ink)); }
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="chip"] { --control-ink:var(--beige); --control-fill:var(--cranberry-brown,var(--ink)); }
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="utility"] { --control-ground:transparent; }
+html body :is(#scoped-control-fill#control-state,[data-control-fill]):not(:disabled):not([aria-disabled="true"]):is(:hover,:focus-visible,:active,[aria-pressed="true"]:not([data-control-fill="save"]),[aria-expanded="true"]),
+html body :is(#scoped-form#control-state,#contact) .chip:has(input:checked,input:focus-visible)>[data-control-fill],
+html body :is(#scoped-spec#control-state,details[open])>.tote-spec-trigger[data-control-fill] { --control-progress:1; }
+html body :is(#scoped-control-fill#control-state,[data-control-fill]) [data-control-label] { background:none!important; color:inherit!important; -webkit-text-fill-color:transparent!important; }
+html body :is(#scoped-control-fill#control-state,[data-control-fill]) [data-control-icon] {
+ background:linear-gradient(90deg,var(--control-inverse) calc(var(--control-progress)*var(--control-width,0px) - var(--control-offset,0px)),var(--control-ink) 0)!important;
+}
+html body [data-control-cross] { mask:url('../img/icons/pixel-close.svg') center/contain no-repeat; -webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat; }
+html body [data-control-cross]>* { visibility:hidden; }
+html body [data-control-cross]::before,html body [data-control-cross]::after { display:none!important; }
+html body #contact .chip>[data-control-fill] { transform:none; }
+/* Keep checkbox markers legible with the same moving ink boundary. */
+html body #contact .chip>[data-control-fill]::before {
+ border:0!important; background:linear-gradient(90deg,var(--control-inverse) calc(var(--control-progress)*var(--control-width) - var(--control-marker-offset)),var(--control-ink) 0)!important;
+ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill-rule='evenodd' d='M0 0h8v8H0zM1 1v6h6V1z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+html body #contact .chip:has(input:checked)>[data-control-fill]::before { mask:none; }
+@media(prefers-reduced-motion:reduce) {
+ html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill] { transition:none!important; }
+}
+@media(forced-colors:active) {
+ html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill] { background:ButtonFace!important; color:ButtonText!important; -webkit-text-fill-color:currentColor!important; }
+}
+
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="close"] { --control-ink:var(--control-close-ink,var(--ink)); }

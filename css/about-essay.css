@@ -64,3 +64,7 @@ html[lang] .about-essay-page :is(.essay-title,.essay-rest h2){text-transform:non
  .about-essay-page .essay-head,.about-essay-page .essay-rest h2{position:sticky;top:96px;align-self:start;margin:0}
 }
 @media(max-width:1099px){.about-essay-page .essay-opening-section .essay-introduction{margin-top:24px}.about-essay-page .essay-body{margin-top:0}}
+
+/* Match the overview divider between About me and Familiar Characters. */
+.about-essay-page .essay-rest>section[aria-labelledby="familiar-characters"]{border-top:1px solid var(--line);margin-top:var(--essay-divider-gap);padding-top:var(--essay-divider-gap)}
+.about-essay-page .essay-rest>section[aria-labelledby="familiar-characters"]>h2{margin-top:0}

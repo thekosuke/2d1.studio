@@ -385,8 +385,8 @@
 
 .objects-tile img{transform-origin:center}
 .objects-page.finds-entering :is(.objects-header,.objects-view-dock,.objects-info,.objects-zoom,.objects-footer){opacity:0;pointer-events:none}
-.objects-page.finds-controls-enter :is(.objects-header,.objects-view-dock){animation:finds-controls-top 480ms cubic-bezier(.2,.8,.2,1) both}
-.objects-page.finds-controls-enter :is(.objects-info,.objects-zoom,.objects-footer){animation:finds-controls-bottom 480ms cubic-bezier(.2,.8,.2,1) both}
+.objects-page.finds-controls-enter :is(.objects-header,.objects-view-dock,.objects-info){animation:finds-controls-top 480ms cubic-bezier(.2,.8,.2,1) both}
+.objects-page.finds-controls-enter :is(.objects-zoom,.objects-footer){animation:finds-controls-bottom 480ms cubic-bezier(.2,.8,.2,1) both}
 @keyframes finds-controls-top{from{opacity:0;translate:0 -24px}to{opacity:1;translate:0 0}}
 @keyframes finds-controls-bottom{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
 @media(prefers-reduced-motion:reduce){.objects-page.finds-entering :is(.objects-header,.objects-view-dock,.objects-info,.objects-zoom,.objects-footer){opacity:1;pointer-events:auto}.objects-page.finds-controls-enter :is(.objects-header,.objects-view-dock,.objects-info,.objects-zoom,.objects-footer){animation:none}}
@@ -405,7 +405,7 @@
 .objects-search::placeholder{color:var(--sub-gray);font-weight:400}
 .objects-search:hover,.objects-search:focus{border-color:var(--red);background:var(--white)}
 .objects-search:focus{border-bottom:2px solid var(--red)}
-@media(max-width:767px){.objects-ready .objects-view-dock{display:block!important;bottom:68px}.objects-search{width:calc((100vw - 24px) * .75)}}
+@media(max-width:767px){.objects-ready .objects-view-dock{bottom:68px}.objects-search{width:calc((100vw - 24px) * .75)}}
 
 .objects-search-wrap{position:relative;display:block}
 .objects-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;fill:none;stroke:var(--sub-gray);stroke-width:1.5;pointer-events:none}
@@ -509,7 +509,7 @@
 .objects-page.objects-ready .objects-zoom button:first-of-type{border-right:1px solid var(--ink)}
 .objects-page.objects-ready .objects-zoom button:last-of-type{border-left:1px solid var(--ink)}
 .objects-page.objects-ready .objects-zoom input{margin:0 12px}
-@media(max-width:767px){.objects-page.objects-ready .objects-zoom{height:46px;min-height:46px}.objects-page.objects-ready .objects-zoom button{flex-basis:44px;width:44px;height:44px;min-width:44px;min-height:44px}.objects-page.objects-ready .objects-zoom input{margin:0 8px}}
+@media(max-width:767px){.objects-page.objects-ready .objects-zoom{height:34px;min-height:34px}.objects-page.objects-ready .objects-zoom button{flex-basis:32px;width:32px;height:32px;min-width:32px;min-height:32px}.objects-page.objects-ready .objects-zoom input{height:32px;margin:0 8px}}
 
 /* Avoid loading the static fallback grid before the canvas initializes. */
 html.finds-js .objects-collection{display:none}
@@ -688,9 +688,10 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 .finds-menu-motion:not(.is-open) .finds-menu-item{transition-timing-function:cubic-bezier(.8,0,.8,.2),cubic-bezier(.8,0,.8,.2),linear}
 
 /* Roomier info sheet, with its action row remaining flush to the frame. */
-.objects-page #objects-info-dialog{padding:48px}
-.objects-page #objects-info-dialog .objects-info-close{top:24px;right:20px;width:32px;height:32px;min-width:32px;min-height:32px}
-@media(pointer:coarse){.objects-page #objects-info-dialog .objects-info-close{top:20px;width:44px;height:44px;min-width:44px;min-height:44px}}
+.objects-page{--collection-sheet-padding:48px}
+.objects-page #objects-info-dialog{padding:var(--collection-sheet-padding)}
+.objects-page #objects-info-dialog .objects-info-close,.objects-page .objects-saved-dialog .objects-saved-close{position:absolute;top:24px;right:20px;width:32px;height:32px;min-width:32px;min-height:32px}
+@media(pointer:coarse){.objects-page #objects-info-dialog .objects-info-close,.objects-page .objects-saved-dialog .objects-saved-close{top:20px;width:44px;height:44px;min-width:44px;min-height:44px}}
 .objects-page #objects-info-dialog .objects-info-actions{margin:48px -48px -48px}
 @media(min-width:768px){.objects-page #objects-info-dialog{width:40vw;max-width:none}}
 

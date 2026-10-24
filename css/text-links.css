@@ -68,3 +68,11 @@ body :is(.shop-card-action,.work-view)::after{
   body :is(a,button) .pixel-arrow::before,body :is(.shop-card-action,.work-view)::after{background:currentColor!important}
   :is(.shop-card-action,.work-view){background:none;-webkit-text-fill-color:currentColor}
 }
+
+/* Text hyperlinks inherit their reading context; only their ink sweeps red.
+   Dedicated navigation, language controls, image links and buttons stay separate. */
+:is(#reading-hyperlinks,html) body a:not(:has(img,svg)):not(:is(.page-nav a,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.work-footer-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.objects-saved-menu a,.object-open,.pixel-home,[data-control-fill])){
+ --text-link-rest:currentColor;
+ --text-link-hover:var(--red);
+ color:inherit!important;
+}

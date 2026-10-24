@@ -1,3 +1,4 @@
+@import url('./close-controls.css?v=1');
 /* Typography roles. Change these metrics once, not at individual text elements.
    Each font token contains weight size/leading; append var(--font) at use sites.
    Responsive/language size aliases below remain compatible with older components. */

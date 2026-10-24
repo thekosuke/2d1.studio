@@ -1,0 +1,7 @@
+/* All dismiss controls: bare cross at rest, beige cross on red when engaged. */
+body :is(.objects-saved-close,.objects-info-close,.objects-dialog-close,.work-close,.tote-spec-close){background:transparent!important;background-image:none!important;color:inherit!important;-webkit-text-fill-color:currentColor; border:0;box-shadow:none;outline:none}
+body :is(.objects-saved-close,.objects-info-close,.objects-dialog-close,.work-close,.tote-spec-close):is(:hover,:focus-visible){background:var(--red)!important;color:var(--beige)!important}
+body :is(.objects-saved-close,.objects-dialog-close,.work-close,.tote-spec-close) :is(span,.saved-cross){background:currentColor!important}
+body .contact-close{background:transparent!important}
+body .contact-close .contact-x{background:transparent;color:var(--ink)}
+body .contact-close:is(:hover,:focus-visible) .contact-x{background:var(--red);color:var(--beige)}

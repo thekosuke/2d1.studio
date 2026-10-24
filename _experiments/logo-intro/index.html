@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>2D1 · Logo introduction</title>
+<link rel="stylesheet" href="../../css/fonts.css">
+<style>
+:root{color-scheme:light;font-family:'SC Walla',Arial,sans-serif;color:#320505;background:#faf0e6}*{box-sizing:border-box}body{margin:0;padding:24px}main{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;max-width:1320px;margin:auto}.stage{aspect-ratio:1;width:min(100%,calc(100svh - 48px));align-self:start;display:grid;place-items:center;background:#faf0e6}.stage svg{display:block;width:100%;height:100%}h1{font-size:24px;margin:0 0 16px;font-weight:500}p{font-size:14px;line-height:1.5}button,a,input{font:inherit;border-radius:0}button,.download{padding:10px 14px;border:1px solid currentColor;background:transparent;color:inherit;text-decoration:none;display:inline-block;cursor:pointer}button:hover,button:focus-visible,.download:hover,.download:focus-visible{background:#ff2b00;color:#faf0e6;outline:0}input:focus-visible{outline:0;background:#fff;border-color:#ff2b00}input[type=range]{width:100%;accent-color:#ff2b00}input[type=number]{width:88px;padding:6px;background:transparent;border:1px solid #807573;color:inherit}label{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;margin:8px 0}.actions{display:flex;gap:8px;margin:16px 0}fieldset{padding:0;border:0;margin:24px 0}legend{font-size:16px;margin-bottom:8px}output{font-size:14px;font-variant-numeric:tabular-nums}code{overflow-wrap:anywhere}#status{min-height:42px;color:#807573}noscript img{width:100%}@media(max-width:760px){body{padding:16px}main{grid-template-columns:1fr;gap:24px}.stage{width:100%}aside{max-width:460px;width:100%;margin:auto}}
+</style>
+</head>
+<body><main>
+<div id="stage" class="stage" role="img" aria-label="2D1 logo construction animation"><noscript><img src="../../img/brand/logo_red.svg" alt="2D1"></noscript></div>
+<aside><h1>Logo introduction</h1><p>1080 × 1080 · silent · 60 fps</p>
+<div class="actions"><button id="replay" type="button">Replay</button><button id="pause" type="button">Pause</button></div>
+<label for="scrub">Timeline <output id="time">0.00 s</output></label><input id="scrub" type="range" min="0" max="6010" step="1" value="0">
+<p id="phase"></p><fieldset id="timings"><legend>Timing · milliseconds</legend></fieldset><p>All characters extrude together at a fixed size. The logo and caption stay centered together as the text appears and retracts. A DESIGN HOUSE starts sliding down as the upward wipe crosses the logo’s bottom edge. After the first blink, only the pupils look right, return left, then blink twice. The caption finishes sliding up behind the logo exactly as the returning wipe crosses that same edge. A short reverse extrusion then resets the seamless loop.</p>
+<button id="save" type="button">Save timing JSON</button><p>To export edited timing, replace <code>timing.json</code> with your saved file and run:</p><p><code>node _experiments/logo-intro/export.mjs</code></p>
+<a class="download" href="exports/2d1-intro-1080.mp4" download>Download MP4</a>
+<p id="status" role="status">Loading original brand assets…</p>
+</aside></main><script type="module" src="preview.mjs?v=center-caption-1"></script></body></html>

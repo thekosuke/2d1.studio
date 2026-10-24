@@ -1,0 +1,50 @@
+{
+  "width": 1080,
+  "height": 1080,
+  "fps": 60,
+  "frames": 300,
+  "durationSeconds": 5,
+  "timing": {
+    "openingHold": 103,
+    "twoTop": 616,
+    "twoBottom": 616,
+    "one": 616,
+    "dee": 616,
+    "logoHold": 480,
+    "wipe": 754,
+    "eyes": 1439,
+    "endHold": 480,
+    "caption": 445,
+    "returnWipe": 754,
+    "reset": 274,
+    "loopHold": 100,
+    "captionOut": 343
+  },
+  "logoAssets": [
+    "img/brand/logo_red.svg",
+    "img/brand/logo_beige.svg"
+  ],
+  "eyesAsset": "img/brand/eyes-on-red.svg",
+  "captionAsset": "_experiments/logo-intro/caption.svg",
+  "phaseStarts": {
+    "openingHold": 0,
+    "twoTop": 103,
+    "twoBottom": 103,
+    "one": 103,
+    "dee": 103,
+    "logoHold": 719,
+    "wipe": 1199,
+    "eyes": 1953,
+    "caption": 1526.1709489040068,
+    "endHold": 3392,
+    "returnWipe": 3872,
+    "captionOutEnd": 4243.573023343694,
+    "captionOut": 3900.5730233436943,
+    "reset": 4626,
+    "loopHold": 4900
+  },
+  "wipe": "754ms cubic-bezier(.7,0,.2,1), upward",
+  "returnWipe": "754ms cubic-bezier(.7,0,.2,1), downward",
+  "loop": true,
+  "audio": false
+}

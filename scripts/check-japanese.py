@@ -28,7 +28,7 @@ if __name__ == '__main__':
   failures.extend(f'{p.relative_to(ROOT)}: {kind}: {text}' for kind, text in sorted(set(parser.rows)))
  dictionary = json.loads((ROOT / 'locales/ja.json').read_text())
  failures.extend(f'Translation key has surrounding whitespace: {key!r}' for key in dictionary if key != key.strip())
- for name in ['contact.js', 'objects.js', 'walla.js', 'tote-preview.js']:
+ for name in ['contact.js', 'objects.js', 'walla.js', 'tote-preview.js', 'objects-saved.js']:
   source = (ROOT / 'js' / name).read_text()
   keys = set(re.findall(r"\bt\('([^'\n]+)'\)", source))
   failures.extend(f'js/{name}: missing dynamic translation: {key}' for key in sorted(keys - dictionary.keys()))

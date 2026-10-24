@@ -63,8 +63,9 @@ active route, including Red Pixel, and the FC generator preserves that order.
 Component styles still own layout, color, case, decoration and interaction.
 
 Only fitted brand captions, SVG/house artwork lettering, and graphical icon
-glyphs stay outside the system. Temporary typography controls are a development
-tool, and archived pages are outside the active site.
+glyphs stay outside the system. The temporary typography controls were removed
+from all active routes on 23 October; their source is archived. Archived pages
+are outside the active site.
 
 Home statements and large CTAs now share Statement metrics. Contact titles and
 related-work headings use Display. FC product titles use Section. Project copy

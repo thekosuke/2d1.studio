@@ -431,3 +431,14 @@ sizing and language font selection. Follow `docs/TYPOGRAPHY.md`, regenerate
 Japanese routes when needed, and verify affected styles across routes and both
 languages at desktop and mobile widths. A request referring to one example
 changes the shared style everywhere unless the owner explicitly limits its scope.
+
+## Button hover direction — 23 October 2026
+Use a continuous red sweep on button labels and icons, including modal actions.
+Do not substitute an instant color swap or underline for this hover treatment.
+
+## Sheet-trigger active state — 23 October 2026
+For buttons matching the Familiar Characters/Favorites bordered trigger style, an open sheet means solid Icon Red fill with Soft Beige text and icons. Keep this active state while its sheet remains open, including beneath a detail modal; restore the white resting state on close. Use aria-expanded to expose the state. This is the shared rule for existing and future buttons of this style.
+
+
+## Scoped control sweep — 23 October 2026
+Only the ten owner-approved control types in js/control-fill.js receive the shared background/ink sweep. Do not broaden this allowlist to navigation, language toggles, text-only CTAs, overflow menus, product navigation or other controls. Preserve red-rest/brown-hover actions and existing selected/open states.

@@ -183,17 +183,11 @@ The previous pinned section implementation is preserved in
 About’s text stays fully opaque; its word-by-word reading reveal and route-specific
 reading-ink script load are removed. Home retains its existing word reveal.
 
-### Temporary typography controls
-`js/type-tuner.js` appears only on localhost/127.0.0.1 previews across all active
-routes. Select text, adjust size/weight/tracking/leading, and SAVE to copy a
-source-update request (route, viewport, text and selectors). Controls edit all text sharing the selected typography style. Named style groups
-(such as About overview) are preferred; other text is grouped by its computed
-font family, size, weight, style, tracking, leading and capitalization. SAVE
-identifies the shared group and every matching element on the current page, and
-requests source updates across routes. Reset restores the entire selected group. SAVE also remembers
-the request in local storage; previews are not written to source. A text-area
-fallback supports blocked clipboard access. The panel follows native dialogs
-and can collapse to a small label; remove its script tags to retire it.
+### Typography controls removed — 23 October
+The temporary type settings panel is removed from every active English and
+Japanese route and the collection generator. Its source is preserved in
+`_archive/type-tuner-2026-10-23/` and is never loaded by the active site.
+Typography changes are maintained through the shared styles in `css/typography.css`.
 
 ### Home house sequence and restored About essay — 21 October
 This supersedes the editorial About and free-scrolling About section layouts above.
@@ -479,7 +473,7 @@ remains available; the existing bag/specification scroll animation is preserved.
 
 Shop’s Familiar Characters hover preview scales a predecoded grid as one layer to avoid missing image layers inside the rotated monitor. Its six-second zoom cycle resets on leave; the card tilts counterclockwise.
 
-The Shop FC monitor shows a language-specific still captured from the live preview’s initial 1600×900 view while it loads. The still stays visible after loading; only hover or keyboard focus reveals the decoded live canvas. Both use the exact same screen bounds to prevent a size shift at the handoff. Reduced-motion and no-JavaScript visitors retain the still.
+The Shop FC monitor shows a language-specific still captured from the live preview’s initial 1600×900 view while it loads. Once decoded, the live canvas stays visible at rest; hover or keyboard focus animates that same canvas. This prevents product changes between a stale poster and the current catalog. Both use the exact same screen bounds to prevent a size shift at the handoff. Reduced-motion and no-JavaScript visitors retain the still.
 
 
 Home tote lifestyle story — 22 October: the approved v15 lifestyle photograph
@@ -615,3 +609,57 @@ Purchased Walla fonts — 23 October: active pages now load the purchased Regula
 Font preloads and the icon-sheet generator use the purchased files as well;
 the trial family alias is removed from active styling. Japanese keeps its
 existing Japanese glyph font and uses purchased Walla for Latin characters.
+
+### Familiar Characters saved items — 23 October 2026
+
+Products use pixel-heart save controls, with a count beside the top-right heart.
+The Favorites sheet is white with a red frame, aligned to the heart button’s right
+edge and the Info sheet’s top edge. It slides from right to left using the same
+720ms settling animation as Info, without moving the page. Outside clicks dismiss
+it; selecting an image opens its detail immediately above Favorites, which stays open
+underneath and refreshes when details close. The frame extends to the bottom of the language toggle. Padding shares Info’s 48px inset at every width; title and description share Info’s UI typography.
+Its responsive image grid uses three columns at every width; its compact desktop frame preserves the previous image size uses bottom-right overflow
+menus for Remove and Product page; clicking an image reopens its detail dialog.
+A top-center “View My Favorites” popover opens the collection after saving and
+dismisses after four seconds. Desktop card overflow controls appear on hover or
+keyboard focus; touch devices keep them visible. Menus offer Remove from Favorites
+and View Product, with a compact external-link arrow. Product page keeps a red
+background with sentence-case text.
+Controls use a continuous red sweep, sentence-case labels, and shared type roles. `js/objects-saved.js` stores only catalog IDs under
+`2d1-fc-saved-v1` in localStorage, shared across EN/JA on the same origin.
+There is no account, backend, or device sync. The drawer explains that clearing
+site data removes saves; blocked storage falls back to the current page session
+with an explicit notice. Storage changes from other tabs update the UI.
+Saved products reopen the existing product dialog; removal is immediate.
+Info, search, and Saved share a 44px height and top alignment; mobile uses
+a compact FC info label to fit the row. No-JS retains the existing catalog.
+
+Shared dismiss controls load through `css/close-controls.css`: transparent at rest,
+with a red background and beige cross on hover or keyboard focus.
+
+FC’s upper-left disclosure enters downward from above, alongside the other top controls.
+
+FC disclosure and detail tags share a synchronized red fill/text-inversion sweep.
+Detail color swatches are keyboard-accessible copy buttons: hover/focus explains
+“Copy hex code”; a successful clipboard write shows “Copied to clipboard”.
+Clipboard failures show a truthful message with the hex value.
+
+Selected FC category/color filters appear as removable square red chips inside
+the search field. Family is no longer a filter. The chip row hides its scrollbar
+and fades its right edge while more tags remain offscreen. Filter buttons keep
+their DOM nodes during selection so the sweep continues without restarting.
+Selected filters keep a solid red fill with beige text.
+
+
+Scoped control sweeps (23 October): `js/control-fill.js` explicitly registers only primary filled actions, FC sheet triggers, the specification trigger, save hearts, close controls, filter tags/chip removal, contact choices, FC zoom buttons, and reset/save-notification actions. `css/control-fill.css` paints background and ink with one moving edge. Red resting controls retain brown hover fills. Navigation, language toggles, text CTAs, overflow menus, media/product navigation, and color-copy controls are excluded. Reduced motion is instant.
+
+## Social logo introduction — 24 October 2026
+
+A separate five-second, 1080px square animation lives at `_experiments/logo-intro/`:
+[local preview](http://localhost:4173/_experiments/logo-intro/). It constructs the
+original beige logo on red: both halves of 2, D, and 1 reveal together with a 493ms extrusion at a fixed logo size. The landing's upward 603ms wipe reveals the red logo on beige. The original fitted “A DESIGN HOUSE” caption slides down from behind the logo during the eye sequence; the supplied
+fixed eyes then blink; their pupils glance right, return left, and finish with two quick blinks. Includes replay, scrubbing, adjustable step timing and
+frame-by-frame H.264 MP4 export. Caption entrance starts at the upward wipe’s logo-bottom crossing; its exit finishes at the downward wipe’s crossing of that same edge; the logo and caption recenter together as the caption appears and retracts. A brief reverse extrusion then resets the seamless loop. See `_experiments/logo-intro/README.md`.
+The website's existing landing remains unchanged.
+
+The Shop Familiar Characters thumbnail excludes LOVOT from its preview-only collection and centers Spun. Its resting frame, hover zoom, and language-specific fallback screenshots share that composition; the full Familiar Characters catalog retains LOVOT.
