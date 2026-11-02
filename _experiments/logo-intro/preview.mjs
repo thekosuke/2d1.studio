@@ -1,13 +1,24 @@
-import {labels,duration,validateTiming,sourceAssets,renderSVG,stateAt} from './animation.mjs?v=center-caption-1';
+import {labels,duration,validateTiming,sourceAssets,renderSVG,stateAt,getFormat} from './animation.mjs?v=eyes-outro-2';
 const $ = id => document.getElementById(id);
+const formatName=new URLSearchParams(location.search).get('format') || 'square';
+const canvas=getFormat(formatName);
+if(formatName==='reels') {
+  document.title='2D1 · Reels introduction';
+  $('stage').classList.add('vertical');
+  $('format-info').textContent='1080 × 1920 · silent · 60 fps';
+  $('format-switch').href='./';
+  $('format-switch').textContent='Square preview';
+  $('export-command').textContent='node _experiments/logo-intro/export.mjs --format=reels';
+  $('download').href='exports/2d1-intro-reels-1080x1920.mp4';
+}
 let timing, assets, frame = 0, playing = false, time = 0, started = 0;
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 function paint(ms) {
   time = Math.max(0,Math.min(duration(timing),ms));
-  $('stage').innerHTML = renderSVG(time,timing,assets);
+  $('stage').innerHTML = renderSVG(time,timing,assets,canvas);
   $('scrub').max = duration(timing); $('scrub').value = time;
   $('time').textContent = `${(time/1000).toFixed(2)} / ${(duration(timing)/1000).toFixed(2)} s`;
-  $('phase').textContent = (stateAt(time,timing).phase === 'construction' ? '2D1 · simultaneous construction' : labels[stateAt(time,timing).phase]);
+  $('phase').textContent = (stateAt(time,timing,canvas).phase === 'construction' ? '2D1 · simultaneous construction' : labels[stateAt(time,timing,canvas).phase]);
 }
 function stop(){cancelAnimationFrame(frame);playing=false;$('pause').textContent='Play';}
 function tick(now){paint((now-started)%duration(timing));frame=requestAnimationFrame(tick);}

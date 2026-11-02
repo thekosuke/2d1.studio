@@ -1,0 +1,31 @@
+{
+  "checkedDate": "2026-10-27",
+  "catalogItems": 107,
+  "photoReferences": 492,
+  "uniqueCatalogImageFiles": 488,
+  "sourceHosts": 103,
+  "deliveryFilesIncludingMasters": 1476,
+  "itemStatus": {
+    "unverified": 96,
+    "permission required": 11
+  },
+  "masterFileStatus": {
+    "permission required": 45,
+    "unverified": 443
+  },
+  "referenceStatus": {
+    "unverified": 446,
+    "permission required": 46
+  },
+  "explicitPublicationGrantsFound": 0,
+  "existingUsageCaveatMissing": [
+    "floyd-cabin-aluminum",
+    "jellycat-amuseables-basketball",
+    "tobeus-pick-up"
+  ],
+  "nonCatalogReferencedFiles": 143,
+  "missingCatalogFiles": [],
+  "connectedSourceSearchCompleted": true,
+  "connectedSourceConclusion": "No relevant publication grants found in checked Notion/Drive text and local filename search; private grants elsewhere and unreadable PDF/unknown blocks are not ruled out.",
+  "aviatorPhotoTrackerStatus": "Two iStock and one Unsplash source rows marked TBD in tracker last modified 2026-04-11; not a license receipt or current-status proof."
+}

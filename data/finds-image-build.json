@@ -93,6 +93,7 @@
     "hash": "31d511afa455",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -104,6 +105,7 @@
     "hash": "30d335930081",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -115,6 +117,7 @@
     "hash": "32db70ee37e7",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -126,6 +129,7 @@
     "hash": "68f729504189",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -137,6 +141,7 @@
     "hash": "38183829ffa5",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -148,6 +153,7 @@
     "hash": "1bd5afbaa588",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -159,6 +165,7 @@
     "hash": "493e95fbfb2a",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -170,6 +177,7 @@
     "hash": "5c6b943f08f8",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -181,6 +189,7 @@
     "hash": "af575d9ef0ed",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -192,6 +201,7 @@
     "hash": "7bef5dea17ef",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -203,6 +213,7 @@
     "hash": "3fa306b5f186",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -214,6 +225,7 @@
     "hash": "bcb2744858c0",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -225,6 +237,7 @@
     "hash": "62ff381102d2",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -236,6 +249,7 @@
     "hash": "ad3a1e2cc77e",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -247,6 +261,7 @@
     "hash": "1529a6692bcc",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -258,6 +273,7 @@
     "hash": "501e082ef5cb",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -269,6 +285,7 @@
     "hash": "20425e2f7ae1",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -280,6 +297,7 @@
     "hash": "75fdce8fb828",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -291,6 +309,7 @@
     "hash": "da3e1fad1739",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -302,6 +321,7 @@
     "hash": "f01c864f0058",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -313,6 +333,7 @@
     "hash": "6d1767ae6fa8",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -324,6 +345,7 @@
     "hash": "ee81354d0305",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -335,6 +357,7 @@
     "hash": "21beda34981e",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -346,6 +369,7 @@
     "hash": "2990391e6938",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -357,6 +381,7 @@
     "hash": "4dd83cf4d034",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -368,6 +393,7 @@
     "hash": "d2b2707656e7",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -379,6 +405,7 @@
     "hash": "a9eaee79698c",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -390,6 +417,7 @@
     "hash": "9f4530d459a3",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -401,6 +429,7 @@
     "hash": "141b98b6554b",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -412,6 +441,7 @@
     "hash": "2502a1722880",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -423,6 +453,7 @@
     "hash": "ff6ae7b52dc6",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -434,6 +465,7 @@
     "hash": "1c1f9f331acf",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -445,6 +477,7 @@
     "hash": "b85e04a881e0",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -456,6 +489,7 @@
     "hash": "a31e67cd214d",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -467,6 +501,7 @@
     "hash": "896a4a3dbc54",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -478,6 +513,7 @@
     "hash": "42159e997c69",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -489,6 +525,7 @@
     "hash": "dd8aa921189a",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -500,6 +537,7 @@
     "hash": "e085df7c6d2f",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -511,6 +549,7 @@
     "hash": "62a1d06bbaa5",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -522,6 +561,7 @@
     "hash": "d87dceb40d17",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -533,6 +573,7 @@
     "hash": "e45381227b4e",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -544,6 +585,7 @@
     "hash": "c614183a4732",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -555,6 +597,7 @@
     "hash": "50c13d4a81f1",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -566,6 +609,7 @@
     "hash": "7f79c86eabeb",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -577,6 +621,7 @@
     "hash": "b3e0b9ec610b",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -588,6 +633,7 @@
     "hash": "d67c21231e14",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -599,6 +645,7 @@
     "hash": "58fd2651e876",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -610,6 +657,7 @@
     "hash": "068eec0990fa",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -621,6 +669,7 @@
     "hash": "c3d3b9a666e5",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -632,6 +681,7 @@
     "hash": "f35c341e0935",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -643,6 +693,7 @@
     "hash": "d7007c6491e2",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -656,6 +707,7 @@
     "hash": "3f1eb2c4e239",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -667,6 +719,7 @@
     "hash": "622f5df316e5",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -678,6 +731,7 @@
     "hash": "62488994cf69",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -689,6 +743,7 @@
     "hash": "79c56aeef65c",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -700,6 +755,7 @@
     "hash": "591e372dece2",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -711,6 +767,7 @@
     "hash": "5c1f496752b1",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -722,6 +779,7 @@
     "hash": "ebf5f212a59c",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -733,6 +791,7 @@
     "hash": "27da935562d9",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -744,6 +803,7 @@
     "hash": "406a1e9318cf",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -755,6 +815,7 @@
     "hash": "0d62ee168fe6",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -766,6 +827,7 @@
     "hash": "596116ba10e0",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -777,6 +839,7 @@
     "hash": "73305ffb0472",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -788,6 +851,7 @@
     "hash": "fd691326af11",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -799,6 +863,7 @@
     "hash": "ca2f342dfdd5",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -810,6 +875,7 @@
     "hash": "9ffb00a49c88",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -821,6 +887,7 @@
     "hash": "7f5894edff77",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -832,6 +899,7 @@
     "hash": "d88de9664064",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -843,6 +911,7 @@
     "hash": "2938a9364ac9",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -854,6 +923,7 @@
     "hash": "74b8791aebf1",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -865,6 +935,7 @@
     "hash": "15511551f47d",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -876,6 +947,7 @@
     "hash": "1c89b45825b5",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -887,6 +959,7 @@
     "hash": "2ebb789038ef",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -898,6 +971,7 @@
     "hash": "d1d956e5f564",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -909,6 +983,7 @@
     "hash": "a87ee22c29d6",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -920,17 +995,7 @@
     "hash": "176905827386",
     "recipe": "lossless-lanczos-v1",
     "widths": [
-      192,
-      256,
-      480,
-      960,
-      1440
-    ]
-  },
-  "img/objects/cutouts/muji-porcelain-toothbrush-stand.webp": {
-    "hash": "69a65f5494c9",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
+      160,
       192,
       256,
       480,
@@ -942,6 +1007,19 @@
     "hash": "c549a68ea5d7",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
+      192,
+      256,
+      480,
+      960,
+      1440
+    ]
+  },
+  "img/objects/cutouts/muji-toothbrush-blue.webp": {
+    "hash": "8cea9a617edf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      160,
       192,
       256,
       480,
@@ -953,6 +1031,7 @@
     "hash": "9ca8bfd090c4",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -964,6 +1043,7 @@
     "hash": "3e65e22b067b",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -975,6 +1055,7 @@
     "hash": "1a039635cd43",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -986,6 +1067,7 @@
     "hash": "5e5591ae0a32",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -997,6 +1079,7 @@
     "hash": "f56695fa0457",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1008,6 +1091,7 @@
     "hash": "258b51e91ebb",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1019,6 +1103,7 @@
     "hash": "fb3b4bfacb32",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1030,6 +1115,7 @@
     "hash": "3fc034a65aea",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1041,6 +1127,7 @@
     "hash": "37421750f50a",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1052,6 +1139,7 @@
     "hash": "2ecf1a4f57b1",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1063,6 +1151,7 @@
     "hash": "a05bcd921584",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1076,6 +1165,7 @@
     "hash": "43867396ce4f",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1087,6 +1177,7 @@
     "hash": "f62bcce02e25",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1098,6 +1189,7 @@
     "hash": "b3034bf96a33",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1109,6 +1201,7 @@
     "hash": "916cb0cf1783",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1120,6 +1213,7 @@
     "hash": "5c20c8e2fc2c",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1131,6 +1225,7 @@
     "hash": "6d0102673c28",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1142,6 +1237,7 @@
     "hash": "57a23b9ab9a2",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1153,6 +1249,7 @@
     "hash": "2daa9e22c084",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1164,17 +1261,7 @@
     "hash": "2fb331d23677",
     "recipe": "lossless-lanczos-v1",
     "widths": [
-      192,
-      256,
-      480,
-      960,
-      1440
-    ]
-  },
-  "img/objects/cutouts/super7-beams-charlie-brown-native-v2.webp": {
-    "hash": "c3dd79af57d2",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
+      160,
       192,
       256,
       480,
@@ -1186,6 +1273,7 @@
     "hash": "6f1ac3699f37",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1197,6 +1285,7 @@
     "hash": "2e8f749a008d",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1208,6 +1297,7 @@
     "hash": "1c0637ebc68d",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1219,6 +1309,7 @@
     "hash": "fd8d4790194e",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1230,6 +1321,7 @@
     "hash": "038069d86bec",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1241,6 +1333,7 @@
     "hash": "cf7a993f6037",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -1252,6 +1345,7 @@
     "hash": "a8ca0e7e4926",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -2199,26 +2293,6 @@
       1920
     ]
   },
-  "img/objects/gallery/charlie-beams-1.jpg": {
-    "hash": "769627721fdf",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
-  "img/objects/gallery/charlie-beams-2.jpg": {
-    "hash": "b025c6bd4f18",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
   "img/objects/gallery/cliik-press-glass-family-pack-2.jpg": {
     "hash": "eae37e2aea0b",
     "recipe": "lossless-lanczos-v1",
@@ -2471,6 +2545,26 @@
   },
   "img/objects/gallery/cwandt-high-speed-jump-rope-review-e5cf9f9979.webp": {
     "hash": "ac13700e3619",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/daypa/canvas-color-group.png": {
+    "hash": "9c62e0eec7b2",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/daypa/fleece-color-group.png": {
+    "hash": "42af22eabfe6",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       640,
@@ -3849,36 +3943,6 @@
       1920
     ]
   },
-  "img/objects/gallery/muji-porcelain-toothbrush-stand-1.webp": {
-    "hash": "e96b530c83db",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
-  "img/objects/gallery/muji-porcelain-toothbrush-stand-2.webp": {
-    "hash": "ea319149a876",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
-  "img/objects/gallery/muji-porcelain-toothbrush-stand-3.webp": {
-    "hash": "f0a3604c20a7",
-    "recipe": "lossless-lanczos-v1",
-    "widths": [
-      640,
-      960,
-      1440,
-      1920
-    ]
-  },
   "img/objects/gallery/muji-smooth-gel-knock-pen-1.webp": {
     "hash": "1186444a2f10",
     "recipe": "lossless-lanczos-v1",
@@ -3911,6 +3975,36 @@
   },
   "img/objects/gallery/muji-smooth-gel-knock-pen-4.webp": {
     "hash": "e03ed9eda314",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-toothbrush-blue-1.webp": {
+    "hash": "5baed7b1f24d",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-toothbrush-blue-2.webp": {
+    "hash": "46b515768617",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/muji-toothbrush-blue-3.webp": {
+    "hash": "bf5c450172be",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       640,
@@ -4503,6 +4597,7 @@
     "hash": "442d8215d7db",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,
@@ -4566,6 +4661,7 @@
     "hash": "512ce0e34dde",
     "recipe": "lossless-lanczos-v1",
     "widths": [
+      160,
       192,
       256,
       480,

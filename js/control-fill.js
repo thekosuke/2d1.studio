@@ -2,16 +2,16 @@
 (() => {
   const groups = [
     ['.objects-dialog-link,.contact-page .contact-send', 'red'],
-    ['.objects-info,.objects-saved-trigger', 'white'],
+    ['.objects-info', 'white'],
     ['.tote-spec-trigger', 'beige'],
     ['.objects-save', 'save'],
-    ['.objects-saved-close,.objects-info-close,.objects-dialog-close,.work-close,.tote-spec-close,.contact-close', 'close'],
-    ['.objects-search-suggestions button,.objects-dialog-tags button', 'white'],
+    ['.objects-info-close,.objects-dialog-close,.work-close,.tote-spec-close,.contact-close', 'close'],
+    ['.objects-search-suggestions button', 'white'],
     ['.objects-search-chip-remove', 'chip'],
     ['#contact .chip > span', 'choice'],
     ['.objects-zoom button', 'white'],
     ['.objects-reset', 'utility'],
-    ['.objects-save-shortcut', 'beige']
+    ['.objects-save-shortcut', 'brown']
   ];
   const units = new Set();
   function measure(unit) {

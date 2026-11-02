@@ -1,0 +1,1089 @@
+{
+  "checked": "2026-10-30",
+  "scope": "Current 107 FC objects; bounded public search for explicit free photo reuse without outreach or payment. Website unchanged.",
+  "counts": {
+    "objects": 107,
+    "matched_free_photo": 2,
+    "matched_with_authorship_caveat": 1,
+    "current_complete_galleries_confirmed": 0
+  },
+  "limitations": [
+    "Photo licenses apply only to specified replacement files, not existing galleries.",
+    "Credits, license links and change notices required. CC BY-SA adaptations must retain compatible ShareAlike licensing.",
+    "Photo licensing does not independently establish all rights in depicted designs, marks or artwork.",
+    "No public-source search can establish that an undiscovered license does not exist.",
+    "Image quality and composition differ; no claim of design-equivalent replacements."
+  ],
+  "objects": [
+    {
+      "id": "hay-miz-dark-green",
+      "name": "Miz Water Bottle",
+      "brand": "HAY",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "stokke-tripp-trapp-warm-red",
+      "name": "Tripp Trapp Chair",
+      "brand": "Stokke",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "alessi-anna-g-black",
+      "name": "Anna G. Corkscrew",
+      "brand": "Alessi",
+      "status": "different_variant",
+      "license": "CC BY 3.0",
+      "creator": "Sailko",
+      "source": "https://commons.wikimedia.org/wiki/File:Alessandro_mendini_per_alessi_spa.,_cavatappi_alessandro_m._e_anna_g.,_2003.jpg",
+      "notes": "Museum group photo shows dark reddish/brown Anna G, not verified black. Not counted."
+    },
+    {
+      "id": "alessi-ossidiana-black",
+      "name": "Ossidiana Espresso Coffee Maker",
+      "brand": "Alessi",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "dusen-everybody-wall-clock",
+      "name": "Everybody Wall Clock",
+      "brand": "Dusen Dusen",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "bruna-bonbon-mini-orange",
+      "name": "Bruna Bonbon Fluffy Mini Rabbit",
+      "brand": "ides \u00d7 MEDICOM TOY \u00d7 BEAMS",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "playforever-viglietta-jasper",
+      "name": "Viglietta Jasper",
+      "brand": "Playforever",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "brutto-sally-pepe",
+      "name": "Sally and Pepe Grinders",
+      "brand": "Brutto",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "nintendo-pikmin-vases",
+      "name": "Pikmin Single-Flower Vase Set",
+      "brand": "Nintendo",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "arms-flying-robi-persi",
+      "name": "Robi Persi",
+      "brand": "Arms Flying Everywhere",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "alessi-9090",
+      "name": "9090 Espresso Coffee Maker",
+      "brand": "Alessi",
+      "status": "variant_unverified",
+      "license": "CC BY-SA 4.0",
+      "creator": "Oldski",
+      "source": "https://commons.wikimedia.org/wiki/File:Alessi-Caffetiera_espresso_9090-Design_Richard_Sapper_1979.jpg",
+      "notes": "Caption specifies 100AlessiValuesCollection; exact variant unverified. Original retrieval rate-limited. 929x1181."
+    },
+    {
+      "id": "arwenn-cloud-clock",
+      "name": "CLOUD Clock",
+      "brand": "ARWENN",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "craighill-chroma-scissors-primary",
+      "name": "Chroma Scissors",
+      "brand": "Craighill",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "craighill-swingtop-lighter",
+      "name": "Swingtop Lighter",
+      "brand": "Craighill",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "alessi-twergi-es19-yellow",
+      "name": "Twergi ES19 Spice Mill",
+      "brand": "Alessi",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "block-design-play-tin",
+      "name": "Tinned Goods \u2014 Play",
+      "brand": "Block Design",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "herman-miller-girard-throw",
+      "name": "Girard Throw",
+      "brand": "Herman Miller \u00d7 Pendleton",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "hay-regn-umbrella-gray-blue",
+      "name": "Regn Umbrella",
+      "brand": "HAY",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "moodulo-pop-culture-act-ii",
+      "name": "Pop Culture: Act II",
+      "brand": "MOODULO Design",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "homeinfun-storage-stool",
+      "name": "Playful Storage Stool Side Table",
+      "brand": "HomeinFun",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "odd-universe-peepers",
+      "name": "The Peepers",
+      "brand": "Odd Universe",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "atonemo-nts-radio-player",
+      "name": "NTS Radio Player",
+      "brand": "Atonemo \u00d7 NTS",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "not-boring-camera-app",
+      "name": "Camera",
+      "brand": "(Not Boring)",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "not-boring-weather-app",
+      "name": "Weather",
+      "brand": "(Not Boring)",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "not-boring-camera-art-model",
+      "name": "!Camera Art Model",
+      "brand": "(Not Boring)",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "mkbhd-color-picker-stickers",
+      "name": "Color Picker Sticker Pack",
+      "brand": "MKBHD",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "mkbhd-overlay-deskpad",
+      "name": "Overlay Deskpad",
+      "brand": "MKBHD \u00d7 Omnitype",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "bobo-choses-bolder-belt-pouch",
+      "name": "Bobo Choses Bolder Belt Pouch",
+      "brand": "Bobo Choses",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "hungry-market-initial-c-cap",
+      "name": "Initial C Embroidered Cap",
+      "brand": "HUNGRY MARKET",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "daypa-kun-backpack-blue",
+      "name": "DAYPA-kun Backpack",
+      "brand": "DAYPA",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "lego-piranha-plant-71426",
+      "name": "Piranha Plant (71426)",
+      "brand": "LEGO \u00d7 Super Mario",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "iwate-canning-gift-stock",
+      "name": "Gift&Stock",
+      "brand": "Iwate Canning",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "mint-hug-shakers",
+      "name": "Hug Salt and Pepper Shakers",
+      "brand": "MINT",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "subu-originals-f-line-black",
+      "name": "ORIGINALS F-LINE",
+      "brand": "SUBU",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "sharge-discho",
+      "name": "Discho Hybrid Power Bank",
+      "brand": "SHARGE",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "fairphone-gen-6-plus",
+      "name": "Fairphone (Gen. 6+)",
+      "brand": "Fairphone",
+      "status": "different_variant",
+      "license": "CC BY-SA 4.0",
+      "creator": "Fairphone",
+      "source": "https://commons.wikimedia.org/wiki/File:FP6-GREEN-COMMERCIAL-WALLPAPER-HERO.png",
+      "notes": "Gen 6 image, current record Gen 6+. Not counted."
+    },
+    {
+      "id": "cwandt-high-speed-jump-rope",
+      "name": "High Speed Jump Rope",
+      "brand": "CW&T",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "ikea-forlunda-red",
+      "name": "F\u00d6RLUNDA Pouffe",
+      "brand": "IKEA",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "nendo-shoe-horn",
+      "name": "shoe-horn",
+      "brand": "nendo house",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "mr-maria-first-light-snoopy",
+      "name": "First Light Snoopy",
+      "brand": "Mr Maria",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "flos-snoopy-black",
+      "name": "Snoopy Table Lamp",
+      "brand": "Flos",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "magis-spun",
+      "name": "Spun",
+      "brand": "Magis",
+      "status": "matched_photo_authorship_caveat",
+      "license": "CC BY-SA 4.0",
+      "creator": "IBOSIO (page); Edoardo Canali (EXIF copyright)",
+      "source": "https://commons.wikimedia.org/wiki/File:Spun_magis_red_wiki.jpg",
+      "notes": "Visually matches red Spun; 4889x4682. Published free license but uploader/author and embedded copyright differ. Excluded from conservative confirmed count."
+    },
+    {
+      "id": "magis-air-chair-red",
+      "name": "Air-Chair",
+      "brand": "Magis",
+      "status": "different_variant",
+      "license": "CC BY-SA 4.0",
+      "creator": "IBOSIO",
+      "source": "https://commons.wikimedia.org/wiki/File:Air_chair-edit-1-2018.jpg",
+      "notes": "Visually beige/gray, not current red. Only 667x1000."
+    },
+    {
+      "id": "hay-table-clock-black",
+      "name": "Table Clock",
+      "brand": "HAY",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "muji-wall-mounted-cd-player",
+      "name": "Wall-Mounted CD Player (CPD-4)",
+      "brand": "MUJI",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "groove-x-lovot-3",
+      "name": "LOVOT 3.0",
+      "brand": "GROOVE X",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "teenage-engineering-grip-car",
+      "name": "grip car",
+      "brand": "teenage engineering",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "cliik-press-glass-family-pack",
+      "name": "Press Glass Family Pack",
+      "brand": "Cliik",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "yoto-player-4",
+      "name": "Yoto Player, 4th Gen",
+      "brand": "Yoto",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "freckle-phone-orange",
+      "name": "Freckle Phone",
+      "brand": "Freckle",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "loop-cocoon-berry",
+      "name": "Cocoon Baby Earmuffs",
+      "brand": "Loop",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "magis-linnut-sulo-s",
+      "name": "Linnut Sulo S",
+      "brand": "Magis \u00d7 Iittala",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "flowerpot-vp9-zesty-orange",
+      "name": "Flowerpot VP9",
+      "brand": "&Tradition",
+      "status": "variant_unverified",
+      "license": "CC BY-SA 4.0",
+      "creator": "Neoclassicism Enthusiast",
+      "source": "https://commons.wikimedia.org/wiki/File:Flowerpot_VP9_lamps,_by_Verner_Panton_for_%26TRADITION,_polycarbonate_and_steel,_at_sale_at_The_Edit_shop_(Strada_Icoanei_no._20),_Bucharest,_Romania.jpg",
+      "notes": "License verified; exact zesty-orange match not visually verified. Original retrieval rate-limited."
+    },
+    {
+      "id": "b-line-boby-34-paprika",
+      "name": "Boby Trolley, 3/4",
+      "brand": "B-Line",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "hey-bag-green-lines",
+      "name": "Hey Bag",
+      "brand": "Hey",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "hey-classic-cap",
+      "name": "Classic Cap",
+      "brand": "Hey",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "alessi-la-conica",
+      "name": "La conica",
+      "brand": "Alessi",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "memphis-first",
+      "name": "First",
+      "brand": "Memphis Milano",
+      "status": "matched_free_photo",
+      "license": "CC BY 3.0",
+      "creator": "Sailko",
+      "source": "https://commons.wikimedia.org/wiki/File:Michele_de_lucchi_per_memphis_srl.,_sedia_first,_1983.jpg",
+      "notes": "Visually matched blue disc and black spheres. Museum photograph, 1568x2112; presentation differs from studio cutout."
+    },
+    {
+      "id": "bosa-most-illustrious-achille",
+      "name": "Most Illustrious Achille",
+      "brand": "Bosa",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "pedrali-frida-752",
+      "name": "Frida 752",
+      "brand": "Pedrali",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "qeeboo-rabbit-chair-light-blue",
+      "name": "Rabbit Chair",
+      "brand": "Qeeboo",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "alessi-magic-bunny-black",
+      "name": "Magic Bunny",
+      "brand": "Alessi",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "alessi-girotondo-round-tray",
+      "name": "Girotondo Round Tray",
+      "brand": "Alessi",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "baggu-standard-pop-pink-happy",
+      "name": "Standard Baggu",
+      "brand": "BAGGU",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "anya-hindmarch-eyes-tote",
+      "name": "Eyes Tote",
+      "brand": "Anya Hindmarch",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "heinz-tomato-ketchup",
+      "name": "Tomato Ketchup",
+      "brand": "Heinz",
+      "status": "different_variant",
+      "license": "CC BY-SA 4.0",
+      "creator": "Chris Woodrich",
+      "source": "https://commons.wikimedia.org/wiki/File:Heinz_Tomato_Ketchup,_Canada_(front),_2026-02-19.jpg",
+      "notes": "Canadian upright bottle; current object is upside-down squeeze bottle. Not exact replacement."
+    },
+    {
+      "id": "panic-playdate",
+      "name": "Playdate",
+      "brand": "Panic",
+      "status": "matched_free_photo",
+      "license": "CC BY-SA 4.0",
+      "creator": "Louiemantia",
+      "source": "https://commons.wikimedia.org/wiki/File:Playdate_front-view.png",
+      "notes": "Visually matched yellow Playdate. Replacement photograph; does not license current gallery. 2330x1963; framing tight."
+    },
+    {
+      "id": "kinto-water-bottle-300ml",
+      "name": "Water Bottle 300ml",
+      "brand": "KINTO",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "topologie-6mm-rope-strap",
+      "name": "6.0mm Rope Strap",
+      "brand": "Topologie",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "yoki-pillar-blue",
+      "name": "04 PILLAR",
+      "brand": "Y\u00d4KI",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "gispen-dombo-red",
+      "name": "Dombo Mug",
+      "brand": "Gispen",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "vitra-eames-elephant-orange",
+      "name": "Eames Elephant",
+      "brand": "Vitra",
+      "status": "different_variant",
+      "license": "CC BY-SA 4.0",
+      "creator": "Sinikka Halme",
+      "source": "https://commons.wikimedia.org/wiki/File:Eames_elephant.jpg",
+      "notes": "Visually white, not current red-orange."
+    },
+    {
+      "id": "detail-nasa-snow-globe",
+      "name": "NASA Snow Globe",
+      "brand": "DETAIL INC.",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "carpenter-hamburger-coaster",
+      "name": "Hamburger Coaster",
+      "brand": "carpenter",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "running-press-ufo-cow",
+      "name": "UFO Cow Abduction",
+      "brand": "Running Press",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "notabag-original-red",
+      "name": "Original",
+      "brand": "Notabag",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "cotopaxi-kapai-del-dia",
+      "name": "Kapai 1.5L Hip Pack",
+      "brand": "Cotopaxi",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "kay-bojesen-songbird-sunshine",
+      "name": "Songbird Sunshine",
+      "brand": "Kay Bojesen",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "vitra-nelson-night-clock",
+      "name": "Night Clock",
+      "brand": "Vitra",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "palaset-im-ok-fantti-elephant-bank",
+      "name": "FANTTI Elephant Bank",
+      "brand": "PALASET \u00d7 I\u2019M OK",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "ichendorf-desert-plants-cactus-amber",
+      "name": "Desert Plants Cactus Tumbler",
+      "brand": "Ichendorf Milano",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "curaprox-cs-smart",
+      "name": "CS 5460 Toothbrush",
+      "brand": "CURAPROX",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "soholm-cafe-reversible-tote",
+      "name": "Reversible Tote Bag",
+      "brand": "S\u00d8HOLM CAF\u00c9",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "tecta-cat-black",
+      "name": "TECTA Cat",
+      "brand": "TECTA",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "kikkerland-inkerie-jewelry-case",
+      "name": "Inkerie Travel Jewelry Case",
+      "brand": "Kikkerland",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "muji-porcelain-toothbrush-stand",
+      "name": "Porcelain Toothbrush Stand",
+      "brand": "MUJI",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "best-years-knitted-triceratops",
+      "name": "Knitted Triceratops",
+      "brand": "Best Years",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "kay-bojesen-monkey-mini-vintage-blue",
+      "name": "Monkey Mini",
+      "brand": "Kay Bojesen",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "muji-smooth-gel-knock-pen",
+      "name": "Smooth Gel Ink Ballpoint Knock Pen",
+      "brand": "MUJI",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "actus-deco-dot-photo-frame",
+      "name": "DECO Dot Photo Frame 5\u00d77",
+      "brand": "ACTUS",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "actus-object-flower-vase",
+      "name": "Object Flower Vase",
+      "brand": "ACTUS",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "iwachu-cat-candle-stand",
+      "name": "Cat Candle Stand",
+      "brand": "Iwachu",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "aptone-mix-match",
+      "name": "Mix & Match",
+      "brand": "Aptone",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "seiko-diver-alarm-clock",
+      "name": "Diver-Inspired Alarm Clock",
+      "brand": "Seiko",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "seiko-stadium-clock",
+      "name": "Sports Timer Clock",
+      "brand": "Seiko",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "nahe-packing-pouch",
+      "name": "Packing Pouch L",
+      "brand": "n\u00e4he",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "heim-egg-spoon",
+      "name": "Egg Spoon",
+      "brand": "Heim S\u00f6hne",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "maul-m8-calculator",
+      "name": "M 8 Pocket Calculator",
+      "brand": "MAUL",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "may-bookends",
+      "name": "Bookends",
+      "brand": "may \u00d7 Offbrand Library",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "alessi-dede",
+      "name": "D\u00e9d\u00e9 Doorstop",
+      "brand": "Alessi",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "andlight-slab-series",
+      "name": "Slab Light Series",
+      "brand": "ANDlight",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "flos-mayday",
+      "name": "Mayday",
+      "brand": "Flos",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "alessi-sleek",
+      "name": "Sleek Spoon for Jars",
+      "brand": "Alessi",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "samira-boon-furoshiki-card-case",
+      "name": "Furoshiki Shiki Card Case",
+      "brand": "Samira Boon",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "floyd-cabin-aluminum",
+      "name": "Cabin Aluminum",
+      "brand": "Floyd",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "jellycat-amuseables-basketball",
+      "name": "Amuseables Sports Basketball",
+      "brand": "Jellycat",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    },
+    {
+      "id": "tobeus-pick-up",
+      "name": "Pick-up",
+      "brand": "Tobeus",
+      "status": "no_qualifying_photo_verified",
+      "license": "",
+      "creator": "",
+      "source": "",
+      "notes": "No qualifying exact-model free-reuse photograph verified in bounded public search. Not a finding that no license exists."
+    }
+  ]
+}

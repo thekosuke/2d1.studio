@@ -10,23 +10,30 @@
   const logo = document.querySelector('.site-logo');
   const language = document.querySelector('.language-switch:not(.work-footer-language), .objects-language');
   // Shared footer content stays inside the disclosure on every route.
-  const assetBase = new URL('../img/brand/logo_white.svg', document.currentScript.src).href;
+  const assetBase = new URL('../img/brand/logo_red.svg', document.currentScript.src).href;
   const menuMark = document.createElement('div');
   menuMark.className = 'mobile-menu-mark';
   const markImage = document.createElement('img');
   markImage.src = assetBase; markImage.alt = '2D1'; markImage.width = 829; markImage.height = 280;
-  menuMark.append(markImage); panel.prepend(menuMark);
+  menuMark.append(markImage); menuMark.setAttribute('aria-hidden', 'true'); document.body.append(menuMark);
+  const menuTopbar = document.createElement('div');
+  menuTopbar.className = 'mobile-menu-topbar';
+  panel.prepend(menuTopbar);
+  function positionMenuLogo() {
+    if (!logo) return;
+    const box = logo.getBoundingClientRect();
+    document.body.style.setProperty('--mobile-menu-center-y', (box.top + box.height / 2) + 'px');
+    Object.assign(menuMark.style, {left:box.left+'px', top:box.top+'px', width:box.width+'px', height:box.height+'px'});
+  }
   const menuFooter = document.createElement('div');
   menuFooter.className = 'mobile-menu-footer';
-  const copyright = document.createElement('p');
-  copyright.textContent = `© ${new Date().getFullYear()} 2D1`;
-  const socialMarkup = "<nav class=\"social-links\" aria-label=\"Social media\"><a href=\"https://www.instagram.com/2d1.studio/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on Instagram (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"1\" y=\"0\" width=\"7\" height=\"1\"/><rect x=\"0\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"3\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"8\" width=\"7\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">Instagram</span></a><a href=\"https://www.threads.com/@2d1.studio\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on Threads (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"2\" y=\"0\" width=\"5\" height=\"1\"/><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"2\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"6\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"6\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"8\" width=\"6\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">Threads</span></a><a href=\"https://x.com/2d1_studio\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on X (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"0.5\" y=\"0.5\" width=\"2\" height=\"1\"/><rect x=\"7.5\" y=\"0.5\" width=\"1\" height=\"1\"/><rect x=\"1.5\" y=\"1.5\" width=\"2\" height=\"1\"/><rect x=\"6.5\" y=\"1.5\" width=\"1\" height=\"1\"/><rect x=\"2.5\" y=\"2.5\" width=\"2\" height=\"1\"/><rect x=\"5.5\" y=\"2.5\" width=\"1\" height=\"1\"/><rect x=\"3.5\" y=\"3.5\" width=\"2\" height=\"1\"/><rect x=\"3.5\" y=\"4.5\" width=\"3\" height=\"1\"/><rect x=\"2.5\" y=\"5.5\" width=\"1\" height=\"1\"/><rect x=\"4.5\" y=\"5.5\" width=\"2\" height=\"1\"/><rect x=\"1.5\" y=\"6.5\" width=\"1\" height=\"1\"/><rect x=\"5.5\" y=\"6.5\" width=\"2\" height=\"1\"/><rect x=\"0.5\" y=\"7.5\" width=\"1\" height=\"1\"/><rect x=\"6.5\" y=\"7.5\" width=\"2\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">X</span></a><a href=\"https://www.linkedin.com/company/newfiction-org/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"New Fiction on LinkedIn (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"7\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"7\" width=\"1\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">LinkedIn</span></a></nav>";
+  const socialMarkup = "<nav class=\"social-links\" aria-label=\"Social media\"><a href=\"https://www.instagram.com/2d1.studio/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on Instagram (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"1\" y=\"0\" width=\"7\" height=\"1\"/><rect x=\"0\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"3\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"8\" width=\"7\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">Instagram</span></a><a href=\"https://www.threads.com/@2d1.studio\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on Threads (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"2\" y=\"0\" width=\"5\" height=\"1\"/><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"2\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"6\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"6\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"8\" width=\"6\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">Threads</span></a><a href=\"https://x.com/2d1_studio\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on X (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"0.5\" y=\"0.5\" width=\"2\" height=\"1\"/><rect x=\"7.5\" y=\"0.5\" width=\"1\" height=\"1\"/><rect x=\"1.5\" y=\"1.5\" width=\"2\" height=\"1\"/><rect x=\"6.5\" y=\"1.5\" width=\"1\" height=\"1\"/><rect x=\"2.5\" y=\"2.5\" width=\"2\" height=\"1\"/><rect x=\"5.5\" y=\"2.5\" width=\"1\" height=\"1\"/><rect x=\"3.5\" y=\"3.5\" width=\"2\" height=\"1\"/><rect x=\"3.5\" y=\"4.5\" width=\"3\" height=\"1\"/><rect x=\"2.5\" y=\"5.5\" width=\"1\" height=\"1\"/><rect x=\"4.5\" y=\"5.5\" width=\"2\" height=\"1\"/><rect x=\"1.5\" y=\"6.5\" width=\"1\" height=\"1\"/><rect x=\"5.5\" y=\"6.5\" width=\"2\" height=\"1\"/><rect x=\"0.5\" y=\"7.5\" width=\"1\" height=\"1\"/><rect x=\"6.5\" y=\"7.5\" width=\"2\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">X</span></a><a href=\"https://www.linkedin.com/company/2d1-studio/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on LinkedIn (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"7\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"7\" width=\"1\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">LinkedIn</span></a></nav>";
   const existingSocials = document.querySelector('.social-links');
   if (existingSocials) menuFooter.append(existingSocials.cloneNode(true));
   else menuFooter.innerHTML = socialMarkup;
   const menuSocials = menuFooter.querySelector('.social-links');
   menuSocials.setAttribute('aria-label', document.documentElement.lang === 'ja' ? 'ソーシャルメディア' : 'Social media');
-  menuFooter.prepend(copyright); panel.append(menuFooter);
+  panel.append(menuFooter);
   const languageHome = language?.parentElement, languageNext = language?.nextSibling;
   const duration = 480, step = 0;
   let background = [];
@@ -58,7 +65,7 @@
   }
   function moveLanguage() {
     if (!language) return;
-    const target = mobile.matches ? menuFooter : languageHome;
+    const target = mobile.matches ? menuTopbar : languageHome;
     if (language.parentElement !== target) {
       if (!mobile.matches && languageNext?.parentElement === target) target.insertBefore(language, languageNext);
       else target.append(language);
@@ -88,12 +95,13 @@
   }
   function show() {
     if (!mobile.matches || !available || document.querySelector('dialog[open]')) return;
+    positionMenuLogo();
     settle(); open = true;
     trigger.setAttribute('aria-expanded', 'true');
     panel.inert = false;
     panel.classList.add('is-mobile-open');
     lockBackground(true);
-    items[0]?.focus({preventScroll: true});
+    (items.find(item => item.querySelector('.nav-label')) || items[0])?.focus({preventScroll: true});
   }
   function setAvailable(next) {
     available = next;
@@ -126,7 +134,7 @@
   trigger.addEventListener('keydown', event => {
     if (event.key !== 'ArrowDown' || !mobile.matches || !available) return;
     event.preventDefault(); show();
-    if (open) items[0]?.focus({preventScroll: true});
+    if (open) (items.find(item => item.querySelector('.nav-label')) || items[0])?.focus({preventScroll: true});
   });
   // Capture runs before Contact stores its return target and opens the dialog.
   panel.addEventListener('click', event => {
@@ -154,6 +162,7 @@
   addEventListener('pageshow', () => close(true, true));
   addEventListener('pagehide', () => close(true, true));
   addEventListener('popstate', () => close(true, true));
+  addEventListener('resize', () => { if (open) positionMenuLogo(); });
   mobile.addEventListener('change', syncMode);
   reduced.addEventListener('change', () => { if (reduced.matches) settle(); });
   syncMode();

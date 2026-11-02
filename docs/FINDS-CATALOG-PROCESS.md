@@ -17,3 +17,23 @@ Aim for four complementary authentic photographs: a clear complete product view,
 The first detail image is a complete product overview: the entire product must remain visible, including its top and base, with breathing room. Do not use a tight portrait crop with the square cover container. Prepare a native square crop that includes the whole product whenever the source allows; retain the original and never enlarge. Intentional close-ups belong later in the gallery.
 
 Before reporting any addition or image replacement complete, open the actual detail modal at desktop and phone widths and inspect the first image. A source-file preview or transparent canvas preview does not replace this check. Verify the product’s top, sides and bottom remain visible in the rendered cover crop. Save a screenshot of the modal as proof. Repeat whenever a gallery’s first image changes.
+
+## Product color swatches — November 1, 2026
+
+`displayColors` in `data/objects.json` is the curated modal palette, separate
+from the broad `colors` search labels. Review the actual product photograph
+for every entry. Use one to five representative material/printed colors of the
+featured product, with product-specific hex values. Do not count shadows,
+highlights, reflections, scenery or several brightnesses of the same finish as
+separate colors. Silver and gold represent metallic finishes; Clear represents
+transparent material with a light neutral preview. These are visual photo
+approximations, not manufacturer color specifications.
+
+All 107 current palettes were visually reviewed against the primary product
+photographs on November 1. DAYPA's featured blue backpack retains a blue-led
+palette with its black, white and red details; the alternative canvas/fleece
+colors in the supplementary group photographs do not change the selected
+variant. Recheck this palette when the featured variant or image changes.
+Preserve curated values during image regeneration instead of replacing them
+with unreviewed dominant-pixel extraction. Regenerate both language routes
+after updating palette data.

@@ -47,6 +47,9 @@
 .objects-ready:not(.objects-list) .objects-main{display:flex;flex:1;min-height:0;flex-direction:column}
 .objects-ready:not(.objects-list) .objects-intro,.objects-ready:not(.objects-list) .objects-tools{flex:none}
 .objects-ready:not(.objects-list) .objects-canvas{display:block;flex:1;min-height:0}
+/* Keep the no-JS catalog dormant while the canvas starts. The head watchdog
+   removes finds-js on failure, restoring the complete authored fallback. */
+.finds-js .objects-page:not(.objects-list) .objects-collection,
 .objects-ready:not(.objects-list) .objects-collection{display:none}
 .objects-ready:not(.objects-list) .objects-footer{flex:none}
 .objects-list .objects-hint,.objects-list [data-reset-view]{display:none}
@@ -71,7 +74,10 @@
 .objects-ready .objects-header{position:fixed;top:12px;left:16px;right:16px;padding:0;z-index:4;pointer-events:none}
 .objects-ready .objects-header>a{pointer-events:auto;background:#fff;padding:8px 12px;backdrop-filter:none}
 .objects-ready .objects-header .site-logo{padding:8px 0;background:transparent;backdrop-filter:none}
-.objects-ready .objects-intro{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0)}
+/* The clipped semantic intro never paints; avoid fetching display fonts for it.
+   Removing finds-js restores the original shared typography in the fallback. */
+.finds-js .objects-intro{--font:system-ui}
+.finds-js .objects-intro,.objects-ready .objects-intro{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap}
 .objects-tools{display:block}.objects-tools summary{cursor:pointer;font-size:12px;min-height:44px;display:flex;align-items:center;justify-content:center;list-style:none;padding:8px 16px}.objects-tools summary::-webkit-details-marker{display:none}.objects-tools summary::after{content:'+';margin-left:24px}.objects-tools[open] summary::after{content:'−'}
 .objects-ready .objects-tools{position:fixed;top:76px;right:28px;z-index:5;max-width:min(420px,calc(100vw - 32px));padding:0;border:0;background:#fff;backdrop-filter:none}
 .objects-tools-panel{padding:8px 16px 16px;display:flex;flex-direction:column;gap:16px}.objects-options{justify-content:space-between;width:100%}
@@ -166,14 +172,14 @@
 #object-dialog{position:fixed;inset:auto 0 0;margin:0 auto;width:90%;max-width:none;height:94dvh;max-height:none;overflow:hidden;transform:translateY(100%);transition:transform 620ms cubic-bezier(.2,.8,.2,1),display 620ms allow-discrete,overlay 620ms allow-discrete}
 #object-dialog[open]{transform:translateY(0)}
 #object-dialog::backdrop{background:rgba(50,5,5,0);transition:background-color 620ms cubic-bezier(.2,.8,.2,1),display 620ms allow-discrete,overlay 620ms allow-discrete}
-#object-dialog[open]::backdrop{background:rgba(50,5,5,.4)}
+#object-dialog[open]::backdrop{background:transparent}
 @starting-style{#object-dialog[open]{transform:translateY(100%)}#object-dialog[open]::backdrop{background:rgba(50,5,5,0)}}
 #object-dialog .objects-dialog-scroll{height:100%;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}
 #object-dialog .objects-dialog-scroll::-webkit-scrollbar{display:none}
 #object-dialog .objects-dialog-layout{grid-template-columns:minmax(0,3fr) minmax(0,2fr);align-items:start;min-height:100%}
 #object-dialog .objects-dialog-photo{display:block;padding:0;min-width:0;background:none}
 #object-dialog .objects-dialog-image{display:block;width:100%;height:auto!important;max-height:none;margin:0;aspect-ratio:auto;object-fit:cover;mix-blend-mode:normal;background:none}
-#object-dialog .objects-dialog-copy{position:sticky;top:0;max-height:94dvh;overflow-y:auto;overscroll-behavior:contain;justify-content:flex-start;padding:80px clamp(24px,3vw,56px) max(32px,env(safe-area-inset-bottom));gap:20px}
+#object-dialog .objects-dialog-copy{position:sticky;top:0;max-height:94dvh;overflow-y:auto;overscroll-behavior:auto;justify-content:flex-start;padding:80px clamp(24px,3vw,56px) max(32px,env(safe-area-inset-bottom));gap:20px}
 #object-dialog .objects-dialog-copy h2{font-size:clamp(28px,2.5vw,44px)}
 #object-dialog .objects-dialog-close{top:12px;right:12px}
 @media(max-width:767px){
@@ -288,7 +294,7 @@
  #object-dialog{width:90%;max-width:none}
  #object-dialog .objects-dialog-layout{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);grid-template-rows:auto;height:auto;min-height:100%;align-items:start}
  #object-dialog .objects-dialog-gallery{grid-column:1;grid-row:1;min-width:0}
- #object-dialog .objects-dialog-copy{grid-column:2;grid-row:1;position:sticky;top:0;min-height:0;max-height:calc(100dvh - 144px);overflow-y:auto;overscroll-behavior:contain;padding:72px clamp(24px,3vw,56px) 40px;justify-content:flex-start}
+ #object-dialog .objects-dialog-copy{grid-column:2;grid-row:1;position:sticky;top:0;min-height:0;max-height:calc(100dvh - 144px);overflow-y:auto;overscroll-behavior:auto;padding:72px clamp(24px,3vw,56px) 40px;justify-content:flex-start}
 }
 
 .objects-photo-count{display:none}
@@ -379,7 +385,7 @@
 #objects-info-dialog[open]{transform:translateY(0)}
 #objects-info-dialog h2{font:500 16px/1.4 var(--font);letter-spacing:.04em;text-transform:uppercase;margin:0 48px 20px 0}
 #objects-info-dialog p{font:var(--floating-label);line-height:1.6;text-transform:uppercase}
-#objects-info-dialog .objects-info-note{font-size:12px;margin-top:0}
+#objects-info-dialog .objects-info-note{font-size:12px;margin-top:24px}
 #objects-info-dialog .objects-info-about{font:var(--floating-label);text-transform:uppercase}
 #objects-info-dialog .objects-dialog-close{top:12px;right:12px;width:33px;height:33px;min-width:33px;min-height:33px}
 
@@ -451,7 +457,6 @@
 
 #objects-info-dialog h2{text-transform:uppercase}
 
-.objects-info-eyes{display:block;width:58px;height:24px;margin-bottom:24px}
 @media(min-width:1100px){#objects-info-dialog{width:50vw;max-width:none;box-sizing:border-box}}
 
 /* Hover reveals the label while the product cutout stays unchanged. */
@@ -515,7 +520,7 @@
 html.finds-js .objects-collection{display:none}
 
 /* Shared screen-edge margins for every Finds floating control. */
-.objects-page{--finds-edge:16px;--finds-edge-top:max(var(--finds-edge),env(safe-area-inset-top));--finds-edge-right:max(var(--finds-edge),env(safe-area-inset-right));--finds-edge-bottom:max(var(--finds-edge),env(safe-area-inset-bottom));--finds-edge-left:max(var(--finds-edge),env(safe-area-inset-left))}
+.objects-page{--finds-edge:var(--page-edge,24px);--finds-edge-top:max(var(--finds-edge),env(safe-area-inset-top));--finds-edge-right:max(var(--finds-edge),env(safe-area-inset-right));--finds-edge-bottom:max(var(--finds-edge),env(safe-area-inset-bottom));--finds-edge-left:max(var(--finds-edge),env(safe-area-inset-left))}
 .objects-page.objects-ready .objects-header{top:var(--finds-edge-top);left:var(--finds-edge-left);right:var(--finds-edge-right)}
 .objects-page.objects-ready .finds-home-menu{align-self:start}
 .objects-page.objects-ready > .objects-info{top:var(--finds-edge-top);right:var(--finds-edge-right)}
@@ -523,7 +528,7 @@ html.finds-js .objects-collection{display:none}
 .objects-page.objects-ready .objects-footer{right:var(--finds-edge-right);bottom:var(--finds-edge-bottom);min-height:0}
 .objects-page.objects-ready .objects-zoom{bottom:var(--finds-edge-bottom)}
 @media(max-width:767px),(max-width:1023px) and (max-height:500px) and (pointer:coarse){
- .objects-page{--finds-edge:12px;--finds-mobile-row-top:var(--finds-edge-top)}
+ .objects-page{--finds-edge:var(--page-edge,24px);--finds-mobile-row-top:var(--finds-edge-top)}
  .objects-page.objects-ready.mobile-navigation-ready .mobile-nav-toggle{top:var(--finds-edge-top);left:var(--finds-edge-left)}
  .objects-page.objects-ready .objects-view-dock{bottom:calc(var(--finds-edge-bottom) + 46px + var(--finds-edge))}
 }
@@ -534,7 +539,6 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
 #objects-info-dialog{right:var(--info-right,var(--finds-edge-right));z-index:6;transform:none;clip-path:none;transition:none;opacity:1;padding-top:72px}
 #objects-info-dialog[open]{transform:none;clip-path:none}
 @starting-style{#objects-info-dialog[open]{transform:none;clip-path:none;opacity:1}}
-#objects-info-dialog .objects-info-eyes{position:static;display:block;margin:0 0 24px}
 #objects-info-title::before,#objects-info-title::after{content:none!important;display:none!important}
 #objects-info-dialog h2{margin-bottom:10px}
 .objects-page.objects-ready > .objects-info.info-is-open{z-index:8;text-transform:uppercase!important;max-width:none}
@@ -740,3 +744,66 @@ html:has(.objects-page.objects-ready){scrollbar-gutter:auto}
  .objects-page.objects-ready .objects-header .site-logo{left:auto;right:var(--finds-edge-right);transform:none}
  .objects-page.objects-ready > .objects-info{max-width:calc(100vw - 112px)}
 }
+
+/* Permanent details are ordinary links, also available in the no-JS shelf. */
+.object-permalink{display:inline-block;margin-top:12px;text-decoration:underline;text-underline-offset:.18em}
+.objects-dialog-permalink{display:inline-block;width:fit-content;margin-top:24px;text-decoration:underline;text-underline-offset:.18em;color:var(--sub-gray)}
+.objects-dialog-permalink:hover{color:var(--red)}
+.objects-dialog-permalink:focus-visible{color:var(--beige);background:var(--ink);outline:none;box-shadow:none}
+
+/* Narrow phones keep each existing footer action on a distinct hit area. */
+@media(max-width:389px){
+ #object-dialog .objects-dialog-footer:not([hidden]){flex-direction:column;align-items:stretch;gap:8px}
+ #object-dialog .objects-dialog-footer-action{flex:none;width:100%}
+ #object-dialog .objects-product-arrows{align-self:flex-end}
+}
+
+/* Source credits wrap within their own lane instead of running under the count. */
+@media(max-width:767px),(max-width:1023px) and (max-height:500px) and (pointer:coarse){
+ #object-dialog .objects-dialog-credit{max-width:calc(100% - 68px)}
+ #object-dialog .objects-dialog-sources{max-width:100%}
+}
+
+/* Unified product detail sheet: bottom anchored, recommendations in its scroll flow. */
+#object-dialog{--detail-height:calc(90dvh - 14.4px);inset:auto calc(5% + 14.4px) 0;margin:0;width:calc(90% - 28.8px);height:var(--detail-height);max-height:none;border:1px solid var(--ash-brown);border-bottom:0;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:0;background:var(--beige)}
+#object-dialog .objects-dialog-scroll{grid-column:1;grid-row:1}
+#object-dialog .objects-dialog-layout{min-height:calc(var(--detail-height) - 1px)}
+#object-dialog .objects-dialog-copy{height:calc(var(--detail-height) - 1px);max-height:none}
+#object-dialog .objects-dialog-photo .objects-dialog-image{height:calc(var(--detail-height) - 1px)!important}
+#object-dialog .objects-similar{padding:48px 32px calc(48px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+.objects-similar h3{font:var(--font-ui-body) var(--font);margin:0 0 24px}
+.objects-similar-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+#object-dialog .objects-similar-card{display:flex;flex-direction:column;gap:8px;padding:0;border:0;background:none;color:var(--ink);font:var(--font-caption) var(--font);text-align:left;cursor:pointer;min-width:0}
+.objects-similar-card img{display:block;width:72%;max-width:240px;align-self:center;aspect-ratio:1;object-fit:contain;margin-block:12px}
+.objects-similar-brand{color:var(--sub-gray)}
+#object-dialog .objects-similar-card:is(:hover,:focus-visible){background:transparent!important;color:var(--red)!important}
+@media(max-width:767px),(max-width:1023px) and (max-height:500px) and (pointer:coarse){
+ #object-dialog{--detail-height:calc(90dvh - 10.8px);inset:auto 5% 0;width:90%;height:var(--detail-height);grid-template-rows:minmax(0,1fr) auto}
+ #object-dialog .objects-dialog-layout{min-height:0}
+ #object-dialog .objects-dialog-copy{height:auto;max-height:none}
+ #object-dialog .objects-dialog-photo .objects-dialog-image{height:auto!important;aspect-ratio:1}
+ #object-dialog .objects-similar{padding:32px 20px}
+ .objects-similar-grid{gap:12px}
+}
+
+/* Credits retain breathing room where the gallery meets recommendations. */
+@media(min-width:768px){
+ #object-dialog .objects-dialog-credit{height:auto;margin-top:-1lh;bottom:0;transform:translateY(-24px)}
+ #object-dialog .objects-photo-count:not([hidden]){bottom:0;transform:translateY(-40px)}
+}
+@media(max-width:767px),(max-width:1023px) and (max-height:500px) and (pointer:coarse){
+ #object-dialog .objects-dialog-credit{bottom:24px;transform:none;margin-top:0}
+ #object-dialog .objects-photo-count:not([hidden]){bottom:24px;transform:none}
+}
+
+/* Credit links and their underlines inherit the photo-aware brand ink. */
+#object-dialog .objects-dialog-credit{--credit-ink:var(--cranberry-brown);--text-link-rest:var(--credit-ink);--text-link-hover:var(--red);color:var(--credit-ink)}
+#object-dialog .objects-dialog-credit.is-on-dark-photo{--credit-ink:var(--soft-beige)}
+#object-dialog .objects-dialog-credit a{color:inherit;text-decoration-color:currentColor}
+
+/* Fade only the collection behind the product sheet; keep the sheet opaque. */
+.objects-page:has(#object-dialog[open]) > :is(.objects-header,.objects-main,.objects-zoom,.objects-info,.objects-footer){opacity:.3!important}
+
+/* Match photo credits, sampling the background beneath the count independently. */
+#object-dialog .objects-photo-count:not([hidden]){color:var(--cranberry-brown)}
+#object-dialog .objects-photo-count.is-on-dark-photo:not([hidden]){color:var(--soft-beige)}

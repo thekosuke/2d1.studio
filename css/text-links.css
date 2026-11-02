@@ -57,7 +57,7 @@ body :is(a,button) .pixel-arrow::before{
   transition:--text-link-sweep 480ms cubic-bezier(.2,.8,.2,1);
 }
 body :is(.shop-card-action,.work-view)::after{
-  background:linear-gradient(90deg,var(--text-link-hover,var(--cranberry-brown)) calc(var(--text-link-sweep)*var(--text-sweep-width,0px) - var(--text-sweep-icon-offset,100000px)),var(--text-link-rest,var(--red)) 0);
+  background:linear-gradient(90deg,var(--text-link-hover,var(--cranberry-brown)) calc(var(--text-link-sweep)*var(--text-sweep-width,0px) - var(--text-sweep-icon-offset,100000px)),var(--text-link-rest,var(--red)) 0)!important;
 }
 @media(hover:hover) and (pointer:fine){
   :is(a,button,summary):hover :is(.shop-card-action,.work-view){--text-link-sweep:1}
@@ -71,8 +71,27 @@ body :is(.shop-card-action,.work-view)::after{
 
 /* Text hyperlinks inherit their reading context; only their ink sweeps red.
    Dedicated navigation, language controls, image links and buttons stay separate. */
-:is(#reading-hyperlinks,html) body a:not(:has(img,svg)):not(:is(.page-nav a,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.work-footer-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.objects-saved-menu a,.object-open,.pixel-home,[data-control-fill])){
+:is(#reading-hyperlinks,html) body a:not(:has(img,svg)):not(:is(.page-nav a,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.work-footer-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.objects-saved-menu a,.object-open,.pixel-home,.intro-cta,[data-control-fill])){
  --text-link-rest:currentColor;
  --text-link-hover:var(--red);
  color:inherit!important;
 }
+
+/* Resolve currentColor in arrow masks from the label, rather than legacy
+   red/transparent colors on the icon or its pseudo-element. */
+body :is(a,button) .pixel-arrow,
+body :is(a,button) .pixel-arrow::before,
+body :is(.shop-card-action,.work-view)::after{color:inherit!important}
+
+/* Related-project names and arrows share a single left-to-right ink sweep. */
+body .work-related-card:is(:hover,:focus-visible){color:inherit}
+.work-related-caption{--text-link-sweep:0;--text-link-rest:currentColor;--text-link-hover:var(--red);background-image:linear-gradient(90deg,var(--red) calc(var(--text-link-sweep)*var(--text-sweep-width,100%)),currentColor 0);background-clip:text;-webkit-text-fill-color:transparent;transition:--text-link-sweep 480ms cubic-bezier(.2,.8,.2,1)}
+.work-related-arrow{background:linear-gradient(90deg,var(--red) calc(var(--text-link-sweep)*var(--text-sweep-width,0px) - var(--text-sweep-icon-offset,100000px)),currentColor 0)}
+@media(hover:hover) and (pointer:fine){.work-related-card:hover .work-related-caption{--text-link-sweep:1}}
+.work-related-card:focus-visible .work-related-caption{--text-link-sweep:1}
+@media(prefers-reduced-motion:reduce){.work-related-caption{transition:none}}
+@media(forced-colors:active){.work-related-caption{background:none;-webkit-text-fill-color:currentColor}.work-related-arrow{background:currentColor}}
+
+/* Text CTAs retain their red invitation color; paragraph links inherit ink. */
+.intro-cta{--text-link-rest:var(--red);--text-link-hover:var(--cranberry-brown)}
+:is(.studio,.home-ending,.about-ending,[data-link-surface="dark"]) .intro-cta{--text-link-hover:var(--beige)}

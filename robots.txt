@@ -1,3 +1,20 @@
+# Production crawl policy. Local and packaged review previews remain noindex.
+# The wildcard permits search crawlers, including AI search crawlers.
 User-agent: *
+Disallow: /_archive/
+Disallow: /_experiments/
+Disallow: /_previews/
+Disallow: /tmp/
+Disallow: /dist/
+Disallow: /output/
+Disallow: /tests/
+Disallow: /scripts/
+Disallow: /server/
+Disallow: /node_modules/
+Disallow: /docs/
+Disallow: /data/
+Disallow: /api/
+
 Allow: /
+
 Sitemap: https://2d1.studio/sitemap.xml

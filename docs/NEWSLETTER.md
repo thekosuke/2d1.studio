@@ -1,6 +1,12 @@
-# 2D1 newsletter connection
+# Archived newsletter connection notes
 
-The repository is a static website. There is no configured newsletter service or server runtime. The current form validates input and reports that signup is not open; it never stores an email or pretends a subscription succeeded.
+Current status, verified 29 October 2026: the email signup was removed on
+22 October. Updates use social media links in the footer. No active route has a
+newsletter form and no newsletter provider is needed for launch. The only email
+inputs are in Contact, which has a separate inquiry-delivery workflow.
+
+The implementation notes below are historical, retained for reference. They do
+not describe an active form or authorize restoring one.
 
 ## Connect a provider
 

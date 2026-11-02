@@ -15,6 +15,9 @@
  for(let cycle=0;cycle<3;cycle++) originals.forEach((source,index)=>{
   const card=cycle===1?source:document.createElement('details');
   if(cycle!==1){card.className='work-project';card.append(source.querySelector('summary').cloneNode(true));card.setAttribute('aria-hidden','true')}
+  const image=card.querySelector('summary>img');
+  image.loading='eager';
+  if(cycle!==1)image.fetchPriority='auto';
   card.dataset.galleryIndex=index;cards.push(card);
  });
  grid.replaceChildren(...cards);
@@ -59,11 +62,28 @@
   const step=['ArrowRight','ArrowDown'].includes(event.key)?1:['ArrowLeft','ArrowUp'].includes(event.key)?-1:0;if(!step)return;
   event.preventDefault();event.stopPropagation();const next=cards[cards.indexOf(current)+step];if(next)center(next);
  },true);
- let motionFrame=0,lastMotionTime=0,targetLeft=0,easedLeft=0,releasing=false;
+ let motionFrame=0,lastMotionTime=0,targetLeft=0,easedLeft=0,releasing=false,rebaseFrame=0;
+ // Keep the moving view in the middle copy, preserving its velocity and target.
+ // Waiting for gesture end lets long wheel/touch input hit the finite DOM edge.
+ const wrapInput=()=>{
+  const period=originals[1]?.offsetLeft-originals[0].offsetLeft;
+  if(!period)return;
+  const span=period*originals.length;
+  const lower=originals[0].offsetLeft+originals[0].offsetWidth/2-grid.clientWidth/2-period/2;
+  const shift=-Math.floor((easedLeft-lower)/span)*span;
+  if(!shift)return;
+  easedLeft+=shift;targetLeft+=shift;
+  if(swipe)swipe.left+=shift;
+  grid.classList.add('is-rebasing');
+  grid.scrollTo({left:easedLeft,behavior:'instant'});update();
+  void grid.offsetWidth;
+  cancelAnimationFrame(rebaseFrame);
+  rebaseFrame=requestAnimationFrame(()=>grid.classList.remove('is-rebasing'));
+ };
  const animateInput=time=>{
   const dt=Math.min(40,lastMotionTime?time-lastMotionTime:16);lastMotionTime=time;
   const difference=targetLeft-easedLeft;
-  easedLeft+=difference*(1-Math.exp(-dt/95));grid.scrollLeft=easedLeft;
+  easedLeft+=difference*(1-Math.exp(-dt/95));wrapInput();grid.scrollLeft=easedLeft;
   if(Math.abs(difference)>.6){motionFrame=requestAnimationFrame(animateInput);return}
   motionFrame=0;lastMotionTime=0;
   if(releasing){
@@ -72,7 +92,7 @@
   }
  };
  const runMotion=()=>{
-  if(reduced.matches){grid.scrollLeft=targetLeft;if(releasing){gesturing=false;releasing=false;grid.classList.remove('is-gesturing');update();settle()}return}
+  if(reduced.matches){easedLeft=targetLeft;wrapInput();grid.scrollLeft=targetLeft;if(releasing){gesturing=false;releasing=false;grid.classList.remove('is-gesturing');update();settle()}return}
   if(!motionFrame)motionFrame=requestAnimationFrame(animateInput);
  };
  const beginGesture=()=>{
@@ -80,41 +100,41 @@
   gesturing=true;releasing=false;clearTimeout(timer);clearTimeout(gestureTimer);grid.classList.add('is-gesturing');
  };
  const moveGesture=left=>{
-  targetLeft=Math.max(0,Math.min(grid.scrollWidth-grid.clientWidth,left));runMotion();
+  targetLeft=left;runMotion();
  };
  const finishGesture=()=>{
   if(!gesturing)return;
   // Keep multi-project travel, then settle at the nearest centered frame.
-  const middle=targetLeft+grid.clientWidth/2;
-  const nearest=cards.reduce((best,card)=>Math.abs(card.offsetLeft+card.offsetWidth/2-middle)<Math.abs(best.offsetLeft+best.offsetWidth/2-middle)?card:best,current);
-  targetLeft=nearest.offsetLeft+nearest.offsetWidth/2-grid.clientWidth/2;
+  const stride=originals[1].offsetLeft-originals[0].offsetLeft;
+  const origin=originals[0].offsetLeft+originals[0].offsetWidth/2-grid.clientWidth/2;
+  targetLeft=origin+Math.round((targetLeft-origin)/stride)*stride;
   releasing=true;runMotion();
  };
  document.addEventListener('wheel',event=>{
-  if(document.body.classList.contains('mobile-menu-open')||document.querySelector('#work-dialog[open]')||event.ctrlKey||Math.abs(event.deltaX)>=Math.abs(event.deltaY)||!event.deltaY)return;
+  if(document.body.classList.contains('mobile-menu-open')||document.querySelector('#work-dialog[open]')||event.ctrlKey||(!event.deltaX&&!event.deltaY))return;
   event.preventDefault();beginGesture();
   const unit=event.deltaMode===1?16:event.deltaMode===2?grid.clientWidth:1;
-  moveGesture(targetLeft+event.deltaY*unit*.85);
+  const delta=Math.abs(event.deltaX)>=Math.abs(event.deltaY)?event.deltaX:event.deltaY*.85;
+  moveGesture(targetLeft+delta*unit);
   gestureTimer=setTimeout(finishGesture,190);
  },{passive:false});
  let swipe=null;
  grid.addEventListener('pointerdown',event=>{
-  if(event.pointerType==='mouse'||event.button!==0)return;
-  swipe={id:event.pointerId,x:event.clientX,y:event.clientY,left:grid.scrollLeft,vertical:false};
+  if(event.pointerType==='mouse'||event.button!==0||!event.isPrimary)return;
+  swipe={id:event.pointerId,x:event.clientX,y:event.clientY,left:grid.scrollLeft,axis:null};
  });
  grid.addEventListener('pointermove',event=>{
   if(!swipe||event.pointerId!==swipe.id)return;
   const dx=event.clientX-swipe.x,dy=event.clientY-swipe.y;
-  if(!swipe.vertical){
+  if(!swipe.axis){
    if(Math.max(Math.abs(dx),Math.abs(dy))<8)return;
-   if(Math.abs(dx)>Math.abs(dy)){swipe=null;return}
-   swipe.vertical=true;beginGesture();grid.setPointerCapture(event.pointerId);
+   swipe.axis=Math.abs(dx)>Math.abs(dy)?'x':'y';beginGesture();grid.setPointerCapture(event.pointerId);
   }
-  event.preventDefault();moveGesture(swipe.left-dy);suppressClick=true;
+  event.preventDefault();moveGesture(swipe.left-(swipe.axis==='x'?dx:dy));suppressClick=true;
  });
  const endSwipe=event=>{
   if(!swipe||event.pointerId!==swipe.id)return;
-  const moved=swipe.vertical;swipe=null;
+  const moved=Boolean(swipe.axis);swipe=null;
   if(moved){finishGesture();setTimeout(()=>{suppressClick=false},0)}
  };
  grid.addEventListener('pointerup',endSwipe);grid.addEventListener('pointercancel',endSwipe);

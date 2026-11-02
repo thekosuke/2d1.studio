@@ -113,9 +113,9 @@ html[lang] .about-essay-page .essay-body p,
 
 /* Canonical normal-text assignments. This stylesheet loads after page CSS.
    Fitted brand captions, SVG/house lettering and graphical icon glyphs are excluded. */
-html[lang] body :is(.section-heading>p, .contact-page .contact-title, .work-detail-title, .work-related h2, .objects-intro h1){font:var(--font-display) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.section-heading>p, .contact-page .contact-title, .work-detail-title, .objects-intro h1){font:var(--font-display) var(--font);letter-spacing:var(--type-track)}
 html[lang] body :is(.intro h1, .section-copy, .section-copy>p, .intro-cta, .connect-form input, .ending-contact-headline, .essay-pull p){font:var(--font-statement) var(--font);letter-spacing:var(--type-track)}
-html[lang] body :is(.essay-title, .essay-rest h2, .objects-dialog-copy h2, .pong-score strong){font:var(--font-section) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.essay-title, .essay-rest h2, .work-related h2, .objects-dialog-copy h2){font:var(--font-section) var(--font);letter-spacing:var(--type-track)}
 html[lang] body :is(.work-description){font:var(--font-overview) var(--font);letter-spacing:var(--type-track)}
 html[lang] body :is(.essay-dek, .essay-lede, .essay-body p, .contact-intro, .work-related-caption, .objects-intro p){font:var(--font-reading) var(--font);letter-spacing:var(--type-track)}
 html[lang] body :is(.table-title, .services dt, .product-specs dt, .tote-spec-sheet .contact-title, .objects-info-actions a, .contact-send, .objects-info-about){font:var(--font-ui) var(--font);letter-spacing:var(--type-track)}
@@ -123,7 +123,7 @@ html[lang] body :is(.services dd, .product-specs dd, .product-note, .field-input
 html[lang] body :is(.work-meta dt, .work-category, .work-one-liner, .shop-card-description, .shop-card-price, .objects-dialog-brand, .material-tooltip, .mobile-menu-footer>p){font:var(--font-caption) var(--font);letter-spacing:var(--type-track)}
 html[lang] body :is(.work-title, .work-view, .shop-card-title, .shop-card-action, .tote-spec-trigger){font:var(--font-caption-medium) var(--font);letter-spacing:var(--type-track)}
 html[lang] body :is(.home-ending .ending-contact .ending-follow-note, .objects-product-peek, .site-footer p, .objects-footer p, .bag-study-spec-note, .bag-study figcaption, .objects-dialog-credit, .objects-dialog-tags button, .objects-photo-count, .contact-notice, .contact-status, .contact-fallback){font:var(--font-small) var(--font);letter-spacing:var(--type-small-track)}
-html[lang] body :is(.page-nav, .page-nav a, .language-switch, .language-switch a, .section-label, .footer-pages, .work-trail, .field-label, .chip, .chip span, .objects-zoom label, .objects-search, .objects-search-suggestions, .objects-search-suggestions button, .objects-tools summary, .objects-categories button, .objects-info, .objects-language a, .pixel-caption, .pong-controls, .pong-message){font:var(--font-small-label) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.page-nav, .page-nav a, .language-switch, .language-switch a, .section-label, .footer-pages, .work-trail, .field-label, .chip, .chip span, .objects-zoom label, .objects-search, .objects-search-suggestions, .objects-search-suggestions button, .objects-tools summary, .objects-categories button, .objects-info, .objects-language a, .pixel-caption, .pixel-zoom summary, .pong-scoreboard, .pong-score strong, .pong-controls, .pong-message){font:var(--font-small-label) var(--font);letter-spacing:var(--type-track)}
 html[lang] body :is(.shop-support-copy){font:var(--font-copy) var(--font);letter-spacing:var(--type-track)}
 
 /* These headings belong to UI sheets rather than the reading-page hierarchy. */
@@ -136,8 +136,8 @@ html[lang] body #object-dialog :is(.objects-dialog-credit,.objects-dialog-tags b
 html[lang] body .tote-spec-sheet .bag-study-specs :is(dt,dd){font:var(--font-small) var(--font);letter-spacing:var(--type-track)}
 /* Short uppercase labels share their tracking; case is still owned by components. */
 html[lang] body :is(.page-nav a,.section-label,.field-label,.chip span,.work-trail){letter-spacing:var(--type-label-track)}
-@media(max-width:1099px){
- html[lang] body.mobile-navigation-ready .mobile-nav-panel :is(a,button){font:var(--font-statement) var(--font)!important;letter-spacing:var(--type-track)!important}
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){
+ html[lang] body.mobile-navigation-ready .mobile-nav-panel :is(a,button){font:var(--font-statement) var(--font)!important;letter-spacing:var(--type-label-track)!important}
  html[lang] body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-footer :is(a,button){font:var(--font-caption-medium) var(--font)!important;letter-spacing:var(--type-track)!important}
 }
 /* Keep compact language controls consistent with the rest of the small labels. */
@@ -147,3 +147,25 @@ html[lang] body .objects-zoom output{font:var(--font-small) var(--font)}
 html[lang] body #object-dialog .objects-dialog-copy h2{font:var(--font-section) var(--font);letter-spacing:var(--type-track)}
 /* Matching uppercase headings and product links share size and tracking. */
 html[lang] body :is(.section-heading h2,.signup-heading,#object-dialog .objects-dialog-link,#object-dialog .objects-dialog-footer .objects-dialog-link){font:var(--font-ui-uppercase) var(--font);letter-spacing:var(--type-ui-uppercase-track)}
+
+/* Familiar Characters discovery routes reuse shared roles in both languages. */
+html[lang] .discovery-page .discovery-intro h1{font:var(--font-display) var(--font);letter-spacing:var(--type-track)}
+html[lang] .discovery-page :is(.discovery-product h1,.discovery-about h2,.discovery-related>h2){font:var(--font-section) var(--font);letter-spacing:var(--type-track)}
+html[lang] .discovery-page :is(.discovery-intro>p:not(.discovery-kicker),.discovery-description,.discovery-about>p){font:var(--font-reading) var(--font);letter-spacing:var(--type-track)}
+html[lang] .discovery-page :is(.discovery-card h2,.discovery-product-link,.discovery-categories){font:var(--font-ui) var(--font);letter-spacing:var(--type-track)}
+html[lang] .discovery-page .discovery-facts{font:var(--font-ui-body) var(--font);letter-spacing:var(--type-track)}
+html[lang] .discovery-page :is(.discovery-card>p,.discovery-note,.discovery-footer,.discovery-gallery figcaption,.discovery-primary figcaption,.discovery-breadcrumbs,.discovery-header nav,.discovery-kicker,.discovery-brand,.discovery-count){font:var(--font-caption) var(--font);letter-spacing:var(--type-track)}
+html[lang] .objects-page .objects-dialog-permalink{font:var(--font-caption) var(--font);letter-spacing:var(--type-track)}
+
+/* Privacy uses existing Section, Reading and Caption roles in both languages. */
+html[lang] body :is(.privacy-title,.privacy-body h2){font:var(--font-section) var(--font);letter-spacing:var(--type-track);text-transform:none}
+html[lang] body :is(.privacy-body p,.privacy-choice){font:var(--font-reading) var(--font);letter-spacing:var(--type-track)}
+html[lang] body :is(.contact-privacy,.privacy-updated,.privacy-status){font:var(--font-caption) var(--font);letter-spacing:var(--type-track)}
+html[lang] body .site-footer .footer-privacy{margin-inline-start:16px;font:inherit;letter-spacing:inherit;color:inherit;text-transform:none;text-decoration:none}
+
+/* Red Pixel uses one small-label style; score numbers have a larger display role. */
+html[lang] body:has(.pixel-caption){--type-track:.08em;font:var(--font-small-label) var(--font);letter-spacing:var(--type-track)}
+html[lang] body:has(.pixel-caption) :is(p,span,strong,button,summary){font:var(--font-small-label) var(--font);letter-spacing:var(--type-track)}
+.pong-style-name{display:inline;padding-bottom:4px;text-decoration:none;background-image:repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 5px);background-size:100% 2px;background-position:left bottom;background-repeat:no-repeat;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+html[lang] body:has(.pixel-caption) .pong-score strong{font:700 32px/1 var(--font);letter-spacing:0}

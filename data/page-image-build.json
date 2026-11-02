@@ -1,0 +1,24 @@
+[
+  {
+    "source": "img/projects/deepdrip/work-track-background.png",
+    "sourceSHA256": "13b5c9e08917c1d07f2318d15c31c8f4e7dac53aea13e665436183747c2c3062",
+    "output": "img/page-delivery/work-track-background-075e49a66125.webp",
+    "width": 1254,
+    "height": 1254,
+    "sourceBytes": 1319337,
+    "deliveredBytes": 848878,
+    "decodedPixelsIdentical": true,
+    "iccPreserved": true
+  },
+  {
+    "source": "img/shop/menu-note/memoru-app-icon.png",
+    "sourceSHA256": "2f2b5eb0a80f3c120bb36d2b7e02ab5a9b90921100edbebdfc9db8d9f7a39322",
+    "output": "img/page-delivery/memoru-app-icon-5d30937a7a4d.webp",
+    "width": 1024,
+    "height": 1024,
+    "sourceBytes": 208232,
+    "deliveredBytes": 50960,
+    "decodedPixelsIdentical": true,
+    "iccPreserved": true
+  }
+]

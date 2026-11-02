@@ -1,0 +1,113 @@
+{
+  "ronherman.jp": {
+    "status": "permission required",
+    "policy": "https://ronherman.jp/terms",
+    "scope": "Exact source domain. Terms Articles 11–12.",
+    "finding": "Terms prohibit unapproved reproduction, republication and secondary use, as well as use beyond the private-use scope. No written grant for 2D1 was found.",
+    "contact": "Use the source site customer-support contact and ask for its image-rights contact."
+  },
+  "us.alessi.com": {
+    "status": "permission required",
+    "policy": "https://us.alessi.com/policies/terms-of-service",
+    "scope": "Exact US source domain only. Articles 13.1–13.2. Do not automatically apply these terms to alessi.com.",
+    "finding": "The US site reserves image/content rights and requires prior specific written consent for reproducing, modifying or otherwise using its contents. No 2D1 grant was found.",
+    "contact": "helpus@alessi.com"
+  },
+  "craighill.co": {
+    "status": "permission required",
+    "policy": "https://craighill.co/policies/terms-of-service",
+    "scope": "Exact source domain. Section 2.",
+    "finding": "The terms require express written permission to reproduce or otherwise exploit portions of the service. No 2D1 image-republication grant was found.",
+    "contact": "Use the source site contact and ask for its photo-rights contact."
+  },
+  "www.muji.com/jp/": {
+    "status": "permission required",
+    "policy": "https://www.muji.com/jp/terms/netstore/terms/index.html",
+    "scope": "Japan source paths only. Article 25. The Malaysian source paths are a separate unverified scope.",
+    "finding": "Japanese terms say product/person photographs and other site content belong to the company or other rightsholders; using the service does not confer an IP or publicity-rights license. No separate grant for 2D1 was found.",
+    "contact": "Use the Japan source site contact and request permission for the exact photos and proposed edits."
+  },
+  "www.lego.com": {
+    "status": "permission required",
+    "policy": "https://www.lego.com/en-us/legal/terms-of-use",
+    "scope": "Exact source domain and US product source. Last modified 27 February 2026.",
+    "finding": "Public or commercial republication of website images requires written permission. The separate newsroom offers an editorial-only permission route, but current catalog photos were sourced from the product page; their eligibility and current modifications are not cleared.",
+    "relatedPolicy": "https://www.lego.com/en-us/aboutus/newsroom/media-assets",
+    "contact": "media@lego.com"
+  },
+  "www.stokke.com": {
+    "status": "permission required",
+    "policy": "https://www.stokke.com/global/selectlanguage?locale=en_HR&pn=Home-Show&sid=EUR",
+    "scope": "Official Stokke website copyright statement expressly addresses website contents used publicly or commercially. Regional/current application should be confirmed with Stokke.",
+    "finding": "Stokke’s official statement reserves website/photo rights and requires prior written consent for public or commercial reproduction, modification or incorporation into another site. No consent for 2D1 was found.",
+    "contact": "Request rights confirmation through the official Stokke press/contact route."
+  },
+  "alessi.com": {
+    "status": "unverified",
+    "policy": "https://alessi.com/policies/terms-of-service",
+    "scope": "Exact global source domain. Current page contains sale terms; the US IP clause was not present.",
+    "finding": "No explicit republication/alteration license for the current photos was verified. The US sister-site clause is evidence of a rights concern, not proof that its contract governs these global-source files.",
+    "contact": "Use the actual source site contact; ask Alessi/photo rightsholder to confirm this specific use."
+  },
+  "flos.com": {
+    "status": "unverified",
+    "policy": "https://flos.com/en/us/terms.html",
+    "scope": "Related US regional terms. Actual catalog photos are from /en/cy/ and /en/wo/; their corresponding terms are sale conditions, so US terms are not assumed to govern them.",
+    "finding": "The US terms require written permission for images and derivative uses. No photo publication grant was verified for the exact Cypriot/world source files currently in this collection.",
+    "relatedPolicies": [
+      "https://flos.com/en/cy/terms.html",
+      "https://flos.com/en/wo/terms.html"
+    ],
+    "contact": "Ask Flos or the credited photographer about the exact images and proposed cutout/crop treatment."
+  },
+  "www.magisdesign.com": {
+    "status": "unverified",
+    "policy": "https://www.magisdesign.com/downloads/",
+    "scope": "Exact source company/download portal; a press portal also exists.",
+    "finding": "Magis advertises freely available downloadable images and resources. A scoped license covering this studio’s publication, alterations, photographer credit and any commercial use was not verified. Download availability alone is not treated as clearance.",
+    "relatedPolicy": "https://www.magisdesign.com/press/",
+    "contact": "info@magisdesign.com"
+  },
+  "help.play.date": {
+    "status": "unverified",
+    "policy": "https://help.play.date/press/",
+    "scope": "Exact official source press page.",
+    "finding": "The media-kit page offers photos and logos and gives a press contact. It does not state a full blanket license for the current studio/curation implementation, modifications or all third-party rights.",
+    "contact": "press@play.date"
+  },
+  "hay.presscloud.com": {
+    "status": "unverified",
+    "policy": "https://hay.presscloud.com/digitalshowroom/",
+    "scope": "Exact official HAY press-library source. The portal is JavaScript-driven and no detailed license text was available through this research.",
+    "finding": "Official press-library provenance is recorded, but no explicit permission governing this site and its cutout/crop treatment was verified.",
+    "contact": "Request image-use terms and exact photographer-credit requirements from HAY’s press team."
+  },
+  "teenage.engineering": {
+    "status": "unverified",
+    "policy": "https://teenage.engineering/press",
+    "scope": "Exact company press library, not an individual grant.",
+    "finding": "The official press library provides image downloads and a press contact, but no full license was verified for current product-page assets, derivative treatment or this studio’s usage.",
+    "contact": "press@teenage.engineering"
+  },
+  "online.actus-interior.com": {
+    "status": "unverified",
+    "policy": "https://futakotamagawa.actus-interior.com/sitepolicy/",
+    "scope": "Related ACTUS corporate/store policy. Exact online store terms were not successfully verified.",
+    "finding": "ACTUS’s related site policy requires rightsholder permission beyond private/statutorily permitted uses. Exact policy applicability and a grant for these online-store photos remain unverified.",
+    "contact": "Contact ACTUS/the credited photographer using the actual source URL."
+  },
+  "www.beams.co.jp": {
+    "status": "unverified",
+    "policy": "https://www.beams.co.jp/help/terms.html",
+    "scope": "Exact main terms URL redirects to a JavaScript-only support page that did not expose substantive terms in the research tool.",
+    "finding": "No usable image-republication grant was verified. Restrictive terms on BEAMS digroo and a campaign microsite are different scopes and are not substituted for the main store’s terms.",
+    "contact": "Use BEAMS official support/press route for the exact store photos."
+  },
+  "www.instagram.com": {
+    "status": "unverified",
+    "policy": "",
+    "scope": "A post or CDN download is provenance, not an independent license.",
+    "finding": "The account owner, photographer and any third-party rights must be identified. No rehosting/modification grant was recorded; an Instagram link or downloadable image does not confirm permission.",
+    "contact": "Contact the actual photographer/rightsholder after identifying them. No message has been sent."
+  }
+}

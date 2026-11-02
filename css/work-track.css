@@ -14,7 +14,7 @@
 /* Keep complete browser mockups, extending their own ground to the square. */
 .work-artwork-aviator-web{--artwork-ground:#deb5fe}
 .work-set .work-artwork-aviator-web img{object-fit:contain}
-.work-artwork-deepdrip-web{--artwork-ground:#101010;background-image:url('../img/projects/deepdrip/work-track-background.png');background-size:cover;background-position:center}
+.work-artwork-deepdrip-web{--artwork-ground:#101010;background-image:url('../img/page-delivery/work-track-background-075e49a66125.webp');background-size:cover;background-position:center}
 .work-set .work-artwork-deepdrip-web img{object-fit:contain}
 /* Fill the height with the laptop itself, keeping all three stickers on the left. */
 .work-artwork-deepdrip-stickers{--artwork-ground:#291a13}

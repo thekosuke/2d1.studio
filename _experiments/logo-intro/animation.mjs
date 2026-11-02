@@ -3,10 +3,20 @@
 export const labels = {
   openingHold: 'Empty canvas', twoTop: '2 · upper half →',
   twoBottom: '2 · lower half ←', one: '1 · upward ↑', dee: 'D · rightward →',
-  logoHold: 'Complete beige logo', wipe: 'Red sheet wipes upward', caption: 'A DESIGN HOUSE · slide down', eyes: 'Eyes · blink, right, left, blink', endHold: 'Red logo on beige', returnWipe: 'Red sheet returns downward', captionOut: 'A DESIGN HOUSE · tuck away', reset: 'Logo retracts for loop', loopHold: 'Empty red · loop seam'
+  logoHold: 'Complete beige logo', wipe: 'Red sheet wipes upward', caption: 'A DESIGN HOUSE · slide down', eyes: 'Eyes · open, right, left, blink', endHold: 'Red logo on beige', returnWipe: 'Red sheet returns downward', captionOut: 'A DESIGN HOUSE · tuck away', reset: 'Eyes · glance, return, close', loopHold: 'Empty red · loop seam'
 };
+export const formats = Object.freeze({
+  square: Object.freeze({width:1080,height:1080}),
+  reels: Object.freeze({width:1080,height:1920})
+});
+export function getFormat(name='square') {
+  if (!Object.hasOwn(formats,name)) throw new Error(`Unknown format: ${name}`);
+  return formats[name];
+}
 export const size = 1080;
 export const logoWidth = 720;
+// Match the website’s .home-brand gap directly, without scaling it with the mark.
+export const captionGap = 12;
 export const logoBottom = (size+280*logoWidth/829)/2;
 // Find the exact time fraction at a spatial point on the existing wipe easing.
 export function wipeTimeAt(fraction) {
@@ -25,7 +35,7 @@ export function validateTiming(timing) {
   if (duration(timing) <= 0) throw new Error('The sequence needs a positive duration.');
   return timing;
 }
-export function schedule(timing) {
+export function schedule(timing, canvas=formats.square) {
   const starts = {openingHold: 0, twoTop: timing.openingHold, twoBottom: timing.openingHold, one: timing.openingHold};
   starts.dee = timing.openingHold;
   starts.logoHold = timing.openingHold + Math.max(timing.twoTop, timing.twoBottom, timing.one, timing.dee);
@@ -34,7 +44,7 @@ export function schedule(timing) {
   starts.caption = starts.wipe + timing.wipe*wipeTimeAt(1-logoBottom/size);
   starts.endHold = Math.max(starts.eyes+timing.eyes,starts.caption+timing.caption);
   starts.returnWipe = starts.endHold + timing.endHold;
-  starts.captionOutEnd = starts.returnWipe + timing.returnWipe*wipeTimeAt(logoBottom/size);
+  starts.captionOutEnd = starts.returnWipe + timing.returnWipe*wipeTimeAt((logoBottom+(canvas.height-size)/2)/canvas.height);
   starts.captionOut = Math.max(starts.returnWipe,starts.captionOutEnd-timing.captionOut);
   starts.reset = starts.returnWipe + timing.returnWipe;
   starts.loopHold = starts.reset + timing.reset;
@@ -53,8 +63,8 @@ export function ease(t, x1, y1, x2, y2) {
   }
   return cubic((lo + hi) / 2, y1, y2);
 }
-export function stateAt(time, timing) {
-  const starts = schedule(timing);
+export function stateAt(time, timing, canvas=formats.square) {
+  const starts = schedule(timing,canvas);
   let phase = 'loopHold';
   const progress = {};
   for (const key of Object.keys(labels)) {
@@ -79,11 +89,10 @@ export function sourceAssets(svg, css, beigeSVG, eyesSVG, captionSVG) {
   if (eyePaths.length !== 6 || !pupils || !eyeShell) throw new Error('Inspect supplied eye geometry before separating pupils.');
   return {body, beigeBody, eyesBody, eyeShell, pupils, red, beige, ink, captionBody, captionInkBottom};
 }
-// Preserve the original first landing blink (0–483ms), then insert the
-// 180ms pupil-only glance before the remaining playful blink beats.
+// Open the eyes once, hold, then glance before the remaining playful blinks.
 // All eye beats scale with timing.eyes; no randomness or browser timers.
-function keyframeAt(progress, keys, curve) {
-  const ms = Math.max(0, Math.min(1, progress)) * 2100;
+function keyframeAt(progress, keys, curve, length=2100) {
+  const ms = Math.max(0, Math.min(1, progress)) * length;
   for (let i=1;i<keys.length;i++) {
     if (ms <= keys[i][0]) {
       const [a,from]=keys[i-1], [b,to]=keys[i];
@@ -93,8 +102,19 @@ function keyframeAt(progress, keys, curve) {
   return keys.at(-1)[1];
 }
 export function blinkAt(progress) {
-  return keyframeAt(progress, [[0,1],[126,1],[378,0],[483,1],
+  return keyframeAt(progress, [[0,0],[300,1],
     [1193,1],[1245,0],[1319,1],[1460,1],[1540,0],[1620,1],[2100,1]], [.25,.1,.25,1]);
+}
+// Final eye-only beat on red: look the other way, look back, then sleep.
+// Normalized to timing.reset so it remains editable in the preview.
+export function outroBlinkAt(progress) {
+  return keyframeAt(progress,[[0,1],[1000,1],[1274,0]],[.25,.1,.25,1],1274);
+}
+export function outroGazeAt(progress) {
+  return keyframeAt(progress,[[0,0],[80,0],[260,12],[600,12],[800,0],[1274,0]],[.2,.8,.2,1],1274);
+}
+export function eyeOpenness(eyeProgress,closeProgress=0) {
+  return blinkAt(eyeProgress)*outroBlinkAt(closeProgress);
 }
 export function gazeAt(progress) {
   return keyframeAt(progress, [[0,0],[483,0],[663,12],[1013,12],
@@ -104,41 +124,84 @@ export function gazeAt(progress) {
 export function revealAt(progress) {
   return ease(progress, .76, 0, .16, .8);
 }
-export function eyesAt(progress, assets) {
-  return `${assets.eyeShell}<g data-pupils="true" transform="translate(${gazeAt(progress)} 0)">${assets.pupils}</g>`;
+// Small rigid-body gestures sit on top of the unchanged extrusion clips.
+// Each character winds up, leads into its arrival, then gives one tiny response.
+// No scaling, path deformation, added facial features, or random motion.
+export const characterMotion = {
+  two: {anchor:140, key:'twoTop', wind:[-8,3,-3], lead:[-4,-2,1.4], land:[-2,1,-.6], settle:160},
+  dee: {anchor:428.4, key:'dee', wind:[0,2,-1.5], lead:[0,-1,1], land:[0,1,-.35], settle:195},
+  one: {anchor:702.8, key:'one', wind:[8,4,2.5], lead:[5,-3,-1.8], land:[2,1,.6], settle:135}
+};
+export function characterPose(time,timing,character) {
+  const spec=characterMotion[character], start=timing.openingHold;
+  const length=character==='two'?Math.max(timing.twoTop,timing.twoBottom):timing[spec.key];
+  const end=start+length;
+  const settle=Math.min(spec.settle,Math.max(0,schedule(timing).wipe-end));
+  if(time<=start || time>=end+settle || !length || !settle) return [0,0,0];
+  const keys=[
+    [start,[0,0,0]],
+    [start+length*.23,spec.wind],
+    [start+length*.58,[0,0,0]],
+    [start+length*.86,spec.lead],
+    [end,spec.land],
+    [end+settle*.5,spec.land.map(v=>v*-.22)],
+    [end+settle,[0,0,0]]
+  ];
+  for(let i=1;i<keys.length;i++) {
+    if(time<=keys[i][0]) {
+      const [a,from]=keys[i-1], [b,to]=keys[i];
+      const p=ease((time-a)/(b-a),.3,0,.2,1);
+      return from.map((v,j)=>v+(to[j]-v)*p);
+    }
+  }
+  return [0,0,0];
+}
+function characterMark(time,timing,assembled) {
+  const poses=Object.keys(characterMotion).map(name=>[name,characterPose(time,timing,name)]);
+  const use=`<use href="#beige-mark" ${assembled?'':'clip-path="url(#construction)"'}/>`;
+  if(poses.every(([,pose])=>pose.every(v=>v===0))) return use;
+  return poses.map(([name,[x,y,angle]])=>`<g data-character="${name}" transform="translate(${x} ${y}) rotate(${angle} ${characterMotion[name].anchor} 140)"><g clip-path="url(#character-${name})">${use}</g></g>`).join('');
+}
+export function eyesAt(progress, assets, outroProgress=0) {
+  return `${assets.eyeShell}<g data-pupils="true" transform="translate(${gazeAt(progress)+outroGazeAt(outroProgress)} 0)">${assets.pupils}</g>`;
 }
 // Center the visible logo + caption bounds together as the caption emerges.
 export function compositionOffset(progress, assets, exitProgress=0) {
-  const extension=(12*(logoWidth/240)+assets.captionInkBottom)
+  const extension=(captionGap+assets.captionInkBottom)
     * Math.max(0,ease(progress,.2,.8,.2,1)-ease(exitProgress,.7,0,.85,.55));
   return -extension/2;
 }
-export function captionAt(progress, assets, exitProgress=0, color=assets.ink) {
-  const gap = 12*(logoWidth/240);
+export function captionAt(progress, assets, exitProgress=0, color=assets.ink, canvas=formats.square) {
+  const gap = captionGap;
   // Start/end at the actual glyph bottom so visible motion matches the crossing.
   const travel=gap+assets.captionInkBottom;
   // Exit accelerates into the mask: no long ease-out tail that looks finished early.
   const offset=-travel*(1-ease(progress,.2,.8,.2,1)+ease(exitProgress,.7,0,.85,.55));
-  return `<g data-caption="true" clip-path="url(#caption-reveal)"><g fill="${color}" transform="translate(${(size-logoWidth)/2} ${logoBottom+gap+offset})">${assets.captionBody}</g></g>`;
+  return `<g data-caption="true" clip-path="url(#caption-reveal)"><g fill="${color}" transform="translate(${(canvas.width-logoWidth)/2} ${logoBottom+(canvas.height-size)/2+gap+offset})">${assets.captionBody}</g></g>`;
 }
-export function renderSVG(time, timing, assets) {
-  const {progress: p} = stateAt(time, timing);
+export function renderSVG(time, timing, assets, canvas=formats.square) {
+  const {width,height}=canvas;
+  // Keep the square master’s event times. Only layout and full-canvas wipe travel
+  // adapt to the format; no resampling, cropping or stretching of a square movie.
+  const {progress: p} = stateAt(time, timing,canvas);
   const offset=compositionOffset(p.caption,assets,p.captionOut);
-  // Only the clips move; the logo keeps its original size.
-  const remaining = 1-ease(p.reset,.7,0,.2,1);
-  const slide = key => revealAt(p[key])*remaining;
+  // The extrusion stays unchanged; individual characters add small rigid gestures.
+  const slide = key => revealAt(p[key]);
   const top = slide('twoTop'), bottom = slide('twoBottom');
   const one = slide('one'), dee = slide('dee');
   const wipe = ease(p.wipe, .7, 0, .2, 1);
   const returnWipe = ease(p.returnWipe,.7,0,.2,1);
   const assembled = [top,bottom,one,dee].every(value => value === 1);
   const scale = logoWidth / 829;
-  const x = (size-logoWidth)/2, y = (size-280*scale)/2;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  const x = (width-logoWidth)/2, y = (height-280*scale)/2;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
     <defs>
-      <clipPath id="caption-reveal"><rect x="0" y="${y+280*scale}" width="1080" height="${size-y-280*scale}"/></clipPath>
+      <clipPath id="caption-reveal"><rect x="0" y="${y+280*scale}" width="${width}" height="${height-y-280*scale}"/></clipPath>
       <g id="mark">${assets.body}</g><g id="beige-mark">${assets.beigeBody}</g>
-      <clipPath id="scene"><rect width="1080" height="${size*Math.max(1-wipe,returnWipe)}"/></clipPath>
+      <clipPath id="scene"><rect width="${width}" height="${height*Math.max(1-wipe,returnWipe)}"/></clipPath>
+      <clipPath id="character-two"><rect x="0" y="0" width="280" height="280"/></clipPath>
+      <clipPath id="character-dee"><rect x="288.4" y="0" width="280" height="280"/></clipPath>
+      <clipPath id="character-one"><rect x="576.8" y="0" width="252.2" height="280"/></clipPath>
       <clipPath id="construction" clipPathUnits="userSpaceOnUse">
         <rect x="0" y="0" width="${280*top}" height="140"/>
         <rect x="${280*(1-bottom)}" y="140" width="${280*bottom}" height="140"/>
@@ -146,21 +209,21 @@ export function renderSVG(time, timing, assets) {
         <rect x="288.4" y="0" width="${280*dee}" height="280"/>
       </clipPath>
     </defs>
-    <rect width="1080" height="1080" fill="${assets.beige}"/>
+    <rect width="${width}" height="${height}" fill="${assets.beige}"/>
     <g data-composition="true" transform="translate(0 ${offset})">
-    ${time >= schedule(timing).caption ? captionAt(p.caption,assets,p.captionOut) : ''}
+    ${time >= schedule(timing).caption ? captionAt(p.caption,assets,p.captionOut,assets.ink,canvas) : ''}
     <g transform="translate(${x} ${y}) scale(${scale})"><use href="#mark"/>
-      ${time >= schedule(timing).eyes ? `<g transform="translate(317 127) scale(1 ${blinkAt(p.eyes)}) translate(0 -24)">${eyesAt(p.eyes,assets)}</g>` : ''}
     </g>
     </g>
     <g clip-path="url(#scene)">
-      <rect width="1080" height="1080" fill="${assets.red}"/>
+      <rect width="${width}" height="${height}" fill="${assets.red}"/>
       <g data-composition="true" transform="translate(0 ${offset})">
-      ${time >= schedule(timing).returnWipe ? captionAt(p.caption,assets,p.captionOut,assets.beige) : ''}
+      ${time >= schedule(timing).returnWipe ? captionAt(p.caption,assets,p.captionOut,assets.beige,canvas) : ''}
       <g transform="translate(${x} ${y}) scale(${scale})">
-        <use href="#beige-mark" ${assembled ? '' : 'clip-path="url(#construction)"'}/>
+        ${time < schedule(timing).returnWipe ? characterMark(time,timing,assembled) : ''}
       </g>
       </g>
     </g>
+    ${time >= schedule(timing).eyes && time < schedule(timing).loopHold ? `<g data-eye-overlay="true" transform="translate(0 ${offset})"><g transform="translate(${x} ${y}) scale(${scale})"><g transform="translate(317 127) scale(1 ${eyeOpenness(p.eyes,p.reset)}) translate(0 -24)">${eyesAt(p.eyes,assets,p.reset)}</g></g></g>` : ''}
   </svg>`;
 }

@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "2d1-coming-soon",
+  "account_id": "17a311d4f9c02bb265da393443348f86",
+  "main": "server/coming-soon.mjs",
+  "compatibility_date": "2026-10-09",
+  "workers_dev": false,
+  "preview_urls": false,
+  "rules": [{"type": "Text", "globs": ["**/*.html", "**/*.svg", "**/js/analytics.js"], "fallthrough": true}, {"type": "Data", "globs": ["**/2d1-social.png", "**/2d1-icon.ico", "**/2d1-apple-touch.png"], "fallthrough": true}],
+  "routes": [
+    {"pattern": "2d1.studio", "custom_domain": true},
+    {"pattern": "www.2d1.studio", "custom_domain": true},
+    {"pattern": "newfiction.org", "custom_domain": true},
+    {"pattern": "www.newfiction.org", "custom_domain": true}
+  ]
+}

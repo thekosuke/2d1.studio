@@ -1,3 +1,4 @@
+import {handleContact, contactConfigured} from './contact-worker.mjs';
 import objects from '../data/objects.json' with { type: 'json' };
 import { purchasedStore } from './purchased-db.mjs';
 
@@ -84,6 +85,11 @@ export async function handlePurchased(request, env) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === '/api/contact/config') {
+      if (request.method !== 'GET') return json({error:'METHOD_NOT_ALLOWED'},405,{Allow:'GET'});
+      return json({status:contactConfigured(env)?'ready':'not-configured'});
+    }
+    if (url.pathname === '/api/contact') return handleContact(request, env);
     if (url.pathname === '/api/purchased') return handlePurchased(request, env);
     if (url.pathname.startsWith('/api/')) return error('NOT_FOUND', 404);
     if (!env?.ASSETS?.fetch) return new Response('Site temporarily unavailable', { status: 503 });

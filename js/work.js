@@ -22,6 +22,7 @@
     const active=visible.has(video)&&!reduced.matches&&!document.hidden;
     video.closest('figure').classList.toggle('is-video-active',active&&!!source);
     if(!active||!source){video.pause();continue}
+    if(video.dataset.poster&&!video.poster)video.poster=video.dataset.poster;
     if(!source.hasAttribute('src')){source.src=source.dataset.src;video.load()}
     video.muted=true;video.controls=false;
     if(video.dataset.userPaused!=='true')video.play().catch(()=>{});

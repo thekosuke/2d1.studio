@@ -1,0 +1,555 @@
+{
+  "faces": [
+    {
+      "face": "Medium",
+      "cssWeight": "400",
+      "originalBytes": 1065756,
+      "coverage": 7737,
+      "banks": [
+        {
+          "name": "canvas",
+          "file": "zen-medium-canvas-c3921b496d90.woff2",
+          "glyphs": 403,
+          "bytes": 50024
+        },
+        {
+          "name": "copy",
+          "file": "zen-medium-copy-5d97628d7d5f.woff2",
+          "glyphs": 676,
+          "bytes": 96112
+        },
+        {
+          "name": "extra-00",
+          "file": "zen-medium-extra-00-22f79625dc9e.woff2",
+          "glyphs": 256,
+          "bytes": 11796
+        },
+        {
+          "name": "extra-01",
+          "file": "zen-medium-extra-01-b85faba374f7.woff2",
+          "glyphs": 256,
+          "bytes": 18596
+        },
+        {
+          "name": "extra-02",
+          "file": "zen-medium-extra-02-83459364c7a4.woff2",
+          "glyphs": 256,
+          "bytes": 32992
+        },
+        {
+          "name": "extra-03",
+          "file": "zen-medium-extra-03-d4b5de55a06e.woff2",
+          "glyphs": 256,
+          "bytes": 37976
+        },
+        {
+          "name": "extra-04",
+          "file": "zen-medium-extra-04-1e0e291c1671.woff2",
+          "glyphs": 256,
+          "bytes": 34180
+        },
+        {
+          "name": "extra-05",
+          "file": "zen-medium-extra-05-7eb361da8131.woff2",
+          "glyphs": 256,
+          "bytes": 39700
+        },
+        {
+          "name": "extra-06",
+          "file": "zen-medium-extra-06-72d67cd7e99b.woff2",
+          "glyphs": 256,
+          "bytes": 37832
+        },
+        {
+          "name": "extra-07",
+          "file": "zen-medium-extra-07-1bb8b74bef9f.woff2",
+          "glyphs": 256,
+          "bytes": 39800
+        },
+        {
+          "name": "extra-08",
+          "file": "zen-medium-extra-08-9a10a7f93481.woff2",
+          "glyphs": 256,
+          "bytes": 43564
+        },
+        {
+          "name": "extra-09",
+          "file": "zen-medium-extra-09-8596b3cfe84d.woff2",
+          "glyphs": 256,
+          "bytes": 42304
+        },
+        {
+          "name": "extra-10",
+          "file": "zen-medium-extra-10-1cdedb3175b7.woff2",
+          "glyphs": 256,
+          "bytes": 36776
+        },
+        {
+          "name": "extra-11",
+          "file": "zen-medium-extra-11-1beba48f086f.woff2",
+          "glyphs": 256,
+          "bytes": 42744
+        },
+        {
+          "name": "extra-12",
+          "file": "zen-medium-extra-12-0f7ede904686.woff2",
+          "glyphs": 256,
+          "bytes": 48132
+        },
+        {
+          "name": "extra-13",
+          "file": "zen-medium-extra-13-0b3f7c8dbddc.woff2",
+          "glyphs": 256,
+          "bytes": 46952
+        },
+        {
+          "name": "extra-14",
+          "file": "zen-medium-extra-14-1fd3cf9db55f.woff2",
+          "glyphs": 256,
+          "bytes": 40180
+        },
+        {
+          "name": "extra-15",
+          "file": "zen-medium-extra-15-d7c884f772ca.woff2",
+          "glyphs": 256,
+          "bytes": 45768
+        },
+        {
+          "name": "extra-16",
+          "file": "zen-medium-extra-16-e62e6e21ce72.woff2",
+          "glyphs": 256,
+          "bytes": 51980
+        },
+        {
+          "name": "extra-17",
+          "file": "zen-medium-extra-17-8b8d72515f93.woff2",
+          "glyphs": 256,
+          "bytes": 41496
+        },
+        {
+          "name": "extra-18",
+          "file": "zen-medium-extra-18-9ae944065a38.woff2",
+          "glyphs": 256,
+          "bytes": 42972
+        },
+        {
+          "name": "extra-19",
+          "file": "zen-medium-extra-19-0a851bd50e9d.woff2",
+          "glyphs": 256,
+          "bytes": 45348
+        },
+        {
+          "name": "extra-20",
+          "file": "zen-medium-extra-20-364ac05a358a.woff2",
+          "glyphs": 256,
+          "bytes": 43540
+        },
+        {
+          "name": "extra-21",
+          "file": "zen-medium-extra-21-517b8fa3d6df.woff2",
+          "glyphs": 256,
+          "bytes": 45352
+        },
+        {
+          "name": "extra-22",
+          "file": "zen-medium-extra-22-8dd5385127ac.woff2",
+          "glyphs": 256,
+          "bytes": 45756
+        },
+        {
+          "name": "extra-23",
+          "file": "zen-medium-extra-23-b8e29f89b229.woff2",
+          "glyphs": 256,
+          "bytes": 48016
+        },
+        {
+          "name": "extra-24",
+          "file": "zen-medium-extra-24-de5f7093e3bd.woff2",
+          "glyphs": 256,
+          "bytes": 55080
+        },
+        {
+          "name": "extra-25",
+          "file": "zen-medium-extra-25-3817483bfcdc.woff2",
+          "glyphs": 256,
+          "bytes": 26200
+        },
+        {
+          "name": "extra-26",
+          "file": "zen-medium-extra-26-f37f96ae1873.woff2",
+          "glyphs": 2,
+          "bytes": 892
+        }
+      ],
+      "originalSHA256": "1c0a2df81ce4b8642af47d0e05183f257b4475c91cf6551c6f7676c659f88d9c"
+    },
+    {
+      "face": "Bold",
+      "cssWeight": "500",
+      "originalBytes": 1083516,
+      "coverage": 7737,
+      "banks": [
+        {
+          "name": "canvas",
+          "file": "zen-bold-canvas-bdb2fb6d52a4.woff2",
+          "glyphs": 403,
+          "bytes": 49836
+        },
+        {
+          "name": "copy",
+          "file": "zen-bold-copy-32d95c5cde2f.woff2",
+          "glyphs": 676,
+          "bytes": 97048
+        },
+        {
+          "name": "extra-00",
+          "file": "zen-bold-extra-00-120bae9392f6.woff2",
+          "glyphs": 256,
+          "bytes": 11876
+        },
+        {
+          "name": "extra-01",
+          "file": "zen-bold-extra-01-fac88c10b254.woff2",
+          "glyphs": 256,
+          "bytes": 18800
+        },
+        {
+          "name": "extra-02",
+          "file": "zen-bold-extra-02-6ff60ee260f9.woff2",
+          "glyphs": 256,
+          "bytes": 32996
+        },
+        {
+          "name": "extra-03",
+          "file": "zen-bold-extra-03-3c28d2916a08.woff2",
+          "glyphs": 256,
+          "bytes": 38380
+        },
+        {
+          "name": "extra-04",
+          "file": "zen-bold-extra-04-42a6a7a3ceeb.woff2",
+          "glyphs": 256,
+          "bytes": 34368
+        },
+        {
+          "name": "extra-05",
+          "file": "zen-bold-extra-05-3dde8229fcde.woff2",
+          "glyphs": 256,
+          "bytes": 39908
+        },
+        {
+          "name": "extra-06",
+          "file": "zen-bold-extra-06-126a7c193521.woff2",
+          "glyphs": 256,
+          "bytes": 38180
+        },
+        {
+          "name": "extra-07",
+          "file": "zen-bold-extra-07-eb548e1aab4a.woff2",
+          "glyphs": 256,
+          "bytes": 40264
+        },
+        {
+          "name": "extra-08",
+          "file": "zen-bold-extra-08-028a22c99306.woff2",
+          "glyphs": 256,
+          "bytes": 43900
+        },
+        {
+          "name": "extra-09",
+          "file": "zen-bold-extra-09-1e6d0d6c4adb.woff2",
+          "glyphs": 256,
+          "bytes": 42572
+        },
+        {
+          "name": "extra-10",
+          "file": "zen-bold-extra-10-c4502b9f29db.woff2",
+          "glyphs": 256,
+          "bytes": 37328
+        },
+        {
+          "name": "extra-11",
+          "file": "zen-bold-extra-11-ab6b859e0cdc.woff2",
+          "glyphs": 256,
+          "bytes": 42956
+        },
+        {
+          "name": "extra-12",
+          "file": "zen-bold-extra-12-075c8316f073.woff2",
+          "glyphs": 256,
+          "bytes": 48844
+        },
+        {
+          "name": "extra-13",
+          "file": "zen-bold-extra-13-d689422d15af.woff2",
+          "glyphs": 256,
+          "bytes": 47172
+        },
+        {
+          "name": "extra-14",
+          "file": "zen-bold-extra-14-b3926ccd78a5.woff2",
+          "glyphs": 256,
+          "bytes": 40384
+        },
+        {
+          "name": "extra-15",
+          "file": "zen-bold-extra-15-2d1baae195dd.woff2",
+          "glyphs": 256,
+          "bytes": 46680
+        },
+        {
+          "name": "extra-16",
+          "file": "zen-bold-extra-16-3a8f15c5e57f.woff2",
+          "glyphs": 256,
+          "bytes": 52524
+        },
+        {
+          "name": "extra-17",
+          "file": "zen-bold-extra-17-0af609f5cdbe.woff2",
+          "glyphs": 256,
+          "bytes": 41768
+        },
+        {
+          "name": "extra-18",
+          "file": "zen-bold-extra-18-9ac0fd4fe65c.woff2",
+          "glyphs": 256,
+          "bytes": 43620
+        },
+        {
+          "name": "extra-19",
+          "file": "zen-bold-extra-19-04ab507aca78.woff2",
+          "glyphs": 256,
+          "bytes": 45668
+        },
+        {
+          "name": "extra-20",
+          "file": "zen-bold-extra-20-f11dac0c8119.woff2",
+          "glyphs": 256,
+          "bytes": 43780
+        },
+        {
+          "name": "extra-21",
+          "file": "zen-bold-extra-21-2777f6efa9a1.woff2",
+          "glyphs": 256,
+          "bytes": 45860
+        },
+        {
+          "name": "extra-22",
+          "file": "zen-bold-extra-22-f3f57dabda64.woff2",
+          "glyphs": 256,
+          "bytes": 48752
+        },
+        {
+          "name": "extra-23",
+          "file": "zen-bold-extra-23-d822a921a82a.woff2",
+          "glyphs": 256,
+          "bytes": 48616
+        },
+        {
+          "name": "extra-24",
+          "file": "zen-bold-extra-24-67a232104ab1.woff2",
+          "glyphs": 256,
+          "bytes": 56552
+        },
+        {
+          "name": "extra-25",
+          "file": "zen-bold-extra-25-fe608f0f6fa2.woff2",
+          "glyphs": 256,
+          "bytes": 26164
+        },
+        {
+          "name": "extra-26",
+          "file": "zen-bold-extra-26-227de3d6847a.woff2",
+          "glyphs": 2,
+          "bytes": 876
+        }
+      ],
+      "originalSHA256": "8ea580ebef9fb1372fd2f66f2baa3119205951bbb78f335d07753d22b3f10103"
+    },
+    {
+      "face": "Black",
+      "cssWeight": "600 700",
+      "originalBytes": 1046876,
+      "coverage": 7737,
+      "banks": [
+        {
+          "name": "canvas",
+          "file": "zen-black-canvas-01296c5ca5dd.woff2",
+          "glyphs": 403,
+          "bytes": 48824
+        },
+        {
+          "name": "copy",
+          "file": "zen-black-copy-74e94edb8ef8.woff2",
+          "glyphs": 676,
+          "bytes": 96428
+        },
+        {
+          "name": "extra-00",
+          "file": "zen-black-extra-00-85c18013567e.woff2",
+          "glyphs": 256,
+          "bytes": 11692
+        },
+        {
+          "name": "extra-01",
+          "file": "zen-black-extra-01-4ad02ffee490.woff2",
+          "glyphs": 256,
+          "bytes": 18532
+        },
+        {
+          "name": "extra-02",
+          "file": "zen-black-extra-02-aa47004d2daf.woff2",
+          "glyphs": 256,
+          "bytes": 32612
+        },
+        {
+          "name": "extra-03",
+          "file": "zen-black-extra-03-0c961481c274.woff2",
+          "glyphs": 256,
+          "bytes": 37952
+        },
+        {
+          "name": "extra-04",
+          "file": "zen-black-extra-04-f52838e0e1af.woff2",
+          "glyphs": 256,
+          "bytes": 34336
+        },
+        {
+          "name": "extra-05",
+          "file": "zen-black-extra-05-b41318dcbeb6.woff2",
+          "glyphs": 256,
+          "bytes": 39260
+        },
+        {
+          "name": "extra-06",
+          "file": "zen-black-extra-06-57d4bfd38672.woff2",
+          "glyphs": 256,
+          "bytes": 37908
+        },
+        {
+          "name": "extra-07",
+          "file": "zen-black-extra-07-094e37f5bd1d.woff2",
+          "glyphs": 256,
+          "bytes": 39308
+        },
+        {
+          "name": "extra-08",
+          "file": "zen-black-extra-08-862f308365ef.woff2",
+          "glyphs": 256,
+          "bytes": 43004
+        },
+        {
+          "name": "extra-09",
+          "file": "zen-black-extra-09-26c1dce998c9.woff2",
+          "glyphs": 256,
+          "bytes": 42192
+        },
+        {
+          "name": "extra-10",
+          "file": "zen-black-extra-10-cd2c68d5c27e.woff2",
+          "glyphs": 256,
+          "bytes": 36804
+        },
+        {
+          "name": "extra-11",
+          "file": "zen-black-extra-11-8c2e20019bd5.woff2",
+          "glyphs": 256,
+          "bytes": 41656
+        },
+        {
+          "name": "extra-12",
+          "file": "zen-black-extra-12-1e1408a1527f.woff2",
+          "glyphs": 256,
+          "bytes": 47560
+        },
+        {
+          "name": "extra-13",
+          "file": "zen-black-extra-13-93d0b6b0f126.woff2",
+          "glyphs": 256,
+          "bytes": 46648
+        },
+        {
+          "name": "extra-14",
+          "file": "zen-black-extra-14-38190622a148.woff2",
+          "glyphs": 256,
+          "bytes": 39836
+        },
+        {
+          "name": "extra-15",
+          "file": "zen-black-extra-15-a7a6f3ae0295.woff2",
+          "glyphs": 256,
+          "bytes": 45780
+        },
+        {
+          "name": "extra-16",
+          "file": "zen-black-extra-16-21710fc78e40.woff2",
+          "glyphs": 256,
+          "bytes": 50444
+        },
+        {
+          "name": "extra-17",
+          "file": "zen-black-extra-17-9413fe97fc3d.woff2",
+          "glyphs": 256,
+          "bytes": 41132
+        },
+        {
+          "name": "extra-18",
+          "file": "zen-black-extra-18-0a5ccbaf2ec9.woff2",
+          "glyphs": 256,
+          "bytes": 43760
+        },
+        {
+          "name": "extra-19",
+          "file": "zen-black-extra-19-c52913c6e15b.woff2",
+          "glyphs": 256,
+          "bytes": 44360
+        },
+        {
+          "name": "extra-20",
+          "file": "zen-black-extra-20-6dd81f2e6a1d.woff2",
+          "glyphs": 256,
+          "bytes": 42440
+        },
+        {
+          "name": "extra-21",
+          "file": "zen-black-extra-21-0f7e1487b755.woff2",
+          "glyphs": 256,
+          "bytes": 44208
+        },
+        {
+          "name": "extra-22",
+          "file": "zen-black-extra-22-e8874a2cfcf3.woff2",
+          "glyphs": 256,
+          "bytes": 47268
+        },
+        {
+          "name": "extra-23",
+          "file": "zen-black-extra-23-30b964a2bd5c.woff2",
+          "glyphs": 256,
+          "bytes": 47000
+        },
+        {
+          "name": "extra-24",
+          "file": "zen-black-extra-24-d7dc0c33fcb0.woff2",
+          "glyphs": 256,
+          "bytes": 53092
+        },
+        {
+          "name": "extra-25",
+          "file": "zen-black-extra-25-e421c3a3fde8.woff2",
+          "glyphs": 256,
+          "bytes": 25928
+        },
+        {
+          "name": "extra-26",
+          "file": "zen-black-extra-26-cfed33064462.woff2",
+          "glyphs": 2,
+          "bytes": 864
+        }
+      ],
+      "originalSHA256": "ee38a455f1005586a2873994655c78de1e3e252bf27c4d1cb8f8bc5f46441c77"
+    }
+  ],
+  "coreCharacters": 331,
+  "authoredCharacters": 1042
+}

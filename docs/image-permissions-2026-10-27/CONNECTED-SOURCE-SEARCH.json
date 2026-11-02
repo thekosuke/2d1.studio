@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-27",
+  "purpose": "Bounded read-only search for existing catalog image grants and Aviator/Supa/DeepDrip portfolio approvals.",
+  "queries": [
+    {
+      "provider": "Notion",
+      "query": "image license",
+      "returnedResults": 9,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "usage rights",
+      "returnedResults": 8,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "portfolio permission",
+      "returnedResults": 10,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "Aviator",
+      "returnedResults": 4,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "Supa",
+      "returnedResults": 1,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "DeepDrip",
+      "returnedResults": 3,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "画像利用",
+      "returnedResults": 8,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "掲載許可",
+      "returnedResults": 8,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "ポートフォリオ",
+      "returnedResults": 3,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "Aviator permission",
+      "returnedResults": 6,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "Supa permission",
+      "returnedResults": 6,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "DeepDrip permission",
+      "returnedResults": 6,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "image licensing",
+      "returnedResults": 6,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Notion",
+      "query": "写真 許諾",
+      "returnedResults": 6,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "image license",
+      "returnedResults": 0,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "usage rights",
+      "returnedResults": 7,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "portfolio permission",
+      "returnedResults": 0,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "Aviator",
+      "returnedResults": 3,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "Supa",
+      "returnedResults": 2,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "DeepDrip",
+      "returnedResults": 2,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "Aviator contract",
+      "returnedResults": 2,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "Supa contract",
+      "returnedResults": 0,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "DeepDrip contract",
+      "returnedResults": 0,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "image rights",
+      "returnedResults": 2,
+      "error": false,
+      "scope": "Bounded relevance search; unrelated results were not fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "license/release filename variants",
+      "returnedResults": 0,
+      "error": false,
+      "scope": "Metadata-only filename-filter search; no unrelated file content fetched."
+    },
+    {
+      "provider": "Google Drive",
+      "query": "Aviator/Supa/DeepDrip filename variants",
+      "returnedResults": 2,
+      "error": false,
+      "scope": "Metadata-only filename-filter search; no unrelated file content fetched."
+    }
+  ],
+  "readLimits": [
+    "One 143 MB Aviator brand-work PDF text fetch failed: Transport closed.",
+    "Two unknown blocks on second 005-hughes Notion record; one unknown block on Supateam note not inspected.",
+    "Supateam's full available transcript was read; no grant found.",
+    "Search results are bounded and not exhaustive of all workspace or personal records.",
+    "Local search was filenames under relevant owner folders, not unrelated tax/legal/financial content.",
+    "No email or Slack search, external communication, account or connected-document write."
+  ],
+  "finding": "No photo-publication grant or client portfolio approval found in the sources checked; grants elsewhere have not been ruled out.",
+  "aviatorTracker": {
+    "url": "https://docs.google.com/spreadsheets/d/1M8OIIc8MFJX1OHWk1Em8itkxBcb8QohUTFhC30AhfFw/edit",
+    "lastModified": "2026-04-11",
+    "finding": "Two iStock photo rows and one Unsplash photo row are marked TBD. Font rows are Confirmed. Tracker status does not establish license, licensee, current purchase status or client portfolio approval."
+  }
+}
+

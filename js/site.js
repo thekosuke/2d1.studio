@@ -29,13 +29,7 @@
   if (document.readyState === 'complete') arrival();
   else window.addEventListener('load', arrival, {once:true});
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
-  if (['2d1.studio','www.2d1.studio'].includes(location.hostname)) {
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function(){window.dataLayer.push(arguments);};
-    gtag('js',new Date()); gtag('config','G-7YBDBXJWCG');
-    const script=document.createElement('script'); script.async=true;
-    script.src='https://www.googletagmanager.com/gtag/js?id=G-7YBDBXJWCG'; document.head.append(script);
-  }
+
 })();
 
 // Measure the essay heading for its viewport-relative arrival position.
@@ -58,7 +52,8 @@
     const textRects = [];
     while (walker.nextNode()) {
       const node = walker.currentNode;
-      if (!node.textContent.trim() || node.parentElement.closest('.pixel-arrow,[hidden],[aria-hidden="true"]')) continue;
+      const excluded = node.parentElement.closest('.pixel-arrow,[hidden],[aria-hidden="true"]');
+      if (!node.textContent.trim() || (excluded && excluded !== unit && unit.contains(excluded))) continue;
       const range = document.createRange();
       range.selectNodeContents(node);
       textRects.push(...range.getClientRects());
@@ -86,6 +81,9 @@
       const unit = icon.closest('a,button');
       if (!units.has(unit)) { units.set(unit, icon); observer.observe(unit); }
     });
+    document.querySelectorAll('.work-related-caption').forEach(unit => {
+      if (!units.has(unit)) { units.set(unit, unit.querySelector('.work-related-arrow')); observer.observe(unit); }
+    });
     document.querySelectorAll('.shop-card-action,.work-view').forEach(unit => {
       if (!units.has(unit)) { units.set(unit, null); observer.observe(unit); }
     });
@@ -103,4 +101,33 @@
     if (units.has(unit)) measure(unit, units.get(unit));
     unit.querySelectorAll('.shop-card-action,.work-view').forEach(item => measure(item, null));
   }, {passive:true});
+})();
+
+/* Shared footer alignment for every page, including nested project footers. */
+(() => {
+  const controls=[...document.querySelectorAll('.language-switch,.work-footer-language')];
+  if(!controls.length)return;
+  let frame=0;
+  function align(){
+    frame=0;
+    controls.forEach(language=>{
+      language.style.removeProperty('bottom');
+      if(language.closest('.mobile-nav-panel'))return;
+      const footer=language.closest('.site-footer')?.querySelector('.footer-line')||document.querySelector('.site-footer .footer-line');
+      if(!footer||getComputedStyle(language).position!=='fixed')return;
+      const row=footer.querySelector('.social-links')||footer;
+      const box=row.getBoundingClientRect(),control=language.getBoundingClientRect();
+      const base=parseFloat(getComputedStyle(language).bottom)||0;
+      if(box.top<innerHeight&&box.bottom>0){
+        language.style.bottom=Math.max(base,innerHeight-(box.top+box.height/2)-control.height/2)+'px';
+      }
+    });
+  }
+  function schedule(){if(!frame)frame=requestAnimationFrame(align);}
+  addEventListener('scroll',schedule,{passive:true});
+  addEventListener('resize',schedule);
+  addEventListener('pageshow',schedule);
+  const observer=new ResizeObserver(schedule);
+  document.querySelectorAll('.site-footer').forEach(footer=>observer.observe(footer));
+  schedule();
 })();

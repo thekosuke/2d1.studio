@@ -6,15 +6,44 @@
   const court=$('.pong-court'),ctx=court.getContext('2d'),main=$('main');
   if(!ctx||!globalThis.PixelPong)return;
   const controls=$('.pong-controls'),board=$('.pong-scoreboard'),help=$('.pong-help'),message=$('.pong-message');
-  const status=$('[data-pong-status]');
+  const status=$('[data-pong-status]'),nickname=$('[data-pong-nickname]');
+  let match=null,lastNickname='';
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const ja=document.documentElement.lang==='ja';
   const copy=ja?{pause:'一時停止',resume:'再開',paused:'一時停止中',win:'あなたの勝ち',lose:'2D1 BOTの勝ち',again:'もう一度',score:(a,b)=>`あなた ${a}、2D1 BOT ${b}`,start:'ゲーム開始。左があなた、右が2D1 BOTです。',point:'あなたの得点',other:'2D1 BOTの得点'}:
     {pause:'Pause',resume:'Resume',paused:'Paused',win:'You win.',lose:'2D1 BOT wins.',again:'Play again',score:(a,b)=>`You ${a}, 2D1 BOT ${b}`,start:'Game on. You are on the left; 2D1 BOT on the right.',point:'Your point',other:'2D1 BOT’s point'};
+  const nicknamePrefix=ja?"プレイスタイル：":"PLAY STYLE: ";
   let mode='idle',game=null,pointer=null,samples=[],offsetX=0,offsetY=0;
   let x=innerWidth/2,y=innerHeight/2,frame=0,last=0,accumulator=0,particles=[],impacts=[],keys=new Set(),hoverTurn=null;
   const color={paper:'#FAF0E6',red:'#FF2B00'};
   const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
+  // Four growth steps from the original pixel to the established 24px maximum.
+  const pixelSizes=[1,6,12,18,24];
+  let pixelStage=0,zoomDirection=1;
+  document.body.classList.add('pixel-steps-ready');
+  function updatePixelSize(){
+    document.body.style.setProperty('--pixel-size',pixelSizes[pixelStage]);
+    zoom.dataset.direction=zoomDirection<0?'smaller':'bigger';
+    zoom.open=pixelStage===pixelSizes.length-1;
+    const description=zoom.querySelector('[data-pixel-size]');
+    if(description)description.textContent=`${pixelSizes[pixelStage]} × ${pixelSizes[pixelStage]} px`;
+  }
+  function stepPixel(direction){
+    if(mode!=='idle'||pointer!==null||launch||returning)return;
+    pixelStage=clamp(pixelStage+direction,0,pixelSizes.length-1);
+    zoomDirection=pixelStage===pixelSizes.length-1?-1:pixelStage===0?1:direction;
+    updatePixelSize();
+  }
+  zoom.querySelector('summary').addEventListener('click',event=>{
+    event.preventDefault();event.stopPropagation();stepPixel(zoomDirection);
+  });
+  document.addEventListener('click',event=>{
+    if(event.composedPath().some(node=>node.id==='type-tuner'))return;
+    if(event.target.closest('a,input,textarea,select,summary,[data-pong-exit],.pong-message'))return;
+    if(event.target.closest('button')&&!grab.contains(event.target))return;
+    stepPixel(1);
+  });
+  updatePixelSize();
   function paintPixel(){grab.style.left=`${x}px`;grab.style.top=`${y}px`}
   function arm(){mode='armed';document.body.classList.add('is-armed');zoom.hidden=true;prompt.hidden=false}
   function size(){
@@ -42,6 +71,8 @@
     hoverTurn?.cancel();mode='playing';document.body.classList.remove('is-armed');document.body.classList.add('is-playing');
     grab.hidden=zoom.hidden=prompt.hidden=true;
     court.hidden=controls.hidden=board.hidden=help.hidden=false;message.hidden=true;
+    nickname.hidden=true;nickname.textContent='';
+    match={seconds:0,travel:0,returns:0,angled:0,longest:0,rally:0};
     const rect=size();game=new PixelPong(rect.width,rect.height);
     // The opening throw serves toward the computer, preserving its vertical aim.
     game.serve(1,clamp(vy/Math.max(Math.abs(vx),1),-.8,.8));
@@ -89,7 +120,8 @@
     }
     document.body.classList.remove('is-armed','is-playing');
     court.hidden=controls.hidden=board.hidden=help.hidden=message.hidden=prompt.hidden=true;
-    zoom.hidden=true;zoom.open=false;grab.hidden=false;
+    pixelStage=0;zoomDirection=1;updatePixelSize();
+    zoom.hidden=true;grab.hidden=false;
     $('meta[name="theme-color"]').content='#FAF0E6';status.textContent='';
     if(!from||reduced.matches){finishExit();return}
     document.body.classList.add('is-returning');
@@ -108,7 +140,7 @@
   function pause(){
     if(mode==='launching')finishLaunch();
     if(mode!=='playing')return;
-    mode='paused';keys.clear();cancelAnimationFrame(frame);frame=0;
+    mode='paused';nickname.hidden=true;keys.clear();cancelAnimationFrame(frame);frame=0;
     message.querySelector('p').textContent=copy.paused;message.querySelector('button').hidden=true;
     status.textContent=copy.paused;
     message.hidden=false;draw(0);
@@ -127,7 +159,15 @@
     }
   }
   function eventEffect(event){
+    if(event.type==='paddle'){
+      match.rally++;match.longest=Math.max(match.longest,match.rally);
+      if(event.side===0){
+        match.returns++;
+        if(Math.abs(event.y-game.player)/(game.ph/2)>=.55)match.angled++;
+      }
+    }
     if(event.type==='score'){
+      match.rally=0;
       updateScore();status.textContent=`${event.side===0?copy.point:copy.other}. ${copy.score(...game.scores)}.`;
       if(event.side===0)burst(game.w/2,game.h/2,52,Math.min(game.w*.6,350));
       const score=$(`[data-score="${event.side}"]`);
@@ -136,7 +176,10 @@
         mode='over';message.hidden=false;message.querySelector('button').hidden=false;
         message.querySelector('p').textContent=event.side===0?copy.win:copy.lose;
         message.querySelector('button').textContent=copy.again;
-        status.textContent=`${message.querySelector('p').textContent} ${copy.score(...game.scores)}`;
+        lastNickname=PixelPongNickname(match,lastNickname);
+        const styleName=document.createElement("span");styleName.className="pong-style-name";styleName.textContent=lastNickname;
+        nickname.replaceChildren(document.createTextNode(nicknamePrefix),styleName);nickname.hidden=false;
+        status.textContent=`${message.querySelector('p').textContent} ${nickname.textContent} ${copy.score(...game.scores)}`;
         message.querySelector('button').focus({preventScroll:true});
       }
     }else if(!reduced.matches){
@@ -173,7 +216,12 @@
       const direction=(keys.has('ArrowDown')||keys.has('s')?1:0)-(keys.has('ArrowUp')||keys.has('w')?1:0);
       if(direction)game.target=clamp(game.target+direction*game.base*1.8*dt,game.ph/2,game.h-game.ph/2);
       accumulator+=dt;
-      while(accumulator>=1/120&&mode==='playing'){game.step(1/120).forEach(eventEffect);accumulator-=1/120}
+      while(accumulator>=1/120&&mode==='playing'){
+        const playerBefore=game.player;
+        const events=game.step(1/120);
+        match.seconds+=1/120;match.travel+=Math.abs(game.player-playerBefore)/game.h;
+        events.forEach(eventEffect);accumulator-=1/120;
+      }
     }
     draw(dt);
     if(mode==='playing'||(mode==='over'&&particles.length))wake();
@@ -204,6 +252,8 @@
       start(end.x-first.x,end.y-first.y,true);
     }else{
       mode='idle';document.body.classList.remove('is-armed');zoom.hidden=false;prompt.hidden=true;
+      // Pointer release is not a keyboard focus state.
+      grab.blur();
     }
   }
   grab.addEventListener('pointerup',event=>release(event));

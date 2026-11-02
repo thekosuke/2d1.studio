@@ -50,7 +50,7 @@ html:has(> body.shop-page)::-webkit-scrollbar{display:none!important;width:0!imp
 /* Keep the established product width with a square frame. */
 .shop-card-media{aspect-ratio:1}
 
-.shop-tote-image.shop-tote-lifestyle{padding:0;object-fit:cover}
+.shop-tote-image.shop-tote-lifestyle{padding:0;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:cover;object-position:30% center}
 
 /* Leave more red around the monitor; preview the actual entrance inside its screen. */
 .shop-finds-preview{position:relative;background:var(--red)}
@@ -77,3 +77,12 @@ html:has(> body.shop-page)::-webkit-scrollbar{display:none!important;width:0!imp
  .shop-card-caption{position:static;width:100%;margin-top:16px}
  .shop-card-caption,.shop-card-title,.shop-card-description{overflow-wrap:anywhere}
 }
+
+/* Memoru is still in development: show its actual app identity, without UI claims. */
+.shop-card-media.memoru-icon-preview{background:var(--cranberry-brown,#320505)}
+.memoru-icon-frame{display:block;width:48%;filter:drop-shadow(0 12px 16px rgba(0,0,0,.24))}
+.memoru-icon-preview .memoru-icon-frame img{display:block;width:100%;height:auto;object-fit:contain;filter:none}
+
+/* Share Studio's thumbnail width; captions keep the same reading edge. */
+.shop-page .shop-main,.js .shop-page .shop-main{width:var(--gallery-thumbnail-width);max-width:none;margin-inline:auto}
+.shop-page .shop-card{width:100%}

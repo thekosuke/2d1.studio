@@ -48,8 +48,8 @@ body.about-page .page-nav a.on-ending,body.about-page .page-nav a.on-ending .nav
 .about-ending .social-links a:is(:hover,:focus-visible){color:var(--red)}
 
 /* Footer eyes blink on hover rather than on a repeating timer. */
-.ending-eyes-hover{display:block;width:116px;height:48px;margin:0 0 64px}
-.ending-contact-eyes{display:block;width:116px;height:48px;margin:0;transform-origin:center}
+.ending-eyes-hover{display:block;width:87px;height:36px;margin:0 0 64px}
+.ending-contact-eyes{display:block;width:100%;height:100%;margin:0;transform-origin:center}
 @keyframes ending-eye-blink{0%,100%{transform:scaleY(1)}45%,55%{transform:scaleY(.06)}}
 @media(hover:hover) and (prefers-reduced-motion:no-preference){.ending-eyes-hover:hover .ending-contact-eyes{animation:ending-eye-blink 360ms ease-in-out}}
 @media(prefers-reduced-motion:reduce){.ending-eyes-hover{display:none}.ending-contact-eyes{animation:none}}

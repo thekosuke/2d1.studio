@@ -70,8 +70,8 @@ html.work-scroll-gallery.work-rebasing{scroll-snap-type:none;scroll-behavior:aut
 .work-rebasing .work-project>summary>img,.work-rebasing .work-project>summary .work-caption,.work-rebasing .work-view,.work-rebasing .work-index{transition:none!important}
 
 /* Project stories: full-width lead image, overview, metadata, and image pairs. */
-.work-project-content{--project-inset:20px;--project-image-gap:40px;background:var(--beige);color:var(--ink)}
-.work-dialog{--project-inset:20px;background:var(--beige);width:100vw}
+.work-project-content{--project-inset:var(--page-edge,24px);--project-image-gap:40px;background:var(--beige);color:var(--ink)}
+.work-dialog{--project-inset:var(--page-edge,24px);background:var(--beige);width:100vw}
 /* Keep caption geometry fixed while the opening animation locks scrolling. */
 .work-detail-content{scrollbar-gutter:stable}
 .work-dialog-bar{position:absolute;z-index:2;inset:0 0 auto;height:80px;padding:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--white);pointer-events:none}
@@ -94,7 +94,8 @@ html[lang="ja"] .work-description{line-height:1.65;letter-spacing:0}
 .work-meta dt{margin-bottom:8px;font:var(--font-caption) var(--font)}
 .work-role-list{display:flex;flex-wrap:wrap;column-gap:.25em}
 .work-role-list li:not(:last-child)::after{content:','}
-.work-detail-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--project-image-gap);column-gap:var(--project-inset);padding:0 var(--project-inset)}
+/* Count the scrollbar gutter within the right margin, rather than adding it. */
+.work-detail-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--project-image-gap);padding:0 var(--project-image-gap);padding-right:max(0px,calc(var(--project-image-gap) - (100vw - 100%)))}
 .work-detail-images .work-detail-image,.work-detail-images .work-detail-image+.work-detail-image{grid-column:1/-1;height:auto;margin:0;padding:0;align-self:start}
 .work-detail-images .work-detail-image.work-detail-image--half{grid-column:auto}
 .work-detail-images .work-detail-image img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
@@ -135,7 +136,7 @@ html[lang="ja"] .work-description{line-height:1.65;letter-spacing:0}
 .work-footer-language a{display:flex;align-items:center;justify-content:center;min-width:22px;min-height:22px;padding-inline:4px}
 .work-footer-language a+a{border-left:1px solid currentColor}
 .work-studio-footer .language-switch a:is([aria-current],:hover,:focus-visible){background:var(--beige);color:var(--red)}
-@media(max-width:1099px){.work-footer-bottom .work-footer-language{right:0;top:0;transform:none}}
+@media(max-width:1099px){.work-footer-bottom .work-footer-language{right:24px;top:50%;transform:translateY(-50%)}}
 @media(max-width:767px){
  .work-project-content{--project-image-gap:20px}
  .work-dialog-bar{height:72px;padding:14px 20px}
@@ -225,7 +226,7 @@ body.work-page #work-dialog .work-dialog-bar .work-trail a{background:none!impor
  .work-page .work-caption :is(.work-title,.work-one-liner,.work-category){font-size:12px;line-height:1.5;overflow-wrap:anywhere}
 }
 /* Align artwork with the shared social-links column, extending toward the right. */
-.work-page .work-main,.js .work-page .work-main{--project-inset:20px;width:calc(100% - 48px);max-width:var(--column);margin-inline:auto}
+.work-page .work-main,.js .work-page .work-main{--project-inset:var(--page-edge,24px);width:calc(100% - 48px);max-width:var(--column);margin-inline:auto}
 @media(min-width:1100px){.work-page .work-main,.js .work-page .work-main{width:calc(100% - max(min(27.7778vw,400px),100% - var(--column) - 128px) - 24px);max-width:none;margin-left:max(min(27.7778vw,400px),100% - var(--column) - 128px);margin-right:24px}}
 
 /* White caption strips overlay the bottom edge of each overview image. */
@@ -322,10 +323,6 @@ body.work-page .work-studio-footer .language-switch:has(a:is(:hover,:focus-visib
 /* Overview footer shares the fixed language toggle's bottom baseline. */
 body.work-page>.site-footer{position:fixed;z-index:20;left:0;right:0;bottom:var(--footer-inset);margin:0;padding:0}
 body.work-page>.site-footer .footer-line{min-height:calc(var(--language-size) + 2px);align-items:center}
-@media(max-width:1099px){
- body.work-page>.site-footer .footer-line{flex-wrap:nowrap;gap:24px}
- body.work-page>.site-footer .footer-line>p{flex-basis:auto;flex-shrink:0}
-}
 
 /* Caption roles start at the image midpoint; the CTA shares the title baseline. */
 .work-page .work-project>summary .work-caption,.js .work-page .work-project>summary .work-caption{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;column-gap:0}
@@ -339,7 +336,7 @@ body.work-page>.site-footer .footer-line{min-height:calc(var(--language-size) + 
 .work-page .work-caption .work-one-liner{display:block;font:400 var(--type-label)/1.5 var(--font);color:var(--sub-gray);text-align:left}
 .work-page .work-caption .work-view{position:static;justify-content:flex-start;margin-top:16px}
 
-.js .work-grid{touch-action:pan-x pinch-zoom}
+.js .work-grid{touch-action:pinch-zoom}
 .work-grid.is-gesturing{scroll-snap-type:none;scroll-behavior:auto}
 /* Gesture easing owns the position until it has fully settled. */
 .js .work-page .work-grid:is(.is-gesturing,.is-rebasing){scroll-snap-type:none;scroll-behavior:auto}
@@ -381,16 +378,23 @@ body.work-page>.site-footer .footer-line{min-height:calc(var(--language-size) + 
 .work-project-ending{--ending-ground:var(--ash-brown);--ending-ink:var(--white);--ending-muted:var(--white)}
 .work-project-ending .site-footer{padding-block:24px}
 .work-project-ending .footer-line{position:relative}
-.work-project-ending .work-footer-language{position:absolute;right:24px;top:50%;bottom:auto;transform:translateY(-50%)}
-@media(max-width:1099px){.work-project-ending .work-footer-language{right:0}}
 
-/* Keep the Studio footer's social links on the shared reading edge on tablets/phones. */
-@media(max-width:1099px){
- body.work-page>.site-footer .footer-line.column{flex-wrap:wrap}
- body.work-page>.site-footer .footer-line>p{flex-basis:100%}
-}
+/* Studio and Shop share one responsive thumbnail width. */
+.work-page .work-main,.js .work-page .work-main{--studio-square:var(--gallery-thumbnail-width)}
 
 /* Client websites share the CTA's single label-and-icon color sweep. */
 .work-client-link{display:inline-flex;align-items:center;gap:.35em}
 .work-client-link .pixel-arrow{display:inline-block;position:relative;width:.65em;height:.65em;flex:none}
 .work-client-link .pixel-arrow::before{content:'';position:absolute;inset:0;background:currentColor;mask:url('../img/icons/pixel-arrow-up-right.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-arrow-up-right.svg') center/contain no-repeat}
+
+/* Equivalent loop copies must exchange without opacity/filter transitions. */
+.work-grid.is-rebasing .work-project>summary>img{transition:none!important}
+
+/* Mobile project banners share the taller 4:3 composition, including case entries. */
+@media(max-width:767px){.work-page .work-detail-hero img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}}
+
+/* Project metadata reads as label/value blocks on phones. */
+@media(max-width:767px){.work-page .work-meta{grid-template-columns:minmax(0,1fr);gap:16px}.work-page .work-meta dt{margin-bottom:4px}}
+
+/* Related project thumbnails occupy the full reading width on phones. */
+@media(max-width:767px){.work-related-grid{grid-template-columns:minmax(0,1fr);gap:32px}}

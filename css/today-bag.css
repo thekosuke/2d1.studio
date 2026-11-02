@@ -140,15 +140,6 @@ html[lang="ja"] .bag-introduction{line-height:1.75}
 .bag-study-lead{position:relative;z-index:2;padding-bottom:var(--space)}
 .bag-lifestyle{position:relative;z-index:0;width:100%;height:100svh;margin:0;overflow:clip;background:var(--ash-brown)}
 .bag-lifestyle .bag-study-photo{width:100%;height:100%;object-fit:cover;object-position:43% center}
-.bag-lifestyle .bag-study-photo[hidden]{display:none}
-.bag-lifestyle .bag-color-alternate{position:absolute;inset:0}
-/* Circle selectors are an owner-requested exception to the square controls. */
-.bag-color-options{position:absolute;z-index:2;left:max(24px,env(safe-area-inset-left));top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:0}
-.bag-color-options[hidden]{display:none}
-.bag-color-options button{display:grid;place-items:center;width:44px;height:32px;padding:0;border:0;background:transparent;color:var(--beige);cursor:pointer}
-.bag-color-options button::before{content:'';width:16px;height:16px;border:1px solid currentColor;border-radius:50%;background:transparent}
-.bag-color-options button[aria-pressed="true"]::before{background:currentColor}
-.bag-color-options button:is(:hover,:focus-visible){color:var(--red);outline:0;box-shadow:none}
 .js .bag-lifestyle{position:sticky;top:0;bottom:0}
 .bag-product-copy{position:relative;z-index:2;padding-block:var(--space);background:var(--beige);color:var(--cranberry-brown)}
 .bag-product-copy>.bag-spec-action{position:absolute;z-index:2;bottom:100%;right:0;margin:0;text-align:right;display:flex;flex-direction:column;align-items:flex-end}

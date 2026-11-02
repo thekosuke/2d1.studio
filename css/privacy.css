@@ -1,0 +1,19 @@
+/* Reuse shared reading roles and the established reading edge. */
+.privacy-main.column{width:min(680px,var(--reading-width));max-width:none;margin-left:var(--reading-left);margin-right:auto;padding-block:144px 96px}
+.privacy-title{margin:0 0 16px}
+.privacy-updated,.privacy-status{color:var(--sub-gray)}
+.privacy-body{margin-top:56px}
+.privacy-body section+section{margin-top:48px}
+.privacy-body h2{margin-bottom:20px}
+.privacy-body h2::before{content:none}
+.privacy-body p+p{margin-top:20px}
+.privacy-body p{overflow-wrap:anywhere}
+.privacy-choice{display:flex;align-items:center;gap:12px;min-height:44px;margin-top:24px;cursor:pointer}
+.privacy-choice input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin:0;border:1px solid currentColor;border-radius:0;background:transparent;outline:none;box-shadow:none;color:var(--ink)}
+.privacy-choice input:checked{background:var(--red);border-color:var(--red)}
+.privacy-choice:focus-within{color:var(--red)}
+.privacy-choice input:disabled{cursor:default;opacity:.5}
+.privacy-status{margin-top:12px}
+.contact-privacy{color:var(--sub-gray);margin:0;overflow-wrap:anywhere;text-transform:none}
+.contact-privacy a{text-decoration:underline;text-underline-offset:.18em}
+@media(max-width:767px){.privacy-main.column{padding-block:112px 64px}.privacy-body{margin-top:40px}}

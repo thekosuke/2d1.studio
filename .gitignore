@@ -13,3 +13,40 @@ _figma-export/
 
 # Local Worker state
 .wrangler/
+
+# Local Worker secrets; never commit.
+.dev.vars
+.dev.vars.*
+
+# Memoru is a separate app repository. Keep app experiments/exports out of website commits.
+/_experiments/menunote*/
+/_experiments/memoru*/
+/_experiments/memore*/
+/_previews/menunote*/
+/_previews/memoru*/
+/_previews/memore*/
+/Memoru/
+/MenuNote/
+*.xcodeproj/
+*.xcworkspace/
+*.app/
+
+# Memoru is a separate project. Keep its local design work out of site commits.
+/_experiments/memore*/
+/_experiments/memoru*/
+/_experiments/menunote*/
+/_previews/memore*/
+/_previews/memoru*/
+/_previews/menunote*/
+/scripts/assets/build-memoru-*.mjs
+# Only the current Shop display icon is a website deliverable.
+/img/shop/menu-note/memore-*
+/img/shop/menu-note/memoru-*
+!/img/shop/menu-note/memoru-app-icon.png
+
+# Client-review PDF exports are local deliverables, not website source.
+/output/pdf/
+
+# Python runtime caches
+__pycache__/
+*.py[cod]

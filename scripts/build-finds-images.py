@@ -48,7 +48,7 @@ def variants(task):
 def build():
     OUTPUT.mkdir(exist_ok=True)
     items = json.loads((ROOT / 'data/objects.json').read_text())
-    tasks = {item['image']: {192, 256, 480, 960, 1440} for item in items}
+    tasks = {item['image']: {160, 192, 256, 480, 960, 1440} for item in items}
     # Existing larger canvas derivatives remain available through the catalog.
     for item in items:
         for photo in item['gallery']:

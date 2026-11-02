@@ -12,7 +12,9 @@ html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-contr
 }
 html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="white"] { --control-ground:var(--white); }
 html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="beige"] { --control-ground:var(--beige); }
-html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="save"] { --control-ground:var(--beige); --control-ink:var(--red); }
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="save"] { --control-ground:var(--white); --control-ink:var(--ink); }
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="save"][aria-pressed="true"] { --control-ink:var(--red); }
+html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="brown"] { --control-ground:var(--cranberry-brown,var(--ink)); --control-ink:var(--beige); }
 /* Red resting surfaces retain their approved brown sweep. */
 html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="red"] { --control-ground:var(--red); --control-ink:var(--beige); --control-fill:var(--cranberry-brown,var(--ink)); }
 html body :is(#scoped-control-fill#control-state,[data-control-fill])[data-control-fill][data-control-fill="chip"] { --control-ink:var(--beige); --control-fill:var(--cranberry-brown,var(--ink)); }

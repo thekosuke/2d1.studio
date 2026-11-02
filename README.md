@@ -2,6 +2,11 @@
 
 Static HTML, CSS and JavaScript for 2D1. Read `AGENTS.md` before editing. Work stays on `site-redesign`; committing, publishing and deploying require an explicit request.
 
+Public domain setup (27 October): only the separate red-eyes coming-soon page
+and newfiction.org redirect are authorized for publication. The complete website
+remains unpublished. See [docs/DOMAIN-SETUP.md](docs/DOMAIN-SETUP.md) for Cloudflare
+configuration, verification status, local preview and the later full-site launch.
+
 ## Preview and checks
 
 ```sh
@@ -18,10 +23,10 @@ python3 scripts/audit-site.py dist   # verify packaged references
 
 | English | Japanese | Purpose |
 | --- | --- | --- |
-| `/` | `/ja/` | Home, Studio introduction, Daily Tote and signup |
+| `/` | `/ja/` | Home, Studio introduction, Daily Tote, Contact and social updates |
 | `/about/` | `/ja/about/` | About 2D1, toy-block house and Studio/Shop scroll journey |
 | `/work/` | `/ja/work/` | Studio carousel and project details |
-| `/shop/` | `/ja/shop/` | Familiar Characters, Daily Tote, Menu Pad and Red Pixel |
+| `/shop/` | `/ja/shop/` | Familiar Characters, Daily Tote, Memoru and Red Pixel |
 | `/familiarcharacters/` | `/ja/familiarcharacters/` | Familiar Characters collection and product details |
 | `/contact/` | `/ja/contact/` | Contact form |
 | `/red-pixel/` | `/ja/red-pixel/` | Red Pixel grab-to-play Pong |
@@ -41,11 +46,15 @@ python3 scripts/audit-site.py dist   # verify packaged references
 - `contact/index.html`, `js/contact.js`, `css/contact-page.css`: contact page. Contact code loads only on that route; legacy drawer support remains available there.
 - `locales/ja.json`, `scripts/build-japanese.py`, `js/language.js`, `js/ja.js`: English source plus generated Japanese HTML and dynamic translation dictionary.
 
+Updates are social-only: Home has no email signup form. The former newsletter is
+archived; it is not a launch dependency. The only active email inputs are on the
+English and Japanese Contact pages. See `docs/CONTACT.md` for inquiry delivery.
+
 Use local fonts, Icon Red `#FF2B00`, Soft Beige `#FAF0E6`, Ash Brown `#191416`, and Cranberry Brown `#320505`. Preserve keyboard access, reduced motion and no-JavaScript fallbacks. Forms are unconnected: do not claim submissions are sent or saved. Purchased-count backend notes are in `docs/PURCHASED-BACKEND.md`.
 
 ## Assets and packaging
 
-`img/` retains supplied photographs, catalog sources, provenance and responsive delivery versions. Do not delete source images just because a smaller version is displayed. The preview packager follows active page scripts/styles and image references, includes catalog variants and required fonts, and omits historical source files and desktop font formats. It includes all 16 current routes, preserves no-index headers, and never publishes. `npm run build:hosted` also prepares the private Worker bundle; see `docs/HANDOFF.md` before using hosted workflows.
+`img/` retains supplied photographs, catalog sources, provenance and responsive delivery versions. Do not delete source images just because a smaller version is displayed. The preview packager follows active page scripts/styles and image references, includes catalog variants and required fonts, and omits historical source files and desktop font formats. It includes all current routes, including nested discovery pages, preserves no-index headers, and never publishes. `npm run build:hosted` also prepares the private Worker bundle; see `docs/HANDOFF.md` before using hosted workflows.
 
 ## Archives and review history
 
@@ -53,9 +62,9 @@ Use local fonts, Icon Red `#FF2B00`, Soft Beige `#FAF0E6`, Ash Brown `#191416`, 
 
 Latest performance findings, verification and remaining risks: `docs/PERFORMANCE-REVIEW-2026-10-20.md`.
 
-About shares Home’s ash-brown ending reveal, using a Contact label, “Let’s work together” headline and
-“Get in touch” link to the localized Contact page instead of the signup form.
-Both signup and Contact sections are at least 70vh tall, with vertically centered
+Home and About share the ash-brown Contact ending and footer social links.
+“Get in touch” leads to the localized Contact page. Email signup was removed on
+22 October; the current Contact sections are at least 70vh tall, with vertically centered
 content and balanced padding; they grow naturally when content needs more room.
 The shared ending script handles both routes, including language-control contrast,
 keyboard uncovering and reduced-motion fallback.
@@ -457,10 +466,10 @@ main content. The superseded signup markup is preserved in
 to follow for activity updates. English and Japanese are updated together.
 
 Shop order — 22 October: after “The joy of making”, the animated bag/specification
-spread now comes before the “2D Tote is our first everyday item” paragraph.
+spread now comes before the “My Bag is our first everyday item” paragraph.
 The divider above the bag study is removed. The closing development note follows.
 
-Shop order follow-up — 22 October: the “2D Tote is our first everyday item”
+Shop order follow-up — 22 October: the “My Bag is our first everyday item”
 paragraph is back above the animated bag/specification spread. The divider remains removed.
 
 Home’s Studio artwork track sits immediately after “At our core, we’re a design studio.” The remaining two description paragraphs follow the full-width track, ahead of Services, in both languages.
@@ -497,15 +506,11 @@ photo button remains a native details disclosure. Armada notes expand inline.
 The development note follows the product paragraph. The concept disclaimer and
 provisional dimensions remain in the specifications.
 
-Tote colorway comparison — 22 October: a small Bicolor strap / Red handles
-selector below the photo’s specifications action switches between the approved
-v15 image and the new v16 concept with a solid dark shoulder strap and Icon Red
-short handles. The original remains the default; selection is temporary and is
-not stored. Both images share the same dimensions and crop. The alternate is
-decoded before switching, and the strap description follows the selected view.
-English and Japanese include translated controls and alt text. No-JS keeps the
-original photo and working native specification disclosure. The alternate is a
-generative edit, so it is not a pixel-identical recolor outside the straps.
+Tote image selection — 27 October: the red-short-handles v16 image is the
+single active lifestyle photograph. The comparison toggle, alternate image and
+switching code have been removed. Specifications now describe the solid dark
+shoulder strap and red short handles in both English and Japanese. The former
+comparison implementation is preserved in `_archive/tote-toggle-2026-10-27/`.
 
 Specifications sheet refinement — 22 October: the sheet fills 70% of the dynamic
 viewport height, capped at the viewport height minus 48px, with internal
@@ -513,7 +518,7 @@ scrolling only when needed. Its fixed header aligns the title and close button o
 line. Entrance is 320ms with a soft ease-out; exit is 240ms. Reduced motion
 remains instant, and the page remains undimmed and scrollable.
 
-The tote specification trigger travels with the copy wipe, flush to its top and right edges, on a soft beige background with 12px padding. Two accessible, unlabeled circle selectors on the photo’s left switch strap concepts; the selected circle is filled.
+The tote specification trigger travels with the copy wipe, flush to its top and right edges, on a soft beige background with 12px padding.
 
 The tote specification sheet opens upward from the viewport bottom with a gentle 640ms ease-out and closes downward over 480ms. Reduced motion remains instant.
 
@@ -521,14 +526,7 @@ Footer eyes and the Contact marker stay Icon Red. Pixel-arrow CTAs use one share
 
 Active page navigation keeps its 6px square visible, with the same 12px label offset as hover. The marker is Icon Red on desktop and Cranberry Brown to match the active link on the red mobile menu. Language and social controls are excluded.
 
-Third tote colorway — 22 October: the photo comparison now includes Red logo,
-with an Icon Red logo and dark shoulder strap and short handles (v17). The
-three circle selectors form a compact vertical stack at the photo’s left edge,
-with 32px row spacing and 44px-wide click targets. Switching is instantaneous
-after decoding, preserves scroll position, and updates the strap description.
-All three choices have translated accessible labels in Japanese. The original
-remains the default. Like v16, v17 is a generative edit with minor texture
-variation outside the requested color changes. Originals and prompts are saved.
+Tote comparison — 25 October: removed the Red logo (v17) option at the owner’s request. The active comparison contains only Bicolor strap (default) and Red handles. Removed markup is preserved in `_archive/tote-red-logo-2026-10-25/`; the source image remains available for future review. Both language routes share the two-option comparison.
 
 ### Shared typography roles — 22 October 2026
 
@@ -643,6 +641,10 @@ FC disclosure and detail tags share a synchronized red fill/text-inversion sweep
 Detail color swatches are keyboard-accessible copy buttons: hover/focus explains
 “Copy hex code”; a successful clipboard write shows “Copied to clipboard”.
 Clipboard failures show a truthful message with the hex value.
+All 107 product palettes are curated in `data/objects.json` using the featured
+product’s main material colors, without duplicate shadow/highlight shades.
+Metallic and transparent finishes are labeled Silver, Gold and Clear. See
+`docs/FINDS-CATALOG-PROCESS.md` before changing a featured variant or palette.
 
 Selected FC category/color filters appear as removable square red chips inside
 the search field. Family is no longer a filter. The chip row hides its scrollbar
@@ -655,11 +657,335 @@ Scoped control sweeps (23 October): `js/control-fill.js` explicitly registers on
 
 ## Social logo introduction — 24 October 2026
 
-A separate five-second, 1080px square animation lives at `_experiments/logo-intro/`:
+A separate six-second, 1080px square animation lives at `_experiments/logo-intro/`:
 [local preview](http://localhost:4173/_experiments/logo-intro/). It constructs the
 original beige logo on red: both halves of 2, D, and 1 reveal together with a 493ms extrusion at a fixed logo size. The landing's upward 603ms wipe reveals the red logo on beige. The original fitted “A DESIGN HOUSE” caption slides down from behind the logo during the eye sequence; the supplied
 fixed eyes then blink; their pupils glance right, return left, and finish with two quick blinks. Includes replay, scrubbing, adjustable step timing and
-frame-by-frame H.264 MP4 export. Caption entrance starts at the upward wipe’s logo-bottom crossing; its exit finishes at the downward wipe’s crossing of that same edge; the logo and caption recenter together as the caption appears and retracts. A brief reverse extrusion then resets the seamless loop. See `_experiments/logo-intro/README.md`.
+frame-by-frame H.264 MP4 export. Caption entrance starts at the upward wipe’s logo-bottom crossing; its exit finishes at the downward wipe’s crossing of that same edge; the logo and caption recenter together as the caption appears and retracts. The returning red wipe erases the logo as the caption finishes tucking away, then holds empty red for the seamless loop. See `_experiments/logo-intro/README.md`.
 The website's existing landing remains unchanged.
 
 The Shop Familiar Characters thumbnail excludes LOVOT from its preview-only collection and centers Spun. Its resting frame, hover zoom, and language-specific fallback screenshots share that composition; the full Familiar Characters catalog retains LOVOT.
+
+The logo introduction also has a native 1080 × 1920 Reels format at
+`/_experiments/logo-intro/?format=reels`, sharing the same six-second/60fps
+animation and assets. Export it with
+`node _experiments/logo-intro/export.mjs --format=reels`; it saves a separate
+`exports/2d1-intro-reels-1080x1920.mp4` without replacing the square master.
+
+The social logo construction adds small per-character anticipatory leans and
+staggered settling gestures, without changing the extrusion curve or the
+five-second loop. Both square and Reels use the same motion configuration;
+previous exports are preserved in `_experiments/logo-intro/versions/pre-character-motion/`.
+
+In the social introduction, the eyes now open gently on first appearance without
+the initial blink. They remain visible over the returning red wipe after the
+logo disappears, then close during the final 274ms beat before the blank loop seam.
+
+The social animation now lasts six seconds: its final eye-only beat glances right, returns left, then gently closes without blinking. Earlier phase timings are preserved in both formats.
+
+### Navigation usability review — 25 October 2026
+
+The shared mobile typography and focus rules now use the same breakpoint as the
+menu controller: below 768px, or coarse-pointer screens below 1100px. Fine-pointer
+tablets from 768–1099px use one shared inline grid, reserving its center for the
+logo. Anchor placement uses `nth-of-type` so the injected mobile logo cannot
+shift destinations into the wrong columns or rows. Desktop keeps the left list.
+Large touch screens retain that list with 44px targets. Mobile language cells
+also have 44px targets and explicit selected/focus contrast on the red panel.
+
+Reviewed Home, About, Studio, Shop and Contact in English and Japanese at phone,
+tablet and desktop widths. Additional probes covered 320px, 767/768px,
+1099/1100px, landscape and 1920px widths. Checked current-page semantics, link
+bounds, opening/closing, keyboard focus wrap, Escape/return focus, resize cleanup,
+Home's delayed reveal and Japanese route navigation. Small menus scroll to their
+footer while the close control stays fixed. These are browser viewport checks;
+physical Safari/touch hardware and operating-system safe areas remain unverified.
+Familiar Characters retains its existing direct logo link home and immersive
+collection controls rather than receiving a new navigation layout.
+
+### Shop thumbnails — 27 October 2026
+
+Memoru is still in development. Its active Shop thumbnail is the actual app icon,
+`img/shop/menu-note/memoru-app-icon.png`, centered on flat Cranberry Brown with a
+soft CSS drop shadow. This icon comes directly from the owner's Memoru app
+asset catalog. Earlier UI mockups and composition sources remain inactive in
+`_experiments/memore-thumbnail/` and `img/shop/menu-note/`.
+
+The My Bag Shop thumbnail uses Home's sole selected
+`2d-tote-red-handles-v16.webp` image. The photo fills its square frame’s height with `max-height:100%` and
+`object-fit:cover`, cropping the sides while keeping the bag in view. Both products retain Coming soon status.
+
+
+### Familiar Characters search discovery — 26 October 2026
+
+Familiar Characters keeps its canvas experience. As of 1 November, product
+information and photos live in one modal, extending to the bottom viewport edge.
+The sheet is 10% smaller than its former dimensions, with an ash-brown border
+and a transparent backdrop. The surrounding collection and controls fade to 30%
+opacity while the product modal is open and restore on close. Credits have bottom spacing; related images are
+compact, and detail tags use square-dashed underlines. `js/objects-credit.js`
+samples the photo beneath the credit line and chooses cranberry brown or soft
+beige for both the label and source links. It updates on scroll, photo load and
+resize, using cached small image samples.
+Three similar products appear below the photo gallery, ranked by shared tags,
+brand and category; selecting one updates the same modal. Product previous/next
+controls and the duplicate metadata table are removed. Detail tags are text-only
+filters. Photo navigation and the mobile product-page action remain available.
+
+Separate Object details pages and their UI links are retired. Old EN/JA item
+URLs redirect into the matching collection modal using `?item=…`. These redirects
+are excluded from the sitemap, which contains 24 canonical current URLs.
+`scripts/fc_discovery.py` maintains the redirects, collection schema and sitemap.
+The old generator and stylesheet are preserved in
+`_archive/object-details-2026-11-01/`.
+
+Run `python3 tests/fc-seo.py` and `python3 scripts/audit-site.py` after generation.
+The private preview retains noindex; public launch and Search Console submission
+require separate authorization. See [docs/SEO-DISCOVERY.md](docs/SEO-DISCOVERY.md).
+The removed directory is preserved in `_archive/fc-browse-2026-10-26/`.
+
+
+### Notion contact integration — 27 October 2026
+
+The new **2D1 Website Inquiries** database lives under the owner's Client
+Discovery page, with an inline newest-first view and a Needs reply queue.
+The contact backend now writes to that data source; Notion's native automation
+will send email to kosuke@2d1.studio using the owner's existing paid Notion and
+Google Workspace accounts. No separate email service is used.
+
+**Activation is pending:** the Notion integration token, Gmail authorization,
+Page added → Send mail automation and runtime deployment still need setup.
+The frontend checks `/api/contact/config`; static preview remains honestly
+unconnected. It preserves retry identity and reports success only after storage.
+D1 contains a retry ledger, not contact message content. The existing Purchased
+endpoint is preserved. See [docs/CONTACT.md](docs/CONTACT.md) for exact setup,
+real-delivery verification and test results. Run `node tests/contact-backend.mjs`
+and `node tests/purchased-backend.mjs` after backend changes.
+
+
+### Launch copy and review — 27 October 2026
+
+Reviewed Japanese across the seven main routes, collection/info/about sheets,
+project Overviews, object descriptions, form states and metadata. Revised 91
+existing dictionary entries, fixed sentence fragments around inline links,
+localized About headings, and retained the owner-confirmed name 二日一宏祐.
+The three English project Overviews already match the latest saved revisions
+(commit `8b17aad`, 23 October); their Japanese versions were refined.
+
+Shop's external CTA arrow now uses the same continuous gradient as its label;
+a more specific pseudo-element background had been replacing it. Verified
+start/middle/end hover and keyboard focus in both languages, plus Home and
+Studio arrows. Shop and Red Pixel now have complete sharing metadata.
+
+Browser proof and scripts are in ignored `tmp/launch-2026-10-27/`. The main pass
+covers 42 rendered EN/JA pages and 16 interaction checks. A further 60 checks
+cover narrow/wide phones, landscape, breakpoints, wide desktop, no-JS forms and
+shared CTA arrows. Local reference and 228-URL SEO audits pass. These are Chrome
+viewport checks, not physical iPhone/Safari certification. See
+[the launch checklist](docs/LAUNCH-2026-10-27.md) for remaining public-release work.
+
+Memoru icon presentation — 27 October: Shop uses the original
+`img/shop/menu-note/memoru-app-icon.png` without an additional corner mask.
+The enlarged peel and Dock-mask experiment was reverted after visual review:
+the original paper edge, peel size and silhouette are restored in both languages.
+The inactive experiment assets remain available for reference.
+
+### Mobile menu composition — 27 October 2026
+
+The shared full-screen menu now uses Ash Brown (#191416), with beige destinations
+and Home's red text sweep, 6px square marker and 12px label shift. Active page
+labels remain red. Navigation is bottom-aligned, followed immediately by social
+links. Copyright and the EN/JA toggle share a top utility row, with language on
+the right. These utility elements and the social row use existing type roles.
+
+On opening, a decorative red logo overlay copies the live docked logo's rendered
+bounds, so its center, size and top position do not change or slide with the
+panel. The original logo is restored on close; the overlay is hidden outside
+mobile mode and excluded from accessibility navigation. Short viewports retain
+scrolling, the fixed close button, keyboard focus wrapping and Escape/return
+focus. Resizing to tablet/desktop closes the menu and restores the language
+control to its page position. Verified English/Japanese Home, About and Shop at
+390×844, 320×568 and 767×390, plus restoration at 768px and 1440px.
+
+My Bag naming — 27 October: the product name is My Bag throughout active English/Japanese copy, metadata, image descriptions, dynamic translations and source generators. Historical asset filenames remain stable. The Shop photo fills the existing square frame’s height, preserving its proportions and cropping the sides.
+
+### Red Pixel match nicknames — 27 October 2026
+
+Every completed first-to-three match adds a randomly selected two-word nickname
+beneath the result, using the requested English format `Your are [nickname].`
+The Japanese route localizes the surrounding sentence and keeps the two-word
+nickname in English. `js/pong-nicknames.js` selects from style pools using actual
+paddle travel per second, player returns, angled returns and the longest rally.
+Travel is normalized by court height; pauses do not count as play time. Choices
+avoid immediately repeating the previous exact nickname. Nicknames and match
+metrics exist only for the current page session, without storage or network calls.
+Replay resets metrics and hides the old nickname; pause/resume shows no nickname.
+The result, nickname and score are announced together through the existing status
+region. `node tests/pong-nicknames.mjs` verifies style selection, two-word names,
+random pool coverage and replay variation; `node tests/pong.mjs` covers physics.
+
+The coming-soon HTML also works when opened directly as a local file. Its original
+pixel eyes are 25% smaller, follow the cursor, blink on hover, and blink occasionally
+while resting. Reduced motion keeps them still; the no-JavaScript fallback retains
+the CSS glances and blinks.
+
+Splash eye hover cycles three brand palettes: red on beige, beige on red, and red
+on ash brown. Each entry advances once; taps and keyboard activation work too.
+
+
+The public splash includes Open Graph/Twitter metadata using the approved red
+2D1 logo centered on beige (1200 × 630 PNG), served only at `/og-image.png`.
+
+
+### Launch readiness audit — 27 October 2026
+
+Added `/privacy/` and `/ja/privacy/`, a short Contact privacy note, quiet footer/
+collection-info links and one optional analytics checkbox. `js/analytics.js` is
+the sole active measurement entry: no Google tag/request before opt-in, browser
+Do Not Track/GPC respected, ads personalization disabled, page URLs/referrers
+sanitized, revocation clears accessible GA cookies. No popup banner. The form,
+Notion and Google Workspace data flow is described without a guessed retention
+period. `node tests/analytics-privacy.mjs` checks this contract without network.
+
+Fixed narrow-phone product-footer overlap and mobile photo-credit/count overlap.
+The collection filter panel follows visual-viewport changes above iOS keyboards;
+its semantic heading stays screen-reader-accessible without an initial visual
+flash. The fallback mobile LinkedIn label now says 2D1. Favorites passed mouse,
+keyboard and touch testing and needed no behavior change.
+
+Generated packages bundle each page's styles into one content-hashed stylesheet
+and minify copied JS with esbuild. Source stays split and the Python source
+preview needs no build. Packaging now requires Node plus the existing esbuild
+dev dependency. CSS URLs/imports are resolved without changing the cascade;
+`_headers` caches immutable bundles. The private package remains noindex and now
+includes its actual sitemap. There are 230 canonical URLs / 234 HTML files.
+
+Canvas delivery adds lossless 160px variants and closer sizing hints, preserving
+native files and zoom sharpness. All 107 new derivatives match the exact expected
+resized RGBA pixels. Across the same source set, 160px bytes are 25.1% below the
+192px set; this is not a blanket whole-page transfer claim. The registered rights
+status carries through to all 1,583 source/delivery files.
+
+Full evidence/status: [launch audit](docs/LAUNCH-2026-10-27.md),
+[image-rights review](docs/image-permissions-2026-10-27/IMAGE-PERMISSIONS-REVIEW.md).
+Ignored proof is in `tmp/launch-readiness-2026-10-27/`. Physical iPhone 15 Pro Safari
+rendering/menu/project states and iPhone Duo simulator evidence are separated
+from keyboard/gesture states that Safari automation could not certify. No public
+release, domain change, real form submission, email, commit or push was made.
+
+## Search preparation — 27 October 2026
+
+The eyes-only public splash is eligible for indexing and has its own one-URL
+sitemap. The full site remains unpublished. Local launch preparation adds
+Japan/North America service-area metadata, shared bilingual metadata and business schema,
+and standalone project pages at `/work/aviator/`, `/work/supa/` and
+`/work/deepdrip/` (also under `/ja/`). Existing project overlays and original Home/About copy remain unchanged.
+The standalone pages reuse the project content and provide native
+video controls, language switching and related-project links.
+
+Regenerate through `python3 scripts/build-japanese.py`; edit English source and
+`locales/ja.json`, not generated project copies. `scripts/site_seo.py` owns shared
+metadata and project generation. The future full sitemap has 236 canonical URLs;
+the splash Worker never imports it. Preview noindex safeguards remain unchanged.
+See [the search launch plan](docs/SEO-LAUNCH-PLAN.md) for search topics, AI discovery,
+verification and outstanding Search Console/Bing setup. No ranking is promised.
+
+
+### Familiar Characters mobile loading — 27 October 2026
+
+The canvas requests visible photos center first and keeps the fallback catalog
+dormant during successful startup, with full no-JS/error recovery. All original
+images, responsive/zoom candidates, placement and entrance motion are preserved.
+Japanese fonts now use losslessly verified Unicode banks with complete coverage;
+SC Walla declares its original character coverage to avoid a serial fallback
+download. The collection receives a scoped, identical Japanese dictionary.
+No new visible elements. See [measurements and quality proof](docs/FC-MOBILE-PERFORMANCE-2026-10-27.md).
+
+
+## Public splash analytics — 27 October 2026
+
+Google Analytics uses the renamed 2D1 account and new `2d1.studio` GA4 property
+(`G-EJES69N4D2`). Only the splash and its small shared analytics script are
+published. Japan/US have no initial consent prompt; the EEA/UK require an
+explicit choice; unreviewed or unknown regions have GA off without a prompt.
+The Privacy control allows preferences to be changed. DNT/GPC and stored
+refusals are respected. Private full-site routes retain explicit opt-in.
+Search Console domain ownership and the one-page sitemap are verified.
+See [docs/ANALYTICS-SEARCH-CONSOLE.md](docs/ANALYTICS-SEARCH-CONSOLE.md) for
+settings, regional limitations, sources and checks.
+
+
+### Site-wide mobile delivery — 27 October 2026
+
+Remaining Japanese pages now load exact per-page dictionaries. Studio defers
+unopened heroes/video posters; standalone cases keep native poster/controls.
+Shop's live canvas keeps its appearance and interaction while sizing photos
+for its actual display, Retina density and maximum zoom, including resizing.
+Object-entry gallery/related srcsets follow the real responsive slots. Two PNGs
+use lossless WebP delivery with exact decoded pixels; originals remain. No new
+visible elements. [Measurements and proof](docs/SITE-MOBILE-PERFORMANCE-2026-10-27.md).
+
+
+Favicon (27 October): `img/brand/2d1-icon.svg` is the owner-supplied
+`Downloads/favicon.svg`, preserved exactly. Matching PNG, ICO and Apple touch
+icons are rasterized from it. Active EN/JA routes and generators use cache
+version 3; the splash Worker serves `/favicon.svg`, `/favicon.ico` and
+`/apple-touch-icon.png`. Earlier icons are in `_archive/favicon-2026-10-27/`.
+
+Red Pixel grows through four steps (1 → 6 → 12 → 18 → 24px) when the idle
+page or BIGGER control is clicked. At the maximum, the control becomes SMALLER
+and steps back down to 1px. Background clicks only enlarge it. Pong interactions,
+the pixel/puck handoffs, reduced motion and native no-JavaScript size toggle remain.
+
+
+## FC launch preparation — November 1, 2026
+Favorites is removed from the collection; legacy local saved IDs are cleared on visiting FC. Search, categories and photos remain. Shared control styles and sweep measurement now live in objects-controls.css/js. Legal information is at /legal/ and /ja/legal/, with image concerns sent to kosuke@2d1.studio. This adds no license claim for third-party photographs. Owner elects to retain the photos despite unresolved license evidence. Full-site client approval and production configuration remain separate release tasks.
+
+Verification: EN/JA Legal and FC at widths 320, 390, 768 and 1440; info-sheet controls and object next/close passed, no runtime errors. Narrow Japanese footer fixed by wrapping its text area while keeping socials right. 242 active pages have no broken local references; 238 sitemap URLs pass SEO checks. Local preview is http://localhost:4173/familiarcharacters/ . Production FC currently returns 404. Remaining release work: prepare production package without private noindex restrictions; configure hosted contact runtime and verify Notion/email delivery there; verify public domain routing, security headers, mobile image delivery and indexing after deployment. Client approvals still govern portfolio publication; an FC-only release must exclude those pages. Existing images/data were not changed.
+
+Studio’s infinite carousel now rebases into equivalent middle copies during
+wheel/touch motion, keeping the input target and easing position together instead
+of waiting for release at a finite end stop. Horizontal and vertical gestures
+share this loop; release still centers the nearest project. The three cover
+images load eagerly and copy swaps suppress image transitions. Verified sustained
+forward/reverse wheel input (14 wraps) and horizontal/vertical touch browsing
+(9 wraps), with no end-stop hits, centered settling, and project open/close on
+English desktop and Japanese mobile. Proof: /private/tmp/studio-continuous-en.png
+and /private/tmp/studio-continuous-ja.png. Nothing published.
+
+Red Pixel text shares the Small Label role throughout, with .08em tracking.
+Match-end nicknames use “PLAY STYLE: …” and a square-dashed underline on the
+name. Names describe measured movement, successful returns, edge-hit preference
+and sustained rally length, without assuming improvement or defensive skill.
+Random variation stays within the observed style; no match data is persisted.
+
+Pong score numbers use 32px bold type, with 20px player-label gaps, 24px between the scores, and
+24px separation below “First to 3”. Other Red Pixel text retains the shared
+Small Label styling and .08em tracking.
+
+MUJI image refresh (1 November): Porcelain Toothbrush Stand now uses official Blue (4549738912620), with three native 2000px MUJI photos and an RGB-preserving transparent canvas cutout. The product ID stays unchanged; old yellow files and metadata remain available. See docs/OBJECTS-SOURCES.md.
+
+DAYPA’s gallery includes the owner-supplied canvas-color and fleece-color group
+photographs after its original blue backpack photo. Original 3000px PNG files are
+retained unchanged with lossless responsive delivery and EN/JA descriptive alt text.
+The main blue cutout remains unchanged. All three photos and closing were checked
+in English desktop and Japanese phone modals; site references and language checks
+passed. Proof: /private/tmp/daypa-en-1.png and /private/tmp/daypa-ja-2.png.
+
+
+Footer layout — November 2, 2026: every standard page and project footer shares
+one flex composition in `css/walla.css`. Copyright, Privacy/Legal links, social
+links and any in-footer language switch sit on one centered row whenever they
+fit; groups wrap naturally on narrow screens. The desktop social edge retains
+the reading-column alignment. Retired tablet forced-stacking and page-specific
+social offsets are removed. Standalone project entries show only the footer
+language switch, without the duplicate fixed control. Immersive Shop, Red Pixel
+and Familiar Characters controls keep their existing page-specific placements.
+
+
+### Gallery widths — 2 November 2026
+Shop and Studio share `--gallery-thumbnail-width`: 80vw below 1100px, then
+Studio’s existing centered desktop width aligned to the reading grid. Shop cards
+fill their column; captions remain below on phone/tablet and to the right on
+desktop. Verified matching 312px thumbnails at 390px, 614.4px at 768px, and
+640px at 1440px, including Japanese Shop and native scrolling.

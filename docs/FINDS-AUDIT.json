@@ -2488,7 +2488,7 @@
         1267,
         1368
       ],
-      "galleryCount": 1,
+      "galleryCount": 3,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
@@ -2500,6 +2500,24 @@
           "sha256": "66696f2517d45392ad02327c16695df52505ab7aec7e530fb61ec550c91b2f96",
           "sourceUrl": "https://daypa.jp/products/dp26215001?variant=49041452466425",
           "sourceImageUrl": "https://daypa.jp/cdn/shop/files/Canvas_Large_Blue_01_c093278d-a4c9-43aa-9e7c-19f4945e5000.jpg?v=1789107491&width=1440"
+        },
+        {
+          "image": "img/objects/gallery/daypa/canvas-color-group.png",
+          "width": 3000,
+          "height": 3000,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "9c62e0eec7b286ab172444890b925cb252b4bf371670ff40158ea915d03405df",
+          "sourceUrl": "https://daypa.jp/",
+          "sourceImageUrl": null
+        },
+        {
+          "image": "img/objects/gallery/daypa/fleece-color-group.png",
+          "width": 3000,
+          "height": 3000,
+          "nativeLongEdgeAtLeast1200": true,
+          "sha256": "42af22eabfe6fe5e4b3f7f97d707f1e9eec87f56fb9d72f565c949afefec6b7a",
+          "sourceUrl": "https://daypa.jp/",
+          "sourceImageUrl": null
         }
       ],
       "issues": [
@@ -2532,9 +2550,11 @@
         "reviewed": "2026-10-10",
         "variantConfidence": "high exact variant; original/iconic unknown",
         "desiredVariant": "Existing blue canvas DAYPA-kun backpack",
-        "notes": [],
+        "notes": [
+          "2026-11-01: Owner explicitly supplied and requested the canvas-color group and fleece-color group photographs for the gallery. Native 3000px square originals retained; primary blue canvas cutout unchanged."
+        ],
         "sourceLimitations": [
-          "Only one verified same-blue backpack photo. Do not fill using SAX color, smaller pouch, or fuzzy model."
+          "Original blue canvas product view has a verified official image URL. The two owner-supplied group photos have no supplied external original-image URLs; the brand homepage is the credit link only."
         ]
       }
     },
@@ -6484,61 +6504,6 @@
       }
     },
     {
-      "id": "super7-beams-charlie-brown",
-      "name": "Charlie Brown — BEAMS Exclusive",
-      "brand": "Super7 × BEAMS",
-      "selectedVariant": "Charlie Brown — BEAMS Exclusive",
-      "transparentPrimary": true,
-      "primaryPixels": [
-        1369,
-        1369
-      ],
-      "primaryNativeSubjectPixels": [
-        593,
-        1232
-      ],
-      "subjectBounds": [
-        388,
-        68,
-        981,
-        1300
-      ],
-      "galleryCount": 2,
-      "possibleSimilarPhotoPairs": [],
-      "distinctnessReview": null,
-      "photos": [
-        {
-          "image": "img/objects/gallery/charlie-beams-1.jpg",
-          "width": 1200,
-          "height": 1440,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "769627721fdf63f3af2daf9dc0fb191c7032f526eeba92e5384ffd171bc9877d",
-          "sourceUrl": "https://www.beams.co.jp/item/bprbeams/hobby/33030240834/?color=90",
-          "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33030240834/O/33030240834_D_11.jpg"
-        },
-        {
-          "image": "img/objects/gallery/charlie-beams-2.jpg",
-          "width": 1200,
-          "height": 1440,
-          "nativeLongEdgeAtLeast1200": true,
-          "sha256": "b025c6bd4f18db4d0e87cfbb20e90214aca78d93808d301cfc6351637cb55fda",
-          "sourceUrl": "https://www.beams.co.jp/item/bprbeams/hobby/33030240834/?color=90",
-          "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33030240834/O/33030240834_D_15.jpg"
-        }
-      ],
-      "issues": [
-        "Original/iconic colorway evidence remains unresolved"
-      ],
-      "colorwayEvidence": {},
-      "editorialReview": {
-        "reviewed": "2026-10-11",
-        "notes": [
-          "Transparent native cutout visually checked on beige and dark brown; no enlargement."
-        ],
-        "sourceLimitations": []
-      }
-    },
-    {
       "id": "running-press-ufo-cow",
       "name": "UFO Cow Abduction",
       "brand": "Running Press",
@@ -7374,70 +7339,67 @@
       "id": "muji-porcelain-toothbrush-stand",
       "name": "Porcelain Toothbrush Stand",
       "brand": "MUJI",
-      "selectedVariant": "Yellow / 4549738986218",
+      "selectedVariant": "Blue / 4549738912620",
       "transparentPrimary": true,
       "primaryPixels": [
-        813,
-        813
+        1348,
+        1348
       ],
       "primaryNativeSubjectPixels": [
-        732,
-        625
+        1213,
+        1008
       ],
       "subjectBounds": [
-        40,
-        94,
-        772,
-        719
+        67,
+        170,
+        1280,
+        1178
       ],
       "galleryCount": 3,
       "possibleSimilarPhotoPairs": [],
       "distinctnessReview": null,
       "photos": [
         {
-          "image": "img/objects/gallery/muji-porcelain-toothbrush-stand-1.webp",
-          "width": 1260,
-          "height": 1260,
+          "image": "img/objects/gallery/muji-toothbrush-blue-1.webp",
+          "width": 2000,
+          "height": 2000,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "e96b530c83db9365c2e01eb6ee94568921d1186526674146a4f54918dffc2ef3",
-          "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
-          "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_1260.jpg"
+          "sha256": "5baed7b1f24dbd3c3bf6fff56a9b7c98a459885a53f86287a0762594d445bf04",
+          "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_org.jpg?v=1706223546"
         },
         {
-          "image": "img/objects/gallery/muji-porcelain-toothbrush-stand-2.webp",
-          "width": 1260,
-          "height": 1260,
+          "image": "img/objects/gallery/muji-toothbrush-blue-2.webp",
+          "width": 2000,
+          "height": 2000,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "ea319149a876b021d1e389a4095d3f3ca127f50a1ca46cdda5f000b1e94650f7",
-          "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
-          "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_01_1260.jpg"
+          "sha256": "46b51576861746117e35baa79a713d54c62c3da22b979fac229edfd08dad9163",
+          "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_01_org.jpg?v=1706223546"
         },
         {
-          "image": "img/objects/gallery/muji-porcelain-toothbrush-stand-3.webp",
-          "width": 1260,
-          "height": 1260,
+          "image": "img/objects/gallery/muji-toothbrush-blue-3.webp",
+          "width": 2000,
+          "height": 2000,
           "nativeLongEdgeAtLeast1200": true,
-          "sha256": "f0a3604c20a7d6e4c17854aae4c67c79439a78510a6f427ba10ff174da1a1fa1",
-          "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
-          "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_02_1260.jpg"
+          "sha256": "bf5c450172be644fe3d788cad4a8906b4b17751a235f8c5f82f348fb70589eee",
+          "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+          "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_02_org.jpg?v=1706223546"
         }
       ],
-      "issues": [
-        "Primary native product detail below 1200px long edge",
-        "Original/iconic colorway evidence remains unresolved"
-      ],
+      "issues": [],
       "colorwayEvidence": {
-        "basis": "Owner-linked variant retained; no iconic color claim.",
-        "source": "https://www.muji.com/my/products/cmdty/detail/4549738986218"
+        "status": "owner_exception",
+        "basis": "Owner requested a better color and main photo on 1 November 2026. Selected official Blue for separation from the beige canvas; no iconic/original-launch claim.",
+        "source": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966"
       },
       "editorialReview": {
-        "reviewed": "2026-10-11",
+        "reviewed": "2026-11-01",
         "notes": [
-          "Native originals retained; transparent primary checked on beige and dark brown. Shared reversible warm canvas grade."
+          "Official blue 2000px original replaces yellow 1260px photo. Original source files retained.",
+          "Native cutout RGB matches original exactly. Three distinct official views: product, toothbrush lineup, bathroom setting."
         ],
-        "sourceLimitations": [
-          "Native MUJI originals are 1260px; the product occupies only part of the studio frame. Retained without enlargement."
-        ]
+        "sourceLimitations": []
       }
     },
     {

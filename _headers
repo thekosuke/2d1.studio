@@ -1,2 +1,11 @@
 /img/objects/responsive/*
   Cache-Control: public, max-age=31536000, immutable, no-transform
+
+/css/bundles/*
+  Cache-Control: public, max-age=31536000, immutable, no-transform
+
+/fonts/zen-kaku-subsets/*
+  Cache-Control: public, max-age=31536000, immutable, no-transform
+
+/img/page-delivery/*
+  Cache-Control: public, max-age=31536000, immutable, no-transform

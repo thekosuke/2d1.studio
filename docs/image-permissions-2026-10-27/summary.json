@@ -1,0 +1,28 @@
+{
+  "checkedDate": "2026-10-27",
+  "catalogItems": 107,
+  "photoReferences": 492,
+  "uniqueCatalogImageFiles": 488,
+  "sourceHosts": 103,
+  "deliveryFilesIncludingMasters": 1583,
+  "itemStatus": {
+    "unverified": 96,
+    "permission required": 11
+  },
+  "masterFileStatus": {
+    "permission required": 45,
+    "unverified": 443
+  },
+  "referenceStatus": {
+    "unverified": 446,
+    "permission required": 46
+  },
+  "explicitPublicationGrantsFound": 0,
+  "existingUsageCaveatMissing": [
+    "floyd-cabin-aluminum",
+    "jellycat-amuseables-basketball",
+    "tobeus-pick-up"
+  ],
+  "nonCatalogReferencedFiles": 143,
+  "missingCatalogFiles": []
+}

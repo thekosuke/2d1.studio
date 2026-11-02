@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import '../js/pong-nicknames.js';
+const base={seconds:20,travel:1,returns:3,angled:0,longest:4};
+const choose=stats=>PixelPongNickname({...base,...stats},'',()=>0);
+assert.equal(choose({returns:0,travel:0}),'Quiet Observer');
+assert.equal(choose({returns:0,travel:15}),'Active Chaser');
+assert.equal(choose({returns:1,angled:1}),'Occasional Returner');
+assert.equal(choose({returns:4,angled:3}),'Angled Striker');
+assert.equal(choose({returns:4,longest:8}),'Long-rally Returner');
+assert.equal(choose({returns:0,longest:8}),'Moving Player');
+assert.equal(choose({}),'Short-rally Builder');
+assert.notEqual(PixelPongNickname(base,'Short-rally Builder',()=>0),'Short-rally Builder');
+assert.equal(choose({returns:2,angled:2,longest:4}),'Short-rally Builder','two edge returns are insufficient to infer a preferred technique');
+assert.equal(choose({returns:4,angled:2,longest:4}),'Short-rally Builder','only half of returns at the edge does not establish an angled style');
+assert.equal(choose({returns:2,longest:2}),'Occasional Returner','separate short returns do not imply a sustained rally');
+assert.equal(choose({returns:0,travel:1}),'Moving Player','movement without returns earns no rally or skill claim');
+console.log('Evidence-based nickname thresholds and replay variation passed.');

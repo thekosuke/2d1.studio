@@ -7,11 +7,12 @@ import re
 import json
 from urllib.parse import unquote
 import shutil
+import subprocess
 
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / 'dist'
 MARKER = OUTPUT / '.2d1-preview-build'
-PAGES = tuple(str(p) for folder in ('about', 'contact', 'familiarcharacters', 'finds', 'objects', 'work', 'shop', 'red-pixel', 'ja')
+PAGES = tuple(str(p) for folder in ('about', 'contact', 'familiarcharacters', 'finds', 'objects', 'work', 'shop', 'red-pixel', 'privacy', 'legal', 'ja')
               for p in sorted((ROOT / folder).rglob('*.html')) if not any(part.startswith('_') for part in p.relative_to(ROOT).parts))
 PAGES = ('index.html',) + tuple(str(Path(p).relative_to(ROOT)) for p in PAGES)
 ASSETS = ('css', 'js', 'img', 'fonts')
@@ -50,14 +51,14 @@ def build():
     if delivery_path.exists():
         for variants in json.loads(delivery_path.read_text()).values():
             object_assets.update(variant['image'] for variant in variants)
-    # Follow only styles/scripts requested by live pages, then their local imports.
+    # Follow live styles/scripts, including quoted relative CSS @imports and JS imports.
     page_text = '\n'.join((ROOT / name).read_text() for name in PAGES)
     runtime_assets = set(re.findall(r'(?:css|js)/[\w.-]+\.(?:css|js)', page_text))
     pending = list(runtime_assets)
     while pending:
         name = pending.pop()
         source = ROOT / name
-        for relative in re.findall(r"['\"](\./[^'\"]+\.js)(?:\?[^'\"]*)?['\"]", source.read_text()):
+        for relative in re.findall(r"['\"](\./[^'\"]+\.(?:css|js))(?:\?[^'\"]*)?['\"]", source.read_text()):
             imported = (source.parent / relative).relative_to(ROOT).as_posix()
             if imported not in runtime_assets:
                 runtime_assets.add(imported)
@@ -91,8 +92,10 @@ def build():
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
     assert all((OUTPUT / asset).is_file() for asset in image_assets | font_assets | runtime_assets), 'Missing active catalog/font asset'
+    shutil.copy2(ROOT / 'sitemap.xml', OUTPUT / 'sitemap.xml')
     (OUTPUT / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
     (OUTPUT / '_headers').write_text('/*\n  X-Robots-Tag: noindex, nofollow\n  X-Content-Type-Options: nosniff\n' + (ROOT / '_headers').read_text())
+    subprocess.run(['node', str(ROOT / 'scripts/optimize-preview.mjs')], check=True)
     files = [p for p in OUTPUT.rglob('*') if p.is_file()]
     print(f'Preview package: {OUTPUT}')
     print(f'{len(files)} files, {sum(p.stat().st_size for p in files) / 1024 / 1024:.1f} MiB')

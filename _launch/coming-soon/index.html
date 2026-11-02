@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" data-analytics-policy="off">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF0E6">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>2D1</title>
+  <link rel="icon" href="/favicon.ico?v=3" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" sizes="180x180">
+  <meta name="description" content="2D1 is an independent design studio working across Japan and North America on branding, websites, and digital products. Full website coming soon.">
+  <meta property="og:description" content="2D1 is an independent design studio working across Japan and North America on branding, websites, and digital products. Full website coming soon.">
+  <meta name="twitter:description" content="2D1 is an independent design studio working across Japan and North America on branding, websites, and digital products. Full website coming soon.">
+  <link rel="canonical" href="https://2d1.studio/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="2D1">
+  <meta property="og:title" content="2D1">
+  <meta property="og:url" content="https://2d1.studio/">
+  <meta property="og:image" content="https://2d1.studio/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Red 2D1 logo centered on a soft beige background">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="2D1">
+  <meta name="twitter:image" content="https://2d1.studio/og-image.png">
+  <meta name="twitter:image:alt" content="Red 2D1 logo centered on a soft beige background">
+  <style>
+    /* Same brand tokens as the full site; this file stays self-contained. */
+    :root { color-scheme: light; --ground: #FAF0E6; --eye-color: #FF2B00; background: var(--ground); }
+    :root[data-palette="1"] { --ground: #FF2B00; --eye-color: #FAF0E6; }
+    :root[data-palette="2"] { color-scheme: dark; --ground: #191416; --eye-color: #FF2B00; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--ground); }
+    main { min-height: 100vh; min-height: 100svh; display: grid; place-items: center; }
+    .eyes { display: block; width: clamp(87px, 9vw, 130.5px); line-height: 0; padding: 0; border: 0; border-radius: 0; background: none; cursor: pointer; outline: none; }
+    .eye-pair > path { fill: var(--eye-color); }
+    .pupils path { fill: #FAF0E6; }
+    :root[data-palette="1"] .pupils path { fill: #FF2B00; }
+    .eyes:focus-visible .eye-pair > path { fill: var(--ground); }
+    .eyes:focus-visible { background: var(--eye-color); }
+    .eyes svg { display: block; width: 100%; height: auto; overflow: visible; }
+    .eye-pair { transform-box: fill-box; transform-origin: center; animation: blink 12s linear infinite; }
+    .pupils { animation: glance 12s cubic-bezier(.2, .8, .2, 1) infinite; }
+    .eyes.is-tracking .pupils { animation: none; transition: transform 140ms cubic-bezier(.2, .8, .2, 1); }
+    .eyes.is-hover-blinking .eye-pair { animation: none; }
+    /* Quiet holds, one glance each way, and an occasional double blink. */
+    @keyframes glance {
+      0%, 18%, 72%, 100% { transform: translateX(0); }
+      21%, 48% { transform: translateX(12px); }
+      51%, 69% { transform: translateX(6px); }
+    }
+    @keyframes blink {
+      0%, 30%, 32.5%, 77%, 79.5%, 81%, 83.5%, 100% { transform: scaleY(1); }
+      31%, 31.4%, 78%, 78.4%, 82%, 82.4% { transform: scaleY(.045); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .eye-pair, .pupils { animation: none !important; transition: none !important; }
+    }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <main aria-label="2D1 — Coming soon">
+    <button class="eyes" type="button" aria-label="Change eye colors"><!-- Original paths from img/brand/eyes.svg, inline so file previews work. -->
+      <svg aria-hidden="true" width="116" height="48" viewBox="0 0 116 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g class="eye-pair">
+          <path d="M35.9999 1.04908e-06V48H11.9999L11.9999 0L35.9999 1.04908e-06Z" fill="#FF2B00"/>
+<path d="M0 12H48V36H0V12Z" fill="#FF2B00"/>
+<path d="M104 1.04908e-06V48H79.9999L79.9999 0L104 1.04908e-06Z" fill="#FF2B00"/>
+<path d="M68 12H116V36H68V12Z" fill="#FF2B00"/>
+          <g class="pupils"><path d="M11.7949 12.0938H23.7949V24.0938H11.7949V12.0938Z" fill="#FAF0E6"/>
+<path d="M79.7949 12.0938H91.7949V24.0938H79.7949V12.0938Z" fill="#FAF0E6"/></g>
+        </g>
+      </svg></button>
+  </main>
+  <script src="/analytics.js" defer></script>
+<script>
+    (() => {
+      const eyes = document.querySelector('.eyes');
+      const pupils = eyes.querySelector('.pupils');
+      const pair = eyes.querySelector('.eye-pair');
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+      let blink;
+      let palette = 0;
+      const backgrounds = ['#FAF0E6', '#FF2B00', '#191416'];
+      function changePalette() {
+        palette = (palette + 1) % backgrounds.length;
+        document.documentElement.dataset.palette = palette;
+        document.querySelector('meta[name="theme-color"]').content = backgrounds[palette];
+      }
+      const clamp = value => Math.max(-1, Math.min(1, value));
+      function rest() {
+        eyes.classList.remove('is-tracking');
+        pupils.style.removeProperty('transform');
+      }
+      window.addEventListener('pointermove', event => {
+        if (event.pointerType === 'touch' || reduced.matches) return;
+        const rect = eyes.getBoundingClientRect();
+        const x = clamp((event.clientX - rect.left - rect.width / 2) / (innerWidth * .45));
+        const y = clamp((event.clientY - rect.top - rect.height / 2) / (innerHeight * .45));
+        // Center the original pupil paths, keeping their full squares inside each eye.
+        pupils.style.transform = `translate(${6.2051 + x * 5.5}px, ${5.9062 + y * 5.5}px)`;
+        eyes.classList.add('is-tracking');
+      }, {passive: true});
+      eyes.addEventListener('pointerenter', event => {
+        if (event.pointerType === 'touch') return;
+        changePalette();
+        if (reduced.matches || blink) return;
+        eyes.classList.add('is-hover-blinking');
+        blink = pair.animate([
+          {transform: 'scaleY(1)', offset: 0},
+          {transform: 'scaleY(.045)', offset: .38},
+          {transform: 'scaleY(.045)', offset: .49},
+          {transform: 'scaleY(1)', offset: 1},
+        ], {duration: 260, easing: 'cubic-bezier(.2, .8, .2, 1)'});
+        blink.onfinish = () => {
+          eyes.classList.remove('is-hover-blinking');
+          blink = null;
+        };
+      });
+      // Mouse/pen already changes on entry; taps and keyboard activation change once.
+      eyes.addEventListener('click', event => {
+        if (event.detail === 0 || event.pointerType === 'touch') changePalette();
+      });
+      document.documentElement.addEventListener('pointerleave', rest);
+      window.addEventListener('blur', rest);
+      reduced.addEventListener('change', () => {
+        rest();
+        if (blink) blink.cancel();
+        blink = null;
+        eyes.classList.remove('is-hover-blinking');
+      });
+    })();
+  </script>
+</body>
+</html>

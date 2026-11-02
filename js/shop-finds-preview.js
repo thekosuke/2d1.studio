@@ -19,7 +19,7 @@
    if(event.origin!==location.origin||event.source!==frame?.contentWindow||event.data!=='fc-preview-ready')return;
    ready=true;send();
   });
-  const fit=()=>{if(frame)frame.style.transform=`scale(${screen.clientWidth/1600},${screen.clientHeight/900})`};
+  const fit=()=>{if(frame){frame.style.transform=`scale(${screen.clientWidth/1600},${screen.clientHeight/900})`;frame.contentWindow?.postMessage('fc-preview-resize',location.origin)}};
   const mount=()=>{
    if(frame)return;
    frame=document.createElement('iframe');frame.title='Familiar Characters canvas zoom preview';frame.tabIndex=-1;frame.setAttribute('aria-hidden','true');

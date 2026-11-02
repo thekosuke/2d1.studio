@@ -1,2 +1,147 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://2d1.studio/</loc></url><url><loc>https://2d1.studio/about/</loc></url><url><loc>https://2d1.studio/ja/</loc></url><url><loc>https://2d1.studio/ja/about/</loc></url></urlset>
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://2d1.studio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/about/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/about/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/about/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/about/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/shop/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/shop/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/shop/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/shop/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/shop/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/shop/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/shop/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/shop/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/familiarcharacters/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/familiarcharacters/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/familiarcharacters/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/familiarcharacters/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/familiarcharacters/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/familiarcharacters/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/familiarcharacters/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/familiarcharacters/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/contact/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/contact/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/contact/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/contact/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/red-pixel/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/red-pixel/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/red-pixel/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/red-pixel/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/red-pixel/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/red-pixel/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/red-pixel/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/red-pixel/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/privacy/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/privacy/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/legal/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/legal/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/legal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/legal/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/legal/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/legal/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/legal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/legal/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/work/aviator/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/aviator/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/aviator/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/aviator/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/work/aviator/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/aviator/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/aviator/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/aviator/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/work/supa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/supa/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/supa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/supa/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/work/supa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/supa/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/supa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/supa/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/work/deepdrip/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/deepdrip/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/deepdrip/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/deepdrip/" />
+  </url>
+  <url>
+    <loc>https://2d1.studio/ja/work/deepdrip/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/deepdrip/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/deepdrip/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/deepdrip/" />
+  </url>
+</urlset>

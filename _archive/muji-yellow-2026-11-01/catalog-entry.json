@@ -1,0 +1,116 @@
+{
+  "id": "muji-porcelain-toothbrush-stand",
+  "name": "Porcelain Toothbrush Stand",
+  "brand": "MUJI",
+  "category": "living",
+  "tags": [
+    "Personal care"
+  ],
+  "description": "A small porcelain stand that holds one toothbrush upright. Its rounded shape keeps the bathroom counter simple, with an open base that is easy to clean.",
+  "variantName": "Yellow / 4549738986218",
+  "productUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
+  "image": "img/objects/cutouts/muji-porcelain-toothbrush-stand.webp",
+  "width": 813,
+  "height": 813,
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/muji-porcelain-toothbrush-stand-480.webp",
+      "width": 480
+    },
+    {
+      "image": "img/objects/cutouts/muji-porcelain-toothbrush-stand.webp",
+      "width": 813
+    }
+  ],
+  "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
+  "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_1260.jpg",
+  "gallery": [
+    {
+      "image": "img/objects/gallery/muji-porcelain-toothbrush-stand-1.webp",
+      "width": 1260,
+      "height": 1260,
+      "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
+      "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_1260.jpg",
+      "nativeSourceDimensions": [
+        1260,
+        1260
+      ],
+      "framing": "Square stage preserves complete original photograph without cropping"
+    },
+    {
+      "image": "img/objects/gallery/muji-porcelain-toothbrush-stand-2.webp",
+      "width": 1260,
+      "height": 1260,
+      "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
+      "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_01_1260.jpg",
+      "nativeSourceDimensions": [
+        1260,
+        1260
+      ],
+      "framing": "Square stage preserves complete original photograph without cropping"
+    },
+    {
+      "image": "img/objects/gallery/muji-porcelain-toothbrush-stand-3.webp",
+      "width": 1260,
+      "height": 1260,
+      "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
+      "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_02_1260.jpg",
+      "nativeSourceDimensions": [
+        1260,
+        1260
+      ],
+      "framing": "Square stage preserves complete original photograph without cropping"
+    }
+  ],
+  "usageCaveat": "Source-credited original product photography for private preview; image rights clearance not verified.",
+  "colorwayEvidence": {
+    "basis": "Owner-linked variant retained; no iconic color claim.",
+    "source": "https://www.muji.com/my/products/cmdty/detail/4549738986218"
+  },
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "macOS Vision alpha-only background mask",
+    "nativeSourceDimensions": [
+      1260,
+      1260
+    ],
+    "nativeMaster": "img/objects/cutouts/muji-porcelain-toothbrush-stand-native.png",
+    "cropBoundingBox": [
+      262,
+      308,
+      994,
+      933
+    ],
+    "subjectPixels": [
+      732,
+      625
+    ],
+    "opticalFill": 0.9,
+    "upscaled": false,
+    "rgbExact": true,
+    "sourceSHA256": "ffc3a89d27b97fcbd69eba3aeb7d0d5d0ecf3566017191a3cd4223560d4a1e59"
+  },
+  "catalogAudit": {
+    "reviewed": "2026-10-11",
+    "notes": [
+      "Native originals retained; transparent primary checked on beige and dark brown. Shared reversible warm canvas grade."
+    ],
+    "sourceLimitations": [
+      "Native MUJI originals are 1260px; the product occupies only part of the studio frame. Retained without enlargement."
+    ]
+  },
+  "colors": [
+    "Orange",
+    "Yellow"
+  ],
+  "displayColors": [
+    {
+      "name": "Orange",
+      "hex": "#dbad7a"
+    },
+    {
+      "name": "Yellow",
+      "hex": "#f4dfb1"
+    }
+  ]
+}

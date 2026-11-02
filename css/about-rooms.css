@@ -44,10 +44,10 @@ html[lang="ja"] .about-page.about-story-page .about-intro-copy .essay-lede,html[
 
 /* Home's services table, aligned with Studio's reading column. */
 .about-room-studio .services{display:block;margin:0;padding:0;border:0}
-.about-room-studio .services>div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:0;padding-block:8px;border-top:.5px solid var(--line)}
+.about-room-studio .services>div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px;padding-block:8px;border-top:.5px solid var(--line)}
 .about-room-studio .services dt{font:500 var(--type-body)/1.4 var(--font);letter-spacing:0;color:var(--ink)}
 .about-room-studio .services dd{min-width:0;margin:0;font:400 var(--type-body)/1.4 var(--font);letter-spacing:0;color:var(--ink);text-align:left;text-wrap:pretty}
-@media(max-width:767px){.about-room-studio .services>div{grid-template-columns:100px minmax(0,1fr);gap:16px}}
+@media(max-width:767px){.about-room-studio .services>div{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
 html[lang="ja"] .about-room-studio .services :is(dt,dd){font-size:var(--type-body);line-height:1.4}
 .about-room-studio .table-group{width:100%;align-self:stretch}
 body.about-story-page .mobile-nav-toggle.is-on-diagram{color:var(--beige)}

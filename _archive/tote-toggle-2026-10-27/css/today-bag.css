@@ -1,0 +1,233 @@
+/* Life Tote — full-bleed product photograph and a compact package insert. */
+#shop{width:100%;max-width:none;margin-inline:0}
+.bag-study{--bag-inset:64px;overflow-x:clip;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:var(--bag-inset);background:var(--beige);color:var(--ink)}
+.bag-product-spread{--bag-spread-gap:clamp(48px,6vw,112px);--bag-image-share:.53488372;container-type:inline-size;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:var(--bag-spread-gap);align-items:start;max-width:1440px;margin-inline:auto}
+.bag-study-stage{position:sticky;top:80px;min-width:0}
+.bag-study-image{width:100%;max-width:min(540px,calc((100svh - 160px) * 1086 / 1448));margin-inline:auto}
+.bag-study-photo{position:relative;z-index:1;display:block;width:100%;height:auto;object-fit:contain;user-select:none}
+/* Half the displayed 2:3 photograph height, including column-width constraints. */
+.bag-editorial{min-width:0;width:100%;max-width:480px;padding-top:min(405px,calc(49.9995svh - 79.5px),calc((100cqw - var(--bag-spread-gap)) * var(--bag-image-share) * .75))}
+.bag-story-heading{margin-bottom:48px}
+.bag-introduction{text-wrap:pretty}
+.bag-study-notes{margin-top:20px;padding-top:24px;border-top:1px solid var(--line)}
+.bag-study-notes h4{font:var(--font-ui) var(--font);margin:0 0 20px}
+.bag-study-specs{margin:0}
+.bag-study-specs>div{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;padding:8px 0;border-top:.5px solid var(--line)}
+.bag-study-specs>div:first-child{padding-top:0;border-top:0}
+.bag-study-specs dt,.bag-study-specs dd{font:var(--font-caption) var(--font);margin:0;min-width:0}
+.bag-study-specs dt{font-weight:500}
+.bag-study-specs dd{color:var(--sub-gray);text-wrap:pretty}
+.bag-study-spec-note,.bag-study figcaption{font:var(--font-small) var(--font);color:var(--sub-gray)}
+.bag-study-spec-note{margin:20px 0 0}
+.bag-study figcaption{max-width:1440px;margin:48px auto 0}
+.shop-signup .shop-actions{margin-top:0;padding:0;border:0}
+.shop-signup .shop-actions::before{content:none}
+html[lang="ja"] .bag-introduction{line-height:1.75}
+@media(min-width:1600px){.bag-study{--bag-inset:80px}}
+@media(max-width:1099px){
+ .bag-study{--bag-inset:40px}
+ .bag-product-spread{--bag-spread-gap:40px;--bag-image-share:.5;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .bag-study-specs>div{grid-template-columns:80px minmax(0,1fr);gap:12px}
+}
+@media(max-width:767px){
+ .bag-study{--bag-inset:24px;padding-block:40px}
+ .bag-product-spread{display:flex;flex-direction:column;gap:32px}
+ .bag-study-stage{position:static;width:100%;order:1}
+ .bag-study-image{max-width:380px}
+ .bag-editorial{display:contents;padding-top:0}
+ .bag-story-heading{margin-bottom:64px}
+ .bag-study-notes{order:2;width:100%;margin-top:0}
+ .bag-study figcaption{margin-top:32px}
+}
+
+.bag-study-image{position:relative}
+
+/* Shop introduction and product study follow the native document flow. */
+.bag-study-scene{position:relative;width:100%}
+.bag-study-lead{display:flex;flex-direction:column;gap:var(--section-content-gap)}
+.bag-study-scene>.bag-study{position:relative;margin-top:0;padding-top:calc(var(--reading) * 1.18)}
+
+
+.shop-signup{width:100%;padding-block:var(--space);background:var(--beige);color:var(--cranberry-brown)}
+
+.bag-study>.bag-closing{margin-top:var(--section-content-gap)}
+
+/* The signup and footer return to the shared beige page ground. */
+#shop{padding-bottom:0}
+.shop-tail{box-sizing:border-box;margin-top:calc(-1 * var(--section-content-gap));padding-top:var(--section-content-gap);padding-bottom:var(--space);background:var(--beige)}
+.home-page>.site-footer,.js .home-page>.site-footer{--ink:var(--cranberry-brown);--sub-gray:#807573;background:var(--beige);color:var(--ink)}
+.home-page>.site-footer .social-links a:hover{color:var(--red)}
+
+/* A centered product becomes an image/specification spread through native scroll. */
+.bag-study>.bag-story-heading{margin-block:0 var(--section-content-gap)}
+.bag-story-heading .bag-introduction{max-width:960px}
+.bag-product-spread{align-items:center}
+.bag-study-stage{position:relative;top:auto}
+.bag-editorial{padding-top:0}
+.bag-editorial .bag-study-notes{margin-top:0}
+@media(min-width:768px){
+ .has-bag-layout{height:var(--bag-layout-height)}
+ .has-bag-layout .bag-product-spread{position:sticky;top:var(--bag-layout-top)}
+ .has-bag-layout .bag-study-stage{align-self:start;transform:translateX(var(--bag-layout-x));will-change:transform}
+ .has-bag-layout .bag-editorial{opacity:var(--bag-layout-progress);transform:translateX(var(--bag-editorial-x));will-change:transform,opacity}
+}
+@media(max-width:767px){
+ .bag-editorial{display:block;width:100%;max-width:none;order:2}
+}
+
+.home-page .shop-signup .intro-cta .pixel-arrow::before{color:var(--red)}
+.home-page .shop-signup .intro-cta:hover .pixel-arrow::before{color:var(--cranberry-brown)}
+.home-page .shop-signup .intro-cta:focus-visible .pixel-arrow::before{color:var(--red)}
+.shop-signup .signup-heading::before{background:var(--red)}
+
+/* Let shared copy columns use the page width rather than the image inset. */
+.bag-study>.bag-study-copy{width:calc(100% + 2 * var(--bag-inset));margin-inline:calc(-1 * var(--bag-inset))}
+
+/* Product study shares the Shop section’s Soft Beige ground. */
+.bag-study{--ink:var(--cranberry-brown);--sub-gray:#807573;--line:rgba(50,5,5,.18);background:var(--beige);color:var(--cranberry-brown)}
+.home-page .bag-study .section-copy{color:rgba(50,5,5,.85)}
+.home-page .bag-study .copy-emphasis{color:var(--red)}
+.bag-study .bag-study-specs dd{color:var(--cranberry-brown)}
+.bag-study .bag-study-spec-note{color:rgba(50,5,5,.6)}
+.bag-study-image{isolation:isolate}
+.bag-study-image::before{content:"";position:absolute;z-index:0;left:50%;top:76%;width:100%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:var(--beige);pointer-events:none}
+@media(max-width:767px){.bag-study-image{width:86.9565%}}
+@media(max-width:767px){.bag-editorial{margin-top:40px}}
+
+.home-page .shop-signup .connect-form input{border-bottom:1px solid rgba(50,5,5,.4)}
+.home-page .shop-signup .connect-form input:focus,.home-page .shop-signup .connect-form input:focus-visible{border-bottom-color:var(--red)}
+
+.bag-study{padding-block:var(--space)}
+
+/* Rules continue beyond the reading column to the viewport's clipped edge. */
+.home-page .services>div,.bag-study-specs>div{position:relative;border-top-color:transparent}
+.home-page .services>div::before,.bag-study-specs>div:not(:first-child)::before{content:"";position:absolute;top:-.5px;left:0;width:100vw;border-top:.5px solid var(--line);pointer-events:none}
+.bag-study-notes{border-top:0}
+.shop-signup .signup-field{position:relative;display:block;width:100%}
+.shop-signup .signup-field::after{content:"";position:absolute;left:0;bottom:0;width:100vw;border-bottom:1px solid rgba(128,117,115,.3);pointer-events:none}
+.shop-signup .signup-field:focus-within::after{border-bottom-color:var(--red)}
+.home-page .shop-signup .connect-form input,.home-page .shop-signup .connect-form input:focus,.home-page .shop-signup .connect-form input:focus-visible{border-bottom-color:transparent;box-shadow:none}
+.home-page .studio,.home-page .shop-signup{overflow-x:clip}
+
+/* Native disclosure also works as a compact material tooltip. */
+.bag-study-specs .bag-material{position:relative;display:flex;align-items:start;gap:4px}
+.bag-material>span{flex:0 1 auto;min-width:0}
+.material-info{flex:none}
+.material-info summary{list-style:none;display:flex;align-items:center;justify-content:center;width:28px;height:28px;margin-top:-4px;cursor:pointer;color:var(--cranberry-brown)}
+.material-info summary::-webkit-details-marker{display:none}
+.material-info-icon{display:block;width:16px;height:16px;background:currentColor;mask:url('../img/icons/pixel-info.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-info.svg') center/contain no-repeat}
+.material-info summary:hover,.material-info summary:focus-visible,.material-info[open] summary{background:var(--beige);color:var(--red);outline:none}
+.material-tooltip{position:absolute;z-index:5;top:calc(100% + 8px);right:0;width:320px;max-width:100%;padding:20px;background:var(--beige);border-left:2px solid var(--cranberry-brown);color:var(--cranberry-brown);font:var(--font-caption) var(--font)}
+.material-tooltip::before{content:"";position:absolute;bottom:100%;left:0;right:0;height:12px}
+
+#shop,.bag-study-lead{background:var(--beige)}
+
+.material-tooltip p+p{margin-top:1em}
+
+/* Armada notes use the Familiar Characters sheet’s paper, type and controls. */
+.material-tooltip{width:40vw;max-width:calc(100vw - 48px);padding:64px 48px 48px;background:var(--white);border:2px solid var(--red);font:var(--font-ui-body) var(--font);letter-spacing:0;text-transform:none;box-sizing:border-box;max-height:70dvh;overflow:auto;scrollbar-gutter:stable}
+.material-tooltip p+p{margin-top:24px}
+.material-info-close{position:absolute;top:20px;right:20px;width:32px;height:32px;display:grid;place-items:center;padding:0;border:0;background:var(--white);color:var(--cranberry-brown);cursor:pointer;transition:background-color 180ms,color 180ms}
+.material-info-close span{width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
+.material-info-close:is(:hover,:focus-visible){background:var(--red);color:var(--beige)}
+.material-info[open] summary{background:var(--red);color:var(--white)}
+@media(max-width:767px){.material-tooltip{width:calc(100vw - 48px);padding:64px 24px 48px}}
+@media(pointer:coarse){.material-info-close{width:44px;height:44px;top:12px;right:12px}}
+@media(prefers-reduced-motion:reduce){.material-info-close{transition:none}}
+
+/* Lifestyle story: the copy passes over a full-screen photograph below it. */
+.bag-study-scene{isolation:isolate}
+.bag-study-lead{position:relative;z-index:2;padding-bottom:var(--space)}
+.bag-lifestyle{position:relative;z-index:0;width:100%;height:100svh;margin:0;overflow:clip;background:var(--ash-brown)}
+.bag-lifestyle .bag-study-photo{width:100%;height:100%;object-fit:cover;object-position:43% center}
+.bag-lifestyle .bag-study-photo[hidden]{display:none}
+.bag-lifestyle .bag-color-alternate{position:absolute;inset:0}
+/* Circle selectors are an owner-requested exception to the square controls. */
+.bag-color-options{position:absolute;z-index:2;left:max(24px,env(safe-area-inset-left));top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:0}
+.bag-color-options[hidden]{display:none}
+.bag-color-options button{display:grid;place-items:center;width:44px;height:32px;padding:0;border:0;background:transparent;color:var(--beige);cursor:pointer}
+.bag-color-options button::before{content:'';width:16px;height:16px;border:1px solid currentColor;border-radius:50%;background:transparent}
+.bag-color-options button[aria-pressed="true"]::before{background:currentColor}
+.bag-color-options button:is(:hover,:focus-visible){color:var(--red);outline:0;box-shadow:none}
+.js .bag-lifestyle{position:sticky;top:0;bottom:0}
+.bag-product-copy{position:relative;z-index:2;padding-block:var(--space);background:var(--beige);color:var(--cranberry-brown)}
+.bag-product-copy>.bag-spec-action{position:absolute;z-index:2;bottom:100%;right:0;margin:0;text-align:right;display:flex;flex-direction:column;align-items:flex-end}
+.tote-spec-trigger{display:flex;align-items:center;width:fit-content;max-width:100%;min-height:44px;margin:0;padding:0;border:0;background:transparent;color:var(--beige);font:var(--font-caption-medium) var(--font);letter-spacing:0;text-transform:none;text-align:right;justify-content:flex-end;cursor:pointer}
+.tote-spec-trigger:is(:hover,:focus-visible){color:var(--beige);text-decoration:underline;text-underline-offset:.2em;outline:0;box-shadow:none}
+.bag-product-copy .shop-support-copy{margin-top:1.18em}
+.tote-specifications>summary{list-style:none}
+.tote-specifications>summary::-webkit-details-marker{display:none}
+.tote-specifications>summary:focus-visible{outline:0;color:var(--beige)}
+
+/* Content-sized nonmodal sheet, capped to the viewport for smaller screens. */
+.tote-spec-dialog{position:fixed;z-index:80;inset:auto 0 0 auto;width:clamp(480px,40vw,760px);max-width:100%;height:70dvh;max-height:calc(100dvh - 48px);margin:0;padding:0;border:0;background:var(--beige);color:var(--cranberry-brown);overflow:hidden;transform:translateY(100%);transition:transform 640ms cubic-bezier(.16,1,.3,1)}
+.tote-spec-dialog.is-visible{transform:translateY(0)}
+.tote-spec-dialog.is-closing{transition-duration:480ms;transition-timing-function:cubic-bezier(.4,0,.2,1)}
+.tote-spec-sheet.contact-sheet{display:flex;flex-direction:column;width:100%;max-width:100%;height:auto;max-height:calc(100dvh - 48px);margin:0;padding:0;border:0;--line:rgba(50,5,5,.18);color:var(--cranberry-brown);background:var(--beige);overflow:hidden;transform:none;transition:none}
+.tote-spec-dialog .tote-spec-sheet.contact-sheet{height:100%}
+.tote-spec-dialog .tote-spec-content{flex:1}
+.tote-spec-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex:none;padding:20px 20px 0 32px}
+.tote-spec-content{min-height:0;padding:16px 32px 32px;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:var(--cranberry-brown) transparent;scrollbar-width:thin;scrollbar-gutter:stable}
+.tote-spec-sheet .contact-title,html[lang="ja"] .tote-spec-sheet .contact-title{margin:0;padding:0;border:0;font:var(--font-ui) var(--font);letter-spacing:0;text-transform:none;color:var(--cranberry-brown)}
+.tote-spec-sheet .contact-title::before{content:none}
+.tote-spec-close{position:static;flex:none;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;background:var(--beige);color:var(--cranberry-brown);cursor:pointer}
+.tote-spec-close span{display:block;width:18px;height:18px;background:currentColor;mask:url('../img/icons/pixel-close.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-close.svg') center/contain no-repeat}
+.tote-spec-close[hidden]{display:none}
+.tote-spec-close:is(:hover,:focus-visible){background:var(--red);color:var(--beige);outline:0;box-shadow:none}
+.tote-spec-sheet .bag-study-specs>div{grid-template-columns:88px minmax(0,1fr);gap:16px;padding-block:8px;border-top:.5px solid var(--line)}
+.tote-spec-sheet .bag-study-specs>div:first-child{padding-top:0;border-top:0}
+.tote-spec-sheet .bag-study-specs>div::before{content:none}
+.tote-spec-sheet .bag-study-specs :is(dt,dd){font-size:var(--type-spec);line-height:1.5;color:var(--cranberry-brown)}
+.tote-spec-sheet .bag-study-spec-note{margin-top:20px;font-size:12px;color:rgba(50,5,5,.65)}
+.tote-spec-sheet .bag-material{display:grid;grid-template-columns:minmax(0,max-content) auto;align-items:start;justify-content:start;column-gap:4px}
+.tote-spec-sheet .material-info{display:contents;margin:0}
+.tote-spec-sheet .material-tooltip{position:static;width:100%;max-width:none;max-height:none;overflow:visible;padding:16px 0 0;border:0;font:var(--font-caption) var(--font);scrollbar-gutter:auto;background:var(--beige);color:var(--cranberry-brown)}
+.tote-spec-sheet .material-tooltip::before{content:none}
+.tote-spec-sheet .material-info summary{width:1.5em;height:1.5em;margin:0;color:var(--cranberry-brown)}
+.tote-spec-sheet .material-info-icon{width:.85em;height:.85em}
+.tote-spec-sheet .material-tooltip{grid-column:1 / -1}
+.tote-spec-sheet .material-info summary:is(:hover,:focus-visible),.tote-spec-sheet .material-info[open] summary{background:var(--cranberry-brown);color:var(--beige)}
+.tote-specifications .tote-spec-sheet{position:absolute;right:0;top:44px;width:min(480px,calc(100vw - 48px));height:auto;max-height:calc(50svh - 24px);text-align:left}
+.tote-specifications .tote-spec-content{padding:24px}
+@media(max-width:1099px){.bag-lifestyle .bag-study-photo{object-position:30% center}}
+@media(max-width:767px){
+ /* Cap very tall portrait crops so the tag and complete logo stay in frame. */
+ .bag-lifestyle{height:min(100svh,200vw)}
+ .bag-lifestyle .bag-study-photo{object-position:27% center}
+ .tote-spec-dialog{width:100%}
+ .tote-spec-sheet.contact-sheet{width:100%}
+ .tote-spec-header{padding:16px 16px 0 24px}
+ .tote-spec-content{padding:16px 24px 24px}
+ .tote-spec-sheet .bag-study-specs>div{grid-template-columns:88px minmax(0,1fr);gap:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ .js .bag-lifestyle{position:relative;top:auto;bottom:auto}
+ .tote-spec-dialog,.tote-spec-dialog .contact-sheet{transition:none}
+}
+
+/* Beige navigation ink while the tote photograph passes beneath it. */
+body.home-page:not(.mobile-menu-open) .page-nav a.on-bag-photo:not([aria-current]),
+body.home-page:not(.mobile-menu-open) .page-nav a.on-bag-photo:not([aria-current]) .nav-label,
+body.home-page:not(.mobile-menu-open) .mobile-nav-toggle.on-bag-photo{color:var(--beige)!important}
+body.home-page:not(.mobile-menu-open) .page-nav a.on-bag-photo:not([aria-current]) .nav-label{background-image:none!important;-webkit-text-fill-color:var(--beige)!important}
+
+/* Inverted, compact tote specifications. */
+.tote-spec-dialog,.tote-spec-sheet.contact-sheet{background:var(--ash-brown);color:var(--beige);--line:rgba(250,240,230,.24)}
+.tote-spec-sheet .contact-title,html[lang="ja"] .tote-spec-sheet .contact-title{color:var(--beige)}
+.tote-spec-sheet .bag-study-specs :is(dt,dd),
+.tote-spec-sheet .bag-study-spec-note,
+.tote-spec-sheet .material-tooltip,
+.tote-spec-sheet .material-info summary{font-size:12px;color:var(--beige)}
+.tote-spec-sheet .material-tooltip{background:var(--ash-brown)}
+.tote-spec-close{background:var(--ash-brown);color:var(--beige)}
+.tote-spec-sheet .material-info summary:is(:hover,:focus-visible),
+.tote-spec-sheet .material-info[open] summary{background:var(--beige);color:var(--ash-brown)}
+
+.bag-product-copy>.bag-spec-action .tote-spec-trigger{padding:12px;background:var(--beige);color:var(--cranberry-brown)}
+.bag-product-copy>.bag-spec-action .tote-spec-trigger:is(:hover,:focus-visible){color:var(--red)}
+
+.tote-spec-trigger:is(:hover,:focus-visible){text-decoration:none}
+.tote-spec-label{--nav-sweep:0;color:var(--cranberry-brown);background-image:linear-gradient(90deg,var(--red) calc(var(--nav-sweep)*100%),var(--cranberry-brown) 0);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;transition:--nav-sweep 200ms ease}
+.tote-spec-trigger:is(:hover,:focus-visible) .tote-spec-label{--nav-sweep:1}
+@media(prefers-reduced-motion:reduce){.tote-spec-label{transition:none}}
+@media(forced-colors:active){.tote-spec-label{background:none;-webkit-text-fill-color:currentColor}}

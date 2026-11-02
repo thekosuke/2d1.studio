@@ -557,7 +557,11 @@ not a publication license. The canvas primary images are unchanged.
 
 ### Robi Boris
 
-- One verified view only. Additional matching photography is pending; no duplicates or different colorways were added to reach a minimum.
+- Original blue canvas product view retained as the first gallery photograph.
+- Owner-requested addition, 2026-11-01: `img/objects/gallery/daypa/canvas-color-group.png` — native 3000 × 3000 PNG, canvas backpacks in seven colors; supplied attachment `codex-clipboard-7c34ed12-1f2b-41bb-8370-ddb106fc5400.png`.
+- Owner-requested addition, 2026-11-01: `img/objects/gallery/daypa/fleece-color-group.png` — native 3000 × 3000 PNG, fleece backpacks in four colors; supplied attachment `codex-clipboard-24fb406a-dcb6-439a-8de0-bd78c7abe06d.png`.
+- The owner explicitly requested both collection photographs, including other colors and fleece variants. Blue canvas remains the selected item; the transparent canvas image is unchanged. These are supplied photographs, not generated images.
+- External original-image URLs were not supplied; [DAYPA’s official site](https://daypa.jp/) is the brand credit link only. Native files are copied unchanged, with lossless responsive WebP delivery below native resolution.
 
 ### 9090 Espresso Coffee Maker
 
@@ -621,7 +625,11 @@ not a publication license. The canvas primary images are unchanged.
 
 ### The Peepers
 
-- One verified view only. Additional matching photography is pending; no duplicates or different colorways were added to reach a minimum.
+- Original blue canvas product view retained as the first gallery photograph.
+- Owner-requested addition, 2026-11-01: `img/objects/gallery/daypa/canvas-color-group.png` — native 3000 × 3000 PNG, canvas backpacks in seven colors; supplied attachment `codex-clipboard-7c34ed12-1f2b-41bb-8370-ddb106fc5400.png`.
+- Owner-requested addition, 2026-11-01: `img/objects/gallery/daypa/fleece-color-group.png` — native 3000 × 3000 PNG, fleece backpacks in four colors; supplied attachment `codex-clipboard-24fb406a-dcb6-439a-8de0-bd78c7abe06d.png`.
+- The owner explicitly requested both collection photographs, including other colors and fleece variants. Blue canvas remains the selected item; the transparent canvas image is unchanged. These are supplied photographs, not generated images.
+- External original-image URLs were not supplied; [DAYPA’s official site](https://daypa.jp/) is the brand credit link only. Native files are copied unchanged, with lossless responsive WebP delivery below native resolution.
 
 ### NTS Radio Player
 
@@ -671,7 +679,11 @@ not a publication license. The canvas primary images are unchanged.
 
 ### DAYPA-kun Backpack, Blue
 
-- One verified view only. Additional matching photography is pending; no duplicates or different colorways were added to reach a minimum.
+- Original blue canvas product view retained as the first gallery photograph.
+- Owner-requested addition, 2026-11-01: `img/objects/gallery/daypa/canvas-color-group.png` — native 3000 × 3000 PNG, canvas backpacks in seven colors; supplied attachment `codex-clipboard-7c34ed12-1f2b-41bb-8370-ddb106fc5400.png`.
+- Owner-requested addition, 2026-11-01: `img/objects/gallery/daypa/fleece-color-group.png` — native 3000 × 3000 PNG, fleece backpacks in four colors; supplied attachment `codex-clipboard-24fb406a-dcb6-439a-8de0-bd78c7abe06d.png`.
+- The owner explicitly requested both collection photographs, including other colors and fleece variants. Blue canvas remains the selected item; the transparent canvas image is unchanged. These are supplied photographs, not generated images.
+- External original-image URLs were not supplied; [DAYPA’s official site](https://daypa.jp/) is the brand credit link only. Native files are copied unchanged, with lossless responsive WebP delivery below native resolution.
 
 ### Piranha Plant (71426)
 
@@ -727,7 +739,11 @@ not a publication license. The canvas primary images are unchanged.
 
 ### Carbon Stack Signature Phone Case for iPhone 18 Pro
 
-- One verified view only. Additional matching photography is pending; no duplicates or different colorways were added to reach a minimum.
+- Original blue canvas product view retained as the first gallery photograph.
+- Owner-requested addition, 2026-11-01: `img/objects/gallery/daypa/canvas-color-group.png` — native 3000 × 3000 PNG, canvas backpacks in seven colors; supplied attachment `codex-clipboard-7c34ed12-1f2b-41bb-8370-ddb106fc5400.png`.
+- Owner-requested addition, 2026-11-01: `img/objects/gallery/daypa/fleece-color-group.png` — native 3000 × 3000 PNG, fleece backpacks in four colors; supplied attachment `codex-clipboard-24fb406a-dcb6-439a-8de0-bd78c7abe06d.png`.
+- The owner explicitly requested both collection photographs, including other colors and fleece variants. Blue canvas remains the selected item; the transparent canvas image is unchanged. These are supplied photographs, not generated images.
+- External original-image URLs were not supplied; [DAYPA’s official site](https://daypa.jp/) is the brand credit link only. Native files are copied unchanged, with lossless responsive WebP delivery below native resolution.
 
 ### shoe-horn
 
@@ -1461,3 +1477,13 @@ Owner-selected [official product](https://eu.jellycat.com/amuseables-sports-bask
 - Originals: `img/objects/originals/tobeus-pick-up/`; native alpha-only cutout retains original RGB exactly.
 - First detail image: native 700 × 700 square crop of the three-quarter view, complete toy with breathing room. Resolution exception: overview below 1200px target; no enlargement or invented views. Remaining two photos preserve authentic settings.
 - Designer photography credited to fioravanti.eu; private preview, no unrestricted image license verified.
+
+
+## MUJI blue image replacement — 1 November 2026
+- Stable ID: `muji-porcelain-toothbrush-stand`; selected variant: Blue / 4549738912620.
+- Owner requested a better color and main photo. Blue was selected for clearer contrast with the beige collection background; no iconic-color claim.
+- Official product/variant: https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966
+- Official originals: `https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_org.jpg?v=1706223546`, `4549738912620_01_org.jpg`, `4549738912620_02_org.jpg` on the same path and version. All three are native 2000 × 2000, replacing 1260px sources.
+- Full originals retained in `img/objects/sources/muji-blue-2026-11-01/`. Gallery uses the complete original square photos: isolated product, toothbrush lineup, bathroom setting.
+- Canvas cutout uses border-connected white removal and a 0.5px alpha feather. Native RGB is byte-for-byte unchanged; subject 1213 × 1008, framed at 90% optical fill on 1348px square, no upscaling. Light/dark edge inspection passed.
+- Previous yellow metadata archived in `_archive/muji-yellow-2026-11-01/catalog-entry.json`; previous source assets retained.

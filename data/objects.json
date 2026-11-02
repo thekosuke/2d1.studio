@@ -95,12 +95,8 @@
     ],
     "displayColors": [
       {
-        "name": "Blue",
-        "hex": "#188b7b"
-      },
-      {
-        "name": "Brown",
-        "hex": "#07514a"
+        "name": "Green",
+        "hex": "#087e70"
       }
     ]
   },
@@ -194,11 +190,11 @@
     "displayColors": [
       {
         "name": "Beige",
-        "hex": "#d9c3ab"
+        "hex": "#ddcbb2"
       },
       {
-        "name": "White",
-        "hex": "#e9d8c6"
+        "name": "Black",
+        "hex": "#343331"
       }
     ]
   },
@@ -303,16 +299,8 @@
         "hex": "#242324"
       },
       {
-        "name": "Gray",
-        "hex": "#908f8f"
-      },
-      {
-        "name": "White",
-        "hex": "#dedddc"
-      },
-      {
-        "name": "Brown",
-        "hex": "#070709"
+        "name": "Silver",
+        "hex": "#bfc0bf"
       }
     ]
   },
@@ -414,14 +402,6 @@
       {
         "name": "Black",
         "hex": "#2b2a29"
-      },
-      {
-        "name": "Gray",
-        "hex": "#454443"
-      },
-      {
-        "name": "Brown",
-        "hex": "#0a0b0a"
       }
     ]
   },
@@ -536,15 +516,15 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#6b9db6"
+        "hex": "#6c9cb2"
       },
       {
         "name": "Yellow",
-        "hex": "#e6c256"
+        "hex": "#e7c54d"
       },
       {
         "name": "Red",
-        "hex": "#a0292c"
+        "hex": "#a52d32"
       }
     ]
   },
@@ -654,11 +634,11 @@
     "displayColors": [
       {
         "name": "Orange",
-        "hex": "#f74e1f"
+        "hex": "#fb5a1f"
       },
       {
         "name": "Blue",
-        "hex": "#0f5fa2"
+        "hex": "#18598b"
       }
     ]
   },
@@ -762,24 +742,20 @@
     ],
     "displayColors": [
       {
-        "name": "Orange",
-        "hex": "#e36124"
-      },
-      {
         "name": "Blue",
-        "hex": "#537391"
+        "hex": "#183a50"
       },
       {
-        "name": "Brown",
-        "hex": "#24283c"
-      },
-      {
-        "name": "Yellow",
-        "hex": "#e0d3a3"
+        "name": "Orange",
+        "hex": "#f26808"
       },
       {
         "name": "White",
-        "hex": "#e4e6e1"
+        "hex": "#eee5c9"
+      },
+      {
+        "name": "Black",
+        "hex": "#222932"
       }
     ]
   },
@@ -884,16 +860,12 @@
     ],
     "displayColors": [
       {
-        "name": "Red",
-        "hex": "#f05271"
-      },
-      {
-        "name": "Brown",
-        "hex": "#242523"
+        "name": "Pink",
+        "hex": "#f05282"
       },
       {
         "name": "Black",
-        "hex": "#272627"
+        "hex": "#242523"
       },
       {
         "name": "Green",
@@ -901,7 +873,11 @@
       },
       {
         "name": "Orange",
-        "hex": "#e87409"
+        "hex": "#ed8008"
+      },
+      {
+        "name": "Blue",
+        "hex": "#2853b9"
       }
     ]
   },
@@ -994,24 +970,16 @@
     ],
     "displayColors": [
       {
+        "name": "Blue",
+        "hex": "#209dd2"
+      },
+      {
         "name": "Yellow",
-        "hex": "#fbcf15"
+        "hex": "#ffcf00"
       },
       {
         "name": "Red",
-        "hex": "#f3281f"
-      },
-      {
-        "name": "Blue",
-        "hex": "#2e92d6"
-      },
-      {
-        "name": "White",
-        "hex": "#f2f1ea"
-      },
-      {
-        "name": "Green",
-        "hex": "#89a946"
+        "hex": "#ee2028"
       }
     ]
   },
@@ -1096,19 +1064,15 @@
     "displayColors": [
       {
         "name": "Orange",
-        "hex": "#db6025"
+        "hex": "#e86c25"
       },
       {
         "name": "White",
-        "hex": "#e1d1cb"
+        "hex": "#e5d9d1"
       },
       {
         "name": "Yellow",
-        "hex": "#ceb923"
-      },
-      {
-        "name": "Gray",
-        "hex": "#beaea7"
+        "hex": "#d1c816"
       }
     ]
   },
@@ -1209,20 +1173,16 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#dfdfdf"
-      },
-      {
-        "name": "Black",
-        "hex": "#131313"
-      },
-      {
-        "name": "Gray",
-        "hex": "#8d8c8c"
+        "name": "Silver",
+        "hex": "#bfc0c1"
       },
       {
         "name": "Brown",
-        "hex": "#47332d"
+        "hex": "#46342e"
+      },
+      {
+        "name": "Black",
+        "hex": "#181818"
       }
     ]
   },
@@ -1325,7 +1285,7 @@
     "displayColors": [
       {
         "name": "Yellow",
-        "hex": "#dfd49d"
+        "hex": "#e3d99d"
       }
     ]
   },
@@ -1436,23 +1396,19 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#b71a2a"
+        "hex": "#b0192b"
       },
       {
         "name": "Blue",
-        "hex": "#0d56af"
+        "hex": "#0856a7"
       },
       {
         "name": "Yellow",
-        "hex": "#f3cd0f"
+        "hex": "#f4d000"
       },
       {
-        "name": "White",
-        "hex": "#cececb"
-      },
-      {
-        "name": "Gray",
-        "hex": "#bfbdba"
+        "name": "Silver",
+        "hex": "#bfc1be"
       }
     ]
   },
@@ -1551,12 +1507,12 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#e5e5e1"
+        "name": "Silver",
+        "hex": "#b7b8b2"
       },
       {
-        "name": "Gray",
-        "hex": "#8f8d87"
+        "name": "Orange",
+        "hex": "#c56231"
       }
     ]
   },
@@ -1646,7 +1602,7 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#c5474a"
+        "hex": "#c53e45"
       }
     ]
   },
@@ -1762,23 +1718,23 @@
     "displayColors": [
       {
         "name": "Green",
-        "hex": "#3a965f"
-      },
-      {
-        "name": "Brown",
-        "hex": "#1b3432"
+        "hex": "#398d60"
       },
       {
         "name": "Red",
-        "hex": "#e35b45"
-      },
-      {
-        "name": "Orange",
-        "hex": "#d2a373"
+        "hex": "#f54b2e"
       },
       {
         "name": "Pink",
-        "hex": "#edafc9"
+        "hex": "#edaccb"
+      },
+      {
+        "name": "Blue",
+        "hex": "#268fbc"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#f4c72e"
       }
     ]
   },
@@ -1885,12 +1841,16 @@
     ],
     "displayColors": [
       {
-        "name": "Red",
-        "hex": "#c53f3f"
+        "name": "Orange",
+        "hex": "#f58a16"
       },
       {
-        "name": "Orange",
-        "hex": "#f8821e"
+        "name": "Red",
+        "hex": "#cb4545"
+      },
+      {
+        "name": "Pink",
+        "hex": "#b93864"
       }
     ]
   },
@@ -2013,20 +1973,12 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#dcdad9"
-      },
-      {
         "name": "Blue",
-        "hex": "#435e7a"
+        "hex": "#29445a"
       },
       {
-        "name": "Brown",
-        "hex": "#263d54"
-      },
-      {
-        "name": "Gray",
-        "hex": "#a4a6aa"
+        "name": "White",
+        "hex": "#e5e4df"
       }
     ]
   },
@@ -2128,24 +2080,24 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#e0dbd8"
+        "name": "Red",
+        "hex": "#f36751"
       },
       {
         "name": "Blue",
-        "hex": "#0b4e9b"
+        "hex": "#0d4c93"
       },
       {
         "name": "Orange",
-        "hex": "#984013"
+        "hex": "#934019"
       },
       {
-        "name": "Brown",
-        "hex": "#201d2d"
+        "name": "Green",
+        "hex": "#929a23"
       },
       {
-        "name": "Yellow",
-        "hex": "#a6a027"
+        "name": "White",
+        "hex": "#ebe9e5"
       }
     ]
   },
@@ -2243,7 +2195,7 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#97bac7"
+        "hex": "#97bdc7"
       }
     ]
   },
@@ -2341,11 +2293,11 @@
     "displayColors": [
       {
         "name": "Orange",
-        "hex": "#ee845d"
+        "hex": "#ee6a33"
       },
       {
-        "name": "Red",
-        "hex": "#da5a3f"
+        "name": "Black",
+        "hex": "#1c1b19"
       }
     ]
   },
@@ -2460,15 +2412,19 @@
     "displayColors": [
       {
         "name": "Black",
-        "hex": "#262a2b"
+        "hex": "#272c2c"
       },
       {
         "name": "Gray",
-        "hex": "#696e71"
+        "hex": "#6c767a"
       },
       {
-        "name": "White",
-        "hex": "#d3d8da"
+        "name": "Red",
+        "hex": "#c92f3d"
+      },
+      {
+        "name": "Silver",
+        "hex": "#d4d7d7"
       }
     ]
   },
@@ -2578,11 +2534,11 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#eaeaea"
+        "hex": "#eeeeed"
       },
       {
         "name": "Black",
-        "hex": "#222222"
+        "hex": "#242424"
       }
     ]
   },
@@ -2690,15 +2646,15 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#f3f2f3"
+        "hex": "#f1f1ef"
       },
       {
         "name": "Black",
-        "hex": "#2c2b2b"
+        "hex": "#282828"
       },
       {
         "name": "Red",
-        "hex": "#f83a2d"
+        "hex": "#ff302b"
       }
     ]
   },
@@ -2810,12 +2766,12 @@
     ],
     "displayColors": [
       {
-        "name": "Gray",
-        "hex": "#4c4a4e"
+        "name": "Black",
+        "hex": "#363438"
       },
       {
-        "name": "Black",
-        "hex": "#343336"
+        "name": "Yellow",
+        "hex": "#e6a91a"
       }
     ]
   },
@@ -2917,19 +2873,15 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#fdfcfd"
+        "hex": "#faf9f6"
       },
       {
         "name": "Black",
-        "hex": "#0b0b0b"
+        "hex": "#101010"
       },
       {
-        "name": "Gray",
-        "hex": "#878787"
-      },
-      {
-        "name": "Brown",
-        "hex": "#0b0a0b"
+        "name": "Beige",
+        "hex": "#f2e7da"
       }
     ]
   },
@@ -3042,23 +2994,23 @@
     "displayColors": [
       {
         "name": "Yellow",
-        "hex": "#fcbf47"
+        "hex": "#ffbf42"
       },
       {
         "name": "Blue",
-        "hex": "#6fb7f0"
+        "hex": "#6db5e7"
       },
       {
         "name": "White",
-        "hex": "#e2e4ec"
+        "hex": "#e4e7ec"
       },
       {
         "name": "Pink",
-        "hex": "#fa7eb0"
+        "hex": "#f278b1"
       },
       {
         "name": "Purple",
-        "hex": "#8b54a7"
+        "hex": "#8d51a4"
       }
     ]
   },
@@ -3166,15 +3118,23 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#d34952"
+        "hex": "#ed4559"
       },
       {
         "name": "Blue",
-        "hex": "#2b8ebc"
+        "hex": "#1599c6"
       },
       {
         "name": "Purple",
-        "hex": "#ac77b5"
+        "hex": "#9b5ba7"
+      },
+      {
+        "name": "Green",
+        "hex": "#60c6ae"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#ffcb39"
       }
     ]
   },
@@ -3289,7 +3249,15 @@
     "displayColors": [
       {
         "name": "Beige",
-        "hex": "#a78777"
+        "hex": "#a98d7f"
+      },
+      {
+        "name": "White",
+        "hex": "#ece9e6"
+      },
+      {
+        "name": "Green",
+        "hex": "#44a94b"
       }
     ]
   },
@@ -3316,9 +3284,27 @@
         "height": 2000,
         "sourceUrl": "https://daypa.jp/products/dp26215001?variant=49041452466425",
         "sourceImageUrl": "https://daypa.jp/cdn/shop/files/Canvas_Large_Blue_01_c093278d-a4c9-43aa-9e7c-19f4945e5000.jpg?v=1789107491&width=1440"
+      },
+      {
+        "image": "img/objects/gallery/daypa/canvas-color-group.png",
+        "width": 3000,
+        "height": 3000,
+        "sourceUrl": "https://daypa.jp/",
+        "providedBy": "Owner attachment, 2026-11-01",
+        "providedAttachment": "codex-clipboard-7c34ed12-1f2b-41bb-8370-ddb106fc5400.png",
+        "alt": "DAYPA canvas backpacks in seven colors on white plinths against a turquoise background."
+      },
+      {
+        "image": "img/objects/gallery/daypa/fleece-color-group.png",
+        "width": 3000,
+        "height": 3000,
+        "sourceUrl": "https://daypa.jp/",
+        "providedBy": "Owner attachment, 2026-11-01",
+        "providedAttachment": "codex-clipboard-24fb406a-dcb6-439a-8de0-bd78c7abe06d.png",
+        "alt": "DAYPA fleece backpacks in four colors on white plinths against a turquoise background."
       }
     ],
-    "galleryNote": "Only one verified usable view is currently available; additional photography is pending.",
+    "galleryNote": "Original blue canvas product view, followed by two owner-supplied collection photographs: canvas colors and fleece variants. Additional colors and fleece variants are explicitly included at the owner’s request; the selected canvas item remains Blue.",
     "imageVariants": [
       {
         "image": "img/objects/cutouts/daypa-kun-backpack-blue-480.webp",
@@ -3352,9 +3338,11 @@
       "reviewed": "2026-10-10",
       "variantConfidence": "high exact variant; original/iconic unknown",
       "desiredVariant": "Existing blue canvas DAYPA-kun backpack",
-      "notes": [],
+      "notes": [
+        "2026-11-01: Owner explicitly supplied and requested the canvas-color group and fleece-color group photographs for the gallery. Native 3000px square originals retained; primary blue canvas cutout unchanged."
+      ],
       "sourceLimitations": [
-        "Only one verified same-blue backpack photo. Do not fill using SAX color, smaller pouch, or fuzzy model."
+        "Original blue canvas product view has a verified official image URL. The two owner-supplied group photos have no supplied external original-image URLs; the brand homepage is the credit link only."
       ]
     },
     "colorwayEvidence": {
@@ -3386,11 +3374,19 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#183c8e"
+        "hex": "#1746ae"
       },
       {
-        "name": "Brown",
-        "hex": "#0d204e"
+        "name": "Black",
+        "hex": "#222324"
+      },
+      {
+        "name": "White",
+        "hex": "#eeeae5"
+      },
+      {
+        "name": "Red",
+        "hex": "#d81e2c"
       }
     ]
   },
@@ -3512,19 +3508,19 @@
     "displayColors": [
       {
         "name": "Green",
-        "hex": "#2f9f3f"
-      },
-      {
-        "name": "Brown",
-        "hex": "#0f4112"
-      },
-      {
-        "name": "White",
-        "hex": "#e6e4e1"
+        "hex": "#23a13e"
       },
       {
         "name": "Red",
-        "hex": "#c43b3a"
+        "hex": "#d71926"
+      },
+      {
+        "name": "White",
+        "hex": "#efeeea"
+      },
+      {
+        "name": "Black",
+        "hex": "#171b16"
       }
     ]
   },
@@ -3641,15 +3637,19 @@
     "displayColors": [
       {
         "name": "Yellow",
-        "hex": "#e0b50f"
+        "hex": "#e2bd08"
       },
       {
         "name": "Blue",
-        "hex": "#78aac0"
+        "hex": "#83b3c3"
       },
       {
-        "name": "Brown",
-        "hex": "#4b401a"
+        "name": "Silver",
+        "hex": "#bfc4bd"
+      },
+      {
+        "name": "Black",
+        "hex": "#26261d"
       }
     ]
   },
@@ -3771,19 +3771,11 @@
     "displayColors": [
       {
         "name": "Black",
-        "hex": "#111112"
+        "hex": "#111111"
       },
       {
         "name": "White",
-        "hex": "#e5e5e5"
-      },
-      {
-        "name": "Gray",
-        "hex": "#858586"
-      },
-      {
-        "name": "Brown",
-        "hex": "#060507"
+        "hex": "#efedeb"
       }
     ]
   },
@@ -3905,15 +3897,7 @@
     "displayColors": [
       {
         "name": "Black",
-        "hex": "#212123"
-      },
-      {
-        "name": "Gray",
-        "hex": "#504f50"
-      },
-      {
-        "name": "Brown",
-        "hex": "#060608"
+        "hex": "#242424"
       }
     ]
   },
@@ -4019,12 +4003,12 @@
     ],
     "displayColors": [
       {
-        "name": "Gray",
-        "hex": "#abaaab"
+        "name": "Silver",
+        "hex": "#bfc1c3"
       },
       {
         "name": "White",
-        "hex": "#dddddd"
+        "hex": "#ececeb"
       }
     ]
   },
@@ -4139,16 +4123,16 @@
     ],
     "displayColors": [
       {
-        "name": "Brown",
-        "hex": "#234634"
-      },
-      {
-        "name": "Blue",
-        "hex": "#3e7167"
-      },
-      {
         "name": "Green",
-        "hex": "#62815c"
+        "hex": "#1d5347"
+      },
+      {
+        "name": "Black",
+        "hex": "#22282a"
+      },
+      {
+        "name": "Yellow",
+        "hex": "#d2db3e"
       }
     ]
   },
@@ -4294,11 +4278,15 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#e96045"
+        "hex": "#ed5a42"
       },
       {
-        "name": "Gray",
-        "hex": "#7c807e"
+        "name": "Silver",
+        "hex": "#969c9b"
+      },
+      {
+        "name": "Black",
+        "hex": "#252525"
       }
     ]
   },
@@ -4421,7 +4409,7 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#ac3034"
+        "hex": "#b42c3b"
       }
     ]
   },
@@ -4532,11 +4520,7 @@
     "displayColors": [
       {
         "name": "Beige",
-        "hex": "#b99e80"
-      },
-      {
-        "name": "White",
-        "hex": "#ece0cf"
+        "hex": "#bda282"
       }
     ]
   },
@@ -4654,7 +4638,11 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#dddcdb"
+        "hex": "#eeedeb"
+      },
+      {
+        "name": "Black",
+        "hex": "#303033"
       }
     ]
   },
@@ -4775,15 +4763,11 @@
     "displayColors": [
       {
         "name": "Black",
-        "hex": "#0b0b0b"
-      },
-      {
-        "name": "Gray",
-        "hex": "#909090"
+        "hex": "#101112"
       },
       {
         "name": "White",
-        "hex": "#e0e0e0"
+        "hex": "#dfdfdc"
       }
     ]
   },
@@ -4917,7 +4901,7 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#ba3730"
+        "hex": "#c53832"
       }
     ]
   },
@@ -5039,7 +5023,7 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#ac3733"
+        "hex": "#ab2d28"
       }
     ]
   },
@@ -5162,16 +5146,20 @@
     ],
     "displayColors": [
       {
-        "name": "Gray",
-        "hex": "#72736f"
-      },
-      {
         "name": "Black",
-        "hex": "#2f3032"
+        "hex": "#303233"
       },
       {
         "name": "White",
-        "hex": "#dad9d4"
+        "hex": "#e5e4dd"
+      },
+      {
+        "name": "Silver",
+        "hex": "#b8bbb8"
+      },
+      {
+        "name": "Red",
+        "hex": "#d74c42"
       }
     ]
   },
@@ -5278,11 +5266,11 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#deddd3"
+        "hex": "#e4e5da"
       },
       {
         "name": "Gray",
-        "hex": "#adaca0"
+        "hex": "#b7baaa"
       }
     ]
   },
@@ -5404,19 +5392,15 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#e0ddd8"
-      },
-      {
-        "name": "Gray",
-        "hex": "#a8a5a2"
-      },
-      {
-        "name": "Orange",
-        "hex": "#9d7861"
+        "hex": "#e9e4dd"
       },
       {
         "name": "Brown",
-        "hex": "#3f322b"
+        "hex": "#a47f68"
+      },
+      {
+        "name": "Black",
+        "hex": "#302b28"
       }
     ]
   },
@@ -5531,20 +5515,16 @@
     ],
     "displayColors": [
       {
-        "name": "Gray",
-        "hex": "#848484"
+        "name": "Silver",
+        "hex": "#b7b8b7"
       },
       {
         "name": "Black",
-        "hex": "#2a2a2a"
+        "hex": "#2c2c2c"
       },
       {
         "name": "Red",
-        "hex": "#a83230"
-      },
-      {
-        "name": "White",
-        "hex": "#cecece"
+        "hex": "#b42b2e"
       }
     ]
   },
@@ -5664,16 +5644,12 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#dadada"
+        "name": "Purple",
+        "hex": "#7a4356"
       },
       {
-        "name": "Red",
-        "hex": "#834957"
-      },
-      {
-        "name": "Gray",
-        "hex": "#8f8083"
+        "name": "Clear",
+        "hex": "#e6e8e7"
       }
     ]
   },
@@ -5807,19 +5783,15 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#dbd9da"
+        "hex": "#e6e4e2"
       },
       {
-        "name": "Gray",
-        "hex": "#bbb5ae"
-      },
-      {
-        "name": "Red",
-        "hex": "#ed6546"
+        "name": "Orange",
+        "hex": "#f36c40"
       },
       {
         "name": "Green",
-        "hex": "#5e9f62"
+        "hex": "#16995b"
       }
     ]
   },
@@ -5913,20 +5885,12 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#d8e5fb"
-      },
-      {
         "name": "Green",
-        "hex": "#3ed53f"
+        "hex": "#29d329"
       },
       {
-        "name": "Brown",
-        "hex": "#0d1810"
-      },
-      {
-        "name": "Orange",
-        "hex": "#e1784e"
+        "name": "Black",
+        "hex": "#101512"
       }
     ]
   },
@@ -6048,24 +6012,16 @@
     ],
     "displayColors": [
       {
-        "name": "Red",
-        "hex": "#9f5150"
-      },
-      {
-        "name": "Gray",
-        "hex": "#aaa1b7"
-      },
-      {
         "name": "Purple",
-        "hex": "#887b9a"
+        "hex": "#a79dbb"
       },
       {
-        "name": "White",
-        "hex": "#c7c0d0"
+        "name": "Red",
+        "hex": "#a35056"
       },
       {
-        "name": "Brown",
-        "hex": "#2f1215"
+        "name": "Black",
+        "hex": "#2a2226"
       }
     ]
   },
@@ -6192,15 +6148,15 @@
     "displayColors": [
       {
         "name": "Gray",
-        "hex": "#b0b0ac"
+        "hex": "#c4c6bf"
       },
       {
         "name": "Orange",
-        "hex": "#b76a3b"
+        "hex": "#c47536"
       },
       {
-        "name": "White",
-        "hex": "#cfcfcd"
+        "name": "Black",
+        "hex": "#373a36"
       }
     ]
   },
@@ -6302,7 +6258,7 @@
     "displayColors": [
       {
         "name": "Orange",
-        "hex": "#df6932"
+        "hex": "#f3762b"
       }
     ]
   },
@@ -6439,11 +6395,11 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#b31c22"
+        "hex": "#b51725"
       },
       {
-        "name": "Brown",
-        "hex": "#45100f"
+        "name": "Black",
+        "hex": "#1d1b1b"
       }
     ]
   },
@@ -6570,19 +6526,19 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#ececeb"
+        "hex": "#efefeb"
       },
       {
-        "name": "Blue",
-        "hex": "#1d567a"
+        "name": "Green",
+        "hex": "#006074"
       },
       {
-        "name": "Brown",
-        "hex": "#0d3355"
+        "name": "Purple",
+        "hex": "#694597"
       },
       {
         "name": "Orange",
-        "hex": "#f2642d"
+        "hex": "#f8672b"
       }
     ]
   },
@@ -6695,8 +6651,20 @@
     ],
     "displayColors": [
       {
-        "name": "Brown",
-        "hex": "#190f0e"
+        "name": "Black",
+        "hex": "#1d1514"
+      },
+      {
+        "name": "Green",
+        "hex": "#267b69"
+      },
+      {
+        "name": "Blue",
+        "hex": "#2356a0"
+      },
+      {
+        "name": "Red",
+        "hex": "#a73032"
       }
     ]
   },
@@ -6795,20 +6763,12 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#e1dfde"
-      },
-      {
-        "name": "Gray",
-        "hex": "#8d8c8b"
-      },
-      {
-        "name": "Brown",
-        "hex": "#0b0c0b"
+        "name": "Silver",
+        "hex": "#c4c5c3"
       },
       {
         "name": "Black",
-        "hex": "#1a1a1a"
+        "hex": "#171818"
       }
     ]
   },
@@ -6923,20 +6883,16 @@
     ],
     "displayColors": [
       {
-        "name": "Gray",
-        "hex": "#8a8e91"
+        "name": "Blue",
+        "hex": "#00afd5"
       },
       {
-        "name": "Blue",
-        "hex": "#04adde"
+        "name": "Silver",
+        "hex": "#bfc1c2"
       },
       {
         "name": "Black",
         "hex": "#292929"
-      },
-      {
-        "name": "White",
-        "hex": "#d0d5d8"
       }
     ]
   },
@@ -7053,15 +7009,23 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#d5dadf"
-      },
-      {
-        "name": "Gray",
-        "hex": "#a2a5ab"
+        "hex": "#dbdfe4"
       },
       {
         "name": "Red",
-        "hex": "#a71e26"
+        "hex": "#b02029"
+      },
+      {
+        "name": "Green",
+        "hex": "#94a99a"
+      },
+      {
+        "name": "Silver",
+        "hex": "#abb0b5"
+      },
+      {
+        "name": "Gold",
+        "hex": "#baaa70"
       }
     ]
   },
@@ -7182,7 +7146,7 @@
     "displayColors": [
       {
         "name": "Beige",
-        "hex": "#c9ab94"
+        "hex": "#cfb69d"
       }
     ]
   },
@@ -7288,11 +7252,7 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#6374a5"
-      },
-      {
-        "name": "White",
-        "hex": "#bdc4dd"
+        "hex": "#6b80b8"
       }
     ]
   },
@@ -7418,11 +7378,11 @@
     "displayColors": [
       {
         "name": "Green",
-        "hex": "#53b254"
+        "hex": "#19a23c"
       },
       {
         "name": "Yellow",
-        "hex": "#e7e76e"
+        "hex": "#d8e662"
       }
     ]
   },
@@ -7550,12 +7510,8 @@
     ],
     "displayColors": [
       {
-        "name": "Gray",
-        "hex": "#aeaeae"
-      },
-      {
-        "name": "White",
-        "hex": "#d2d2d2"
+        "name": "Silver",
+        "hex": "#b8babc"
       }
     ]
   },
@@ -7660,11 +7616,11 @@
     "displayColors": [
       {
         "name": "Pink",
-        "hex": "#dd81c5"
+        "hex": "#e487c2"
       },
       {
         "name": "Purple",
-        "hex": "#985ebb"
+        "hex": "#64359d"
       }
     ]
   },
@@ -7771,11 +7727,15 @@
     "displayColors": [
       {
         "name": "Black",
-        "hex": "#27272a"
+        "hex": "#262628"
       },
       {
-        "name": "Brown",
-        "hex": "#3f1c22"
+        "name": "Red",
+        "hex": "#48222c"
+      },
+      {
+        "name": "White",
+        "hex": "#e9e6dd"
       }
     ]
   },
@@ -7869,19 +7829,15 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#813231"
+        "hex": "#8c2425"
       },
       {
         "name": "White",
-        "hex": "#dededd"
-      },
-      {
-        "name": "Gray",
-        "hex": "#9b9998"
+        "hex": "#e9e5da"
       },
       {
         "name": "Green",
-        "hex": "#689854"
+        "hex": "#386f32"
       }
     ]
   },
@@ -8003,15 +7959,15 @@
     "displayColors": [
       {
         "name": "Yellow",
-        "hex": "#e4ba4c"
-      },
-      {
-        "name": "Gray",
-        "hex": "#8f8f8c"
+        "hex": "#f0c646"
       },
       {
         "name": "Black",
-        "hex": "#1e1f20"
+        "hex": "#262727"
+      },
+      {
+        "name": "Gray",
+        "hex": "#a9aaa3"
       }
     ]
   },
@@ -8139,12 +8095,8 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#f7f7f7"
-      },
-      {
-        "name": "Gray",
-        "hex": "#999999"
+        "name": "Clear",
+        "hex": "#e9eeef"
       }
     ]
   },
@@ -8318,12 +8270,16 @@
     ],
     "displayColors": [
       {
-        "name": "Brown",
-        "hex": "#29181c"
+        "name": "Blue",
+        "hex": "#152638"
       },
       {
-        "name": "Red",
-        "hex": "#852d22"
+        "name": "Orange",
+        "hex": "#d27036"
+      },
+      {
+        "name": "Gold",
+        "hex": "#a68d54"
       }
     ]
   },
@@ -8410,7 +8366,7 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#0d88cc"
+        "hex": "#008ac2"
       }
     ]
   },
@@ -8536,7 +8492,7 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#c30b0d"
+        "hex": "#c6000d"
       }
     ]
   },
@@ -8661,7 +8617,7 @@
     "displayColors": [
       {
         "name": "Orange",
-        "hex": "#da4e1e"
+        "hex": "#e45419"
       }
     ]
   },
@@ -8744,11 +8700,19 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#e2e5e7"
+        "hex": "#e8ebe9"
       },
       {
-        "name": "Gray",
-        "hex": "#9ca1a3"
+        "name": "Black",
+        "hex": "#303437"
+      },
+      {
+        "name": "Gold",
+        "hex": "#a88b55"
+      },
+      {
+        "name": "Red",
+        "hex": "#b51a20"
       }
     ]
   },
@@ -8845,19 +8809,23 @@
     "displayColors": [
       {
         "name": "Beige",
-        "hex": "#e5bb95"
+        "hex": "#e8c49c"
       },
       {
         "name": "Green",
-        "hex": "#619a49"
+        "hex": "#669943"
       },
       {
         "name": "Brown",
-        "hex": "#4f2c1e"
+        "hex": "#583322"
       },
       {
         "name": "Yellow",
-        "hex": "#f7bc41"
+        "hex": "#f8c742"
+      },
+      {
+        "name": "Red",
+        "hex": "#9c3027"
       }
     ]
   },
@@ -8954,24 +8922,20 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#e0d6d1"
-      },
-      {
-        "name": "Beige",
-        "hex": "#a88e81"
-      },
-      {
-        "name": "Brown",
-        "hex": "#363e0d"
-      },
-      {
-        "name": "Gray",
-        "hex": "#ad9f9a"
+        "name": "Silver",
+        "hex": "#d7ceca"
       },
       {
         "name": "Green",
-        "hex": "#7a8729"
+        "hex": "#739828"
+      },
+      {
+        "name": "Black",
+        "hex": "#343532"
+      },
+      {
+        "name": "White",
+        "hex": "#eeece8"
       }
     ]
   },
@@ -9093,7 +9057,7 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#e44238"
+        "hex": "#f0463b"
       }
     ]
   },
@@ -9192,23 +9156,19 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#2c86ab"
+        "hex": "#238ca4"
       },
       {
-        "name": "Brown",
-        "hex": "#492931"
-      },
-      {
-        "name": "Pink",
-        "hex": "#773c53"
+        "name": "Purple",
+        "hex": "#63354b"
       },
       {
         "name": "Yellow",
-        "hex": "#b0a03b"
+        "hex": "#b7ac37"
       },
       {
         "name": "Red",
-        "hex": "#af242f"
+        "hex": "#c52d3d"
       }
     ]
   },
@@ -9295,15 +9255,15 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#619599"
+        "hex": "#639da2"
       },
       {
         "name": "Yellow",
-        "hex": "#ddd56a"
+        "hex": "#e3d865"
       },
       {
-        "name": "White",
-        "hex": "#cee1df"
+        "name": "Green",
+        "hex": "#167267"
       }
     ]
   },
@@ -9408,24 +9368,20 @@
     ],
     "displayColors": [
       {
-        "name": "Gray",
-        "hex": "#5b5a5b"
+        "name": "Gold",
+        "hex": "#bdad7b"
       },
       {
         "name": "Black",
-        "hex": "#37363a"
-      },
-      {
-        "name": "Yellow",
-        "hex": "#c9b48a"
+        "hex": "#303034"
       },
       {
         "name": "White",
-        "hex": "#ebe9e5"
+        "hex": "#e9e7dc"
       },
       {
-        "name": "Beige",
-        "hex": "#b29770"
+        "name": "Red",
+        "hex": "#d14f36"
       }
     ]
   },
@@ -9538,11 +9494,11 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#e35247"
+        "hex": "#eb5148"
       },
       {
         "name": "White",
-        "hex": "#f9e9e9"
+        "hex": "#f5eddf"
       }
     ]
   },
@@ -9674,16 +9630,12 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#f2f2f2"
-      },
-      {
         "name": "Green",
-        "hex": "#3c9b33"
+        "hex": "#268c2a"
       },
       {
-        "name": "Gray",
-        "hex": "#9da09e"
+        "name": "Clear",
+        "hex": "#e8edec"
       }
     ]
   },
@@ -9795,11 +9747,11 @@
     "displayColors": [
       {
         "name": "Orange",
-        "hex": "#ed9c29"
+        "hex": "#f3a124"
       },
       {
         "name": "Blue",
-        "hex": "#294094"
+        "hex": "#273e91"
       }
     ]
   },
@@ -9906,15 +9858,11 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#3a4d9a"
+        "hex": "#344598"
       },
       {
-        "name": "Gray",
-        "hex": "#b49b9d"
-      },
-      {
-        "name": "Red",
-        "hex": "#a28584"
+        "name": "Beige",
+        "hex": "#b8a29c"
       }
     ]
   },
@@ -10036,12 +9984,12 @@
     ],
     "displayColors": [
       {
-        "name": "Brown",
-        "hex": "#0f1013"
+        "name": "Black",
+        "hex": "#121416"
       },
       {
-        "name": "Black",
-        "hex": "#1b1c1e"
+        "name": "Yellow",
+        "hex": "#e2d753"
       }
     ]
   },
@@ -10170,23 +10118,19 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#94d9e9"
+        "hex": "#8cd5df"
       },
       {
         "name": "Pink",
-        "hex": "#f7aecc"
+        "hex": "#f1a7c8"
       },
       {
         "name": "Orange",
-        "hex": "#f9855b"
+        "hex": "#fc8758"
       },
       {
         "name": "White",
-        "hex": "#eff0df"
-      },
-      {
-        "name": "Red",
-        "hex": "#f09493"
+        "hex": "#f0f0dc"
       }
     ]
   },
@@ -10199,110 +10143,101 @@
       "Personal care"
     ],
     "description": "A small porcelain stand that holds one toothbrush upright. Its rounded shape keeps the bathroom counter simple, with an open base that is easy to clean.",
-    "variantName": "Yellow / 4549738986218",
-    "productUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
-    "image": "img/objects/cutouts/muji-porcelain-toothbrush-stand.webp",
-    "width": 813,
-    "height": 813,
+    "variantName": "Blue / 4549738912620",
+    "productUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+    "image": "img/objects/cutouts/muji-toothbrush-blue.webp",
+    "width": 1348,
+    "height": 1348,
     "imageVariants": [
       {
-        "image": "img/objects/cutouts/muji-porcelain-toothbrush-stand-480.webp",
-        "width": 480
-      },
-      {
-        "image": "img/objects/cutouts/muji-porcelain-toothbrush-stand.webp",
-        "width": 813
+        "image": "img/objects/cutouts/muji-toothbrush-blue.webp",
+        "width": 1348
       }
     ],
-    "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
-    "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_1260.jpg",
+    "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_org.jpg?v=1706223546",
     "gallery": [
       {
-        "image": "img/objects/gallery/muji-porcelain-toothbrush-stand-1.webp",
-        "width": 1260,
-        "height": 1260,
-        "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
-        "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_1260.jpg",
+        "image": "img/objects/gallery/muji-toothbrush-blue-1.webp",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_org.jpg?v=1706223546",
         "nativeSourceDimensions": [
-          1260,
-          1260
+          2000,
+          2000
         ],
-        "framing": "Square stage preserves complete original photograph without cropping"
+        "framing": "Complete official square photograph, no crop or enlargement"
       },
       {
-        "image": "img/objects/gallery/muji-porcelain-toothbrush-stand-2.webp",
-        "width": 1260,
-        "height": 1260,
-        "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
-        "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_01_1260.jpg",
+        "image": "img/objects/gallery/muji-toothbrush-blue-2.webp",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_01_org.jpg?v=1706223546",
         "nativeSourceDimensions": [
-          1260,
-          1260
+          2000,
+          2000
         ],
-        "framing": "Square stage preserves complete original photograph without cropping"
+        "framing": "Complete official square photograph, no crop or enlargement"
       },
       {
-        "image": "img/objects/gallery/muji-porcelain-toothbrush-stand-3.webp",
-        "width": 1260,
-        "height": 1260,
-        "sourceUrl": "https://www.muji.com/my/products/cmdty/detail/4549738986218",
-        "sourceImageUrl": "https://img.muji.net/img/item/4549738986218_02_1260.jpg",
+        "image": "img/objects/gallery/muji-toothbrush-blue-3.webp",
+        "width": 2000,
+        "height": 2000,
+        "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_02_org.jpg?v=1706223546",
         "nativeSourceDimensions": [
-          1260,
-          1260
+          2000,
+          2000
         ],
-        "framing": "Square stage preserves complete original photograph without cropping"
+        "framing": "Complete official square photograph, no crop or enlargement"
       }
     ],
     "usageCaveat": "Source-credited original product photography for private preview; image rights clearance not verified.",
     "colorwayEvidence": {
-      "basis": "Owner-linked variant retained; no iconic color claim.",
-      "source": "https://www.muji.com/my/products/cmdty/detail/4549738986218"
+      "status": "owner_exception",
+      "basis": "Owner requested a better color and main photo on 1 November 2026. Selected official Blue for separation from the beige canvas; no iconic/original-launch claim.",
+      "source": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966"
     },
     "imageTreatment": {
       "background": "transparent",
-      "method": "macOS Vision alpha-only background mask",
+      "method": "Border-connected near-white background mask with 0.5px alpha feather; original RGB preserved",
       "nativeSourceDimensions": [
-        1260,
-        1260
+        2000,
+        2000
       ],
-      "nativeMaster": "img/objects/cutouts/muji-porcelain-toothbrush-stand-native.png",
+      "nativeMaster": "img/objects/cutouts/muji-toothbrush-blue-native.png",
       "cropBoundingBox": [
-        262,
-        308,
-        994,
-        933
+        386,
+        505,
+        1599,
+        1513
       ],
       "subjectPixels": [
-        732,
-        625
+        1213,
+        1008
       ],
       "opticalFill": 0.9,
       "upscaled": false,
       "rgbExact": true,
-      "sourceSHA256": "ffc3a89d27b97fcbd69eba3aeb7d0d5d0ecf3566017191a3cd4223560d4a1e59"
+      "sourceSHA256": "b512949d2d075f3e76e3d80d9bf5847f2d9bc6a5f8cf171a4296f56b71882e7b"
     },
     "catalogAudit": {
-      "reviewed": "2026-10-11",
+      "reviewed": "2026-11-01",
       "notes": [
-        "Native originals retained; transparent primary checked on beige and dark brown. Shared reversible warm canvas grade."
+        "Official blue 2000px original replaces yellow 1260px photo. Original source files retained.",
+        "Native cutout RGB matches original exactly. Three distinct official views: product, toothbrush lineup, bathroom setting."
       ],
-      "sourceLimitations": [
-        "Native MUJI originals are 1260px; the product occupies only part of the studio frame. Retained without enlargement."
-      ]
+      "sourceLimitations": []
     },
     "colors": [
-      "Orange",
-      "Yellow"
+      "Blue"
     ],
     "displayColors": [
       {
-        "name": "Orange",
-        "hex": "#dbad7a"
-      },
-      {
-        "name": "Yellow",
-        "hex": "#f4dfb1"
+        "name": "Blue",
+        "hex": "#a8c7d2"
       }
     ]
   },
@@ -10417,7 +10352,11 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#af111a"
+        "hex": "#bb1425"
+      },
+      {
+        "name": "Pink",
+        "hex": "#eabfba"
       }
     ]
   },
@@ -10547,11 +10486,11 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#648994"
+        "hex": "#638e96"
       },
       {
         "name": "Beige",
-        "hex": "#c9a58c"
+        "hex": "#d0b091"
       }
     ]
   },
@@ -10658,16 +10597,24 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#dcd7d8"
+        "name": "Clear",
+        "hex": "#e7ebec"
       },
       {
-        "name": "Gray",
-        "hex": "#b0acb1"
+        "name": "Black",
+        "hex": "#303333"
+      },
+      {
+        "name": "Blue",
+        "hex": "#273b94"
       },
       {
         "name": "Red",
-        "hex": "#d4969b"
+        "hex": "#bc3042"
+      },
+      {
+        "name": "Green",
+        "hex": "#1d9989"
       }
     ]
   },
@@ -10771,16 +10718,8 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#d9e6d8"
-      },
-      {
         "name": "Green",
-        "hex": "#548064"
-      },
-      {
-        "name": "Brown",
-        "hex": "#294932"
+        "hex": "#2c674b"
       }
     ]
   },
@@ -10877,15 +10816,11 @@
     "displayColors": [
       {
         "name": "Yellow",
-        "hex": "#e9d4a7"
+        "hex": "#eee0b1"
       },
       {
         "name": "Orange",
-        "hex": "#ebbe8d"
-      },
-      {
-        "name": "Red",
-        "hex": "#ec5133"
+        "hex": "#f5613a"
       }
     ]
   },
@@ -10986,11 +10921,7 @@
     "displayColors": [
       {
         "name": "Black",
-        "hex": "#2c2a2e"
-      },
-      {
-        "name": "Gray",
-        "hex": "#58565c"
+        "hex": "#303036"
       }
     ]
   },
@@ -11114,19 +11045,15 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#d2d1c3"
-      },
-      {
-        "name": "Gray",
-        "hex": "#c2bcab"
-      },
-      {
-        "name": "Green",
-        "hex": "#c6db7c"
+        "hex": "#e3e3d5"
       },
       {
         "name": "Yellow",
-        "hex": "#c7cc43"
+        "hex": "#d0df1e"
+      },
+      {
+        "name": "Clear",
+        "hex": "#dfe1da"
       }
     ]
   },
@@ -11199,16 +11126,16 @@
     ],
     "displayColors": [
       {
-        "name": "Gray",
-        "hex": "#979896"
+        "name": "Silver",
+        "hex": "#b6b8b7"
       },
       {
         "name": "White",
-        "hex": "#dfe2dc"
+        "hex": "#e5e7dd"
       },
       {
-        "name": "Brown",
-        "hex": "#110d0c"
+        "name": "Black",
+        "hex": "#242727"
       }
     ]
   },
@@ -11274,15 +11201,15 @@
     "displayColors": [
       {
         "name": "Yellow",
-        "hex": "#d5a50d"
+        "hex": "#e3b609"
       },
       {
         "name": "Green",
-        "hex": "#727a30"
+        "hex": "#9a9e4b"
       },
       {
-        "name": "Brown",
-        "hex": "#454422"
+        "name": "Black",
+        "hex": "#2a2b23"
       }
     ]
   },
@@ -11354,12 +11281,16 @@
     ],
     "displayColors": [
       {
-        "name": "Red",
-        "hex": "#f97e71"
+        "name": "Orange",
+        "hex": "#ff873e"
       },
       {
-        "name": "Orange",
-        "hex": "#fa864a"
+        "name": "Red",
+        "hex": "#f8756f"
+      },
+      {
+        "name": "Black",
+        "hex": "#303032"
       }
     ]
   },
@@ -11448,11 +11379,11 @@
     "displayColors": [
       {
         "name": "Red",
-        "hex": "#d13926"
+        "hex": "#c43b22"
       },
       {
         "name": "Orange",
-        "hex": "#f3754c"
+        "hex": "#ef7143"
       }
     ]
   },
@@ -11547,19 +11478,19 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#798faf"
+        "hex": "#b2d1da"
+      },
+      {
+        "name": "Blue",
+        "hex": "#303b83"
       },
       {
         "name": "White",
-        "hex": "#c7d7da"
+        "hex": "#e5e8e6"
       },
       {
         "name": "Gray",
-        "hex": "#939da1"
-      },
-      {
-        "name": "Brown",
-        "hex": "#463c39"
+        "hex": "#8a9799"
       }
     ]
   },
@@ -11656,7 +11587,7 @@
     "displayColors": [
       {
         "name": "Green",
-        "hex": "#19b620"
+        "hex": "#15b51f"
       }
     ]
   },
@@ -11747,11 +11678,7 @@
     "displayColors": [
       {
         "name": "Black",
-        "hex": "#232223"
-      },
-      {
-        "name": "Gray",
-        "hex": "#4d4b4c"
+        "hex": "#2a2a2a"
       }
     ]
   },
@@ -11856,15 +11783,11 @@
     "displayColors": [
       {
         "name": "Yellow",
-        "hex": "#f5b727"
+        "hex": "#ffbf16"
       },
       {
-        "name": "Beige",
-        "hex": "#b09270"
-      },
-      {
-        "name": "White",
-        "hex": "#f6eee4"
+        "name": "Gold",
+        "hex": "#bbaa7c"
       }
     ]
   },
@@ -11965,11 +11888,15 @@
     "displayColors": [
       {
         "name": "White",
-        "hex": "#edeeed"
+        "hex": "#e9e9e6"
       },
       {
         "name": "Orange",
-        "hex": "#f24d14"
+        "hex": "#f4591d"
+      },
+      {
+        "name": "Black",
+        "hex": "#242625"
       }
     ]
   },
@@ -12043,7 +11970,7 @@
     "displayColors": [
       {
         "name": "Blue",
-        "hex": "#819cc0"
+        "hex": "#81a3c7"
       }
     ]
   },
@@ -12117,11 +12044,7 @@
     "displayColors": [
       {
         "name": "Yellow",
-        "hex": "#eef253"
-      },
-      {
-        "name": "Green",
-        "hex": "#def530"
+        "hex": "#e9f62e"
       }
     ]
   },
@@ -12196,16 +12119,20 @@
     ],
     "displayColors": [
       {
-        "name": "White",
-        "hex": "#dfe2e6"
-      },
-      {
-        "name": "Gray",
-        "hex": "#7b7f84"
+        "name": "Silver",
+        "hex": "#bec4c8"
       },
       {
         "name": "Orange",
-        "hex": "#d1895d"
+        "hex": "#e77735"
+      },
+      {
+        "name": "Beige",
+        "hex": "#c9ad8b"
+      },
+      {
+        "name": "Black",
+        "hex": "#303337"
       }
     ]
   },
@@ -12273,19 +12200,19 @@
     "displayColors": [
       {
         "name": "Orange",
-        "hex": "#c96b42"
+        "hex": "#bb5e3d"
       },
       {
         "name": "Black",
-        "hex": "#20201e"
-      },
-      {
-        "name": "Red",
-        "hex": "#d52a32"
+        "hex": "#232321"
       },
       {
         "name": "White",
-        "hex": "#eeeae0"
+        "hex": "#ece8dc"
+      },
+      {
+        "name": "Red",
+        "hex": "#d32636"
       }
     ],
     "qualityNote": "Official original CDN photographs are 1000 × 1000, below the 1200px catalog target. Native files retained losslessly without enlargement.",
@@ -12348,11 +12275,11 @@
     "displayColors": [
       {
         "name": "Beige",
-        "hex": "#c7ab83"
+        "hex": "#c7a47d"
       },
       {
         "name": "Brown",
-        "hex": "#805b3d"
+        "hex": "#7f5539"
       }
     ],
     "variantName": "Natural cedar — designer’s 2008 Pick-up",

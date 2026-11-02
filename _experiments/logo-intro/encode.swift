@@ -8,7 +8,8 @@ let args = CommandLine.arguments
 let directory = URL(fileURLWithPath: args[1])
 let destination = URL(fileURLWithPath: args[2])
 let count = Int(args[3])!, fps = Int32(args[4])!
-let width = 1080, height = 1080
+let width = args.count > 5 ? Int(args[5])! : 1080
+let height = args.count > 6 ? Int(args[6])! : 1080
 let writer = try AVAssetWriter(outputURL: destination, fileType: .mp4)
 writer.shouldOptimizeForNetworkUse = true
 let input = AVAssetWriterInput(mediaType: .video, outputSettings: [
@@ -17,7 +18,7 @@ let input = AVAssetWriterInput(mediaType: .video, outputSettings: [
     AVVideoColorPropertiesKey: [AVVideoColorPrimariesKey: AVVideoColorPrimaries_ITU_R_709_2,
         AVVideoTransferFunctionKey: AVVideoTransferFunction_ITU_R_709_2,
         AVVideoYCbCrMatrixKey: AVVideoYCbCrMatrix_ITU_R_709_2],
-    AVVideoCompressionPropertiesKey: [AVVideoAverageBitRateKey: 16_000_000,
+    AVVideoCompressionPropertiesKey: [AVVideoAverageBitRateKey: height > width ? 24_000_000 : 16_000_000,
         AVVideoProfileLevelKey: AVVideoProfileLevelH264HighAutoLevel,
         AVVideoMaxKeyFrameIntervalKey: Int(fps), AVVideoExpectedSourceFrameRateKey: Int(fps)]
 ])
@@ -40,6 +41,7 @@ for index in 0..<count {
         let url = directory.appendingPathComponent(String(format: "%05d.png", index))
         guard let source = CGImageSourceCreateWithURL(url as CFURL, nil),
               let image = CGImageSourceCreateImageAtIndex(source, 0, nil) else { fatalError("Missing frame \(index)") }
+        guard image.width == width && image.height == height else { fatalError("Frame dimensions do not match canvas") }
         var optional: CVPixelBuffer?
         guard CVPixelBufferPoolCreatePixelBuffer(nil, adaptor.pixelBufferPool!, &optional) == kCVReturnSuccess,
               let buffer = optional else { fatalError("Pixel buffer allocation failed") }

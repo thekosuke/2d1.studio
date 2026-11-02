@@ -70,7 +70,7 @@ body.home-page>.language-switch.on-studio{--toggle-dark-ground:var(--studio-back
 :is(.page-nav,.work-studio-nav) :is(a,button):focus-visible:not([aria-current]):not(.is-on-diagram){color:inherit}
 :is(.page-nav,.work-studio-nav) :is(a,button):focus-visible::before{width:6px}
 :is(.page-nav,.work-studio-nav) :is(a,button):focus-visible .nav-label{--nav-sweep:1;transform:translateX(12px);transition:transform 200ms ease,--nav-sweep 200ms ease}
-body.mobile-navigation-ready .mobile-nav-panel :is(a,button):focus-visible .nav-label{transform:none;background:none;-webkit-text-fill-color:var(--beige)}
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){body.mobile-navigation-ready .mobile-nav-panel :is(a,button):focus-visible .nav-label{transform:none;background:none;-webkit-text-fill-color:var(--cranberry-brown)!important}}
 @media(prefers-reduced-motion:reduce){:is(.page-nav,.work-studio-nav) .nav-label{transition:none!important}}
 @media(forced-colors:active){:is(.page-nav,.work-studio-nav) .nav-label{background:none;-webkit-text-fill-color:currentColor}}
 
