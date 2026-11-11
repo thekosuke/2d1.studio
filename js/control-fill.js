@@ -1,7 +1,8 @@
 /* Explicit allowlist: do not add navigation, language, text CTAs or media controls. */
 (() => {
   const groups = [
-    ['.objects-dialog-link,.contact-page .contact-send', 'red'],
+    ['.objects-dialog-link', 'red'],
+    ['.contact-page .contact-send', 'outline-red'],
     ['.objects-info', 'white'],
     ['.tote-spec-trigger', 'beige'],
     ['.objects-save', 'save'],
@@ -9,7 +10,7 @@
     ['.objects-search-suggestions button', 'white'],
     ['.objects-search-chip-remove', 'chip'],
     ['#contact .chip > span', 'choice'],
-    ['.objects-zoom button', 'white'],
+    ['.objects-zoom button', 'beige'],
     ['.objects-reset', 'utility'],
     ['.objects-save-shortcut', 'brown']
   ];
@@ -17,11 +18,11 @@
   function measure(unit) {
     if(unit.dataset.controlFill === 'close' && unit.parentElement) unit.style.setProperty('--control-close-ink',getComputedStyle(unit.parentElement).color);
     const box = unit.getBoundingClientRect();
-    if (!box.width) return;
-    unit.style.setProperty('--control-width', box.width + 'px');
-    unit.style.setProperty('--control-marker-offset', (parseFloat(getComputedStyle(unit).paddingLeft) + parseFloat(getComputedStyle(unit).borderLeftWidth)) + 'px');
-    unit.querySelectorAll('[data-control-icon]').forEach(icon => {
-      icon.style.setProperty('--control-offset', (icon.getBoundingClientRect().left - box.left) + 'px');
+    if (!box.height) return;
+    unit.style.setProperty('--control-height', box.height + 'px');
+    unit.style.setProperty('--control-marker-offset', ((box.height - parseFloat(getComputedStyle(unit, '::before').height)) / 2) + 'px');
+    unit.querySelectorAll('[data-control-icon],.send-arrow').forEach(icon => {
+      icon.style.setProperty('--control-offset', (box.bottom - icon.getBoundingClientRect().bottom) + 'px');
     });
   }
   const resize = new ResizeObserver(entries => entries.forEach(({target}) => measure(target)));

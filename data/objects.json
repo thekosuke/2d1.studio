@@ -549,7 +549,8 @@
         "width": 1200,
         "height": 1440,
         "sourceUrl": "https://www.beams.co.jp/item/bprbeams/hobby/33740250348/",
-        "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33740250348/O/33740250348_D_9.jpg"
+        "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33740250348/O/33740250348_D_9.jpg",
+        "cropCreditStrip": true
       },
       {
         "image": "img/objects/gallery/bruna-orange-native-10.jpg",
@@ -570,7 +571,8 @@
         "width": 1200,
         "height": 1440,
         "sourceUrl": "https://www.beams.co.jp/en/item/bprbeams/hobby/33740250348/",
-        "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33740250348/O/33740250348_D_1.jpg"
+        "sourceImageUrl": "https://cdn.beams.co.jp/img/goods/33740250348/O/33740250348_D_1.jpg",
+        "cropCreditStrip": true
       }
     ],
     "imageTreatment": {
@@ -640,7 +642,8 @@
         "name": "Blue",
         "hex": "#18598b"
       }
-    ]
+    ],
+    "illustrationCredit": "Illustrations Dick Bruna · © copyright Mercis bv, 1953–2025 · www.miffy.com"
   },
   {
     "id": "playforever-viglietta-jasper",
@@ -3408,13 +3411,6 @@
     "usageCaveat": "Source-credited product photography for private preview; no unrestricted-use license verified.",
     "gallery": [
       {
-        "image": "img/objects/lego-piranha-plant-71426.jpg",
-        "width": 1600,
-        "height": 1522,
-        "sourceUrl": "https://www.lego.com/ja-jp/product/piranha-plant-71426",
-        "sourceImageUrl": "https://www.lego.com/cdn/cs/set/assets/blt8ab7d775559f5d94/71426_alt3.jpg?width=1600&quality=90"
-      },
-      {
         "image": "img/objects/gallery/lego-piranha-plant-71426-2.webp",
         "width": 1369,
         "height": 1600,
@@ -5551,27 +5547,6 @@
         "height": 2560,
         "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
         "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/07b0e2ae1da9c9660f1840a048e2867439d41f1c-2560x2560.jpg"
-      },
-      {
-        "image": "img/objects/gallery/cliik-press-glass-family-pack-2.jpg",
-        "width": 1600,
-        "height": 1600,
-        "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
-        "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/ac5e287cfc29f74af5f5a503912316e5b1bfb613-2560x2560.jpg?w=1600&fm=jpg&q=85"
-      },
-      {
-        "image": "img/objects/gallery/cliik-press-glass-family-pack-3.jpg",
-        "width": 1600,
-        "height": 1600,
-        "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
-        "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/d8b549496deb174e1fa1a845f6e7f60d0f8cd4dd-2560x2560.jpg?w=1600&fm=jpg&q=85"
-      },
-      {
-        "image": "img/objects/gallery/cliik-press-glass-family-pack-4.jpg",
-        "width": 1600,
-        "height": 1600,
-        "sourceUrl": "https://cliikhome.com/products/press-glass-family-pack?variant=51035173585063",
-        "sourceImageUrl": "https://cdn.sanity.io/images/mxe7bwg3/phase_two/eededf0095dbb9ba58ad29580af09ca939aa99f1-2560x2560.jpg?w=1600&fm=jpg&q=85"
       }
     ],
     "imageVariants": [
@@ -5819,18 +5794,19 @@
         "sourceImageUrl": "https://buy.freckle.tech/cdn/shop/files/green_freckle.png?v=1786052036"
       },
       {
+        "image": "img/objects/gallery/freckle-phone-green-lanyard.png",
+        "width": 1200,
+        "height": 1600,
+        "sourceUrl": "https://freckle.tech/",
+        "alt": "Green Freckle Phone with pink and blue charms, worn on a green lanyard.",
+        "qualityNote": "Owner-supplied lifestyle photograph; original retained unchanged."
+      },
+      {
         "image": "img/objects/gallery/freckle-phone-orange-audit-d1bd39581b.jpg",
         "width": 4196,
         "height": 5595,
         "sourceUrl": "https://freckle.tech/",
         "sourceImageUrl": "https://cdn.sanity.io/images/9r2o5tx8/production/82442ad7248568a6ec731b87f5d7e7bd710f4f61-4196x5595.jpg"
-      },
-      {
-        "image": "img/objects/gallery/freckle-lifestyle-owner-3.png",
-        "width": 1080,
-        "height": 1350,
-        "sourceUrl": "https://freckle.tech/",
-        "qualityNote": "Owner-supplied authentic lifestyle photograph; retained unchanged."
       },
       {
         "image": "img/objects/gallery/freckle-lifestyle-owner-4.png",
@@ -10135,113 +10111,6 @@
     ]
   },
   {
-    "id": "muji-porcelain-toothbrush-stand",
-    "name": "Porcelain Toothbrush Stand",
-    "brand": "MUJI",
-    "category": "living",
-    "tags": [
-      "Personal care"
-    ],
-    "description": "A small porcelain stand that holds one toothbrush upright. Its rounded shape keeps the bathroom counter simple, with an open base that is easy to clean.",
-    "variantName": "Blue / 4549738912620",
-    "productUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
-    "image": "img/objects/cutouts/muji-toothbrush-blue.webp",
-    "width": 1348,
-    "height": 1348,
-    "imageVariants": [
-      {
-        "image": "img/objects/cutouts/muji-toothbrush-blue.webp",
-        "width": 1348
-      }
-    ],
-    "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
-    "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_org.jpg?v=1706223546",
-    "gallery": [
-      {
-        "image": "img/objects/gallery/muji-toothbrush-blue-1.webp",
-        "width": 2000,
-        "height": 2000,
-        "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_org.jpg?v=1706223546",
-        "nativeSourceDimensions": [
-          2000,
-          2000
-        ],
-        "framing": "Complete official square photograph, no crop or enlargement"
-      },
-      {
-        "image": "img/objects/gallery/muji-toothbrush-blue-2.webp",
-        "width": 2000,
-        "height": 2000,
-        "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_01_org.jpg?v=1706223546",
-        "nativeSourceDimensions": [
-          2000,
-          2000
-        ],
-        "framing": "Complete official square photograph, no crop or enlargement"
-      },
-      {
-        "image": "img/objects/gallery/muji-toothbrush-blue-3.webp",
-        "width": 2000,
-        "height": 2000,
-        "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
-        "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_02_org.jpg?v=1706223546",
-        "nativeSourceDimensions": [
-          2000,
-          2000
-        ],
-        "framing": "Complete official square photograph, no crop or enlargement"
-      }
-    ],
-    "usageCaveat": "Source-credited original product photography for private preview; image rights clearance not verified.",
-    "colorwayEvidence": {
-      "status": "owner_exception",
-      "basis": "Owner requested a better color and main photo on 1 November 2026. Selected official Blue for separation from the beige canvas; no iconic/original-launch claim.",
-      "source": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966"
-    },
-    "imageTreatment": {
-      "background": "transparent",
-      "method": "Border-connected near-white background mask with 0.5px alpha feather; original RGB preserved",
-      "nativeSourceDimensions": [
-        2000,
-        2000
-      ],
-      "nativeMaster": "img/objects/cutouts/muji-toothbrush-blue-native.png",
-      "cropBoundingBox": [
-        386,
-        505,
-        1599,
-        1513
-      ],
-      "subjectPixels": [
-        1213,
-        1008
-      ],
-      "opticalFill": 0.9,
-      "upscaled": false,
-      "rgbExact": true,
-      "sourceSHA256": "b512949d2d075f3e76e3d80d9bf5847f2d9bc6a5f8cf171a4296f56b71882e7b"
-    },
-    "catalogAudit": {
-      "reviewed": "2026-11-01",
-      "notes": [
-        "Official blue 2000px original replaces yellow 1260px photo. Original source files retained.",
-        "Native cutout RGB matches original exactly. Three distinct official views: product, toothbrush lineup, bathroom setting."
-      ],
-      "sourceLimitations": []
-    },
-    "colors": [
-      "Blue"
-    ],
-    "displayColors": [
-      {
-        "name": "Blue",
-        "hex": "#a8c7d2"
-      }
-    ]
-  },
-  {
     "id": "best-years-knitted-triceratops",
     "name": "Knitted Triceratops",
     "brand": "Best Years",
@@ -10615,111 +10484,6 @@
       {
         "name": "Green",
         "hex": "#1d9989"
-      }
-    ]
-  },
-  {
-    "id": "actus-deco-dot-photo-frame",
-    "name": "DECO Dot Photo Frame 5×7",
-    "brand": "ACTUS",
-    "category": "home",
-    "tags": [
-      "Home"
-    ],
-    "description": "A glossy dot-framed picture holder with an easel back for portrait or landscape display.",
-    "productUrl": "https://online.actus-interior.com/item/2415508/",
-    "sourceUrl": "https://online.actus-interior.com/item/2415508/",
-    "sourceImageUrl": "https://online.actus-interior.com/contents/images/goods/detail/L/c83/24155083_01_new.jpg",
-    "image": "img/objects/cutouts/actus-deco-dot-photo-frame.webp",
-    "width": 858,
-    "height": 858,
-    "variantName": "Green",
-    "gallery": [
-      {
-        "image": "img/objects/gallery/actus-deco-dot-photo-frame-1.webp",
-        "width": 900,
-        "height": 900,
-        "nativeOriginal": "img/objects/gallery/actus-deco-dot-photo-frame-native-1.jpg",
-        "nativeSourceDimensions": [
-          900,
-          900
-        ],
-        "sourceUrl": "https://online.actus-interior.com/item/2415508/",
-        "sourceImageUrl": "https://online.actus-interior.com/contents/images/goods/detail/L/c83/24155083_01_new.jpg"
-      },
-      {
-        "image": "img/objects/gallery/actus-deco-dot-photo-frame-2.webp",
-        "width": 900,
-        "height": 900,
-        "nativeOriginal": "img/objects/gallery/actus-deco-dot-photo-frame-native-2.jpg",
-        "nativeSourceDimensions": [
-          900,
-          900
-        ],
-        "sourceUrl": "https://online.actus-interior.com/item/2415508/",
-        "sourceImageUrl": "https://online.actus-interior.com/contents/images/goods/detail/L/9d2/24155083_04_new.jpg"
-      },
-      {
-        "image": "img/objects/gallery/actus-deco-dot-photo-frame-3.webp",
-        "width": 900,
-        "height": 900,
-        "nativeOriginal": "img/objects/gallery/actus-deco-dot-photo-frame-native-3.jpg",
-        "nativeSourceDimensions": [
-          900,
-          900
-        ],
-        "sourceUrl": "https://online.actus-interior.com/item/2415508/",
-        "sourceImageUrl": "https://online.actus-interior.com/contents/images/goods/detail/L/d8e/24155083_06_new.jpg"
-      }
-    ],
-    "imageVariants": [
-      {
-        "image": "img/objects/cutouts/actus-deco-dot-photo-frame.webp",
-        "width": 858
-      },
-      {
-        "image": "img/objects/cutouts/actus-deco-dot-photo-frame-480.webp",
-        "width": 480
-      }
-    ],
-    "usageCaveat": "Source-credited product photography for private preview; owner shop photographs retained.",
-    "imageTreatment": {
-      "background": "transparent",
-      "method": "Native RGB unchanged; local alpha-only foreground mask; native square framing without enlargement.",
-      "upscaled": false,
-      "subjectPixels": [
-        472,
-        738
-      ],
-      "nativeOriginal": "img/objects/cutouts/actus-deco-dot-photo-frame-native.png"
-    },
-    "colorwayEvidence": {
-      "status": "owner_exception",
-      "findings": [
-        {
-          "url": "https://online.actus-interior.com/item/2415508/",
-          "finding": "Variant matches the owner-supplied photograph; cat on right explicitly selected."
-        }
-      ]
-    },
-    "catalogAudit": {
-      "reviewed": "2026-10-11",
-      "notes": [
-        "Product identity verified against official retailer/manufacturer page; source photos visually reviewed. Alpha-only RGB comparison passes."
-      ],
-      "sourceLimitations": [
-        "ACTUS official originals are 900px; owner shop photograph is 1024px. Retained without enlargement."
-      ]
-    },
-    "colors": [
-      "Green",
-      "White",
-      "Black"
-    ],
-    "displayColors": [
-      {
-        "name": "Green",
-        "hex": "#2c674b"
       }
     ]
   },
@@ -12224,74 +11988,6 @@
         816,
         724
       ]
-    }
-  },
-  {
-    "id": "tobeus-pick-up",
-    "name": "Pick-up",
-    "brand": "Tobeus",
-    "category": "living",
-    "tags": [
-      "Toys"
-    ],
-    "description": "A wooden pickup by Odo Fioravanti, carved from a single block of cedar and made by hand in Italy.",
-    "productUrl": "https://www.fioravanti.eu/project/Pick_up",
-    "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
-    "sourceName": "fioravanti.eu",
-    "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0110.jpg",
-    "image": "img/objects/cutouts/tobeus-pick-up.webp",
-    "width": 1240,
-    "height": 1240,
-    "gallery": [
-      {
-        "image": "img/objects/gallery/tobeus-pick-up-1.webp",
-        "width": 700,
-        "height": 700,
-        "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
-        "sourceName": "fioravanti.eu",
-        "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0210.jpg"
-      },
-      {
-        "image": "img/objects/gallery/tobeus-pick-up-2.webp",
-        "width": 1240,
-        "height": 700,
-        "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
-        "sourceName": "fioravanti.eu",
-        "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0110.jpg"
-      },
-      {
-        "image": "img/objects/gallery/tobeus-pick-up-3.webp",
-        "width": 1240,
-        "height": 700,
-        "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
-        "sourceName": "fioravanti.eu",
-        "sourceImageUrl": "https://www.fioravanti.eu/images/Pick%20up_0384.jpg"
-      }
-    ],
-    "colors": [
-      "Brown",
-      "Beige"
-    ],
-    "displayColors": [
-      {
-        "name": "Beige",
-        "hex": "#c7a47d"
-      },
-      {
-        "name": "Brown",
-        "hex": "#7f5539"
-      }
-    ],
-    "variantName": "Natural cedar — designer’s 2008 Pick-up",
-    "variantEvidence": {
-      "sourceUrl": "https://www.fioravanti.eu/project/Pick_up",
-      "note": "Owner-selected designer page identifies Tobeus and 2008. Natural cedar in all three official photos; no iconic-color claim."
-    },
-    "qualityNote": "Designer originals are 1240×700; complete overview square crop is native 700×700, below the 1200px target. Three authentic views retained, no enlargement.",
-    "imageTreatment": {
-      "method": "Native foreground polygon alpha mask; original RGB preserved exactly. Shared reversible CSS grade.",
-      "originalImage": "img/objects/originals/tobeus-pick-up/1.jpg",
-      "rgbPreserved": true
     }
   }
 ]

@@ -11,8 +11,8 @@
       ? new Intl.Segmenter('ja', {granularity: 'word'}) : null;
     const linkedUnits = new Set();
     nodes.forEach(node => {
-      // A named collection link reveals and sweeps as one phrase.
-      const link = node.parentElement.closest('a.familiar-characters');
+      // Keep marked linked phrases together so spaces share one underline.
+      const link = node.parentElement.closest('a.familiar-characters, a[data-ink-link]');
       if (link) {
         if (!linkedUnits.has(link)) {
           linkedUnits.add(link);
@@ -37,6 +37,14 @@
         fragment.append(word);
       });
       node.replaceWith(fragment);
+    });
+    // The closing square is the final reveal unit, just like the final word.
+    block.querySelectorAll('.essay-end').forEach(marker => {
+      const unit = document.createElement('span');
+      unit.className = 'ink';
+      marker.replaceWith(unit);
+      unit.append(marker);
+      words.push(unit);
     });
     block.classList.add('is-inking');
     return {block, words, lines: []};
@@ -63,6 +71,22 @@
     inkQueued = false;
     inkBlocks.forEach(ink => {
       const box = ink.block.getBoundingClientRect();
+      if (ink.block.hasAttribute('data-section-ink')) {
+        // Keep the upcoming section dim, then sweep through its words as it
+        // approaches the active reading edge. Native reverse scroll unwinds it.
+        const end = (parseFloat(getComputedStyle(ink.block).scrollMarginTop) || innerHeight * .2) + 2;
+        const start = Math.max(innerHeight * .5, end + 80);
+        const progress = reduced.matches ? 1
+          : Math.max(0, Math.min(1, (start - box.top) / (start - end)));
+        const wave = 8;
+        const cursor = progress * (ink.words.length + wave - 1);
+        ink.words.forEach((word, index) => {
+          const amount = Math.max(0, Math.min(1, (cursor - index) / wave));
+          word.style.setProperty('--word-opacity', String(.25 + .75 * amount));
+          word.classList.toggle('is-inked', amount === 1);
+        });
+        return;
+      }
       // Continue the reading cursor through sticky Shop and house-intro underlays.
       const lead = ink.block.closest('[data-bag-cover-lead], .about-story-lead, .home-house-lead');
       const flowTop = lead

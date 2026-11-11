@@ -1,0 +1,238 @@
+[
+  {
+    "w": 390,
+    "route": "/",
+    "overflow": -8,
+    "rects": [
+      {
+        "cls": "site-logo about-docked-logo",
+        "y": 24,
+        "h": 21.609375
+      },
+      {
+        "cls": "practice-byline",
+        "y": 57.609375,
+        "h": 36
+      },
+      {
+        "cls": "page-nav is-visible practice-nav",
+        "y": 113.609375,
+        "h": 34
+      },
+      {
+        "cls": "practice-switch",
+        "y": 167.609375,
+        "h": 24
+      },
+      {
+        "cls": "practice-main",
+        "y": 215.609375,
+        "h": 2497.3125
+      }
+    ]
+  },
+  {
+    "w": 390,
+    "route": "/ja/about/",
+    "overflow": -8,
+    "rects": [
+      {
+        "cls": "site-logo about-docked-logo",
+        "y": 24,
+        "h": 21.609375
+      },
+      {
+        "cls": "practice-byline",
+        "y": 57.609375,
+        "h": 39.59375
+      },
+      {
+        "cls": "page-nav is-visible practice-nav",
+        "y": 117.203125,
+        "h": 35.1875
+      },
+      {
+        "cls": "essay-page",
+        "y": 172.390625,
+        "h": 5180.46875
+      }
+    ]
+  },
+  {
+    "w": 390,
+    "route": "/contact/",
+    "overflow": -8,
+    "rects": [
+      {
+        "cls": "site-logo about-docked-logo",
+        "y": 24,
+        "h": 21.609375
+      },
+      {
+        "cls": "practice-byline",
+        "y": 57.609375,
+        "h": 36
+      },
+      {
+        "cls": "page-nav is-visible practice-nav",
+        "y": 113.609375,
+        "h": 34
+      },
+      {
+        "cls": "contact-page-main",
+        "y": 167.609375,
+        "h": 1116.796875
+      }
+    ]
+  },
+  {
+    "w": 390,
+    "route": "/familiarcharacters/",
+    "overflow": -8,
+    "rects": [
+      {
+        "cls": "site-logo",
+        "y": 24,
+        "h": 21.609375
+      },
+      {
+        "cls": "practice-byline",
+        "y": 57.609375,
+        "h": 36
+      },
+      {
+        "cls": "page-nav is-visible practice-nav",
+        "y": 113.609375,
+        "h": 34
+      },
+      {
+        "cls": "practice-switch",
+        "y": 167.609375,
+        "h": 24
+      },
+      {
+        "cls": "objects-main",
+        "y": 215.609375,
+        "h": 23541.59375
+      }
+    ]
+  },
+  {
+    "w": 1280,
+    "route": "/",
+    "overflow": -8,
+    "rects": [
+      {
+        "cls": "site-logo about-docked-logo",
+        "y": 24,
+        "h": 32.421875
+      },
+      {
+        "cls": "practice-byline",
+        "y": 68.421875,
+        "h": 36
+      },
+      {
+        "cls": "page-nav is-visible practice-nav",
+        "y": 124.421875,
+        "h": 34
+      },
+      {
+        "cls": "practice-switch",
+        "y": 178.421875,
+        "h": 34
+      },
+      {
+        "cls": "practice-main",
+        "y": 236.421875,
+        "h": 2010.625
+      }
+    ]
+  },
+  {
+    "w": 1280,
+    "route": "/ja/about/",
+    "overflow": -8,
+    "rects": [
+      {
+        "cls": "site-logo about-docked-logo",
+        "y": 24,
+        "h": 32.421875
+      },
+      {
+        "cls": "practice-byline",
+        "y": 68.421875,
+        "h": 39.59375
+      },
+      {
+        "cls": "page-nav is-visible practice-nav",
+        "y": 128.015625,
+        "h": 34
+      },
+      {
+        "cls": "essay-page",
+        "y": 182.015625,
+        "h": 3595.6875
+      }
+    ]
+  },
+  {
+    "w": 1280,
+    "route": "/contact/",
+    "overflow": -8,
+    "rects": [
+      {
+        "cls": "site-logo about-docked-logo",
+        "y": 24,
+        "h": 32.421875
+      },
+      {
+        "cls": "practice-byline",
+        "y": 68.421875,
+        "h": 36
+      },
+      {
+        "cls": "page-nav is-visible practice-nav",
+        "y": 124.421875,
+        "h": 34
+      },
+      {
+        "cls": "contact-page-main",
+        "y": 178.421875,
+        "h": 1203.796875
+      }
+    ]
+  },
+  {
+    "w": 1280,
+    "route": "/familiarcharacters/",
+    "overflow": -8,
+    "rects": [
+      {
+        "cls": "site-logo",
+        "y": 24,
+        "h": 32.421875
+      },
+      {
+        "cls": "practice-byline",
+        "y": 68.421875,
+        "h": 36
+      },
+      {
+        "cls": "page-nav is-visible practice-nav",
+        "y": 124.421875,
+        "h": 34
+      },
+      {
+        "cls": "practice-switch",
+        "y": 178.421875,
+        "h": 34
+      },
+      {
+        "cls": "objects-main",
+        "y": 236.421875,
+        "h": 14183.5
+      }
+    ]
+  }
+]

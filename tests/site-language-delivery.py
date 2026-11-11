@@ -11,9 +11,10 @@ class Scripts(HTMLParser):
         d=dict(a)
         if t=='script' and d.get('src','').startswith(('js/','../js/')):self.names.append(d['src'].split('?',1)[0].split('/')[-1])
 count=0
-for path in ['', 'about/', 'work/', 'shop/', 'contact/', 'privacy/', 'legal/', 'familiarcharacters/']:
-    page=(ROOT/(path+'index.html')).read_text();parser=Scripts();parser.feed(page)
-    name='objects' if path=='familiarcharacters/' else path.strip('/') or 'home'
+for path in ['', 'about/', 'work/', 'shop/', 'contact/', 'privacy/', 'legal/']:
+    # /work/ is a redirect; project vocabularies come from the authored story source.
+    page=(ROOT/('data/work-projects.html' if path=='work/' else path+'index.html')).read_text();parser=Scripts();parser.feed(page)
+    name=path.strip('/') or 'home'
     source=(ROOT/f'js/ja-{name}.js').read_text()
     scoped=json.loads(source.split('window.TWO_D_ONE_JA=',1)[1].rsplit(';',1)[0])
     assert scoped and len(scoped)<len(full)
@@ -27,7 +28,7 @@ for path in ['', 'about/', 'work/', 'shop/', 'contact/', 'privacy/', 'legal/', '
         pending.extend(re.findall(r'''['"]\./([\w.-]+\.js)(?:\?[^'"]*)?['"]''',text))
         for m in re.finditer(r'''\bt\(\s*("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')\s*\)''',text):required.add(ast.literal_eval(m[1]).strip())
     assert not [k for k in required if k in full and k not in scoped],name
-    localized=(ROOT/'ja'/path/'index.html').read_text()
+    localized=(ROOT/('ja/work/aviator/index.html' if path=='work/' else 'ja/'+path+'index.html')).read_text()
     assert f'js/ja-{name}.js?v=1' in localized and 'js/ja.js?' not in localized,name
     count+=1
 print(f'PASS: {count} route vocabularies retain exact static/dynamic translations and locale load order.')

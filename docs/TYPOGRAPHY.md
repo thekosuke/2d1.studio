@@ -1,141 +1,88 @@
 # Typography
 
-`css/typography.css` is the source of truth for shared type recipes. Component
-styles own layout, color and interaction. Use an existing recipe before adding a
-size or weight to a component. Change a shared recipe to update all its users.
+`css/typography.css` defines seven shared size/line-height recipes and the
+canonical component assignments. Weight, tracking and capitalization are
+separate choices. Page styles own layout, color, decoration and interaction.
+Use this system for future typography changes across every affected English
+and Japanese route, including dialogs and responsive layouts.
 
-Standing owner rule: every future typography change must use this shared system
-and apply to all uses of the affected style on every active page in both English
-and Japanese. A selected example identifies the shared style, not a one-off
-element override, unless the owner explicitly requests a limited scope. Preserve
-responsive sizing and language font selection, and verify both languages at
-desktop and mobile widths.
+## Seven base styles — 11 November 2026
 
-## Eight core roles
+Values are size / line height in px. Desktop → phone changes below 768px.
+A single pair applies at every width. Capitalization is set by the component;
+Japanese characters have no uppercase form.
 
-| Role | Token | Default desktop metrics | Use |
-| --- | --- | --- | --- |
-| Display | `--font-display` | 64px / 1.2, Semibold | Large section titles |
-| Statement | `--font-statement` | 40px / 1.2, Medium | Large copy and CTAs |
-| Section | `--font-section` | 32px / 1.1, Bold | About title and section headings |
-| Overview | `--font-overview` | 32px / 1.3, Regular | Project overview |
-| Reading | `--font-reading` | 20px / 1.5, Regular | About prose |
-| UI | `--font-ui` | 16px / 1.5, Medium | Interface headings and controls |
-| Caption | `--font-caption` | 14px / 1.5, Regular | Shop/Studio supporting captions |
-| Small | `--font-small` | 12px / 1.5, Regular | Notes and supporting interface text |
+| Base style | English desktop → phone | Japanese desktop → phone | Current weights and uses | All uppercase? |
+| --- | --- | --- | --- | --- |
+| Display | 48 / 57.6 → 44 / 52.8 | 48 / 72 → 44 / 66 | Medium 500: page titles | No |
+| Statement | 32 / 44 → 28 / 33.6 | 32 / 44 → 24 / 40.8 | Medium 500: large statements, CTAs and mobile navigation | Mobile navigation only |
+| Section | 32 / 35.2 | 32 / 48 | Medium 500: section and product headings | No |
+| Body | 22 / 32 | 22 / 32 | Regular 400: Contact introduction, Privacy/Legal prose; Medium 500: related project titles | No |
+| UI | 16 / 24 | 16 / 25.6 | Regular 400: About, project Overview, Role list and metadata; Medium 500: controls and sheet headings | No |
+| Caption | 14 / 21 | 14 / 23.1 | Regular 400: supporting descriptions, one-liners, “or follow us below” and project metadata labels; Medium 500: project/shop titles and selected labels | Section/ending labels only |
+| Small | 12 / 18 | 12 / 19.8 | Regular 400: supporting text and footer; Medium 500: navigation, language controls, labels and breadcrumbs | Navigation, language controls, field labels, breadcrumbs and collection tags; footer copy stays sentence case |
 
-These are roles, not a claim that every rendered text combination is identical.
-Named variants preserve the current design: UI body/reading, medium captions,
-small uppercase labels and small medium captions. `--font-copy` retains the
-existing responsive supporting-copy role for legacy/shared selectors. Home’s
-large reading copy retains its 1.35 desktop leading and -.01em tracking; CTAs
-retain 1.2. Japanese uses Zen Kaku Gothic New and language-specific rhythm.
+Contextual rhythm preserves existing Japanese typography without extra font
+recipes: UI prose (project hero one-liners, form fields and collection copy)
+uses 28px leading, while Small medium labels use 19.2px. English uses 24px and
+18px respectively. Home project titles retain 21px leading in both languages.
+Standalone project Overview labels retain their existing 22px / 32px size,
+becoming 16px / 32px on phones; dialog Overview labels use UI prose leading.
+These label exceptions do not affect the Overview paragraphs.
+
+## About and Overview match the Role list
+
+All About body paragraphs and project Overview paragraphs now use the same
+Regular UI recipe as `.work-role-list`, including standalone project pages and
+project dialogs:
+
+| Property | English | Japanese |
+| --- | --- | --- |
+| Size | 16px | 16px |
+| Weight | Regular 400 | Regular 400 (existing optical font mapping) |
+| Line height | 24px | 25.6px |
+| Letter spacing | 0 | 0 |
+| All uppercase | No | No |
+
+The existing section opacity wave and closing red square reveal are preserved.
 
 ## Use
 
 ```css
 .component-title {
-  font: var(--font-section) var(--font);
+  font: var(--weight-medium) var(--font-section) var(--font);
   letter-spacing: var(--type-track);
 }
-.component-description {
-  font: var(--font-caption) var(--font);
+.component-copy {
+  font: var(--weight-regular) var(--font-ui) var(--font);
   letter-spacing: var(--type-track);
 }
 ```
 
-The recipe deliberately excludes the family: `var(--font)` resolves on the
-component, keeping English Walla and Japanese Zen Kaku Gothic New correct. Existing size aliases
-(`--type-lead`, `--type-display`, etc.) remain for responsive layouts and scripts.
-Don't redefine a size alias on a child and assume an inherited font recipe will
-recompute: change the root/language metrics or define a documented role variant.
+The seven recipes are `--font-display`, `--font-statement`, `--font-section`,
+`--font-body`, `--font-ui`, `--font-caption` and `--font-small`. Each contains
+only size and leading; use `--weight-regular` (400), `--weight-medium` (500) or
+`--weight-bold` (700) separately. Family resolves from `--font` at the component.
+Older weight/case aliases and duplicate Reading/Overview recipes are removed.
+Existing size aliases remain where layout and dormant components need them.
 
-Use `--type-track` for normal tracking, `--type-small-track` (0.01em) for
-regular Small text, and `--type-label-track` for small uppercase labels. The
-selected uppercase UI variant uses `--type-ui-uppercase-track` (0.03em). Uppercase, color, spacing between blocks, decoration and interaction
-remain separate from font recipes.
+Tracking is normally 0. Body uses −0.01em in English (−0.22px) and 0 in Japanese.
+Regular Small supporting text uses +0.01em. Small uppercase navigation, field
+labels and breadcrumbs use +0.04em; selected uppercase Caption labels use
++0.03em. Mobile navigation uses +0.04em. Case, color and spacing between blocks
+are not part of the font recipes.
 
-## Scope and exceptions
+## Fonts and exceptions
 
-All active normal text is assigned a shared recipe by the canonical component
-mapping at the end of `css/typography.css`. This stylesheet loads last on every
-active route, including Red Pixel, and the FC generator preserves that order.
-Component styles still own layout, color, case, decoration and interaction.
+English uses local SC Walla. Japanese uses SC Walla for Latin/numerals and
+self-hosted Zen Kaku Gothic New for Japanese glyphs. The existing optical
+mapping pairs CSS 400 with Zen Medium, 500 with Bold, and 600–700 with Black.
+Font license and provenance remain in the font folder.
 
-Only fitted brand captions, SVG/house artwork lettering, and graphical icon
-glyphs stay outside the system. The temporary typography controls were removed
-from all active routes on 23 October; their source is archived. Archived pages
-are outside the active site.
+Fitted brand lettering, SVG/artwork text and graphical icon glyphs remain
+outside the normal text system. Red Pixel uses Small Medium with +0.08em
+tracking; its score is a deliberate 32px / 32px Bold exception.
 
-Home statements and large CTAs now share Statement metrics. Contact titles and
-related-work headings use Display. FC product titles use Section. Project copy
-uses Overview, metadata uses UI/Caption, and supporting labels use Small.
-Japanese uses Zen Kaku Gothic New and shared language-level responsive size tokens; there are
-no page-specific Japanese leading/weight exceptions in the canonical mapping.
-
-## Verification, 22 October 2026
-
-Compared computed family, size, weight, leading and tracking before/after on
-Home, About, Japanese About, Studio, Shop and Contact at desktop width. All
-sampled text matched. Regenerate Japanese HTML after changing stylesheet links.
-
-## Near-duplicate consolidation — 22 October
-
-This pass intentionally makes small visual adjustments:
-- UI regular and medium text use 1.5 leading. The old UI-reading token is an alias.
-- Small medium labels/captions share 1.5 leading. Their two token names are aliases.
-- Contact introduction uses the 20px/1.5 reading role instead of 22px/1.4.
-- Project metadata uses 16px/1.5 UI body instead of 18px/1.45; overview labels
-  use the 20px/1.5 reading role instead of 20px/1.45.
-- FC 11px tags/credits become 12px/1.5 small text with normal tracking;
-  13px brand metadata becomes 14px/1.5 caption text. Info-sheet body/headings
-  use the shared 16px/1.5 UI recipes.
-- Tote supporting headings/tooltips reuse UI/caption recipes.
-- Home supporting copy uses 1.5 rather than 1.55 leading.
-
-Large display sizes, bold-versus-medium hierarchy, Japanese long-form reading
-rhythm, icon sizing and fitted artwork lettering remain intentional exceptions.
-Verified Contact on desktop and Japanese mobile, and opened the FC info sheet
-at phone width to check wrapping and action visibility.
-
-## Final role coverage
-
-The final normal-text mapping supersedes the earlier preserved-exception notes.
-Checked computed size, weight and leading against the twelve recipes across
-Home, About, Contact, Studio, Shop, FC and Red Pixel, plus Japanese routes and
-390px layouts. Opened a project sheet and FC product dialog to find and remove
-legacy title/action overrides. Visually checked desktop Contact and Japanese
-mobile Contact. Fitted Home caption excluded intentionally.
-
-## Saved typography refinements — 22 October
-
-The eight core roles remain unchanged. Selected uppercase UI text (Home section
-labels, Contact ending headings and FC Product page links) uses
-`--font-ui-uppercase`, an alias of the existing 14px/1.5 Medium caption recipe,
-with 0.03em tracking. It does not change the 16px UI role or small navigation
-labels. Regular Small text keeps its 12px/1.5 recipe and gains 0.01em tracking.
-Both variants are assigned in the canonical mapping, including mobile product
-footers, and use the existing English/Japanese family selection. Heading-marker
-sizing is proportional decoration, separate from the type recipes.
-
-## Japanese font pairing — 22 October
-
-Japanese routes use `"SC Walla", "Zen Kaku Gothic New", ...` in that order.
-Walla supplies Latin letters and numerals; Zen supplies Japanese glyphs. The
-Japanese stylesheet is self-hosted and only included on Japanese routes.
-Regular pairs with Regular (400), Medium with Medium (500), and the real Bold
-face serves 600–700, matching Walla’s available bold face at those weights.
-No size, line-height or spacing recipes changed for this font trial.
-Verified mixed-script About at desktop and 390px, all Japanese route font
-stacks, and English remaining Walla-only. License/provenance is in the font folder.
-
-Japanese optical-weight correction: Zen now maps CSS 400 to Medium, 500 to
-Bold, and 600–700 to Black, bringing Japanese strokes closer to SC Walla.
-Latin letters/numerals and the shared type sizes remain unchanged.
-
-Japanese shared line-height settings: display/section headings 1.5; statements
-and overviews 1.7; reading/copy 1.8; UI labels 1.6; UI body 1.75; captions and
-small supporting text 1.65. These unitless leading tokens apply at every
-breakpoint, keeping existing sizes, weights and English metrics. This follows
-the Digital Agency’s minimum 1.5 reading-text guidance with extra room for
-Japanese paragraphs: https://design.digital.go.jp/dads/foundations/typography/
+The previous recipes and documentation are preserved in
+`_archive/typography-before-consolidation-2026-11-11/`. Browser comparison data
+and desktop/mobile visual proof are in `_previews/typography-consolidation/`.

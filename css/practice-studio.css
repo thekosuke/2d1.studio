@@ -1,0 +1,67 @@
+/* Studio uses the old Shop's vertical image-led layout, with 4:3 desktop and 3:4 mobile artwork. */
+html body.practice-home .practice-main{width:var(--gallery-thumbnail-width);max-width:none;margin-left:var(--reading-left);margin-right:auto;padding:144px 0 96px;overflow:visible}
+html body.practice-home .practice-grid{display:flex;flex-direction:column;gap:64px;width:100%;padding:0;overflow:visible}
+.practice-home .practice-card{position:relative;width:100%;min-width:0}
+.practice-home .practice-card-link{display:block}
+.practice-home .practice-media{aspect-ratio:4/3;transition:opacity 300ms,filter 300ms,transform 300ms cubic-bezier(.2,.8,.2,1)}
+html body.practice-home .practice-caption{position:absolute;left:calc(100% + 24px);top:0;width:calc((100vw - var(--gallery-thumbnail-width))/2 - 48px);margin:0;padding:0}
+html body.practice-home .practice-caption h2{margin:0;color:var(--ink)}
+.practice-home .practice-card-link:is(:hover,:focus-visible) .practice-caption h2{color:var(--ink)}
+html body.practice-home .practice-caption p{margin:8px 0 0;color:var(--sub-gray)}
+.practice-home .practice-view{display:flex;align-items:center;gap:.35em;margin-top:16px;color:var(--red);background:none;-webkit-text-fill-color:currentColor}
+.practice-home .practice-view .pixel-arrow{display:inline-block;position:relative;width:.8em;height:.8em;flex:none;transition:transform 240ms cubic-bezier(.2,.8,.2,1)}
+.practice-home .practice-view .pixel-arrow::before{background:currentColor!important}
+.practice-home .practice-card-link:focus-visible .practice-view .pixel-arrow{transform:translateX(6px)}
+@media(hover:hover) and (pointer:fine){
+ .practice-home .practice-card-link:hover .practice-view .pixel-arrow{transform:translateX(6px)}
+}
+.practice-home .practice-view .pixel-arrow::before{content:'';position:absolute;inset:0;mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat}
+html.studio-scroll-gallery{scroll-snap-type:y proximity;overflow-anchor:none}
+html.studio-scroll-gallery body.practice-home .practice-main{padding:0}
+html.studio-scroll-gallery body.practice-home .practice-grid{padding-block:var(--studio-edge,30svh);gap:var(--studio-gap,24svh)}
+.studio-scroll-gallery .practice-card{scroll-snap-align:start;scroll-margin-top:var(--studio-snap-top,var(--practice-content-top))}
+.studio-scroll-gallery .practice-card:not(.is-centered) .practice-media{opacity:.3;filter:grayscale(1)}
+.studio-scroll-gallery .practice-caption{transition:opacity 240ms}
+.studio-scroll-gallery .practice-card:not(.is-centered):not(:focus-within) .practice-caption{opacity:0}
+.practice-home .practice-card.is-before-first-pass{display:none}
+html.studio-rebasing{scroll-snap-type:none;scroll-behavior:auto}
+.studio-rebasing :is(.practice-media,.practice-caption){transition:none!important}
+html body.practice-home>.site-footer{position:fixed;z-index:20;left:0;right:0;bottom:var(--footer-inset);margin:0;padding:0;pointer-events:none}
+.practice-home>.site-footer a{pointer-events:auto}
+html body.practice-home>.site-footer .footer-line{min-height:calc(var(--language-size) + 2px);align-items:center}
+@media(max-width:1099px){
+ html body.practice-home .practice-main{width:var(--reading-width);margin-left:var(--reading-left);margin-right:auto}
+ html body.practice-home .practice-caption{position:static;width:100%;margin-top:16px}
+ .practice-home .practice-caption{overflow-wrap:anywhere}
+}
+@media(max-width:767px){
+ html body.practice-home .practice-main{padding-top:var(--practice-content-top)}
+ .practice-home .practice-media{aspect-ratio:3/4}
+}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .practice-home .practice-card-link:hover .practice-media{transform:none}
+ .practice-home .practice-card.is-centered .practice-card-link:hover .practice-media{transform:translateX(-8px) rotate(-2deg)}
+}
+@media(prefers-reduced-motion:reduce){
+ .practice-home .practice-view .pixel-arrow{transition:none}
+ .practice-home .practice-media,.practice-home .practice-caption{transition:none!important;transform:none}
+ html.studio-scroll-gallery{scroll-snap-type:none}
+ .studio-scroll-gallery .practice-card:not(.is-centered) .practice-media{opacity:1;filter:none}
+ .studio-scroll-gallery .practice-card:not(.is-centered) .practice-caption{opacity:1}
+}
+
+/* With a visible sidebar, projects settle on its top edge rather than mid-screen. */
+@media(min-width:1100px),(min-width:768px) and (pointer:fine){
+ html body.practice-home .practice-main{padding-top:var(--practice-content-top)}
+ html.studio-scroll-gallery body.practice-home .practice-main{padding-top:0}
+ .studio-scroll-gallery .practice-card{scroll-snap-align:start;scroll-margin-top:var(--practice-content-top)}
+}
+
+/* Studio keeps only socials at the shared left navigation edge. */
+html body.practice-home>.site-footer .footer-line>p{display:none}
+html body.practice-home>.site-footer .footer-line .social-links{margin-left:var(--page-edge,24px)}
+
+html body.practice-home .practice-caption{padding-top:1rem}
+
+/* The card already contains its arrow; suppress the legacy generated copy. */
+html body.practice-home .practice-view.work-view::after{content:none}

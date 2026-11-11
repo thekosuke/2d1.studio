@@ -1,0 +1,70 @@
+/* Shared mobile composition: fixed brand, top utility row, bottom destinations. */
+.mobile-menu-mark,.mobile-menu-topbar,.mobile-menu-footer{display:none}
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){
+ html body.mobile-navigation-ready .mobile-nav-panel{
+  box-sizing:border-box;justify-content:flex-start!important;gap:0!important;
+  padding:max(80px,calc(env(safe-area-inset-top) + 64px)) max(24px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left))!important;
+  background:var(--ash-brown,#191416)!important;color:var(--beige)!important;
+ }
+ body.mobile-menu-open>.mobile-menu-mark{display:block;position:fixed;z-index:81;pointer-events:none;top:max(24px,env(safe-area-inset-top))!important}
+ body.mobile-navigation-ready.mobile-menu-open .mobile-nav-toggle{top:max(24px,env(safe-area-inset-top))!important;left:max(24px,env(safe-area-inset-left))!important;transform:none!important;justify-content:flex-start!important;padding:0!important;height:22px!important;min-height:22px!important}
+ .mobile-menu-mark img{display:block;width:100%;height:100%}
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar{
+  position:absolute;bottom:calc(max(24px,env(safe-area-inset-bottom)) + 22px);right:max(24px,env(safe-area-inset-right));transform:translateY(50%);display:flex;align-items:center;justify-content:flex-end;width:auto;margin:0;
+ }
+ .mobile-menu-topbar>p{margin:0;white-space:nowrap;font:var(--font-small-label) var(--font);letter-spacing:var(--type-track);color:var(--beige)}
+ html body.mobile-navigation-ready .mobile-nav-panel>a:has(>.nav-label):first-of-type{margin-top:auto!important}
+ html body.mobile-navigation-ready .mobile-nav-panel a:has(>.nav-label){flex:none;min-height:44px;background:transparent!important;color:var(--beige)!important}
+ html body.mobile-navigation-ready .mobile-nav-panel a.mobile-nav-item:has(>.nav-label):is(:hover,:focus-visible){background:transparent!important;color:var(--beige)!important}
+ html body.mobile-navigation-ready .mobile-nav-panel a:has(>.nav-label) .nav-label{
+  --nav-sweep:0;color:var(--beige)!important;
+  background:linear-gradient(90deg,var(--red) calc(var(--nav-sweep)*100%),var(--beige) 0)!important;
+  background-clip:text!important;-webkit-text-fill-color:transparent!important;
+  transform:none!important;text-decoration:none!important;
+  transition:transform 200ms ease,--nav-sweep 200ms ease!important;
+ }
+ html body.mobile-navigation-ready .mobile-nav-panel a:has(>.nav-label)::before{
+  content:'';display:block!important;position:absolute;left:0;top:50%;width:0;height:6px;
+  transform:translateY(-50%);background:var(--red)!important;transition:width 200ms ease;pointer-events:none;
+ }
+ html body.mobile-navigation-ready .mobile-nav-panel a[aria-current]:has(>.nav-label) .nav-label{
+  --nav-sweep:1;background:none!important;-webkit-text-fill-color:var(--red)!important;transform:translateX(12px)!important;
+ }
+ html body.mobile-navigation-ready .mobile-nav-panel a:is([aria-current],:focus-visible):has(>.nav-label)::before{width:6px}
+ html body.mobile-navigation-ready .mobile-nav-panel a:focus-visible:has(>.nav-label) .nav-label{--nav-sweep:1;transform:translateX(12px)!important}
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-footer{
+  display:flex;flex:none;flex-direction:column;gap:0;width:calc(100% - 82px);margin-top:32px;padding-top:0;color:var(--beige);
+ }
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-footer .social-links{
+  position:static;display:flex;flex-direction:row;flex-wrap:wrap;gap:0;margin:0;padding:0;
+ }
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-footer .social-links a{
+  display:flex;align-items:center;justify-content:flex-start;width:44px;height:44px;padding:10px 0!important;
+  color:var(--beige)!important;background:transparent!important;-webkit-text-fill-color:currentColor!important;
+ }
+ .mobile-menu-footer .social-links svg{display:block;width:18px;height:18px;fill:currentColor}
+ .mobile-menu-footer .social-platform{display:none!important}
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-footer .social-links a:focus-visible{color:var(--red)!important}
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar .mobile-nav-language{
+  position:relative!important;inset:auto!important;display:flex!important;flex-direction:row;flex:none;gap:0!important;margin:0!important;padding:0!important;
+  width:max-content!important;border:1px solid var(--beige)!important;background:transparent!important;--language-fill:var(--beige);
+ }
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar .mobile-nav-language::before{display:none!important}
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar .mobile-nav-language a{
+  box-sizing:border-box;display:flex;justify-content:center;min-width:32px;min-height:30px;padding:4px 6px!important;
+  font:var(--font-small-label) var(--font)!important;letter-spacing:var(--type-track)!important;text-decoration:none!important;
+  background:transparent!important;color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important;
+ }
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar .mobile-nav-language a[aria-current]{background:var(--beige)!important;color:var(--ash-brown,#191416)!important;-webkit-text-fill-color:var(--ash-brown,#191416)!important}
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar .mobile-nav-language a:focus-visible{background:var(--red)!important;color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important}
+}
+@media(max-width:767px) and (hover:hover) and (pointer:fine){
+ html body.mobile-navigation-ready .mobile-nav-panel a:hover:has(>.nav-label)::before{width:6px}
+ html body.mobile-navigation-ready .mobile-nav-panel a:hover:has(>.nav-label) .nav-label{--nav-sweep:1;transform:translateX(12px)!important}
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-footer .social-links a:hover{color:var(--red)!important}
+ html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar .mobile-nav-language a:hover{background:var(--red)!important;color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important}
+}
+@media(prefers-reduced-motion:reduce){
+ html body.mobile-navigation-ready .mobile-nav-panel a:has(>.nav-label) .nav-label,
+ html body.mobile-navigation-ready .mobile-nav-panel a:has(>.nav-label)::before{transition:none!important}
+}

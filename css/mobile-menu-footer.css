@@ -12,7 +12,7 @@
  html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar{
   position:absolute;bottom:calc(max(24px,env(safe-area-inset-bottom)) + 22px);right:max(24px,env(safe-area-inset-right));transform:translateY(50%);display:flex;align-items:center;justify-content:flex-end;width:auto;margin:0;
  }
- .mobile-menu-topbar>p{margin:0;white-space:nowrap;font:var(--font-small-label) var(--font);letter-spacing:var(--type-track);color:var(--beige)}
+ .mobile-menu-topbar>p{margin:0;white-space:nowrap;font:var(--weight-medium) var(--font-small) var(--font);line-height:var(--leading-small-label);letter-spacing:var(--type-track);color:var(--beige)}
  html body.mobile-navigation-ready .mobile-nav-panel>a:has(>.nav-label):first-of-type{margin-top:auto!important}
  html body.mobile-navigation-ready .mobile-nav-panel a:has(>.nav-label){flex:none;min-height:44px;background:transparent!important;color:var(--beige)!important}
  html body.mobile-navigation-ready .mobile-nav-panel a.mobile-nav-item:has(>.nav-label):is(:hover,:focus-visible){background:transparent!important;color:var(--beige)!important}
@@ -52,7 +52,7 @@
  html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar .mobile-nav-language::before{display:none!important}
  html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar .mobile-nav-language a{
   box-sizing:border-box;display:flex;justify-content:center;min-width:32px;min-height:30px;padding:4px 6px!important;
-  font:var(--font-small-label) var(--font)!important;letter-spacing:var(--type-track)!important;text-decoration:none!important;
+  font:var(--weight-medium) var(--font-small) var(--font)!important;line-height:var(--leading-small-label)!important;letter-spacing:var(--type-track)!important;text-decoration:none!important;
   background:transparent!important;color:var(--beige)!important;-webkit-text-fill-color:var(--beige)!important;
  }
  html body.mobile-navigation-ready .mobile-nav-panel .mobile-menu-topbar .mobile-nav-language a[aria-current]{background:var(--beige)!important;color:var(--ash-brown,#191416)!important;-webkit-text-fill-color:var(--ash-brown,#191416)!important}

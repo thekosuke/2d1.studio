@@ -1,0 +1,34 @@
+/* Restored Studio carousel: centered 4:3 projects, continuous browsing. */
+html body.practice-home .practice-main{--studio-square:var(--gallery-thumbnail-width);width:100%;max-width:none;margin:0;padding:0;overflow:hidden}
+html body.practice-home .practice-grid{position:relative;display:flex;flex-direction:row;gap:24px;width:100%;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding:max(112px,calc((100svh - var(--studio-square)*.75 - 100px)/2)) calc((100% - var(--studio-square))/2) 120px;align-items:flex-start;cursor:grab}
+html body.practice-home .practice-card{width:var(--studio-square);flex:0 0 var(--studio-square);scroll-snap-align:center}
+.practice-home .practice-card-link{user-select:none;-webkit-user-drag:none}
+.practice-home .practice-media{aspect-ratio:4/3;transition:opacity 300ms,filter 300ms,transform 300ms cubic-bezier(.2,.8,.2,1)}
+.practice-home .practice-media img{-webkit-user-drag:none}
+.js .practice-home .practice-card:not(.is-gallery-current) .practice-media{opacity:.3;filter:grayscale(1)}
+html body.practice-home .practice-caption{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:0;margin:16px 0 0;padding:0}
+html body.practice-home .practice-caption h2{grid-column:1;grid-row:1;font:500 var(--type-spec)/1.5 var(--font)}
+.practice-home .practice-caption-copy{grid-column:2;grid-row:1}
+html body.practice-home .practice-caption p{margin:0;font:400 var(--type-spec)/1.5 var(--font);color:var(--sub-gray)}
+.practice-home .practice-view{display:flex;align-items:center;gap:.35em;margin-top:16px;color:var(--red);font:500 var(--type-spec)/1.5 var(--font)}
+.practice-home .practice-view .pixel-arrow{display:inline-block;position:relative;width:.8em;height:.8em;flex:none}
+.practice-home .practice-view .pixel-arrow::before{content:'';position:absolute;inset:0;mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat}
+.js .practice-home .practice-card:not(.is-gallery-current) .practice-caption{opacity:0!important;pointer-events:none}
+html.js body.practice-home .practice-grid{touch-action:pinch-zoom}
+html body.practice-home .practice-grid:is(.is-rebasing,.is-gesturing){scroll-snap-type:none;scroll-behavior:auto}
+.practice-home .practice-grid.is-gesturing{cursor:grabbing}
+.practice-home .practice-grid.is-rebasing .practice-media{transition:none!important}
+html body.practice-home>.site-footer{position:fixed;z-index:20;left:0;right:0;bottom:var(--footer-inset);margin:0;padding:0}
+html body.practice-home>.site-footer .footer-line{min-height:calc(var(--language-size) + 2px);align-items:center}
+@media(max-width:767px){html body.practice-home .practice-grid{padding-top:max(148px,calc((100svh - var(--studio-square)*.75 - 100px)/2))}}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .practice-home .practice-card-link:hover .practice-media{transform:none}
+ .practice-home .practice-card.is-gallery-current .practice-card-link:hover .practice-media{transform:translateY(-8px) rotate(2deg)}
+}
+@media(prefers-reduced-motion:reduce){.practice-home .practice-media{transition:none;transform:none}}
+
+html body.practice-home .practice-grid:focus-visible{background:transparent!important}
+.practice-home .practice-grid:focus-visible .is-gallery-current h2{color:var(--red)}
+/* Keep the gallery's visual center independent of the document scrollbar. */
+html body.practice-home .practice-grid{width:100vw;padding-inline:calc((100vw - var(--studio-square))/2);scrollbar-width:none!important}
+.practice-home .practice-grid::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}

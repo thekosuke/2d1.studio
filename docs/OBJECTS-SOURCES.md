@@ -1487,3 +1487,5 @@ Owner-selected [official product](https://eu.jellycat.com/amuseables-sports-bask
 - Full originals retained in `img/objects/sources/muji-blue-2026-11-01/`. Gallery uses the complete original square photos: isolated product, toothbrush lineup, bathroom setting.
 - Canvas cutout uses border-connected white removal and a 0.5px alpha feather. Native RGB is byte-for-byte unchanged; subject 1213 × 1008, framed at 90% optical fill on 1348px square, no upscaling. Light/dark edge inspection passed.
 - Previous yellow metadata archived in `_archive/muji-yellow-2026-11-01/catalog-entry.json`; previous source assets retained.
+
+Floyd Cabin transparency cleanup — 11 November 2026: removed the remaining background between and beneath the wheels in the native 1500px canvas master. Alpha-only correction; all RGB pixels compare identically to the prior cutout. Inspected on beige and cranberry backgrounds; regenerated lossless responsive copies.

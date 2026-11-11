@@ -6,11 +6,27 @@
   if (!page || !canvas || !collection) return;
   const requestedItem=new URLSearchParams(location.search).get('item');
   const reportPerformance=new URLSearchParams(location.search).has('finds-perf');
+  // Keep the entrance hidden until the incoming document's wipe has settled.
+  const pageRevealed = new Promise(resolve => {
+    if (!('onpagereveal' in window)) { resolve(); return; }
+    let revealed = false;
+    addEventListener('pagereveal', event => {
+      revealed = true;
+      if (event.viewTransition) event.viewTransition.finished.then(resolve, resolve);
+      else resolve();
+    }, {once:true});
+    // Also cover direct loads where this script runs after pagereveal.
+    const fallback = () => requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (!revealed) resolve();
+    }));
+    if (document.readyState === 'complete') fallback();
+    else addEventListener('load', fallback, {once:true});
+  });
   const startedAt=performance.now();
   let firstPhotoAt=null;
   const t = window.SiteLanguage?.t || (text => text);
   // Generated from data/object-families.json; edit the assignments there.
-  const objectFamilies = {"hay-miz-dark-green":"Rituals","stokke-tripp-trapp-warm-red":"Classics","alessi-anna-g-black":"Characters","alessi-ossidiana-black":"Rituals","dusen-everybody-wall-clock":"Companions","bruna-bonbon-mini-orange":"Characters","playforever-viglietta-jasper":"Oddities","brutto-sally-pepe":"Rituals","nintendo-pikmin-vases":"Characters","arms-flying-robi-persi":"Oddities","alessi-9090":"Classics","arwenn-cloud-clock":"Oddities","craighill-chroma-scissors-primary":"Companions","craighill-swingtop-lighter":"Rituals","alessi-twergi-es19-yellow":"Rituals","block-design-play-tin":"Oddities","herman-miller-girard-throw":"Companions","hay-regn-umbrella-gray-blue":"Classics","moodulo-pop-culture-act-ii":"Oddities","homeinfun-storage-stool":"Oddities","odd-universe-peepers":"Characters","atonemo-nts-radio-player":"Companions","not-boring-camera-app":"Companions","not-boring-weather-app":"Companions","not-boring-camera-art-model":"Oddities","mkbhd-color-picker-stickers":"Companions","mkbhd-overlay-deskpad":"Companions","bobo-choses-bolder-belt-pouch":"Companions","hungry-market-initial-c-cap":"Companions","daypa-kun-backpack-blue":"Characters","lego-piranha-plant-71426":"Characters","iwate-canning-gift-stock":"Rituals","mint-hug-shakers":"Characters","subu-originals-f-line-black":"Classics","sharge-discho":"Oddities","fairphone-gen-6-plus":"Companions","cwandt-high-speed-jump-rope":"Rituals","ikea-forlunda-red":"Companions","nendo-shoe-horn":"Rituals","mr-maria-first-light-snoopy":"Characters","flos-snoopy-black":"Companions","magis-spun":"Oddities","magis-air-chair-red":"Classics","hay-table-clock-black":"Classics","muji-wall-mounted-cd-player":"Classics","groove-x-lovot-3":"Characters","teenage-engineering-grip-car":"Oddities","cliik-press-glass-family-pack":"Classics","yoto-player-4":"Rituals","freckle-phone-orange":"Oddities","loop-cocoon-berry":"Companions","magis-linnut-sulo-s":"Characters","flowerpot-vp9-zesty-orange":"Companions","b-line-boby-34-paprika":"Classics","hey-bag-green-lines":"Companions","hey-classic-cap":"Classics","alessi-la-conica":"Classics","memphis-first":"Oddities","bosa-most-illustrious-achille":"Characters","pedrali-frida-752":"Classics","qeeboo-rabbit-chair-light-blue":"Characters","alessi-magic-bunny-black":"Characters","alessi-girotondo-round-tray":"Characters","baggu-standard-pop-pink-happy":"Characters","anya-hindmarch-eyes-tote":"Characters","heinz-tomato-ketchup":"Classics","panic-playdate":"Companions","kinto-water-bottle-300ml":"Classics","topologie-6mm-rope-strap":"Classics","yoki-pillar-blue":"Oddities","gispen-dombo-red":"Oddities","vitra-eames-elephant-orange":"Characters","detail-nasa-snow-globe":"Oddities","carpenter-hamburger-coaster":"Oddities","running-press-ufo-cow":"Characters","notabag-original-red":"Classics","cotopaxi-kapai-del-dia":"Companions","kay-bojesen-songbird-sunshine":"Characters","vitra-nelson-night-clock":"Companions","palaset-im-ok-fantti-elephant-bank":"Characters","ichendorf-desert-plants-cactus-amber":"Rituals","curaprox-cs-smart":"Classics","soholm-cafe-reversible-tote":"Classics","tecta-cat-black":"Characters","kikkerland-inkerie-jewelry-case":"Companions","muji-porcelain-toothbrush-stand":"Classics","best-years-knitted-triceratops":"Characters","kay-bojesen-monkey-mini-vintage-blue":"Characters","muji-smooth-gel-knock-pen":"Classics","actus-deco-dot-photo-frame":"Companions","actus-object-flower-vase":"Rituals","iwachu-cat-candle-stand":"Characters","aptone-mix-match":"Oddities","seiko-diver-alarm-clock":"Oddities","seiko-stadium-clock":"Oddities","nahe-packing-pouch":"Classics","heim-egg-spoon":"Rituals","maul-m8-calculator":"Classics","may-bookends":"Companions","alessi-dede":"Characters","andlight-slab-series":"Rituals","flos-mayday":"Classics","alessi-sleek":"Classics","samira-boon-furoshiki-card-case":"Companions","floyd-cabin-aluminum":"Companions","jellycat-amuseables-basketball":"Characters","tobeus-pick-up":"Oddities"};
+  const objectFamilies = {"hay-miz-dark-green":"Rituals","stokke-tripp-trapp-warm-red":"Classics","alessi-anna-g-black":"Characters","alessi-ossidiana-black":"Rituals","dusen-everybody-wall-clock":"Companions","bruna-bonbon-mini-orange":"Characters","playforever-viglietta-jasper":"Oddities","brutto-sally-pepe":"Rituals","nintendo-pikmin-vases":"Characters","arms-flying-robi-persi":"Oddities","alessi-9090":"Classics","arwenn-cloud-clock":"Oddities","craighill-chroma-scissors-primary":"Companions","craighill-swingtop-lighter":"Rituals","alessi-twergi-es19-yellow":"Rituals","block-design-play-tin":"Oddities","herman-miller-girard-throw":"Companions","hay-regn-umbrella-gray-blue":"Classics","moodulo-pop-culture-act-ii":"Oddities","homeinfun-storage-stool":"Oddities","odd-universe-peepers":"Characters","atonemo-nts-radio-player":"Companions","not-boring-camera-app":"Companions","not-boring-weather-app":"Companions","not-boring-camera-art-model":"Oddities","mkbhd-color-picker-stickers":"Companions","mkbhd-overlay-deskpad":"Companions","bobo-choses-bolder-belt-pouch":"Companions","hungry-market-initial-c-cap":"Companions","daypa-kun-backpack-blue":"Characters","lego-piranha-plant-71426":"Characters","iwate-canning-gift-stock":"Rituals","mint-hug-shakers":"Characters","subu-originals-f-line-black":"Classics","sharge-discho":"Oddities","fairphone-gen-6-plus":"Companions","cwandt-high-speed-jump-rope":"Rituals","ikea-forlunda-red":"Companions","nendo-shoe-horn":"Rituals","mr-maria-first-light-snoopy":"Characters","flos-snoopy-black":"Companions","magis-spun":"Oddities","magis-air-chair-red":"Classics","hay-table-clock-black":"Classics","muji-wall-mounted-cd-player":"Classics","groove-x-lovot-3":"Characters","teenage-engineering-grip-car":"Oddities","cliik-press-glass-family-pack":"Classics","yoto-player-4":"Rituals","freckle-phone-orange":"Oddities","loop-cocoon-berry":"Companions","magis-linnut-sulo-s":"Characters","flowerpot-vp9-zesty-orange":"Companions","b-line-boby-34-paprika":"Classics","hey-bag-green-lines":"Companions","hey-classic-cap":"Classics","alessi-la-conica":"Classics","memphis-first":"Oddities","bosa-most-illustrious-achille":"Characters","pedrali-frida-752":"Classics","qeeboo-rabbit-chair-light-blue":"Characters","alessi-magic-bunny-black":"Characters","alessi-girotondo-round-tray":"Characters","baggu-standard-pop-pink-happy":"Characters","anya-hindmarch-eyes-tote":"Characters","heinz-tomato-ketchup":"Classics","panic-playdate":"Companions","kinto-water-bottle-300ml":"Classics","topologie-6mm-rope-strap":"Classics","yoki-pillar-blue":"Oddities","gispen-dombo-red":"Oddities","vitra-eames-elephant-orange":"Characters","detail-nasa-snow-globe":"Oddities","carpenter-hamburger-coaster":"Oddities","running-press-ufo-cow":"Characters","notabag-original-red":"Classics","cotopaxi-kapai-del-dia":"Companions","kay-bojesen-songbird-sunshine":"Characters","vitra-nelson-night-clock":"Companions","palaset-im-ok-fantti-elephant-bank":"Characters","ichendorf-desert-plants-cactus-amber":"Rituals","curaprox-cs-smart":"Classics","soholm-cafe-reversible-tote":"Classics","tecta-cat-black":"Characters","kikkerland-inkerie-jewelry-case":"Companions","best-years-knitted-triceratops":"Characters","kay-bojesen-monkey-mini-vintage-blue":"Characters","muji-smooth-gel-knock-pen":"Classics","actus-object-flower-vase":"Rituals","iwachu-cat-candle-stand":"Characters","aptone-mix-match":"Oddities","seiko-diver-alarm-clock":"Oddities","seiko-stadium-clock":"Oddities","nahe-packing-pouch":"Classics","heim-egg-spoon":"Rituals","maul-m8-calculator":"Classics","may-bookends":"Companions","alessi-dede":"Characters","andlight-slab-series":"Rituals","flos-mayday":"Classics","alessi-sleek":"Classics","samira-boon-furoshiki-card-case":"Companions","floyd-cabin-aluminum":"Companions","jellycat-amuseables-basketball":"Characters"};
   const cards = [...collection.querySelectorAll('[data-object]')];
   const catalog = cards.map(card => ({
     id:card.dataset.object, family:objectFamilies[card.dataset.object], category:card.dataset.category, tags:JSON.parse(card.dataset.tags), colors:JSON.parse(card.dataset.colors||'[]'),displayColors:JSON.parse(card.dataset.displayColors||'[]'),
@@ -34,10 +50,28 @@
   const zoomInput=document.getElementById('objects-zoom');
   const zoomButtons=[...document.querySelectorAll('[data-zoom-step]')];
   const zoomStatus=document.getElementById('objects-zoom-status');
-  const mobileZoom=matchMedia('(max-width:767px), (max-width:1023px) and (max-height:500px) and (pointer:coarse)');
+  const mobileZoom=matchMedia('(max-width:767px), (max-width:1099px) and (pointer:coarse)');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let zoom=0, focusMode=false, focusColumn=0, focusRow=0, motion=null, motionFrame=0, wheelTimer=0;
-  const geometry=(width,value,height=canvas.clientHeight)=>{const small=Math.min(width<=600?112:144,Math.max(48,height*.2)),large=Math.max(small,Math.min(width*.72,height*.64,Math.max(64,height-192),640)),size=small+(large-small)*value/100;return {cell:size,row:size+52};};
+  const photoPadding=width=>width<=600?32:48;
+  const shelfGap=width=>shopPreview?0:width<=600?32:64;
+  const geometry=(width,value,height=canvas.clientHeight)=>{
+    const small=Math.min(width<=600?(shopPreview?112:80):(shopPreview?144:96),Math.max(48,height*.2));
+    const large=Math.max(small,Math.min(width*.72,height*.64,Math.max(64,height-192),640));
+    const progress=value/100;
+    // Measure magnification on the photo inside the padded tile.
+    const padding=photoPadding(width);
+    const size=shopPreview||small<=padding
+      ? small+(large-small)*progress
+      : padding+(small-padding)*((large-padding)/(small-padding))**progress;
+    return {cell:size*canvasSpacing+shelfGap(width),row:(size+52)*canvasSpacing+shelfGap(width)};
+  };
+  const zoomProgress=(size,min,max,width)=>{
+    if(max<=min)return 0;
+    const padding=photoPadding(width)*canvasSpacing+shelfGap(width);
+    if(shopPreview||min<=padding)return (size-min)/(max-min);
+    return Math.log((size-padding)/(min-padding))/Math.log((max-padding)/(min-padding));
+  };
   const mod = (value, divisor) => ((value % divisor) + divisor) % divisor;
   const indexAt = (column, line, count) => mod(column + line * (Math.ceil(Math.sqrt(count)) + 1), count);
   function shuffleForCanvas(items, random = Math.random) {
@@ -106,6 +140,8 @@
   }
   // Generate once per document load, then reuse across filters, motion and dialogs.
   const shopPreview=new URLSearchParams(location.search).has('shop-preview');
+  // Use the original shelf pitch so focused neighbors remain visible.
+  const canvasSpacing = 1;
   let previewSeed=21026;
   const previewRandom=()=>{previewSeed=(Math.imul(previewSeed,1664525)+1013904223)>>>0;return previewSeed/4294967296};
   // Art-direct the Shop thumbnail independently of the full collection.
@@ -151,12 +187,31 @@
     if(!active.length)return;const center=nearest(),item=active[indexAt(focusMode?focusColumn:center.column,focusMode?focusRow:center.line,active.length)];
     const live=document.getElementById('objects-focus-status'),label=`${item.brand}, ${item.name}`;if(live.textContent!==label)live.textContent=label;
   }
+  let imageQualityTimer=0;
+  function refreshImageQuality(imageSize){
+    for(const image of layer.querySelectorAll('img[srcset]')){
+      if(parseFloat(image.sizes)>=parseFloat(imageSize)||image._qualityPending)continue;
+      // Keep the decoded photo on screen while a sharper candidate loads.
+      const replacement=image.cloneNode(false);
+      replacement.sizes=imageSize;
+      image._qualityPending=true;
+      replacement.decode().then(()=>{
+        if(image.isConnected){image.replaceWith(replacement);schedule();}
+      }).catch(()=>{}).finally(()=>{image._qualityPending=false;});
+    }
+  }
   function draw(){
     frame=0;if(list||!active.length)return;
     const width=canvas.clientWidth,height=canvas.clientHeight,center=nearest();
-    // Request the final sharp source once during a zoom, rather than each
-    // intermediate animation size. Never undersize the currently drawn square.
-    const sourceCell=Math.max(cell,motion?.target.cell||cell);
+    const near=geometry(width,0,height).cell,far=geometry(width,100,height).cell;
+    const visualZoom=Math.max(0,Math.min(1,zoomProgress(cell,near,far,width)));
+    // Size delivery for the photograph, excluding the shelf's empty spacing.
+    const photoSize=size=>{
+      const progress=Math.max(0,Math.min(1,zoomProgress(size,near,far,width)));
+      const enlargement=shopPreview||reduced.matches?1:1.9**(1-progress);
+      return Math.max(1,size-shelfGap(width)-photoPadding(width))*enlargement;
+    };
+    const sourceSize=Math.max(photoSize(cell),photoSize(motion?.target.cell||cell));
     let previewSize=320;
     if(shopPreview&&window.frameElement){
       const host=window.frameElement,box=host.getBoundingClientRect();
@@ -164,10 +219,22 @@
       const base=geometry(width,0,height),largest=geometry(width,100,height);
       if(scale>0&&Number.isFinite(scale))previewSize=(base.cell-(width<=600?32:48))*largest.cell/base.cell*scale;
     }
-    const imageSize=shopPreview?`${Math.ceil(previewSize/16)*16}px`:`${Math.ceil((sourceCell-(width<=600?32:48))/16)*16}px`;
+    const imageSize=shopPreview?`${Math.ceil(previewSize/16)*16}px`:`${Math.ceil(sourceSize/16)*16}px`;
     canvas.style.setProperty('--object-cell',`${cell}px`);
-    const firstColumn=Math.floor(-x/cell)-1,firstRow=Math.floor(-y/row)-1,wanted=new Set(),pendingImages=[];
-    for(let line=firstRow;line<=firstRow+Math.ceil(height/row)+2;line++)for(let column=firstColumn;column<=firstColumn+Math.ceil(width/cell)+2;column++){
+    canvas.style.setProperty('--object-spacing-inset',`${shelfGap(width)/2}px`);
+    const overscan=shopPreview?0:.5;
+    const firstColumn=Math.floor((-x-width*overscan)/cell)-1,firstRow=Math.floor((-y-height*overscan)/row)-1,wanted=new Set(),pendingImages=[];
+    for(let line=firstRow;line<=firstRow+Math.ceil(height*(1+2*overscan)/row)+2;line++)for(let column=firstColumn;column<=firstColumn+Math.ceil(width*(1+2*overscan)/cell)+2;column++){
+      let left=column*cell+x,top=line*row+y;
+      const dx=left+cell/2-width/2,dy=top+cell/2-height/2;
+      const distance=Math.hypot(dx/Math.max(1,width*.65),dy/Math.max(1,height*.65));
+      const depth=shopPreview?1:1/Math.sqrt(1+.6*distance*distance);
+      left=width/2+dx*depth-cell/2;
+      top=height/2+dy*depth-cell/2;
+      const scale=shopPreview?1:(reduced.matches?1:1.9**(1-visualZoom))*depth**3;
+      const extent=cell*Math.max(1,scale)/2+64;
+      const screenX=left+cell/2,screenY=top+cell/2;
+      if(!shopPreview&&(screenX+extent<0||screenX-extent>width||screenY+extent<0||screenY-extent>height))continue;
       const key=tileKey(column,line),item=active[indexAt(column,line,active.length)];wanted.add(key);
       let tile=tiles.get(key);if(!tile){tile=createTile(item);layer.append(tile);tiles.set(key,tile);}
       if(shopPreview)tile.style.removeProperty('display');
@@ -175,14 +242,21 @@
       // Select a sharp source for the rendered square as zoom changes.
       const image=tile.querySelector('img');
       // Keep virtual overscan tiles, but don't fetch photos outside the viewport.
-      const left=column*cell+x,top=line*row+y;
       if(!image.getAttribute('src')&&left+cell>0&&left<width&&top+cell>0&&top<height){
         pendingImages.push({image,source:tile._item,distance:Math.hypot(column-center.column,line-center.line)});
       }
-      if(image.sizes!==imageSize)image.sizes=imageSize;
+      if(!image.getAttribute('src')&&image.sizes!==imageSize)image.sizes=imageSize;
       tile.classList.toggle('is-focused',focusMode&&column===focusColumn&&line===focusRow);
       tile.classList.toggle('is-keyboard-target',column===(focusMode?focusColumn:center.column)&&line===(focusMode?focusRow:center.line));
-      tile.style.transform=`translate(${column*cell+x}px,${line*row+y}px)`;
+      // Project the shelf onto a rounded surface, with the nearest items largest.
+      if(!shopPreview){
+        const emphasis=depth**8;
+        tile.style.setProperty('--object-opacity',(.15+.85*emphasis).toFixed(4));
+      }
+      tile.style.transformOrigin=`50% ${cell/2}px`;
+      // Keep labels at their authored size while the product's depth changes.
+      tile.style.setProperty('--object-label-scale',String(1/Number(scale.toFixed(4))));
+      tile.style.transform=`translate(${left}px,${top}px) scale(${scale.toFixed(4)})`;
     }
     // Keep DOM/map order intact, but discover the center photo first. Edge
     // photos no longer occupy every mobile connection before the focal object.
@@ -191,6 +265,10 @@
       if(source.imageSrcset)image.srcset=source.imageSrcset;
       image.src=source.image;
     });
+    clearTimeout(imageQualityTimer);
+    if(!motion&&entranceSettled){
+      imageQualityTimer=setTimeout(()=>refreshImageQuality(imageSize),120);
+    }
     // The preview always retraces the same centered zoom. Retain its decoded
     // tiles instead of rebuilding them when the view widens again.
     for(const [key,tile] of tiles)if(!wanted.has(key)){
@@ -220,13 +298,14 @@
   function updateZoomLayout(){
     // One live range in the same keyboard order at every width. Keeping the
     // node in place also preserves focus and its value through rotation.
+    zoomInput.setAttribute('aria-orientation',mobileZoom.matches?'horizontal':'vertical');
     zoomInput.hidden=false;zoomInput.disabled=false;zoomInput.tabIndex=0;
     zoomStatus.setAttribute('aria-live','off');
     updateZoomControls();
   }
   function updateCanvasZoom(value){
     zoom=Math.max(0,Math.min(100,value));focusMode=zoom===100;
-    page.classList.toggle('objects-focused',focusMode);page.classList.toggle('objects-min-zoom',zoom===0);page.classList.toggle('objects-show-labels',zoom>=50);
+    page.classList.toggle('objects-focused',focusMode);page.classList.toggle('objects-min-zoom',zoom===0);
     updateZoomControls();
     canvas.setAttribute('aria-label',t(focusMode?'Focused object canvas':'Infinite object grid'));
     document.getElementById('objects-instructions').textContent=t(focusMode?'Select a neighboring image in any direction to center it. Select the centered image to open details. Arrow keys move between neighbors.':'Drag in any direction to explore. Arrow keys move the grid. Enter opens the object at the center.');
@@ -266,11 +345,11 @@
   });
   const detailSheet=dialog.querySelector('.objects-dialog-scroll');
   const detailPhotos=dialog.querySelector('.objects-dialog-photo');
+  const detailPhotoGrid=document.body.classList.contains('practice-collection-page');
   const detailPhotoCount=dialog.querySelector('.objects-photo-count');
   const detailPhotoStatus=dialog.querySelector('.objects-photo-status');
-  const detailMobile=matchMedia('(max-width:767px), (max-width:1023px) and (max-height:500px) and (pointer:coarse)');
+  const detailMobile=matchMedia('(max-width:767px), (max-width:1099px) and (pointer:coarse)');
   const detailFooter=dialog.querySelector('.objects-dialog-footer');
-  const detailFooterAction=dialog.querySelector('.objects-dialog-footer-action');
   const detailAction=dialog.querySelector('.objects-dialog-action');
   const detailCredit=dialog.querySelector('.objects-dialog-credit');
   let detailPhotoImages=[],detailPhotoIndex=0,detailPhotoWidth=0,detailPhotoLoop=false;
@@ -280,7 +359,7 @@
   const detailPhotoHeld=()=>detailPhotoPointers.size||detailPhotoTouches.size;
   const photoLabel=(text,index)=>t(text).replace('{number}',String(index+1)).replace('{count}',String(detailPhotoImages.length));
   detailSheet.addEventListener('scroll',()=>{
-    if(detailMobile.matches||!detailPhotoImages.length)return;
+    if(detailPhotoGrid||detailMobile.matches||!detailPhotoImages.length)return;
     const viewport=detailSheet.getBoundingClientRect(),center=viewport.top+viewport.height/2;
     let nearestIndex=0,distance=Infinity;
     detailPhotoImages.forEach((image,index)=>{const rect=image.getBoundingClientRect(),delta=Math.abs(rect.top+rect.height/2-center);if(delta<distance){distance=delta;nearestIndex=index;}});
@@ -335,7 +414,7 @@
     jumpDetailPhoto(detailPhotoLoop?(detailPhotoImages.length+detailPhotoIndex)*detailPhotoWidth:0);
   }
   function updateDetailPhotos(){
-    const loop=detailMobile.matches&&detailPhotoImages.length>1;
+    const loop=!detailPhotoGrid&&detailMobile.matches&&detailPhotoImages.length>1;
     // A breakpoint change can precede ResizeObserver during native smoothing.
     // Keep its intended real photo before canceling the old-width command.
     if(detailPhotoTarget!==null&&detailPhotoImages.length)detailPhotoIndex=mod(detailPhotoTarget,detailPhotoImages.length);
@@ -355,7 +434,7 @@
       // no new assets or network endpoints; only the middle set is accessible.
       detailPhotos.replaceChildren(...(loop?[...duplicates(),...detailPhotoImages,...duplicates()]:detailPhotoImages));
     }
-    detailPhotos.tabIndex=detailPhotoImages.length>1?0:-1;detailPhotoCount.hidden=detailPhotoImages.length===0;
+    detailPhotos.tabIndex=!detailPhotoGrid&&detailPhotoImages.length>1?0:-1;detailPhotoCount.hidden=detailPhotoGrid||detailPhotoImages.length===0;
     detailPhotos.classList.toggle('is-interactive',loop);
     if(loop){
       detailPhotos.setAttribute('aria-description',t('Swipe, tap the photo to advance, or use Left and Right arrow keys to browse photos. Home and End select the first and last photo.'));
@@ -499,6 +578,7 @@
     paintDetailPhoto(true);
   }
   detailPhotos.addEventListener('click',event=>{
+    if(detailPhotoGrid)return;
     if(!detailMobile.matches){
       if(event.button!==0||event.defaultPrevented)return;
       const index=detailPhotoImages.indexOf(event.target);if(index<0)return;
@@ -516,6 +596,7 @@
     moveDetailPhoto(1);
   });
   detailPhotos.addEventListener('keydown',event=>{
+    if(detailPhotoGrid)return;
     if(!detailMobile.matches&&event.target===detailPhotos&&['Enter',' '].includes(event.key)){event.preventDefault();advanceVerticalPhoto();return;}
     if(event.target!==detailPhotos||!detailPhotoLoop||event.altKey||event.ctrlKey||event.metaKey)return;
     if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
@@ -526,36 +607,132 @@
   updateDetailPhotos();
   function updateDetailLayout(){
     const focused=document.activeElement,wasAction=detailAction.contains(focused);
-    if(detailMobile.matches)detailFooterAction.append(detailAction);
-    else dialog.querySelector('.objects-detail-summary').append(detailAction);
-    detailFooter.hidden=!detailMobile.matches;detailFooter.inert=!detailMobile.matches;
+    dialog.querySelector('.objects-dialog-credit').before(detailAction);
+    detailFooter.hidden=true;detailFooter.inert=true;
     if(dialog.open&&wasAction)focused.focus({preventScroll:true});
   }
   updateDetailLayout();
-  function paintSimilarProducts(item) {
-    const score=other=>other.tags.filter(tag=>item.tags.includes(tag)).length*3+(other.brand===item.brand?2:0)+(other.category===item.category?1:0);
-    const similar=catalog.filter(other=>other.id!==item.id).sort((a,b)=>score(b)-score(a)||a.id.localeCompare(b.id)).slice(0,3);
-    const grid=dialog.querySelector('.objects-similar-grid');
-    grid.replaceChildren(...similar.map(other=>{
+  const productHero=document.createElement('section');productHero.className='collection-product-hero';
+  const heroImage=document.createElement('img');heroImage.className='collection-product-image';heroImage.draggable=false;
+  const heroImageButton=document.createElement('button');heroImageButton.type='button';heroImageButton.className='collection-product-image-button';heroImageButton.append(heroImage);
+  const heroCaption=document.createElement('button');heroCaption.type='button';heroCaption.className='collection-product-caption';
+  productHero.append(heroImageButton,heroCaption);detailSheet.prepend(productHero);
+  // CSS pins the hero beneath the reading surface. Keep covered controls out
+  // of keyboard navigation without moving the image with JavaScript.
+  function updateProductHeroVisibility(){
+    productHero.inert=detailSheet.scrollTop>=productHero.offsetHeight;
+  }
+  detailSheet.addEventListener('scroll',updateProductHeroVisibility,{passive:true});
+  window.addEventListener('resize',updateProductHeroVisibility,{passive:true});
+  const similarSection=document.createElement('section');similarSection.className='objects-similar';
+  const similarHeading=document.createElement('h3');similarHeading.id='objects-similar-title';similarHeading.textContent=t('Similar products');
+  similarSection.setAttribute('aria-labelledby',similarHeading.id);
+  const similarGrid=document.createElement('div');similarGrid.className='objects-similar-grid';
+  similarSection.append(similarHeading,similarGrid);detailSheet.append(similarSection);
+  function renderSimilarProducts(item){
+    const score=other=>other.tags.filter(tag=>item.tags.includes(tag)).length*4+Number(other.brand===item.brand)*2+Number(other.category===item.category);
+    const related=catalog.filter(other=>other.id!==item.id).sort((a,b)=>score(b)-score(a)).slice(0,3);
+    similarSection.hidden=!related.length;
+    similarGrid.replaceChildren(...related.map(other=>{
       const button=document.createElement('button');button.type='button';button.className='objects-similar-card';
-      const image=document.createElement('img');image.src=other.image;if(other.imageSrcset)image.srcset=other.imageSrcset;
-      image.sizes='(max-width:767px) 30vw, 28vw';image.alt='';image.loading='lazy';image.decoding='async';
-      const name=document.createElement('span');name.textContent=other.name;name.translate=false;
-      const brand=document.createElement('span');brand.className='objects-similar-brand';brand.textContent=other.brand;brand.translate=false;
+      const image=document.createElement('img');image.src=other.image;image.alt='';image.loading='lazy';
+      if(other.imageSrcset)image.srcset=other.imageSrcset;
+      image.sizes='(max-width:767px) 24vw, 240px';
+      const name=document.createElement('span');name.textContent=other.name;
+      const brand=document.createElement('span');brand.className='objects-similar-brand';brand.textContent=other.brand;
       button.append(image,name,brand);
       button.addEventListener('click',()=>{
-        show(other,returnFocus,false);
-        const heading=dialog.querySelector('.objects-dialog-title');heading.tabIndex=-1;heading.focus({preventScroll:true});
-      });return button;
+        if(productClosing)return;
+        const origin=image.getBoundingClientRect(),canvasOrigin=productOrigin;
+        show(other,returnFocus,true,1);
+        animateProductIn(origin);
+        // Closing still returns to the original canvas selection.
+        productOrigin=canvasOrigin;
+      });
+      return button;
     }));
   }
-  function show(item, trigger,focusClose=true){
+  const productStatus=document.createElement('span');productStatus.className='sr-only';productStatus.setAttribute('role','status');productStatus.setAttribute('aria-atomic','true');
+  const productSteps=[-1,1].map(direction=>{
+    const button=document.createElement('button');button.type='button';button.className='collection-product-step';button.dataset.direction=direction;
+    button.setAttribute('aria-label',direction<0?'Previous product':'Next product');
+    const arrow=document.createElement('span');arrow.setAttribute('aria-hidden','true');button.append(arrow);
+    button.addEventListener('click',()=>stepProduct(direction));productHero.append(button);return button;
+  });
+  productHero.append(productStatus);
+  let currentProduct=null;
+  function stepProduct(direction){
+    if(productClosing||!dialog.open||!currentProduct)return;
+    const items=active.some(item=>item.id===currentProduct.id)?active:catalog;
+    if(items.length<2)return;
+    const index=items.findIndex(item=>item.id===currentProduct.id);
+    show(items[(index+direction+items.length)%items.length],returnFocus,false,direction);
+  }
+  productHero.addEventListener('keydown',event=>{
+    if(event.altKey||event.ctrlKey||event.metaKey||!['ArrowLeft','ArrowRight'].includes(event.key))return;
+    event.preventDefault();event.stopPropagation();stepProduct(event.key==='ArrowRight'?1:-1);
+  });
+  function scrollToProductDetails(){dialog.querySelector('.objects-dialog-copy').scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});}
+  heroCaption.addEventListener('click',scrollToProductDetails);
+  heroImageButton.addEventListener('click',scrollToProductDetails);
+  let productMotion=[],productOrigin=null,productClosing=false;
+  function clearProductMotion(){productMotion.forEach(animation=>animation.cancel());productMotion=[];}
+  function animateProductIn(origin,source){
+    clearProductMotion();productClosing=false;productOrigin=origin;
+    if(reduced.matches||!origin?.width)return;
+    const end=heroImage.getBoundingClientRect();
+    const transform=`translate(${origin.left+origin.width/2-end.left-end.width/2}px,${origin.top+origin.height/2-end.top-end.height/2}px) scale(${origin.width/end.width},${origin.height/end.height})`;
+    const timing={duration:620,easing:'cubic-bezier(.2,.8,.2,1)'};
+    // Zoom the cutout directly over the collection, without an expanding panel.
+    // The collection fades to its own ground; the opaque hero takes over only
+    // once the zoom settles, so the parallax reading surface still has a base.
+    productMotion=[heroImage.animate([{transform},{transform:'none'}],timing),productHero.animate([{backgroundColor:'transparent'},{backgroundColor:'transparent'}],timing)];
+    const scene=page.querySelector('.objects-scene'),sourceImage=source?.querySelector?.('img');
+    for(const surface of [scene,page.querySelector(':scope > .fixed-social-links')]){
+      if(surface)productMotion.push(surface.animate([{opacity:1},{opacity:0}],timing));
+    }
+    if(sourceImage)productMotion.push(sourceImage.animate([{visibility:'hidden'},{visibility:'hidden'}],timing));
+    for(const control of [heroCaption,...productSteps,close])productMotion.push(control.animate([{opacity:0,offset:0},{opacity:0,offset:.6},{opacity:1}],timing));
+  }
+  function closeProduct(){
+    if(productClosing||!dialog.open)return;
+    clearProductMotion();
+    if(reduced.matches){dialog.close();return;}
+    productClosing=true;
+    const timing={duration:280,easing:'cubic-bezier(.4,0,.6,1)',fill:'both'};
+    let exit;
+    if(detailSheet.scrollTop<2&&productOrigin?.width){
+      // Only the product returns to its collection position. Dissolve the
+      // full-size ground in place instead of clipping it into a shrinking card.
+      const box=heroImage.getBoundingClientRect(),r=productOrigin;
+      exit=heroImage.animate([{transform:'none'},{transform:`translate(${r.left+r.width/2-box.left-box.width/2}px,${r.top+r.height/2-box.top-box.height/2}px) scale(${r.width/box.width},${r.height/box.height})`}],timing);
+      productMotion=[exit,productHero.animate([{backgroundColor:getComputedStyle(productHero).backgroundColor},{backgroundColor:'transparent'}],timing)];
+      const scene=page.querySelector('.objects-scene');
+      for(const surface of [scene,page.querySelector(':scope > .fixed-social-links')]){
+        if(surface)productMotion.push(surface.animate([{opacity:0},{opacity:1}],timing));
+      }
+      for(const control of [heroCaption,...productSteps,close])productMotion.push(control.animate([{opacity:1},{opacity:0}],{...timing,duration:140}));
+    }else{
+      // From the reading surface, reveal the collection without moving or
+      // shrinking any page background, and without scrolling back to the hero.
+      exit=dialog.animate([{opacity:1},{opacity:0}],{...timing,duration:220});
+      productMotion=[exit];
+    }
+    exit.finished.then(()=>{dialog.close();clearProductMotion();productClosing=false;}).catch(()=>{});
+  }
+
+  function show(item, trigger,focusClose=true,direction=0){
     if(!item)return;
-    cancelGesture();stopMotion();if(focusMode)focusAt(focusColumn,focusRow,false);else settleGeometry();
+    currentProduct=item;
+    productSteps.forEach(button=>{button.hidden=(active.some(entry=>entry.id===item.id)?active:catalog).length<2;});
+    const source=trigger===canvas?[...layer.querySelectorAll('[data-object]')].filter(tile=>tile.dataset.object===item.id).sort((a,b)=>{const distance=tile=>{const r=tile.getBoundingClientRect();return Math.hypot(r.x+r.width/2-innerWidth/2,r.y+r.height/2-innerHeight/2);};return distance(a)-distance(b);})[0]:trigger;
+    const origin=source?.querySelector?.('img')?.getBoundingClientRect();
+    cancelGesture();stopMotion();
     returnFocus=trigger;
     const photos=item.gallery.map((photo,index)=>{
       const image=photo.cloneNode(true);
       image.className='objects-dialog-image';
+      if(detailPhotoGrid)image.sizes='(max-width:767px) 100vw, 60vw';
       image.loading=index===0?'eager':'lazy';
       return image;
     });
@@ -564,6 +741,9 @@
     dialog.querySelector('.objects-dialog-title').textContent=item.name;
     dialog.querySelector('.objects-dialog-brand').textContent=item.brand;
     dialog.querySelector('.objects-dialog-description').textContent=item.description;
+    const illustrationCredit=dialog.querySelector('.objects-illustration-credit');
+    illustrationCredit.textContent=item.card.dataset.illustrationCredit||'';
+    illustrationCredit.hidden=!illustrationCredit.textContent;
     const badges=dialog.querySelector('.objects-dialog-tags');badges.replaceChildren();
     for(const name of item.tags){const badge=document.createElement('button');badge.type='button';badge.textContent=t(name);badge.setAttribute('aria-pressed',String(selectedCategories.has(name)));badge.addEventListener('click',()=>{dialog.close();category='all';selectedTag='';selectedCategories.add(name);searchQuery='';if(searchInput)searchInput.value='';filter();renderSuggestions();searchInput?.focus({preventScroll:true});});badges.append(badge);}
     const productLink=dialog.querySelector('.objects-dialog-link');
@@ -593,12 +773,24 @@
       link.textContent=new URL(url).hostname.replace(/^www\./,'');
       return link;
     }));
+    renderSimilarProducts(item);
     loadPurchased(item);if(!dialog.open)dialog.showModal();
-    paintSimilarProducts(item);
+    heroImage.src=item.image;if(item.imageSrcset)heroImage.srcset=item.imageSrcset;else heroImage.removeAttribute('srcset');
+    heroImage.sizes='(max-width:767px) 80vw, 66vh';heroImage.alt=item.alt||item.name;
+    const scrollHint=document.createElement('span');scrollHint.className='collection-product-scroll-hint';scrollHint.textContent='↓';scrollHint.setAttribute('aria-hidden','true');
+    heroCaption.replaceChildren(document.createTextNode(item.name),document.createElement('br'),scrollHint);
+    heroCaption.setAttribute('aria-label','View details for '+item.name);
+    heroImageButton.setAttribute('aria-label','Scroll to details for '+item.name);
     dialog.dispatchEvent(new CustomEvent('objectshown',{detail:item}));
     dialog.querySelector('.objects-dialog-scroll').scrollTop=0;
     dialog.querySelector('.objects-dialog-copy').scrollTop=0;
+    updateProductHeroVisibility();
     positionDetailPhotos();
+    if(direction){
+      clearProductMotion();
+      productStatus.textContent=item.name;
+      if(!reduced.matches)productMotion=[heroImage.animate([{transform:`translateX(${direction*48}px)`},{transform:'none'}],{duration:360,easing:'cubic-bezier(.2,.8,.2,1)'})];
+    }else{productStatus.textContent='';animateProductIn(origin,source);}
     if(focusClose)close.focus({preventScroll:true});
   }
   const canvasPointers=new Map();
@@ -644,7 +836,7 @@
       if(previous.distance<2||next.distance<2){rebaseCanvasGesture();return;}
       const min=geometry(canvas.clientWidth,0).cell,max=geometry(canvas.clientWidth,100).cell;
       const size=Math.max(min,Math.min(max,previous.cell*next.distance/previous.distance));
-      updateCanvasZoom(max>min?(size-min)/(max-min)*100:zoom);
+      updateCanvasZoom(max>min?zoomProgress(size,min,max,canvas.clientWidth)*100:zoom);
       const target=geometry(canvas.clientWidth,zoom);
       pose({x:next.x-previous.worldX*target.cell,y:next.y-target.cell/2-previous.worldY*target.row,...target},false);
       // Keep the fingers' anchor even at maximum; center the nearest object
@@ -720,8 +912,12 @@
   canvas.addEventListener('click',event=>{
     if(suppressClick||canvasPointers.size>1)return;
     const tile=event.target.closest('[data-object]');if(!tile)return;
-    if(focusMode){const column=Number(tile.dataset.column),line=Number(tile.dataset.line);const target=geometry(canvas.clientWidth,zoom),centered=Math.abs(x+column*cell+cell/2-canvas.clientWidth/2)<1&&Math.abs(y+line*row+cell/2-canvas.clientHeight/2)<1&&Math.abs(cell-target.cell)<1;if(column!==focusColumn||line!==focusRow||motion||!centered){focusAt(column,line);return;}}
-    show(catalog.find(item=>item.id===tile.dataset.object),canvas);
+    if(focusMode){
+      const column=Number(tile.dataset.column),line=Number(tile.dataset.line);
+      if(column!==focusColumn||line!==focusRow){focusAt(column,line);return;}
+      if(motion)return;
+    }
+    show(catalog.find(item=>item.id===tile.dataset.object),tile);
   });
   function pinchCanvas(value,clientX,clientY){
     if(!Number.isFinite(value)||!active.length)return;
@@ -738,14 +934,21 @@
   canvas.addEventListener('gesturechange',event=>{if(!trackpadGesture)return;event.preventDefault();pinchCanvas(trackpadGesture.zoom+Math.log(event.scale/trackpadGesture.scale)*60,event.clientX,event.clientY);},{passive:false});
   canvas.addEventListener('gestureend',event=>{event.preventDefault();trackpadGesture=null;if(focusMode)settleGeometry(true);},{passive:false});
   canvas.addEventListener('wheel',event=>{
+    if(canvasPointers.size)return;
     if(event.ctrlKey){event.preventDefault();if(!trackpadGesture){const unit=event.deltaMode===1?16:event.deltaMode===2?canvas.clientHeight:1;pinchCanvas(zoom-event.deltaY*unit*.4,event.clientX,event.clientY);}return;}
     if(event.metaKey)return;
-    if(canvasPointers.size)return;
     event.preventDefault();const unit=event.deltaMode===1?16:event.deltaMode===2?canvas.clientHeight:1;
     stopMotion();x-=event.deltaX*unit;y-=event.deltaY*unit;schedule();
     wheelTimer=setTimeout(()=>{if(focusMode){const center=nearest();focusAt(center.column,center.line);}else settleGeometry(true);},140);
   },{passive:false});
   canvas.addEventListener('focus',announceCenter);
+  // Keep zoom shortcuts available while the canvas has keyboard focus.
+  canvas.addEventListener('keydown',event=>{
+    if(event.ctrlKey||event.metaKey||event.altKey||!['+','=','-','0'].includes(event.key))return;
+    event.preventDefault();event.stopPropagation();
+    setZoom(event.key==='0'?0:zoom+(event.key==='-'?-25:25));
+    canvas.focus({preventScroll:true});
+  },true);
   canvas.addEventListener('keydown',event=>{
     if(event.target!==canvas)return;
     if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','Enter',' '].includes(event.key))event.preventDefault();else return;
@@ -764,9 +967,10 @@
     const link=event.target.closest('.object-open');if(!link||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||event.button!==0)return;
     event.preventDefault();show(catalog.find(item=>item.card.contains(link)),link);
   });
-  close.addEventListener('click',()=>dialog.close());
+  close.addEventListener('click',closeProduct);
+  dialog.addEventListener('cancel',event=>{event.preventDefault();closeProduct();});
   dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});
-  dialog.addEventListener('close',()=>{if(dialog.open)return;cancelDetailPhotos();purchaseGeneration++;returnFocus?.focus({preventScroll:true});returnFocus=null;});
+  dialog.addEventListener('close',()=>{if(dialog.open)return;clearProductMotion();productClosing=false;cancelDetailPhotos();purchaseGeneration++;(returnFocus?.isConnected&&returnFocus.tabIndex>=0?returnFocus:canvas).focus({preventScroll:true});returnFocus=null;});
   if(searchInput)searchInput.disabled=false;
   const suggestions=document.getElementById('objects-search-suggestions');
   const suggestionGroups=[['Category',[...new Set(catalog.flatMap(item=>item.tags))]],['Color',[...new Set(catalog.flatMap(item=>item.colors))]]];
@@ -1033,8 +1237,8 @@
       page.classList.add('objects-hover-ready');
     }
   },{passive:true});
-  page.classList.add('objects-ready','objects-min-zoom');filter();
-  let infoSeen=false;try{infoSeen=localStorage.getItem(infoSeenKey)==='1';}catch{}
+  page.classList.add('objects-ready');updateCanvasZoom(zoom);filter();
+  let infoSeen=page.classList.contains('practice-collection-page');try{infoSeen=infoSeen||localStorage.getItem(infoSeenKey)==='1';}catch{}
   if(shopPreview){
     infoSeen=true;entranceSettled=true;
     let previewFrame=0,previewStarted=0;
@@ -1067,7 +1271,7 @@
     Promise.all([...layer.querySelectorAll('img[src]')].map(image=>image.decode().catch(()=>{})))
       .then(()=>requestAnimationFrame(()=>parent.postMessage('fc-preview-ready',location.origin)));
   }
-  else if(reduced.matches){if(!infoSeen&&!requestedItem)openInfo();}
+  else if(reduced.matches){entranceSettled=true;if(!infoSeen&&!requestedItem)openInfo();}
   else{
     page.classList.add('finds-entering');
     // Establish the first layout before observing size changes, so the initial
@@ -1076,6 +1280,7 @@
     if(frame){cancelAnimationFrame(frame);frame=0;}
     draw();
     requestAnimationFrame(()=>requestAnimationFrame(async ()=>{
+      await pageRevealed;
       const images=[...layer.querySelectorAll('.objects-tile img')].filter(image=>{const r=image.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth;});
       if(reduced.matches){
         entranceSettled=true;

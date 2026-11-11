@@ -1,0 +1,23 @@
+/* The centered logo clears with the red cover; the header stays in place beneath it. */
+.js.is-landing .practice-home > .landing-cover {
+  z-index: 90;
+  background: var(--red);
+  animation: none;
+}
+
+.js.is-landing .practice-home > .landing-cover.is-departing {
+  animation: landing-wipe 1.1s cubic-bezier(.7,0,.2,1) both;
+}
+
+.practice-home > .landing-cover .brand-caption {
+  height: auto;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.practice-home > .landing-cover .brand-caption > span {
+  transform: scaleX(var(--landing-caption-fit, 1));
+  transform-origin: center;
+}

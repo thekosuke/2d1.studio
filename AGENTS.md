@@ -607,3 +607,41 @@ item URLs redirect to the collection's `?item=ID` modal and are noindex, outside
 the 24-URL sitemap. Prior page generator/CSS: `_archive/object-details-2026-11-01/`.
 
 FC modal visual refinement — November 1: reduce sheet width and height by 10% while keeping its bottom edge at the viewport bottom. Transparent backdrop (no dimming), 1px ash-brown border. Credit text has 24px bottom clearance at the gallery end. Category links have square-dashed underlines; related-product images use 72% of the card width with a 240px cap. Preserve EN/JA and mobile behavior.
+
+
+## Site-wide content alignment — November 9, 2026
+Every page’s primary content must share the left edge of the footer social-links group. Studio project thumbnails/captions and Shop items follow the shared `--reading-left` and `--reading-width` tokens, just like the reading pages. Do not independently center galleries or introduce page-specific desktop offsets. Preserve intentionally full-bleed hero/gallery artwork. Verify alignment at desktop and mobile widths when changing page layouts.
+
+## Fixed language-toggle position — November 9, 2026
+The viewport language toggle must never shift between pages or as a footer appears. Use the shared 24px bottom/right inset with safe-area clearance, without JavaScript footer alignment. Preserve mobile language links inside the navigation menu.
+
+## Work-first navigation — 10 November 2026 (latest override)
+
+Home is now the Work portfolio, with Aviator, DeepDrip, supa and Red Pixel.
+Main navigation: Work, Familiar Characters, About, Contact. Work / Shop is a
+native route switch at the top of Home and Shop. Shop retains `/shop/` and only
+Day Bag and Memoru; no commerce is connected. Keep FC separate and English-only.
+The old Home intro/hero/house is no longer active. Archive:
+`_archive/2d1-before-work-home-2026-11-10.tar`. See README for restoration.
+Project source moved to `data/work-projects.html`; Japanese generation writes
+`data/work-projects-ja.html`. Standalone case-study routes stay unchanged;
+`/work/` redirects Home and resolves legacy project hashes. New layout styles
+are scoped in `css/practice.css`. Preserve typography, colors, native route
+transitions, keyboard support and reduced motion. No commit or deployment was
+authorized for this redesign.
+
+
+## Shared Work / Shop / Collection shell — 10 November 2026
+
+The owner moved the logo to the top left above page navigation. Page nav is now
+Work, About, Contact; Familiar Characters lives under the typography-only
+WORK / SHOP / COLLECTION switch, aligned to the footer social reading edge.
+Desktop switch and logo share a vertical center; narrow screens put the switch
+on a second row. Work is horizontal with 4:3 images; Shop has three desktop
+columns (responsive two/one). Collection retains this shell. At minimum zoom
+all objects form a slowly rotating globe; zooming in restores the canvas.
+Preserve drag, keyboard, pause, reduced-motion and no-JS access. FC stays English
+only. See README and css/practice-shell.css for the current implementation.
+
+## About scroll-reading layout — 10 November 2026
+About now uses a single shared reading column, larger former-Home typography, and the existing word-by-word reading-ink reveal on every essay paragraph. This supersedes the desktop two-column/sticky-heading About layout. Preserve all current copy and links, footer/social alignment, native scrolling, and fully visible no-JS/reduced-motion text. Previous source is in `_archive/about-before-scroll-2026-11-10/`.

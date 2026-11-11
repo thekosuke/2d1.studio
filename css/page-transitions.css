@@ -1,0 +1,76 @@
+/* An upward swipe with a single red seam joins the outgoing and incoming pages. Native navigation
+   owns the lifecycle: no click delays, document replacement or scroll changes. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition {
+  background: var(--red, #FF2B00);
+}
+
+::view-transition-group(root) {
+  animation: none;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  mix-blend-mode: normal;
+  animation-duration: 480ms;
+  animation-timing-function: cubic-bezier(.2, .8, .2, 1);
+  animation-fill-mode: both;
+}
+
+::view-transition-old(root) {
+  animation-name: page-wipe-away;
+}
+
+::view-transition-new(root) {
+  animation-name: page-wipe-reveal;
+}
+
+@keyframes page-wipe-away {
+  from { clip-path: inset(0); }
+  to { clip-path: inset(0 0 calc(100% + 16px) 0); }
+}
+
+@keyframes page-wipe-reveal {
+  from { clip-path: inset(100% 0 0 0); }
+  /* Cover the top edge before the final frame so no thin seam lingers. */
+  95%, to { clip-path: inset(-1px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+/* A selected project photograph grows from its thumbnail into the hero. */
+html.project-image-transition::view-transition{background:var(--beige)}
+html.project-image-transition::view-transition-old(root),
+html.project-image-transition::view-transition-new(root){animation:none;clip-path:none}
+html.project-image-transition::view-transition-old(root){opacity:0}
+html.project-image-transition::view-transition-group(project-hero){animation-duration:720ms;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+html.project-image-transition::view-transition-old(project-hero),
+html.project-image-transition::view-transition-new(project-hero){height:100%;object-fit:cover;animation-duration:720ms;mix-blend-mode:normal}
+
+/* Keep a single opaque snapshot: the browser's default crossfade doubles the art. */
+html.project-image-transition::view-transition-old(project-hero){animation:none;opacity:1}
+html.project-image-transition::view-transition-new(project-hero){animation:none;opacity:0}
+html.project-image-return::view-transition-group(project-hero){animation-duration:560ms}
+
+/* Arrival fallback for a navigation without a native snapshot transition. */
+.page-wipe-fallback{position:fixed;z-index:2147483647;inset:0;pointer-events:none;background:var(--beige,#FAF0E6);border-bottom:16px solid var(--red,#FF2B00);box-sizing:border-box}
+@media(prefers-reduced-motion:reduce){.page-wipe-fallback{display:none}}

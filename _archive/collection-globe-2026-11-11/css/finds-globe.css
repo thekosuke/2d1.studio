@@ -1,0 +1,11 @@
+.finds-globe{position:absolute;inset:0;user-select:none;touch-action:none}
+.finds-globe[hidden]{display:none!important}
+.finds-globe-stage{position:absolute;inset:0;cursor:grab;overflow:visible;isolation:isolate}
+.finds-globe-stage:active{cursor:grabbing}
+html body .finds-globe-object{position:absolute;left:0;top:0;display:block;padding:0;border:0;border-radius:0;background:transparent;color:var(--ink);cursor:pointer;will-change:transform}
+html body .finds-globe-object img{width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;transition:transform 180ms cubic-bezier(.2,.8,.2,1)}
+html body .finds-globe-object:is(:hover,:focus-visible){background:transparent!important;opacity:1!important;z-index:110!important}
+.finds-globe-object:is(:hover,:focus-visible) img{transform:scale(1.15)}
+@media(prefers-reduced-motion:reduce){.finds-globe-object img{transition:none}}
+
+.finds-globe.is-morphing .finds-globe-object img{transform:none}

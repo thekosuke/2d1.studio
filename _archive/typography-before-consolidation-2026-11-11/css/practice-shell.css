@@ -1,0 +1,162 @@
+/* One reading edge connects the section switch, content, and footer socials. */
+.practice-shell{--practice-top:24px;--practice-content-top:144px;--practice-logo-width:96px;--practice-header-height:34px;--practice-switch-left:calc((100vw - min(var(--column),calc(100vw - 48px)))/2)}
+html body.practice-shell .site-logo,
+html body.practice-shell.objects-ready .objects-header .site-logo{position:fixed;left:var(--page-edge,24px);right:auto;top:var(--practice-top);width:var(--practice-logo-width);height:auto;margin:0;padding:0;transform:none;z-index:36;background:transparent;opacity:1;visibility:visible}
+html body.practice-shell .site-logo img{display:block;width:100%;height:auto}
+html body.practice-shell .practice-byline{position:fixed;z-index:36;left:var(--page-edge,24px);top:calc(var(--practice-top) + var(--practice-logo-width) * 280 / 829 + 12px);width:240px;max-width:calc(100vw - 48px);text-wrap:balance;margin:0;color:var(--ink);font:var(--font-small) var(--font);letter-spacing:var(--type-small-track);text-transform:none}
+html body.practice-shell .practice-switch{position:fixed;z-index:30;left:var(--practice-switch-left);top:var(--practice-top);display:flex;align-items:center;gap:8px;width:max-content;max-width:calc(100% - 48px);height:var(--practice-header-height);margin:0;padding:0;border:0;background:none;font:var(--font-ui) var(--font);letter-spacing:.02em}
+html body.practice-shell .practice-switch a{display:inline-flex;align-items:center;justify-content:flex-start;flex:0 0 auto;min-width:0;min-height:34px;height:34px;margin:0;padding:0;border:0;background:none;color:var(--ink);font:inherit;letter-spacing:inherit;text-decoration:none;-webkit-text-fill-color:currentColor}
+html body.practice-shell .practice-switch a:is([aria-current],:hover,:focus-visible){color:var(--red);background:none}
+.practice-switch-divider{color:var(--sub-gray)}
+/* Keep the parent Studio marker visible in Work, Shop, and Collection. */
+html body.practice-shell .practice-nav a[aria-current]:has(>.nav-label)::before{width:6px;background:var(--red)}
+html body.practice-shell .practice-nav a[aria-current]>.nav-label{transform:translateX(12px)}
+@media(min-width:1100px){.practice-shell{--practice-switch-left:max(calc(100vw - var(--column) - 128px),min(27.7778vw,400px))}}
+@media(min-width:1100px),(min-width:768px) and (pointer:fine){
+ html body.practice-shell.mobile-navigation-ready #page-navigation.practice-nav{position:fixed;display:flex;flex-direction:column;align-items:flex-start;left:var(--page-edge,24px);right:auto;top:var(--practice-content-top);width:180px;max-width:none;margin:0;padding:0;gap:0;transform:none;visibility:visible;opacity:1;pointer-events:auto}
+ /* One start line for the visible sidebar and page content. */
+ html body.practice-shell.shop-page .practice-main,
+ html body.practice-shell.about-essay-page>main,
+ html body.practice-shell.contact-page .contact-page-main,
+ html body.practice-shell .privacy-main.column{padding-top:var(--practice-content-top)}
+ html body.practice-shell #page-navigation.practice-nav .page-nav-contact{display:contents}
+ html body.practice-shell #page-navigation.practice-nav a{display:flex;align-items:center;grid-column:auto;min-height:26px;padding-block:3px;white-space:nowrap}
+}
+.practice-page.shop-page .shop-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 32px;width:100%}
+.practice-page.shop-page .practice-main{padding-top:120px}
+.practice-shop-note{margin-top:32px}
+/* Collection keeps the same navigation; its controls occupy a second row. */
+html body.practice-collection-page .objects-header{position:static;display:contents}
+html body.practice-collection-page.objects-ready .objects-canvas{left:var(--reading-left);top:152px;right:24px;bottom:76px;width:auto;height:auto}
+html body.practice-collection-page.objects-ready .objects-info{left:var(--reading-left);top:92px;max-width:none}
+html body.practice-collection-page.objects-ready .objects-view-dock{top:92px;right:24px;left:auto;max-width:calc((100vw - var(--reading-left)) * .48);width:320px}
+html body.practice-collection-page.objects-ready .objects-zoom{left:auto;right:max(24px,env(safe-area-inset-right));bottom:max(24px,env(safe-area-inset-bottom));transform:none}
+html body.practice-collection-page .objects-collection{padding-top:150px}
+@media(min-width:768px) and (max-width:1099px) and (pointer:fine){
+ .practice-shell{--practice-switch-left:220px;--reading-left:220px;--reading-width:calc(100% - 244px)}
+ html body.practice-shell .site-footer .footer-line .social-links{flex-basis:calc(var(--reading-left) - 48px);min-width:max-content}
+ html body.practice-shell .site-footer .footer-line .social-links{margin-left:24px}
+}
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){
+ .practice-shell{--practice-logo-width:64px;--practice-content-top:200px;--practice-header-height:24px}
+ html body.practice-shell.mobile-menu-open .practice-byline{visibility:hidden}
+ html body.practice-shell .practice-switch{left:24px;top:136px;gap:8px;font:var(--font-small-label) var(--font);max-width:calc(100% - 48px)}
+ html body.practice-shell.mobile-navigation-ready .mobile-nav-toggle{left:auto!important;right:14px!important;top:13px!important}
+ html body.practice-shell .practice-main,html body.practice-shell.shop-page .practice-main{padding-top:200px}
+ .practice-page.shop-page .shop-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+ html body.practice-collection-page.objects-ready .objects-canvas{left:12px;right:12px;top:178px;bottom:76px}
+ html body.practice-collection-page.objects-ready .objects-info{left:24px;top:132px;width:64px}
+ html body.practice-collection-page.objects-ready .objects-view-dock{left:96px;right:24px;top:132px;max-width:none;width:auto}
+ html body.practice-collection-page .objects-collection{padding-top:178px}
+}
+@media(max-width:479px){.practice-page.shop-page .shop-grid{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.practice-home .practice-grid{scroll-behavior:auto}}
+/* Section navigation is plain type, with a persistent current-section color. */
+html body.practice-shell .practice-switch a{background-image:none!important;-webkit-text-fill-color:currentColor;color:var(--ink)!important}
+html body.practice-shell .practice-switch a:is([aria-current],:hover,:focus-visible){color:var(--red)!important}
+.practice-shell .practice-intro h1{font:var(--font-section) var(--font)}
+.practice-shell .practice-intro p{font:var(--font-caption) var(--font)}
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){
+ html body.practice-shell.mobile-navigation-ready.mobile-menu-open .mobile-nav-toggle{height:44px!important;min-height:44px!important;padding:10px!important;justify-content:center!important}
+}
+
+/* Section choices use the same shared label role as the page navigation. */
+html body.practice-shell .practice-switch{font:var(--font-small-label) var(--font);letter-spacing:var(--type-label-track)}
+
+/* Collection keeps zoom available; search and info remain dormant. */
+html body.practice-collection-page :is(.objects-info,.objects-view-dock){display:none!important}
+html body.practice-collection-page.objects-ready .objects-canvas{top:112px;bottom:24px;overscroll-behavior:contain}
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){
+ html body.practice-collection-page.objects-ready .objects-canvas{top:132px;bottom:12px}
+}
+
+/* Short pages keep the same bottom inset as long pages, without fixing the footer. */
+html body.practice-shell:not(.practice-home):has(>.site-footer){display:flex;flex-direction:column;min-height:100svh}
+html body.practice-shell:not(.practice-home):has(>.site-footer)>main{flex:1 0 auto}
+html body.practice-shell:not(.practice-home)>.site-footer{flex:none;padding-bottom:var(--footer-inset)}
+
+/* On compact screens, reading content passes behind a quiet, solid header.
+   Collection deliberately keeps its full-screen canvas visible instead. */
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){
+ html body.practice-shell.mobile-navigation-ready:not(.practice-collection-page)::before{content:'';position:fixed;z-index:29;inset:0 0 auto;height:112px;background:var(--beige);pointer-events:none}
+ html body.practice-shell.mobile-navigation-ready:not(.practice-collection-page):has(.practice-switch)::before{height:184px}
+ html body.practice-shell.mobile-navigation-ready:has(.site-logo.on-ending)::before{background:var(--ash-brown,#191416)}
+ html body.practice-shell:has(.site-logo.on-ending) .practice-byline,
+ html body.practice-shell:has(.site-logo.on-ending) .mobile-nav-toggle{color:var(--beige)}
+ html body.practice-home>.site-footer::before{content:'';position:absolute;z-index:-1;inset:-8px 0 calc(-1 * var(--footer-inset));background:var(--beige);pointer-events:none}
+}
+
+/* Without the navigation controller, keep a readable document-flow header. */
+html body.practice-shell:not(.mobile-navigation-ready) .site-logo{position:relative;display:block;inset:auto;margin:24px 24px 12px;transform:none}
+html body.practice-shell:not(.mobile-navigation-ready) .practice-byline{position:relative;inset:auto;margin:0 24px 36px}
+html body.practice-shell:not(.mobile-navigation-ready) #page-navigation.practice-nav{position:relative;inset:auto;display:flex;flex-wrap:wrap;flex-direction:row;align-items:center;width:auto;max-width:none;margin:0 24px 20px;padding:0;gap:12px 20px;opacity:1;visibility:visible;transform:none;pointer-events:auto}
+html body.practice-shell:not(.mobile-navigation-ready) #page-navigation.practice-nav .page-nav-contact{display:contents}
+html body.practice-shell:not(.mobile-navigation-ready) #page-navigation.practice-nav a{display:inline-flex;min-height:34px;opacity:1;visibility:visible;transform:none}
+html body.practice-shell:not(.mobile-navigation-ready) .practice-switch{position:relative;inset:auto;margin:0 24px 24px}
+html body.practice-shell:not(.mobile-navigation-ready)>main{padding-top:16px}
+html body.practice-shell:not(.mobile-navigation-ready) .objects-collection{padding-top:24px}
+html body.practice-home:not(.mobile-navigation-ready)>.site-footer{position:relative;inset:auto;margin-top:40px}
+
+/* Persistent social links share the navigation's left edge on every view. */
+body.has-fixed-socials .site-footer .social-links{visibility:hidden;pointer-events:none}
+html body.practice-shell>.fixed-social-links{position:fixed;z-index:37;left:max(var(--page-edge,24px),env(safe-area-inset-left));bottom:max(24px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;width:max-content;margin:0;padding:0;color:var(--cranberry-brown,#320505);pointer-events:none}
+html body.practice-shell>.fixed-social-links.on-dark{color:var(--beige,#faf0e6)}
+html body.practice-shell>.fixed-social-links a{position:relative;display:flex;align-items:center;justify-content:center;width:24px;height:24px;padding:0;color:inherit;background:none;-webkit-text-fill-color:currentColor;pointer-events:auto}
+html body.practice-shell>.fixed-social-links a:first-child{justify-content:flex-start}
+html body.practice-shell>.fixed-social-links svg{width:16px;height:16px;fill:currentColor}
+html body.practice-shell>.fixed-social-links a:is(:hover,:focus-visible){color:var(--red)!important}
+.fixed-social-links .social-platform{position:absolute;bottom:calc(100% + 8px);left:0;text-align:left;width:max-content;color:var(--red);font:400 10px/1.4 var(--font);letter-spacing:.04em;text-transform:uppercase;pointer-events:none;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity 150ms ease,transform 200ms ease,visibility 150ms}
+.fixed-social-links a:is(:hover,:focus-visible) .social-platform{opacity:1;visibility:visible;transform:translateY(0)}
+body.mobile-menu-open>.fixed-social-links{visibility:hidden}
+@media(max-width:767px){
+ html body.practice-shell>.fixed-social-links svg{width:14px;height:14px}
+ html body.has-fixed-socials .site-footer .footer-line.column{padding-bottom:48px}
+ html body.has-fixed-socials .site-footer .footer-language{top:auto!important;bottom:0!important;transform:none!important}
+ html body.practice-collection-page.objects-ready .objects-zoom{bottom:calc(max(24px,env(safe-area-inset-bottom)) + 44px)}
+}
+@media(prefers-reduced-motion:reduce){.fixed-social-links .social-platform{transition:none}}
+
+/* Align visible cap edges, rather than the extra leading in text line boxes. */
+@media(min-width:1100px),(min-width:768px) and (pointer:fine){
+ html body.practice-shell #page-navigation.practice-nav a{align-items:flex-start;padding-block:0}
+ html body.practice-shell #page-navigation.practice-nav a:has(>.nav-label)::before{top:.5cap}
+ .practice-shell :is(.practice-nav .nav-label,.essay-title,.contact-title,.privacy-title,.practice-caption h2){text-box-trim:trim-start;text-box-edge:cap alphabetic}
+}
+
+/* One measure for the main Work, Shop, About and Contact columns. */
+.practice-shell{--page-content-width:clamp(min(320px,var(--reading-width)),calc(100% - 2 * var(--reading-left)),var(--reading-width))}
+html body.practice-shell :is(.practice-main,.contact-page-main),
+html body.practice-shell.about-essay-page :is(.essay,.ending-contact>.column){width:var(--page-content-width);max-width:none;margin-left:var(--reading-left);margin-right:auto}
+
+html body.practice-shell .practice-nav a.is-nav-leaving{color:var(--red)}
+html body.practice-shell .practice-nav a.is-nav-leaving:has(>.nav-label)::before{width:6px;background:var(--red)}
+html body.practice-shell .practice-nav a.is-nav-leaving>.nav-label{transform:translateX(12px)}
+
+/* Shop retains the wider grid; other pages keep the approved narrower measure. */
+.practice-shell.shop-page{--page-content-width:var(--reading-width)}
+html body.practice-shell.practice-home .practice-main{width:var(--page-content-width)}
+html body.practice-shell.contact-page .contact-page-main{width:var(--page-content-width);max-width:none;margin-left:var(--reading-left);margin-right:auto}
+
+/* All views except Familiar Characters retain a fixed language choice. */
+html.js body:not(.practice-collection-page):not(.objects-page) .language-switch:not(.persistent-language){display:none!important}
+html body:not(.practice-collection-page):not(.objects-page) .language-switch.persistent-language{
+ display:flex!important;position:fixed!important;inset:auto max(24px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) auto!important;
+ z-index:90;transform:none!important;opacity:1;visibility:visible!important;pointer-events:auto!important;margin:0!important;
+}
+html body .language-switch.persistent-language.on-dark-surface{
+ --fill-rest-ground:var(--ash-brown);--fill-rest-ink:var(--beige);--fill-active-ground:var(--beige);--fill-active-ink:var(--ash-brown);
+ background:var(--ash-brown)!important;border-color:var(--beige)!important;
+}
+html body .language-switch.persistent-language.on-dark-surface a{border-color:var(--beige)!important}
+/* Without script, retain the original links as the fixed control. */
+html:not(.js) body:not(.practice-collection-page):not(.objects-page) .language-switch{display:flex!important;position:fixed!important;inset:auto 24px 24px auto!important;transform:none!important}
+
+
+
+/* The fixed language control joins the interface only after the landing clears. */
+html.js.is-landing:not(.is-landing-revealing) body.practice-home .language-switch.persistent-language{
+ visibility:hidden!important;opacity:0!important;pointer-events:none!important;
+}
+
+/* Share the social links’ reveal layer as well as their entrance clock. */
+html.js.is-landing body.practice-home>.persistent-language{z-index:37}

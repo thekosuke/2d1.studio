@@ -37,13 +37,13 @@ html[lang="ja"] .connect-row input{letter-spacing:0}
 /* Hairlines run from the content column to the viewport edge. Body clips the
    small scrollbar-width overshoot without creating a scrolling container. */
 .section-label::before,.essay-kicker::before{content:"";position:absolute;left:0;top:0;width:calc(100% + var(--content-right));height:.5px;background:var(--ink);pointer-events:none}
-.page-nav{display:flex;gap:20px;margin:0 var(--pad);font:var(--font-small-label) var(--font);letter-spacing:.04em;text-transform:uppercase}
+.page-nav{display:flex;gap:20px;margin:0 var(--pad);font:var(--weight-medium) var(--font-small) var(--font);line-height:var(--leading-small-label);letter-spacing:.04em;text-transform:uppercase}
 .page-nav a{padding-block:8px}.page-nav a:hover,.page-nav a[aria-current]{color:var(--red)}
 .js .page-nav{position:fixed;z-index:25;top:64px;left:var(--pad);right:var(--pad);margin:0;background:transparent}
 .js .page-nav{opacity:0;transform:translateX(calc(-100% - var(--pad)));visibility:hidden;pointer-events:none;transition:opacity .48s cubic-bezier(.2,.8,.2,1),transform .48s cubic-bezier(.2,.8,.2,1),visibility 0s .48s}
 .js .page-nav.is-visible{opacity:1;transform:translateX(0);visibility:visible;pointer-events:auto;transition-delay:0s}
 @media(max-width:1099px){.home-page section{scroll-margin-top:112px}.page-nav{gap:16px;font-size:11px}}
-@media(min-width:1100px){.js .page-nav{top:16px;right:auto;flex-direction:column;gap:0;align-items:flex-start}.page-nav a{padding-block:6px}}
+@media(min-width:1100px){.js .page-nav{top:16px;right:auto;flex-direction:column;gap:0;align-items:flex-start}.page-nav a{padding-block:3px}}
 
 /* A quiet focus cue, without an outline around the email box. */
 .connect-form input:focus{outline:none}
@@ -182,7 +182,7 @@ html:not(.js) .home-page > .language-switch{position:static;width:fit-content;ma
 @media(min-width:1100px){
  .js :is(.home-page,.about-page) .page-nav{display:flex;top:16px;left:24px;right:auto;flex-direction:column;gap:0;align-items:flex-start}
  .js :is(.home-page,.about-page) .page-nav-left{display:contents}
- .js :is(.home-page,.about-page) .page-nav a{min-height:0;padding-block:6px}
+ .js :is(.home-page,.about-page) .page-nav a{min-height:0;padding-block:3px}
 }
 .footer-line{display:flex;align-items:center;gap:32px}
 .footer-line p{flex:none}.footer-line .footer-pages{margin:0;padding:0;gap:24px}
@@ -199,7 +199,7 @@ html:not(.js) .page-nav{flex-wrap:wrap}
 .page-nav-contact{border-left:1px solid currentColor;padding-left:20px}
 .page-nav-contact button{display:flex;align-items:center;min-height:44px;padding:0;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;white-space:nowrap;cursor:pointer}.page-nav-contact button:hover{color:var(--red)}
 html:not(.js) .page-nav-contact{display:none}
-@media(min-width:1100px){.js :is(.home-page,.about-page) .page-nav-contact{align-self:stretch;border-left:0;border-top:1px solid currentColor;margin-top:10px;padding:10px 0 0}.js :is(.home-page,.about-page) .page-nav-contact button{min-height:0;padding-block:6px}}
+@media(min-width:1100px){.js :is(.home-page,.about-page) .page-nav-contact{align-self:stretch;border-left:0;border-top:1px solid currentColor;margin-top:10px;padding:10px 0 0}.js :is(.home-page,.about-page) .page-nav-contact button{min-height:0;padding-block:3px}}
 @media(max-width:1099px){.js :is(.home-page,.about-page) .page-nav-pages{grid-column:1 / 3;gap:16px}.js :is(.home-page,.about-page) .page-nav-contact{grid-column:3;grid-row:2;justify-self:end;padding-left:12px;margin-top:4px;border-left:1px solid currentColor}}
 
 @media(max-width:1099px){.js .about-page .about-masthead{padding-top:136px}}
@@ -242,7 +242,7 @@ html:not(.js) .page-nav-contact{display:none}
 
 /* Quiet essay-scale supporting copy on Home. */
 .home-page .services{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
-.home-page .services dt,.home-page .services dd,.home-page .shop-support-copy{font:var(--font-reading) var(--font);letter-spacing:0;text-wrap:pretty}
+.home-page .services dt,.home-page .services dd,.home-page .shop-support-copy{font:var(--weight-regular) var(--font-body) var(--font);letter-spacing:0;text-wrap:pretty}
 .home-page .services dd{margin-top:8px}
 html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd,html[lang="ja"] .home-page .shop-support-copy{line-height:1.85}
 @media(max-width:767px){.home-page .services{grid-template-columns:minmax(0,1fr)}}
@@ -284,9 +284,9 @@ html[lang="ja"] .home-page .services dt,html[lang="ja"] .home-page .services dd{
 
 /* A little name tag above each footer social icon. */
 .site-footer .social-links a{position:relative;overflow:visible}
-.site-footer .social-platform{position:absolute;bottom:calc(100% + 8px);left:50%;display:block;width:max-content;max-width:none;pointer-events:none;color:var(--red);font:400 12px/1.4 var(--font);letter-spacing:.04em;text-transform:uppercase;opacity:0;visibility:hidden;transform:translate(-50%,8px) scale(.88);transform-origin:center bottom;transition:opacity 150ms ease,transform 220ms cubic-bezier(.3,1.4,.5,1),visibility 0s 220ms}
-.site-footer .social-links a:hover .social-platform,.site-footer .social-links a:focus-visible .social-platform{opacity:1;visibility:visible;transform:translate(-50%,0) scale(1);transition:opacity 180ms ease,transform 300ms cubic-bezier(.3,1.4,.5,1),visibility 0s}
-@media(prefers-reduced-motion:reduce){.site-footer .social-platform{transition:none;transform:translate(-50%,0)}}
+.site-footer .social-platform{position:absolute;bottom:calc(100% + 8px);left:0;text-align:left;display:block;width:max-content;max-width:none;pointer-events:none;color:var(--red);font:400 12px/1.4 var(--font);letter-spacing:.04em;text-transform:uppercase;opacity:0;visibility:hidden;transform:translateY(8px) scale(.88);transform-origin:left bottom;transition:opacity 150ms ease,transform 220ms cubic-bezier(.3,1.4,.5,1),visibility 0s 220ms}
+.site-footer .social-links a:hover .social-platform,.site-footer .social-links a:focus-visible .social-platform{opacity:1;visibility:visible;transform:translateY(0) scale(1);transition:opacity 180ms ease,transform 300ms cubic-bezier(.3,1.4,.5,1),visibility 0s}
+@media(prefers-reduced-motion:reduce){.site-footer .social-platform{transition:none;transform:translateY(0)}}
 
 /* Services follows the Shop specification sheet row layout. */
 .home-page .services{display:block;padding:0;border:0}
@@ -422,15 +422,27 @@ body.home-page > .language-switch.on-red,body.home-page > .language-switch.on-re
 @media(min-width:1100px){:root{--reading-width:min(var(--column),calc(100% - min(27.7778vw,400px) - 128px));--reading-left:calc(100% - var(--reading-width) - 128px)}}
 /* Shared footer: inline at every width that fits; natural wrapping otherwise. */
 html body .site-footer .footer-line.column{position:relative;display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;column-gap:0;row-gap:16px;width:100%;max-width:none;margin-inline:0;padding:0;min-height:calc(var(--language-size) + 2px)}
-html body .site-footer .footer-line>p{position:static;flex:0 0 auto;min-width:0;max-width:calc(100% - 48px);margin:0 0 0 24px;padding:0;white-space:normal}
-html body .site-footer .footer-line .social-links{position:static;display:flex;flex-direction:row;flex-wrap:nowrap;flex:0 0 auto;align-items:center;gap:18px;width:max-content;max-width:none;min-height:calc(var(--language-size) + 2px);margin:0 calc(2 * var(--language-size) + 56px) 0 24px;padding:0}
-html body .site-footer .footer-line>.language-switch{position:relative;inset:auto;flex:none;align-self:center;margin:0 24px 0 auto;transform:none}
-html body .site-footer .footer-line:has(>.language-switch) .social-links{margin-right:24px}
-@media(min-width:1100px){html body .site-footer .footer-line>p{flex-basis:calc(var(--reading-left) - 48px);min-width:max-content}}
+html body .site-footer .footer-line>p{position:static;order:1;flex:0 0 auto;min-width:0;max-width:calc(100% - 48px);margin:0 calc(2 * var(--language-size) + 56px) 0 24px;padding:0;white-space:normal}
+html body .site-footer .footer-line .social-links{position:static;display:flex;flex-direction:row;flex-wrap:nowrap;flex:0 0 auto;align-items:center;gap:18px;width:max-content;max-width:none;min-height:calc(var(--language-size) + 2px);margin:0 0 0 24px;padding:0}
+html body .site-footer .footer-line>.language-switch{position:absolute;inset:auto 24px 0 auto;margin:0;transform:none}
+@media(min-width:1100px){html body .site-footer .footer-line .social-links{flex-basis:calc(var(--reading-left) - 48px);min-width:max-content}}
 @media(max-width:767px){html body .site-footer .footer-line .social-links{gap:12px}}
 
-/* Keep footer utilities close to the bottom, with device-safe clearance. */
-:root{--footer-inset:max(8px,env(safe-area-inset-bottom))}
-html body .site-footer{padding-bottom:var(--footer-inset)}
-html body.work-page>.site-footer,html body .work-footer-bottom.site-footer{padding-bottom:0}
+/* Viewport utilities stay at one fixed inset, independent of footer visibility. */
+:root{--footer-inset:max(24px,env(safe-area-inset-bottom))}
+html body .site-footer{padding-block:24px max(24px,env(safe-area-inset-bottom))}
+html body.work-page>.site-footer{bottom:0;padding-block:24px max(24px,env(safe-area-inset-bottom));background:var(--beige)}
+html body .work-footer-bottom.site-footer{padding-bottom:0}
 html body .work-studio-footer{padding-bottom:var(--footer-inset)}
+
+/* Inner-page language links are anchored to their footer row, never the viewport.
+   Positioning also contains the toggle's sliding active-background panel. */
+body:not(.home-page):not(.practice-home)>.site-footer{position:relative!important;inset:auto!important}
+html body .site-footer .footer-line>.footer-language{position:absolute!important;inset:50% 24px auto auto!important;width:max-content;height:auto;margin:0;transform:translateY(-50%)!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+@media(max-width:767px){
+ html body .site-footer .footer-line:has(>.footer-language)>p{flex-basis:calc(100% - 48px);margin-right:24px}
+ html body .site-footer .footer-line>.footer-language{top:calc((var(--language-size) + 2px)/2)!important;bottom:auto!important;transform:translateY(-50%)!important}
+}
+
+/* Balance the smaller LinkedIn mark within its existing link. */
+.social-links a[href*="linkedin.com"] svg{scale:1.125}

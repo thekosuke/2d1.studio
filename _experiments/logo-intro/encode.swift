@@ -18,7 +18,7 @@ let input = AVAssetWriterInput(mediaType: .video, outputSettings: [
     AVVideoColorPropertiesKey: [AVVideoColorPrimariesKey: AVVideoColorPrimaries_ITU_R_709_2,
         AVVideoTransferFunctionKey: AVVideoTransferFunction_ITU_R_709_2,
         AVVideoYCbCrMatrixKey: AVVideoYCbCrMatrix_ITU_R_709_2],
-    AVVideoCompressionPropertiesKey: [AVVideoAverageBitRateKey: height > width ? 24_000_000 : 16_000_000,
+    AVVideoCompressionPropertiesKey: [AVVideoAverageBitRateKey: width > 1080 ? 64_000_000 : (height > width ? 24_000_000 : 16_000_000),
         AVVideoProfileLevelKey: AVVideoProfileLevelH264HighAutoLevel,
         AVVideoMaxKeyFrameIntervalKey: Int(fps), AVVideoExpectedSourceFrameRateKey: Int(fps)]
 ])

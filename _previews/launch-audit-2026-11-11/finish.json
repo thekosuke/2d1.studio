@@ -1,0 +1,280 @@
+[
+  {
+    "kind": "extra-route",
+    "w": 320,
+    "route": "/ja/work/deepdrip/",
+    "title": "DeepDrip — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 320,
+    "route": "/ja/work/supa/",
+    "title": "supa — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 320,
+    "route": "/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 320,
+    "route": "/ja/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 390,
+    "route": "/ja/work/deepdrip/",
+    "title": "DeepDrip — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 390,
+    "route": "/ja/work/supa/",
+    "title": "supa — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 390,
+    "route": "/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 390,
+    "route": "/ja/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 768,
+    "route": "/ja/work/deepdrip/",
+    "title": "DeepDrip — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 768,
+    "route": "/ja/work/supa/",
+    "title": "supa — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 768,
+    "route": "/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 768,
+    "route": "/ja/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 1024,
+    "route": "/ja/work/deepdrip/",
+    "title": "DeepDrip — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 1024,
+    "route": "/ja/work/supa/",
+    "title": "supa — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 1024,
+    "route": "/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 1024,
+    "route": "/ja/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 1280,
+    "route": "/ja/work/deepdrip/",
+    "title": "DeepDrip — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 1280,
+    "route": "/ja/work/supa/",
+    "title": "supa — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 1280,
+    "route": "/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 1280,
+    "route": "/ja/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 1920,
+    "route": "/ja/work/deepdrip/",
+    "title": "DeepDrip — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 1920,
+    "route": "/ja/work/supa/",
+    "title": "supa — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8
+  },
+  {
+    "kind": "extra-route",
+    "w": 1920,
+    "route": "/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "extra-route",
+    "w": 1920,
+    "route": "/ja/red-pixel/",
+    "title": "Red Pixel by 2D1",
+    "overflow": 0
+  },
+  {
+    "kind": "resize-focus",
+    "connected": true,
+    "footer": true,
+    "label": "JA"
+  },
+  {
+    "kind": "collection",
+    "first": "CameraScroll for details",
+    "next": "MaydayScroll for details",
+    "prev": "CameraScroll for details",
+    "closed": true,
+    "focus": "objects-canvas",
+    "inert": false
+  },
+  {
+    "kind": "no-js",
+    "route": "/",
+    "overflow": -8,
+    "bodyHeight": 2739,
+    "nav": 2,
+    "headings": [
+      "Studio",
+      "Aviator",
+      "DeepDrip",
+      "supa",
+      "Red Pixel"
+    ]
+  },
+  {
+    "kind": "no-js",
+    "route": "/ja/",
+    "overflow": -8,
+    "bodyHeight": 2778,
+    "nav": 2,
+    "headings": [
+      "Studio",
+      "Aviator",
+      "DeepDrip",
+      "supa",
+      "Red Pixel"
+    ]
+  },
+  {
+    "kind": "no-js",
+    "route": "/about/",
+    "overflow": -8,
+    "bodyHeight": 5717,
+    "nav": 2,
+    "headings": [
+      "About 2D1",
+      "About me",
+      "Familiar Characters",
+      "CONTACT"
+    ]
+  },
+  {
+    "kind": "no-js",
+    "route": "/ja/about/",
+    "overflow": -8,
+    "bodyHeight": 6133,
+    "nav": 2,
+    "headings": [
+      "2D1 について",
+      "私について",
+      "Familiar Characters",
+      "CONTACT"
+    ]
+  },
+  {
+    "kind": "no-js",
+    "route": "/shop/",
+    "overflow": -8,
+    "bodyHeight": 1276,
+    "nav": 2,
+    "headings": [
+      "Shop",
+      "Day Bag",
+      "Memoru"
+    ]
+  },
+  {
+    "kind": "no-js",
+    "route": "/ja/shop/",
+    "overflow": -8,
+    "bodyHeight": 1287,
+    "nav": 2,
+    "headings": [
+      "Shop",
+      "Day Bag",
+      "Memoru"
+    ]
+  },
+  {
+    "kind": "no-js",
+    "route": "/familiarcharacters/",
+    "overflow": -8,
+    "bodyHeight": 23810,
+    "nav": 2,
+    "headings": [
+      "Familiar Characters",
+      "Miz Water Bottle",
+      "Tripp Trapp Chair",
+      "Anna G. Corkscrew",
+      "Ossidiana Espresso Coffee Maker"
+    ]
+  },
+  {
+    "errors": []
+  }
+]

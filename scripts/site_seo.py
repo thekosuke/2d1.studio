@@ -9,10 +9,9 @@ ROOT = Path(__file__).resolve().parent.parent
 BASE = 'https://2d1.studio'
 PROJECTS = {'aviator': ('aviator', 'Aviator'), 'supateam': ('supa', 'supa'), 'deepdrip': ('deepdrip', 'DeepDrip')}
 PAGES = {
-    '': ('2D1 — Design Studio in Japan & North America', '2D1 is an independent design studio working with founders and small businesses in Japan and North America on branding, websites, and digital products.', 'WebPage'),
+    '': ('2D1 — Design Studio in Japan & North America', 'An independent design practice. Explore 2D1’s digital product design, branding, and self-initiated work.', 'WebPage'),
     'about/': ('About 2D1 — Kosuke Futsukaichi’s Design Practice', 'Meet Kosuke Futsukaichi and 2D1, an independent design practice working across Japan and North America. Brand design, digital products, and Familiar Characters.', 'AboutPage'),
-    'work/': ('Brand Identity & Web Design Projects — 2D1', 'Explore 2D1’s brand identity and website design work for Aviator, supa, and DeepDrip, across healthcare, AI, and developer publishing.', 'CollectionPage'),
-    'shop/': ('Design Objects & Small Digital Tools — 2D1 Shop', 'Explore 2D1’s own objects and digital tools: My Bag canvas tote, Memoru notes, Red Pixel, and the Familiar Characters collection.', 'CollectionPage'),
+    'shop/': ('Design Objects & Small Digital Tools — 2D1 Shop', 'Objects and digital tools made by 2D1. Discover Day Bag and Memoru, currently in development.', 'CollectionPage'),
     'contact/': ('Contact 2D1 — Branding, Websites & Digital Products', 'Talk with 2D1 about brand identity, website design, UX/UI, and design consulting for your business in Japan or North America.', 'ContactPage'),
 }
 
@@ -73,13 +72,15 @@ def build_site_seo():
             if lang == 'ja': title, description = tr[title], tr[description]
             path = ROOT / prefix / route / 'index.html'
             schema = graph(route, lang, title, description, kind)
-            if route == 'work/':
+            if route == '':
                 schema['@graph'].append({'@type': 'ItemList', 'name': title, 'itemListElement': [
                     {'@type': 'ListItem', 'position': n, 'name': name,
                      'url': BASE + '/' + prefix + 'work/' + slug + '/'}
-                    for n, (slug, name) in enumerate(PROJECTS.values(), 1)]})
+                    for n, (slug, name) in enumerate([PROJECTS['aviator'], PROJECTS['deepdrip'], PROJECTS['supateam']], 1)] + [
+                    {'@type': 'ListItem', 'position': 4, 'name': 'Red Pixel',
+                     'url': BASE + '/' + prefix + 'red-pixel/'}]})
             path.write_text(metadata(path.read_text(), route, lang, title, description, schema))
-        source = (ROOT / prefix / 'work/index.html').read_text()
+        source = (ROOT / ('data/work-projects-ja.html' if prefix else 'data/work-projects.html')).read_text()
         for detail in re.findall(r'<details class="work-project".*?</details>', source, re.S):
             identity = re.search(r'\bid="([^"]+)"', detail)[1]
             slug, name = PROJECTS[identity]
@@ -95,7 +96,16 @@ def build_site_seo():
             head, tail = html.split('</main>', 1)
             tail = re.sub(r'<footer\b.*?</footer>', '', tail, flags=re.S)
             html = head + '</main>' + tail
-            html = html.replace('class="about-page work-page"', 'class="about-page work-page case-page"')
+            # The shared shell may add classes; never depend on an exact class string.
+            html = re.sub(r'(<body\b[^>]*class=")([^"]+)(")',
+                          lambda m: m[1] + m[2] + ' case-page' + m[3], html, count=1)
+            trail = re.search(r'<nav class="work-trail".*?</nav>', content, re.S)[0]
+            close_label = 'プロジェクトを閉じる' if lang == 'ja' else 'Close project'
+            toolbar = ('<div class="work-dialog-bar case-toolbar">' + trail +
+                       '<a class="work-close" href="/' + prefix + '" aria-label="' +
+                       close_label + '"><span aria-hidden="true"></span></a></div>')
+            html = html.replace('<main id="main" class="case-main">',
+                                '<main id="main" class="case-main">' + toolbar, 1)
             html = re.sub(r'<script[^>]+src="[^"]*/(?:work|studio-gallery)\.js[^>]*></script>', '', html)
             html = re.sub(r'(<video\b[^>]*?)\sautoplay\b', r'\1 controls', html)
             # Standalone pages use native, user-initiated video controls, including
@@ -118,7 +128,8 @@ def build_site_seo():
                 html = html.replace('href="#' + old + '"', 'href="/' + prefix + 'work/' + other_slug + '/"')
             html = re.sub(r'<a\b[^>]*hreflang="(en|ja)"[^>]*>', lambda m: re.sub(r'href="[^"]*"', 'href="' + ('/ja/' if m[1] == 'ja' else '/') + route + '"', m[0]), html)
             html = re.sub(r'(<a\b[^>]*data-work-nav) aria-current="page"', r'\1', html)
-            overview = unescape(re.sub(r'<[^>]+>', '', re.search(r'<p class="work-description">(.*?)</p>', detail, re.S)[1]))
+            overview_paragraphs = re.findall(r'<p class="work-description">(.*?)</p>', detail, re.S)
+            overview = ' '.join(unescape(re.sub(r'<[^>]+>', '', paragraph)) for paragraph in overview_paragraphs)
             title = name + (' — ブランド・ウェブデザイン | 2D1' if lang == 'ja' else ' — Brand Identity & Web Design | 2D1')
             image = BASE + re.search(r'<figure class="work-detail-hero"[^>]*><img src="([^"]+)"', html)[1]
             schema = graph(route, lang, title, overview, 'WebPage')
@@ -129,13 +140,13 @@ def build_site_seo():
                 'creator': {'@id': BASE + '/#organization'}})
             schema['@graph'].append({'@type': 'BreadcrumbList', 'itemListElement': [
                 {'@type': 'ListItem', 'position': 1, 'name': '2D1', 'item': BASE + '/' + prefix},
-                {'@type': 'ListItem', 'position': 2, 'name': 'Studio', 'item': BASE + '/' + prefix + 'work/'},
+                {'@type': 'ListItem', 'position': 2, 'name': 'Work', 'item': BASE + '/' + prefix},
                 {'@type': 'ListItem', 'position': 3, 'name': name, 'item': address}]})
             html = metadata(html, route, lang, title, overview, schema, image)
             # project-page.css is inherited from the Studio source.
             path = ROOT / prefix / route / 'index.html'
             path.parent.mkdir(parents=True, exist_ok=True); path.write_text(html)
-    print('Studio SEO: shared metadata and six bilingual project entry pages; nothing published.')
+    print('Site SEO: shared metadata and six bilingual project entry pages; nothing published.')
 
 if __name__ == '__main__':
     build_site_seo()

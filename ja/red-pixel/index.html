@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Red Pixel by 2D1</title>
-  <meta name="description" content="2D1の小さなウェブ作品。赤いピクセルをつかんで投げると、ピンポンゲームが始まります。">
+  <meta name="description" content="2D1 の小さなウェブ作品。赤いピクセルをつかんで投げると、ピンポンゲームが始まります。">
   <meta name="theme-color" content="#FAF0E6">
   <link rel="canonical" href="https://2d1.studio/ja/red-pixel/">
   <link rel="alternate" hreflang="en" href="https://2d1.studio/red-pixel/">
@@ -16,14 +16,14 @@
   <meta property="og:site_name" content="2D1">
   <meta property="og:title" content="Red Pixel by 2D1">
   <meta property="og:url" content="https://2d1.studio/ja/red-pixel/">
-  <meta property="og:description" content="2D1の小さなウェブ作品。赤いピクセルをつかんで投げると、ピンポンゲームが始まります。">
+  <meta property="og:description" content="2D1 の小さなウェブ作品。赤いピクセルをつかんで投げると、ピンポンゲームが始まります。">
   <meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="柔らかなベージュの背景に赤い2D1のロゴ。">
+  <meta property="og:image:alt" content="柔らかなベージュの背景に赤い 2D1 のロゴ。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Red Pixel by 2D1">
-  <meta name="twitter:description" content="2D1の小さなウェブ作品。赤いピクセルをつかんで投げると、ピンポンゲームが始まります。">
+  <meta name="twitter:description" content="2D1 の小さなウェブ作品。赤いピクセルをつかんで投げると、ピンポンゲームが始まります。">
   <meta name="twitter:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2">
   <link rel="icon" href="../../img/brand/2d1-icon.ico?v=3" sizes="16x16 32x32 48x48">
   <link rel="icon" href="../../img/brand/2d1-icon.png?v=3" type="image/png" sizes="32x32">
@@ -32,11 +32,14 @@
   <link rel="stylesheet" href="../../css/fonts.css?v=9">
   <link rel="stylesheet" href="../../css/japanese-font.css?v=4">
   <link rel="stylesheet" href="../../css/red-pixel.css?v=16">
-  <link rel="stylesheet" href="../../css/text-links.css?v=17">
-<link rel="stylesheet" href="../../css/typography.css?v=37">
-<link rel="stylesheet" href="../../css/control-fill.css?v=5">
-<script defer src="../../js/control-fill.js?v=2"></script>
+  <link rel="stylesheet" href="../../css/text-links.css?v=18">
+<link rel="stylesheet" href="../../css/typography.css?v=43">
+<link rel="stylesheet" href="../../css/control-fill.css?v=32">
+<script defer src="../../js/control-fill.js?v=31"></script>
   <script src="../../js/analytics.js?v=1" defer></script>
+  <link rel="stylesheet" href="/css/page-transitions.css?v=32">
+<link rel="stylesheet" href="../../css/practice.css?v=3">
+<link rel="stylesheet" href="../../css/practice-shell.css?v=32">
 </head>
 <body>
   <main id="main" aria-label="Red Pixel ピンポン" tabindex="-1" aria-describedby="pixel-instructions">
@@ -44,18 +47,18 @@
     <canvas class="pong-court" hidden aria-hidden="true"></canvas>
   </main>
   <p class="pixel-caption" translate="no">RED PIXEL</p>
-  <p class="sr-only" id="pixel-instructions">ページをクリックするとピクセルが大きくなります。BIGGERで4段階に拡大し、SMALLERで縮小します。ピクセルをつかんで投げるとPongが始まります。Enterでつかみ、もう一度Enterで投げることもできます。マウス、タッチ、上下矢印キーでパドルを操作します。クリックまたはタップで一時停止・再開、スペースで一時停止、Escapeで終了。先に3点取った方の勝ちです。</p>
-  <details class="pixel-zoom"><summary translate="no"><span class="pixel-bigger">BIGGER</span><span class="pixel-smaller">SMALLER</span></summary><span class="sr-only" aria-live="polite" data-pixel-size>赤いピクセルを24 × 24ピクセルに拡大しています。</span></details>
-  <p class="pixel-prompt" hidden>ピクセルを投げてPONGをプレイ</p>
+  <p class="sr-only" id="pixel-instructions">ページをクリックするとピクセルが大きくなります。BIGGER で 4 段階に拡大し、SMALLER で縮小します。ピクセルをつかんで投げると Pong が始まります。Enter でつかみ、もう一度 Enter で投げることもできます。マウス、タッチ、上下矢印キーでパドルを操作します。クリックまたはタップで一時停止・再開、スペースで一時停止、Escape で終了。先に 3 点取った方の勝ちです。</p>
+  <details class="pixel-zoom"><summary translate="no"><span class="pixel-bigger">BIGGER</span><span class="pixel-smaller">SMALLER</span></summary><span class="sr-only" aria-live="polite" data-pixel-size>赤いピクセルを 24 × 24 ピクセルに拡大しています。</span></details>
+  <p class="pixel-prompt" hidden>ピクセルを投げて PONG をプレイ</p>
   <div class="pong-controls" hidden><button type="button" data-pong-exit>終了</button></div>
   <div class="pong-scoreboard" hidden aria-label="Pong スコアボード">
-    <p class="pong-help" hidden>3点先取</p>
-    <div class="pong-score"><span>あなた</span><strong data-score="0">0</strong></div>
+    <p class="pong-help" hidden>3 点先取</p>
+    <div class="pong-score"><span>あなた </span><strong data-score="0">0</strong></div>
     <div class="pong-score"><strong data-score="1">0</strong><span translate="no">2D1 BOT</span></div>
   </div>
   <div class="pong-message" hidden><p></p><p class="pong-nickname" data-pong-nickname hidden></p><button type="button">再開</button></div>
   <p class="sr-only" role="status" aria-live="polite" data-pong-status></p>
-  <noscript><p class="pixel-prompt">PongをプレイするにはJavaScriptを有効にしてください。BIGGERはそのまま使えます。</p></noscript>
+  <noscript><p class="pixel-prompt">Pong をプレイするには JavaScript を有効にしてください。BIGGER はそのまま使えます。</p></noscript>
   <script src="../../js/pong-physics.js?v=2" defer></script>
   <script src="../../js/pong-nicknames.js?v=2" defer></script>
   <script src="../../js/red-pixel.js?v=17" defer></script>

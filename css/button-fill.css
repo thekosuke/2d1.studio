@@ -10,17 +10,16 @@
   --button-rest-ink: var(--ink);
   background-color: var(--white) !important;
   background-image:
-    linear-gradient(90deg,var(--white) calc(var(--button-fill)*100%),var(--button-rest-ink) 0),
-    linear-gradient(90deg,var(--red) calc(var(--button-fill)*100%),var(--white) 0) !important;
+    linear-gradient(0deg,var(--white) calc(var(--button-fill)*100%),var(--button-rest-ink) 0),
+    linear-gradient(0deg,var(--red) calc(var(--button-fill)*100%),var(--white) 0) !important;
   background-origin: padding-box !important;
   background-clip: text,padding-box !important;
   color: transparent !important;
   transition: --button-fill 480ms cubic-bezier(.2,.8,.2,1) !important;
 }
-/* The masked arrow uses the same edge in button coordinates. Its transform
-   mirrors the local gradient as well as the arrow, hence the 270deg direction. */
+/* The masked arrow follows the same rising edge as the button. */
 .finds-home-trigger .pixel-home-arrow {
-  background: linear-gradient(270deg,var(--white) calc(var(--button-fill)*var(--button-inner-width,84px) - 12px),var(--ink) 0);
+  background: linear-gradient(0deg,var(--white) calc(var(--button-fill)*var(--button-inner-height,32px) - 12px),var(--ink) 0);
 }
 @media(hover:hover) and (pointer:fine) {
   :is(.finds-home-trigger,.objects-info):hover:not(:disabled):not([aria-disabled="true"]) { --button-fill: 1; }
@@ -36,7 +35,7 @@
 
 .objects-info[aria-expanded="true"] { --button-fill:1; }
 .objects-info>span:last-child {
-  background:linear-gradient(90deg,var(--white) calc(var(--button-fill)*var(--button-inner-width,194px) - (var(--button-inner-width,194px) - 24px)),var(--ink) 0);
+  background:linear-gradient(0deg,var(--white) calc(var(--button-fill)*var(--button-inner-height,32px) - ((var(--button-inner-height,32px) - 24px)/2)),var(--ink) 0);
 }
 
 /* Language cells and zoom controls use the same edge without moving geometry. */
@@ -46,8 +45,8 @@ body.objects-page.objects-ready .objects-zoom button:is(:enabled,:disabled){
   --button-fill:0;
   background-color:var(--fill-rest-ground,var(--white))!important;
   background-image:
-    linear-gradient(90deg,var(--fill-active-ink,var(--beige)) calc(var(--button-fill)*100%),var(--fill-rest-ink,var(--ink)) 0),
-    linear-gradient(90deg,var(--fill-active-ground,var(--red)) calc(var(--button-fill)*100%),var(--fill-rest-ground,var(--white)) 0)!important;
+    linear-gradient(0deg,var(--fill-active-ink,var(--beige)) calc(var(--button-fill)*100%),var(--fill-rest-ink,var(--ink)) 0),
+    linear-gradient(0deg,var(--fill-active-ground,var(--red)) calc(var(--button-fill)*100%),var(--fill-rest-ground,var(--white)) 0)!important;
   background-origin:padding-box!important;
   background-clip:text,padding-box!important;
   color:transparent!important;
@@ -65,9 +64,9 @@ body :is(.language-switch,.objects-language,.work-footer-language) a:focus-visib
 body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language) a:focus-visible,
 body.objects-page.objects-ready .objects-zoom button:focus-visible:not([aria-disabled="true"]){--button-fill:1!important}
 .objects-page.objects-ready .objects-zoom button::after{
-  background:linear-gradient(90deg,var(--beige) calc(var(--button-fill)*var(--button-inner-width,31px) - (var(--button-inner-width,31px) - 12px)/2),var(--ink) 0);
+  background:linear-gradient(0deg,var(--beige) calc(var(--button-fill)*var(--button-inner-height,31px) - (var(--button-inner-height,31px) - 12px)/2),var(--ink) 0);
 }
-.objects-page.objects-ready .objects-zoom:has(input:active) button::after{background:var(--red)}
+
 @media(prefers-reduced-motion:reduce){
   body.mobile-navigation-ready .mobile-nav-panel :is(.language-switch,.objects-language) a:is(:any-link,:focus-visible),
   body :is(.language-switch,.objects-language,.work-footer-language) a,

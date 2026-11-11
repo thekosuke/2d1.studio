@@ -67,26 +67,31 @@ def collection_schema(items, lang='en', route=COLLECTION, title=TITLE, descripti
 
 def build_discovery():
     items = load()
+    # Keep old Japanese collection bookmarks working, including item deep links.
+    japanese_collection = ROOT / 'ja' / COLLECTION / 'index.html'
+    japanese_collection.parent.mkdir(parents=True, exist_ok=True)
+    japanese_collection.write_text(f'<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=/{COLLECTION}"><link rel="canonical" href="{url(COLLECTION)}"><title>{TITLE}</title><script>location.replace("/{COLLECTION}"+location.search+location.hash);</script></head><body><a href="/{COLLECTION}">Familiar Charactersへ</a></body></html>\n')
     # Retired detail pages redirect into the unified collection modal.
     for lang in ['en', 'ja']:
         for item in items:
-            destination=url(COLLECTION, lang).replace(BASE, '')+'?item='+item['id']
+            destination='/' + COLLECTION + '?item=' + item['id']
             path=ROOT / (('ja/' if lang=='ja' else '')+item_route(item)+'index.html')
             path.parent.mkdir(parents=True, exist_ok=True)
             label='Familiar Charactersで見る' if lang=='ja' else 'Open in Familiar Characters'
-            path.write_text(f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url={escape(destination)}"><link rel="canonical" href="{url(COLLECTION,lang)}"><title>Familiar Characters by 2D1</title></head><body><a href="{escape(destination)}">{label}</a></body></html>')
+            path.write_text(f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url={escape(destination)}"><link rel="canonical" href="{url(COLLECTION)}"><title>Familiar Characters by 2D1</title></head><body><a href="{escape(destination)}">{label}</a></body></html>')
 
     # Canonical current routes only; no query filters, redirects, fake lastmod,
     # priority or changefreq. Include both languages and reciprocal alternates.
     ns, xhtml, image_ns = 'http://www.sitemaps.org/schemas/sitemap/0.9', 'http://www.w3.org/1999/xhtml', 'http://www.google.com/schemas/sitemap-image/1.1'
     ET.register_namespace('', ns); ET.register_namespace('xhtml', xhtml); ET.register_namespace('image', image_ns)
     sitemap = ET.Element('{' + ns + '}urlset')
-    routes = [(r, l, None) for r in ['', 'about/', 'work/', 'shop/', COLLECTION, 'contact/', 'red-pixel/', 'privacy/', 'legal/'] + ['work/' + slug + '/' for slug, _ in PROJECTS.values()] for l in ['en', 'ja']]
-    for route, lang, item in routes:
+    routes = [(r, l) for r in ['', 'about/', 'shop/', COLLECTION, 'contact/', 'red-pixel/', 'privacy/', 'legal/'] + ['work/' + slug + '/' for slug, _ in PROJECTS.values()] for l in (['en'] if r == COLLECTION else ['en', 'ja'])]
+    for route, lang in routes:
         entry = ET.SubElement(sitemap, '{' + ns + '}url')
         ET.SubElement(entry, '{' + ns + '}loc').text = url(route, lang)
-        for code in ['en', 'ja', 'x-default']:
-            ET.SubElement(entry, '{' + xhtml + '}link', rel='alternate', hreflang=code, href=url(route, 'ja' if code == 'ja' else 'en'))
+        if route != COLLECTION:
+            for code in ['en', 'ja', 'x-default']:
+                ET.SubElement(entry, '{' + xhtml + '}link', rel='alternate', hreflang=code, href=url(route, 'ja' if code == 'ja' else 'en'))
     ET.indent(sitemap, space='  ')
     ET.ElementTree(sitemap).write(ROOT / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
     print(f'Discovery: {len(items)*2} legacy redirects; {len(routes)} canonical sitemap URLs')

@@ -8,7 +8,13 @@
   const isFinds = panel.classList.contains('finds-page-nav');
   const desktopTrigger = document.querySelector('.finds-home-trigger');
   const logo = document.querySelector('.site-logo');
-  const language = document.querySelector('.language-switch:not(.work-footer-language), .objects-language');
+  const fixedLanguage = document.querySelector('.language-switch:not(.work-footer-language):not(.footer-language), .objects-language');
+  const footerLanguage = document.querySelector('.language-switch.footer-language, .language-switch.work-footer-language');
+  // Footer-based routes still need a language choice in the mobile menu.
+  // Clone it so closing the menu never removes the footer's own control.
+  const language = fixedLanguage || footerLanguage?.cloneNode(true);
+  const languageIsClone = !fixedLanguage && !!language;
+  if (languageIsClone) language.classList.remove('footer-language', 'work-footer-language');
   // Shared footer content stays inside the disclosure on every route.
   const assetBase = new URL('../img/brand/logo_red.svg', document.currentScript.src).href;
   const menuMark = document.createElement('div');
@@ -27,13 +33,43 @@
   }
   const menuFooter = document.createElement('div');
   menuFooter.className = 'mobile-menu-footer';
-  const socialMarkup = "<nav class=\"social-links\" aria-label=\"Social media\"><a href=\"https://www.instagram.com/2d1.studio/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on Instagram (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"1\" y=\"0\" width=\"7\" height=\"1\"/><rect x=\"0\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"3\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"8\" width=\"7\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">Instagram</span></a><a href=\"https://www.threads.com/@2d1.studio\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on Threads (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"2\" y=\"0\" width=\"5\" height=\"1\"/><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"2\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"6\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"6\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"8\" width=\"6\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">Threads</span></a><a href=\"https://x.com/2d1_studio\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on X (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"0.5\" y=\"0.5\" width=\"2\" height=\"1\"/><rect x=\"7.5\" y=\"0.5\" width=\"1\" height=\"1\"/><rect x=\"1.5\" y=\"1.5\" width=\"2\" height=\"1\"/><rect x=\"6.5\" y=\"1.5\" width=\"1\" height=\"1\"/><rect x=\"2.5\" y=\"2.5\" width=\"2\" height=\"1\"/><rect x=\"5.5\" y=\"2.5\" width=\"1\" height=\"1\"/><rect x=\"3.5\" y=\"3.5\" width=\"2\" height=\"1\"/><rect x=\"3.5\" y=\"4.5\" width=\"3\" height=\"1\"/><rect x=\"2.5\" y=\"5.5\" width=\"1\" height=\"1\"/><rect x=\"4.5\" y=\"5.5\" width=\"2\" height=\"1\"/><rect x=\"1.5\" y=\"6.5\" width=\"1\" height=\"1\"/><rect x=\"5.5\" y=\"6.5\" width=\"2\" height=\"1\"/><rect x=\"0.5\" y=\"7.5\" width=\"1\" height=\"1\"/><rect x=\"6.5\" y=\"7.5\" width=\"2\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">X</span></a><a href=\"https://www.linkedin.com/company/2d1-studio/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on LinkedIn (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"7\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"7\" width=\"1\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">LinkedIn</span></a></nav>";
+  const socialMarkup = "<nav class=\"social-links\" aria-label=\"Social media\"><a href=\"https://www.instagram.com/2d1.studio/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on Instagram (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"1\" y=\"0\" width=\"7\" height=\"1\"/><rect x=\"0\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"3\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"8\" width=\"7\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">Instagram</span></a><a href=\"https://www.linkedin.com/company/2d1-studio/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"2D1 on LinkedIn (opens in a new tab)\"><svg viewBox=\"0 0 9 9\" aria-hidden=\"true\" focusable=\"false\" shape-rendering=\"crispEdges\"><g fill=\"currentColor\"><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"7\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"7\" width=\"1\" height=\"1\"/></g></svg><span class=\"social-platform\" aria-hidden=\"true\">LinkedIn</span></a></nav>";
   const existingSocials = document.querySelector('.social-links');
   if (existingSocials) menuFooter.append(existingSocials.cloneNode(true));
   else menuFooter.innerHTML = socialMarkup;
   const menuSocials = menuFooter.querySelector('.social-links');
   menuSocials.setAttribute('aria-label', document.documentElement.lang === 'ja' ? 'ソーシャルメディア' : 'Social media');
   panel.append(menuFooter);
+  // Keep a single persistent social group outside transformed page/footer layers.
+  if (document.body.classList.contains('practice-shell') && !document.body.classList.contains('case-page')) {
+    const dock = menuSocials.cloneNode(true);
+    dock.classList.add('fixed-social-links');
+    document.body.append(dock);
+    document.body.classList.add('has-fixed-socials');
+    if (existingSocials) {
+      existingSocials.inert = true;
+      existingSocials.setAttribute('aria-hidden', 'true');
+    }
+    let frame = 0;
+    const paintSocials = () => {
+      frame = 0;
+      const box = dock.getBoundingClientRect();
+      // Read the actual surface under the icons, including sticky dark endings.
+      const surfaces = document.elementsFromPoint(box.left + box.width / 2, box.top + box.height / 2);
+      for (const surface of surfaces) {
+        if (dock.contains(surface) || surface === dock) continue;
+        const color = getComputedStyle(surface).backgroundColor.match(/[\d.]+/g)?.map(Number);
+        if (!color || (color[3] ?? 1) < .5) continue;
+        dock.classList.toggle('on-dark', color[0] * .2126 + color[1] * .7152 + color[2] * .0722 < 140);
+        break;
+      }
+    };
+    const scheduleSocials = () => { if (!frame) frame = requestAnimationFrame(paintSocials); };
+    addEventListener('scroll', scheduleSocials, {passive:true});
+    addEventListener('resize', scheduleSocials);
+    addEventListener('load', scheduleSocials, {once:true});
+    scheduleSocials();
+  }
   const languageHome = language?.parentElement, languageNext = language?.nextSibling;
   const duration = 480, step = 0;
   let background = [];
@@ -41,11 +77,15 @@
     document.body.classList.toggle('mobile-menu-open', locked);
     document.documentElement.classList.toggle('mobile-menu-open', locked);
     if (locked) {
-      background = [...document.body.children].filter(node => !node.contains(panel) && !node.contains(trigger));
-      background = background.map(node => [node, node.inert]);
-      background.forEach(([node]) => { node.inert = true; });
+      const collect = parent => [...parent.children].flatMap(node => {
+        if (node === panel || node === trigger || node === menuMark) return [];
+        return node.contains(panel) || node.contains(trigger) ? collect(node) : [node];
+      });
+      background = collect(document.body);
+      background = background.map(node => [node, node.hasAttribute('inert'), node.getAttribute('aria-hidden')]);
+      background.forEach(([node]) => { node.setAttribute('inert', ''); node.setAttribute('aria-hidden', 'true'); });
     } else {
-      background.forEach(([node, inert]) => { node.inert = inert; });
+      background.forEach(([node, inert, hidden]) => { node.toggleAttribute('inert', inert); if (hidden === null) node.removeAttribute('aria-hidden'); else node.setAttribute('aria-hidden', hidden); });
       background = [];
     }
   }
@@ -65,6 +105,12 @@
   }
   function moveLanguage() {
     if (!language) return;
+    if (languageIsClone) {
+      if (mobile.matches) menuTopbar.append(language);
+      else language.remove();
+      language.classList.add('mobile-nav-language');
+      return;
+    }
     const target = mobile.matches ? menuTopbar : languageHome;
     if (language.parentElement !== target) {
       if (!mobile.matches && languageNext?.parentElement === target) target.insertBefore(language, languageNext);
@@ -121,8 +167,11 @@
     moveLanguage(); refreshItems();
     setAvailable(available);
     if (ownedFocus || languageFocus) {
+      const languageTarget = languageIsClone
+        ? [...footerLanguage.querySelectorAll('a')].find(link => link.href === focused.href)
+        : focused;
       const target = mobile.matches ? (available ? trigger : logo)
-        : (languageFocus && available ? focused : (desktopTrigger || (available && panel.contains(focused) ? focused : logo)));
+        : (languageFocus && available ? (languageTarget || logo) : (desktopTrigger || (available && panel.contains(focused) ? focused : logo)));
       target?.focus({preventScroll: true});
     }
   }

@@ -1,0 +1,24 @@
+/* A rigid logo drops onto the viewport floor; no squash or stretched artwork. */
+.js.is-landing .practice-home > .landing-cover{
+ z-index:90;background:var(--red);color:var(--beige);animation:none;overflow:hidden;
+ --drop-margin:var(--page-edge,24px);
+}
+.js.is-landing .practice-home > .landing-cover.is-inverted{background:var(--beige);color:var(--red)}
+.practice-home > .landing-cover .landing-mark{
+ position:absolute;left:var(--drop-margin);bottom:var(--drop-margin);
+ width:calc(100% - 2 * var(--drop-margin));max-width:calc((100svh - 2 * var(--drop-margin)) * 829 / 280);
+ transform-origin:50% 100%;transform:translateY(-120vh) rotate(-14deg);will-change:transform;
+}
+.practice-home > .landing-cover .landing-mark>img{display:block;visibility:hidden;width:100%;height:auto}
+.practice-home > .landing-cover .landing-mark::before{content:'';position:absolute;inset:0;background:currentColor;mask:url('../img/brand/logo_red.svg') center/contain no-repeat;-webkit-mask:url('../img/brand/logo_red.svg') center/contain no-repeat}
+.practice-home > .landing-cover .brand-caption{display:none}
+.practice-home > .landing-cover .landing-eyes{visibility:hidden}
+.practice-home > .landing-cover .landing-eyes image{animation:none}
+.practice-home > .landing-cover.is-settled .landing-eyes{visibility:visible}
+/* One visible logo travels into the actual responsive header slot. */
+html.js.is-landing body.practice-home > .site-logo{visibility:hidden!important}
+.js.is-landing .practice-home > .landing-cover.is-docking{animation:none}
+@media(prefers-reduced-motion:reduce){.js.is-landing .practice-home > .landing-cover{display:none}}
+/* The cover reaches every edge while the document keeps its native scroll position. */
+html.is-landing{scrollbar-width:none!important}
+html.is-landing::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}

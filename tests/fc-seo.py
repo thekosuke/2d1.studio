@@ -41,7 +41,7 @@ ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9','x':'http://www.w3.org/199
 sitemap=ET.parse(site/'sitemap.xml')
 entries=sitemap.findall('s:url',ns)
 locations=[entry.find('s:loc',ns).text for entry in entries]
-assert len(locations)==len(set(locations))==24
+assert len(locations)==len(set(locations))==23
 assert not any('/finds/' in u or '/objects/' in u or '/browse/' in u or '?' in u or '#' in u for u in locations)
 assert not (site/'familiarcharacters/browse').exists()
 assert not (site/'ja/familiarcharacters/browse').exists()
@@ -53,7 +53,7 @@ for address in locations:
     assert canonical==[address],(path,canonical)
     alternatives={x['hreflang']:x['href'] for x in p.links if x.get('rel')=='alternate' and x.get('hreflang')}
     expected={'en':BASE+path.replace('/ja/','/',1),'ja':BASE+('/ja'+path if not path.startswith('/ja/') else path),'x-default':BASE+path.replace('/ja/','/',1)}
-    assert alternatives==expected,(path,alternatives)
+    assert alternatives==({} if path == "/familiarcharacters/" else expected),(path,alternatives)
     if 'familiarcharacters/' not in path:continue
     assert p.h1==1,(path,'H1 count',p.h1)
     assert p.meta['og:url']==address
@@ -85,13 +85,14 @@ for lang in ['en','ja']:
         raw=(site/f"{prefix.lstrip('/')+'/' if prefix else ''}familiarcharacters/items/{item['id']}/index.html").read_text()
         p=Page(raw)
         assert 'noindex' in p.meta['robots'].split(', ')
-        assert p.anchors==[f"{prefix}/familiarcharacters/?item={item['id']}"]
+        assert p.anchors==[f"/familiarcharacters/?item={item['id']}"]
         assert 'http-equiv="refresh"' in raw and not p.schemas
-    raw=(site/(prefix.lstrip('/')+'/' if prefix else '')/'familiarcharacters/index.html').read_text()
-    assert 'objects-similar-grid' in raw
-    assert not any(x in raw for x in ['objects-dialog-permalink','object-permalink','objects-product-peek','objects-product-arrows'])
+raw=(site/'familiarcharacters/index.html').read_text()
+assert 'objects-similar-grid' in raw
+assert not any(x in raw for x in ['objects-dialog-permalink','object-permalink','objects-product-peek','objects-product-arrows'])
 for entry in entries:
-    assert len(entry.findall('x:link',ns))==3
+    address=entry.find('s:loc',ns).text
+    assert len(entry.findall('x:link',ns))==(0 if address == BASE+'/familiarcharacters/' else 3)
 robots=RobotFileParser();robots.parse((site/'robots.txt').read_text().splitlines())
 for bot in ['Googlebot','bingbot','OAI-SearchBot','PerplexityBot']:
     assert robots.can_fetch(bot,BASE+'/familiarcharacters/') is not preview

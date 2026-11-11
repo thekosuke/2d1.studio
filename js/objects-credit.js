@@ -4,7 +4,8 @@
   const credit=dialog?.querySelector('.objects-dialog-credit');
   const gallery=dialog?.querySelector('.objects-dialog-photo');
   if(!credit||!gallery)return;
-  const labels=[credit,dialog.querySelector('.objects-photo-count')].filter(Boolean);
+  const labels=[credit,dialog.querySelector('.objects-photo-count')].filter(label=>label&&!label.hidden&&!label.closest('.objects-detail-summary'));
+  if(!labels.length)return;
   const pixels=new WeakMap(),resolution=96;
   const luminance=rgb=>rgb.map(value=>{value/=255;return value<=.04045?value/12.92:((value+.055)/1.055)**2.4;}).reduce((sum,value,index)=>sum+value*[.2126,.7152,.0722][index],0);
   const light=luminance([250,240,230]),dark=luminance([50,5,5]);

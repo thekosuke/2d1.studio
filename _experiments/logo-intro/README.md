@@ -147,3 +147,5 @@ The version before character gestures is preserved in
 `versions/pre-character-motion/`: renderer, timing, square MP4 and Reels MP4.
 The current six-second masters share the added construction gestures; all
 caption, eye and wipe choreography after the opening hold is unchanged.
+
+High-resolution delivery: add `--high-res` to either export command for native vector rasterization at 2160 × 2160 or 2160 × 3840, 60fps, H.264 with a 64Mbps target. These save separate files and preserve the 1080 masters.

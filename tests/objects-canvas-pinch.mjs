@@ -8,8 +8,8 @@ const translations=JSON.parse(readFileSync(new URL('../locales/ja.json',import.m
 const spatial=source.slice(source.indexOf('  const nearest='),source.indexOf('  function draw()'));
 const zoom=source.slice(source.indexOf('  function reset(){'),source.indexOf('  function filter(){'));
 const pointers=source.slice(source.indexOf('  const canvasPointers='),source.indexOf("  collection.addEventListener('click'"));
-const resize=source.slice(source.indexOf('  let measuredWidth='),source.lastIndexOf("  reduced.addEventListener('change'"));
-const controls=source.slice(source.indexOf("  zoomInput.addEventListener('input'"),source.indexOf('  const infoButton='));
+const resize=source.slice(source.indexOf('  let measuredWidth='),source.indexOf("  reduced.addEventListener('change'",source.indexOf('  let measuredWidth=')));
+const controls=source.slice(source.indexOf('  let zoomKnobFrame='),source.indexOf('  const infoButton='));
 
 class Element {
   handlers=new Map();attributes=new Map();captures=new Set();classes=new Set();dataset={};
@@ -22,23 +22,23 @@ class Element {
   getBoundingClientRect(){return {left:21,top:37,width:this.clientWidth,height:this.clientHeight}}
   closest(){return null}
   before(){} after(){} focus(){}
-  emit(type,props={}){const event={type,target:this,pointerId:1,pointerType:'touch',isPrimary:true,button:0,clientX:121,clientY:137,defaultPrevented:false,preventDefault(){this.defaultPrevented=true},...props};for(const {fn} of this.handlers.get(type)||[])fn(event);return event}
+  emit(type,props={}){const event={type,target:this,pointerId:1,pointerType:'touch',isPrimary:true,button:0,clientX:121,clientY:137,defaultPrevented:false,stopImmediatePropagation(){},preventDefault(){this.defaultPrevented=true},...props};for(const {fn} of this.handlers.get(type)||[])fn(event);return event}
 }
 function fixture({width=390,height=844,reduced=false,language='en',mobile=true}={}){
   const canvas=new Element(),page=new Element(),window=new Element(),document=new Element();canvas.clientWidth=width;canvas.clientHeight=height;
   const elements=new Map();document.getElementById=id=>{if(!elements.has(id))elements.set(id,{});return elements.get(id)};
-  document.querySelector=()=>document.modalOpen?{open:true}:null;
+  document.querySelector=selector=>selector==='dialog[open]'&&document.modalOpen?{open:true}:null;
   const zoomInput=new Element(),zoomStatus=new Element(),minus=new Element(),plus=new Element(),media=new Element();minus.dataset.zoomStep='-10';plus.dataset.zoomStep='10';media.matches=mobile;
   let frame=0,timer=0;const frames=new Map(),timers=new Map(),observers=[];
-  const context={canvas,page,window,document,zoomInput,zoomStatus,zoomButtons:[minus,plus],mobileZoom:media,
+  const context={shopPreview:false,canvasSpacing:1,canvas,page,window,document,zoomInput,zoomStatus,zoomButtons:[minus,plus],mobileZoom:media,
     x:0,y:0,cell:112,row:164,zoom:0,focusMode:false,focusColumn:0,focusRow:0,gesture:null,suppressClick:false,
-    motion:null,motionFrame:0,wheelTimer:0,list:false,reduced:{matches:reduced},active:[{id:'item',brand:'Brand',name:'Object'}],catalog:[{id:'item'}],
-    indexAt:()=>0,t:text=>language==='ja'?(translations[text]||text):text,schedule(){},clearTiles(){},show(){context.opens++},opens:0,
+    motion:null,motionFrame:0,wheelTimer:0,list:false,reduced:{matches:reduced,addEventListener(){}},active:[{id:'item',brand:'Brand',name:'Object'}],catalog:[{id:'item'}],
+    searchInput:null,closeSuggestions(){},indexAt:()=>0,t:text=>language==='ja'?(translations[text]||text):text,schedule(){},clearTiles(){},show(){context.opens++},opens:0,
     requestAnimationFrame(fn){frames.set(++frame,fn);return frame},cancelAnimationFrame(id){frames.delete(id)},
     setTimeout(fn){timers.set(++timer,fn);return timer},clearTimeout(id){timers.delete(id)},
     ResizeObserver:class {constructor(fn){observers.push(fn)}observe(){}}};
   vm.createContext(context);
-  vm.runInContext(source.match(/const geometry=.*?;};/s)[0]+spatial+zoom+pointers+controls+resize,context);
+  vm.runInContext(source.slice(source.indexOf('  const photoPadding='),source.indexOf('  const mod ='))+spatial+zoom+pointers+controls+resize,context);
   context.reset();observers.forEach(fn=>fn());
   const tick=time=>{const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn(time))};
   const live=new Map();
@@ -66,7 +66,7 @@ for(const [width,height] of [[320,568],[390,844],[844,390],[768,1024],[1440,900]
   near(c.cell,size*Math.hypot(135,25)/100);assert.equal(c.motion,null);assert.equal(f.frames.size,0);
   f.move(1,90,210);samePoint(f.world(152.5,217.5),anchor);
   assert.equal(f.zoomInput.value,String(c.zoom));assert.match(f.zoomStatus.textContent,/^\d+% /);
-  assert.equal(f.page.classes.has('objects-show-labels'),c.zoom>=50);
+  assert.equal(f.page.classes.has('objects-focused'),c.zoom===100);
   const afterPinch=pose(c);f.up(2);assert.deepEqual(pose(c),afterPinch);assert.equal(f.state().count,1);
   const [x,y]=pose(c);f.move(1,110,240);near(c.x,x+20);near(c.y,y+30);f.up(1);
   assert.equal(f.canvas.captures.size,0);assert.equal(f.state().count,0);assert.equal(c.gesture,null);
@@ -133,7 +133,7 @@ console.log('PASS pinch interruptions: third-finger pause/rebase, either-finger 
   const actualCell=c.cell;f.down(1,80,200);f.down(2,180,200);f.move(2,190,200);near(c.cell,actualCell*1.1);
   assert.equal(c.motion,null);assert.equal(f.frames.size,0);f.up(2);f.up(1);
   f.zoomInput.value='61';f.zoomInput.emit('input');f.settle();assert.equal(c.zoom,61);
-  f.plus.emit('click');f.settle();assert.equal(c.zoom,71);
+  f.plus.emit('click');f.settle();assert.equal(c.zoom,75);
   f.down(1,100,200);const before=pose(c);f.canvas.emit('wheel',{deltaX:40,deltaY:20,deltaMode:0});assert.deepEqual(pose(c),before);
   const browserZoom=f.canvas.emit('wheel',{ctrlKey:true,deltaX:0,deltaY:30,deltaMode:0});assert.equal(browserZoom.defaultPrevented,false);f.up(1);
   f.window.emit('pointercancel',{pointerId:777});assert.deepEqual(pose(c),before,'unrelated modal pointers do not affect canvas');

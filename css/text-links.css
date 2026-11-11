@@ -2,7 +2,7 @@
    dedicated motion. Backgrounds stay clear and inline links keep wrapping. */
 @property --text-link-sweep{syntax:'<number>';inherits:true;initial-value:0}
 :is(
-  a:not(:has(img,svg)):not(:is(.page-nav a,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.object-open,.pixel-home)),
+  a:not(:has(img,svg)):not(:is(.page-nav a,.practice-switch a,.practice-card-link,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.object-open,.pixel-home)),
   button.intro-cta:not(.contact-page .contact-send),
   button.objects-info-about,
   .pixel-zoom summary,
@@ -71,7 +71,7 @@ body :is(.shop-card-action,.work-view)::after{
 
 /* Text hyperlinks inherit their reading context; only their ink sweeps red.
    Dedicated navigation, language controls, image links and buttons stay separate. */
-:is(#reading-hyperlinks,html) body a:not(:has(img,svg)):not(:is(.page-nav a,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.work-footer-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.objects-saved-menu a,.object-open,.pixel-home,.intro-cta,[data-control-fill])){
+:is(#reading-hyperlinks,html) body a:not(:has(img,svg)):not(:is(.page-nav a,.practice-switch a,.practice-card-link,.work-studio-nav a,.work-trail a,.button,.language-switch a,.objects-language a,.work-footer-language a,.site-logo,.work-studio-mark,.shop-card-link,.finds-home-trigger,.skip-link,.objects-dialog-link,.objects-info-actions a,.objects-saved-menu a,.object-open,.pixel-home,.intro-cta,[data-control-fill])){
  --text-link-rest:currentColor;
  --text-link-hover:var(--red);
  color:inherit!important;
@@ -95,3 +95,30 @@ body .work-related-card:is(:hover,:focus-visible){color:inherit}
 /* Text CTAs retain their red invitation color; paragraph links inherit ink. */
 .intro-cta{--text-link-rest:var(--red);--text-link-hover:var(--cranberry-brown)}
 :is(.studio,.home-ending,.about-ending,[data-link-surface="dark"]) .intro-cta{--text-link-hover:var(--beige)}
+
+/* Japanese CTA icons follow the label's size and line-box center. */
+html[lang="ja"] body :is(.intro-cta,.work-client-link,.work-view,.shop-card-action,.objects-dialog-link,.objects-info-actions a,.work-related-caption){
+  display:inline-flex;
+  align-items:center;
+  column-gap:.3em;
+}
+html[lang="ja"] body :is(a,button) :is(.pixel-arrow,.pixel-external,.work-related-arrow){
+  width:.8em;
+  height:.8em;
+  flex:0 0 .8em;
+  font-size:inherit;
+  vertical-align:middle;
+  margin-block:0;
+  margin-inline:0;
+  align-self:center;
+}
+html[lang="ja"] body :is(.work-view,.shop-card-action)::after{
+  width:.8em;
+  height:.8em;
+  flex:0 0 .8em;
+  align-self:center;
+  transform:none;
+}
+
+/* Editorial names retain a continuous underline, including spaces. */
+a[data-ink-link]{text-decoration-line:underline;text-decoration-skip-ink:none;text-underline-offset:.18em}

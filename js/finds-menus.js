@@ -4,8 +4,8 @@
   // including translated labels and font/viewport changes.
   const measureButton = button => {
     const style = getComputedStyle(button);
-    const width = button.getBoundingClientRect().width - parseFloat(style.borderLeftWidth) - parseFloat(style.borderRightWidth);
-    button.style.setProperty('--button-inner-width', `${width}px`);
+    const height = button.getBoundingClientRect().height - parseFloat(style.borderTopWidth) - parseFloat(style.borderBottomWidth);
+    button.style.setProperty('--button-inner-height', `${height}px`);
   };
   const fillObserver = typeof ResizeObserver !== 'undefined'
     ? new ResizeObserver(entries => entries.forEach(({target}) => measureButton(target))) : null;

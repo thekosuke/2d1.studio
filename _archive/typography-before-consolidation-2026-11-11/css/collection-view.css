@@ -1,0 +1,59 @@
+/* Collection occupies the viewport; the shared navigation floats above it. */
+html body.practice-collection-page.objects-ready .objects-canvas{inset:0;width:100%;height:100%;overscroll-behavior:contain}
+html body.practice-collection-page .objects-scene{transform:none!important;box-shadow:none!important}
+html body.practice-collection-page,html body.practice-collection-page.objects-ready:not(.objects-list){background:var(--beige)}
+/* Selection zooms into the object; the reading surface scrolls over its stationary layer. */
+html body.practice-collection-page #object-dialog{inset:0;width:100%;height:100dvh;max-height:none;padding:0;border:0;transform:none;clip-path:none;box-shadow:none;transition:none;background:transparent;grid-template-rows:minmax(0,1fr)}
+html body.practice-collection-page #object-dialog::backdrop{background:transparent;transition:none}
+html body.practice-collection-page #object-dialog .objects-dialog-scroll{grid-area:1/1;height:100%;background:transparent;scroll-padding-top:0}
+#object-dialog .collection-product-hero{height:100dvh;min-height:420px;position:sticky;top:0;z-index:0;display:grid;place-items:center;background:var(--beige)}
+#object-dialog .collection-product-image{width:min(70vw,68dvh);height:min(70vw,68dvh);object-fit:contain;transform-origin:center;filter:var(--finds-photo-treatment)}
+#object-dialog .collection-product-image-button{display:block;padding:0;border:0;background:transparent;line-height:0;cursor:pointer;color:inherit}
+#object-dialog .collection-product-image-button:focus-visible~.collection-product-caption{color:var(--red)}
+#object-dialog .collection-product-caption{position:absolute;bottom:max(32px,env(safe-area-inset-bottom));left:24px;right:24px;width:calc(100% - 48px);border:0;background:none;color:var(--ink);font:var(--font-caption) var(--font);text-align:center;cursor:pointer}
+#object-dialog .collection-product-caption:is(:hover,:focus-visible){color:var(--red)}
+#object-dialog .collection-product-scroll-hint{color:var(--sub-gray)}
+#object-dialog .collection-product-step{position:absolute;top:50%;left:max(24px,env(safe-area-inset-left));transform:translateY(-50%);display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;background:transparent;color:var(--ink);cursor:pointer;z-index:1}
+#object-dialog .collection-product-step[data-direction="1"]{left:auto;right:max(24px,env(safe-area-inset-right))}
+#object-dialog .collection-product-step[hidden]{display:none}
+#object-dialog .collection-product-step span{display:block;width:24px;height:24px;background:linear-gradient(to right,var(--red) 50%,var(--ink) 50%) 100% 0/200% 100%;mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat;-webkit-mask:url('../img/icons/pixel-arrow.svg') center/contain no-repeat;transition:background-position 360ms cubic-bezier(.2,.8,.2,1)}
+#object-dialog .collection-product-step[data-direction="-1"] span{transform:scaleX(-1);background-position:0 0;background-image:linear-gradient(to right,var(--ink) 50%,var(--red) 50%)}
+#object-dialog .collection-product-step:is(:hover,:focus-visible) span{background-position:0 0}
+#object-dialog .collection-product-step[data-direction="-1"]:is(:hover,:focus-visible) span{background-position:100% 0}
+html body.practice-collection-page #object-dialog .objects-dialog-layout{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);grid-template-rows:auto;align-items:stretch;min-height:0;height:auto;position:relative;z-index:2;background:var(--white);border-top:0}
+html body.practice-collection-page #object-dialog .objects-dialog-copy{grid-column:2;grid-row:1;position:static;overflow:visible;height:auto;max-height:none;min-height:0;min-width:0;box-sizing:border-box;width:100%;align-self:start;padding:48px clamp(24px,3vw,56px) 40px;background:var(--white);gap:32px;border-block:1px solid var(--ash-brown)}
+html body.practice-collection-page #object-dialog .objects-dialog-gallery{grid-column:1;grid-row:1;width:100%;border:0;border-top:1px solid var(--ash-brown);border-right:1px solid var(--ash-brown);position:relative}
+html body.practice-collection-page #object-dialog .objects-dialog-photo{display:grid;grid-template-columns:minmax(0,1fr);gap:0;width:100%;height:auto;aspect-ratio:auto;padding:0;overflow:visible;scroll-snap-type:none;touch-action:pan-y pinch-zoom}
+html body.practice-collection-page #object-dialog .objects-dialog-photo .objects-dialog-image{width:100%;height:auto!important;aspect-ratio:1;object-fit:cover;object-position:var(--gallery-position,center);align-self:start;margin:0;max-height:none;cursor:default;background:var(--white)}
+html body.practice-collection-page #object-dialog .objects-dialog-photo .objects-dialog-image:last-child:nth-child(odd){grid-column:auto;aspect-ratio:1}
+html body.practice-collection-page #object-dialog .objects-dialog-close{position:absolute;top:max(20px,env(safe-area-inset-top));right:max(24px,env(safe-area-inset-right));background:transparent}
+html body.practice-collection-page #object-dialog .objects-dialog-close:is(:hover,:focus-visible){background:var(--red)!important;color:var(--beige)!important}
+html body.practice-collection-page #object-dialog .objects-dialog-footer{display:none!important}
+html body.practice-collection-page #object-dialog .objects-similar{position:relative;z-index:2;background:var(--white)}
+@media(max-width:767px){
+ #object-dialog .collection-product-step{left:max(8px,env(safe-area-inset-left))}
+ #object-dialog .collection-product-step[data-direction="1"]{right:max(8px,env(safe-area-inset-right))}
+ #object-dialog .collection-product-image{width:84vw;height:84vw}
+ #object-dialog .collection-product-caption{font:var(--font-small) var(--font)}
+ html body.practice-collection-page #object-dialog .objects-dialog-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto}
+ html body.practice-collection-page #object-dialog .objects-dialog-copy{grid-column:1;grid-row:1;padding:40px 24px 56px}
+ html body.practice-collection-page #object-dialog .objects-dialog-gallery{grid-column:1;grid-row:2;border-right:0;border-top:0}
+}
+@media(prefers-reduced-motion:reduce){#object-dialog .collection-product-hero{transform:none}#object-dialog .collection-product-image{animation:none}#object-dialog .collection-product-step span{transition:none}}
+
+/* Summary stays above the metadata anchored to the pane bottom. */
+html body.practice-collection-page #object-dialog .objects-detail-summary{flex:0 0 auto}
+html body.practice-collection-page #object-dialog .objects-detail-bottom{flex:0 0 auto;margin-top:auto}
+
+html body.practice-collection-page #object-dialog .objects-detail-summary .objects-dialog-credit{position:static;inset:auto;height:auto;max-width:none;margin:0;transform:none;--credit-ink:var(--cranberry-brown)}
+
+/* Similar products owns the single divider below the gallery and sticky pane. */
+@media(min-width:768px){
+ html body.practice-collection-page #object-dialog .objects-dialog-copy{position:sticky;top:0;min-height:100dvh;max-height:100dvh;overflow-y:auto;overscroll-behavior-y:auto;border-bottom:0}
+}
+
+/* Related-product heading alignment; typography lives in the shared mapping. */
+#object-dialog .objects-similar h3{text-align:center}
+
+#object-dialog .objects-similar-card{text-align:center;row-gap:3px}
+#object-dialog .objects-similar-card img{margin-bottom:17px}

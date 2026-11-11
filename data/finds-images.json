@@ -1143,23 +1143,23 @@
   ],
   "img/objects/cutouts/floyd-cabin-aluminum.webp": [
     {
-      "image": "img/objects/responsive/floyd-cabin-aluminum-50c13d4a81f1-160.webp",
+      "image": "img/objects/responsive/floyd-cabin-aluminum-b37359a36205-160.webp",
       "width": 160
     },
     {
-      "image": "img/objects/responsive/floyd-cabin-aluminum-50c13d4a81f1-192.webp",
+      "image": "img/objects/responsive/floyd-cabin-aluminum-b37359a36205-192.webp",
       "width": 192
     },
     {
-      "image": "img/objects/responsive/floyd-cabin-aluminum-50c13d4a81f1-256.webp",
+      "image": "img/objects/responsive/floyd-cabin-aluminum-b37359a36205-256.webp",
       "width": 256
     },
     {
-      "image": "img/objects/responsive/floyd-cabin-aluminum-50c13d4a81f1-480.webp",
+      "image": "img/objects/responsive/floyd-cabin-aluminum-b37359a36205-480.webp",
       "width": 480
     },
     {
-      "image": "img/objects/responsive/floyd-cabin-aluminum-50c13d4a81f1-960.webp",
+      "image": "img/objects/responsive/floyd-cabin-aluminum-b37359a36205-960.webp",
       "width": 960
     },
     {
@@ -4175,6 +4175,20 @@
     {
       "image": "img/objects/gallery/freckle-lifestyle-owner-4.png",
       "width": 1080
+    }
+  ],
+  "img/objects/gallery/freckle-phone-green-lanyard.png": [
+    {
+      "image": "img/objects/responsive/freckle-phone-green-lanyard-e613eda5762d-640.webp",
+      "width": 640
+    },
+    {
+      "image": "img/objects/responsive/freckle-phone-green-lanyard-e613eda5762d-960.webp",
+      "width": 960
+    },
+    {
+      "image": "img/objects/gallery/freckle-phone-green-lanyard.png",
+      "width": 1200
     }
   ],
   "img/objects/gallery/freckle-phone-green.png": [

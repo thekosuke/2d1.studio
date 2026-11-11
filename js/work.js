@@ -6,7 +6,7 @@
  const content=dialog.querySelector('.work-detail-content');
  const close=dialog.querySelector('.work-close');
  const originals=[...document.querySelectorAll('.work-project')];
- const grid=document.querySelector('.work-grid');
+ const grid=document.querySelector('.work-grid,.practice-grid');
  const root=document.documentElement;
  const toolbar=dialog.querySelector('.work-dialog-bar');
  let stopProjectMedia=()=>{};
@@ -97,6 +97,7 @@
  const clearMotion=()=>{
   clearTimeout(timer);animations.forEach(animation=>animation.cancel());animations=[];
   flight?.remove();flight=null;
+  opener?.querySelector('img')?.style.removeProperty('visibility');
   dialog.querySelector('.work-transition-wash')?.remove();
   dialog.classList.remove('is-project-transition');
   content.querySelector('.work-detail-hero img')?.style.removeProperty('visibility');
@@ -107,6 +108,7 @@
   const hero=content.querySelector('.work-detail-hero img');
   dialog.classList.add('is-project-transition');
   hero.style.visibility='hidden';
+  if(opener?.querySelector('img'))opener.querySelector('img').style.visibility='hidden';
   const wash=document.createElement('div');wash.className='work-transition-wash';
   flight=document.createElement('div');flight.className='work-transition-image';flight.setAttribute('aria-hidden','true');
   const image=document.createElement('img');image.src=source;image.alt='';flight.append(image);
@@ -132,7 +134,7 @@
   dialog.querySelector('.work-breadcrumb-slot').replaceChildren(content.querySelector('.work-trail').cloneNode(true));
   const title=content.querySelector('.work-detail-title');title.id='work-dialog-title';title.tabIndex=-1;
   const hero=content.querySelector('.work-detail-hero img');
-  const thumbnail=project.querySelector('summary>img');
+  const thumbnail=project.querySelector('summary>img,.practice-card-link img');
   // Use the same artwork on both sides of the handoff, then sharpen in place.
   hero.src=thumbnail.currentSrc||thumbnail.src;hero.removeAttribute('srcset');
   hero.width=thumbnail.width;hero.height=thumbnail.height;hero.alt=thumbnail.alt;
@@ -149,11 +151,11 @@
  content.addEventListener('click',event=>{
   const link=event.target.closest('a[data-work-target]');
   if(!link)return;
-  const project=originals.find(project=>project.id===link.dataset.workTarget);
+  const project=originals.find(project=>(project.id||project.dataset.projectId)===(link.dataset.workTarget==='supateam'?'supa':link.dataset.workTarget));
   if(!project)return;
   event.preventDefault();
   if(closing||flight)return;
-  opener=project.querySelector('summary');
+  opener=project.querySelector('summary,.practice-card-link');
   renderProject(project);
   const hero=content.querySelector('.work-detail-hero img');hero.sizes='100vw';hero.srcset=hero.dataset.heroSrcset;
  });
@@ -175,16 +177,17 @@
   transitionImage(from||hero.getBoundingClientRect(),target,source,true,finishClose);
  };
  projects.forEach(project=>{
-  const trigger=project.querySelector('summary');
+  const trigger=project.querySelector('summary,.practice-card-link');
   trigger.addEventListener('keydown',event=>{
    const step=event.key==='ArrowDown'?1:event.key==='ArrowUp'?-1:0;
    if(!step)return;event.preventDefault();
    const next=projects[Math.max(0,Math.min(projects.length-1,projects.indexOf(project)+step))];
-   next.querySelector('summary').focus();
+   next.querySelector('summary,.practice-card-link').focus();
   });
   trigger.setAttribute('aria-haspopup','dialog');trigger.setAttribute('aria-controls','work-dialog');
   trigger.addEventListener('click',event=>{
-   event.preventDefault();
+   if(project.matches('.practice-card:not(.is-centered)'))return;
+   event.preventDefault();event.stopPropagation();
    if(dialog.open)return;
    opener=trigger;closing=false;clearMotion();
    dispatchEvent(new Event('work-gallery-pause'));

@@ -1,70 +1,62 @@
-/* A quiet, continuous essay using the site's Walla/Noto type and shared edges. */
-.about-essay-page > main{position:relative;z-index:1;background:var(--beige);padding:calc(40svh - var(--essay-head-half-height,35px)) 24px 128px}
-.about-essay-page .essay{width:100%;max-width:680px;margin-inline:auto}
+/* About reuses the former Home's editorial scale and native reading-ink reveal. */
+.about-essay-page{--essay-section-gap:128px;--essay-paragraph-gap:64px}
+.about-essay-page > main{position:relative;z-index:1;background:var(--beige);padding:max(160px,30svh) 0 128px}
+.about-essay-page .essay,
+.about-essay-page .ending-contact>.column{width:clamp(min(320px,var(--reading-width)),calc(100% - 2 * var(--reading-left)),var(--reading-width));max-width:none;margin-left:var(--reading-left);margin-right:auto}
+.about-essay-page .essay-body{margin:0}
+.about-essay-page .essay-opening-section,
+.about-essay-page .essay-rest>section{display:block}
 .about-essay-page .essay-head{--text-link-hover:var(--cranberry-brown)}
-.about-essay-page .essay-title{text-wrap:balance}
-.about-essay-page .essay-dek{margin-top:24px;color:var(--sub-gray)}
-.about-essay-page .essay-body{margin-top:24px}
-.about-essay-page .essay-lede{text-wrap:pretty}
-.about-essay-page .essay-lede+p{margin-top:var(--essay-paragraph-gap)}
-.about-essay-page .essay-rest p{text-wrap:pretty}
-.about-essay-page .essay-rest p+p{margin-top:var(--essay-paragraph-gap)}
-.about-essay-page .essay-rest h2{margin:64px 0 24px;text-transform:none;text-wrap:pretty}
+.about-essay-page .essay-introduction,
+.about-essay-page .essay-section-copy{margin-top:48px}
+.about-essay-page .essay-rest,
+.about-essay-page .essay-rest>section+section{margin-top:var(--essay-section-gap)}
+.about-essay-page .essay-body p+p{margin-top:var(--essay-paragraph-gap)}
+/* Reuse the exact display/statement roles used on the former Home. */
+html[lang] body.about-essay-page :is(.essay-title,.essay-rest h2){position:static;margin:0;text-transform:none;text-wrap:pretty}
+html[lang] body.about-essay-page .essay-introduction>.essay-lede[data-type-style],
+html[lang] body.about-essay-page .essay-body p{color:var(--cranberry-brown);text-wrap:pretty}
 .about-essay-page .essay-rest h2::before{content:none}
-
-.about-essay-page .essay a{text-decoration:underline;text-underline-offset:.18em}
+/* Letters lift in reading order; the link keeps its continuous underline. */
+body.about-essay-page .essay a[href]{text-decoration:underline;text-underline-offset:.18em}
+body.about-essay-page .essay a[href] .link-letter{position:relative;top:0;transition:top 200ms cubic-bezier(.2,.8,.2,1)}
+body.about-essay-page .essay a[href],
+body.about-essay-page .essay a[href] .ink{color:inherit!important;background-image:none!important;-webkit-text-fill-color:currentColor}
+@media(hover:hover) and (pointer:fine){
+ body.about-essay-page .essay a[href]:hover .link-letter{top:-2px;transition-delay:var(--letter-delay)}
+}
+.about-essay-page .essay a:focus-visible{text-decoration-thickness:.09em}
+body.about-essay-page .essay a[href]:focus-visible .link-letter{top:-2px;transition-delay:var(--letter-delay)}
+@media(prefers-reduced-motion:reduce){
+ body.about-essay-page .essay a[href] .link-letter{top:0!important;transition:none}
+}
+.about-essay-page [data-ink] .ink:focus-within{opacity:1}
 .about-essay-page .essay-end{display:inline-block;width:.5em;height:.5em;margin-left:.4em;background:var(--red)}
-
 @media(max-width:767px){
- .about-essay-page > main{padding-bottom:80px}
- .about-essay-page .essay-rest h2{margin-top:48px}
-
+ .about-essay-page{--essay-section-gap:80px;--essay-paragraph-gap:40px}
+ .about-essay-page > main{padding:max(128px,25svh) 0 80px}
+ .about-essay-page .essay-introduction,.about-essay-page .essay-section-copy{margin-top:32px}
 }
 
-/* The lower divider sits halfway between overview and first essay heading. */
-.about-essay-page{--essay-divider-gap:48px}
-.about-essay-page .essay-introduction{border-bottom:1px solid var(--line);padding-bottom:var(--essay-divider-gap)}
-.about-essay-page .essay-rest{display:flow-root;margin-top:0;padding-top:var(--essay-divider-gap)}
-.about-essay-page .essay-rest>section:first-child>h2{margin-top:0}
-@media(max-width:767px){.about-essay-page{--essay-divider-gap:32px}}
+/* Selective Icon Red anchors, as in the former Home; keep the reading reveal. */
+.about-essay-page .copy-emphasis{color:var(--red);font-style:normal;--text-link-rest:var(--red)}
 
-/* Allow longer translated headings to wrap. */
-html[lang] .about-essay-page .essay-title{white-space:normal;text-wrap:balance}
+/* Reading copy: a calmer measure, open leading and consistent paragraph rhythm. */
+.about-essay-page{--essay-paragraph-gap:32px;--essay-section-gap:96px}
+ .about-essay-page .essay-body p{overflow-wrap:break-word}
+.about-essay-page .essay-introduction,.about-essay-page .essay-section-copy{margin-top:0}
+@media(max-width:767px){.about-essay-page{--essay-paragraph-gap:24px;--essay-section-gap:64px}}
 
-/* Essay spacing and color; typography is shared in typography.css. */
-.about-essay-page{--essay-paragraph-gap:24px;--essay-body-ink:color-mix(in srgb,var(--cranberry-brown) 90%,var(--beige))}
-.about-essay-page .essay-body p{color:var(--essay-body-ink)}
-@media(max-width:767px){.about-essay-page{--essay-paragraph-gap:24px}}
-
-/* A centered reading column, with matching title, opening and essay widths. */
-.about-essay-page .essay{width:100%;max-width:680px;margin-inline:auto}
-.about-essay-page .essay-rest{max-width:none}
-
-html[lang] .about-essay-page :is(.essay-title,.essay-rest h2){text-transform:none}
-
-/* Center About’s shared reading column; essay, Contact and socials use one edge. */
-.about-essay-page > main{padding-inline:0}
-.about-essay-page .essay{width:min(680px,var(--reading-width));max-width:680px;margin-left:var(--reading-left);margin-right:auto}
-
-.about-essay-page{--reading-width:min(680px,calc(100% - 48px));--reading-left:calc((100% - var(--reading-width))/2)}
-.about-essay-page .ending-contact>.column{width:var(--reading-width);max-width:680px;margin-left:var(--reading-left);margin-right:auto}
-
-/* Desktop: section titles sit beside their copy and stick within each section. */
-@media(min-width:1100px){
- .about-essay-page{--reading-width:min(var(--column),calc(100% - min(27.7778vw,400px) - 128px));--reading-left:calc(100% - var(--reading-width) - 128px)}
- .about-essay-page .essay,.about-essay-page .ending-contact>.column{width:var(--reading-width);max-width:none}
- .about-essay-page .essay-body{margin-top:0}
- .about-essay-page .essay-opening-section,.about-essay-page .essay-rest>section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:48px;align-items:start}
- .about-essay-page .essay-opening-section{border-bottom:1px solid var(--line);padding-bottom:var(--essay-divider-gap)}
- .about-essay-page .essay-introduction{border:0;padding-bottom:0;min-width:0}
- .about-essay-page .essay-rest{padding-top:0}
- .about-essay-page .essay-rest>section{padding-top:64px}
- .about-essay-page .essay-rest>section:first-child{padding-top:var(--essay-divider-gap)}
- .about-essay-page .essay-section-copy{min-width:0}
- .about-essay-page .essay-head,.about-essay-page .essay-rest h2{position:sticky;top:96px;align-self:start;margin:0}
+/* Section anchors clear the shared fixed switch on every screen. */
+.about-essay-page :is(#about-2d1,#about-me,#familiar-characters){scroll-margin-top:var(--practice-content-top)}
+html body.practice-shell.about-essay-page .about-section-switch{flex-wrap:wrap;height:auto;row-gap:0}
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){
+ html body.practice-shell.about-essay-page.mobile-navigation-ready>main{padding-top:240px}
+ .about-essay-page :is(#about-2d1,#about-me,#familiar-characters){scroll-margin-top:240px}
 }
-@media(max-width:1099px){.about-essay-page .essay-opening-section .essay-introduction{margin-top:24px}.about-essay-page .essay-body{margin-top:0}}
-
-/* Match the overview divider between About me and Familiar Characters. */
-.about-essay-page .essay-rest>section[aria-labelledby="familiar-characters"]{border-top:1px solid var(--line);margin-top:var(--essay-divider-gap);padding-top:var(--essay-divider-gap)}
-.about-essay-page .essay-rest>section[aria-labelledby="familiar-characters"]>h2{margin-top:0}
+/* Keep the switch transparent; only the reading surface fades behind it. */
+html body.about-essay-page.mobile-navigation-ready::before{content:none!important}
+html body.about-essay-page.mobile-navigation-ready>main .essay{
+ -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) var(--about-header-edge,0px),#000 calc(var(--about-header-edge,0px) + 40px));
+ mask-image:linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) var(--about-header-edge,0px),#000 calc(var(--about-header-edge,0px) + 40px));
+}

@@ -594,7 +594,7 @@
     ]
   },
   "img/objects/cutouts/floyd-cabin-aluminum.webp": {
-    "hash": "50c13d4a81f1",
+    "hash": "b37359a36205",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       160,
@@ -2855,6 +2855,16 @@
   },
   "img/objects/gallery/freckle-lifestyle-owner-4.png": {
     "hash": "052755f871cf",
+    "recipe": "lossless-lanczos-v1",
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ]
+  },
+  "img/objects/gallery/freckle-phone-green-lanyard.png": {
+    "hash": "e613eda5762d",
     "recipe": "lossless-lanczos-v1",
     "widths": [
       640,

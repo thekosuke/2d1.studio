@@ -1,0 +1,52 @@
+/* Work and Shop share a quiet catalogue shell; About carries the longer story. */
+.practice-main{width:var(--reading-width);margin-left:var(--reading-left);padding:144px 0 80px;min-height:calc(100svh - 96px)}
+.practice-intro h1{margin:0;font:var(--font-statement) var(--font);letter-spacing:0}
+.practice-intro p{margin:8px 0 0;font:var(--font-reading) var(--font);color:var(--sub-gray)}
+.practice-switch{display:inline-flex;align-items:stretch;margin:40px 0 32px;border:1px solid var(--ink)}
+.practice-switch a{display:flex;align-items:center;justify-content:center;min-width:96px;min-height:40px;padding:8px 24px;font:var(--font-ui) var(--font);text-decoration:none}
+.practice-switch a+a{border-left:1px solid var(--ink)}
+.practice-grid,.practice-page .shop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 32px}
+.practice-card{min-width:0}
+.practice-card-link{display:block;color:var(--ink);text-decoration:none}
+.practice-media{display:grid;place-items:center;aspect-ratio:4/3;background:var(--white);overflow:hidden;transition:transform 300ms cubic-bezier(.2,.8,.2,1)}
+.practice-media img{display:block;width:100%;height:100%;object-fit:cover}
+.practice-caption{margin-top:16px}
+.practice-caption h2{margin:0;font:var(--font-ui) var(--font);text-transform:none}
+.practice-caption h2::before,.practice-collection h2::before{content:none}
+.practice-caption p{margin:4px 0 0;font:var(--font-caption) var(--font);color:var(--sub-gray)}
+.practice-card-link:focus-visible .practice-caption h2{color:var(--red)}
+.practice-pixel>span{width:24px;height:24px;background:var(--red);transition:transform 480ms cubic-bezier(.2,.8,.2,1)}
+.practice-collection{margin-top:80px;padding-top:32px;border-top:1px solid var(--line)}
+.practice-collection h2{margin:0;font:var(--font-section) var(--font);text-transform:none}
+.practice-collection p{margin:12px 0 24px;font:var(--font-reading) var(--font);color:var(--sub-gray)}
+body.practice-page .practice-collection .intro-cta{font:var(--font-ui) var(--font)}
+.practice-contact{margin-top:80px}
+.practice-shop-note{margin:0 0 32px;font:var(--font-ui-body) var(--font);color:var(--sub-gray)}
+.practice-home>.practice-fixed-language{position:fixed;inset:auto max(24px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) auto;z-index:35;width:max-content;height:auto;transform:none;opacity:1;visibility:visible;pointer-events:auto;background:var(--beige)}
+/* The longer collection name occupies one of two sides around the centered logo. */
+@media(min-width:768px) and (max-width:1099px) and (pointer:fine){
+ html.js body.about-page #page-navigation.practice-nav{width:calc(100% - 48px);grid-template-columns:auto minmax(0,1fr) 96px minmax(0,1fr) auto;gap:0 24px}
+ html.js body.about-page #page-navigation.practice-nav>a:nth-of-type(1){grid-column:1}
+ html.js body.about-page #page-navigation.practice-nav>a:nth-of-type(2){grid-column:2;justify-self:start}
+ html.js body.about-page #page-navigation.practice-nav>a:nth-of-type(3){grid-column:4;justify-self:end}
+ html.js body.about-page #page-navigation.practice-nav>.page-nav-contact{grid-column:5}
+}
+@media(max-width:767px),(max-width:1099px) and (pointer:coarse){
+ html body.mobile-navigation-ready .practice-nav a:has(>.nav-label){max-width:100%;height:auto}
+ html body.mobile-navigation-ready .practice-nav .nav-label{white-space:normal}
+}
+@media(max-width:767px){
+ .practice-main{padding-top:112px;padding-bottom:64px}
+ .practice-switch{margin-top:28px}
+ .practice-grid,.practice-page .shop-grid{gap:40px 24px}
+ .practice-collection,.practice-contact{margin-top:64px}
+}
+@media(max-width:599px){.practice-grid,.practice-page .shop-grid{grid-template-columns:minmax(0,1fr)}}
+@media(hover:hover) and (pointer:fine){
+ .practice-card-link:hover .practice-caption h2{color:var(--red)}
+}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .practice-card-link:hover .practice-media{transform:rotate(2deg)}
+ .practice-card-link:hover .practice-pixel>span{transform:rotate(180deg)}
+}
+@media(prefers-reduced-motion:reduce){.practice-media,.practice-pixel>span{transition:none}}

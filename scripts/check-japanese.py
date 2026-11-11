@@ -5,7 +5,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ALLOWED = {"My Bag", "English", "Instagram", "LinkedIn", "Threads", "Russell Taylor", "Familiar Characters", "Familiar Characters by 2D1", "Red Pixel by 2D1"}
+ALLOWED = {"Day Bag", "English", "Instagram", "LinkedIn", "Threads", "Russell Taylor", "Familiar Characters", "Familiar Characters by 2D1", "Red Pixel by 2D1"}
 import re,json
 class P(HTMLParser):
  def __init__(self):super().__init__();self.stack=[];self.rows=[]

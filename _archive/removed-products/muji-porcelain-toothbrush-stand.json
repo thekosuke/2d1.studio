@@ -1,0 +1,107 @@
+{
+  "id": "muji-porcelain-toothbrush-stand",
+  "name": "Porcelain Toothbrush Stand",
+  "brand": "MUJI",
+  "category": "living",
+  "tags": [
+    "Personal care"
+  ],
+  "description": "A small porcelain stand that holds one toothbrush upright. Its rounded shape keeps the bathroom counter simple, with an open base that is easy to clean.",
+  "variantName": "Blue / 4549738912620",
+  "productUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+  "image": "img/objects/cutouts/muji-toothbrush-blue.webp",
+  "width": 1348,
+  "height": 1348,
+  "imageVariants": [
+    {
+      "image": "img/objects/cutouts/muji-toothbrush-blue.webp",
+      "width": 1348
+    }
+  ],
+  "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+  "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_org.jpg?v=1706223546",
+  "gallery": [
+    {
+      "image": "img/objects/gallery/muji-toothbrush-blue-1.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_org.jpg?v=1706223546",
+      "nativeSourceDimensions": [
+        2000,
+        2000
+      ],
+      "framing": "Complete official square photograph, no crop or enlargement"
+    },
+    {
+      "image": "img/objects/gallery/muji-toothbrush-blue-2.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_01_org.jpg?v=1706223546",
+      "nativeSourceDimensions": [
+        2000,
+        2000
+      ],
+      "framing": "Complete official square photograph, no crop or enlargement"
+    },
+    {
+      "image": "img/objects/gallery/muji-toothbrush-blue-3.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceUrl": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/0556/8066/3742/products/4549738912620_02_org.jpg?v=1706223546",
+      "nativeSourceDimensions": [
+        2000,
+        2000
+      ],
+      "framing": "Complete official square photograph, no crop or enlargement"
+    }
+  ],
+  "usageCaveat": "Source-credited original product photography for private preview; image rights clearance not verified.",
+  "colorwayEvidence": {
+    "status": "owner_exception",
+    "basis": "Owner requested a better color and main photo on 1 November 2026. Selected official Blue for separation from the beige canvas; no iconic/original-launch claim.",
+    "source": "https://www.muji.us/products/porcelain-toothbrush-stand-d6a5?variant=39987275595966"
+  },
+  "imageTreatment": {
+    "background": "transparent",
+    "method": "Border-connected near-white background mask with 0.5px alpha feather; original RGB preserved",
+    "nativeSourceDimensions": [
+      2000,
+      2000
+    ],
+    "nativeMaster": "img/objects/cutouts/muji-toothbrush-blue-native.png",
+    "cropBoundingBox": [
+      386,
+      505,
+      1599,
+      1513
+    ],
+    "subjectPixels": [
+      1213,
+      1008
+    ],
+    "opticalFill": 0.9,
+    "upscaled": false,
+    "rgbExact": true,
+    "sourceSHA256": "b512949d2d075f3e76e3d80d9bf5847f2d9bc6a5f8cf171a4296f56b71882e7b"
+  },
+  "catalogAudit": {
+    "reviewed": "2026-11-01",
+    "notes": [
+      "Official blue 2000px original replaces yellow 1260px photo. Original source files retained.",
+      "Native cutout RGB matches original exactly. Three distinct official views: product, toothbrush lineup, bathroom setting."
+    ],
+    "sourceLimitations": []
+  },
+  "colors": [
+    "Blue"
+  ],
+  "displayColors": [
+    {
+      "name": "Blue",
+      "hex": "#a8c7d2"
+    }
+  ]
+}

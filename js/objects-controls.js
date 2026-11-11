@@ -6,8 +6,8 @@
     pending = false;
     document.querySelectorAll('.objects-page button,.objects-dialog-link').forEach(unit => {
       const box = unit.getBoundingClientRect();
-      unit.style.setProperty('--fc-width', `${box.width}px`);
-      unit.querySelectorAll('.pixel-external,.objects-product-arrow span,.objects-peek-arrow,.objects-info>span:last-child').forEach(icon => unit && icon.style.setProperty('--fc-offset', `${icon.getBoundingClientRect().left-box.left}px`));
+      unit.style.setProperty('--fc-height', `${box.height}px`);
+      unit.querySelectorAll('.pixel-external,.objects-product-arrow span,.objects-peek-arrow,.objects-info>span:last-child').forEach(icon => unit && icon.style.setProperty('--fc-offset', `${box.bottom-icon.getBoundingClientRect().bottom}px`));
     });
   };
   const schedule = () => { if (!pending) { pending = true; requestAnimationFrame(measure); } };

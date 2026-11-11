@@ -61,6 +61,8 @@ class JapanesePage(HTMLParser):
         if tag == 'meta' and a.get('property') == 'og:url': a['content'] = self.japanese
         if tag == 'meta' and a.get('property') == 'og:locale': a['content'] = 'ja_JP'
         if tag == 'meta' and a.get('property') == 'og:locale:alternate': a['content'] = 'en_US'
+        if tag == 'a' and a.get('href') in ('familiarcharacters/', './familiarcharacters/', '../familiarcharacters/'):
+            a['href'] = '/familiarcharacters/'
         if tag == 'nav' and a.get('class') == 'language-switch': a['aria-label'] = '言語'
         if tag == 'a' and a.get('hreflang') in ('en','ja'):
             if a['hreflang'] == 'en':
@@ -69,7 +71,7 @@ class JapanesePage(HTMLParser):
             else: a['href'] = './'; a['aria-current'] = 'page'
         if tag == 'script' and 'js/language.js' in a.get('src',''):
             prefix = '../../' if self.about else '../'
-            dictionary = 'ja-' + ('objects' if self.path == 'familiarcharacters/' else self.path.strip('/') or 'home') + '.js?v=1'
+            dictionary = 'ja-' + (self.path.strip('/') or 'home') + '.js?v=1'
             self.output.append(f'<script src="{prefix}js/{dictionary}" defer></script>\n  ')
         self.output.append('<' + tag + ''.join(' '+k if v is None else ' '+k+'="'+escape(v,quote=True)+'"' for k,v in a.items()) + '>')
         if tag == 'link' and 'css/fonts.css' in a.get('href',''):
@@ -87,10 +89,12 @@ class JapanesePage(HTMLParser):
                 def localized(value):
                     if isinstance(value,dict): return {k:('ja' if k == 'inLanguage' and v == 'en' else localized(v)) for k,v in value.items()}
                     if isinstance(value,list): return [localized(v) for v in value]
-                    if isinstance(value,str): return value.replace('https://2d1.studio/familiarcharacters/', 'https://2d1.studio/ja/familiarcharacters/', 1) if value.startswith('https://2d1.studio/familiarcharacters/') else (self.japanese if value == self.english else translate(value))
+                    if isinstance(value,str): return self.japanese if value == self.english else translate(value)
                     return value
                 data = json.dumps(localized(json.loads(data)),ensure_ascii=False)
             self.output.append(data)
+        elif self.stack and self.stack[-1][1].get('data-ja-label'):
+            self.output.append(escape(self.stack[-1][1]['data-ja-label'], quote=False))
         elif any(a.get('translate') == 'no' for _, a in self.stack):
             self.output.append(escape(data, quote=False))
         elif data.strip() == '.' and any('privacy-controller' in a.get('class','') for _,a in self.stack):
@@ -102,18 +106,24 @@ class JapanesePage(HTMLParser):
         elif data.strip() == '.' and any('contact-done-title' in a.get('class','') for _,a in self.stack):
             self.output.append('。')
         elif data.strip() == '.' and any('about-opening' in a.get('class','') for _,a in self.stack):
-            self.output.append('」。その3つに取り組む場所です。')
+            self.output.append('による独立したデザインスタジオです。' if self.stack[-1][0] == 'em' else '」という名前で紹介しています。')
         elif data.strip() == '.' and any('essay-lede' in a.get('class','') for _,a in self.stack):
             self.output.append('になれることを願って。')
         else: self.output.append(escape(translate(data),quote=False))
 
-for path in ['', 'about/', 'familiarcharacters/', 'contact/', 'work/', 'red-pixel/', 'shop/', 'privacy/', 'legal/']:
-    source = ROOT / (path + 'index.html')
-    destination = ROOT / ('ja/' + path + 'index.html')
+for path in ['', 'about/', 'contact/', 'work/', 'red-pixel/', 'shop/', 'privacy/', 'legal/']:
+    source = ROOT / ('data/work-projects.html' if path == 'work/' else path + 'index.html')
+    destination = ROOT / ('data/work-projects-ja.html' if path == 'work/' else 'ja/' + path + 'index.html')
     parser = JapanesePage(path)
     parser.feed(source.read_text())
     destination.parent.mkdir(parents=True,exist_ok=True)
-    destination.write_text(''.join(parser.output))
+    rendered = ''.join(parser.output)
+    # Preserve spacing across inline links/emphasis as well as within sentences.
+    inline = r'((?:</?(?:a|span|em|strong|b|i)\b[^>]*>)*)'
+    japanese = r'[\u3040-\u30ff\u3400-\u9fff]'
+    rendered = re.sub('(' + japanese + ')' + inline + r'([A-Za-z0-9])', r'\1 \2\3', rendered)
+    rendered = re.sub(r'([A-Za-z0-9])' + inline + '(' + japanese + ')', r'\1\2 \3', rendered)
+    destination.write_text(rendered)
     print(destination.relative_to(ROOT))
 (ROOT/'js/ja.js').write_text('/* Generated from locales/ja.json by scripts/build-japanese.py. */\nwindow.TWO_D_ONE_JA = '+json.dumps(TRANSLATIONS,ensure_ascii=False,indent=2)+';\n')
 
@@ -129,8 +139,8 @@ class RuntimeScripts(HTMLParser):
         if tag == 'script' and a.get('src','').startswith(('js/','../js/')):
             self.scripts.append(a['src'].split('?',1)[0].split('/')[-1])
 
-for path in ['', 'about/', 'familiarcharacters/', 'contact/', 'work/', 'shop/', 'privacy/', 'legal/']:
-    html=(ROOT/(path+'index.html')).read_text()
+for path in ['', 'about/', 'contact/', 'work/', 'shop/', 'privacy/', 'legal/']:
+    html=(ROOT/('data/work-projects.html' if path == 'work/' else path+'index.html')).read_text()
     parser=RuntimeScripts();parser.feed(html)
     if 'language.js' not in parser.scripts:continue
     pending=list(parser.scripts);visited=set();sources=[unescape(html)]
@@ -142,7 +152,7 @@ for path in ['', 'about/', 'familiarcharacters/', 'contact/', 'work/', 'shop/', 
         pending.extend(re.findall(r"['\"]\./([\w.-]+\.js)(?:\?[^'\"]*)?['\"]",source))
     haystack='\n'.join(sources).replace("\\'", "'").replace('\\"','"')
     selected={key:value for key,value in TRANSLATIONS.items() if key in haystack}
-    name='objects' if path == 'familiarcharacters/' else path.strip('/') or 'home'
+    name=path.strip('/') or 'home'
     (ROOT/f'js/ja-{name}.js').write_text('/* Page vocabulary, generated from locales/ja.json. */\nwindow.TWO_D_ONE_JA='+json.dumps(selected,ensure_ascii=False,separators=(',',':'))+';\n')
 
 # Nested discovery pages have explicit localized URLs and page-level metadata.
@@ -152,3 +162,8 @@ build_discovery()
 # Apply shared entity metadata and create human-readable project URLs in both languages.
 from site_seo import build_site_seo
 build_site_seo()
+
+# The former Studio index now resolves to the work-first homepage, including old hashes.
+for prefix in ['', 'ja/']:
+    target = '/' + prefix
+    (ROOT / prefix / 'work/index.html').write_text(f'''<!doctype html><html lang="{'ja' if prefix else 'en'}"><head><meta charset="utf-8"><title>Work — 2D1</title><link rel="canonical" href="https://2d1.studio{target}"><meta http-equiv="refresh" content="0;url={target}"><script>const projects={{aviator:'aviator',supateam:'supa',deepdrip:'deepdrip'}};const slug=projects[location.hash.slice(1)];location.replace(slug?'{target}work/'+slug+'/':'{target}');</script></head><body><a href="{target}">Work — 2D1</a></body></html>''')

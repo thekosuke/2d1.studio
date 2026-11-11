@@ -4,192 +4,84 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title translate="no">2D1</title>
-  <meta name="description" content="2D1は、日本と北米の起業家やスモールビジネスと協働する独立系デザインスタジオです。ブランディング、ウェブサイト、デジタルプロダクトを手がけています。">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="独立したデザインプラクティス。2D1 のデジタルプロダクトデザイン、ブランディング、自主制作をご紹介します。">
   <meta name="theme-color" content="#FAF0E6">
   <link rel="canonical" href="https://2d1.studio/ja/">
   <link rel="alternate" hreflang="en" href="https://2d1.studio/">
   <link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/">
   <link rel="alternate" hreflang="x-default" href="https://2d1.studio/">
-  <meta property="og:locale" content="ja_JP">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="2D1">
   <meta property="og:title" content="2D1 — 日本と北米をつなぐデザインスタジオ">
-  <meta property="og:description" content="2D1は、日本と北米の起業家やスモールビジネスと協働する独立系デザインスタジオです。ブランディング、ウェブサイト、デジタルプロダクトを手がけています。">
   <meta property="og:url" content="https://2d1.studio/ja/">
+  <meta property="og:description" content="独立したデザインプラクティス。2D1 のデジタルプロダクトデザイン、ブランディング、自主制作をご紹介します。">
   <meta property="og:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="柔らかなベージュの背景に赤い2D1のロゴ。">
+  <meta property="og:image:alt" content="柔らかなベージュの背景に赤い 2D1 のロゴ。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="2D1 — 日本と北米をつなぐデザインスタジオ">
-  <meta name="twitter:description" content="2D1は、日本と北米の起業家やスモールビジネスと協働する独立系デザインスタジオです。ブランディング、ウェブサイト、デジタルプロダクトを手がけています。">
+  <meta name="twitter:description" content="独立したデザインプラクティス。2D1 のデジタルプロダクトデザイン、ブランディング、自主制作をご紹介します。">
   <meta name="twitter:image" content="https://2d1.studio/img/brand/2d1-social.png?v=2">
-  <meta name="twitter:image:alt" content="柔らかなベージュの背景に赤い2D1のロゴ。">
-  <link rel="icon" href="../img/brand/2d1-icon.ico?v=3" sizes="16x16 32x32 48x48">
-  <link rel="icon" href="../img/brand/2d1-icon.png?v=3" type="image/png" sizes="32x32">
-  <link rel="icon" href="../img/brand/2d1-icon.svg?v=3" type="image/svg+xml" sizes="any">
-  <link rel="apple-touch-icon" href="../img/brand/2d1-apple-touch.png?v=3" sizes="180x180">
+  <link rel="icon" href="../img/brand/2d1-icon.svg?v=3" type="image/svg+xml">
   <script>
-    (() => {
-      const root=document.documentElement;
-      root.classList.add('js');
-      let seen=false;
-      try{seen=sessionStorage.getItem('2d1-home-landing-seen')==='1';sessionStorage.setItem('2d1-home-landing-seen','1');}catch{}
-      // Refresh/history restores the browser's own position; never skip to intro.
-      const navigationType=performance.getEntriesByType('navigation')[0]?.type;
-      const restoring=navigationType==='reload'||navigationType==='back_forward';
-      if(seen&&!restoring)root.classList.add('landing-seen');
-      else if(!seen&&!restoring&&!matchMedia('(prefers-reduced-motion: reduce)').matches)root.classList.add('is-landing');
-    })();
+    document.documentElement.classList.add('js');
+    let landingSeen = false;
+    try {
+      landingSeen = sessionStorage.getItem('2d1-home-landing-seen') === '1';
+      sessionStorage.setItem('2d1-home-landing-seen', '1');
+    } catch {}
+    if ((!landingSeen || new URLSearchParams(location.search).has('preview-intro')) && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('is-landing');
+    }
   </script>
-  
   <link rel="stylesheet" href="../css/fonts.css?v=9">
   <link rel="stylesheet" href="../css/japanese-font.css?v=4">
-  <link rel="stylesheet" href="../css/walla.css?v=106">
-  <link rel="stylesheet" href="../css/dialogs.css?v=19">
+  <link rel="stylesheet" href="../css/walla.css?v=111">
   <link rel="stylesheet" href="../css/mobile-nav.css?v=5">
+  <link rel="stylesheet" href="../css/shared-controls.css?v=23">
+  <link rel="stylesheet" href="../css/button-fill.css?v=30">
+  <link rel="stylesheet" href="../css/logo-dock.css?v=2">
+
   <script src="../js/ja-home.js?v=1" defer></script>
   <script src="../js/language.js?v=1" defer></script>
   <script src="../js/analytics.js?v=1" defer></script>
-  <script src="../js/config.js" defer></script>
-      <link rel="stylesheet" href="../css/today-bag.css?v=88">
-  <script src="../js/mobile-nav.js?v=7" defer></script>
-  <script src="../js/site.js?v=13" defer></script>
-  <script src="../js/walla.js?v=30" defer></script>
-  <script src="../js/reading-ink.js?v=13" defer></script>
-  <script src="../js/drawers.js?v=1" defer></script>
-  <script src="../js/bag-story.js?v=6" defer></script>
-  <link rel="stylesheet" href="../css/shared-controls.css?v=22">
-<link rel="stylesheet" href="../css/button-fill.css?v=6">
-<link rel="stylesheet" href="../css/logo-dock.css?v=2">
-<link rel="stylesheet" href="../css/text-links.css?v=17">
+  <script src="../js/mobile-nav.js?v=12" defer blocking="render"></script>
+  <script src="../js/site.js?v=34" defer blocking="render"></script>
+
+
+  <link rel="stylesheet" href="../css/text-links.css?v=18">
 <link rel="stylesheet" href="../css/responsive-nav.css?v=3">
-  <link rel="stylesheet" href="../css/home-ending.css?v=22">
-  <script src="../js/home-ending.js?v=3" defer></script>
-  <link rel="stylesheet" href="../css/work-track.css?v=4">
-  <link rel="stylesheet" href="../css/house-journey.css?v=5">
-  <script src="../js/house-assembly.js?v=22" defer></script>
-<link rel="stylesheet" href="../css/mobile-menu-footer.css?v=4">
-<link rel="stylesheet" href="../css/typography.css?v=33">
-<link rel="stylesheet" href="../css/control-fill.css?v=5">
-<script defer src="../js/control-fill.js?v=2"></script>
-  <meta property="og:locale:alternate" content="en_US">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://2d1.studio/#organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/logo_red.svg","description":"2D1 is an independent design studio working with founders and small businesses in Japan and North America on branding, websites, and digital products.","founder":{"@id":"https://kosuke.com/#person"},"areaServed":[{"@type":"Country","name":"Japan"},{"@type":"Place","name":"North America"}],"sameAs":["https://www.instagram.com/2d1.studio/","https://www.threads.com/@2d1.studio","https://x.com/2d1_studio"]},{"@type":"Person","@id":"https://kosuke.com/#person","name":"Kosuke Futsukaichi","url":"https://kosuke.com/"},{"@type":"WebSite","@id":"https://2d1.studio/#website","name":"2D1","url":"https://2d1.studio/","inLanguage":["en","ja"],"publisher":{"@id":"https://2d1.studio/#organization"}},{"@type":"WebPage","@id":"https://2d1.studio/ja/#page","url":"https://2d1.studio/ja/","name":"2D1 — 日本と北米をつなぐデザインスタジオ","description":"2D1は、日本と北米の起業家やスモールビジネスと協働する独立系デザインスタジオです。ブランディング、ウェブサイト、デジタルプロダクトを手がけています。","inLanguage":"ja","isPartOf":{"@id":"https://2d1.studio/#website"},"about":{"@id":"https://2d1.studio/#organization"},"publisher":{"@id":"https://2d1.studio/#organization"}}]}</script>
+<link rel="stylesheet" href="../css/mobile-menu-footer.css?v=5">
+<link rel="stylesheet" href="../css/typography.css?v=43">
+<link rel="stylesheet" href="../css/control-fill.css?v=32">
+<script defer src="../js/control-fill.js?v=31"></script>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="stylesheet" href="/css/page-transitions.css?v=32">
+<link rel="stylesheet" href="../css/practice.css?v=3">
+<link rel="stylesheet" href="../css/practice-shell.css?v=32">
+<script src="../js/practice-gallery.js?v=6" defer></script>
+<link rel="stylesheet" href="../css/practice-studio.css?v=11">
+<link rel="stylesheet" href="../css/practice-landing.css?v=6">
+<script src="../js/practice-landing.js?v=11" defer></script>
+<link rel="stylesheet" href="/css/work.css?v=64"><link rel="stylesheet" href="/css/home-ending.css?v=26"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://2d1.studio/#organization","name":"2D1","url":"https://2d1.studio/","logo":"https://2d1.studio/img/brand/logo_red.svg","description":"An independent design practice. Explore 2D1’s digital product design, branding, and self-initiated work.","founder":{"@id":"https://kosuke.com/#person"},"areaServed":[{"@type":"Country","name":"Japan"},{"@type":"Place","name":"North America"}],"sameAs":["https://www.instagram.com/2d1.studio/","https://www.threads.com/@2d1.studio","https://x.com/2d1_studio"]},{"@type":"Person","@id":"https://kosuke.com/#person","name":"Kosuke Futsukaichi","url":"https://kosuke.com/"},{"@type":"WebSite","@id":"https://2d1.studio/#website","name":"2D1","url":"https://2d1.studio/","inLanguage":["en","ja"],"publisher":{"@id":"https://2d1.studio/#organization"}},{"@type":"WebPage","@id":"https://2d1.studio/ja/#page","url":"https://2d1.studio/ja/","name":"2D1 — 日本と北米をつなぐデザインスタジオ","description":"独立したデザインプラクティス。2D1 のデジタルプロダクトデザイン、ブランディング、自主制作をご紹介します。","inLanguage":"ja","isPartOf":{"@id":"https://2d1.studio/#website"},"about":{"@id":"https://2d1.studio/#organization"},"publisher":{"@id":"https://2d1.studio/#organization"}},{"@type":"ItemList","name":"2D1 — 日本と北米をつなぐデザインスタジオ","itemListElement":[{"@type":"ListItem","position":1,"name":"Aviator","url":"https://2d1.studio/ja/work/aviator/"},{"@type":"ListItem","position":2,"name":"DeepDrip","url":"https://2d1.studio/ja/work/deepdrip/"},{"@type":"ListItem","position":3,"name":"supa","url":"https://2d1.studio/ja/work/supa/"},{"@type":"ListItem","position":4,"name":"Red Pixel","url":"https://2d1.studio/ja/red-pixel/"}]}]}</script>
 </head>
-<body id="top" class="home-page home-house-page">
+<body class="practice-shell about-page practice-page practice-home" id="top">
   <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="masthead">
-    <div class="logo-slot"><a class="site-logo" href="#top" aria-label="2D1、ページの先頭へ"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1" fetchpriority="high"></a></div>
-    <p class="brand-caption"><span>デザインハウス</span></p>
-  </header>
-  <div class="landing-cover" aria-hidden="true">
-    <div class="landing-mark"><img src="../img/brand/logo_beige.svg" width="829" height="280" alt=""><svg class="landing-eyes" viewbox="0 0 829 280"><image href="../img/brand/eyes.svg" x="317" y="103" width="116" height="48"></image></svg></div>
-    <p class="brand-caption"><span>デザインハウス</span></p>
-  </div>
+<div class="landing-cover" aria-hidden="true">
+  <div class="landing-mark"><img src="../img/brand/logo_beige.svg" width="829" height="280" alt="" fetchpriority="high"><svg class="landing-eyes" viewbox="0 0 829 280"><g class="landing-eye-blink" transform="translate(317 127) scale(1 0) translate(0 -24)"><path d="M35.9999 1.04908e-06V48H11.9999L11.9999 0L35.9999 1.04908e-06Z" fill="#FAF0E6"></path><path d="M0 12H48V36H0V12Z" fill="#FAF0E6"></path><path d="M104 1.04908e-06V48H79.9999L79.9999 0L104 1.04908e-06Z" fill="#FAF0E6"></path><path d="M68 12H116V36H68V12Z" fill="#FAF0E6"></path><g class="landing-eye-pupils"><path d="M11.7949 12.0938H23.7949V24.0938H11.7949V12.0938Z" fill="#FF2B00"></path><path d="M79.7949 12.0938H91.7949V24.0938H79.7949V12.0938Z" fill="#FF2B00"></path></g></g></svg></div>
+  <p class="brand-caption" lang="en" translate="no"><span>A Design House</span></p>
+</div>
+  <a class="site-logo about-docked-logo" href="./" aria-label="2D1、ホームへ"><img src="../img/brand/logo_red.svg?v=2" width="829" height="280" alt="2D1"></a>
+  <p class="practice-byline" lang="en" translate="no">An independent practice for digital product and brand design.</p>
   <button class="mobile-nav-toggle" type="button" aria-label="ナビゲーションメニュー" aria-expanded="false" aria-controls="page-navigation"><span class="mobile-nav-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
-  <nav class="page-nav" id="page-navigation" aria-label="ページ"><a href="./" aria-current="page"><span class="nav-label">ホーム</span></a><a href="work/" data-work-nav><span class="nav-label">スタジオ</span></a><a class="nav-shop" href="shop/"><span class="nav-label">ショップ</span></a><a href="about/"><span class="nav-label">2D1について</span></a><span class="page-nav-contact"><a href="contact/"><span class="nav-label">お問い合わせ</span></a></span></nav>
-  <main id="main">
-    <div class="home-house-scene">
-    <section class="intro column section-stack home-house-lead" aria-label="はじめに">
-      <h1 data-ink>2D1は、独立したデザインスタジオとして、<em class="copy-emphasis">ブランド、デジタルプロダクト、アイデアを横断して活動しています</em>。構想の段階から、見た目や使い心地、実際に使われる場面までを一緒に考え、かたちにしていきます。<br><br>クライアントとの仕事に加えて、共感できる人たちと自分たちのものをつくり、日用品を選んで紹介しています。私たちは、こうしたものを<a class="familiar-characters copy-emphasis" href="familiarcharacters/" translate="no">Familiar Characters</a>と呼んでいます。使ううちに思い出が重なり、いつの間にか暮らしの一部になる。そんな身近な存在です。</h1>
-      <div class="button-stack"><a class="intro-cta" href="about/">2D1について<span class="pixel-arrow" aria-hidden="true"></span></a></div>
-    </section>
-    <div class="house-journey">
-      <div class="house-animation"><div class="house-viewport"><figure class="design-house">
-          <div class="house-stage">
-          <svg class="design-house-diagram" viewbox="30 0 730 720" role="img" aria-labelledby="design-house-description">
-            <title id="design-house-description">スタジオとショップの2つの部屋からなる2D1のデザインハウス。</title>
-            <defs><pattern id="house-section-hatch" width="8" height="8" patternunits="userSpaceOnUse"><path d="M-1 1L1 -1M0 8L8 0M7 9L9 7" fill="none" stroke="currentColor" stroke-width=".7"></path></pattern></defs>
-            <g aria-hidden="true">
-            <g class="house-piece" data-house-piece="0" data-pivot="279.5 422.5">
-            <defs><clippath id="house-piece-clip-0"><path d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"></path></clippath></defs>
-            <path class="house-solid" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"></path>
-            <g clip-path="url(#house-piece-clip-0)">
-            <path class="house-shading" d="M329.0,603.0 L449.0,507.0 L449.0,267.0 L329.0,363.0 Z"></path>
-            <path class="house-edge" d="M120.0,330.0 L329.0,363.0 L449.0,267.0"></path>
-            <path class="house-edge" d="M329.0,363.0 L329.0,603.0"></path>
-            <path class="house-bevel" d="M129.5,555.5 Q129.5,561.5 135.4,562.4 L313.6,590.6 Q319.5,591.5 319.5,585.5 L319.5,377.5 Q319.5,371.5 313.6,370.6 L135.4,342.4 Q129.5,341.5 129.5,347.5 Z"></path><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 224.5 476.5)">スタジオ</text>
-            </g>
-            <path class="house-edge" d="M120.0,346.0 Q120.0,330.0 132.5,320.0 L227.5,244.0 Q240.0,234.0 255.8,236.5 L433.2,264.5 Q449.0,267.0 449.0,283.0 L449.0,491.0 Q449.0,507.0 436.5,517.0 L341.5,593.0 Q329.0,603.0 313.2,600.5 L135.8,572.5 Q120.0,570.0 120.0,554.0 Z"></path>
-            </g>
-            <g class="house-piece" data-house-piece="1" data-pivot="499.9 457.3">
-            <defs><clippath id="house-piece-clip-1"><path d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"></path></clippath></defs>
-            <path class="house-solid" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"></path>
-            <g clip-path="url(#house-piece-clip-1)">
-            <path class="house-shading" d="M549.4,637.8 L669.4,541.8 L669.4,301.8 L549.4,397.8 Z"></path>
-            <path class="house-edge" d="M340.4,364.8 L549.4,397.8 L669.4,301.8"></path>
-            <path class="house-edge" d="M549.4,397.8 L549.4,637.8"></path>
-            <path class="house-bevel" d="M349.9,590.3 Q349.9,596.3 355.8,597.2 L534.0,625.4 Q539.9,626.3 539.9,620.3 L539.9,412.3 Q539.9,406.3 534.0,405.4 L355.8,377.2 Q349.9,376.3 349.9,382.3 Z"></path><text class="house-room-label" text-anchor="middle" transform="matrix(.95 .15 0 1 444.9 511.3)">ショップ</text>
-            </g>
-            <path class="house-edge" d="M340.4,380.8 Q340.4,364.8 352.9,354.8 L447.9,278.8 Q460.4,268.8 476.2,271.3 L653.6,299.3 Q669.4,301.8 669.4,317.8 L669.4,525.8 Q669.4,541.8 656.9,551.8 L561.9,627.8 Q549.4,637.8 533.6,635.3 L356.2,607.3 Q340.4,604.8 340.4,588.8 Z"></path>
-            </g>
-            <g class="house-piece" data-house-piece="2" data-pivot="389.7 259.9">
-            <defs><clippath id="house-piece-clip-2"><path d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"></path></clippath></defs>
-            <path class="house-solid" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"></path>
-            <g clip-path="url(#house-piece-clip-2)">
-            <path class="house-shading" d="M328.7,188.7 L562.4,405.6 L694.4,300.0 L460.7,83.1 Z"></path>
-            <path class="house-edge" d="M95.0,331.8 L328.7,188.7 L562.4,405.6"></path>
-            <path class="house-edge" d="M328.7,188.7 L460.7,83.1"></path>
-            <image href="../img/brand/logo_beige.svg" width="176" height="59.4" transform="matrix(.95 .15 0 1 245.1 265.5)"></image>
-            </g>
-            <path class="house-edge" d="M110.8,334.3 Q95.0,331.8 107.5,321.8 L214.5,236.2 Q227.0,226.2 240.6,217.8 L447.1,91.5 Q460.7,83.1 472.4,94.0 L682.7,289.1 Q694.4,300.0 681.9,310.0 L574.9,395.6 Q562.4,405.6 546.6,403.1 Z"></path>
-            </g>
-            </g>
-            </svg></div>
-        </figure></div></div>
-      <div class="house-destination">
-    <section id="studio" class="section-stack studio" aria-labelledby="studio-label">
-      <div class="column studio-opening">
-        <div class="section-heading"><h2 id="studio-label">スタジオ</h2><p>明確なアイデアに、<br>個性を。</p></div>
-        <div class="section-copy prose"><p data-ink><em class="copy-emphasis">活動の中心にあるのは、デザインスタジオとしての仕事です。</em></p><p data-ink>小さなチームや事業を営む方と、アイデアを整理し、かたちにしていきます。目指すのは、<em class="copy-emphasis">わかりやすく、自然に使えて、その人や事業らしさが伝わるものです。</em></p></div>
-      </div>
-      <div class="work-belt" tabindex="0" role="region" aria-label="制作事例。横にスクロールしてご覧ください。スペースキーで動きを一時停止・再開できます。" data-carousel><div class="work-track"><ul class="work-set"><li class="work-artwork work-artwork-deepdrip-mark"><img src="../img/projects/deepdrip/logo-mark-1280.webp" srcset="../img/projects/deepdrip/logo-mark-640.webp 640w, ../img/projects/deepdrip/logo-mark-1280.webp 1280w, ../img/projects/deepdrip/logo-mark-3840.webp 3840w" sizes="280px" width="280" height="280" alt="DeepDripのDロゴマーク" loading="lazy" decoding="async"></li>
-<li class="work-artwork work-artwork-aviator-social"><img src="../img/projects/aviator/social-profile-1280.webp" srcset="../img/projects/aviator/social-profile-640.webp 640w, ../img/projects/aviator/social-profile-1280.webp 1280w, ../img/projects/aviator/social-profile-4000.webp 4000w" sizes="280px" width="280" height="280" alt="Aviator Healthのソーシャルプロフィール" loading="lazy" decoding="async"></li>
-<li class="work-artwork work-artwork-aviator-web"><img src="../img/projects/04-960.webp" srcset="../img/projects/04-hq-640.webp 640w, ../img/projects/04-hq-1280.webp 1280w, ../img/projects/04-hq-1920.webp 1920w" sizes="280px" alt="Aviatorの医療物流ウェブサイト" loading="lazy" decoding="async" width="280" height="280"></li>
-<li class="work-artwork work-artwork-aviator-cap"><img src="../img/projects/aviator/embroidered-cap-960.webp" srcset="../img/projects/aviator/embroidered-cap-640.webp 640w, ../img/projects/aviator/embroidered-cap-960.webp 960w, ../img/projects/aviator/embroidered-cap-1279.webp 1279w" sizes="280px" width="280" height="280" alt="木製の棚に置かれたAviatorの刺繍入りキャップ" loading="lazy" decoding="async"></li>
-<li class="work-artwork work-artwork-deepdrip-stickers"><img src="../img/projects/deepdrip/laptop-stickers-1280.webp" srcset="../img/projects/deepdrip/laptop-stickers-640.webp 640w, ../img/projects/deepdrip/laptop-stickers-1280.webp 1280w, ../img/projects/deepdrip/laptop-stickers-3200.webp 3200w" sizes="280px" width="280" height="280" alt="ノートパソコンのDeepDripステッカー" loading="lazy" decoding="async"></li>
-<li class="work-artwork work-artwork-supa-symbol"><img src="../img/projects/supa/symbol-1280.webp" srcset="../img/projects/supa/symbol-640.webp 640w, ../img/projects/supa/symbol-1280.webp 1280w, ../img/projects/supa/symbol-2560.webp 2560w" sizes="280px" width="280" height="280" alt="ライム色のグラデーションに配したSupaのシンボル" loading="lazy" decoding="async"></li>
-<li class="work-artwork work-artwork-supa-cards"><img src="../img/projects/supa/business-cards-portrait-1280.webp" srcset="../img/projects/supa/business-cards-portrait-640.webp 640w, ../img/projects/supa/business-cards-portrait-1280.webp 1280w" sizes="280px" width="280" height="280" alt="暗い背景に置かれたSupaの名刺" loading="lazy" decoding="async"></li>
-<li class="work-artwork work-artwork-aviator-bottle"><img src="../img/projects/aviator/bottle-960.webp" srcset="../img/projects/aviator/bottle-640.webp 640w, ../img/projects/aviator/bottle-960.webp 960w, ../img/projects/aviator/bottle-1279.webp 1279w" sizes="280px" width="280" height="280" alt="紫のウォーターボトルに展開したAviatorのロゴ" loading="lazy" decoding="async"></li>
-<li class="work-artwork work-artwork-supa-app"><img src="../img/projects/12-960.webp" srcset="../img/projects/12-hq-640.webp 640w, ../img/projects/12-hq-1280.webp 1280w, ../img/projects/12-hq-2560.webp 2560w" sizes="280px" alt="ドックにあるSupaのアプリアイコン" loading="lazy" decoding="async" width="280" height="280"></li>
-<li class="work-artwork work-artwork-supa-badge"><img src="../img/projects/supa/badge-1280.webp" srcset="../img/projects/supa/badge-640.webp 640w, ../img/projects/supa/badge-1280.webp 1280w" sizes="280px" width="280" height="280" alt="スタッフバッジに展開したSupaのアイデンティティ" loading="lazy" decoding="async"></li>
-<li class="work-artwork work-artwork-deepdrip-web"><img src="../img/projects/deepdrip/website-1280.webp" srcset="../img/projects/deepdrip/website-640.webp 640w, ../img/projects/deepdrip/website-1280.webp 1280w, ../img/projects/deepdrip/website-2816.webp 2816w" sizes="280px" width="280" height="280" alt="DeepDripのエディトリアルサイト" loading="lazy" decoding="async"></li></ul></div></div>
-      <div class="column section-stack-inner">
-        <div class="table-group"><h3 class="table-title" id="services-title">サービス</h3><dl class="services" aria-labelledby="services-title"><div><dt>デザインコンサルティング</dt><dd>アドバイス、ディレクション</dd></div><div><dt>デジタルプロダクトデザイン</dt><dd>ウェブサイト、UX/UI、デザインシステム</dd></div><div><dt>ブランドデザイン</dt><dd>アートディレクション、グラフィックデザイン、ビジュアルアイデンティティ</dd></div></dl></div>
-        <a class="intro-cta" href="work/">制作実績を見る<span class="pixel-arrow" aria-hidden="true"></span></a>
-      </div>
-    </section>
-      </div>
-    </div>
-    </div>
-    <section id="shop" class="section-stack" aria-labelledby="shop-label">
-      <div class="bag-study-scene">
-      <div class="bag-study-lead" data-bag-cover-lead>
-      <div class="section-heading column"><h2 id="shop-label">ショップ</h2><p>身近なものたちの家。</p></div>
-      <div class="section-copy prose column"><p data-ink><em class="copy-emphasis">つくる喜び</em>は、私たちの活動の中心にあります。自分たちのためにつくるものも、クライアントとの仕事も、出発点は同じです。明確なアイデアと、そのものらしさを生むディテールを大切にしています。</p></div>
-      </div>
-      <figure class="bag-lifestyle" id="today-bag" aria-label="My Bag">
-        <img class="bag-study-photo" src="../img/shop/bag-study-2026-10-22/2d-tote-red-handles-v16.webp" width="1672" height="941" alt="屋外で肩に掛けたダークブラウンのMy BagのAIコンセプト画像。単色のダークカラーのショルダーストラップ、赤い短い持ち手、突き出した正方形の赤いタグ、ベージュの2D1ロゴ。" loading="lazy" decoding="async">
-      </figure>
-      <div class="bag-product-copy">
-        <p class="bag-introduction section-copy column" data-ink><em class="copy-emphasis">My Bag</em>は、私たちが初めてつくる日用品です。毎日のお出かけに持ち歩ける帆布のトート。シンプルな形に、使いやすい内ポケットと、目印になる<em class="copy-emphasis">赤のアクセント</em>を加えました。</p>
-        <div class="section-copy prose column shop-support-copy"><p data-ink><span>My Bag</span>は<em class="copy-emphasis">まだ開発中</em>です。活動の様子や最新情報は、SNSでお知らせしています。</p></div>
-      </div>
-      </div>
-    </section>
+  <nav class="page-nav is-visible practice-nav" id="page-navigation" aria-label="ページ"><a href="./" aria-current="page"><span class="nav-label" translate="no">Studio</span></a><a href="./about/"><span class="nav-label" translate="no">About</span></a><span class="page-nav-contact"><a href="./contact/"><span class="nav-label" translate="no">Contact</span></a></span></nav>
+<nav class="practice-switch" aria-label="2D1 を知る" translate="no"><a href="./" aria-current="page">WORK</a><span class="practice-switch-divider" aria-hidden="true">/</span><a href="shop/">PLAY</a><span class="practice-switch-divider" aria-hidden="true">/</span><a href="/familiarcharacters/">FAMILIAR CHARACTERS</a></nav>
+  <main id="main" class="practice-main"><h1 class="sr-only" translate="no">Studio</h1><div class="practice-grid" role="region" aria-label="プロジェクト"><article class="practice-card"><a href="work/aviator/" class="practice-card-link"><div class="practice-media"><img src="../img/projects/covers/aviator-cover-1280.webp" srcset="../img/projects/covers/aviator-cover-640.webp 640w, ../img/projects/covers/aviator-cover-1280.webp 1280w, ../img/projects/covers/aviator-cover-2560.webp 2560w" sizes="(min-width:1100px) 50vw, 85vw" width="2560" height="1920" alt="紫の空を背景にした Aviator のワードマーク" loading="eager" fetchpriority="high" decoding="async"></div><div class="practice-caption"><h2 translate="no">Aviator</h2><div class="practice-caption-copy"><p>高齢者医療に、生き生きとしたアイデンティティを</p><span class="practice-view work-view">プロジェクトを見る<span class="pixel-arrow" aria-hidden="true"></span></span></div></div></a></article><article class="practice-card"><a href="work/deepdrip/" class="practice-card-link"><div class="practice-media"><img src="../img/projects/covers/deepdrip-cover-1280.webp" srcset="../img/projects/covers/deepdrip-cover-640.webp 640w, ../img/projects/covers/deepdrip-cover-1280.webp 1280w, ../img/projects/covers/deepdrip-cover-2560.webp 2560w" sizes="(min-width:1100px) 50vw, 85vw" width="2560" height="1920" alt="オレンジ地の DeepDrip ワードマーク" loading="lazy" decoding="async"></div><div class="practice-caption"><h2 translate="no">DeepDrip</h2><div class="practice-caption-copy"><p>開発者のための独立系ウェブメディア</p><span class="practice-view work-view">プロジェクトを見る<span class="pixel-arrow" aria-hidden="true"></span></span></div></div></a></article><article class="practice-card"><a href="work/supa/" class="practice-card-link"><div class="practice-media"><img src="../img/projects/covers/supa-cover-v2-1280.webp" srcset="../img/projects/covers/supa-cover-v2-640.webp 640w, ../img/projects/covers/supa-cover-v2-1280.webp 1280w, ../img/projects/covers/supa-cover-v2-2560.webp 2560w" sizes="(min-width:1100px) 50vw, 85vw" width="2560" height="1920" alt="ライムカラーのアプリアイコンに配した supa のシンボル" loading="lazy" decoding="async"></div><div class="practice-caption"><h2 translate="no">supa</h2><div class="practice-caption-copy"><p>粘り強く挑む AI 企業のための、シャープなアイデンティティ</p><span class="practice-view work-view">プロジェクトを見る<span class="pixel-arrow" aria-hidden="true"></span></span></div></div></a></article><article class="practice-card"><a href="red-pixel/" class="practice-card-link"><div class="practice-media practice-pixel" role="img" aria-label="1 ピクセルの赤い正方形"><span></span></div><div class="practice-caption"><h2 translate="no">Red Pixel</h2><div class="practice-caption-copy"><p>ただ一つの、赤いピクセル。</p><span class="practice-view work-view">プロジェクトを見る<span class="pixel-arrow" aria-hidden="true"></span></span></div></div></a></article></div></main>
+  <footer class="site-footer"><div class="footer-line column"><p>©<span data-year>2026</span> 2D1 <a class="footer-privacy" href="privacy/">Privacy</a> <a class="footer-privacy" href="legal/">Legal</a></p><nav class="social-links" aria-label="ソーシャルメディア"><a href="https://www.instagram.com/2d1.studio/" target="_blank" rel="noopener noreferrer" aria-label="2D1 の Instagram（新しいタブで開きます）"><svg viewbox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="0" width="7" height="1"></rect><rect x="0" y="1" width="1" height="1"></rect><rect x="8" y="1" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="6" y="2" width="1" height="1"></rect><rect x="8" y="2" width="1" height="1"></rect><rect x="0" y="3" width="1" height="1"></rect><rect x="3" y="3" width="3" height="1"></rect><rect x="8" y="3" width="1" height="1"></rect><rect x="0" y="4" width="1" height="1"></rect><rect x="2" y="4" width="1" height="1"></rect><rect x="6" y="4" width="1" height="1"></rect><rect x="8" y="4" width="1" height="1"></rect><rect x="0" y="5" width="1" height="1"></rect><rect x="2" y="5" width="1" height="1"></rect><rect x="6" y="5" width="1" height="1"></rect><rect x="8" y="5" width="1" height="1"></rect><rect x="0" y="6" width="1" height="1"></rect><rect x="3" y="6" width="3" height="1"></rect><rect x="8" y="6" width="1" height="1"></rect><rect x="0" y="7" width="1" height="1"></rect><rect x="8" y="7" width="1" height="1"></rect><rect x="1" y="8" width="7" height="1"></rect></g></svg><span class="social-platform" aria-hidden="true">Instagram</span></a><a href="https://www.linkedin.com/company/2d1-studio/" target="_blank" rel="noopener noreferrer" aria-label="2D1 の LinkedIn（新しいタブで開きます）"><svg viewbox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="1" width="1" height="1"></rect><rect x="1" y="3" width="1" height="1"></rect><rect x="3" y="3" width="1" height="1"></rect><rect x="5" y="3" width="2" height="1"></rect><rect x="1" y="4" width="1" height="1"></rect><rect x="3" y="4" width="2" height="1"></rect><rect x="7" y="4" width="1" height="1"></rect><rect x="1" y="5" width="1" height="1"></rect><rect x="3" y="5" width="1" height="1"></rect><rect x="7" y="5" width="1" height="1"></rect><rect x="1" y="6" width="1" height="1"></rect><rect x="3" y="6" width="1" height="1"></rect><rect x="7" y="6" width="1" height="1"></rect><rect x="1" y="7" width="1" height="1"></rect><rect x="3" y="7" width="1" height="1"></rect><rect x="7" y="7" width="1" height="1"></rect></g></svg><span class="social-platform" aria-hidden="true">LinkedIn</span></a></nav></div></footer>
 
-  </main>
-  <div class="home-ending about-ending" data-link-surface="red">
-    <section class="ending-contact" aria-labelledby="ending-contact-title"><div class="column">
-      <span class="ending-eyes-hover"><img class="ending-contact-eyes" src="../img/brand/eyes.svg" width="116" height="48" alt="" aria-hidden="true"></span>
-      <h2 class="signup-heading ending-contact-label" id="ending-contact-title">お問い合わせ</h2>
-      <a class="intro-cta" href="contact/">お問い合わせ<span class="pixel-arrow" aria-hidden="true"></span></a>
-      <p class="ending-follow-note">SNSでも活動をお知らせしています</p>
-    </div></section>
-  <footer class="site-footer"><div class="footer-line column"><p>©<span data-year>2026</span> 2D1 <a class="footer-privacy" href="privacy/">プライバシー</a> <a class="footer-privacy" href="legal/">法的事項</a></p><nav class="social-links" aria-label="ソーシャルメディア"><a href="https://www.instagram.com/2d1.studio/" target="_blank" rel="noopener noreferrer" aria-label="2D1のInstagram（新しいタブで開きます）"><svg viewbox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="0" width="7" height="1"></rect><rect x="0" y="1" width="1" height="1"></rect><rect x="8" y="1" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="6" y="2" width="1" height="1"></rect><rect x="8" y="2" width="1" height="1"></rect><rect x="0" y="3" width="1" height="1"></rect><rect x="3" y="3" width="3" height="1"></rect><rect x="8" y="3" width="1" height="1"></rect><rect x="0" y="4" width="1" height="1"></rect><rect x="2" y="4" width="1" height="1"></rect><rect x="6" y="4" width="1" height="1"></rect><rect x="8" y="4" width="1" height="1"></rect><rect x="0" y="5" width="1" height="1"></rect><rect x="2" y="5" width="1" height="1"></rect><rect x="6" y="5" width="1" height="1"></rect><rect x="8" y="5" width="1" height="1"></rect><rect x="0" y="6" width="1" height="1"></rect><rect x="3" y="6" width="3" height="1"></rect><rect x="8" y="6" width="1" height="1"></rect><rect x="0" y="7" width="1" height="1"></rect><rect x="8" y="7" width="1" height="1"></rect><rect x="1" y="8" width="7" height="1"></rect></g></svg><span class="social-platform" aria-hidden="true">Instagram</span></a><a href="https://www.threads.com/@2d1.studio" target="_blank" rel="noopener noreferrer" aria-label="2D1のThreads（新しいタブで開きます）"><svg viewbox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="2" y="0" width="5" height="1"></rect><rect x="1" y="1" width="1" height="1"></rect><rect x="7" y="1" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="3" y="2" width="3" height="1"></rect><rect x="8" y="2" width="1" height="1"></rect><rect x="0" y="3" width="1" height="1"></rect><rect x="2" y="3" width="1" height="1"></rect><rect x="6" y="3" width="1" height="1"></rect><rect x="8" y="3" width="1" height="1"></rect><rect x="0" y="4" width="1" height="1"></rect><rect x="2" y="4" width="1" height="1"></rect><rect x="5" y="4" width="2" height="1"></rect><rect x="8" y="4" width="1" height="1"></rect><rect x="0" y="5" width="1" height="1"></rect><rect x="3" y="5" width="2" height="1"></rect><rect x="6" y="5" width="1" height="1"></rect><rect x="8" y="5" width="1" height="1"></rect><rect x="0" y="6" width="1" height="1"></rect><rect x="6" y="6" width="2" height="1"></rect><rect x="1" y="7" width="1" height="1"></rect><rect x="2" y="8" width="6" height="1"></rect></g></svg><span class="social-platform" aria-hidden="true">Threads</span></a><a href="https://x.com/2d1_studio" target="_blank" rel="noopener noreferrer" aria-label="2D1のX（新しいタブで開きます）"><svg viewbox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="0.5" y="0.5" width="2" height="1"></rect><rect x="7.5" y="0.5" width="1" height="1"></rect><rect x="1.5" y="1.5" width="2" height="1"></rect><rect x="6.5" y="1.5" width="1" height="1"></rect><rect x="2.5" y="2.5" width="2" height="1"></rect><rect x="5.5" y="2.5" width="1" height="1"></rect><rect x="3.5" y="3.5" width="2" height="1"></rect><rect x="3.5" y="4.5" width="3" height="1"></rect><rect x="2.5" y="5.5" width="1" height="1"></rect><rect x="4.5" y="5.5" width="2" height="1"></rect><rect x="1.5" y="6.5" width="1" height="1"></rect><rect x="5.5" y="6.5" width="2" height="1"></rect><rect x="0.5" y="7.5" width="1" height="1"></rect><rect x="6.5" y="7.5" width="2" height="1"></rect></g></svg><span class="social-platform" aria-hidden="true">X</span></a><a href="https://www.linkedin.com/company/2d1-studio/" target="_blank" rel="noopener noreferrer" aria-label="2D1のLinkedIn（新しいタブで開きます）"><svg viewbox="0 0 9 9" aria-hidden="true" focusable="false" shape-rendering="crispEdges"><g fill="currentColor"><rect x="1" y="1" width="1" height="1"></rect><rect x="1" y="3" width="1" height="1"></rect><rect x="3" y="3" width="1" height="1"></rect><rect x="5" y="3" width="2" height="1"></rect><rect x="1" y="4" width="1" height="1"></rect><rect x="3" y="4" width="2" height="1"></rect><rect x="7" y="4" width="1" height="1"></rect><rect x="1" y="5" width="1" height="1"></rect><rect x="3" y="5" width="1" height="1"></rect><rect x="7" y="5" width="1" height="1"></rect><rect x="1" y="6" width="1" height="1"></rect><rect x="3" y="6" width="1" height="1"></rect><rect x="7" y="6" width="1" height="1"></rect><rect x="1" y="7" width="1" height="1"></rect><rect x="3" y="7" width="1" height="1"></rect><rect x="7" y="7" width="1" height="1"></rect></g></svg><span class="social-platform" aria-hidden="true">LinkedIn</span></a></nav></div></footer>
-  </div>
-
-  <nav class="language-switch" aria-label="言語"><a href="../" lang="en" hreflang="en" aria-label="English">EN</a><a href="./" lang="ja" hreflang="ja" aria-label="日本語" aria-current="page">JA</a></nav>
-</body>
+<nav class="language-switch practice-fixed-language" aria-label="言語"><a href="../" lang="en" hreflang="en" aria-label="English">EN</a><a href="./" lang="ja" hreflang="ja" aria-label="日本語" aria-current="page">JA</a></nav>
+<script src="/js/project-dialog-loader.js?v=2" defer></script></body>
 </html>

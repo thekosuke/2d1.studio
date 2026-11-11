@@ -25,18 +25,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/about/" />
   </url>
   <url>
-    <loc>https://2d1.studio/work/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/" />
-  </url>
-  <url>
-    <loc>https://2d1.studio/ja/work/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/work/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/work/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/work/" />
-  </url>
-  <url>
     <loc>https://2d1.studio/shop/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/shop/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/shop/" />
@@ -50,15 +38,6 @@
   </url>
   <url>
     <loc>https://2d1.studio/familiarcharacters/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/familiarcharacters/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/familiarcharacters/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/familiarcharacters/" />
-  </url>
-  <url>
-    <loc>https://2d1.studio/ja/familiarcharacters/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://2d1.studio/familiarcharacters/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://2d1.studio/ja/familiarcharacters/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://2d1.studio/familiarcharacters/" />
   </url>
   <url>
     <loc>https://2d1.studio/contact/</loc>

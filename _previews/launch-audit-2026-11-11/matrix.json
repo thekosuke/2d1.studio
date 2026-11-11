@@ -1,0 +1,6594 @@
+[
+  {
+    "width": 320,
+    "route": "/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 2404,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 796,
+        "w": 312,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 948,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 948,
+        "w": 312,
+        "h": 106,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 6205,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 6796,
+        "w": 312,
+        "h": 106,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 1181,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1181,
+        "w": 312,
+        "h": 106,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9975,
+        "y": 298,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/privacy/",
+    "title": "2D1 | Privacy",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 4666,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4666,
+        "w": 312,
+        "h": 106,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/legal/",
+    "title": "2D1 | Legal",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 4069,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4069,
+        "w": 312,
+        "h": 106,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/work/aviator/",
+    "title": "Aviator — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 6180,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 6074,
+        "w": 312,
+        "h": 106,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/work/deepdrip/",
+    "title": "DeepDrip — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 5458,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5352,
+        "w": 312,
+        "h": 106,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/work/supa/",
+    "title": "supa — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 4793,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4687,
+        "w": 312,
+        "h": 106,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/familiarcharacters/",
+    "title": "Familiar Characters by 2D1",
+    "overflow": 0,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 0,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 296,
+        "y": 774,
+        "w": 0,
+        "h": 46,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(128, 117, 115)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "outside": [
+      {
+        "tag": "H1",
+        "cls": "",
+        "text": "Familiar Characters",
+        "x": -1,
+        "y": -1,
+        "w": 384,
+        "h": 53,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "Hand-picked design objects and everyday goods",
+        "x": -1,
+        "y": 68,
+        "w": 913,
+        "h": 30,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(128, 117, 115)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/ja/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 2356,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 796,
+        "w": 312,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/ja/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 956,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 956,
+        "w": 312,
+        "h": 108,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/ja/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 6206,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 6797,
+        "w": 312,
+        "h": 108,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/ja/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 1224,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1224,
+        "w": 312,
+        "h": 108,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9975,
+        "y": 427,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/ja/privacy/",
+    "title": "2D1 | プライバシー",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 5459,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5459,
+        "w": 312,
+        "h": 108,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/ja/legal/",
+    "title": "2D1 | 法的事項",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 264,
+        "h": 4611,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4611,
+        "w": 312,
+        "h": 108,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "route": "/ja/work/aviator/",
+    "title": "Aviator — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -320,
+        "y": 0,
+        "w": 320,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 6233,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 6125,
+        "w": 312,
+        "h": 108,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 334,
+        "h": 2561,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 796,
+        "w": 382,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 334,
+        "h": 1088,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1088,
+        "w": 382,
+        "h": 106,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 382,
+        "h": 4895,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5486,
+        "w": 382,
+        "h": 106,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 334,
+        "h": 1129,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1129,
+        "w": 382,
+        "h": 106,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9975,
+        "y": 298,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/privacy/",
+    "title": "2D1 | Privacy",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 334,
+        "h": 3876,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 3876,
+        "w": 382,
+        "h": 106,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/legal/",
+    "title": "2D1 | Legal",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 334,
+        "h": 3328,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 3328,
+        "w": 382,
+        "h": 106,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/work/aviator/",
+    "title": "Aviator — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 382,
+        "h": 6785,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 6679,
+        "w": 382,
+        "h": 106,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/work/deepdrip/",
+    "title": "DeepDrip — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 382,
+        "h": 6044,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5938,
+        "w": 382,
+        "h": 106,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/work/supa/",
+    "title": "supa — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 382,
+        "h": 5243,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5137,
+        "w": 382,
+        "h": 106,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/familiarcharacters/",
+    "title": "Familiar Characters by 2D1",
+    "overflow": 0,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 0,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 366,
+        "y": 774,
+        "w": 0,
+        "h": 46,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(128, 117, 115)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "outside": [
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "Hand-picked design objects and everyday goods",
+        "x": -1,
+        "y": 68,
+        "w": 913,
+        "h": 30,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(128, 117, 115)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/ja/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": -2,
+        "w": 334,
+        "h": 2598,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 796,
+        "w": 382,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/ja/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 334,
+        "h": 1096,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1096,
+        "w": 382,
+        "h": 108,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/ja/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 382,
+        "h": 5308,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5899,
+        "w": 382,
+        "h": 108,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/ja/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 334,
+        "h": 1224,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1224,
+        "w": 382,
+        "h": 108,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9975,
+        "y": 427,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/ja/privacy/",
+    "title": "2D1 | プライバシー",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 334,
+        "h": 4607,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4607,
+        "w": 382,
+        "h": 108,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/ja/legal/",
+    "title": "2D1 | 法的事項",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 334,
+        "h": 3807,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 3807,
+        "w": 382,
+        "h": 108,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "route": "/ja/work/aviator/",
+    "title": "Aviator — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -390,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 382,
+        "h": 6937,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 6830,
+        "w": 382,
+        "h": 108,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 712,
+        "h": 3007,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 976,
+        "w": 760,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 712,
+        "h": 952,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 952,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 760,
+        "h": 5030,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5747,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 712,
+        "h": 1143,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1143,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9975,
+        "y": 332,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/privacy/",
+    "title": "2D1 | Privacy",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 680,
+        "h": 2449,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2449,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/legal/",
+    "title": "2D1 | Legal",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 680,
+        "h": 2253,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2253,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/work/aviator/",
+    "title": "Aviator — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 760,
+        "h": 5976,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5904,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/work/deepdrip/",
+    "title": "DeepDrip — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 760,
+        "h": 8006,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 7934,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/work/supa/",
+    "title": "supa — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 760,
+        "h": 6558,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 6486,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/familiarcharacters/",
+    "title": "Familiar Characters by 2D1",
+    "overflow": 0,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 768,
+        "h": 0,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 744,
+        "y": 966,
+        "w": 0,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(128, 117, 115)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "outside": [
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "Hand-picked design objects and everyday goods",
+        "x": 584,
+        "y": -30,
+        "w": 360,
+        "h": 30,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(128, 117, 115)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/ja/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 712,
+        "h": 3019,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 976,
+        "w": 760,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/ja/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 712,
+        "h": 952,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 952,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/ja/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 760,
+        "h": 4009,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4726,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/ja/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 712,
+        "h": 1186,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1186,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9975,
+        "y": 461,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/ja/privacy/",
+    "title": "2D1 | プライバシー",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 680,
+        "h": 2811,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2811,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/ja/legal/",
+    "title": "2D1 | 法的事項",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 24,
+        "y": 0,
+        "w": 680,
+        "h": 2483,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2483,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "route": "/ja/work/aviator/",
+    "title": "Aviator — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -768,
+        "y": 0,
+        "w": 768,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 760,
+        "h": 5727,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5655,
+        "w": 760,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 28,
+        "y": -12,
+        "w": 960,
+        "h": 3588,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 976,
+        "w": 1016,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 28,
+        "y": 0,
+        "w": 960,
+        "h": 952,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 952,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1016,
+        "h": 4070,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4787,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 28,
+        "y": 0,
+        "w": 960,
+        "h": 1143,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1143,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9971,
+        "y": 332,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/privacy/",
+    "title": "2D1 | Privacy",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 28,
+        "y": 0,
+        "w": 680,
+        "h": 2449,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2449,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/legal/",
+    "title": "2D1 | Legal",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 28,
+        "y": 0,
+        "w": 680,
+        "h": 2253,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2253,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/work/aviator/",
+    "title": "Aviator — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1016,
+        "h": 6509,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 6437,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/work/deepdrip/",
+    "title": "DeepDrip — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1016,
+        "h": 9573,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 9501,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/work/supa/",
+    "title": "supa — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1016,
+        "h": 3926,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 3854,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/familiarcharacters/",
+    "title": "Familiar Characters by 2D1",
+    "overflow": 0,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1024,
+        "h": 0,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 1000,
+        "y": 966,
+        "w": 0,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(128, 117, 115)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/ja/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 28,
+        "y": -14,
+        "w": 960,
+        "h": 3604,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 976,
+        "w": 1016,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/ja/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": {
+        "x": 24,
+        "y": 136,
+        "w": 200,
+        "h": 24,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 28,
+        "y": 0,
+        "w": 960,
+        "h": 952,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 952,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/ja/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1016,
+        "h": 3391,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4107,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/ja/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 28,
+        "y": 0,
+        "w": 960,
+        "h": 1186,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1186,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9971,
+        "y": 461,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/ja/privacy/",
+    "title": "2D1 | プライバシー",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 28,
+        "y": 0,
+        "w": 680,
+        "h": 2811,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2811,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/ja/legal/",
+    "title": "2D1 | 法的事項",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 28,
+        "y": 0,
+        "w": 680,
+        "h": 2483,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2483,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "route": "/ja/work/aviator/",
+    "title": "Aviator — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 64,
+        "h": 22,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 58,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": -1024,
+        "y": 0,
+        "w": 1024,
+        "h": 1024,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1016,
+        "h": 6694,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 6622,
+        "w": 1016,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 356,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 569,
+        "h": 2289,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 852,
+        "w": 1272,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 356,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 788,
+        "h": 828,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 828,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1272,
+        "h": 4630,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 5260,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 561,
+        "h": 1116,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1116,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9643,
+        "y": 316,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/privacy/",
+    "title": "2D1 | Privacy",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 680,
+        "h": 2433,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2433,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/legal/",
+    "title": "2D1 | Legal",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 680,
+        "h": 2237,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2237,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/work/aviator/",
+    "title": "Aviator — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1272,
+        "h": 7399,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 7327,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/work/deepdrip/",
+    "title": "DeepDrip — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1272,
+        "h": 11102,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 11030,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/work/supa/",
+    "title": "supa — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1272,
+        "h": 4127,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4055,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/familiarcharacters/",
+    "title": "Familiar Characters by 2D1",
+    "overflow": 0,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 356,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 0,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 1256,
+        "y": 842,
+        "w": 0,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(128, 117, 115)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/ja/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 356,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 569,
+        "h": 2289,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 852,
+        "w": 1272,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/ja/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 356,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 788,
+        "h": 828,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 828,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/ja/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1272,
+        "h": 3708,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4338,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/ja/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 561,
+        "h": 1200,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1200,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9643,
+        "y": 445,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/ja/privacy/",
+    "title": "2D1 | プライバシー",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 680,
+        "h": 2795,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2795,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/ja/legal/",
+    "title": "2D1 | 法的事項",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 356,
+        "y": 0,
+        "w": 680,
+        "h": 2467,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2467,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "route": "/ja/work/aviator/",
+    "title": "Aviator — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1272,
+        "h": 7530,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 7458,
+        "w": 1272,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 832,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 256,
+        "h": 1913,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 852,
+        "w": 1912,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 832,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 960,
+        "h": 828,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 828,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1912,
+        "h": 4054,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4684,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 320,
+        "h": 1187,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1187,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9175,
+        "y": 346,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/privacy/",
+    "title": "2D1 | Privacy",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 680,
+        "h": 2433,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2433,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/legal/",
+    "title": "2D1 | Legal",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 680,
+        "h": 2237,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2237,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/work/aviator/",
+    "title": "Aviator — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1912,
+        "h": 10004,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 9932,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/work/deepdrip/",
+    "title": "DeepDrip — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1912,
+        "h": 9206,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 9134,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/work/supa/",
+    "title": "supa — Brand Identity & Web Design | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1912,
+        "h": 5053,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4981,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/familiarcharacters/",
+    "title": "Familiar Characters by 2D1",
+    "overflow": 0,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 36,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 832,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 0,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 1896,
+        "y": 842,
+        "w": 0,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(128, 117, 115)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/ja/",
+    "title": "2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 832,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 256,
+        "h": 1913,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 852,
+        "w": 1912,
+        "h": 24,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/ja/shop/",
+    "title": "2D1 Shop",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": {
+        "x": 832,
+        "y": 24,
+        "w": 200,
+        "h": 34,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 960,
+        "h": 828,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 828,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/ja/about/",
+    "title": "About 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1912,
+        "h": 3375,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 4005,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/ja/contact/",
+    "title": "Contact 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 320,
+        "h": 1374,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 1374,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [
+      {
+        "tag": "INPUT",
+        "cls": "",
+        "text": "",
+        "x": -9175,
+        "y": 577,
+        "w": 153,
+        "h": 27,
+        "display": "inline-block",
+        "position": "static",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/ja/privacy/",
+    "title": "2D1 | プライバシー",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 680,
+        "h": 2795,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2795,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/ja/legal/",
+    "title": "2D1 | 法的事項",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 824,
+        "y": 0,
+        "w": 680,
+        "h": 2467,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 2467,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "relative",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "route": "/ja/work/aviator/",
+    "title": "Aviator — ブランド・ウェブデザイン | 2D1",
+    "overflow": -8,
+    "shell": {
+      ".site-logo": {
+        "x": 24,
+        "y": 24,
+        "w": 96,
+        "h": 32,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-byline": {
+        "x": 24,
+        "y": 68,
+        "w": 240,
+        "h": 40,
+        "display": "block",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      "#page-navigation": {
+        "x": 24,
+        "y": 128,
+        "w": 180,
+        "h": 78,
+        "display": "flex",
+        "position": "fixed",
+        "color": "rgb(50, 5, 5)"
+      },
+      ".practice-switch": null,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "w": 1912,
+        "h": 10164,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(50, 5, 5)"
+      },
+      "footer": {
+        "x": 0,
+        "y": 10092,
+        "w": 1912,
+        "h": 72,
+        "display": "block",
+        "position": "static",
+        "color": "rgb(250, 240, 230)"
+      },
+      ".language-toggle": null
+    },
+    "badImages": [],
+    "outside": [],
+    "errors": []
+  }
+]

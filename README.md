@@ -7,6 +7,58 @@ and newfiction.org redirect are authorized for publication. The complete website
 remains unpublished. See [docs/DOMAIN-SETUP.md](docs/DOMAIN-SETUP.md) for Cloudflare
 configuration, verification status, local preview and the later full-site launch.
 
+## Responsive audit — 11 November 2026
+
+See [the launch audit](docs/RESPONSIVE-AUDIT-2026-11-11.md) for fixes, viewport coverage, evidence and remaining release checks. Compact reading pages reserve a solid header area, and Work uses the shared 200px mobile content clearance for layout and snapping. Inner-page language links are available in both the footer and mobile menu, with focus preserved when resizing to desktop. Without JavaScript, the shared header falls back to normal document flow.
+
+## Work-first structure — 10 November 2026
+
+Home now leads directly with four projects: Aviator, DeepDrip,
+supa and Red Pixel. The shared page navigation is Studio, About and Contact. A typography-only
+Work / Shop / Collection switch connects `/`, `/shop/` and `/familiarcharacters/`;
+Shop contains Day Bag and Memoru only. Both remain in development, with no
+checkout or paid-unlock behavior added. Familiar Characters retains its separate
+collection experience within the same navigation. The Work/Shop intro copy and
+the extra collection promo below Work are removed. About carries the longer story. Its Russell Taylor and italiaDesign field school links reveal as whole phrases, keeping their underlines connected across spaces.
+
+The old implementation is preserved in
+`_archive/2d1-before-work-home-2026-11-10.tar` (source and assets, before this
+redesign). Extract it into a separate directory to inspect or restore selected
+files; do not extract over current work without first saving that work. Git
+history, local secrets, caches, generated output and older archives are excluded.
+The archive is local only and is excluded from preview/publication packages.
+
+`css/practice.css` supplies the cards; `css/practice-shell.css` owns the latest
+header and layout. The logo has a sentence-case byline beneath it—“An independent practice for digital product and brand design.”—using the shared small text style on both language routes. Navigation and the mobile switch leave room for the byline. The logo sits above the left navigation, with the section
+switch aligned to the reading/footer-social edge and vertically centered with
+the logo. The switch stays fixed while scrolling on Work, Shop and Collection. Its viewport-based anchor and shared link geometry keep it stationary across views, including when scrollbar visibility changes; page-nav labels share the same flex alignment. On phones it occupies a second row to avoid crowding. Work
+uses the old Shop’s native vertical looping gallery: 4:3 desktop and 3:4 mobile project thumbnails, captions to their right on desktop and below on smaller screens, with faded neighboring projects and keyboard navigation (`js/practice-gallery.js`, `css/practice-studio.css`). Reduced motion uses a bounded list with all captions visible; no-JavaScript retains the full vertical list. The previous horizontal implementation is preserved in `_archive/practice-horizontal-2026-11-10/`. The switch shares navigation typography and is limited to the Studio/Shop/Collection views; page navigation uses its former compact spacing. Where the sidebar is visible, its top edge and the Work thumbnails, Shop grid, About/Contact headings and policy-page headings share `--practice-content-top` (128px). Sidebar labels and first headings trim their top font leading to align the visible letter edges with that line; desktop project names use the same trim to meet the thumbnail top. Work’s scroll snapping and keyboard navigation use that same start line; mobile retains its separate header clearance. Shop uses three desktop columns,
+two on tablets and one on narrow phones, retaining the existing typography,
+clockwise thumbnail tilt and reduced-motion handling. Home retains a fixed language control
+on desktop; mobile uses the menu. The Studio footer shares its 24px bottom inset and vertical center with that control, with social links aligned to the left navigation edge. Copyright and Privacy/Legal links are hidden only in this Home/Studio footer. Inner pages retain footer language controls. Short pages stretch their main area so the footer keeps the same 24px bottom inset as longer pages.
+Project copy and artwork are authored in `data/work-projects.html`; the Japanese
+builder writes `data/work-projects-ja.html`, then the SEO generator creates the
+six standalone project pages. `/work/` redirects to Home; old project hashes
+redirect to their case-study routes. Earlier chronological notes below describe
+superseded versions where they conflict with this section.
+
+Collection fills the viewport beneath the shared navigation, without a framed
+container. Collection shares the same 480ms vertical page swipe as Work and Shop, without a second canvas entrance. It uses the original infinite, virtualized flat canvas in `js/objects.js`; products repeat in every direction.
+Two-finger scrolling or dragging pans the canvas. Pinching, the bottom-right slider, and keyboard +/− change zoom around the current position; arrow keys pan and Enter opens the centered product. Collection opens at minimum zoom (0%), showing the wide canvas overview. The compact slider keeps its 24px safe-area-aware inset on desktop and mobile. Search and info controls remain hidden. Reduced motion makes zoom and centering immediate.
+The retired globe assets are preserved in `_archive/collection-globe-2026-11-11/` and are not loaded by active pages.
+
+Canvas products continuously grow and become more opaque toward the viewport center, then shrink and fade toward its edges as the user pans or zooms. A smooth distance falloff preserves the flat grid and click targets without rearranging products. Hover labels retain their small text size regardless of product scaling. The center enlargement tapers away at maximum zoom; reduced motion keeps the opacity hierarchy but disables the additional scaling. The embedded Shop preview retains its original presentation.
+
+At maximum zoom, selecting a neighboring product first glides it into the center; only selecting the focused product opens details. Dragging or scrolling can interrupt that glide. At wider zoom levels, products open directly. Selecting a product enlarges its cutout directly over the collection, while surrounding content fades away. No beige panel expands during the zoom; the opaque hero ground takes over at rest.
+Left/right pixel arrows browse the collection in place and wrap at either end; keyboard arrows work while the hero controls are focused. The original canvas position is preserved on close. Exiting from the hero shrinks only the product cutout back into the collection while its full-size ground dissolves in place; exiting from the scrolled details uses a short dissolve without a scroll-back or shrinking panel.
+On scroll, the hero stays pinned in place while an opaque white, bordered reading surface passes above it, with a 60:40 layout: gallery on the left and product information on the right, divided by an ash-brown rule. On phones, information stacks above the gallery. This stationary layering also applies with reduced motion. Gallery photographs retain their two-column grid without gutters and use their original aspect ratios so products are not cut off by square or panoramic crops. An odd final photo spans both columns; photo credits remain visible.
+Scroll down (or click/tap the enlarged product image or its caption) for the description, product link, tags
+and colors, followed by its credited photographs. Three similar products appear at the bottom, ranked by shared tags, brand and category. Selecting one updates the same dialog and returns to its hero; closing still returns to the original collection position.
+The close control and Escape return to the same canvas position. The new
+layout lives in `css/collection-view.css`; reduced motion skips the zoom, and the
+no-JavaScript catalogue remains available.
+FC is English-only. The shared mobile menu makes the background inert while open.
+
 ## Preview and checks
 
 ```sh
@@ -23,23 +75,38 @@ python3 scripts/audit-site.py dist   # verify packaged references
 
 | English | Japanese | Purpose |
 | --- | --- | --- |
-| `/` | `/ja/` | Home, Studio introduction, Daily Tote, Contact and social updates |
-| `/about/` | `/ja/about/` | About 2D1, toy-block house and Studio/Shop scroll journey |
-| `/work/` | `/ja/work/` | Studio carousel and project details |
-| `/shop/` | `/ja/shop/` | Familiar Characters, Daily Tote, Memoru and Red Pixel |
-| `/familiarcharacters/` | `/ja/familiarcharacters/` | Familiar Characters collection and product details |
+| `/` | `/ja/` | Vertical portfolio and Work / Shop / Collection switch |
+| `/about/` | `/ja/about/` | About the practice, its founder and Familiar Characters |
+| `/work/` | `/ja/work/` | Legacy redirect to Home; nested case-study URLs remain |
+| `/shop/` | `/ja/shop/` | Day Bag and Memoru; three-column desktop grid |
+| `/familiarcharacters/` | English-only; Japanese route redirects | Familiar Characters collection and product details |
 | `/contact/` | `/ja/contact/` | Contact form |
 | `/red-pixel/` | `/ja/red-pixel/` | Red Pixel grab-to-play Pong |
 | `/objects/` | `/ja/objects/` | Legacy collection redirects |
+
+## Page navigation
+
+Main-site pages share `css/page-transitions.css`: a 480ms bottom-to-top reveal
+with a narrow Icon Red seam between the old and new page. Native cross-document
+View Transitions cover Home, Studio, Shop, About, Contact, Privacy, Legal, Red
+Pixel and standalone project pages in both languages, including history and
+language navigation. No navigation is intercepted or delayed, and no page fades.
+Reduced motion disables the transition; browsers without support use normal
+navigation. External/new-tab links and in-page dialogs retain their own behavior.
+Familiar Characters keeps its separate canvas/card motion and does not opt in.
+English source pages own the stylesheet link; Japanese and project generators
+carry it through to their output. The small navigation/layout entry scripts are
+render-blocking so the incoming snapshot includes the initialized mobile menu
+and gallery layout; imagery and lazy-loaded features are not held for the wipe.
 
 ## Source map
 
 - `css/walla.css`, `css/fonts.css`, shared navigation/control styles: common layout and brand typography.
 - `js/site.js`: shared clean-hash links, viewport measurement, year and production-only analytics. `js/mobile-nav.js`: mobile menu.
-- `js/walla.js`, `js/bag-*.js`, `css/today-bag.css`: Home and current photographic tote presentation.
+- `index.html`, `shop/index.html`, `css/practice.css`: current Work / Shop shell. Legacy Home scripts and tote assets remain available but are not loaded on Home.
 - `about/index.html`, `css/about.css`, `css/about-rooms.css`, `js/about.js`, `js/house-assembly.js`: project-Overview-style labels and large body copy. The combined opening retains reading ink, followed by the house assembly and Studio zoom/title handoff. Studio settles onto Soft Beige; Studio and Shop then follow normal document scrolling. Interior drawings are archived. Reduced motion uses normal document flow.
-- `work/index.html`, `css/work.css`, `js/work.js`, `js/studio-gallery.js`: Studio gallery and project dialog. The centered thumbnail lifts by 8px and tilts 2° counterclockwise on hover; its caption and index stay stationary. Hover motion is disabled for reduced motion and touch. Opening expands the thumbnail into its matching hero; closing contracts it back to the centered project, preserving gallery position. Interrupted transitions, resize and reduced motion settle cleanly; no-JavaScript retains inline project details.
-- `shop/index.html`, `css/shop.css`, `js/shop.js`, `js/shop-finds-preview.js`: product gallery; the centered image tilts 2° counterclockwise and shifts 8px to the left; its caption and index stay stationary when its image or caption is hovered, with reduced motion respected. FC preview mounts on mouse or keyboard interaction, stops on leave, and is disposed offscreen.
+- `data/work-projects.html`, `data/work-projects-ja.html`, `scripts/site_seo.py`, `css/work.css`: case-study source and generated standalone pages. Old Studio gallery scripts remain dormant; Home links directly to each case study.
+- `shop/index.html`, `css/shop.css`, `js/shop.js`: Day Bag and Memoru gallery; existing clockwise tilt, red Coming soon hover labels and white thumbnail treatment. No collection preview is loaded here.
 - `data/objects.json`, `scripts/build-objects.py`, `css/objects.css`, `js/objects.js`, `js/finds-menus.js`: collection catalog, virtual canvas, filters and details. Current public name is Familiar Characters; URL is `/familiarcharacters/`.
 - `data/finds-images.json`, `scripts/build-finds-images.py`: device-sized lossless catalog derivatives; native originals and provenance remain intact. Existing derivatives are content-hashed and cached immutably.
 - `red-pixel/index.html`, `css/red-pixel.css`, `js/red-pixel.js`, `js/pong-physics.js`: grab then throw to start Pong on Ash Brown. Player is left, level-five 2D1 BOT right; first to three. Mouse/touch and Up/Down or W/S control the paddle; Click/tap or Space pauses/resumes, and Escape exits; dragging never toggles pause. The red puck plays on a court without lines, with Home-navigation labels, enlarged scores, and Soft Beige “First to 3” directly above the scoreboard. Enter grabs/throws for keyboard users. The opponent reads the ball every 220–360ms, accelerates and brakes smoothly, repositions between returns, and makes consistent aiming errors with occasional larger misreads. Square impact particles and a center burst on player scores respect reduced motion; visibility loss and resizing pause play. No-JavaScript retains the native BIGGER/SMALLER size control.
@@ -466,10 +533,10 @@ main content. The superseded signup markup is preserved in
 to follow for activity updates. English and Japanese are updated together.
 
 Shop order — 22 October: after “The joy of making”, the animated bag/specification
-spread now comes before the “My Bag is our first everyday item” paragraph.
+spread now comes before the “Day Bag is our first everyday item” paragraph.
 The divider above the bag study is removed. The closing development note follows.
 
-Shop order follow-up — 22 October: the “My Bag is our first everyday item”
+Shop order follow-up — 22 October: the “Day Bag is our first everyday item”
 paragraph is back above the animated bag/specification spread. The divider remains removed.
 
 Home’s Studio artwork track sits immediately after “At our core, we’re a design studio.” The remaining two description paragraphs follow the full-width track, ahead of Services, in both languages.
@@ -529,6 +596,10 @@ Active page navigation keeps its 6px square visible, with the same 12px label of
 Tote comparison — 25 October: removed the Red logo (v17) option at the owner’s request. The active comparison contains only Bicolor strap (default) and Red handles. Removed markup is preserved in `_archive/tote-red-logo-2026-10-25/`; the source image remains available for future review. Both language routes share the two-option comparison.
 
 ### Shared typography roles — 22 October 2026
+
+11 November: About uses shared Display headings (48px) and Statement body copy
+(32px/44px) from 768px upward, in English and Japanese. All other consumers of
+those roles inherit the update; smaller mobile metrics remain unchanged.
 
 `css/typography.css` defines eight core roles and named weight/leading variants.
 Repeated font recipes across active stylesheets use these tokens; About’s
@@ -711,7 +782,7 @@ soft CSS drop shadow. This icon comes directly from the owner's Memoru app
 asset catalog. Earlier UI mockups and composition sources remain inactive in
 `_experiments/memore-thumbnail/` and `img/shop/menu-note/`.
 
-The My Bag Shop thumbnail uses Home's sole selected
+The Day Bag Shop thumbnail uses Home's sole selected
 `2d-tote-red-handles-v16.webp` image. The photo fills its square frame’s height with `max-height:100%` and
 `object-fit:cover`, cropping the sides while keeping the bag in view. Both products retain Coming soon status.
 
@@ -720,9 +791,14 @@ The My Bag Shop thumbnail uses Home's sole selected
 
 Familiar Characters keeps its canvas experience. As of 1 November, product
 information and photos live in one modal, extending to the bottom viewport edge.
-The sheet is 10% smaller than its former dimensions, with an ash-brown border
-and a transparent backdrop. The surrounding collection and controls fade to 30%
-opacity while the product modal is open and restore on close. Credits have bottom spacing; related images are
+The sheet spans the full viewport width and sits at the bottom at 90dvh, with
+a white details pane and a transparent backdrop. Opening it moves the canvas,
+logo and controls backward as one square-edged card with equal top and side insets over an ash-brown
+ground. The product card rises a short 28px and settles from slightly forward in depth with a small tilt,
+a tightening shadow and a brief edge reveal, with no opacity fade. Subtle edge shadows separate the cards without dimming the collection.
+Both layers settle over 520ms; the edge reveal takes 360ms. Closing retracts
+the card and restores the canvas together in 260ms, with no delay before removal.
+Reduced motion changes state instantly. Credits have bottom spacing; related images are
 compact, and detail tags use square-dashed underlines. `js/objects-credit.js`
 samples the photo beneath the credit line and chooses cranberry brown or soft
 beige for both the label and source links. It updates on scroll, photo load and
@@ -807,7 +883,7 @@ focus. Resizing to tablet/desktop closes the menu and restores the language
 control to its page position. Verified English/Japanese Home, About and Shop at
 390×844, 320×568 and 767×390, plus restoration at 768px and 1440px.
 
-My Bag naming — 27 October: the product name is My Bag throughout active English/Japanese copy, metadata, image descriptions, dynamic translations and source generators. Historical asset filenames remain stable. The Shop photo fills the existing square frame’s height, preserving its proportions and cropping the sides.
+Day Bag naming — 27 October: the product name is Day Bag throughout active English/Japanese copy, metadata, image descriptions, dynamic translations and source generators. Historical asset filenames remain stable. The Shop photo fills the existing square frame’s height, preserving its proportions and cropping the sides.
 
 ### Red Pixel match nicknames — 27 October 2026
 
@@ -989,3 +1065,205 @@ Studio’s existing centered desktop width aligned to the reading grid. Shop car
 fill their column; captions remain below on phone/tablet and to the right on
 desktop. Verified matching 312px thumbnails at 390px, 614.4px at 768px, and
 640px at 1440px, including Japanese Shop and native scrolling.
+
+
+### Studio and Shop layouts — 8 November 2026
+Studio now uses the former Shop vertical gallery: a centered square thumbnail,
+project name, description and View project action on the right. Captions move
+below the image below 1100px. Native vertical scrolling, centered-item emphasis,
+looping after the first complete pass, keyboard arrows and the existing
+thumbnail-to-project dialog transition are preserved. All three project stories,
+client information, media, related projects and standalone entry URLs are unchanged.
+
+Shop is now a regular three-column grid, with two columns below 1100px and one
+below 600px. All four products retain their images, descriptions, status labels
+and destinations. Captions are always visible. The live Familiar Characters
+preview and Red Pixel interaction remain; Shop no longer repeats or recenters
+cards before a link can open. Both language routes share these layouts and the
+existing type tokens. Previous gallery CSS/scripts are preserved in
+`_archive/studio-shop-layout-2026-11-08/`.
+
+Verified native Studio scrolling, keyboard navigation, project opening/closing,
+and English/Japanese layouts at desktop and phone sizes; Shop also checked at
+768px. Language, SEO and local-reference checks pass. Local preview remains on
+http://localhost:4173. No deployment or commit made.
+
+### Shared footer alignment — 9 November 2026
+
+Home, About, Contact, Shop, and Studio use the same compact footer row: 24px vertical padding, the shared reading edge for desktop social links, and 24px mobile insets. Shop includes copyright, Privacy, Legal, and the four social links. Contact’s centered form width is scoped to the form rather than inherited by its footer. Studio retains its fixed footer for the looping gallery, with a beige ground so thumbnails cannot show through it. The viewport language toggle stays 24px from the bottom and right edges (with safe-area clearance), independent of page content or footer visibility; no scroll-driven positioning. Mobile navigation retains its language links. Both language routes share these rules.
+
+Shop uses three columns at desktop widths (1100px and above), two on tablet, and one below 600px. Both language routes share the same grid and reading-edge alignment.
+
+Inner-page EN/JA links live in the normal-flow footer. Home retains its fixed language switch.
+
+Footer language controls are contained within the footer row, with the active sliding fill bounded by the control itself. On mobile they align with the social links; on desktop they center within the footer row. Studio ends after its three projects so its normal-flow footer remains reachable. Home retains its existing fixed/reveal behavior.
+
+Studio loop — November 9, 2026: the vertical project gallery loops in both directions immediately, including when the page has footer language links. Repeated summaries wrap back to their equivalent middle copy without changing the visible position; project details retain their original content and return target.
+
+### About scroll reading — 10 November 2026
+
+About now presents the existing essay in a single shared reading column, aligned with the footer socials, using the former Home’s display and statement typography. All nine paragraphs opt into the unchanged `js/reading-ink.js` reveal: words move from 25% to full opacity as each line passes the 75–55vh reading band. Scrolling backward reverses it; reduced motion and no JavaScript retain fully readable text. Headings remain static above each section. English body type is 40px desktop / 28px phone; Japanese retains the shared 28px / 24px reading scale and line rhythm. Copy, links, navigation, and footer content are unchanged. Previous About markup/styles are retained in `_archive/about-before-scroll-2026-11-10/`.
+
+About hyperlinks now lift their letters 2px in left-to-right order on hover or keyboard focus. `js/about-links.js` runs after reading-ink, preserving continuous underlines, text colors and native wrapping in both languages. Reduced motion disables the lift.
+
+### Contact reading-edge alignment — 10 November 2026
+Contact uses the footer’s shared left edge and adjusts its width to give equal left/right space. The form stays within the shared column, with a 320px minimum on unusually wide layouts to prevent collapse (smaller viewports use their available width). This replaces the independently centered 680px cap. English and Japanese share the rule; no form behavior or copy changed.
+
+### Landing preview — 11 November 2026
+
+Home shows the original red landing cover, beige logo and blinking pixel eyes only on the first Home load per browser-tab session. Refreshing or returning Home skips it. English and Japanese share the same session flag. “A DESIGN HOUSE” is fitted to the logo’s width. During the upward red wipe, the beige logo stays centered and clears with the cover while the caption fades out. The red header logo remains in its normal top-left position underneath. This reveals the current Work layout without restoring the former hero or automatically scrolling. `css/practice-landing.css` and `js/practice-landing.js` adapt the existing landing animation to this layout. Pointer, scroll-wheel, touch or keyboard input skips it; reduced motion and no JavaScript show the page immediately.
+
+Footer group order — 11 November 2026: social links now occupy the left edge, aligned with the navigation. Copyright, Privacy, and Legal occupy the former social-link column on desktop and stack below socials on phones. The footer language toggle remains right-aligned and centered on the social row on phones. Studio keeps its legal group hidden. Both language routes share the layout.
+
+
+Persistent social links — 11 November 2026: social links remain fixed at the bottom left across the shared website shell, aligned with the navigation. They switch between cranberry brown and soft beige for the surface beneath them. The footer retains its layout without duplicate interactive links; the mobile menu keeps its own social group. Small-screen footers reserve room for the dock and language toggle, and Collection’s horizontal zoom control sits above the dock at the bottom right. Without JavaScript, footer links remain available.
+
+Standalone project entries use edge-to-edge artwork with no site sidebar or top spacer. Their breadcrumb and close link sit at the top; close returns to the corresponding language’s Work view. The project class and toolbar are generated in `scripts/site_seo.py`.
+
+Collection zoom refinement — 11 November 2026: the slider sits at the bottom right. It is vertical on desktop and horizontal on mobile. The five zoom stops apply equal magnification ratios across the full range. Depth scaling follows the interpolated canvas geometry to avoid jumps during slider movement. Detail gallery cells are square with contained photographs; product tags and colors stay grouped with the summary rather than stretching to the gallery bottom.
+
+Project navigation — 11 November 2026: project thumbnails expand into the project hero using shared-image page transitions where supported. Reduced motion keeps navigation instant. Standalone project pages keep social links in the footer instead of the fixed dock. Their fixed breadcrumb/close toolbar hides while scrolling down and returns while scrolling up, with beige controls over artwork and a beige surface when returned. English and Japanese project routes share this behavior.
+
+Project hero sizing — 11 November 2026: standalone case-study hero artwork shrinks as needed to keep the full title/one-liner caption and 32px of breathing room inside the initial small viewport. The shared rule adapts to wrapped captions in both languages, keeps full-bleed imagery undistorted, and leaves gallery images unchanged.
+
+Familiar Characters sphere refinement — 11 November 2026: the canvas projects its grid onto a curved surface, with stronger center enlargement and receding edge items. The maximum uses the earlier 640px/64%-viewport limit and original shelf spacing, retaining diagonal neighbor selection. Zoom levels use equal magnification ratios. The desktop zoom control is 25% shorter overall and shares the language toggle’s beige and cranberry palette; mobile remains horizontal.
+
+About reading width — 11 November 2026: About uses the same responsive column width and left edge as the Contact form in both languages, including its 320px minimum where space permits.
+
+FC zoom image stability — 11 November 2026: decoded product photos remain visible during zoom. Sharper responsive versions load after movement settles and replace the displayed photo only after decoding; zooming back out retains the sharper image.
+
+FC canvas captions — 11 November 2026: product names and brands appear on mouse hover or keyboard focus at every zoom level. Zooming in alone keeps captions hidden. Touch users read product information in the detail view.
+
+FC overview spacing and responsiveness — 11 November 2026: extra shelf space separates images most noticeably when zoomed out. Tiles outside the projected viewport and a small buffer are culled before DOM updates. Image delivery excludes spacing from its resolution calculation. Zoom buttons use beige; the pressed knob turns red while the control border stays cranberry.
+
+Button wipes — 11 November 2026: shared filled buttons, close controls, language cells and FC controls now fill from bottom to top. Icon and checkbox color boundaries use the control height and bottom offset to follow the same edge; reduced motion remains instant.
+
+FC product gallery — 11 November 2026: detail photographs form a single vertical column in their source order, with one square frame per row on desktop and mobile.
+
+FC product details — 11 November 2026: the right-hand information pane sticks within the image section on desktop/tablet. Long content can scroll within the viewport-height pane; the phone layout follows its normal single-column flow.
+
+Project navigation uses one opaque shared image snapshot instead of crossfading two copies. Closing returns the hero to the originating thumbnail and restores the gallery scroll position. Project close-icon ink follows toolbar contrast directly, including before hover. Reduced-motion navigation remains immediate.
+
+The product detail pane places photography credit after the Product page action. On desktop its category tag and color swatches sit at the bottom of the sticky viewport-height pane; small screens retain natural content height.
+
+Similar products uses the smaller shared UI heading typography (16px Medium), centered above the related cards at every width. Selecting a related card reuses the canvas cutout-to-center scale/translation animation, while retaining the original canvas return target and reduced-motion behavior.
+
+Product gallery photos fill their square frames edge to edge with centered cover cropping instead of contain letterboxing. The --gallery-position custom property supports image-specific focal positioning when needed.
+
+Work, Shop, About and Contact share --page-content-width and the reading left edge. About body copy uses 28px/1.35 desktop and 22px/1.35 mobile, with 32px/24px paragraph gaps; Japanese uses 1.55 leading. Display headings and the large contact CTA retain their scale.
+
+Sidebar navigation carries the previous selected marker through page navigation, then reverses its hover motion on arrival. Current-page semantics update immediately; reduced motion skips the visual handoff.
+
+Practice tabs use slash separators. Project breadcrumbs share their label typography, 8px spacing and plain hover treatment, retaining light ink over artwork for contrast.
+
+Studio project cards again open the original work.js modal with its single flying-image opening and closing animation. Standalone URLs remain the no-JavaScript and direct-link fallback. project-dialog-loader.js loads current project content into the existing dialog implementation.
+
+At maximum FC canvas zoom, the centered product displays its name and brand without hover. Other canvas captions retain hover/keyboard behavior.
+
+Familiar Characters restores the original center-out staggered item entrance on arrival, with a small pop and tilt. Reduced-motion users see the settled canvas immediately.
+
+Responsive review (11 November): core EN/JA content edges checked at 390, 768, 1280, 1440 and 1920px. Corrected double subtraction of sidebar space, a Contact specificity override, and Work width divergence. Work captions sit below the wider cards to remain inside the column. The original thumbnail is hidden during the flying-image transition to prevent duplicate artwork.
+
+The product information pane carries its own 1px ash-brown top and bottom borders, keeping both edges visible while it sticks alongside the scrolling gallery. On phones these borders frame the information block above the photos.
+
+Width correction: Work, About and Contact retain the previously approved narrower --page-content-width. Shop alone uses the full --reading-width for its two-column grid.
+
+Work captions are restored to the right of the project images on desktop; below 1100px they remain underneath as before.
+
+About reuses the fixed practice switch for 2D1, Kosuke Futsukaichi and Familiar Characters. These section links scroll with header clearance and move keyboard focus without adding a URL hash; the current section follows scrolling. Reduced motion is instant and native anchors remain available without JavaScript.
+
+About’s section headings are removed visually and from the content flow; named section anchors retain navigation and focus targets. The uppercase section switch identifies each section. Body text shares the project metadata UI-body recipe (16px Regular, with language-specific leading).
+
+About’s switch has no background. Reading content passing behind the fixed header fades to 10% opacity, returning to full opacity over 40px below the switch. Native scrolling, reading-ink reveal and no-JavaScript content remain intact.
+
+Project overview paragraphs have one blank line of separation (1lh) across standalone case studies and project dialogs, in English and Japanese. Spacing follows each paragraph’s responsive line height.
+
+Project breadcrumb links use full-opacity Icon Red on hover and keyboard focus, without the legacy opacity dimming.
+
+Regular same-origin navigation retains the native upward page transition, with a 480ms beige/red arrival wipe when the browser skips native snapshots. The fallback does not intercept navigation or section anchors, and reduced motion disables it.
+
+About body copy is fully opaque throughout each section; the word-by-word reading reveal is no longer loaded on About. The separate 10% fade beneath the fixed section switch remains.
+
+About body copy now previews the shared Medium UI role (500), retaining its current size and spacing in both languages.
+
+About now reveals by section: the opening 2D1 section is fully opaque, while Kosuke Futsukaichi and Familiar Characters start at 25%. Each entire section reveals word by word as its top crosses 75% to 45% of viewport height, then stays fully opaque. Reduced motion and no-JavaScript show all copy immediately; the fixed-switch fade remains separate.
+
+Project client, role and year values use the shared Medium UI typography (500) across all case-study pages and dialogs, including Japanese routes.
+
+All shared non-uppercase typography roles now use Medium (500), including headings, prose, captions, metadata and supporting text. Uppercase navigation/label roles and the fitted uppercase landing caption retain their existing weights. Sizes, leading and language font pairing are unchanged.
+
+Home landing: a viewport-wide rigid 2D1 logo drops tilted onto a floor at the shared page inset, rebounds three times with diminishing height, and alternates red/beige at each rebound. After settling, the supplied eyes blink and look left/right, then the cover wipes upward. First visit per session; `?preview-intro` replays for review. Input skips immediately; reduced motion/no-JavaScript bypass it. Previous landing source: `_archive/landing-before-drop-2026-11-11/`.
+
+About paragraph spacing — 11 November 2026: paragraph gaps are 16px on desktop
+and 12px on phones; section gaps remain 96px / 64px. Upcoming sections stay at
+25% opacity until their top reaches the viewport midpoint, then reveal in a
+soft eight-word wave, finishing at the fixed section switch's reading position.
+Scrolling backward reverses the wave. The opening 2D1 section, reduced motion
+and no-JavaScript copy remain fully readable. Verified English and Japanese at
+1440px and 390px, including scroll, keyboard section navigation and clean URLs.
+Visual proof is saved in `_previews/about-wave/`.
+
+About body typography — 11 November 2026: the essay uses the shared Reading
+role at 22px Regular on desktop and phones. English uses 32px leading and
+−0.22px tracking; Japanese uses 32px leading and normal tracking. Reading-role
+tracking is shared across the site. Paragraph gaps and the section opacity
+wave retain their current behavior.
+Verified both languages at 1440px and 390px, including the reveal and section
+navigation. Mobile header rules now retain the intended 240px opening clearance
+and allow the section switch to grow when it wraps. The updated 24px body metrics
+and wrapping were checked in both languages at desktop and phone widths; previews
+are saved in `_previews/about-24px/`.
+
+Landing eyes reuse the original logo-intro sequence: gentle opening, pupil-only right/left glance and two blinks, with the original 1439ms timing and supplied eye paths. Eye shells never slide sideways.
+
+After the landing eye sequence, the same logo shrinks and travels to the measured top-left site-logo slot over 1100ms. Its beige cover dissolves to reveal Studio; the eyes close and the static header logo takes over at the exact final bounds. This replaces the final upward cover wipe and follows mobile/desktop header dimensions.
+
+The Contact invitation’s pixel eyes follow the mouse with bounded pupil movement, including in project dialogs. Their existing hover blink and layout remain unchanged; reduced motion disables tracking and no-JavaScript retains the original image.
+
+About’s header reading fade applies only to the essay text, leaving its beige main surface opaque during fast scrolling over the dark Contact ending.
+
+About’s final red square participates in the reading wave, starting at 25%
+opacity and revealing after the last word. Reduced motion and no JavaScript
+keep it solid. Verified the dim/reveal/reverse states in English and Japanese.
+
+Project Overview paragraphs share About's body typography through the Reading
+recipe: 22px Regular, 32px line height and −0.22px tracking in English; 22px Regular,
+32px line height and normal tracking in Japanese. Verified all three case-study
+pages and project dialog opening/closing at desktop and mobile widths in both
+languages. Previews: `_previews/overview-body/`.
+
+Landing docking begins as the last eye blink closes (about 3.2 seconds after the drop starts), with no post-blink pause; the eyes stay closed through the shrink.
+
+During the logo’s final docking move, bio/navigation enter from the left, the practice switch from above, socials/language from below, project captions from the right, and visible thumbnails advance from depth using perspective. Entrances finish within the 1100ms docking phase and clean up on skip; hidden/offscreen gallery clones are excluded. Socials follow the owner’s later bottom-edge instruction.
+
+Landing timing: wait one second after the last blink finishes reopening, then start the logo docking and coordinated page entrances.
+
+Language controls stay fixed at the bottom right across views and invert over dark surfaces, including project dialogs. Familiar Characters retains its existing control behavior.
+
+Body and project Overview now use Regular (400), 22px / 32px at every width,
+with −0.22px tracking in English and normal tracking in Japanese. Other roles
+retain their weights. Computed bilingual desktop/mobile style tables are in
+`docs/TYPOGRAPHY.md`; current previews are in `_previews/reading-22-regular/`.
+
+Supporting text refinement: Small and Caption use Regular (400). Project
+Overview eyebrows, Client/Role/Year labels and values, and one-liners on Studio
+cards and project heroes are Regular in both languages, including dialogs.
+The shared Regular UI variants preserve existing size/leading and keep Medium
+controls/titles separate. Current style table: `docs/TYPOGRAPHY.md`.
+
+“See more work” project titles use Medium (500), retaining 22px / 32px and
+existing tracking in both languages, on standalone pages and in dialogs.
+
+The landing eyes close over 120ms as logo docking begins, using the original blink easing with no opacity fade. The preceding blink sequence and one-second pause are unchanged.
+
+
+Typography consolidation — 11 November: seven shared size/leading recipes
+(Display, Statement, Section, Body, UI, Caption and Small), with weight,
+tracking and case selected separately. Canonical component assignments live in
+`css/typography.css`; redundant editorial font overrides were removed from
+page styles. About and project Overview now match the Role list: 16px Regular,
+24px English / 25.6px Japanese leading, and 0 tracking at every width, including
+project dialogs. This supersedes the earlier 22px About/Overview notes above.
+Other type metrics and capitalization are preserved. See `docs/TYPOGRAPHY.md`
+for the seven-style table and uppercase usage; the previous source is archived
+in `_archive/typography-before-consolidation-2026-11-11/`.
